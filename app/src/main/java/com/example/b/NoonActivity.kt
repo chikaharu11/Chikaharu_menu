@@ -1,0 +1,53 @@
+package com.example.b
+
+import android.content.Intent
+import android.os.Bundle
+import android.widget.EditText
+import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_noon.*
+
+class NoonActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_noon)
+
+        class Lunch(val main: String, val ingre: List<String>)
+
+        val lunches = arrayListOf(
+
+            //Lunch("", listOf("", "")),
+
+            Lunch("皿うどん\n",listOf("皿うどん、", "豚バラ肉、", "野菜炒め用野菜\n")),
+            Lunch("ギョーザ\n",listOf("冷凍ギョーザ\n"))
+        )
+
+        lunchbutton.setOnClickListener {
+
+            val lunched = (lunches.shuffled())
+
+            val noon = (lunched.map { it.main }.take(7).toString()
+                .replace("[", "").replace("]", "").replace(",", "")
+                .fold(" ") { initial, value -> initial + value })
+
+            val noon1 = findViewById<EditText>(R.id.editText5)
+
+                noon1.setText(noon, TextView.BufferType.NORMAL)
+
+            val noon2 = (lunched.map { it.ingre }.take(7).toString()
+                .replace("[", "").replace("]", "").replace(",", "")
+                .fold(" ") { initial, value -> initial + value })
+
+            val noon3 = findViewById<EditText>(R.id.editText6)
+
+                noon3.setText(noon2, TextView.BufferType.NORMAL)
+
+        }
+
+        main2Button.setOnClickListener {
+            val intent = Intent(application, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+}
