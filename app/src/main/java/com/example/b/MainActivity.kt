@@ -17,19 +17,40 @@ class MainActivity : AppCompatActivity() {
 
         val cuisines = arrayListOf(
 
-            //Cooking("\n", listOf("", "")),
+            //Cooking("\n", listOf("", "", "", "", "\n")),
 
             Cooking("ハンバーグ\n", listOf("ハンバーグ\n")),
             Cooking("ギョーザ\n", listOf("冷凍ギョーザ\n")),
-            Cooking("肉野菜炒め\n", listOf("豚こま肉200g、", "野菜炒め用野菜\n")),
+            Cooking("肉野菜炒め\n", listOf("豚こま肉、", "野菜炒め用野菜\n")),
             Cooking("唐揚げ\n", listOf("鳥もも肉、", "唐揚げ粉\n")),
-            Cooking("豚汁\n", listOf("豚こま肉250g、", "豚汁の素\n")),
+            Cooking("豚汁\n", listOf("豚こま肉、", "豚汁の素\n")),
             Cooking("マーボー豆腐\n", listOf("豆腐、", "マーボー豆腐の素\n")),
             Cooking("マーボー春雨\n", listOf("マーボー春雨\n")),
-            Cooking("人参しりしり\n", listOf("ニンジン", "卵", "シーチキン\n")),
-            Cooking("煮付け\n", listOf("油ふ", "ニンジン", "こんにゃく", "さつま揚げ", "キャベツ\n")),
-            Cooking("焼きそば\n", listOf("豚こま肉", "野菜炒め用野菜", "焼きそばの麺", "天かす\n")),
-            Cooking("焼きワンタン\n", listOf("ワンタン", "ごま油\n"))
+            Cooking("人参しりしり\n", listOf("ニンジン、", "卵、", "シーチキン\n")),
+            Cooking("煮付け\n", listOf("油ふ、", "ニンジン、", "こんにゃく、", "さつま揚げ、", "キャベツ\n")),
+            Cooking("焼きそば\n", listOf("豚こま肉、", "野菜炒め用野菜、", "焼きそばの麺、", "天かす\n")),
+            Cooking("焼きワンタン\n", listOf("ワンタン、", "ごま油\n")),
+            Cooking("チャーハン\n", listOf("焼き豚、", "卵\n")),
+            Cooking("豚生姜焼き\n", listOf("豚ロース、", "生姜焼きの素\n")),
+            Cooking("エビフライ\n", listOf("冷凍エビフライ\n")),
+            Cooking("キノコ炒め\n", listOf("しめじ、", "エリンギ、", "豚こま肉、", "キノコ炒めの素\n")),
+            Cooking("ビーフン炒め\n", listOf("冷凍ビーフン\n")),
+            Cooking("チキングラタン\n", listOf("鳥もも肉、", "タマネギ、", "とろけるチーズ、", "粉チーズ、", "グラタンの素、", "牛乳\n")),
+            Cooking("ミートグラタン\n", listOf("合い挽き肉、", "タマネギ、", "牛乳、", "とろけるチーズ、", "粉チーズ、", "グラタンの素\n")),
+            Cooking("シチュー\n", listOf("鶏もも肉、", "人参、", "ジャガイモ、", "タマネギ、", "牛乳、", "シチューの素\n")),
+            Cooking("ビーフシチュー\n", listOf("シチュー用牛肉、", "ジャガイモ、", "タマネギ、", "人参、", "ビーフシチューの素\n")),
+            Cooking("うどん\n", listOf("うどん玉、", "ネギ、", "かき揚げ天ぷら、", "かまぼこ、", "めんつゆ\n")),
+            Cooking("パスタ\n", listOf("パスタ、", "パスタソース\n")),
+            Cooking("鯖マヨ\n", listOf("鯖缶\n")),
+            Cooking("ジャガイモのチーズ焼き\n", listOf("ジャガイモ、", "合い挽き肉、", "とろけるチーズ、", "チーズ焼きの素\n")),
+            Cooking("ハムカツ\n", listOf("ハムカツ\n")),
+            Cooking("サイコロステーキ\n", listOf("サイコロステーキ\n")),
+            Cooking("チキンステーキ\n", listOf("チキンステーキ\n")),
+            Cooking("オムライス\n", listOf("ハム、", "ミックスベジタブル、", "卵\n")),
+            Cooking("肉じゃが\n", listOf("ジャガイモ、", "豚or牛こま肉、", "タマネギ、", "ニンジン\n")),
+            Cooking("牛丼\n", listOf("牛薄切り肉、", "タマネギ、", "牛丼のタレ\n")),
+            Cooking("豚バラ白菜\n", listOf("豚バラ肉、", "白菜、", "和風だしの素orコンソメ顆粒\n")),
+            Cooking("カレー\n", listOf("カレー用牛肉or豚肉、", "ジャガイモ、", "人参、", "タマネギ、", "カレールー\n"))
         )
 
         tapHere.setOnClickListener {
