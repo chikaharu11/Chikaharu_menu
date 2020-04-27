@@ -28,7 +28,8 @@ class MainActivity : AppCompatActivity() {
             Cooking("マーボー春雨\n", listOf("マーボー春雨\n")),
             Cooking("人参しりしり\n", listOf("ニンジン", "卵", "シーチキン\n")),
             Cooking("煮付け\n", listOf("油ふ", "ニンジン", "こんにゃく", "さつま揚げ", "キャベツ\n")),
-            Cooking("焼きそば\n", listOf("豚こま肉", "野菜炒め用野菜", "焼きそばの麺", "天かす\n"))
+            Cooking("焼きそば\n", listOf("豚こま肉", "野菜炒め用野菜", "焼きそばの麺", "天かす\n")),
+            Cooking("焼きワンタン\n", listOf("ワンタン", "ごま油\n"))
         )
 
         tapHere.setOnClickListener {
