@@ -1,10 +1,10 @@
 package com.example.b
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -21,43 +21,44 @@ class MainActivity : AppCompatActivity() {
 
             Cooking("ハンバーグ\n", listOf("ハンバーグ\n")),
             Cooking("ギョーザ\n", listOf("冷凍ギョーザ\n")),
+            Cooking("焼きウインナー\n", listOf("ウインナー\n")),
             Cooking("肉野菜炒め\n", listOf("豚こま肉、", "野菜炒め用野菜\n")),
             Cooking("唐揚げ\n", listOf("鳥もも肉、", "唐揚げ粉\n")),
             Cooking("豚汁\n", listOf("豚こま肉、", "豚汁の素\n")),
             Cooking("マーボー豆腐\n", listOf("豆腐、", "マーボー豆腐の素\n")),
             Cooking("マーボー春雨\n", listOf("マーボー春雨\n")),
             Cooking("人参しりしり\n", listOf("ニンジン、", "卵、", "シーチキン\n")),
-            Cooking("煮付け\n", listOf("油ふ、", "ニンジン、", "こんにゃく、", "さつま揚げ、", "キャベツ\n")),
-            Cooking("焼きそば\n", listOf("豚こま肉、", "野菜炒め用野菜、", "焼きそばの麺、", "天かす\n")),
+            Cooking("煮付け\n\n", listOf("油ふ、", "ニンジン、", "こんにゃく、\n", "さつま揚げ、", "キャベツ\n")),
+            Cooking("焼きそば\n\n", listOf("豚こま肉、", "野菜炒め用野菜、\n", "焼きそばの麺、", "天かす\n")),
             Cooking("焼きワンタン\n", listOf("ワンタン、", "ごま油\n")),
             Cooking("チャーハン\n", listOf("焼き豚、", "卵\n")),
             Cooking("豚生姜焼き\n", listOf("豚ロース、", "生姜焼きの素\n")),
             Cooking("エビフライ\n", listOf("冷凍エビフライ\n")),
-            Cooking("キノコ炒め\n", listOf("しめじ、", "エリンギ、", "豚こま肉、", "キノコ炒めの素\n")),
+            Cooking("キノコ炒め\n\n", listOf("しめじ、", "エリンギ、", "豚こま肉、\n", "キノコ炒めの素\n")),
             Cooking("ビーフン炒め\n", listOf("冷凍ビーフン\n")),
-            Cooking("チキングラタン\n", listOf("鳥もも肉、", "タマネギ、", "とろけるチーズ、", "粉チーズ、", "グラタンの素、", "牛乳\n")),
-            Cooking("ミートグラタン\n", listOf("合い挽き肉、", "タマネギ、", "牛乳、", "とろけるチーズ、", "粉チーズ、", "グラタンの素\n")),
-            Cooking("シチュー\n", listOf("鶏もも肉、", "人参、", "ジャガイモ、", "タマネギ、", "牛乳、", "シチューの素\n")),
-            Cooking("ビーフシチュー\n", listOf("シチュー用牛肉、", "ジャガイモ、", "タマネギ、", "人参、", "ビーフシチューの素\n")),
-            Cooking("うどん\n", listOf("うどん玉、", "ネギ、", "かき揚げ天ぷら、", "かまぼこ、", "めんつゆ\n")),
+            Cooking("チキングラタン\n\n", listOf("鳥もも肉、", "タマネギ、", "とろけるチーズ、\n", "粉チーズ、", "グラタンの素、", "牛乳\n")),
+            Cooking("ミートグラタン\n\n", listOf("合い挽き肉、", "タマネギ、", "牛乳、\n", "とろけるチーズ、", "粉チーズ、", "グラタンの素\n")),
+            Cooking("シチュー\n\n", listOf("鶏もも肉、", "人参、", "ジャガイモ、\n", "タマネギ、", "牛乳、", "シチューの素\n")),
+            Cooking("ビーフシチュー\n\n", listOf("シチュー用牛肉、", "ジャガイモ、", "タマネギ、\n", "人参、", "ビーフシチューの素\n")),
+            Cooking("うどん\n\n", listOf("うどん玉、", "ネギ、", "かき揚げ天ぷら、\n", "かまぼこ、", "めんつゆ\n")),
             Cooking("パスタ\n", listOf("パスタ、", "パスタソース\n")),
             Cooking("鯖マヨ\n", listOf("鯖缶\n")),
-            Cooking("ジャガイモのチーズ焼き\n", listOf("ジャガイモ、", "合い挽き肉、", "とろけるチーズ、", "チーズ焼きの素\n")),
+            Cooking("ジャガイモのチーズ焼き\n\n", listOf("ジャガイモ、", "合い挽き肉、\n", "とろけるチーズ、", "チーズ焼きの素\n")),
             Cooking("ハムカツ\n", listOf("ハムカツ\n")),
             Cooking("サイコロステーキ\n", listOf("サイコロステーキ\n")),
             Cooking("チキンステーキ\n", listOf("チキンステーキ\n")),
             Cooking("オムライス\n", listOf("ハム、", "ミックスベジタブル、", "卵\n")),
-            Cooking("肉じゃが\n", listOf("ジャガイモ、", "豚or牛こま肉、", "タマネギ、", "ニンジン\n")),
+            Cooking("肉じゃが\n\n", listOf("ジャガイモ、", "豚or牛こま肉、", "タマネギ、\n", "ニンジン\n")),
             Cooking("牛丼\n", listOf("牛薄切り肉、", "タマネギ、", "牛丼のタレ\n")),
-            Cooking("豚バラ白菜\n", listOf("豚バラ肉、", "白菜、", "和風だしの素orコンソメ顆粒\n")),
-            Cooking("カレー\n", listOf("カレー用牛肉or豚肉、", "ジャガイモ、", "人参、", "タマネギ、", "カレールー\n"))
+            Cooking("豚バラ白菜\n\n", listOf("和風だしの素orコンソメ顆粒、\n", "白菜、", "豚バラ肉\n")),
+            Cooking("カレー\n\n", listOf("カレー用牛肉or豚肉、", "ジャガイモ、", "人参、\n", "タマネギ、", "カレールー\n"))
         )
 
         tapHere.setOnClickListener {
 
             val chiseled = (cuisines.shuffled())
 
-            val text4 = (chiseled.map { it.main }.take(7).toString()
+            val text4 = (chiseled.map { it.main }.take(10).toString()
                 .replace("[", "").replace("]", "").replace(",", "")
                 .fold(" ") { initial, value -> initial + value })
 
@@ -65,7 +66,7 @@ class MainActivity : AppCompatActivity() {
 
             text5.setText(text4, TextView.BufferType.NORMAL)
 
-            val text6 = (chiseled.map { it.ingre }.take(7).toString()
+            val text6 = (chiseled.map { it.ingre }.take(10).toString()
                 .replace("[", "").replace("]", "").replace(",", "")
                 .fold(" ") { initial, value -> initial + value })
 
@@ -75,26 +76,39 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        class Choking(val mains: String, val ingres: List<String>)
+        class Choking(val mains: String, val ingres: String)
 
         val clumsiness = arrayListOf(
 
-            //Choking("", listOf("", "")),
+            //Choking("\n", listOf("", "", "", "", "\n")),
 
-            Choking("ハンバーグ\n", listOf("ハンバーグ\n")),
-            Choking("ギョーザ\n", listOf("冷凍ギョーザ\n")),
-            Choking("肉野菜炒め\n", listOf("豚こま肉200g、", "野菜炒め用野菜\n")),
-            Choking("唐揚げ\n", listOf("鳥もも肉、", "唐揚げ粉\n")),
-            Choking("豚汁\n", listOf("豚こま肉250g、", "豚汁の素\n")),
-            Choking("きゅうり酢和え\n", listOf("玉ふ、", "きゅうり\n")),
-            Choking("ツナレタスサラダ\n", listOf("ツナ缶、", "レタス\n"))
+            Choking("生野菜\n", "生野菜\n"),
+            Choking("豆腐\n", "絹ごし豆腐\n"),
+            Choking("パウチサラダ\n", "パウチサラダ\n"),
+            Choking("レンジ野菜\n", "レンジ野菜\n"),
+            Choking("シューマイ\n", "シューマイ\n"),
+            Choking("きゅうり酢和え\n", "玉ふ、きゅうり\n"),
+            Choking("ツナレタスサラダ\n", "ツナ缶、きゅうり、レタス\n"),
+            Choking("ショーロンポー\n", "ショーロンポー\n"),
+            Choking("こんぶキャベツ\n", "キャベツ、塩こんぶ\n"),
+            Choking("レンジ豚もやし\n", "豚ばら肉、もやし\n"),
+            Choking("のりきゅうり\n", "海苔、きゅうり\n"),
+            Choking("茶碗むし\n", "茶碗むし\n"),
+            Choking("レンジコロッケ\n", "冷凍コロッケ\n"),
+            Choking("ブロッコリーじゃがいも\n", "ブロッコリー、じゃがいも\n"),
+            Choking("スティックサラダ\n", "にんじん、大根、きゅうり\n"),
+            Choking("味噌田楽\n", "味噌田楽\n"),
+            Choking("かぼちゃチーズサラダ\n", "かぼちゃ、スライスチーズ\n"),
+            Choking("マカロニサラダ\n", "マカロニ、, カニカマ、ハム、ツナコーン\n"),
+            Choking("フライドポテト\n", "フライドポテト\n"),
+            Choking("大学いも\n", "さつまいも、大学いもの素、ごま\n")
         )
 
         button2.setOnClickListener {
 
             val chiselers = (clumsiness.shuffled())
 
-            val text = (chiselers.map { it.mains }.take(7).toString()
+            val text = (chiselers.map { it.mains }.take(10).toString()
                 .replace("[", "").replace("]", "").replace(",", "")
                 .fold(" ") { initial, value -> initial + value })
 
@@ -102,77 +116,13 @@ class MainActivity : AppCompatActivity() {
 
             text1.setText(text, TextView.BufferType.NORMAL)
 
-            val text2 = (chiselers.map { it.ingres }.take(7).toString()
+            val text2 = (chiselers.map { it.ingres }.take(10).toString()
                 .replace("[", "").replace("]", "").replace(",", "")
                 .fold(" ") { initial, value -> initial + value })
 
             val text3 = findViewById<EditText>(R.id.editText7)
 
             text3.setText(text2, TextView.BufferType.NORMAL)
-
-        }
-
-        class Lunch(val main: String, val ingre: List<String>)
-
-        val lunches = arrayListOf(
-
-            //Lunch("", listOf("", "")),
-
-            Lunch("皿うどん\n",listOf("皿うどん、", "豚バラ肉、", "野菜炒め用野菜\n")),
-            Lunch("ギョーザ\n",listOf("冷凍ギョーザ\n"))
-        )
-
-        lunchbutton.setOnClickListener {
-
-            val lunched = (lunches.shuffled())
-
-            val noon = (lunched.map { it.main }.take(7).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val noon1 = findViewById<EditText>(R.id.editText5)
-
-            noon1.setText(noon, TextView.BufferType.NORMAL)
-
-            val noon2 = (lunched.map { it.ingre }.take(7).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val noon3 = findViewById<EditText>(R.id.editText6)
-
-            noon3.setText(noon2, TextView.BufferType.NORMAL)
-
-        }
-
-        class Babyhood(val main: String, val ingre: List<String>)
-
-        val baboon = arrayListOf(
-
-            //Babyhood("", listOf("", "")),
-
-            Babyhood("皿うどん\n",listOf("皿うどん、", "豚バラ肉、", "野菜炒め用野菜\n")),
-            Babyhood("ギョーザ\n",listOf("冷凍ギョーザ\n"))
-        )
-
-        button3.setOnClickListener {
-
-            val lunched = (baboon.shuffled())
-
-            val chairmen = (lunched.map { it.main }.take(7).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val chairmen2 = findViewById<EditText>(R.id.editText2)
-
-            chairmen2.setText(chairmen, TextView.BufferType.NORMAL)
-
-            val chairmen3 = (lunched.map { it.ingre }.take(7).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val chairmen4 = findViewById<EditText>(R.id.editText3)
-
-            chairmen4.setText(chairmen3, TextView.BufferType.NORMAL)
 
         }
 
@@ -193,14 +143,44 @@ class MainActivity : AppCompatActivity() {
                     ,"パスタ\n","さばマヨ\n","ハムカツ\n","チキンステーキ\n","肉団子\n","じゃがいものチーズ焼き\n","春巻き\n","エビフライ\n","オムライス\n","サイコロステーキ\n","手作りパスタ\n"
                     ,"手作りハンバーグ\n","焼きハム\n","八宝菜\n","ラザニア\n","青椒肉絲\n","トースト\n")
 
+            /*
             val menu2 = arrayListOf("生野菜\n", "豆腐\n", "パウチサラダ\n", "レンジ野菜\n","シューマイ\n","ショーロンポー\n","買う惣菜\n","こんぶキャベツ\n","ゆでもやし\n"
                     ,"ツナレタスサラダ\n","きゅうり酢あえ\n","茶わん蒸し\n","ブロッコリーじゃがいもマヨ\n","レンジコロッケ\n","スティックサラダ\n","味噌田楽\n"
                     ,"かぼちゃサラダ・チーズせんべい付き\n","大学いも\n","マカロニサラダ\n","フライドポテト\n","ホウレンソウのバター炒め\n","甘いもの\n")
 
-        tapHere.setOnClickListener{
-
-            textView2.text = (menu.shuffled().take(7).toString())
-
-            textView.text = (menu2.shuffled().take(7).toString())
-
  */
+    tapHere.setOnClickListener{
+
+        textView2.text = (menu.shuffled().take(7).toString())
+
+        textView.text = (menu2.shuffled().take(7).toString())
+
+        val spinnerItems = cuisines.map { it.main }
+
+        val adapter = ArrayAdapter(applicationContext,
+            android.R.layout.simple_spinner_item, spinnerItems)
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        // spinner に adapter をセット
+        // Kotlin Android Extensions
+        spinner.adapter = adapter
+
+        // リスナーを登録
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            //　アイテムが選択された時
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+                // Kotlin Android Extensions
+                editText8.setText(item, TextView.BufferType.NORMAL)
+            }
+
+            //　アイテムが選択されなかった
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                //
+            }
+        }
+
+        */

@@ -1,6 +1,5 @@
 package com.example.b
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
@@ -20,7 +19,16 @@ class NoonActivity : AppCompatActivity() {
             //Lunch("", listOf("", "")),
 
             Lunch("皿うどん\n",listOf("皿うどん、", "豚バラ肉、", "野菜炒め用野菜\n")),
-            Lunch("ギョーザ\n",listOf("冷凍ギョーザ\n"))
+            Lunch("ギョーザ\n",listOf("冷凍ギョーザ\n")),
+            Lunch("焼きそば\n\n", listOf("豚こま肉、", "野菜炒め用野菜、\n", "焼きそばの麺\n")),
+            Lunch("マーボー春雨\n", listOf("マーボー春雨\n")),
+            Lunch("マーボー豆腐\n", listOf("マーボー豆腐\n")),
+            Lunch("沖縄そば\n", listOf("かまぼこ、", "ネギ\n")),
+            Lunch("冷凍パスタ\n", listOf("冷凍パスタ\n")),
+            Lunch("すき焼き豆腐\n", listOf("豆腐、", "すき焼き豆腐の素\n")),
+            Lunch("レトルトカレー\n", listOf("レトルトカレー\n")),
+            Lunch("豚しょうが焼き\n", listOf("豚ロース肉、", "豚しょうが焼きの素\n")),
+            Lunch("ハンバーグ\n", listOf("ハンバーグ\n"))
         )
 
         lunchbutton.setOnClickListener {
@@ -46,8 +54,7 @@ class NoonActivity : AppCompatActivity() {
         }
 
         main2Button.setOnClickListener {
-            val intent = Intent(application, MainActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }

@@ -1,6 +1,5 @@
 package com.example.b
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.TextView
@@ -46,8 +45,7 @@ class BabyActivity : AppCompatActivity() {
         }
 
         mainButton.setOnClickListener {
-            val intent = Intent(application, MainActivity::class.java)
-            startActivity(intent)
+            finish()
 
         }
     }
