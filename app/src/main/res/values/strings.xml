@@ -13,8 +13,8 @@
     <string name="baby">baby</string>
     <string name="textview9">←昼メニューに行く</string>
     <string name="textview10">ちかリアンに行く→</string>
-    <string name="app2_name">昼メニュー</string>
-    <string name="app3_name">ちかリアン</string>
+    <string name="app2_name">昼メニュー + ちかメニュー</string>
+    <string name="app3_name">買い物リスト</string>
     <string name="main">main</string>
     <string name="textview11">←せがれに戻る</string>
     <string name="main2">main2</string>
@@ -37,4 +37,5 @@
     <string name="app4_name">印刷</string>
     <string name="send">Send</string>
     <string name="goprint">Button</string>
+    <string name="buylist">買い物リスト</string>
 </resources>
