@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,29 +12,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="84dp"
-        android:layout_marginBottom="22dp"
         android:text="@string/taphere1"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="14dp"
         android:layout_marginBottom="22dp"
         android:text="@string/taphere2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/tapHere" />
 
     <ImageButton
         android:id="@+id/noonButton"
-        android:layout_width="55dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="13dp"
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/noon"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tapHere"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@mipmap/noon" />
 
@@ -41,11 +43,13 @@
         android:id="@+id/babyButton"
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginEnd="15dp"
         android:contentDescription="@string/baby"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/noonButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="@+id/noonButton"
         app:srcCompat="@mipmap/baby" />
 
     <EditText
@@ -53,15 +57,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="276dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
         android:hint="@string/hint10"
         android:inputType="textMultiLine"
         android:textSize="12sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
     <EditText
