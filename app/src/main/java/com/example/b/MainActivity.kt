@@ -2,6 +2,7 @@ package com.example.b
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -52,6 +53,34 @@ class MainActivity : AppCompatActivity() {
             Cooking("豚バラ白菜㋬\n\n", "和風だしの素orコンソメ顆粒、\n 白菜、豚バラ肉\n"),
             Cooking("カレー㋬\n\n", "カレー用牛肉or豚肉、ジャガイモ、人参、\n タマネギ、カレールー\n")
         )
+
+        val spinnerItems = cuisines.map { it.main + it.ingre }
+
+        val adapter = ArrayAdapter(applicationContext,
+            android.R.layout.simple_spinner_item, spinnerItems)
+
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        // spinner に adapter をセット
+        // Kotlin Android Extensions
+        spinner.adapter = adapter
+
+        // リスナーを登録
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+            //　アイテムが選択された時
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+                // Kotlin Android Extensions
+                editText8.setText(item, TextView.BufferType.NORMAL)
+            }
+
+            //　アイテムが選択されなかった
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+                //
+            }
+        }
 
         tapHere.setOnClickListener {
 
@@ -152,6 +181,8 @@ class MainActivity : AppCompatActivity() {
         textView2.text = (menu.shuffled().take(7).toString())
 
         textView.text = (menu2.shuffled().take(7).toString())
+
+
 
         val spinnerItems = cuisines.map { it.main }
 
