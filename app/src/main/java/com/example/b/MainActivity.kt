@@ -19,39 +19,39 @@ class MainActivity : AppCompatActivity() {
 
             //Cooking("\n", "\n"),
 
-            Cooking("ハンバーグ\n", "ハンバーグ\n"),
-            Cooking("ギョーザ\n", "冷凍ギョーザ\n"),
-            Cooking("焼きウインナー\n", "ウインナー\n"),
-            Cooking("肉野菜炒め\n", "豚こま肉、野菜炒め用野菜\n"),
-            Cooking("唐揚げ\n", "鳥もも肉、唐揚げ粉\n"),
-            Cooking("豚汁\n", "豚こま肉、豚汁の素\n"),
-            Cooking("マーボー豆腐\n", "豆腐、マーボー豆腐の素\n"),
-            Cooking("マーボー春雨\n", "マーボー春雨\n"),
-            Cooking("人参しりしり\n", "ニンジン、卵、シーチキン\n"),
-            Cooking("煮付け\n\n", "油ふ、ニンジン、こんにゃく、\n さつま揚げ、キャベツ\n"),
-            Cooking("焼きそば\n\n", "豚こま肉、野菜炒め用野菜、\n 焼きそばの麺、天かす\n"),
-            Cooking("焼きワンタン\n", "ワンタン、ごま油\n"),
-            Cooking("チャーハン\n", "焼き豚、卵\n"),
-            Cooking("豚生姜焼き\n", "豚ロース、生姜焼きの素\n"),
-            Cooking("エビフライ\n", "冷凍エビフライ\n"),
-            Cooking("キノコ炒め\n\n", "しめじ、エリンギ、豚こま肉、\n キノコ炒めの素\n"),
-            Cooking("ビーフン炒め\n", "冷凍ビーフン\n"),
-            Cooking("チキングラタン\n\n", "鳥もも肉、タマネギ、とろけるチーズ、\n 粉チーズ、グラタンの素、牛乳\n"),
-            Cooking("ミートグラタン\n\n", "合い挽き肉、タマネギ、牛乳、\n とろけるチーズ、粉チーズ、グラタンの素\n"),
-            Cooking("シチュー\n\n", "鶏もも肉、人参、ジャガイモ、\n タマネギ、牛乳、シチューの素\n"),
-            Cooking("ビーフシチュー\n\n", "シチュー用牛肉、ジャガイモ、タマネギ、\n 人参、ビーフシチューの素\n"),
-            Cooking("うどん\n\n", "うどん玉、ネギ、かき揚げ天ぷら、\n かまぼこ、めんつゆ\n"),
-            Cooking("パスタ\n", "パスタ、パスタソース\n"),
-            Cooking("鯖マヨ\n", "鯖缶\n"),
-            Cooking("ジャガイモのチーズ焼き\n\n", "ジャガイモ、合い挽き肉、\n とろけるチーズ、チーズ焼きの素\n"),
-            Cooking("ハムカツ\n", "ハムカツ\n"),
-            Cooking("サイコロステーキ\n", "サイコロステーキ\n"),
-            Cooking("チキンステーキ\n", "チキンステーキ\n"),
-            Cooking("オムライス\n", "ハム、ミックスベジタブル、卵\n"),
-            Cooking("肉じゃが㋬\n\n", "ジャガイモ、豚or牛こま肉、タマネギ、\n ニンジン\n"),
-            Cooking("牛丼\n", "牛薄切り肉、タマネギ、牛丼のタレ\n"),
-            Cooking("豚バラ白菜㋬\n\n", "和風だしの素orコンソメ顆粒、\n 白菜、豚バラ肉\n"),
-            Cooking("カレー㋬\n\n", "カレー用牛肉or豚肉、ジャガイモ、人参、\n タマネギ、カレールー\n")
+            Cooking("ハンバーグ　　　　", "ハンバーグ"),
+            Cooking("ギョーザ　　　　　", "冷凍ギョーザ"),
+            Cooking("焼きウインナー　　", "ウインナー"),
+            Cooking("肉野菜炒め　　　　", "豚こま肉　野菜炒め用野菜"),
+            Cooking("唐揚げ　　　　　　", "鳥もも肉　唐揚げ粉"),
+            Cooking("豚汁　　　　　　　", "豚こま肉　豚汁の素"),
+            Cooking("マーボー豆腐　　　", "豆腐　マーボー豆腐の素"),
+            Cooking("マーボー春雨　　　", "マーボー春雨"),
+            Cooking("人参しりしり　　　", "ニンジン　卵　シーチキン"),
+            Cooking("煮付け　　　　　　", "油ふ　ニンジン　こんにゃく　\nさつま揚げ　キャベツ\n"),
+            Cooking("焼きそば　　　　　", "豚こま肉　野菜炒め用野菜　\n焼きそばの麺　天かす\n"),
+            Cooking("焼きワンタン　　　", "ワンタン　ごま油"),
+            Cooking("チャーハン　　　　", "焼き豚　卵"),
+            Cooking("豚生姜焼き　　　　", "豚ロース　生姜焼きの素"),
+            Cooking("エビフライ　　　　", "冷凍エビフライ"),
+            Cooking("キノコ炒め　　　　", "しめじ　エリンギ　豚こま肉　\nキノコ炒めの素\n"),
+            Cooking("ビーフン炒め　　　", "冷凍ビーフン"),
+            Cooking("チキングラタン　　", "鳥もも肉　タマネギ　とろけるチーズ　\n粉チーズ　グラタンの素　牛乳\n"),
+            Cooking("ミートグラタン　　", "合い挽き肉　タマネギ　牛乳　とろけるチーズ　粉チーズ　グラタンの素"),
+            Cooking("シチュー　　　　　", "鶏もも肉、人参、ジャガイモ、\n タマネギ、牛乳、シチューの素\n"),
+            Cooking("ビーフシチュー　　", "シチュー用牛肉、ジャガイモ、タマネギ、\n 人参、ビーフシチューの素\n"),
+            Cooking("うどん　　　　　　", "うどん玉、ネギ、かき揚げ天ぷら、\n かまぼこ、めんつゆ\n"),
+            Cooking("パスタ　　　　　　", "パスタ、パスタソース"),
+            Cooking("鯖マヨ　　　　　　", "鯖缶"),
+            Cooking("ジャガチーズ焼き　", "ジャガイモ、合い挽き肉、\n とろけるチーズ、チーズ焼きの素\n"),
+            Cooking("ハムカツ　　　　　", "ハムカツ"),
+            Cooking("サイコロステーキ　", "サイコロステーキ"),
+            Cooking("チキンステーキ　　", "チキンステーキ"),
+            Cooking("オムライス　　　　", "ハム、ミックスベジタブル、卵"),
+            Cooking("肉じゃが㋬　　　　", "ジャガイモ、豚or牛こま肉、タマネギ、\n ニンジン\n"),
+            Cooking("牛丼　　　　　　　", "牛薄切り肉、タマネギ、牛丼のタレ"),
+            Cooking("豚バラ白菜㋬　　　", "和風だしの素orコンソメ顆粒、\n 白菜、豚バラ肉\n"),
+            Cooking("カレー㋬　　　　　", "カレー用牛肉or豚肉、ジャガイモ、人参、\n タマネギ、カレールー\n")
         )
 
         val spinnerItems = cuisines.map { it.main + it.ingre }
@@ -61,24 +61,23 @@ class MainActivity : AppCompatActivity() {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        // spinner に adapter をセット
-        // Kotlin Android Extensions
+
         spinner.adapter = adapter
 
-        // リスナーを登録
+
         spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
-            //　アイテムが選択された時
+
             override fun onItemSelected(parent: AdapterView<*>?,
                                         view: View?, position: Int, id: Long) {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
-                // Kotlin Android Extensions
-                editText8.setText(item, TextView.BufferType.NORMAL)
+
+                editText8.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText4.setText(item.drop(9), TextView.BufferType.NORMAL)
             }
 
-            //　アイテムが選択されなかった
             override fun onNothingSelected(parent: AdapterView<*>?) {
-                //
+
             }
         }
 
@@ -131,6 +130,32 @@ class MainActivity : AppCompatActivity() {
             Choking("フライドポテト\n", "フライドポテト\n"),
             Choking("大学いも\n", "さつまいも、大学いもの素、ごま\n")
         )
+
+        val spinnerItems2 = clumsiness.map { it.mains +it.ingres }
+
+        val adapter2 = ArrayAdapter(applicationContext,
+            android.R.layout.simple_spinner_item, spinnerItems2)
+
+        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+        spinner2.adapter = adapter2
+
+
+        spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText9.setText(item, TextView.BufferType.NORMAL)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
 
         button2.setOnClickListener {
 
