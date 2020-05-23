@@ -2,7 +2,7 @@
     <string name="app_name">せがれ1.2</string>
     <string name="tap_here">一週間分</string>
     <string name="textview3">メインメニュー</string>
-    <string name="taphere1">メインメニュー</string>
+    <string name="taphere1">おまかせ</string>
     <string name="taphere2">サブメニュー</string>
     <string name="textview5">サブメニュー</string>
     <string name="textview">メイン</string>
@@ -38,4 +38,18 @@
     <string name="send">Send</string>
     <string name="goprint">Button</string>
     <string name="buylist">買い物リスト</string>
+    <string name="mm1">メイン1</string>
+    <string name="mm2">メイン2</string>
+    <string name="mm3">メイン3</string>
+    <string name="mm4">メイン4</string>
+    <string name="mm5">メイン5</string>
+    <string name="mm6">メイン6</string>
+    <string name="mm7">メイン7</string>
+    <string name="sm1">サブ1</string>
+    <string name="sm2">サブ2</string>
+    <string name="sm3">サブ3</string>
+    <string name="sm4">サブ4</string>
+    <string name="sm5">サブ5</string>
+    <string name="sm6">サブ6</string>
+    <string name="sm7">サブ7</string>
 </resources>

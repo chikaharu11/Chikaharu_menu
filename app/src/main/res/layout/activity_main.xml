@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,19 +10,22 @@
         android:id="@+id/tapHere"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
+        android:layout_marginEnd="49dp"
+        android:layout_marginBottom="22dp"
         android:text="@string/taphere1"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/noonButton" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
+        android:layout_marginEnd="13dp"
         android:layout_marginBottom="22dp"
         android:text="@string/taphere2"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/babyButton"
         app:layout_constraintStart_toEndOf="@+id/tapHere" />
 
     <ImageButton
@@ -41,10 +43,9 @@
 
     <ImageButton
         android:id="@+id/babyButton"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginEnd="15dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="14dp"
         android:contentDescription="@string/baby"
         app:layout_constraintBottom_toBottomOf="@+id/noonButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,86 +54,317 @@
         app:srcCompat="@mipmap/baby" />
 
     <EditText
-        android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:gravity="start|top"
-        android:hint="@string/hint10"
-        android:inputType="textMultiLine"
-        android:textSize="12sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText7"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="LabelFor" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="276dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:gravity="start|top"
-        android:hint="@string/hint7"
-        android:inputType="textMultiLine"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="LabelFor" />
-
-    <EditText
         android:id="@+id/editText8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
-        android:hint="@string/hint8"
+        android:hint="@string/mm1"
         android:inputType="textMultiLine"
-        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText8"
+        app:layout_constraintTop_toBottomOf="@+id/editText8"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm7"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText12"
+        app:layout_constraintTop_toBottomOf="@+id/editText12"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm3"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm5"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText10"
+        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm4"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm6"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText11"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
         tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/editText9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
-        android:hint="@string/hint9"
+        android:hint="@string/sm1"
         android:inputType="textMultiLine"
-        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
 
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText9"
+        app:layout_constraintTop_toBottomOf="@+id/editText9"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm4"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText14"
+        app:layout_constraintTop_toBottomOf="@+id/editText14"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm5"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText15"
+        app:layout_constraintTop_toBottomOf="@+id/editText15"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm7"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText17"
+        app:layout_constraintTop_toBottomOf="@+id/editText17"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm6"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText16"
+        app:layout_constraintTop_toBottomOf="@+id/editText16"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/editText14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm3"
+        android:inputType="textMultiLine"
+        app:layout_constraintStart_toStartOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/editText7"
+        tools:ignore="LabelFor" />
+
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner1"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="248dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spinner4"
+        app:layout_constraintStart_toStartOf="@+id/spinner4"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner3"
+        app:layout_constraintStart_toStartOf="@+id/spinner3"
+        app:layout_constraintTop_toBottomOf="@+id/spinner1"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner7"
+        app:layout_constraintStart_toStartOf="@+id/spinner7"
+        app:layout_constraintTop_toBottomOf="@+id/spinner4"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner7"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner6"
+        app:layout_constraintStart_toStartOf="@+id/spinner6"
+        app:layout_constraintTop_toBottomOf="@+id/spinner3"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner6"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner2"
+        app:layout_constraintStart_toStartOf="@+id/spinner2"
+        app:layout_constraintTop_toBottomOf="@+id/spinner7"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="30dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner2"
         tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinner2"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginBottom="148dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinner5"
+        app:layout_constraintStart_toStartOf="@+id/spinner5"
+        app:layout_constraintTop_toBottomOf="@+id/spinner6"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerB"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerF"
+        app:layout_constraintStart_toStartOf="@+id/spinnerF"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerG"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerD"
+        app:layout_constraintStart_toStartOf="@+id/spinnerD"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerF"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerD"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerE"
+        app:layout_constraintStart_toStartOf="@+id/spinnerE"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerG"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerE"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerC"
+        app:layout_constraintStart_toStartOf="@+id/spinnerC"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerD"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerC"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerA"
+        app:layout_constraintStart_toStartOf="@+id/spinnerA"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerE"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerA"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="75dp"
+        app:layout_constraintEnd_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerC"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerF"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerG"
+        app:layout_constraintStart_toStartOf="@+id/spinnerG"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerB"
         tools:ignore="MissingConstraints" />
 
 

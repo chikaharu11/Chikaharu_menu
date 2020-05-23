@@ -62,10 +62,16 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinner.adapter = adapter
+        spinner1.adapter = adapter
+        spinner2.adapter = adapter
+        spinner3.adapter = adapter
+        spinner4.adapter = adapter
+        spinner5.adapter = adapter
+        spinner6.adapter = adapter
+        spinner7.adapter = adapter
 
 
-        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
 
             override fun onItemSelected(parent: AdapterView<*>?,
                                         view: View?, position: Int, id: Long) {
@@ -73,7 +79,103 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText8.setText(item.take(9), TextView.BufferType.NORMAL)
-                editText4.setText(item.drop(9), TextView.BufferType.NORMAL)
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText4.setText(item.take(9), TextView.BufferType.NORMAL)
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText.setText(item.take(9), TextView.BufferType.NORMAL)
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinner7.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText10.setText(item.take(9), TextView.BufferType.NORMAL)
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinner6.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText11.setText(item.take(9), TextView.BufferType.NORMAL)
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText12.setText(item.take(9), TextView.BufferType.NORMAL)
+
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinner5.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText13.setText(item.take(9), TextView.BufferType.NORMAL)
+
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -109,26 +211,26 @@ class MainActivity : AppCompatActivity() {
 
             //Choking("\n", "\n"),
 
-            Choking("生野菜\n", "生野菜\n"),
-            Choking("豆腐\n", "絹ごし豆腐\n"),
-            Choking("パウチサラダ\n", "パウチサラダ\n"),
-            Choking("レンジ野菜\n", "レンジ野菜\n"),
-            Choking("シューマイ\n", "シューマイ\n"),
-            Choking("きゅうり酢和え\n", "玉ふ、きゅうり\n"),
-            Choking("ツナレタスサラダ\n", "ツナ缶、きゅうり、レタス\n"),
-            Choking("ショーロンポー\n", "ショーロンポー\n"),
-            Choking("こんぶキャベツ\n", "キャベツ、塩こんぶ\n"),
-            Choking("レンジ豚もやし\n", "豚ばら肉、もやし\n"),
-            Choking("のりきゅうり\n", "海苔、きゅうり\n"),
-            Choking("茶碗むし\n", "茶碗むし\n"),
-            Choking("レンジコロッケ\n", "冷凍コロッケ\n"),
-            Choking("ブロッコリーじゃがいも\n", "ブロッコリー、じゃがいも\n"),
-            Choking("スティックサラダ\n", "にんじん、大根、きゅうり\n"),
-            Choking("味噌田楽\n", "味噌田楽\n"),
-            Choking("かぼちゃチーズサラダ\n", "かぼちゃ、スライスチーズ\n"),
-            Choking("マカロニサラダ\n", "マカロニ、, カニカマ、ハム、ツナコーン\n"),
-            Choking("フライドポテト\n", "フライドポテト\n"),
-            Choking("大学いも\n", "さつまいも、大学いもの素、ごま\n")
+            Choking("生野菜　　　　　　　　　", "生野菜"),
+            Choking("豆腐　　　　　　　　　　", "絹ごし豆腐"),
+            Choking("パウチサラダ　　　　　　", "パウチサラダ"),
+            Choking("レンジ野菜　　　　　　　", "レンジ野菜"),
+            Choking("シューマイ　　　　　　　", "シューマイ"),
+            Choking("きゅうり酢和え　　　　　", "玉ふ、きゅうり"),
+            Choking("ツナレタスサラダ　　　　", "ツナ缶、きゅうり、レタス"),
+            Choking("ショーロンポー　　　　　", "ショーロンポー"),
+            Choking("こんぶキャベツ　　　　　", "キャベツ、塩こんぶ"),
+            Choking("レンジ豚もやし　　　　　", "豚ばら肉、もやし"),
+            Choking("のりきゅうり　　　　　　", "海苔、きゅうり"),
+            Choking("茶碗むし　　　　　　　　", "茶碗むし"),
+            Choking("レンジコロッケ　　　　　", "冷凍コロッケ"),
+            Choking("ブロッコリーじゃがいも　", "ブロッコリー、じゃがいも"),
+            Choking("スティックサラダ　　　　", "にんじん、大根、きゅうり"),
+            Choking("味噌田楽　　　　　　　　", "味噌田楽"),
+            Choking("かぼちゃチーズサラダ　　", "かぼちゃ、スライスチーズ"),
+            Choking("マカロニサラダ　　　　　", "マカロニ、, カニカマ、ハム、ツナコーン"),
+            Choking("フライドポテト　　　　　", "フライドポテト"),
+            Choking("大学いも　　　　　　　　", "さつまいも、大学いもの素、ごま")
         )
 
         val spinnerItems2 = clumsiness.map { it.mains +it.ingres }
@@ -139,17 +241,113 @@ class MainActivity : AppCompatActivity() {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinner2.adapter = adapter2
+        spinnerA.adapter = adapter2
+        spinnerB.adapter = adapter2
+        spinnerC.adapter = adapter2
+        spinnerD.adapter = adapter2
+        spinnerE.adapter = adapter2
+        spinnerF.adapter = adapter2
+        spinnerG.adapter = adapter2
 
 
-        spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+        spinnerB.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
 
             override fun onItemSelected(parent: AdapterView<*>?,
                                         view: View?, position: Int, id: Long) {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText9.setText(item, TextView.BufferType.NORMAL)
+                editText9.setText(item.take(12), TextView.BufferType.NORMAL)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinnerF.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText7.setText(item.take(12), TextView.BufferType.NORMAL)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinnerG.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText14.setText(item.take(12), TextView.BufferType.NORMAL)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinnerD.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText15.setText(item.take(12), TextView.BufferType.NORMAL)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinnerE.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText16.setText(item.take(12), TextView.BufferType.NORMAL)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinnerC.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText17.setText(item.take(12), TextView.BufferType.NORMAL)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinnerA.onItemSelectedListener = object : AdapterView.OnItemSelectedListener{
+
+            override fun onItemSelected(parent: AdapterView<*>?,
+                                        view: View?, position: Int, id: Long) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                editText18.setText(item.take(12), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -189,6 +387,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
 /*
             val menu = arrayListOf("ハンバーグ\n", "冷魚\n", "ギョーザ\n", "肉野菜炒め\n","からあげ\n","豚汁\n","マーボー豆腐\n","マーボー春雨\n","キーマカレー\n","煮つけ\n"
                     ,"焼きそば\n","人参しりしり\n","焼きワンタン\n","チャーハン\n","豚しょうが焼き\n","エビフライ\n","きのこ炒め\n","ビーフン\n","グラタン\n","シチュー\n","うどん\n"
@@ -236,5 +435,5 @@ class MainActivity : AppCompatActivity() {
                 //
             }
         }
-
+editText5.setText(item.drop(9), TextView.BufferType.NORMAL)
         */
