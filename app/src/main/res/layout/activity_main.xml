@@ -33,24 +33,28 @@
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="20dp"
         android:contentDescription="@string/noon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/tapHere"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerB"
         app:srcCompat="@mipmap/noon" />
 
     <ImageButton
         android:id="@+id/babyButton"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="14dp"
+        android:layout_marginBottom="20dp"
         android:contentDescription="@string/baby"
-        app:layout_constraintBottom_toBottomOf="@+id/noonButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button2"
-        app:layout_constraintTop_toTopOf="@+id/noonButton"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerA"
         app:srcCompat="@mipmap/baby" />
 
     <EditText
@@ -72,6 +76,7 @@
         android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -85,6 +90,7 @@
         android:id="@+id/editText13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -98,6 +104,7 @@
         android:id="@+id/editText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -111,6 +118,7 @@
         android:id="@+id/editText11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -124,6 +132,7 @@
         android:id="@+id/editText10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -137,6 +146,7 @@
         android:id="@+id/editText12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -165,6 +175,7 @@
         android:id="@+id/editText7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -178,6 +189,7 @@
         android:id="@+id/editText15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -191,6 +203,7 @@
         android:id="@+id/editText16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -204,6 +217,7 @@
         android:id="@+id/editText18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -217,6 +231,7 @@
         android:id="@+id/editText17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -230,6 +245,7 @@
         android:id="@+id/editText14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -241,130 +257,159 @@
 
     <Spinner
         android:id="@+id/spinner1"
-        android:layout_width="30dp"
+        android:layout_width="57dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/spinner4"
-        app:layout_constraintStart_toStartOf="@+id/spinner4"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner4"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner3"
-        app:layout_constraintStart_toStartOf="@+id/spinner3"
-        app:layout_constraintTop_toBottomOf="@+id/spinner1"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner7"
-        app:layout_constraintStart_toStartOf="@+id/spinner7"
-        app:layout_constraintTop_toBottomOf="@+id/spinner4"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner4"
+        app:layout_constraintEnd_toStartOf="@+id/spinner4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinner4"
         tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinner7"
-        android:layout_width="30dp"
+        android:layout_width="58dp"
         android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner6"
-        app:layout_constraintStart_toStartOf="@+id/spinner6"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
+        android:layout_marginBottom="77dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/spinner6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner3"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="57dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner7"
+        app:layout_constraintEnd_toStartOf="@+id/spinner7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner4"
+        app:layout_constraintTop_toTopOf="@+id/spinner7"
         tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinner6"
-        android:layout_width="30dp"
+        android:layout_width="57dp"
         android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner2"
-        app:layout_constraintStart_toStartOf="@+id/spinner2"
-        app:layout_constraintTop_toBottomOf="@+id/spinner7"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner5"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner7"
+        app:layout_constraintEnd_toStartOf="@+id/spinner2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner7"
+        app:layout_constraintTop_toTopOf="@+id/spinner7"
         tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinner2"
-        android:layout_width="30dp"
+        android:layout_width="58dp"
         android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinner5"
-        app:layout_constraintStart_toStartOf="@+id/spinner5"
-        app:layout_constraintTop_toBottomOf="@+id/spinner6"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner6"
+        app:layout_constraintEnd_toStartOf="@+id/spinner5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner6"
+        app:layout_constraintTop_toTopOf="@+id/spinner6"
         tools:ignore="MissingConstraints" />
 
     <Spinner
-        android:id="@+id/spinnerB"
-        android:layout_width="30dp"
+        android:id="@+id/spinner5"
+        android:layout_width="58dp"
         android:layout_height="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerF"
-        app:layout_constraintStart_toStartOf="@+id/spinnerF"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner2"
+        app:layout_constraintTop_toTopOf="@+id/spinner2"
         tools:ignore="MissingConstraints" />
 
     <Spinner
-        android:id="@+id/spinnerG"
-        android:layout_width="30dp"
+        android:id="@+id/spinner4"
+        android:layout_width="58dp"
         android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerD"
-        app:layout_constraintStart_toStartOf="@+id/spinnerD"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerF"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerD"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerE"
-        app:layout_constraintStart_toStartOf="@+id/spinnerE"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerG"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerE"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerC"
-        app:layout_constraintStart_toStartOf="@+id/spinnerC"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerD"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerC"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerA"
-        app:layout_constraintStart_toStartOf="@+id/spinnerA"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerE"
+        app:layout_constraintBottom_toBottomOf="@+id/spinner3"
+        app:layout_constraintEnd_toStartOf="@+id/spinner3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/spinner1"
+        app:layout_constraintTop_toTopOf="@+id/spinner3"
         tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinnerA"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="75dp"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinnerC"
+        app:layout_constraintTop_toTopOf="@+id/spinnerC"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerF"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spinnerF"
         tools:ignore="MissingConstraints" />
 
     <Spinner
         android:id="@+id/spinnerF"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        app:layout_constraintEnd_toEndOf="@+id/spinnerG"
-        app:layout_constraintStart_toStartOf="@+id/spinnerG"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerG"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerG"
+        app:layout_constraintStart_toEndOf="@+id/spinnerB"
+        app:layout_constraintTop_toTopOf="@+id/spinnerG"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerE"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerE"
+        app:layout_constraintStart_toEndOf="@+id/spinnerG"
+        app:layout_constraintTop_toTopOf="@+id/spinnerE"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerE"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerC"
+        app:layout_constraintStart_toEndOf="@+id/spinnerD"
+        app:layout_constraintTop_toBottomOf="@+id/spinner6"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerE"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerA"
+        app:layout_constraintStart_toEndOf="@+id/spinnerE"
+        app:layout_constraintTop_toTopOf="@+id/spinnerE"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerG"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/spinnerD"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerD"
+        app:layout_constraintStart_toEndOf="@+id/spinnerF"
+        app:layout_constraintTop_toTopOf="@+id/spinnerD"
         tools:ignore="MissingConstraints" />
 
 

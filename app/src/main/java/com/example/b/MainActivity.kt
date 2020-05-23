@@ -183,28 +183,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        tapHere.setOnClickListener {
-
-            val chiseled = (cuisines.shuffled())
-
-            val text4 = (chiseled.map { it.main }.take(10).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val text5 = findViewById<EditText>(R.id.editText8)
-
-            text5.setText(text4, TextView.BufferType.NORMAL)
-
-            val text6 = (chiseled.map { it.ingre }.take(10).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val text7 = findViewById<EditText>(R.id.editText9)
-
-            text7.setText(text6, TextView.BufferType.NORMAL)
-
-        }
-
         class Choking(val mains: String, val ingres: String)
 
         val clumsiness = arrayListOf(
@@ -353,6 +331,46 @@ class MainActivity : AppCompatActivity() {
             override fun onNothingSelected(parent: AdapterView<*>?) {
 
             }
+        }
+
+        tapHere.setOnClickListener {
+
+            val chiseled = (cuisines.shuffled())
+
+            val random1 = (chiseled.map { it.main }[0])
+            val random2 = (chiseled.map { it.main }[1])
+            val random3 = (chiseled.map { it.main }[2])
+            val random4 = (chiseled.map { it.main }[3])
+            val random5 = (chiseled.map { it.main }[4])
+            val random6 = (chiseled.map { it.main }[5])
+            val random7 = (chiseled.map { it.main }[6])
+
+            editText8.setText(random1, TextView.BufferType.NORMAL)
+            editText4.setText(random2, TextView.BufferType.NORMAL)
+            editText.setText(random3, TextView.BufferType.NORMAL)
+            editText10.setText(random4, TextView.BufferType.NORMAL)
+            editText11.setText(random5, TextView.BufferType.NORMAL)
+            editText12.setText(random6, TextView.BufferType.NORMAL)
+            editText13.setText(random7, TextView.BufferType.NORMAL)
+
+            val chiselers = (clumsiness.shuffled())
+
+            val randomA = (chiselers.map { it.mains }[0])
+            val randomB = (chiselers.map { it.mains }[1])
+            val randomC = (chiselers.map { it.mains }[2])
+            val randomD = (chiselers.map { it.mains }[3])
+            val randomE = (chiselers.map { it.mains }[4])
+            val randomF = (chiselers.map { it.mains }[5])
+            val randomG = (chiselers.map { it.mains }[6])
+
+            editText9.setText(randomA, TextView.BufferType.NORMAL)
+            editText7.setText(randomB, TextView.BufferType.NORMAL)
+            editText14.setText(randomC, TextView.BufferType.NORMAL)
+            editText15.setText(randomD, TextView.BufferType.NORMAL)
+            editText16.setText(randomE, TextView.BufferType.NORMAL)
+            editText17.setText(randomF, TextView.BufferType.NORMAL)
+            editText18.setText(randomG, TextView.BufferType.NORMAL)
+
         }
 
         button2.setOnClickListener {
