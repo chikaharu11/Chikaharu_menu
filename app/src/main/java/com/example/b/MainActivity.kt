@@ -3,11 +3,20 @@ package com.example.b
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+
+        const val EXTRA_MESSAGE = "com.example.b.MESSAGE"
+
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -375,29 +384,17 @@ class MainActivity : AppCompatActivity() {
 
         button2.setOnClickListener {
 
-            val chiselers = (clumsiness.shuffled())
+                val intent = Intent(applicationContext, BabyActivity::class.java)
+                val str = editText8.text.toString()
 
-            val text = (chiselers.map { it.mains }.take(10).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val text1 = findViewById<EditText>(R.id.editText4)
-
-            text1.setText(text, TextView.BufferType.NORMAL)
-
-            val text2 = (chiselers.map { it.ingres }.take(10).toString()
-                .replace("[", "").replace("]", "").replace(",", "")
-                .fold(" ") { initial, value -> initial + value })
-
-            val text3 = findViewById<EditText>(R.id.editText7)
-
-            text3.setText(text2, TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MESSAGE, str)
+                startActivity(intent)
 
         }
 
         noonButton.setOnClickListener {
-            val intent = Intent(application, NoonActivity::class.java)
-            startActivity(intent)
+            val intentM = Intent(application, NoonActivity::class.java)
+            startActivity(intentM)
         }
 
         babyButton.setOnClickListener {
@@ -454,4 +451,28 @@ class MainActivity : AppCompatActivity() {
             }
         }
 editText5.setText(item.drop(9), TextView.BufferType.NORMAL)
+
+button2.setOnClickListener {
+
+            val chiselers = (clumsiness.shuffled())
+
+            val text = (chiselers.map { it.mains }.take(10).toString()
+                .replace("[", "").replace("]", "").replace(",", "")
+                .fold(" ") { initial, value -> initial + value })
+
+            val text1 = findViewById<EditText>(R.id.editText4)
+
+            text1.setText(text, TextView.BufferType.NORMAL)
+
+            val text2 = (chiselers.map { it.ingres }.take(10).toString()
+                .replace("[", "").replace("]", "").replace(",", "")
+                .fold(" ") { initial, value -> initial + value })
+
+            val text3 = findViewById<EditText>(R.id.editText7)
+
+            text3.setText(text2, TextView.BufferType.NORMAL)
+
+        }
+
+intent.putExtra(EXTRA_MESSAGE, item.drop(9))
         */
