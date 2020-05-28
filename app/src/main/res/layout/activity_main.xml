@@ -261,7 +261,6 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner4"
         app:layout_constraintEnd_toStartOf="@+id/spinner4"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/spinner4"
         tools:ignore="MissingConstraints" />
@@ -273,7 +272,6 @@
         android:layout_marginBottom="77dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/spinner6"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spinner3"
         tools:ignore="MissingConstraints" />
 
@@ -283,7 +281,6 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner7"
         app:layout_constraintEnd_toStartOf="@+id/spinner7"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spinner4"
         app:layout_constraintTop_toTopOf="@+id/spinner7"
         tools:ignore="MissingConstraints" />
@@ -294,7 +291,6 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner7"
         app:layout_constraintEnd_toStartOf="@+id/spinner2"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spinner7"
         app:layout_constraintTop_toTopOf="@+id/spinner7"
         tools:ignore="MissingConstraints" />
@@ -305,7 +301,6 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner6"
         app:layout_constraintEnd_toStartOf="@+id/spinner5"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spinner6"
         app:layout_constraintTop_toTopOf="@+id/spinner6"
         tools:ignore="MissingConstraints" />
@@ -316,7 +311,6 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spinner2"
         app:layout_constraintTop_toTopOf="@+id/spinner2"
         tools:ignore="MissingConstraints" />
@@ -327,7 +321,6 @@
         android:layout_height="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinner3"
         app:layout_constraintEnd_toStartOf="@+id/spinner3"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/spinner1"
         app:layout_constraintTop_toTopOf="@+id/spinner3"
         tools:ignore="MissingConstraints" />
