@@ -24,10 +24,7 @@
             android:name=".BabyActivity"
             android:label="@string/app3_name" >
         </activity>
-        <activity
-            android:name=".PrintActivity"
-            android:label="@string/app4_name" >
-        </activity>
+
     </application>
 
 </manifest>

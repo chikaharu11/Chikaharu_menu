@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
             //Cooking("\n", "\n"),
 
+            Cooking("　　　　　　　　　", "\n\n"),
             Cooking("ハンバーグ　　　　", "[ハンバーグ]\n\n"),
             Cooking("ギョーザ　　　　　", "[冷凍ギョーザ]\n\n"),
             Cooking("焼きウインナー　　", "[ウインナー]\n\n"),
@@ -103,7 +104,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText8.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText8.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU1, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
@@ -120,7 +121,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText4.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText4.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU2, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
@@ -137,7 +138,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU3, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
@@ -154,7 +155,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText10.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText10.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU4, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
@@ -171,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText11.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText11.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU5, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
@@ -188,7 +189,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText12.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText12.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU6, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
@@ -205,7 +206,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText13.setText(item.take(9), TextView.BufferType.NORMAL)
+                editText13.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU7, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
@@ -221,6 +222,7 @@ class MainActivity : AppCompatActivity() {
 
             //Choking("\n", "\n"),
 
+            Choking("　　　　　　　　　　　　", "\n\n"),
             Choking("生野菜　　　　　　　　　", "[生野菜]\n\n"),
             Choking("豆腐　　　　　　　　　　", "[絹ごし豆腐]\n\n"),
             Choking("パウチサラダ　　　　　　", "[パウチサラダ]\n\n"),
@@ -267,7 +269,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText9.setText(item.take(12), TextView.BufferType.NORMAL)
+                editText9.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU01, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             }
 
@@ -283,7 +285,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText7.setText(item.take(12), TextView.BufferType.NORMAL)
+                editText7.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU02, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             }
 
@@ -299,7 +301,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText14.setText(item.take(12), TextView.BufferType.NORMAL)
+                editText14.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU03, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             }
 
@@ -315,7 +317,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText15.setText(item.take(12), TextView.BufferType.NORMAL)
+                editText15.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU04, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             }
 
@@ -331,7 +333,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText16.setText(item.take(12), TextView.BufferType.NORMAL)
+                editText16.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU05, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             }
 
@@ -347,7 +349,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText17.setText(item.take(12), TextView.BufferType.NORMAL)
+                editText17.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU06, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             }
 
@@ -363,7 +365,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText18.setText(item.take(12), TextView.BufferType.NORMAL)
+                editText18.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
                 intent.putExtra(EXTRA_MENU07, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             }
 
@@ -374,7 +376,7 @@ class MainActivity : AppCompatActivity() {
 
         tapHere.setOnClickListener {
 
-            val chiseled = (cuisines.shuffled())
+            /*val chiseled = (cuisines.shuffled())
 
             val random1 = (chiseled.map { it.main + it.ingre }[0])
             val random2 = (chiseled.map { it.main + it.ingre }[1])
@@ -384,13 +386,13 @@ class MainActivity : AppCompatActivity() {
             val random6 = (chiseled.map { it.main + it.ingre }[5])
             val random7 = (chiseled.map { it.main + it.ingre }[6])
 
-            editText8.setText(random1.take(9), TextView.BufferType.NORMAL)
-            editText4.setText(random2.take(9), TextView.BufferType.NORMAL)
-            editText.setText(random3.take(9), TextView.BufferType.NORMAL)
-            editText10.setText(random4.take(9), TextView.BufferType.NORMAL)
-            editText11.setText(random5.take(9), TextView.BufferType.NORMAL)
-            editText12.setText(random6.take(9), TextView.BufferType.NORMAL)
-            editText13.setText(random7.take(9), TextView.BufferType.NORMAL)
+            editText8.setText(random1.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText4.setText(random2.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText.setText(random3.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText10.setText(random4.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText11.setText(random5.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText12.setText(random6.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText13.setText(random7.take(9).replace("　", ""), TextView.BufferType.NORMAL)
 
             intent.putExtra(EXTRA_MENU1, random1.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU2, random2.drop(9).replace("[", "").replace("]", "").replace("、", ""))
@@ -410,13 +412,13 @@ class MainActivity : AppCompatActivity() {
             val randomF = (chiselers.map { it.mains + it.ingres }[5])
             val randomG = (chiselers.map { it.mains + it.ingres }[6])
 
-            editText9.setText(randomA.take(12), TextView.BufferType.NORMAL)
-            editText7.setText(randomB.take(12), TextView.BufferType.NORMAL)
-            editText14.setText(randomC.take(12), TextView.BufferType.NORMAL)
-            editText15.setText(randomD.take(12), TextView.BufferType.NORMAL)
-            editText16.setText(randomE.take(12), TextView.BufferType.NORMAL)
-            editText17.setText(randomF.take(12), TextView.BufferType.NORMAL)
-            editText18.setText(randomG.take(12), TextView.BufferType.NORMAL)
+            editText9.setText(randomA.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText7.setText(randomB.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText14.setText(randomC.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText15.setText(randomD.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText16.setText(randomE.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText17.setText(randomF.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText18.setText(randomG.take(12).replace("　", ""), TextView.BufferType.NORMAL)
 
             intent.putExtra(EXTRA_MENU01, randomA.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU02, randomB.drop(12).replace("[", "").replace("]", "").replace("、", ""))
@@ -424,7 +426,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(EXTRA_MENU04, randomD.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU05, randomE.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU06, randomF.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU07, randomG.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU07, randomG.drop(12).replace("[", "").replace("]", "").replace("、", ""))*/
 
         }
 
@@ -442,7 +444,7 @@ class MainActivity : AppCompatActivity() {
 
         babyButton.setOnClickListener {
 
-            finish()
+            //finish()
         }
     }
 }
