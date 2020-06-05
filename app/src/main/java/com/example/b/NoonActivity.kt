@@ -3,7 +3,10 @@ package com.example.b
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_noon.*
 
@@ -39,18 +42,18 @@ class NoonActivity : AppCompatActivity() {
 
             //Lunch("\n", "\n"),
 
-            Lunch("　　　　　　　　　　", "\n\n"),
-            Lunch("皿うどん　　　　　　", "[皿うどん、\n豚バラ肉、\n野菜炒め用野菜]\n\n"),
-            Lunch("ギョーザ　　　　　　", "[冷凍ギョーザ]\n\n"),
-            Lunch("焼きそば　　　　　　", "[豚こま肉、\n野菜炒め用野菜、\n焼きそばの麺]\n\n"),
-            Lunch("マーボー春雨　　　　", "[マーボー春雨]\n\n"),
-            Lunch("マーボー豆腐　　　　", "[マーボー豆腐]\n\n"),
-            Lunch("沖縄そば　　　　　　", "[かまぼこ、\nネギ]\n\n"),
-            Lunch("冷凍パスタ　　　　　", "[冷凍パスタ]\n\n"),
-            Lunch("すき焼き豆腐　　　　", "[豆腐、\nすき焼き豆腐の素]\n\n"),
-            Lunch("レトルトカレー　　　", "[レトルトカレー]\n\n"),
-            Lunch("豚しょうが焼き　　　", "[豚ロース肉、\n豚しょうが焼きの素]\n\n"),
-            Lunch("ハンバーグ　　　　　", "[ハンバーグ]\n\n")
+            Lunch("　　　　　　　　　", "\n\n"),
+            Lunch("皿うどん　　　　　", "[皿うどん、\n豚バラ肉、\n野菜炒め用野菜]\n\n"),
+            Lunch("ギョーザ　　　　　", "[冷凍ギョーザ]\n\n"),
+            Lunch("焼きそば　　　　　", "[豚こま肉、\n野菜炒め用野菜、\n焼きそばの麺]\n\n"),
+            Lunch("マーボー春雨　　　", "[マーボー春雨]\n\n"),
+            Lunch("マーボー豆腐　　　", "[マーボー豆腐]\n\n"),
+            Lunch("沖縄そば　　　　　", "[かまぼこ、\nネギ]\n\n"),
+            Lunch("冷凍パスタ　　　　", "[冷凍パスタ]\n\n"),
+            Lunch("すき焼き豆腐　　　", "[豆腐、\nすき焼き豆腐の素]\n\n"),
+            Lunch("レトルトカレー　　", "[レトルトカレー]\n\n"),
+            Lunch("豚しょうが焼き　　", "[豚ロース肉、\n豚しょうが焼きの素]\n\n"),
+            Lunch("ハンバーグ　　　　", "[ハンバーグ]\n\n")
         )
 
         val intent = Intent(applicationContext, BabyActivity::class.java)
@@ -337,9 +340,14 @@ class NoonActivity : AppCompatActivity() {
             }
         }
 
+        button2.setOnClickListener{
+
+            startActivity(intent)
+        }
+
         babyButton2.setOnClickListener {
-            val intent3 = Intent(application, MainActivity::class.java)
-            startActivity(intent3)
+
+            finish()
         }
     }
 }

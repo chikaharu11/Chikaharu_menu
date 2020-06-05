@@ -374,9 +374,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        tapHere.setOnClickListener {
+        /*tapHere.setOnClickListener {
 
-            /*val chiseled = (cuisines.shuffled())
+            val chiseled = (cuisines.shuffled())
 
             val random1 = (chiseled.map { it.main + it.ingre }[0])
             val random2 = (chiseled.map { it.main + it.ingre }[1])
@@ -426,9 +426,9 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(EXTRA_MENU04, randomD.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU05, randomE.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU06, randomF.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU07, randomG.drop(12).replace("[", "").replace("]", "").replace("、", ""))*/
+            intent.putExtra(EXTRA_MENU07, randomG.drop(12).replace("[", "").replace("]", "").replace("、", ""))
 
-        }
+        }*/
 
         button2.setOnClickListener {
 
@@ -442,10 +442,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent2)
         }
 
-        babyButton.setOnClickListener {
+        /*babyButton.setOnClickListener {
 
             //finish()
-        }
+        }*/
     }
 }
 

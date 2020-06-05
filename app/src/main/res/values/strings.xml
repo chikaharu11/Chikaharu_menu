@@ -9,13 +9,13 @@
     <string name="textview6">メイン食材</string>
     <string name="textview7">サブ</string>
     <string name="textview8">サブ食材</string>
-    <string name="noon">noon</string>
-    <string name="baby">baby</string>
+    <string name="noon">昼メニュー</string>
+    <string name="baby">夕メニュー</string>
     <string name="textview9">←昼メニューに行く</string>
     <string name="textview10">ちかリアンに行く→</string>
     <string name="app2_name">昼メニュー + ちかメニュー</string>
     <string name="app3_name">買い物リスト</string>
-    <string name="main">main</string>
+    <string name="main">戻る</string>
     <string name="textview11">←せがれに戻る</string>
     <string name="main2">main2</string>
     <string name="textview12">せがれに戻る→</string>
