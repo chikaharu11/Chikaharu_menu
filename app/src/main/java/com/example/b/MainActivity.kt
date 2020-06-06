@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         val intent = Intent(applicationContext, BabyActivity::class.java)
 
-        val spinnerItems = cuisines.map { it.main + it.ingre }
+        val spinnerItems = cuisines.map { it.main + it.ingre }.sorted()
 
         val adapter = ArrayAdapter(applicationContext,
             android.R.layout.simple_spinner_item, spinnerItems)
@@ -245,7 +245,7 @@ class MainActivity : AppCompatActivity() {
             Choking("大学いも　　　　　　　　", "[さつまいも、\n大学いもの素、\nごま]\n\n")
         )
 
-        val spinnerItems2 = clumsiness.map { it.mains +it.ingres }
+        val spinnerItems2 = clumsiness.map { it.mains +it.ingres }.sorted()
 
         val adapter2 = ArrayAdapter(applicationContext,
             android.R.layout.simple_spinner_item, spinnerItems2)

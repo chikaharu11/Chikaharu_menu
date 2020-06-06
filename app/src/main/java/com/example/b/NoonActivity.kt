@@ -58,7 +58,7 @@ class NoonActivity : AppCompatActivity() {
 
         val intent = Intent(applicationContext, BabyActivity::class.java)
 
-        val spinnerItems3 = lunches.map { it.main + it.ingre }
+        val spinnerItems3 = lunches.map { it.main + it.ingre }.sorted()
 
         val adapter3 = ArrayAdapter(applicationContext,
             android.R.layout.simple_spinner_item, spinnerItems3)
@@ -213,7 +213,7 @@ class NoonActivity : AppCompatActivity() {
             Babyhood("とりささみ　　　　", "[とりささみ]\n")
         )
 
-        val spinnerItems4 = baboon.map { it.main + it.ingre }
+        val spinnerItems4 = baboon.map { it.main + it.ingre }.sorted()
 
         val adapter4 = ArrayAdapter(applicationContext,
             android.R.layout.simple_spinner_item, spinnerItems4)

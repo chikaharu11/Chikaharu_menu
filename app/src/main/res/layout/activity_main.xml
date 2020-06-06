@@ -41,6 +41,7 @@
         android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
@@ -55,6 +56,7 @@
         android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText8"
         app:layout_constraintTop_toBottomOf="@+id/editText8"
         tools:ignore="LabelFor" />
@@ -69,6 +71,7 @@
         android:gravity="start|top"
         android:hint="@string/mm7"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText12"
         app:layout_constraintTop_toBottomOf="@+id/editText12"
         tools:ignore="LabelFor" />
@@ -83,6 +86,7 @@
         android:gravity="start|top"
         android:hint="@string/mm3"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText4"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
         tools:ignore="LabelFor" />
@@ -97,6 +101,7 @@
         android:gravity="start|top"
         android:hint="@string/mm5"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText10"
         app:layout_constraintTop_toBottomOf="@+id/editText10"
         tools:ignore="LabelFor" />
@@ -111,6 +116,7 @@
         android:gravity="start|top"
         android:hint="@string/mm4"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         tools:ignore="LabelFor" />
@@ -125,6 +131,7 @@
         android:gravity="start|top"
         android:hint="@string/mm6"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText11"
         app:layout_constraintTop_toBottomOf="@+id/editText11"
         tools:ignore="LabelFor" />
@@ -133,13 +140,14 @@
         android:id="@+id/editText9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="190dp"
+        android:layout_marginStart="170dp"
         android:layout_marginTop="28dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
@@ -154,6 +162,7 @@
         android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText9"
         app:layout_constraintTop_toBottomOf="@+id/editText9"
         tools:ignore="LabelFor" />
@@ -168,6 +177,7 @@
         android:gravity="start|top"
         android:hint="@string/sm4"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText14"
         app:layout_constraintTop_toBottomOf="@+id/editText14"
         tools:ignore="LabelFor" />
@@ -182,6 +192,7 @@
         android:gravity="start|top"
         android:hint="@string/sm5"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText15"
         app:layout_constraintTop_toBottomOf="@+id/editText15"
         tools:ignore="LabelFor" />
@@ -196,6 +207,7 @@
         android:gravity="start|top"
         android:hint="@string/sm7"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText17"
         app:layout_constraintTop_toBottomOf="@+id/editText17"
         tools:ignore="LabelFor" />
@@ -210,6 +222,7 @@
         android:gravity="start|top"
         android:hint="@string/sm6"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText16"
         app:layout_constraintTop_toBottomOf="@+id/editText16"
         tools:ignore="LabelFor" />
@@ -224,6 +237,7 @@
         android:gravity="start|top"
         android:hint="@string/sm3"
         android:inputType="textMultiLine"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/editText7"
         app:layout_constraintTop_toBottomOf="@+id/editText7"
         tools:ignore="LabelFor" />
@@ -240,8 +254,8 @@
 
     <Spinner
         android:id="@+id/spinner7"
-        android:layout_width="57dp"
-        android:layout_height="30dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="77dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/spinner6"
@@ -314,8 +328,6 @@
         android:id="@+id/spinnerB"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerF"
         app:layout_constraintEnd_toStartOf="@+id/spinnerF"
         app:layout_constraintStart_toStartOf="parent"
@@ -326,7 +338,6 @@
         android:id="@+id/spinnerF"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerG"
         app:layout_constraintEnd_toStartOf="@+id/spinnerG"
         app:layout_constraintStart_toEndOf="@+id/spinnerB"
@@ -337,7 +348,6 @@
         android:id="@+id/spinnerD"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerE"
         app:layout_constraintEnd_toStartOf="@+id/spinnerE"
         app:layout_constraintStart_toEndOf="@+id/spinnerG"
@@ -349,7 +359,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="22dp"
-        android:layout_marginEnd="1dp"
         android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/spinnerC"
@@ -372,7 +381,6 @@
         android:id="@+id/spinnerG"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerD"
         app:layout_constraintEnd_toStartOf="@+id/spinnerD"
         app:layout_constraintStart_toEndOf="@+id/spinnerF"
