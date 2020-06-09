@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
         val cuisines = arrayListOf(
 
-            //Cooking("\n", "\n"),
+            //Cooking("", "\n\n"),
 
             Cooking("　　　　　　　　　", "\n\n"),
             Cooking("ハンバーグ　　　　", "[ハンバーグ]\n\n"),
@@ -220,7 +220,7 @@ class MainActivity : AppCompatActivity() {
 
         val clumsiness = arrayListOf(
 
-            //Choking("\n", "\n"),
+            //Choking("", "\n\n"),
 
             Choking("　　　　　　　　　　　　", "\n\n"),
             Choking("生野菜　　　　　　　　　", "[生野菜]\n\n"),

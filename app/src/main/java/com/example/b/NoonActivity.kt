@@ -40,7 +40,7 @@ class NoonActivity : AppCompatActivity() {
 
         val lunches = arrayListOf(
 
-            //Lunch("\n", "\n"),
+            //Lunch("", "\n\n"),
 
             Lunch("　　　　　　　　　", "\n\n"),
             Lunch("皿うどん　　　　　", "[皿うどん、\n豚バラ肉、\n野菜炒め用野菜]\n\n"),
@@ -196,7 +196,7 @@ class NoonActivity : AppCompatActivity() {
 
         val baboon = arrayListOf(
 
-            //Babyhood("\n", "\n"),
+            //Babyhood("", "\n\n"),
 
             Babyhood("　　　　　　　　　", "\n\n"),
             Babyhood("角切りにんじん　　", "[にんじん]\n"),
