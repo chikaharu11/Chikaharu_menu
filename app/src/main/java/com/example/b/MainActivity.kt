@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -374,61 +375,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        /*tapHere.setOnClickListener {
 
-            val chiseled = (cuisines.shuffled())
-
-            val random1 = (chiseled.map { it.main + it.ingre }[0])
-            val random2 = (chiseled.map { it.main + it.ingre }[1])
-            val random3 = (chiseled.map { it.main + it.ingre }[2])
-            val random4 = (chiseled.map { it.main + it.ingre }[3])
-            val random5 = (chiseled.map { it.main + it.ingre }[4])
-            val random6 = (chiseled.map { it.main + it.ingre }[5])
-            val random7 = (chiseled.map { it.main + it.ingre }[6])
-
-            editText8.setText(random1.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-            editText4.setText(random2.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-            editText.setText(random3.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-            editText10.setText(random4.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-            editText11.setText(random5.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-            editText12.setText(random6.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-            editText13.setText(random7.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-
-            intent.putExtra(EXTRA_MENU1, random1.drop(9).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU2, random2.drop(9).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU3, random3.drop(9).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU4, random4.drop(9).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU5, random5.drop(9).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU6, random6.drop(9).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU7, random7.drop(9).replace("[", "").replace("]", "").replace("、", ""))
-
-            val chiselers = (clumsiness.shuffled())
-
-            val randomA = (chiselers.map { it.mains + it.ingres }[0])
-            val randomB = (chiselers.map { it.mains + it.ingres }[1])
-            val randomC = (chiselers.map { it.mains + it.ingres }[2])
-            val randomD = (chiselers.map { it.mains + it.ingres }[3])
-            val randomE = (chiselers.map { it.mains + it.ingres }[4])
-            val randomF = (chiselers.map { it.mains + it.ingres }[5])
-            val randomG = (chiselers.map { it.mains + it.ingres }[6])
-
-            editText9.setText(randomA.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-            editText7.setText(randomB.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-            editText14.setText(randomC.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-            editText15.setText(randomD.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-            editText16.setText(randomE.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-            editText17.setText(randomF.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-            editText18.setText(randomG.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-
-            intent.putExtra(EXTRA_MENU01, randomA.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU02, randomB.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU03, randomC.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU04, randomD.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU05, randomE.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU06, randomF.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-            intent.putExtra(EXTRA_MENU07, randomG.drop(12).replace("[", "").replace("]", "").replace("、", ""))
-
-        }*/
 
         button2.setOnClickListener {
 
@@ -440,12 +387,8 @@ class MainActivity : AppCompatActivity() {
 
             val intent2 = Intent(application, NoonActivity::class.java)
             startActivity(intent2)
+
         }
-
-        /*babyButton.setOnClickListener {
-
-            //finish()
-        }*/
     }
 }
 
@@ -455,12 +398,12 @@ class MainActivity : AppCompatActivity() {
                     ,"パスタ\n","さばマヨ\n","ハムカツ\n","チキンステーキ\n","肉団子\n","じゃがいものチーズ焼き\n","春巻き\n","エビフライ\n","オムライス\n","サイコロステーキ\n","手作りパスタ\n"
                     ,"手作りハンバーグ\n","焼きハム\n","八宝菜\n","ラザニア\n","青椒肉絲\n","トースト\n")
 
-            /*
+
             val menu2 = arrayListOf("生野菜\n", "豆腐\n", "パウチサラダ\n", "レンジ野菜\n","シューマイ\n","ショーロンポー\n","買う惣菜\n","こんぶキャベツ\n","ゆでもやし\n"
                     ,"ツナレタスサラダ\n","きゅうり酢あえ\n","茶わん蒸し\n","ブロッコリーじゃがいもマヨ\n","レンジコロッケ\n","スティックサラダ\n","味噌田楽\n"
                     ,"かぼちゃサラダ・チーズせんべい付き\n","大学いも\n","マカロニサラダ\n","フライドポテト\n","ホウレンソウのバター炒め\n","甘いもの\n")
 
- */
+
     tapHere.setOnClickListener{
 
         textView2.text = (menu.shuffled().take(7).toString())
@@ -521,4 +464,60 @@ button2.setOnClickListener {
         }
 
 intent.putExtra(EXTRA_MESSAGE, item.drop(9))
-        */
+
+
+tapHere.setOnClickListener {
+
+            val chiseled = (cuisines.shuffled())
+
+            val random1 = (chiseled.map { it.main + it.ingre }[0])
+            val random2 = (chiseled.map { it.main + it.ingre }[1])
+            val random3 = (chiseled.map { it.main + it.ingre }[2])
+            val random4 = (chiseled.map { it.main + it.ingre }[3])
+            val random5 = (chiseled.map { it.main + it.ingre }[4])
+            val random6 = (chiseled.map { it.main + it.ingre }[5])
+            val random7 = (chiseled.map { it.main + it.ingre }[6])
+
+            editText8.setText(random1.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText4.setText(random2.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText.setText(random3.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText10.setText(random4.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText11.setText(random5.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText12.setText(random6.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+            editText13.setText(random7.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+
+            intent.putExtra(EXTRA_MENU1, random1.drop(9).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU2, random2.drop(9).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU3, random3.drop(9).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU4, random4.drop(9).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU5, random5.drop(9).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU6, random6.drop(9).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU7, random7.drop(9).replace("[", "").replace("]", "").replace("、", ""))
+
+            val chiselers = (clumsiness.shuffled())
+
+            val randomA = (chiselers.map { it.mains + it.ingres }[0])
+            val randomB = (chiselers.map { it.mains + it.ingres }[1])
+            val randomC = (chiselers.map { it.mains + it.ingres }[2])
+            val randomD = (chiselers.map { it.mains + it.ingres }[3])
+            val randomE = (chiselers.map { it.mains + it.ingres }[4])
+            val randomF = (chiselers.map { it.mains + it.ingres }[5])
+            val randomG = (chiselers.map { it.mains + it.ingres }[6])
+
+            editText9.setText(randomA.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText7.setText(randomB.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText14.setText(randomC.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText15.setText(randomD.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText16.setText(randomE.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText17.setText(randomF.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+            editText18.setText(randomG.take(12).replace("　", ""), TextView.BufferType.NORMAL)
+
+            intent.putExtra(EXTRA_MENU01, randomA.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU02, randomB.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU03, randomC.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU04, randomD.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU05, randomE.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU06, randomF.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+            intent.putExtra(EXTRA_MENU07, randomG.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+
+        }*/
