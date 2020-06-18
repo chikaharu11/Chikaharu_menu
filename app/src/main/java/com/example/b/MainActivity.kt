@@ -76,7 +76,17 @@ class MainActivity : AppCompatActivity() {
             Cooking("肉じゃが㋬　　　　", "[ジャガイモ、\n豚or牛こま肉、\nタマネギ、\nニンジン]\n\n"),
             Cooking("牛丼　　　　　　　", "[牛薄切り肉、\nタマネギ、\n牛丼のタレ]\n\n"),
             Cooking("豚バラ白菜㋬　　　", "[和風だしorコンソメ、\n白菜、\n豚バラ肉]\n\n"),
-            Cooking("カレー㋬　　　　　", "[カレー用牛肉or豚肉、\nジャガイモ、\n人参、\nタマネギ、\nカレールー]\n\n")
+            Cooking("カレー㋬　　　　　", "[カレー用牛肉or豚肉、\nジャガイモ、\n人参、\nタマネギ、\nカレールー]\n\n"),
+            Cooking("八宝菜　　　　　　", "\n\n"),
+            Cooking("ラーメン　　　　　", "\n\n"),
+            Cooking("チーズ餃子　　　　", "\n\n"),
+            Cooking("焼きハム　　　　　", "\n\n"),
+            Cooking("けんちん汁㋬　　　", "\n\n"),
+            Cooking("ラザニア　　　　　", "\n\n"),
+            Cooking("サンドイッチ　　　", "\n\n"),
+            Cooking("冷やし中華　　　　", "\n\n"),
+            Cooking("マーボー茄子　　　", "\n\n"),
+            Cooking("あんかけ卵　　　　", "\n\n")
         )
 
         val intent = Intent(applicationContext, BabyActivity::class.java)
@@ -223,27 +233,32 @@ class MainActivity : AppCompatActivity() {
 
             //Choking("", "\n\n"),
 
-            Choking("　　　　　　　　　　　　", "\n\n"),
-            Choking("生野菜　　　　　　　　　", "[生野菜]\n\n"),
-            Choking("豆腐　　　　　　　　　　", "[絹ごし豆腐]\n\n"),
-            Choking("パウチサラダ　　　　　　", "[パウチサラダ]\n\n"),
-            Choking("レンジ野菜　　　　　　　", "[レンジ野菜]\n\n"),
-            Choking("シューマイ　　　　　　　", "[シューマイ]\n\n"),
-            Choking("きゅうり酢和え　　　　　", "[玉ふ、\nきゅうり]\n\n"),
-            Choking("ツナレタスサラダ　　　　", "[ツナ缶、\nきゅうり、\nレタス]\n\n"),
-            Choking("ショーロンポー　　　　　", "[ショーロンポー]\n\n"),
-            Choking("こんぶキャベツ　　　　　", "[キャベツ、\n塩こんぶ]\n\n"),
-            Choking("レンジ豚もやし　　　　　", "[豚ばら肉、\nもやし]\n\n"),
-            Choking("のりきゅうり　　　　　　", "[海苔、\nきゅうり]\n\n"),
-            Choking("茶碗むし　　　　　　　　", "[茶碗むし]\n\n"),
-            Choking("レンジコロッケ　　　　　", "[冷凍コロッケ]\n\n"),
-            Choking("ブロッコリーじゃがいも　", "[ブロッコリー、\nじゃがいも]\n\n"),
-            Choking("スティックサラダ　　　　", "[にんじん、\n大根、\nきゅうり]\n\n"),
-            Choking("味噌田楽　　　　　　　　", "[味噌田楽]\n\n"),
-            Choking("かぼちゃチーズサラダ　　", "[かぼちゃ、\nスライスチーズ]\n\n"),
-            Choking("マカロニサラダ　　　　　", "[マカロニ、\nカニカマ、\nハム、\nツナコーン]\n\n"),
-            Choking("フライドポテト　　　　　", "[フライドポテト]\n\n"),
-            Choking("大学いも　　　　　　　　", "[さつまいも、\n大学いもの素、\nごま]\n\n")
+            Choking("　　　　　　　　　　", "\n\n"),
+            Choking("生野菜　　　　　　　", "[生野菜]\n\n"),
+            Choking("豆腐　　　　　　　　", "[絹ごし豆腐]\n\n"),
+            Choking("パウチサラダ　　　　", "[パウチサラダ]\n\n"),
+            Choking("レンジ野菜　　　　　", "[レンジ野菜]\n\n"),
+            Choking("シューマイ　　　　　", "[シューマイ]\n\n"),
+            Choking("きゅうり酢和え　　　", "[玉ふ、\nきゅうり]\n\n"),
+            Choking("ツナレタスサラダ　　", "[ツナ缶、\nきゅうり、\nレタス]\n\n"),
+            Choking("ショーロンポー　　　", "[ショーロンポー]\n\n"),
+            Choking("こんぶキャベツ　　　", "[キャベツ、\n塩こんぶ]\n\n"),
+            Choking("レンジ豚もやし　　　", "[豚ばら肉、\nもやし]\n\n"),
+            Choking("のりきゅうり　　　　", "[海苔、\nきゅうり]\n\n"),
+            Choking("茶碗むし　　　　　　", "[茶碗むし]\n\n"),
+            Choking("レンジコロッケ　　　", "[冷凍コロッケ]\n\n"),
+            Choking("じゃがブロッコリー　", "[ブロッコリー、\nじゃがいも]\n\n"),
+            Choking("スティックサラダ　　", "[にんじん、\n大根、\nきゅうり]\n\n"),
+            Choking("味噌田楽　　　　　　", "[味噌田楽]\n\n"),
+            Choking("かぼちゃチーズ　　　", "[かぼちゃ、\nスライスチーズ]\n\n"),
+            Choking("マカロニサラダ　　　", "[マカロニ、\nカニカマ、\nハム、\nツナコーン]\n\n"),
+            Choking("フライドポテト　　　", "[フライドポテト]\n\n"),
+            Choking("大学いも　　　　　　", "[さつまいも、\n大学いもの素、\nごま]\n\n"),
+            Choking("卵豆腐　　　　　　　", "\n\n"),
+            Choking("レンジ青椒肉絲　　　", "\n\n"),
+            Choking("春巻　　　　　　　　", "\n\n"),
+            Choking("レンジ唐揚げ　　　　", "\n\n"),
+            Choking("コーンスープ　　　　", "\n\n")
         )
 
         val spinnerItems2 = clumsiness.map { it.mains +it.ingres }.sorted()
@@ -270,8 +285,8 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText9.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU01, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+                editText9.setText(item.take(10).replace("　", ""), TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MENU01, item.drop(10).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -286,8 +301,8 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText7.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU02, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+                editText7.setText(item.take(10).replace("　", ""), TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MENU02, item.drop(10).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -302,8 +317,8 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText14.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU03, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+                editText14.setText(item.take(10).replace("　", ""), TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MENU03, item.drop(10).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -318,8 +333,8 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText15.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU04, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+                editText15.setText(item.take(10).replace("　", ""), TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MENU04, item.drop(10).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -334,8 +349,8 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText16.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU05, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+                editText16.setText(item.take(10).replace("　", ""), TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MENU05, item.drop(10).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -350,8 +365,8 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText17.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU06, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+                editText17.setText(item.take(10).replace("　", ""), TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MENU06, item.drop(10).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -366,8 +381,8 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText18.setText(item.take(12).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU07, item.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+                editText18.setText(item.take(10).replace("　", ""), TextView.BufferType.NORMAL)
+                intent.putExtra(EXTRA_MENU07, item.drop(10).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {

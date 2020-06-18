@@ -53,7 +53,10 @@ class NoonActivity : AppCompatActivity() {
             Lunch("すき焼き豆腐　　　", "[豆腐、\nすき焼き豆腐の素]\n\n"),
             Lunch("レトルトカレー　　", "[レトルトカレー]\n\n"),
             Lunch("豚しょうが焼き　　", "[豚ロース肉、\n豚しょうが焼きの素]\n\n"),
-            Lunch("ハンバーグ　　　　", "[ハンバーグ]\n\n")
+            Lunch("ハンバーグ　　　　", "[ハンバーグ]\n\n"),
+            Lunch("あんかけ卵　　　　", "\n\n"),
+            Lunch("肉野菜炒め　　　　", "\n\n"),
+            Lunch("ビーフン炒め　　　", "\n\n")
         )
 
         val intent = Intent(applicationContext, BabyActivity::class.java)
@@ -199,18 +202,18 @@ class NoonActivity : AppCompatActivity() {
             //Babyhood("", "\n\n"),
 
             Babyhood("　　　　　　　　　", "\n\n"),
-            Babyhood("角切りにんじん　　", "[にんじん]\n"),
-            Babyhood("ブロックかぼちゃ　", "[かぼちゃ]\n"),
-            Babyhood("牛ひき肉　　　　　", "[牛ひき肉]\n"),
-            Babyhood("豚ひき肉　　　　　", "[豚ひき肉]\n"),
-            Babyhood("野菜ミックス　　　", "[野菜ミックス]\n"),
-            Babyhood("ゆでしらす　　　　", "[しらす]\n"),
-            Babyhood("ゆでブロッコリー　", "[ブロッコリー]\n"),
-            Babyhood("ウインナー　　　　", "[子供用ウインナー]\n"),
-            Babyhood("なす煮　　　　　　", "[ナス、\n和風だし]\n"),
-            Babyhood("人参キャベツ千切り", "[にんじん、\nキャベツ]\n"),
-            Babyhood("とり団子　　　　　", "[鳥ひき肉]\n"),
-            Babyhood("とりささみ　　　　", "[とりささみ]\n")
+            Babyhood("生野菜　　　　　　", "[生野菜]\n\n"),
+            Babyhood("シューマイ　　　　", "[冷凍シューマイ]\n\n"),
+            Babyhood("ショーロンポー　　", "[冷凍ショーロンポー]\n\n"),
+            Babyhood("コロッケ　　　　　", "[冷凍コロッケ]\n\n"),
+            Babyhood("春巻　　　　　　　", "[冷凍春巻]\n\n"),
+            Babyhood("レンジ野菜　　　　", "[冷凍野菜]\n\n"),
+            Babyhood("パウチサラダ　　　", "[パウチサラダ]\n\n"),
+            Babyhood("お湯スープ　　　　", "[お湯スープの素]\n\n"),
+            Babyhood("沖縄そば　　　　　", "[]\n\n"),
+            Babyhood("冷凍唐揚げ　　　　", "[冷凍唐揚げ]\n\n"),
+            Babyhood("茶碗蒸し　　　　　", "[茶碗蒸し]\n\n"),
+            Babyhood("レンジ豚もやし　　", "[レンジ豚もやし]\n\n")
         )
 
         val spinnerItems4 = baboon.map { it.main + it.ingre }.sorted()
@@ -351,3 +354,19 @@ class NoonActivity : AppCompatActivity() {
         }
     }
 }
+
+/*
+            Babyhood("　　　　　　　　　", "\n\n"),
+            Babyhood("角切りにんじん　　", "[にんじん]\n"),
+            Babyhood("ブロックかぼちゃ　", "[かぼちゃ]\n"),
+            Babyhood("牛ひき肉　　　　　", "[牛ひき肉]\n"),
+            Babyhood("豚ひき肉　　　　　", "[豚ひき肉]\n"),
+            Babyhood("野菜ミックス　　　", "[野菜ミックス]\n"),
+            Babyhood("ゆでしらす　　　　", "[しらす]\n"),
+            Babyhood("ゆでブロッコリー　", "[ブロッコリー]\n"),
+            Babyhood("ウインナー　　　　", "[子供用ウインナー]\n"),
+            Babyhood("なす煮　　　　　　", "[ナス、\n和風だし]\n"),
+            Babyhood("人参キャベツ千切り", "[にんじん、\nキャベツ]\n"),
+            Babyhood("とり団子　　　　　", "[鳥ひき肉]\n"),
+            Babyhood("とりささみ　　　　", "[とりささみ]\n")
+ */

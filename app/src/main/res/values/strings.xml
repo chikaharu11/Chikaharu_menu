@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">せがれ2.0</string>
-    <string name="app2_name">昼メニュー + ちかメニュー</string>
+    <string name="app_name">せがれメニュー</string>
+    <string name="app2_name">昼メニュー</string>
     <string name="app3_name">買い物リスト</string>
     <string name="list">買い物リスト</string>
     <string name="noon">昼メニュー</string>
