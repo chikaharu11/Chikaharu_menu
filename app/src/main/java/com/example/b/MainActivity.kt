@@ -592,6 +592,6 @@ tapHere.setOnClickListener {
 
             editText8.setOnClickListener { view == mButton) {
 			mSpinner.performClick();
-		} }
+		} }a
 
         }*/
