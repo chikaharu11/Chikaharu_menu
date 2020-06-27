@@ -352,6 +352,63 @@ class NoonActivity : AppCompatActivity() {
 
             finish()
         }
+
+        editText8n.setOnLongClickListener {
+            spinner1n.performClick()
+            true
+        }
+        editText4n.setOnLongClickListener {
+            spinner4n.performClick()
+            true
+        }
+        editTextn.setOnLongClickListener {
+            spinner3n.performClick()
+            true
+        }
+        editText10n.setOnLongClickListener {
+            spinner7n.performClick()
+            true
+        }
+        editText11n.setOnLongClickListener {
+            spinner6n.performClick()
+            true
+        }
+        editText12n.setOnLongClickListener {
+            spinner2n.performClick()
+            true
+        }
+        editText13n.setOnLongClickListener {
+            spinner5n.performClick()
+            true
+        }
+        editText9n.setOnLongClickListener {
+            spinnerBn.performClick()
+            true
+        }
+        editText7n.setOnLongClickListener {
+            spinnerFn.performClick()
+            true
+        }
+        editText14n.setOnLongClickListener {
+            spinnerGn.performClick()
+            true
+        }
+        editText15n.setOnLongClickListener {
+            spinnerDn.performClick()
+            true
+        }
+        editText16n.setOnLongClickListener {
+            spinnerEn.performClick()
+            true
+        }
+        editText17n.setOnLongClickListener {
+            spinnerCn.performClick()
+            true
+        }
+        editText18n.setOnLongClickListener {
+            spinnerAn.performClick()
+            true
+        }
     }
 }
 

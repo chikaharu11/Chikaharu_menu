@@ -3,10 +3,7 @@ package com.example.b
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -404,6 +401,64 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent2)
 
         }
+
+        editText8.setOnLongClickListener {
+            spinner1.performClick()
+            true
+        }
+        editText4.setOnLongClickListener {
+            spinner4.performClick()
+            true
+        }
+        editText.setOnLongClickListener {
+            spinner3.performClick()
+            true
+        }
+        editText10.setOnLongClickListener {
+            spinner7.performClick()
+            true
+        }
+        editText11.setOnLongClickListener {
+            spinner6.performClick()
+            true
+        }
+        editText12.setOnLongClickListener {
+            spinner2.performClick()
+            true
+        }
+        editText13.setOnLongClickListener {
+            spinner5.performClick()
+            true
+        }
+        editText9.setOnLongClickListener {
+            spinnerB.performClick()
+            true
+        }
+        editText7.setOnLongClickListener {
+            spinnerF.performClick()
+            true
+        }
+        editText14.setOnLongClickListener {
+            spinnerG.performClick()
+            true
+        }
+        editText15.setOnLongClickListener {
+            spinnerD.performClick()
+            true
+        }
+        editText16.setOnLongClickListener {
+            spinnerE.performClick()
+            true
+        }
+        editText17.setOnLongClickListener {
+            spinnerC.performClick()
+            true
+        }
+        editText18.setOnLongClickListener {
+            spinnerA.performClick()
+            true
+        }
+
     }
 }
 
@@ -534,5 +589,9 @@ tapHere.setOnClickListener {
             intent.putExtra(EXTRA_MENU05, randomE.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU06, randomF.drop(12).replace("[", "").replace("]", "").replace("、", ""))
             intent.putExtra(EXTRA_MENU07, randomG.drop(12).replace("[", "").replace("]", "").replace("、", ""))
+
+            editText8.setOnClickListener { view == mButton) {
+			mSpinner.performClick();
+		} }
 
         }*/
