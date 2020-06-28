@@ -12,56 +12,32 @@ import kotlinx.android.synthetic.main.activity_noon.*
 
 class NoonActivity : AppCompatActivity() {
 
-    companion object {
-
-        const val EXTRA_MENU1n = "com.example.b.MENU1n"
-        const val EXTRA_MENU2n = "com.example.b.MENU2n"
-        const val EXTRA_MENU3n = "com.example.b.MENU3n"
-        const val EXTRA_MENU4n = "com.example.b.MENU4n"
-        const val EXTRA_MENU5n = "com.example.b.MENU5n"
-        const val EXTRA_MENU6n = "com.example.b.MENU6n"
-        const val EXTRA_MENU7n = "com.example.b.MENU7n"
-
-        const val EXTRA_MENU01n = "com.example.b.MENU01n"
-        const val EXTRA_MENU02n = "com.example.b.MENU02n"
-        const val EXTRA_MENU03n = "com.example.b.MENU03n"
-        const val EXTRA_MENU04n = "com.example.b.MENU04n"
-        const val EXTRA_MENU05n = "com.example.b.MENU05n"
-        const val EXTRA_MENU06n = "com.example.b.MENU06n"
-        const val EXTRA_MENU07n = "com.example.b.MENU07n"
-
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noon)
 
-        class Lunch(val main: String, val ingre: String)
-
         val lunches = arrayListOf(
 
-            //Lunch("", "\n\n"),
+            //"\n\n",
 
-            Lunch("　　　　　　　　　", "\n\n"),
-            Lunch("皿うどん　　　　　", "[皿うどん、\n豚バラ肉、\n野菜炒め用野菜]\n\n"),
-            Lunch("ギョーザ　　　　　", "[冷凍ギョーザ]\n\n"),
-            Lunch("焼きそば　　　　　", "[豚こま肉、\n野菜炒め用野菜、\n焼きそばの麺]\n\n"),
-            Lunch("マーボー春雨　　　", "[マーボー春雨]\n\n"),
-            Lunch("マーボー豆腐　　　", "[マーボー豆腐]\n\n"),
-            Lunch("沖縄そば　　　　　", "[かまぼこ、\nネギ]\n\n"),
-            Lunch("冷凍パスタ　　　　", "[冷凍パスタ]\n\n"),
-            Lunch("すき焼き豆腐　　　", "[豆腐、\nすき焼き豆腐の素]\n\n"),
-            Lunch("レトルトカレー　　", "[レトルトカレー]\n\n"),
-            Lunch("豚しょうが焼き　　", "[豚ロース肉、\n豚しょうが焼きの素]\n\n"),
-            Lunch("ハンバーグ　　　　", "[ハンバーグ]\n\n"),
-            Lunch("あんかけ卵　　　　", "\n\n"),
-            Lunch("肉野菜炒め　　　　", "\n\n"),
-            Lunch("ビーフン炒め　　　", "\n\n")
+            "　　　　　　　　　\n\n",
+            "皿うどん　　　　　[皿うどん、\n豚バラ肉、\n野菜炒め用野菜]\n\n",
+            "ギョーザ　　　　　[冷凍ギョーザ]\n\n",
+            "焼きそば　　　　　[豚こま肉、\n野菜炒め用野菜、\n焼きそばの麺]\n\n",
+            "マーボー春雨　　　[マーボー春雨]\n\n",
+            "マーボー豆腐　　　[マーボー豆腐]\n\n",
+            "沖縄そば　　　　　[かまぼこ、\nネギ]\n\n",
+            "冷凍パスタ　　　　[冷凍パスタ]\n\n",
+            "すき焼き豆腐　　　[豆腐、\nすき焼き豆腐の素]\n\n",
+            "レトルトカレー　　[レトルトカレー]\n\n",
+            "豚しょうが焼き　　[豚ロース肉、\n豚しょうが焼きの素]\n\n",
+            "ハンバーグ　　　　[ハンバーグ]\n\n",
+            "あんかけ卵　　　　\n\n",
+            "肉野菜炒め　　　　\n\n",
+            "ビーフン炒め　　　\n\n"
         )
 
-        val intent = Intent(applicationContext, BabyActivity::class.java)
-
-        val spinnerItems3 = lunches.map { it.main + it.ingre }.sorted()
+        val spinnerItems3 = lunches.sorted()
 
         val adapter3 = ArrayAdapter(applicationContext,
             android.R.layout.simple_spinner_item, spinnerItems3)
@@ -84,7 +60,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText8n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU1n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
 
@@ -101,7 +76,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText4n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU2n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
 
@@ -118,7 +92,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editTextn.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU3n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
 
@@ -135,7 +108,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText10n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU4n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
 
@@ -152,7 +124,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText11n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU5n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
 
@@ -169,7 +140,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText12n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU6n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
 
@@ -186,7 +156,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText13n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU7n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
 
             }
 
@@ -195,28 +164,26 @@ class NoonActivity : AppCompatActivity() {
             }
         }
 
-        class Babyhood(val main: String, val ingre: String)
-
         val baboon = arrayListOf(
 
-            //Babyhood("", "\n\n"),
+            //"\n\n",
 
-            Babyhood("　　　　　　　　　", "\n\n"),
-            Babyhood("生野菜　　　　　　", "[生野菜]\n\n"),
-            Babyhood("シューマイ　　　　", "[冷凍シューマイ]\n\n"),
-            Babyhood("ショーロンポー　　", "[冷凍ショーロンポー]\n\n"),
-            Babyhood("コロッケ　　　　　", "[冷凍コロッケ]\n\n"),
-            Babyhood("春巻　　　　　　　", "[冷凍春巻]\n\n"),
-            Babyhood("レンジ野菜　　　　", "[冷凍野菜]\n\n"),
-            Babyhood("パウチサラダ　　　", "[パウチサラダ]\n\n"),
-            Babyhood("お湯スープ　　　　", "[お湯スープの素]\n\n"),
-            Babyhood("沖縄そば　　　　　", "[]\n\n"),
-            Babyhood("冷凍唐揚げ　　　　", "[冷凍唐揚げ]\n\n"),
-            Babyhood("茶碗蒸し　　　　　", "[茶碗蒸し]\n\n"),
-            Babyhood("レンジ豚もやし　　", "[レンジ豚もやし]\n\n")
+            "　　　　　　　　　\n\n",
+            "生野菜　　　　　　[生野菜]\n\n",
+            "シューマイ　　　　[冷凍シューマイ]\n\n",
+            "ショーロンポー　　[冷凍ショーロンポー]\n\n",
+            "コロッケ　　　　　[冷凍コロッケ]\n\n",
+            "春巻　　　　　　　[冷凍春巻]\n\n",
+            "レンジ野菜　　　　[冷凍野菜]\n\n",
+            "パウチサラダ　　　[パウチサラダ]\n\n",
+            "お湯スープ　　　　[お湯スープの素]\n\n",
+            "沖縄そば　　　　　[]\n\n",
+            "冷凍唐揚げ　　　　[冷凍唐揚げ]\n\n",
+            "茶碗蒸し　　　　　[茶碗蒸し]\n\n",
+            "レンジ豚もやし　　[レンジ豚もやし]\n\n"
         )
 
-        val spinnerItems4 = baboon.map { it.main + it.ingre }.sorted()
+        val spinnerItems4 = baboon.sorted()
 
         val adapter4 = ArrayAdapter(applicationContext,
             android.R.layout.simple_spinner_item, spinnerItems4)
@@ -239,7 +206,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText9n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU01n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -255,7 +221,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText7n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU02n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -271,7 +236,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText14n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU03n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -287,7 +251,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText15n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU04n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -303,7 +266,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText16n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU05n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -319,7 +281,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText17n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU06n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -335,7 +296,6 @@ class NoonActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 editText18n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
-                intent.putExtra(EXTRA_MENU07n, item.drop(9).replace("[", "").replace("]", "").replace("、", ""))
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -345,6 +305,7 @@ class NoonActivity : AppCompatActivity() {
 
         button2.setOnClickListener{
 
+            val intent = Intent(application, BabyActivity::class.java)
             startActivity(intent)
         }
 
