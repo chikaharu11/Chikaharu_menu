@@ -18,23 +18,21 @@ class NoonActivity : AppCompatActivity() {
 
         val lunches = arrayListOf(
 
-            //"\n\n",
-
-            "　　　　　　　　　\n\n",
-            "皿うどん　　　　　[皿うどん、\n豚バラ肉、\n野菜炒め用野菜]\n\n",
-            "ギョーザ　　　　　[冷凍ギョーザ]\n\n",
-            "焼きそば　　　　　[豚こま肉、\n野菜炒め用野菜、\n焼きそばの麺]\n\n",
-            "マーボー春雨　　　[マーボー春雨]\n\n",
-            "マーボー豆腐　　　[マーボー豆腐]\n\n",
-            "沖縄そば　　　　　[かまぼこ、\nネギ]\n\n",
-            "冷凍パスタ　　　　[冷凍パスタ]\n\n",
-            "すき焼き豆腐　　　[豆腐、\nすき焼き豆腐の素]\n\n",
-            "レトルトカレー　　[レトルトカレー]\n\n",
-            "豚しょうが焼き　　[豚ロース肉、\n豚しょうが焼きの素]\n\n",
-            "ハンバーグ　　　　[ハンバーグ]\n\n",
-            "あんかけ卵　　　　\n\n",
-            "肉野菜炒め　　　　\n\n",
-            "ビーフン炒め　　　\n\n"
+            "[空にする]",
+            "皿うどん",
+            "ギョーザ",
+            "焼きそば",
+            "マーボー春雨",
+            "マーボー豆腐",
+            "沖縄そば",
+            "冷凍パスタ",
+            "すき焼き豆腐",
+            "レトルトカレー",
+            "豚しょうが焼き",
+            "ハンバーグ",
+            "あんかけ卵",
+            "肉野菜炒め",
+            "ビーフン炒め"
         )
 
         val spinnerItems3 = lunches.sorted()
@@ -59,7 +57,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText8n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText8n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
 
             }
 
@@ -75,7 +73,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText4n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText4n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
 
             }
 
@@ -91,7 +89,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editTextn.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editTextn.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
 
             }
 
@@ -107,7 +105,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText10n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText10n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
 
             }
 
@@ -123,7 +121,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText11n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText11n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
 
             }
 
@@ -139,7 +137,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText12n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText12n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
 
             }
 
@@ -155,7 +153,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText13n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText13n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
 
             }
 
@@ -166,21 +164,19 @@ class NoonActivity : AppCompatActivity() {
 
         val baboon = arrayListOf(
 
-            //"\n\n",
-
-            "　　　　　　　　　\n\n",
-            "生野菜　　　　　　[生野菜]\n\n",
-            "シューマイ　　　　[冷凍シューマイ]\n\n",
-            "ショーロンポー　　[冷凍ショーロンポー]\n\n",
-            "コロッケ　　　　　[冷凍コロッケ]\n\n",
-            "春巻　　　　　　　[冷凍春巻]\n\n",
-            "レンジ野菜　　　　[冷凍野菜]\n\n",
-            "パウチサラダ　　　[パウチサラダ]\n\n",
-            "お湯スープ　　　　[お湯スープの素]\n\n",
-            "沖縄そば　　　　　[]\n\n",
-            "冷凍唐揚げ　　　　[冷凍唐揚げ]\n\n",
-            "茶碗蒸し　　　　　[茶碗蒸し]\n\n",
-            "レンジ豚もやし　　[レンジ豚もやし]\n\n"
+            "[空にする]",
+            "生野菜",
+            "シューマイ",
+            "ショーロンポー",
+            "コロッケ",
+            "春巻",
+            "レンジ野菜",
+            "パウチサラダ",
+            "お湯スープ",
+            "沖縄そば",
+            "冷凍唐揚げ",
+            "茶碗蒸し",
+            "レンジ豚もやし"
         )
 
         val spinnerItems4 = baboon.sorted()
@@ -205,7 +201,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText9n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText9n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -220,7 +216,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText7n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText7n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -235,7 +231,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText14n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText14n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -250,7 +246,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText15n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText15n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -265,7 +261,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText16n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText16n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -280,7 +276,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText17n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText17n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -295,7 +291,7 @@ class NoonActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText18n.setText(item.take(9).replace("　", ""), TextView.BufferType.NORMAL)
+                editText18n.setText(item.replace("[空にする]", ""), TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
