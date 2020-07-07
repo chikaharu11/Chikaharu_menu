@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_baby.*
 
 class BabyActivity : AppCompatActivity() {
 
@@ -147,33 +146,5 @@ class BabyActivity : AppCompatActivity() {
         listView3.adapter = arrayAdapter3
         listView4.adapter = arrayAdapter4
 
-        mainButton.setOnClickListener {
-
-            finish()
-        }
-
-        button.setOnClickListener {
-
-            setContentView(listView)
-
-        }
-
-        button4.setOnClickListener {
-
-            setContentView(listView2)
-
-        }
-
-        button3.setOnClickListener {
-
-            setContentView(listView3)
-
-        }
-
-        button5.setOnClickListener {
-
-            setContentView(listView4)
-
-        }
     }
 }

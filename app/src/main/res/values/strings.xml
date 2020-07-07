@@ -6,20 +6,6 @@
     <string name="noon">昼メニュー</string>
     <string name="baby">夕メニュー</string>
     <string name="main">戻る</string>
-    <string name="mm1">メイン</string>
-    <string name="mm2">メイン</string>
-    <string name="mm3">メイン</string>
-    <string name="mm4">メイン</string>
-    <string name="mm5">メイン</string>
-    <string name="mm6">メイン</string>
-    <string name="mm7">メイン</string>
-    <string name="sm1">土サブ</string>
-    <string name="sm2">日サブ</string>
-    <string name="sm3">月サブ</string>
-    <string name="sm4">火サブ</string>
-    <string name="sm5">水サブ</string>
-    <string name="sm6">木サブ</string>
-    <string name="sm7">金サブ</string>
     <string name="c1">土</string>
     <string name="c2">日</string>
     <string name="c3">月</string>
@@ -27,8 +13,12 @@
     <string name="c5">水</string>
     <string name="c6">木</string>
     <string name="c7">金</string>
-    <string name="button">夜メイン</string>
-    <string name="button2">夜サブ</string>
-    <string name="button3">昼メイン</string>
-    <string name="button4">昼サブ</string>
+    <string name="menulist1">昼メイン</string>
+    <string name="menulist2">昼サブ</string>
+    <string name="menulist3">夜メイン</string>
+    <string name="menulis4t">夜サブ</string>
+    <string name="mm1">夜メイン</string>
+    <string name="mm2">昼メイン</string>
+    <string name="sm2">昼サブ</string>
+    <string name="sm1">夜サブ</string>
 </resources>
