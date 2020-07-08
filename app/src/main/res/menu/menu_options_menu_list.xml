@@ -21,6 +21,11 @@
     <item
         android:id="@+id/MenuList4"
         app:showAsAction="never"
-        android:title="@string/menulis4t" />
+        android:title="@string/menulist4" />
+
+    <item
+        android:id="@+id/MenuList5"
+        app:showAsAction="never"
+        android:title="@string/menulist5" />
 
 </menu>

@@ -13,10 +13,11 @@
     <string name="c5">水</string>
     <string name="c6">木</string>
     <string name="c7">金</string>
-    <string name="menulist1">昼メイン</string>
-    <string name="menulist2">昼サブ</string>
-    <string name="menulist3">夜メイン</string>
-    <string name="menulis4t">夜サブ</string>
+    <string name="menulist1">昼メイン食材</string>
+    <string name="menulist2">昼サブ食材</string>
+    <string name="menulist3">夜メイン食材</string>
+    <string name="menulist4">夜サブ食材</string>
+    <string name="menulist5">戻る(リセット)</string>
     <string name="mm1">夜メイン</string>
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>

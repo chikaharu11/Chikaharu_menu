@@ -18,16 +18,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".NoonActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app2_name" >
-        </activity>
-        <activity
-            android:name=".BabyActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app3_name" >
+
         </activity>
 
     </application>
