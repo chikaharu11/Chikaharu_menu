@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">せがれメニュー</string>
-    <string name="app2_name">昼メニュー</string>
-    <string name="app3_name">食材リスト</string>
     <string name="list">食材リスト</string>
     <string name="noon">昼メニュー</string>
     <string name="baby">夕メニュー</string>
@@ -22,4 +20,10 @@
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
+    <string name="app_name2">DBテスト</string>
+    <string name="hint_key">company</string>
+    <string name="hint_value">US$price</string>
+    <string name="insert">insert</string>
+    <string name="read">read</string>
+    <string name="menulist6">DB</string>
 </resources>

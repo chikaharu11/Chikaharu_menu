@@ -1,5 +1,6 @@
 package com.example.b
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -860,6 +862,12 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList5 -> {
                 supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                return true
+            }
+
+            R.id.MenuList6 -> {
+                val intent = Intent(application, SubActivity::class.java)
+                startActivity(intent)
                 return true
             }
 

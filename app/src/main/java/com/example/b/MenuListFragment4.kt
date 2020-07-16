@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ListView
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.menufragment_list4.view.*
 
 class MenuListFragmentActivity4 : Fragment() {
 
@@ -112,7 +113,7 @@ class MenuListFragmentActivity4 : Fragment() {
 """
         )
 
-        val listView4 = mainFrame.findViewById(R.id.list_view4) as ListView
+        val listView4 = mainFrame.list_view4 as ListView
 
         val arrayAdapter4 = this.context?.let {
             ArrayAdapter<String>(
