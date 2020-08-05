@@ -1,6 +1,5 @@
 package com.example.b
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -12,18 +11,30 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import io.realm.Realm
+import io.realm.RealmConfiguration
+import io.realm.RealmResults
+import io.realm.kotlin.createObject
+import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var mRealm: Realm
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Realm.init(this)
+        val realmConfig = RealmConfiguration.Builder()
+            .deleteRealmIfMigrationNeeded()
+            .build()
+        mRealm = Realm.getInstance(realmConfig)
 
-        val cuisines = arrayListOf(
+        val cuisines = mutableSetOf(
 
             "[空にする]",
             "ハンバーグ",
@@ -70,6 +81,43 @@ class MainActivity : AppCompatActivity() {
             "マーボー茄子",
             "あんかけ卵"
         )
+
+button.setOnClickListener {
+    val stringText = editText4.text.toString()
+    create(stringText)
+}
+
+        editText8n.setOnClickListener {
+
+                cuisines.add(read().toString())
+
+            val spinnerItems = cuisines.sorted()
+
+            val adapter = ArrayAdapter(
+                applicationContext,
+                android.R.layout.simple_spinner_item, spinnerItems
+            )
+
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+            spinner1.adapter = adapter
+            spinner2.adapter = adapter
+            spinner3.adapter = adapter
+            spinner4.adapter = adapter
+            spinner5.adapter = adapter
+            spinner6.adapter = adapter
+            spinner7.adapter = adapter
+        }
+
+        editText8.setOnClickListener {
+            delete(read().first()!!.id)
+        }
+
+
+        // update test
+
+        // delete test
 
         val spinnerItems = cuisines.sorted()
 
@@ -815,6 +863,36 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        mRealm.close()
+    }
+
+    private fun create(name:String){
+        mRealm.executeTransaction {
+            val max = mRealm.where<Book>().max("id")
+            var newId: Long = 0
+            if (max != null) {//nullチェック
+                newId = max.toLong() + 1
+            }
+            val book = mRealm.createObject<Book>(primaryKeyValue = newId)
+            book.name = name
+            mRealm.copyToRealm(book)
+        }
+    }
+
+    private fun read() : RealmResults<Book> {
+        return mRealm.where(Book::class.java).findAll()
+    }
+
+    private fun delete(id: Long){
+        mRealm.executeTransaction {
+            val book = mRealm.where(Book::class.java).equalTo("id",id).findAll()
+            book.deleteFromRealm(0)
+        }
+    }
+
+
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
         menuInflater.inflate(R.menu.menu_options_menu_list, menu)
@@ -866,8 +944,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList6 -> {
-                val intent = Intent(application, SubActivity::class.java)
-                startActivity(intent)
+
                 return true
             }
 

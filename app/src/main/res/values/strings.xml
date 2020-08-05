@@ -20,10 +20,6 @@
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
-    <string name="app_name2">DBテスト</string>
-    <string name="hint_key">company</string>
-    <string name="hint_value">US$price</string>
-    <string name="insert">insert</string>
-    <string name="read">read</string>
     <string name="menulist6">DB</string>
+    <string name="set">Button</string>
 </resources>
