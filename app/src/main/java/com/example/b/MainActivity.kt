@@ -82,14 +82,14 @@ class MainActivity : AppCompatActivity() {
             "あんかけ卵"
         )
 
-button.setOnClickListener {
-    val stringText = editText4.text.toString()
-    create(stringText)
-}
+        button.setOnClickListener {
+            val stringText = editText4.text.toString()
+            create(stringText)
+        }
 
         editText8n.setOnClickListener {
 
-                cuisines.add(read().toString())
+            cuisines.add(dataread().toString())
 
             val spinnerItems = cuisines.sorted()
 
@@ -868,7 +868,7 @@ button.setOnClickListener {
         mRealm.close()
     }
 
-    private fun create(name:String){
+    private fun create(name: String) {
         mRealm.executeTransaction {
             val max = mRealm.where<Book>().max("id")
             var newId: Long = 0
@@ -881,15 +881,19 @@ button.setOnClickListener {
         }
     }
 
-    private fun read() : RealmResults<Book> {
+    private fun read(): RealmResults<Book> {
         return mRealm.where(Book::class.java).findAll()
     }
 
-    private fun delete(id: Long){
+    private fun delete(id: Long) {
         mRealm.executeTransaction {
-            val book = mRealm.where(Book::class.java).equalTo("id",id).findAll()
+            val book = mRealm.where(Book::class.java).equalTo("id", id).findAll()
             book.deleteFromRealm(0)
         }
+    }
+
+    private fun dataread(): String? {
+        return mRealm.where(Book::class.java).equalTo("name", "name").findFirst()?.name
     }
 
 
