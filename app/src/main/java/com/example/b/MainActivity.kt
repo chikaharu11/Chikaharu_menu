@@ -89,7 +89,9 @@ class MainActivity : AppCompatActivity() {
 
         editText8n.setOnClickListener {
 
-            cuisines.add(dataread().toString())
+            val getData = dataread()
+
+            cuisines.add(getData.toString())
 
             val spinnerItems = cuisines.sorted()
 
@@ -893,7 +895,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun dataread(): String? {
-        return mRealm.where(Book::class.java).equalTo("name", "name").findFirst()?.name
+            return mRealm.where(Book::class.java).equalTo("id", 0.toLong()).findFirst()?.name
     }
 
 
