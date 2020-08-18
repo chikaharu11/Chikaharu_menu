@@ -85,31 +85,12 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             val stringText = editText4.text.toString()
             create(stringText)
-        }
-
-        editText8n.setOnClickListener {
-
-            val getData = dataread()
-
-            cuisines.add(getData.toString())
-
-            val spinnerItems = cuisines.sorted()
-
-            val adapter = ArrayAdapter(
-                applicationContext,
-                android.R.layout.simple_spinner_item, spinnerItems
-            )
-
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-            spinner1.adapter = adapter
-            spinner2.adapter = adapter
-            spinner3.adapter = adapter
-            spinner4.adapter = adapter
-            spinner5.adapter = adapter
-            spinner6.adapter = adapter
-            spinner7.adapter = adapter
+            val stringText2 = editText7.text.toString()
+            create2(stringText2)
+            val stringText3 = editText4n.text.toString()
+            create3(stringText3)
+            val stringText4 = editText7n.text.toString()
+            create4(stringText4)
         }
 
         editText8.setOnClickListener {
@@ -117,9 +98,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // update test
+        val getcuisines1 = mRealm.where<Book>().equalTo("id", 0.toLong()).findFirst()?.name
+        val getcuisines2 = mRealm.where<Book>().equalTo("id", 1.toLong()).findFirst()?.name
+        val getcuisines3 = mRealm.where<Book>().equalTo("id", 2.toLong()).findFirst()?.name
 
-        // delete test
+        cuisines.add(getcuisines1.toString())
+        cuisines.add(getcuisines2.toString())
+        cuisines.add(getcuisines3.toString())
 
         val spinnerItems = cuisines.sorted()
 
@@ -266,7 +251,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val clumsiness = arrayListOf(
+        val clumsiness = mutableSetOf(
 
             "[空にする]",
             "生野菜",
@@ -295,6 +280,14 @@ class MainActivity : AppCompatActivity() {
             "レンジ唐揚げ",
             "コーンスープ"
         )
+
+        val getclumsiness1 = mRealm.where<Book2>().equalTo("id", 0.toLong()).findFirst()?.name
+        val getclumsiness2 = mRealm.where<Book2>().equalTo("id", 1.toLong()).findFirst()?.name
+        val getclumsiness3 = mRealm.where<Book2>().equalTo("id", 2.toLong()).findFirst()?.name
+
+        clumsiness.add(getclumsiness1.toString())
+        clumsiness.add(getclumsiness2.toString())
+        clumsiness.add(getclumsiness3.toString())
 
         val spinnerItems2 = clumsiness.sorted()
 
@@ -492,7 +485,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        val lunches = arrayListOf(
+        val lunches = mutableSetOf(
 
             "[空にする]",
             "皿うどん",
@@ -510,6 +503,14 @@ class MainActivity : AppCompatActivity() {
             "肉野菜炒め",
             "ビーフン炒め"
         )
+
+        val getlunches1 = mRealm.where<Book3>().equalTo("id", 0.toLong()).findFirst()?.name
+        val getlunches2 = mRealm.where<Book3>().equalTo("id", 1.toLong()).findFirst()?.name
+        val getlunches3 = mRealm.where<Book3>().equalTo("id", 2.toLong()).findFirst()?.name
+
+        lunches.add(getlunches1.toString())
+        lunches.add(getlunches2.toString())
+        lunches.add(getlunches3.toString())
 
         val spinnerItems3 = lunches.sorted()
 
@@ -654,7 +655,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val baboon = arrayListOf(
+        val baboon = mutableSetOf(
 
             "[空にする]",
             "生野菜",
@@ -670,6 +671,14 @@ class MainActivity : AppCompatActivity() {
             "茶碗蒸し",
             "レンジ豚もやし"
         )
+
+        val getbaboon1 = mRealm.where<Book4>().equalTo("id", 0.toLong()).findFirst()?.name
+        val getbaboon2 = mRealm.where<Book4>().equalTo("id", 1.toLong()).findFirst()?.name
+        val getbaboon3 = mRealm.where<Book4>().equalTo("id", 2.toLong()).findFirst()?.name
+
+        baboon.add(getbaboon1.toString())
+        baboon.add(getbaboon2.toString())
+        baboon.add(getbaboon3.toString())
 
         val spinnerItems4 = baboon.sorted()
 
@@ -883,6 +892,45 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun create2(name: String) {
+        mRealm.executeTransaction {
+            val max = mRealm.where<Book2>().max("id")
+            var newId: Long = 0
+            if (max != null) {//nullチェック
+                newId = max.toLong() + 1
+            }
+            val book = mRealm.createObject<Book2>(primaryKeyValue = newId)
+            book.name = name
+            mRealm.copyToRealm(book)
+        }
+    }
+
+    private fun create3(name: String) {
+        mRealm.executeTransaction {
+            val max = mRealm.where<Book3>().max("id")
+            var newId: Long = 0
+            if (max != null) {//nullチェック
+                newId = max.toLong() + 1
+            }
+            val book = mRealm.createObject<Book3>(primaryKeyValue = newId)
+            book.name = name
+            mRealm.copyToRealm(book)
+        }
+    }
+
+    private fun create4(name: String) {
+        mRealm.executeTransaction {
+            val max = mRealm.where<Book4>().max("id")
+            var newId: Long = 0
+            if (max != null) {//nullチェック
+                newId = max.toLong() + 1
+            }
+            val book = mRealm.createObject<Book4>(primaryKeyValue = newId)
+            book.name = name
+            mRealm.copyToRealm(book)
+        }
+    }
+
     private fun read(): RealmResults<Book> {
         return mRealm.where(Book::class.java).findAll()
     }
@@ -892,10 +940,6 @@ class MainActivity : AppCompatActivity() {
             val book = mRealm.where(Book::class.java).equalTo("id", id).findAll()
             book.deleteFromRealm(0)
         }
-    }
-
-    private fun dataread(): String? {
-            return mRealm.where(Book::class.java).equalTo("id", 0.toLong()).findFirst()?.name
     }
 
 
