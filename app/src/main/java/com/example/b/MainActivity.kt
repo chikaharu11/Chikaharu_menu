@@ -122,8 +122,6 @@ class MainActivity : AppCompatActivity() {
         val getcuisines15 = mRealm.where<Book>().equalTo("id", 14.toLong()).findFirst()?.name
 
 
-
-
         if (getcuisines1 != null) {
             cuisines.add(getcuisines1.toString())
         }
@@ -363,9 +361,52 @@ class MainActivity : AppCompatActivity() {
         val getclumsiness14 = mRealm.where<Book2>().equalTo("id", 13.toLong()).findFirst()?.name
         val getclumsiness15 = mRealm.where<Book2>().equalTo("id", 14.toLong()).findFirst()?.name
 
-        clumsiness.add(getclumsiness1.toString())
-        clumsiness.add(getclumsiness2.toString())
-        clumsiness.add(getclumsiness3.toString())
+
+        if (getclumsiness1 != null) {
+            clumsiness.add(getclumsiness1.toString())
+        }
+        if (getclumsiness2 != null) {
+            clumsiness.add(getclumsiness2.toString())
+        }
+        if (getclumsiness3 != null) {
+            clumsiness.add(getclumsiness3.toString())
+        }
+        if (getclumsiness4 != null) {
+            clumsiness.add(getclumsiness4.toString())
+        }
+        if (getclumsiness5 != null) {
+            clumsiness.add(getclumsiness5.toString())
+        }
+        if (getclumsiness6 != null) {
+            clumsiness.add(getclumsiness6.toString())
+        }
+        if (getclumsiness7 != null) {
+            clumsiness.add(getclumsiness7.toString())
+        }
+        if (getclumsiness8 != null) {
+            clumsiness.add(getclumsiness8.toString())
+        }
+        if (getclumsiness9 != null) {
+            clumsiness.add(getclumsiness9.toString())
+        }
+        if (getclumsiness10 != null) {
+            clumsiness.add(getclumsiness10.toString())
+        }
+        if (getclumsiness11 != null) {
+            clumsiness.add(getclumsiness11.toString())
+        }
+        if (getclumsiness12 != null) {
+            clumsiness.add(getclumsiness12.toString())
+        }
+        if (getclumsiness13 != null) {
+            clumsiness.add(getclumsiness13.toString())
+        }
+        if (getclumsiness14 != null) {
+            clumsiness.add(getclumsiness14.toString())
+        }
+        if (getclumsiness15 != null) {
+            clumsiness.add(getclumsiness15.toString())
+        }
 
         val spinnerItems2 = clumsiness.sorted()
 
@@ -585,10 +626,64 @@ class MainActivity : AppCompatActivity() {
         val getlunches1 = mRealm.where<Book3>().equalTo("id", 0.toLong()).findFirst()?.name
         val getlunches2 = mRealm.where<Book3>().equalTo("id", 1.toLong()).findFirst()?.name
         val getlunches3 = mRealm.where<Book3>().equalTo("id", 2.toLong()).findFirst()?.name
+        val getlunches4 = mRealm.where<Book3>().equalTo("id", 3.toLong()).findFirst()?.name
+        val getlunches5 = mRealm.where<Book3>().equalTo("id", 4.toLong()).findFirst()?.name
+        val getlunches6 = mRealm.where<Book3>().equalTo("id", 5.toLong()).findFirst()?.name
+        val getlunches7 = mRealm.where<Book3>().equalTo("id", 6.toLong()).findFirst()?.name
+        val getlunches8 = mRealm.where<Book3>().equalTo("id", 7.toLong()).findFirst()?.name
+        val getlunches9 = mRealm.where<Book3>().equalTo("id", 8.toLong()).findFirst()?.name
+        val getlunches10 = mRealm.where<Book3>().equalTo("id", 9.toLong()).findFirst()?.name
+        val getlunches11 = mRealm.where<Book3>().equalTo("id", 10.toLong()).findFirst()?.name
+        val getlunches12 = mRealm.where<Book3>().equalTo("id", 11.toLong()).findFirst()?.name
+        val getlunches13 = mRealm.where<Book3>().equalTo("id", 12.toLong()).findFirst()?.name
+        val getlunches14 = mRealm.where<Book3>().equalTo("id", 13.toLong()).findFirst()?.name
+        val getlunches15 = mRealm.where<Book3>().equalTo("id", 14.toLong()).findFirst()?.name
 
-        lunches.add(getlunches1.toString())
-        lunches.add(getlunches2.toString())
-        lunches.add(getlunches3.toString())
+        if (getlunches1 != null) {
+            lunches.add(getlunches1.toString())
+        }
+        if (getlunches2 != null) {
+            lunches.add(getlunches2.toString())
+        }
+        if (getlunches3 != null) {
+            lunches.add(getlunches3.toString())
+        }
+        if (getlunches4 != null) {
+            lunches.add(getlunches4.toString())
+        }
+        if (getlunches5 != null) {
+            lunches.add(getlunches5.toString())
+        }
+        if (getlunches6 != null) {
+            lunches.add(getlunches6.toString())
+        }
+        if (getlunches7 != null) {
+            lunches.add(getlunches7.toString())
+        }
+        if (getlunches8 != null) {
+            lunches.add(getlunches8.toString())
+        }
+        if (getlunches9 != null) {
+            lunches.add(getlunches9.toString())
+        }
+        if (getlunches10 != null) {
+            lunches.add(getlunches10.toString())
+        }
+        if (getlunches11 != null) {
+            lunches.add(getlunches11.toString())
+        }
+        if (getlunches12 != null) {
+            lunches.add(getlunches12.toString())
+        }
+        if (getlunches13 != null) {
+            lunches.add(getlunches13.toString())
+        }
+        if (getlunches14 != null) {
+            lunches.add(getlunches14.toString())
+        }
+        if (getlunches15 != null) {
+            lunches.add(getlunches15.toString())
+        }
 
         val spinnerItems3 = lunches.sorted()
 
@@ -753,10 +848,65 @@ class MainActivity : AppCompatActivity() {
         val getbaboon1 = mRealm.where<Book4>().equalTo("id", 0.toLong()).findFirst()?.name
         val getbaboon2 = mRealm.where<Book4>().equalTo("id", 1.toLong()).findFirst()?.name
         val getbaboon3 = mRealm.where<Book4>().equalTo("id", 2.toLong()).findFirst()?.name
+        val getbaboon4 = mRealm.where<Book4>().equalTo("id", 3.toLong()).findFirst()?.name
+        val getbaboon5 = mRealm.where<Book4>().equalTo("id", 4.toLong()).findFirst()?.name
+        val getbaboon6 = mRealm.where<Book4>().equalTo("id", 5.toLong()).findFirst()?.name
+        val getbaboon7 = mRealm.where<Book4>().equalTo("id", 6.toLong()).findFirst()?.name
+        val getbaboon8 = mRealm.where<Book4>().equalTo("id", 7.toLong()).findFirst()?.name
+        val getbaboon9 = mRealm.where<Book4>().equalTo("id", 8.toLong()).findFirst()?.name
+        val getbaboon10 = mRealm.where<Book4>().equalTo("id", 9.toLong()).findFirst()?.name
+        val getbaboon11 = mRealm.where<Book4>().equalTo("id", 10.toLong()).findFirst()?.name
+        val getbaboon12 = mRealm.where<Book4>().equalTo("id", 11.toLong()).findFirst()?.name
+        val getbaboon13 = mRealm.where<Book4>().equalTo("id", 12.toLong()).findFirst()?.name
+        val getbaboon14 = mRealm.where<Book4>().equalTo("id", 13.toLong()).findFirst()?.name
+        val getbaboon15 = mRealm.where<Book4>().equalTo("id", 14.toLong()).findFirst()?.name
 
-        baboon.add(getbaboon1.toString())
-        baboon.add(getbaboon2.toString())
-        baboon.add(getbaboon3.toString())
+        if (getbaboon1 != null) {
+            baboon.add(getbaboon1.toString())
+        }
+        if (getbaboon2 != null) {
+            baboon.add(getbaboon2.toString())
+        }
+        if (getbaboon3 != null) {
+            baboon.add(getbaboon3.toString())
+        }
+        if (getbaboon4 != null) {
+            baboon.add(getbaboon4.toString())
+        }
+        if (getbaboon5 != null) {
+            baboon.add(getbaboon5.toString())
+        }
+        if (getbaboon6 != null) {
+            baboon.add(getbaboon6.toString())
+        }
+        if (getbaboon7 != null) {
+            baboon.add(getbaboon7.toString())
+        }
+        if (getbaboon8 != null) {
+            baboon.add(getbaboon8.toString())
+        }
+        if (getbaboon9 != null) {
+            baboon.add(getbaboon9.toString())
+        }
+        if (getbaboon10 != null) {
+            baboon.add(getbaboon10.toString())
+        }
+        if (getbaboon11 != null) {
+            baboon.add(getbaboon11.toString())
+        }
+        if (getbaboon12 != null) {
+            baboon.add(getbaboon12.toString())
+        }
+        if (getbaboon13 != null) {
+            baboon.add(getbaboon13.toString())
+        }
+        if (getbaboon14 != null) {
+            baboon.add(getbaboon14.toString())
+        }
+        if (getbaboon15 != null) {
+            baboon.add(getbaboon15.toString())
+        }
+
 
         val spinnerItems4 = baboon.sorted()
 
