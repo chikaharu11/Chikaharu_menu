@@ -13,7 +13,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import io.realm.Realm
 import io.realm.RealmConfiguration
-import io.realm.RealmResults
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
@@ -84,27 +83,94 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             val stringText = editText4.text.toString()
-            create(stringText)
+            if (stringText != "") {
+                create(stringText)
+            }
             val stringText2 = editText7.text.toString()
-            create2(stringText2)
+            if (stringText2 != "") {
+                create2(stringText2)
+            }
             val stringText3 = editText4n.text.toString()
-            create3(stringText3)
+            if (stringText3 != "") {
+                create3(stringText3)
+            }
             val stringText4 = editText7n.text.toString()
-            create4(stringText4)
+            if (stringText4 != "") {
+                create4(stringText4)
+            }
         }
 
         editText8.setOnClickListener {
-            delete(read().first()!!.id)
+            delete()
         }
 
 
         val getcuisines1 = mRealm.where<Book>().equalTo("id", 0.toLong()).findFirst()?.name
         val getcuisines2 = mRealm.where<Book>().equalTo("id", 1.toLong()).findFirst()?.name
         val getcuisines3 = mRealm.where<Book>().equalTo("id", 2.toLong()).findFirst()?.name
+        val getcuisines4 = mRealm.where<Book>().equalTo("id", 3.toLong()).findFirst()?.name
+        val getcuisines5 = mRealm.where<Book>().equalTo("id", 4.toLong()).findFirst()?.name
+        val getcuisines6 = mRealm.where<Book>().equalTo("id", 5.toLong()).findFirst()?.name
+        val getcuisines7 = mRealm.where<Book>().equalTo("id", 6.toLong()).findFirst()?.name
+        val getcuisines8 = mRealm.where<Book>().equalTo("id", 7.toLong()).findFirst()?.name
+        val getcuisines9 = mRealm.where<Book>().equalTo("id", 8.toLong()).findFirst()?.name
+        val getcuisines10 = mRealm.where<Book>().equalTo("id", 9.toLong()).findFirst()?.name
+        val getcuisines11 = mRealm.where<Book>().equalTo("id", 10.toLong()).findFirst()?.name
+        val getcuisines12 = mRealm.where<Book>().equalTo("id", 11.toLong()).findFirst()?.name
+        val getcuisines13 = mRealm.where<Book>().equalTo("id", 12.toLong()).findFirst()?.name
+        val getcuisines14 = mRealm.where<Book>().equalTo("id", 13.toLong()).findFirst()?.name
+        val getcuisines15 = mRealm.where<Book>().equalTo("id", 14.toLong()).findFirst()?.name
 
-        cuisines.add(getcuisines1.toString())
-        cuisines.add(getcuisines2.toString())
-        cuisines.add(getcuisines3.toString())
+
+
+
+        if (getcuisines1 != null) {
+            cuisines.add(getcuisines1.toString())
+        }
+        if (getcuisines2 != null) {
+            cuisines.add(getcuisines2.toString())
+        }
+        if (getcuisines3 != null) {
+            cuisines.add(getcuisines3.toString())
+        }
+        if (getcuisines4 != null) {
+            cuisines.add(getcuisines4.toString())
+        }
+        if (getcuisines5 != null) {
+            cuisines.add(getcuisines5.toString())
+        }
+        if (getcuisines6 != null) {
+            cuisines.add(getcuisines6.toString())
+        }
+        if (getcuisines7 != null) {
+            cuisines.add(getcuisines7.toString())
+        }
+        if (getcuisines8 != null) {
+            cuisines.add(getcuisines8.toString())
+        }
+        if (getcuisines9 != null) {
+            cuisines.add(getcuisines9.toString())
+        }
+        if (getcuisines10 != null) {
+            cuisines.add(getcuisines10.toString())
+        }
+        if (getcuisines11 != null) {
+            cuisines.add(getcuisines11.toString())
+        }
+        if (getcuisines12 != null) {
+            cuisines.add(getcuisines12.toString())
+        }
+        if (getcuisines13 != null) {
+            cuisines.add(getcuisines13.toString())
+        }
+        if (getcuisines14 != null) {
+            cuisines.add(getcuisines14.toString())
+        }
+        if (getcuisines15 != null) {
+            cuisines.add(getcuisines15.toString())
+        }
+
+
 
         val spinnerItems = cuisines.sorted()
 
@@ -284,6 +350,18 @@ class MainActivity : AppCompatActivity() {
         val getclumsiness1 = mRealm.where<Book2>().equalTo("id", 0.toLong()).findFirst()?.name
         val getclumsiness2 = mRealm.where<Book2>().equalTo("id", 1.toLong()).findFirst()?.name
         val getclumsiness3 = mRealm.where<Book2>().equalTo("id", 2.toLong()).findFirst()?.name
+        val getclumsiness4 = mRealm.where<Book2>().equalTo("id", 3.toLong()).findFirst()?.name
+        val getclumsiness5 = mRealm.where<Book2>().equalTo("id", 4.toLong()).findFirst()?.name
+        val getclumsiness6 = mRealm.where<Book2>().equalTo("id", 5.toLong()).findFirst()?.name
+        val getclumsiness7 = mRealm.where<Book2>().equalTo("id", 6.toLong()).findFirst()?.name
+        val getclumsiness8 = mRealm.where<Book2>().equalTo("id", 7.toLong()).findFirst()?.name
+        val getclumsiness9 = mRealm.where<Book2>().equalTo("id", 8.toLong()).findFirst()?.name
+        val getclumsiness10 = mRealm.where<Book2>().equalTo("id", 9.toLong()).findFirst()?.name
+        val getclumsiness11 = mRealm.where<Book2>().equalTo("id", 10.toLong()).findFirst()?.name
+        val getclumsiness12 = mRealm.where<Book2>().equalTo("id", 11.toLong()).findFirst()?.name
+        val getclumsiness13 = mRealm.where<Book2>().equalTo("id", 12.toLong()).findFirst()?.name
+        val getclumsiness14 = mRealm.where<Book2>().equalTo("id", 13.toLong()).findFirst()?.name
+        val getclumsiness15 = mRealm.where<Book2>().equalTo("id", 14.toLong()).findFirst()?.name
 
         clumsiness.add(getclumsiness1.toString())
         clumsiness.add(getclumsiness2.toString())
@@ -931,14 +1009,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun read(): RealmResults<Book> {
+    /*private fun read(): RealmResults<Book> {
         return mRealm.where(Book::class.java).findAll()
     }
-
-    private fun delete(id: Long) {
+*/
+    private fun delete() {
         mRealm.executeTransaction {
-            val book = mRealm.where(Book::class.java).equalTo("id", id).findAll()
-            book.deleteFromRealm(0)
+            mRealm.deleteAll()
         }
     }
 
