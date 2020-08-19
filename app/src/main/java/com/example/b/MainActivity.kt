@@ -81,29 +81,6 @@ class MainActivity : AppCompatActivity() {
             "あんかけ卵"
         )
 
-        button.setOnClickListener {
-            val stringText = editText4.text.toString()
-            if (stringText != "") {
-                create(stringText)
-            }
-            val stringText2 = editText7.text.toString()
-            if (stringText2 != "") {
-                create2(stringText2)
-            }
-            val stringText3 = editText4n.text.toString()
-            if (stringText3 != "") {
-                create3(stringText3)
-            }
-            val stringText4 = editText7n.text.toString()
-            if (stringText4 != "") {
-                create4(stringText4)
-            }
-        }
-
-        editText8.setOnClickListener {
-            delete()
-        }
-
 
         val getcuisines1 = mRealm.where<Book>().equalTo("id", 0.toLong()).findFirst()?.name
         val getcuisines2 = mRealm.where<Book>().equalTo("id", 1.toLong()).findFirst()?.name
@@ -1221,7 +1198,21 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList6 -> {
+                val stringText = editText4.text.toString()
+                    create(stringText)
+                val stringText2 = editText7.text.toString()
+                    create2(stringText2)
+                val stringText3 = editText4n.text.toString()
+                    create3(stringText3)
+                val stringText4 = editText7n.text.toString()
+                    create4(stringText4)
 
+                finish()
+                return true
+            }
+
+            R.id.MenuList7 -> {
+                delete()
                 return true
             }
 

@@ -15,11 +15,11 @@
     <string name="menulist2">昼サブ食材</string>
     <string name="menulist3">夜メイン食材</string>
     <string name="menulist4">夜サブ食材</string>
-    <string name="menulist5">戻る</string>
+    <string name="menulist5">最初の画面に戻る</string>
     <string name="mm1">夜メイン</string>
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
-    <string name="menulist6">DB</string>
-    <string name="set">Button</string>
+    <string name="menulist6">保存して終了</string>
+    <string name="menulist7">全て削除</string>
 </resources>

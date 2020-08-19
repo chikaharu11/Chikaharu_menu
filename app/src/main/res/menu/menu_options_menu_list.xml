@@ -33,4 +33,9 @@
         app:showAsAction="never"
         android:title="@string/menulist6" />
 
+    <item
+        android:id="@+id/MenuList7"
+        app:showAsAction="never"
+        android:title="@string/menulist7" />
+
 </menu>
