@@ -22,4 +22,6 @@
     <string name="sm1">夜サブ</string>
     <string name="menulist6">保存して終了</string>
     <string name="menulist7">全て削除</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
 </resources>

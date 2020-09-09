@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -32,6 +30,12 @@ class MainActivity : AppCompatActivity() {
             .deleteRealmIfMigrationNeeded()
             .build()
         mRealm = Realm.getInstance(realmConfig)
+
+        val hint = mRealm.where(Book5::class.java).equalTo("id",0.toLong()).findFirst()?.name
+        val week = mRealm.where(Book5::class.java).equalTo("id",1.toLong()).findFirst()?.name
+
+        editText8.hint = hint
+        textView.text = week
 
         val cuisines = mutableSetOf(
 
@@ -860,6 +864,7 @@ class MainActivity : AppCompatActivity() {
             spinnerAn.performClick()
             true
         }
+
     }
 
     override fun onDestroy() {
@@ -919,6 +924,19 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun create5(name: String) {
+        mRealm.executeTransaction {
+            val max = mRealm.where<Book5>().max("id")
+            var newId: Long = 0
+            if (max != null) {//nullチェック
+                newId = max.toLong() + 1
+            }
+            val book = mRealm.createObject<Book5>(primaryKeyValue = newId)
+            book.name = name
+            mRealm.copyToRealm(book)
+        }
+    }
+
     /*private fun read(): RealmResults<Book> {
         return mRealm.where(Book::class.java).findAll()
     }
@@ -956,17 +974,50 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
 
             R.id.MenuList1 -> {
-                replaceFragment(fragment1)
+                AlertDialog.Builder(this) // FragmentではActivityを取得して生成
+                    .setTitle("タイトル")
+                    .setMessage("メッセージ")
+                    .setPositiveButton("OK") { dialog, which ->
+                        // TODO:Yesが押された時の挙動
+                    }
+                    .setNegativeButton("No") { dialog, which ->
+                        // TODO:Noが押された時の挙動
+                    }
+                    .setNeutralButton("その他") { dialog, which ->
+                        // TODO:その他が押された時の挙動
+                    }
+                    .show()
                 return true
             }
 
             R.id.MenuList2 -> {
-                replaceFragment(fragment2)
                 return true
             }
 
             R.id.MenuList3 -> {
-                replaceFragment(fragment3)
+                val builder = android.app.AlertDialog.Builder(this)
+                val inflater = layoutInflater
+                val signinView = inflater.inflate(R.layout.dialog_signin, null)
+
+                builder.setView(signinView)
+                    .setTitle("Sign in")
+                    .setPositiveButton("OK") { _, _ ->
+                        mRealm.executeTransaction {
+                            mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
+                            val week = mRealm.createObject<Book5>(0)
+                            val a = signinView.findViewById<EditText>(R.id.email).text.toString()
+                            week.name = a
+                            val week2 = mRealm.createObject<Book5>(1)
+                            val a2 = signinView.findViewById<EditText>(R.id.password).text.toString()
+                            week2.name = a2
+                        }
+                        Toast.makeText(applicationContext, "次の起動時に反映されます。", Toast.LENGTH_LONG).show()
+                    }
+                    .setNegativeButton("Cancel") { _, _ ->
+
+                    }
+
+                    .show()
                 return true
             }
 
