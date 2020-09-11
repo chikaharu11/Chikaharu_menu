@@ -5,7 +5,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -31,15 +30,24 @@ class MainActivity : AppCompatActivity() {
             .build()
         mRealm = Realm.getInstance(realmConfig)
 
-        val hint = mRealm.where(Book5::class.java).equalTo("id",0.toLong()).findFirst()?.name
-        val week = mRealm.where(Book5::class.java).equalTo("id",1.toLong()).findFirst()?.name
+        val week1 = mRealm.where(Book5::class.java).equalTo("id",0.toLong()).findFirst()?.name
+        val week2 = mRealm.where(Book5::class.java).equalTo("id",1.toLong()).findFirst()?.name
+        val week3 = mRealm.where(Book5::class.java).equalTo("id",2.toLong()).findFirst()?.name
+        val week4 = mRealm.where(Book5::class.java).equalTo("id",3.toLong()).findFirst()?.name
+        val week5 = mRealm.where(Book5::class.java).equalTo("id",4.toLong()).findFirst()?.name
+        val week6 = mRealm.where(Book5::class.java).equalTo("id",5.toLong()).findFirst()?.name
+        val week7 = mRealm.where(Book5::class.java).equalTo("id",6.toLong()).findFirst()?.name
 
-        if(hint == null){
-            return
-        }else{
-        editText8.hint = hint
+        if(week1 !== null){
+            textView.text = week1
+        textView2.text = week2
+        textView3.text = week3
+        textView4.text = week4
+        textView5.text = week5
+        textView6.text = week6
+        textView7.text = week7
         }
-        textView.text = week
+
 
         val cuisines = mutableSetOf(
 
@@ -928,19 +936,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun create5(name: String) {
-        mRealm.executeTransaction {
-            val max = mRealm.where<Book5>().max("id")
-            var newId: Long = 0
-            if (max != null) {//nullチェック
-                newId = max.toLong() + 1
-            }
-            val book = mRealm.createObject<Book5>(primaryKeyValue = newId)
-            book.name = name
-            mRealm.copyToRealm(book)
-        }
-    }
-
     /*private fun read(): RealmResults<Book> {
         return mRealm.where(Book::class.java).findAll()
     }
@@ -961,9 +956,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        val fragment1 = MenuListFragmentActivity1()
-        val fragment2 = MenuListFragmentActivity2()
-        val fragment3 = MenuListFragmentActivity3()
         val fragment4 = MenuListFragmentActivity4()
 
 
@@ -980,19 +972,34 @@ class MainActivity : AppCompatActivity() {
             R.id.MenuList1 -> {
                 val builder = android.app.AlertDialog.Builder(this)
                 val inflater = layoutInflater
-                val signinView = inflater.inflate(R.layout.dialog_signin, null)
+                val signinView = inflater.inflate(R.layout.dialog_week, null)
 
                 builder.setView(signinView)
                     .setTitle("曜日の変更")
                     .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
                             mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
-                            val week = mRealm.createObject<Book5>(0)
-                            val a = signinView.findViewById<EditText>(R.id.email).text.toString()
-                            week.name = a
+                            val week1 = mRealm.createObject<Book5>(0)
+                            val a = signinView.findViewById<EditText>(R.id.textView_).text.toString()
+                            week1.name = a
                             val week2 = mRealm.createObject<Book5>(1)
-                            val a2 = signinView.findViewById<EditText>(R.id.password).text.toString()
+                            val a2 = signinView.findViewById<EditText>(R.id.textView_2).text.toString()
                             week2.name = a2
+                            val week3 = mRealm.createObject<Book5>(2)
+                            val a3 = signinView.findViewById<EditText>(R.id.textView_3).text.toString()
+                            week3.name = a3
+                            val week4 = mRealm.createObject<Book5>(3)
+                            val a4 = signinView.findViewById<EditText>(R.id.textView_4).text.toString()
+                            week4.name = a4
+                            val week5 = mRealm.createObject<Book5>(4)
+                            val a5 = signinView.findViewById<EditText>(R.id.textView_5).text.toString()
+                            week5.name = a5
+                            val week6 = mRealm.createObject<Book5>(5)
+                            val a6 = signinView.findViewById<EditText>(R.id.textView_6).text.toString()
+                            week6.name = a6
+                            val week7 = mRealm.createObject<Book5>(6)
+                            val a7 = signinView.findViewById<EditText>(R.id.textView_7).text.toString()
+                            week7.name = a7
                         }
                         Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG).show()
                     }

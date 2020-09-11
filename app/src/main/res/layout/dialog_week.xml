@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/editText8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText4n"
+        app:layout_constraintStart_toStartOf="@+id/editText4n"
+        app:layout_constraintTop_toBottomOf="@+id/editText8n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText13n"
+        app:layout_constraintStart_toStartOf="@+id/editText13n"
+        app:layout_constraintTop_toBottomOf="@+id/editText4n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextn"
+        app:layout_constraintStart_toStartOf="@+id/editTextn"
+        app:layout_constraintTop_toBottomOf="@+id/editText13n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText13n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText13"
+        app:layout_constraintStart_toStartOf="@+id/editText13"
+        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText7n"
+        app:layout_constraintStart_toStartOf="@+id/editText7n"
+        app:layout_constraintTop_toBottomOf="@+id/editText9n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText15n"
+        app:layout_constraintStart_toStartOf="@+id/editText15n"
+        app:layout_constraintTop_toBottomOf="@+id/editText7n"
+        tools:ignore="LabelFor" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner7"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner6"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner4"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerA"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerB"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerF"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerD"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerE"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerC"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerG"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/editText8n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText8"
+        app:layout_constraintStart_toStartOf="@+id/editText8"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText4n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintStart_toStartOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/editText8"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editTextn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintStart_toStartOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editText13"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText10n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText10"
+        app:layout_constraintStart_toStartOf="@+id/editText10"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText12n"
+        app:layout_constraintStart_toStartOf="@+id/editText12n"
+        app:layout_constraintTop_toBottomOf="@+id/editText10n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText11n"
+        app:layout_constraintStart_toStartOf="@+id/editText11n"
+        app:layout_constraintTop_toBottomOf="@+id/editTextn"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText12n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText12"
+        app:layout_constraintStart_toStartOf="@+id/editText12"
+        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText12n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText11n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText11"
+        app:layout_constraintStart_toStartOf="@+id/editText11"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/mm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText10n"
+        app:layout_constraintStart_toStartOf="@+id/editText10n"
+        app:layout_constraintTop_toBottomOf="@+id/editText11n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText9n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText9"
+        app:layout_constraintStart_toStartOf="@+id/editText9"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText7n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        app:layout_constraintStart_toStartOf="@+id/editText7"
+        app:layout_constraintTop_toBottomOf="@+id/editText9"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText15n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText15"
+        app:layout_constraintStart_toStartOf="@+id/editText15"
+        app:layout_constraintTop_toBottomOf="@+id/editText7"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText16n"
+        app:layout_constraintStart_toStartOf="@+id/editText16n"
+        app:layout_constraintTop_toBottomOf="@+id/editText15n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText17n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText17"
+        app:layout_constraintStart_toStartOf="@+id/editText17"
+        app:layout_constraintTop_toBottomOf="@+id/editText18"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText14n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText14"
+        app:layout_constraintStart_toStartOf="@+id/editText14"
+        app:layout_constraintTop_toBottomOf="@+id/editText17"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText18n"
+        app:layout_constraintStart_toStartOf="@+id/editText18n"
+        app:layout_constraintTop_toBottomOf="@+id/editText16n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText14n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText17n"
+        app:layout_constraintStart_toStartOf="@+id/editText17n"
+        app:layout_constraintTop_toBottomOf="@+id/editText18n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText14n"
+        app:layout_constraintStart_toStartOf="@+id/editText14n"
+        app:layout_constraintTop_toBottomOf="@+id/editText17n"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText18n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText18"
+        app:layout_constraintStart_toStartOf="@+id/editText18"
+        app:layout_constraintTop_toBottomOf="@+id/editText16"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/editText16n"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:gravity="start|top"
+        android:hint="@string/sm2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText16"
+        app:layout_constraintStart_toStartOf="@+id/editText16"
+        app:layout_constraintTop_toBottomOf="@+id/editText15"
+        tools:ignore="LabelFor" />
+
+    <Spinner
+        android:id="@+id/spinner1n"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner7n"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner3n"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner6n"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner2n"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner5n"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner4n"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerAn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerBn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerFn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerDn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerEn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerCn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinnerGn"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/textView_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c1"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText8n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText8n"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/textView_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c2"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText4n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText4n"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/textView_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c3"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText13n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText13n"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/textView_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c4"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextn"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/textView_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText11n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText11n"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/textView_6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c6"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText10n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText10n"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:id="@+id/textView_7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c7"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/editText12n"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText12n"
+        android:autofillHints=""
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editText7n"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText15n" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editText15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText16n" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editText16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText18n" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editText18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText17n" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editText17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText14n" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText14" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
