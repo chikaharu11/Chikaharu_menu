@@ -34,7 +34,11 @@ class MainActivity : AppCompatActivity() {
         val hint = mRealm.where(Book5::class.java).equalTo("id",0.toLong()).findFirst()?.name
         val week = mRealm.where(Book5::class.java).equalTo("id",1.toLong()).findFirst()?.name
 
+        if(hint == null){
+            return
+        }else{
         editText8.hint = hint
+        }
         textView.text = week
 
         val cuisines = mutableSetOf(
@@ -974,34 +978,13 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
 
             R.id.MenuList1 -> {
-                AlertDialog.Builder(this) // FragmentではActivityを取得して生成
-                    .setTitle("タイトル")
-                    .setMessage("メッセージ")
-                    .setPositiveButton("OK") { dialog, which ->
-                        // TODO:Yesが押された時の挙動
-                    }
-                    .setNegativeButton("No") { dialog, which ->
-                        // TODO:Noが押された時の挙動
-                    }
-                    .setNeutralButton("その他") { dialog, which ->
-                        // TODO:その他が押された時の挙動
-                    }
-                    .show()
-                return true
-            }
-
-            R.id.MenuList2 -> {
-                return true
-            }
-
-            R.id.MenuList3 -> {
                 val builder = android.app.AlertDialog.Builder(this)
                 val inflater = layoutInflater
                 val signinView = inflater.inflate(R.layout.dialog_signin, null)
 
                 builder.setView(signinView)
-                    .setTitle("Sign in")
-                    .setPositiveButton("OK") { _, _ ->
+                    .setTitle("曜日の変更")
+                    .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
                             mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
                             val week = mRealm.createObject<Book5>(0)
@@ -1011,13 +994,21 @@ class MainActivity : AppCompatActivity() {
                             val a2 = signinView.findViewById<EditText>(R.id.password).text.toString()
                             week2.name = a2
                         }
-                        Toast.makeText(applicationContext, "次の起動時に反映されます。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG).show()
                     }
-                    .setNegativeButton("Cancel") { _, _ ->
+                    .setNegativeButton("キャンセル") { _, _ ->
 
                     }
 
                     .show()
+                return true
+            }
+
+            R.id.MenuList2 -> {
+                return true
+            }
+
+            R.id.MenuList3 -> {
                 return true
             }
 
