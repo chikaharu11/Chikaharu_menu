@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">せがれメニュー</string>
-    <string name="list">食材リスト</string>
-    <string name="noon">昼メニュー</string>
-    <string name="baby">夕メニュー</string>
-    <string name="main">戻る</string>
     <string name="c1">土</string>
     <string name="c2">日</string>
     <string name="c3">月</string>
@@ -11,17 +7,13 @@
     <string name="c5">水</string>
     <string name="c6">木</string>
     <string name="c7">金</string>
-    <string name="menulist1">昼メイン食材</string>
-    <string name="menulist2">昼サブ食材</string>
-    <string name="menulist3">夜メイン食材</string>
-    <string name="menulist4">夜サブ食材</string>
-    <string name="menulist5">最初の画面に戻る</string>
     <string name="mm1">夜メイン</string>
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
-    <string name="menulist6">保存して終了</string>
-    <string name="menulist7">全て削除</string>
-    <string name="password">Password</string>
-    <string name="email">Email</string>
+    <string name="menulist1">曜日を変更する</string>
+    <string name="menulist2">項目を変更する</string>
+    <string name="menulist3">ヘルプ</string>
+    <string name="menulist6">初期状態に戻す</string>
+    <string name="menulist7">保存して終了</string>
 </resources>

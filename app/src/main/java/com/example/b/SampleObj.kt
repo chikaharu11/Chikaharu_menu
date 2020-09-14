@@ -43,3 +43,11 @@ open class Book5: RealmObject() {
     @Required
     open var name : String = ""
 }
+
+open class Book6: RealmObject() {
+
+    @PrimaryKey
+    open var id: Long = 0
+    @Required
+    open var name : String = ""
+}

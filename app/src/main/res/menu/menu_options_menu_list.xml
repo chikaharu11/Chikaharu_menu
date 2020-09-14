@@ -15,18 +15,10 @@
 
     <item
         android:id="@+id/MenuList3"
-        app:showAsAction="never"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/help"
         android:title="@string/menulist3" />
 
-    <item
-        android:id="@+id/MenuList4"
-        app:showAsAction="never"
-        android:title="@string/menulist4" />
-
-    <item
-        android:id="@+id/MenuList5"
-        app:showAsAction="never"
-        android:title="@string/menulist5" />
 
     <item
         android:id="@+id/MenuList6"

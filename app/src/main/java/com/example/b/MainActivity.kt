@@ -5,6 +5,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -38,15 +39,52 @@ class MainActivity : AppCompatActivity() {
         val week6 = mRealm.where(Book5::class.java).equalTo("id",5.toLong()).findFirst()?.name
         val week7 = mRealm.where(Book5::class.java).equalTo("id",6.toLong()).findFirst()?.name
 
-        if(week1 !== null){
+        if(week1 != null){
             textView.text = week1
-        textView2.text = week2
-        textView3.text = week3
-        textView4.text = week4
-        textView5.text = week5
-        textView6.text = week6
-        textView7.text = week7
+            textView2.text = week2
+            textView3.text = week3
+            textView4.text = week4
+            textView5.text = week5
+            textView6.text = week6
+            textView7.text = week7
         }
+
+        val item1 = mRealm.where(Book6::class.java).equalTo("id",0.toLong()).findFirst()?.name
+        val item2 = mRealm.where(Book6::class.java).equalTo("id",1.toLong()).findFirst()?.name
+        val item3 = mRealm.where(Book6::class.java).equalTo("id",2.toLong()).findFirst()?.name
+        val item4 = mRealm.where(Book6::class.java).equalTo("id",3.toLong()).findFirst()?.name
+
+        if(item1 != null) {
+            editText8n.hint = item1
+            editText4n.hint = item1
+            editText13n.hint = item1
+            editTextn.hint = item1
+            editText11n.hint = item1
+            editText10n.hint = item1
+            editText12n.hint = item1
+            editText9n.hint = item2
+            editText7n.hint = item2
+            editText15n.hint = item2
+            editText16n.hint = item2
+            editText18n.hint = item2
+            editText17n.hint = item2
+            editText14n.hint = item2
+            editText8.hint = item3
+            editText4.hint = item3
+            editText13.hint = item3
+            editText.hint = item3
+            editText11.hint = item3
+            editText10.hint = item3
+            editText12.hint = item3
+            editText9.hint = item4
+            editText7.hint = item4
+            editText15.hint = item4
+            editText16.hint = item4
+            editText18.hint = item4
+            editText17.hint = item4
+            editText14.hint = item4
+        }
+
 
 
         val cuisines = mutableSetOf(
@@ -1012,90 +1050,140 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList2 -> {
+                val builder = android.app.AlertDialog.Builder(this)
+                val inflater = layoutInflater
+                val signinView2 = inflater.inflate(R.layout.dialog_item, null)
+
+                builder.setView(signinView2)
+                    .setTitle("項目の変更")
+                    .setPositiveButton("変更する") { _, _ ->
+                        mRealm.executeTransaction {
+                            mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
+                            val item1 = mRealm.createObject<Book6>(0)
+                            val a = signinView2.findViewById<EditText>(R.id.editText8n).text.toString()
+                            item1.name = a
+                            val item2 = mRealm.createObject<Book6>(1)
+                            val a2 = signinView2.findViewById<EditText>(R.id.editText9n).text.toString()
+                            item2.name = a2
+                            val item3 = mRealm.createObject<Book6>(2)
+                            val a3 = signinView2.findViewById<EditText>(R.id.editText8).text.toString()
+                            item3.name = a3
+                            val item4 = mRealm.createObject<Book6>(3)
+                            val a4 = signinView2.findViewById<EditText>(R.id.editText9).text.toString()
+                            item4.name = a4
+                        }
+                        Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG).show()
+                    }
+                    .setNegativeButton("キャンセル") { _, _ ->
+
+                    }
+
+                    .show()
                 return true
             }
 
             R.id.MenuList3 -> {
+                val a = true
+                if (a) {
+                    replaceFragment(fragment4)
+
+                } else {
+                    supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                }
                 return true
             }
 
-            R.id.MenuList4 -> {
-                replaceFragment(fragment4)
-                return true
-            }
-
-            R.id.MenuList5 -> {
-                supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-                return true
-            }
+            //supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
 
             R.id.MenuList6 -> {
-                val stringText11 = editText8.text.toString()
-                    create(stringText11)
-                val stringText12 = editText4.text.toString()
-                    create(stringText12)
-                val stringText13 = editText13.text.toString()
-                    create(stringText13)
-                val stringText14 = editText.text.toString()
-                    create(stringText14)
-                val stringText15 = editText11.text.toString()
-                    create(stringText15)
-                val stringText16 = editText10.text.toString()
-                    create(stringText16)
-                val stringText17 = editText12.text.toString()
-                    create(stringText17)
+                AlertDialog.Builder(this) // FragmentではActivityを取得して生成
+                    .setTitle("初期状態に戻しますか？")
+                    .setMessage("(曜日、項目、登録したメニューが\n全て消去されます)")
+                    .setPositiveButton("OK") { _, _ ->
+                        delete()
+                        Toast.makeText(applicationContext, "次回起動時から初期状態に戻ります。", Toast.LENGTH_LONG).show()
+                    }
+                    .setNegativeButton("NO") { _, _ ->
 
-                val stringText21 = editText9.text.toString()
-                    create2(stringText21)
-                val stringText22 = editText7.text.toString()
-                    create2(stringText22)
-                val stringText23 = editText15.text.toString()
-                    create2(stringText23)
-                val stringText24 = editText16.text.toString()
-                    create2(stringText24)
-                val stringText25 = editText18.text.toString()
-                    create2(stringText25)
-                val stringText26 = editText17.text.toString()
-                    create2(stringText26)
-                val stringText27 = editText14.text.toString()
-                    create2(stringText27)
+                    }
+                    .show()
 
-                val stringText31 = editText8n.text.toString()
-                    create3(stringText31)
-                val stringText32 = editText4n.text.toString()
-                    create3(stringText32)
-                val stringText33 = editText13n.text.toString()
-                    create3(stringText33)
-                val stringText34 = editTextn.text.toString()
-                    create3(stringText34)
-                val stringText35 = editText11n.text.toString()
-                    create3(stringText35)
-                val stringText36 = editText10n.text.toString()
-                    create3(stringText36)
-                val stringText37 = editText12n.text.toString()
-                    create3(stringText37)
-
-                val stringText41 = editText9n.text.toString()
-                    create4(stringText41)
-                val stringText42 = editText7n.text.toString()
-                    create4(stringText42)
-                val stringText43 = editText15n.text.toString()
-                    create4(stringText43)
-                val stringText44 = editText16n.text.toString()
-                    create4(stringText44)
-                val stringText45 = editText18n.text.toString()
-                    create4(stringText45)
-                val stringText46 = editText17n.text.toString()
-                    create4(stringText46)
-                val stringText47 = editText14n.text.toString()
-                    create4(stringText47)
-
-                finish()
                 return true
             }
 
             R.id.MenuList7 -> {
-                delete()
+                AlertDialog.Builder(this) // FragmentではActivityを取得して生成
+                    .setTitle("終了しますか？")
+                    .setMessage("(入力したメニューは保存されます)")
+                    .setPositiveButton("OK") { _, _ ->
+                        val stringText11 = editText8.text.toString()
+                        create(stringText11)
+                        val stringText12 = editText4.text.toString()
+                        create(stringText12)
+                        val stringText13 = editText13.text.toString()
+                        create(stringText13)
+                        val stringText14 = editText.text.toString()
+                        create(stringText14)
+                        val stringText15 = editText11.text.toString()
+                        create(stringText15)
+                        val stringText16 = editText10.text.toString()
+                        create(stringText16)
+                        val stringText17 = editText12.text.toString()
+                        create(stringText17)
+
+                        val stringText21 = editText9.text.toString()
+                        create2(stringText21)
+                        val stringText22 = editText7.text.toString()
+                        create2(stringText22)
+                        val stringText23 = editText15.text.toString()
+                        create2(stringText23)
+                        val stringText24 = editText16.text.toString()
+                        create2(stringText24)
+                        val stringText25 = editText18.text.toString()
+                        create2(stringText25)
+                        val stringText26 = editText17.text.toString()
+                        create2(stringText26)
+                        val stringText27 = editText14.text.toString()
+                        create2(stringText27)
+
+                        val stringText31 = editText8n.text.toString()
+                        create3(stringText31)
+                        val stringText32 = editText4n.text.toString()
+                        create3(stringText32)
+                        val stringText33 = editText13n.text.toString()
+                        create3(stringText33)
+                        val stringText34 = editTextn.text.toString()
+                        create3(stringText34)
+                        val stringText35 = editText11n.text.toString()
+                        create3(stringText35)
+                        val stringText36 = editText10n.text.toString()
+                        create3(stringText36)
+                        val stringText37 = editText12n.text.toString()
+                        create3(stringText37)
+
+                        val stringText41 = editText9n.text.toString()
+                        create4(stringText41)
+                        val stringText42 = editText7n.text.toString()
+                        create4(stringText42)
+                        val stringText43 = editText15n.text.toString()
+                        create4(stringText43)
+                        val stringText44 = editText16n.text.toString()
+                        create4(stringText44)
+                        val stringText45 = editText18n.text.toString()
+                        create4(stringText45)
+                        val stringText46 = editText17n.text.toString()
+                        create4(stringText46)
+                        val stringText47 = editText14n.text.toString()
+                        create4(stringText47)
+
+                        Toast.makeText(applicationContext, "終了しました。", Toast.LENGTH_LONG).show()
+                        finish()
+                    }
+                    .setNegativeButton("NO") { _, _ ->
+
+                    }
+                    .show()
+
                 return true
             }
 
