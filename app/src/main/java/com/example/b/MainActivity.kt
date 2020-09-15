@@ -917,6 +917,18 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        AlertDialog.Builder(this)
+            .setTitle("終了しますか？")
+            .setPositiveButton("YES") { _, _ ->
+                finish()
+            }
+            .setNegativeButton("NO") { _, _ ->
+
+            }
+            .show()
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         mRealm.close()
@@ -926,7 +938,7 @@ class MainActivity : AppCompatActivity() {
         mRealm.executeTransaction {
             val max = mRealm.where<Book>().max("id")
             var newId: Long = 0
-            if (max != null) {//nullチェック
+            if (max != null) {
                 newId = max.toLong() + 1
             }
             val book = mRealm.createObject<Book>(primaryKeyValue = newId)
@@ -939,7 +951,7 @@ class MainActivity : AppCompatActivity() {
         mRealm.executeTransaction {
             val max = mRealm.where<Book2>().max("id")
             var newId: Long = 0
-            if (max != null) {//nullチェック
+            if (max != null) {
                 newId = max.toLong() + 1
             }
             val book = mRealm.createObject<Book2>(primaryKeyValue = newId)
@@ -952,7 +964,7 @@ class MainActivity : AppCompatActivity() {
         mRealm.executeTransaction {
             val max = mRealm.where<Book3>().max("id")
             var newId: Long = 0
-            if (max != null) {//nullチェック
+            if (max != null) {
                 newId = max.toLong() + 1
             }
             val book = mRealm.createObject<Book3>(primaryKeyValue = newId)
@@ -965,7 +977,7 @@ class MainActivity : AppCompatActivity() {
         mRealm.executeTransaction {
             val max = mRealm.where<Book4>().max("id")
             var newId: Long = 0
-            if (max != null) {//nullチェック
+            if (max != null) {
                 newId = max.toLong() + 1
             }
             val book = mRealm.createObject<Book4>(primaryKeyValue = newId)
@@ -1096,10 +1108,10 @@ class MainActivity : AppCompatActivity() {
             //supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
 
             R.id.MenuList6 -> {
-                AlertDialog.Builder(this) // FragmentではActivityを取得して生成
+                AlertDialog.Builder(this)
                     .setTitle("初期状態に戻しますか？")
                     .setMessage("(曜日、項目、登録したメニューが\n全て消去されます)")
-                    .setPositiveButton("OK") { _, _ ->
+                    .setPositiveButton("YES") { _, _ ->
                         delete()
                         Toast.makeText(applicationContext, "次回起動時から初期状態に戻ります。", Toast.LENGTH_LONG).show()
                     }
@@ -1112,10 +1124,10 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList7 -> {
-                AlertDialog.Builder(this) // FragmentではActivityを取得して生成
+                AlertDialog.Builder(this)
                     .setTitle("終了しますか？")
                     .setMessage("(入力したメニューは保存されます)")
-                    .setPositiveButton("OK") { _, _ ->
+                    .setPositiveButton("YES") { _, _ ->
                         val stringText11 = editText8.text.toString()
                         create(stringText11)
                         val stringText12 = editText4.text.toString()
