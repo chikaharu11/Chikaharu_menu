@@ -1095,15 +1095,14 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList3 -> {
-                val a = true
-                if (a) {
-                    replaceFragment(fragment4)
-
-                } else {
-                    supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                switch2.setOnCheckedChangeListener { _, isChecked ->
+                    if (isChecked) replaceFragment(fragment4)
+                    else supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
                 }
+                switch2.performClick()
                 return true
             }
+
 
             //supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
 
