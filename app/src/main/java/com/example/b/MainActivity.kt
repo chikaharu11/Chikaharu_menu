@@ -1,9 +1,12 @@
 package com.example.b
 
+import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -16,7 +19,9 @@ import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Runnable {
+
+    private val handler = Handler()
 
     private lateinit var mRealm: Realm
 
@@ -24,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        handler.post(this)
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -466,60 +472,83 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        fun hideKeyboard() {
+            val view = currentFocus
+            if (view != null) {
+                val manager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+                manager.hideSoftInputFromWindow(view.windowToken, 0)
+            }
+        }
+
 
         editText8.setOnLongClickListener {
+            run()
+            hideKeyboard()
             spinner1.performClick()
             true
         }
         editText4.setOnLongClickListener {
+            hideKeyboard()
             spinner4.performClick()
             true
         }
         editText.setOnLongClickListener {
+            hideKeyboard()
             spinner3.performClick()
             true
         }
         editText10.setOnLongClickListener {
+            hideKeyboard()
             spinner7.performClick()
             true
         }
         editText11.setOnLongClickListener {
+            hideKeyboard()
             spinner6.performClick()
             true
         }
         editText12.setOnLongClickListener {
+            hideKeyboard()
             spinner2.performClick()
             true
         }
         editText13.setOnLongClickListener {
+            hideKeyboard()
             spinner5.performClick()
             true
         }
         editText9.setOnLongClickListener {
+            hideKeyboard()
             spinnerB.performClick()
             true
         }
         editText7.setOnLongClickListener {
+            hideKeyboard()
             spinnerF.performClick()
             true
         }
         editText14.setOnLongClickListener {
+            hideKeyboard()
             spinnerG.performClick()
             true
         }
         editText15.setOnLongClickListener {
+            hideKeyboard()
             spinnerD.performClick()
             true
         }
         editText16.setOnLongClickListener {
+            hideKeyboard()
             spinnerE.performClick()
             true
         }
         editText17.setOnLongClickListener {
+            hideKeyboard()
             spinnerC.performClick()
             true
         }
         editText18.setOnLongClickListener {
+            hideKeyboard()
             spinnerA.performClick()
             true
         }
@@ -859,62 +888,80 @@ class MainActivity : AppCompatActivity() {
         }
 
         editText8n.setOnLongClickListener {
+            hideKeyboard()
             spinner1n.performClick()
             true
         }
         editText4n.setOnLongClickListener {
+            hideKeyboard()
             spinner4n.performClick()
             true
         }
         editTextn.setOnLongClickListener {
+            hideKeyboard()
             spinner3n.performClick()
             true
         }
         editText10n.setOnLongClickListener {
+            hideKeyboard()
             spinner7n.performClick()
             true
         }
         editText11n.setOnLongClickListener {
+            hideKeyboard()
             spinner6n.performClick()
             true
         }
         editText12n.setOnLongClickListener {
+            hideKeyboard()
             spinner2n.performClick()
             true
         }
         editText13n.setOnLongClickListener {
+            hideKeyboard()
             spinner5n.performClick()
             true
         }
         editText9n.setOnLongClickListener {
+            hideKeyboard()
             spinnerBn.performClick()
             true
         }
         editText7n.setOnLongClickListener {
+            hideKeyboard()
             spinnerFn.performClick()
             true
         }
         editText14n.setOnLongClickListener {
+            hideKeyboard()
             spinnerGn.performClick()
             true
         }
         editText15n.setOnLongClickListener {
+            hideKeyboard()
             spinnerDn.performClick()
             true
         }
         editText16n.setOnLongClickListener {
+            hideKeyboard()
             spinnerEn.performClick()
             true
         }
         editText17n.setOnLongClickListener {
+            hideKeyboard()
             spinnerCn.performClick()
             true
         }
         editText18n.setOnLongClickListener {
+            hideKeyboard()
             spinnerAn.performClick()
             true
         }
 
+    }
+
+    override fun run() {
+        handler.postDelayed(this, 5000)
     }
 
     override fun onBackPressed() {
@@ -1102,9 +1149,7 @@ class MainActivity : AppCompatActivity() {
                 switch2.performClick()
                 return true
             }
-
-
-            //supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            
 
             R.id.MenuList6 -> {
                 AlertDialog.Builder(this)
