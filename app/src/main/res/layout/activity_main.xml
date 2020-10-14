@@ -811,64 +811,65 @@
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/editText7n"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+        app:layout_constraintBottom_toTopOf="@+id/editText4n"
+        app:layout_constraintTop_toBottomOf="@+id/editText8"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/editText7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText15n" />
+        app:layout_constraintBottom_toTopOf="@+id/editText13n"
+        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/editText15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText16n" />
+        app:layout_constraintBottom_toTopOf="@+id/editTextn"
+        app:layout_constraintTop_toBottomOf="@+id/editText13"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/editText16"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText18n" />
+        app:layout_constraintBottom_toTopOf="@+id/editText11n"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/editText18"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText17n" />
+        app:layout_constraintBottom_toTopOf="@+id/editText10n"
+        app:layout_constraintTop_toBottomOf="@+id/editText11"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
-        app:layout_constraintBottom_toTopOf="@+id/editText17"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText14n" />
+        app:layout_constraintBottom_toTopOf="@+id/editText12n"
+        app:layout_constraintTop_toBottomOf="@+id/editText10"
+        tools:ignore="MissingConstraints" />
 
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText14" />
+        app:layout_constraintTop_toBottomOf="@+id/editText12"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/editText8n"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <FrameLayout
         android:id="@+id/container"
@@ -879,7 +880,8 @@
             android:id="@+id/switch2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
     </FrameLayout>
 
 
