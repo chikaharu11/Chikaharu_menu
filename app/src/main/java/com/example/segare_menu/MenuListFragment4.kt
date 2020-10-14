@@ -1,4 +1,4 @@
-package com.example.b
+package com.example.segare_menu
 
 import android.os.Bundle
 import android.view.LayoutInflater

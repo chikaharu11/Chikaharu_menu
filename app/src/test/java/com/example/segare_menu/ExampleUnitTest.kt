@@ -1,4 +1,4 @@
-package com.example.b
+package com.example.segare_menu
 
 import org.junit.Test
 
