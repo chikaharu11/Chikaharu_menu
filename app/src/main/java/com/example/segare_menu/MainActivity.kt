@@ -19,7 +19,7 @@ import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity(), Runnable {
+class MainActivity : AppCompatActivity() {
 
     private val handler = Handler()
 
@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity(), Runnable {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        handler.post(this)
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -482,74 +481,73 @@ class MainActivity : AppCompatActivity(), Runnable {
 
 
         editText8.setOnLongClickListener {
-            run()
             hideKeyboard()
-            spinner1.performClick()
+            handler.postDelayed({ spinner1.performClick() }, 200)
             true
         }
         editText4.setOnLongClickListener {
             hideKeyboard()
-            spinner4.performClick()
+            handler.postDelayed({ spinner4.performClick() }, 200)
             true
         }
         editText.setOnLongClickListener {
             hideKeyboard()
-            spinner3.performClick()
+            handler.postDelayed({ spinner3.performClick() }, 200)
             true
         }
         editText10.setOnLongClickListener {
             hideKeyboard()
-            spinner7.performClick()
+            handler.postDelayed({ spinner7.performClick() }, 200)
             true
         }
         editText11.setOnLongClickListener {
             hideKeyboard()
-            spinner6.performClick()
+            handler.postDelayed({ spinner6.performClick() }, 200)
             true
         }
         editText12.setOnLongClickListener {
             hideKeyboard()
-            spinner2.performClick()
+            handler.postDelayed({ spinner2.performClick() }, 200)
             true
         }
         editText13.setOnLongClickListener {
             hideKeyboard()
-            spinner5.performClick()
+            handler.postDelayed({ spinner5.performClick() }, 200)
             true
         }
         editText9.setOnLongClickListener {
             hideKeyboard()
-            spinnerB.performClick()
+            handler.postDelayed({ spinnerB.performClick() }, 200)
             true
         }
         editText7.setOnLongClickListener {
             hideKeyboard()
-            spinnerF.performClick()
+            handler.postDelayed({ spinnerF.performClick() }, 200)
             true
         }
         editText14.setOnLongClickListener {
             hideKeyboard()
-            spinnerG.performClick()
+            handler.postDelayed({ spinnerG.performClick() }, 200)
             true
         }
         editText15.setOnLongClickListener {
             hideKeyboard()
-            spinnerD.performClick()
+            handler.postDelayed({ spinnerD.performClick() }, 200)
             true
         }
         editText16.setOnLongClickListener {
             hideKeyboard()
-            spinnerE.performClick()
+            handler.postDelayed({ spinnerE.performClick() }, 200)
             true
         }
         editText17.setOnLongClickListener {
             hideKeyboard()
-            spinnerC.performClick()
+            handler.postDelayed({ spinnerC.performClick() }, 200)
             true
         }
         editText18.setOnLongClickListener {
             hideKeyboard()
-            spinnerA.performClick()
+            handler.postDelayed({ spinnerA.performClick() }, 200)
             true
         }
 
@@ -889,79 +887,75 @@ class MainActivity : AppCompatActivity(), Runnable {
 
         editText8n.setOnLongClickListener {
             hideKeyboard()
-            spinner1n.performClick()
+            handler.postDelayed({ spinner1n.performClick() }, 200)
             true
         }
         editText4n.setOnLongClickListener {
             hideKeyboard()
-            spinner4n.performClick()
+            handler.postDelayed({ spinner4n.performClick() }, 200)
             true
         }
         editTextn.setOnLongClickListener {
             hideKeyboard()
-            spinner3n.performClick()
+            handler.postDelayed({ spinner3n.performClick() }, 200)
             true
         }
         editText10n.setOnLongClickListener {
             hideKeyboard()
-            spinner7n.performClick()
+            handler.postDelayed({ spinner7n.performClick() }, 200)
             true
         }
         editText11n.setOnLongClickListener {
             hideKeyboard()
-            spinner6n.performClick()
+            handler.postDelayed({ spinner6n.performClick() }, 200)
             true
         }
         editText12n.setOnLongClickListener {
             hideKeyboard()
-            spinner2n.performClick()
+            handler.postDelayed({ spinner2n.performClick() }, 200)
             true
         }
         editText13n.setOnLongClickListener {
             hideKeyboard()
-            spinner5n.performClick()
+            handler.postDelayed({ spinner5n.performClick() }, 200)
             true
         }
         editText9n.setOnLongClickListener {
             hideKeyboard()
-            spinnerBn.performClick()
+            handler.postDelayed({ spinnerBn.performClick() }, 200)
             true
         }
         editText7n.setOnLongClickListener {
             hideKeyboard()
-            spinnerFn.performClick()
+            handler.postDelayed({ spinnerFn.performClick() }, 200)
             true
         }
         editText14n.setOnLongClickListener {
             hideKeyboard()
-            spinnerGn.performClick()
+            handler.postDelayed({ spinnerGn.performClick() }, 200)
             true
         }
         editText15n.setOnLongClickListener {
             hideKeyboard()
-            spinnerDn.performClick()
+            handler.postDelayed({ spinnerDn.performClick() }, 200)
             true
         }
         editText16n.setOnLongClickListener {
             hideKeyboard()
-            spinnerEn.performClick()
+            handler.postDelayed({ spinnerEn.performClick() }, 200)
             true
         }
         editText17n.setOnLongClickListener {
             hideKeyboard()
-            spinnerCn.performClick()
+            handler.postDelayed({ spinnerCn.performClick() }, 200)
             true
         }
         editText18n.setOnLongClickListener {
             hideKeyboard()
-            spinnerAn.performClick()
+            handler.postDelayed({ spinnerAn.performClick() }, 200)
             true
         }
 
-    }
-
-    override fun run() {
-        handler.postDelayed(this, 5000)
     }
 
     override fun onBackPressed() {
