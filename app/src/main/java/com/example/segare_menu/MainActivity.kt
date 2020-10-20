@@ -94,7 +94,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val cuisines = mutableSetOf(
+        val cuisine1 = mutableSetOf(
 
             "",
             "ハンバーグ",
@@ -150,19 +150,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         if (item5 == true) {
-            cuisines.clear()
+            cuisine1.clear()
         }
 
-        val getcuisines = mRealm.where<Book>().findAll()
+        val getCuisine1 = mRealm.where<Book>().findAll()
 
 
-        for( i in getcuisines )
-        if (getcuisines != null) {
-            cuisines.add(i.name)
+        for( i in getCuisine1 )
+        if (getCuisine1 != null) {
+            cuisine1.add(i.name)
         }
 
 
-        val spinnerItems = cuisines.sorted()
+        val spinnerItems = cuisine1.sorted()
 
         val adapter = ArrayAdapter(
             applicationContext,
@@ -307,7 +307,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val clumsiness = mutableSetOf(
+        val cuisine2 = mutableSetOf(
 
             "",
             "生野菜",
@@ -337,15 +337,19 @@ class MainActivity : AppCompatActivity() {
             "コーンスープ"
         )
 
-        val getclumsiness = mRealm.where<Book2>().findAll()
+         if (item5 == true) {
+            cuisine2.clear()
+        }
+
+        val getCuisine2 = mRealm.where<Book2>().findAll()
 
 
-        for( i in getclumsiness )
-            if (getclumsiness != null) {
-                clumsiness.add(i.name)
+        for( i in getCuisine2 )
+            if (getCuisine2 != null) {
+                cuisine2.add(i.name)
             }
 
-        val spinnerItems2 = clumsiness.sorted()
+        val spinnerItems2 = cuisine2.sorted()
 
         val adapter2 = ArrayAdapter(
             applicationContext,
@@ -563,7 +567,7 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
-        val lunches = mutableSetOf(
+        val cuisine3 = mutableSetOf(
 
             "",
             "皿うどん",
@@ -582,17 +586,20 @@ class MainActivity : AppCompatActivity() {
             "ビーフン炒め"
         )
 
+        if (item5 == true) {
+            cuisine3.clear()
+        }
 
-        val getlunches = mRealm.where<Book3>().findAll()
+        val getCuisine3 = mRealm.where<Book3>().findAll()
 
 
-        for( i in getlunches )
-            if (getlunches != null) {
-                lunches.add(i.name)
+        for( i in getCuisine3 )
+            if (getCuisine3 != null) {
+                cuisine3.add(i.name)
             }
 
 
-        val spinnerItems3 = lunches.sorted()
+        val spinnerItems3 = cuisine3.sorted()
 
         val adapter3 = ArrayAdapter(
             applicationContext,
@@ -735,7 +742,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val baboon = mutableSetOf(
+        val cuisine4 = mutableSetOf(
 
             "",
             "生野菜",
@@ -752,16 +759,20 @@ class MainActivity : AppCompatActivity() {
             "レンジ豚もやし"
         )
 
-        val getbaboon = mRealm.where<Book4>().findAll()
+        if (item5 == true) {
+            cuisine4.clear()
+        }
+
+        val getCuisine4 = mRealm.where<Book4>().findAll()
 
 
-        for( i in getbaboon )
-            if (getbaboon != null) {
-                baboon.add(i.name)
+        for( i in getCuisine4 )
+            if (getCuisine4 != null) {
+                cuisine4.add(i.name)
             }
 
 
-        val spinnerItems4 = baboon.sorted()
+        val spinnerItems4 = cuisine4.sorted()
 
         val adapter4 = ArrayAdapter(
             applicationContext,
@@ -1162,11 +1173,11 @@ class MainActivity : AppCompatActivity() {
                         val item5 = mRealm.createObject<Book6>(4)
                         val a5 = true
                         item5.boolean = a5
-                        Toast.makeText(applicationContext, "次回起動時から初期メニューを表示しません。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "次回起動時から表示しません。", Toast.LENGTH_LONG).show()
                     }
                     else mRealm.executeTransaction {
                         mRealm.where(Book6::class.java).findAll().deleteLastFromRealm()
-                        Toast.makeText(applicationContext, "次回起動時から初期メニューを表示します。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "次回起動時から表示します。", Toast.LENGTH_LONG).show()
                     }
                 }
                 switch3.performClick()

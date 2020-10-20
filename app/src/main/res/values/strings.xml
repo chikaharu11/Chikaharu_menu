@@ -11,11 +11,11 @@
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
-    <string name="menulist1">曜日を変更する</string>
-    <string name="menulist2">項目を変更する</string>
+    <string name="menulist1">曜日の変更</string>
+    <string name="menulist2">項目の変更</string>
     <string name="menulist3">ヘルプ</string>
-    <string name="menulist4">初期メニューの切替え</string>
-    <string name="menulist6">初期状態に戻す</string>
+    <string name="menulist4">初期メニューの設定</string>
+    <string name="menulist6">登録内容のリセット</string>
     <string name="menulist7">保存して終了</string>
     <string name="setsumei">TODO</string>
 </resources>
