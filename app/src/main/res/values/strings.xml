@@ -14,6 +14,7 @@
     <string name="menulist1">曜日を変更する</string>
     <string name="menulist2">項目を変更する</string>
     <string name="menulist3">ヘルプ</string>
+    <string name="menulist4">初期メニューの切替え</string>
     <string name="menulist6">初期状態に戻す</string>
     <string name="menulist7">保存して終了</string>
     <string name="setsumei">TODO</string>

@@ -50,4 +50,5 @@ open class Book6: RealmObject() {
     open var id: Long = 0
     @Required
     open var name : String = ""
+    open var boolean : Boolean = true
 }

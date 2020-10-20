@@ -1,5 +1,6 @@
 package com.example.segare_menu
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
 import android.os.Handler
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mRealm: Realm
 
+    @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
@@ -140,6 +142,16 @@ class MainActivity : AppCompatActivity() {
             "あんかけ卵"
         )
 
+        val item5 = mRealm.where(Book6::class.java).equalTo("id",4.toLong()).findFirst()?.boolean
+
+        val switch = findViewById<Switch>(R.id.switch3)
+        if (item5 != null) {
+            switch.isChecked = item5
+        }
+
+        if (item5 == true) {
+            cuisines.clear()
+        }
 
         val getcuisines = mRealm.where<Book>().findAll()
 
@@ -1141,6 +1153,23 @@ class MainActivity : AppCompatActivity() {
                     else supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
                 }
                 switch2.performClick()
+                return true
+            }
+
+            R.id.MenuList4 -> {
+                switch3.setOnCheckedChangeListener { _, isChecked ->
+                    if (isChecked) mRealm.executeTransaction {
+                        val item5 = mRealm.createObject<Book6>(4)
+                        val a5 = true
+                        item5.boolean = a5
+                        Toast.makeText(applicationContext, "次回起動時から初期メニューを表示しません。", Toast.LENGTH_LONG).show()
+                    }
+                    else mRealm.executeTransaction {
+                        mRealm.where(Book6::class.java).findAll().deleteLastFromRealm()
+                        Toast.makeText(applicationContext, "次回起動時から初期メニューを表示します。", Toast.LENGTH_LONG).show()
+                    }
+                }
+                switch3.performClick()
                 return true
             }
             
