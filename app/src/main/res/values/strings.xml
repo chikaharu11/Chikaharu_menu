@@ -15,7 +15,9 @@
     <string name="menulist2">項目の変更</string>
     <string name="menulist3">ヘルプ</string>
     <string name="menulist4">初期メニューの設定</string>
+    <string name="menulist5">登録内容の編集</string>
     <string name="menulist6">登録内容のリセット</string>
     <string name="menulist7">保存して終了</string>
     <string name="setsumei">TODO</string>
+
 </resources>
