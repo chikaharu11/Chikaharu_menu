@@ -1183,6 +1183,21 @@ class MainActivity : AppCompatActivity() {
                 switch3.performClick()
                 return true
             }
+
+            R.id.MenuList5 -> {
+                val builder = android.app.AlertDialog.Builder(this)
+                val inflater = layoutInflater
+                val signinView3 = inflater.inflate(R.layout.dialog_item2, null)
+
+                builder.setView(signinView3)
+                    .setTitle("編集")
+                    .setNegativeButton("戻る") { _, _ ->
+
+                    }
+
+                    .show()
+                return true
+            }
             
 
             R.id.MenuList6 -> {
