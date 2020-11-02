@@ -18,6 +18,34 @@ import io.realm.RealmConfiguration
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.editText
+import kotlinx.android.synthetic.main.activity_main.editText10
+import kotlinx.android.synthetic.main.activity_main.editText10n
+import kotlinx.android.synthetic.main.activity_main.editText11
+import kotlinx.android.synthetic.main.activity_main.editText11n
+import kotlinx.android.synthetic.main.activity_main.editText12
+import kotlinx.android.synthetic.main.activity_main.editText12n
+import kotlinx.android.synthetic.main.activity_main.editText13
+import kotlinx.android.synthetic.main.activity_main.editText13n
+import kotlinx.android.synthetic.main.activity_main.editText14
+import kotlinx.android.synthetic.main.activity_main.editText14n
+import kotlinx.android.synthetic.main.activity_main.editText15
+import kotlinx.android.synthetic.main.activity_main.editText15n
+import kotlinx.android.synthetic.main.activity_main.editText16
+import kotlinx.android.synthetic.main.activity_main.editText16n
+import kotlinx.android.synthetic.main.activity_main.editText17
+import kotlinx.android.synthetic.main.activity_main.editText17n
+import kotlinx.android.synthetic.main.activity_main.editText18
+import kotlinx.android.synthetic.main.activity_main.editText18n
+import kotlinx.android.synthetic.main.activity_main.editText4
+import kotlinx.android.synthetic.main.activity_main.editText4n
+import kotlinx.android.synthetic.main.activity_main.editText7
+import kotlinx.android.synthetic.main.activity_main.editText7n
+import kotlinx.android.synthetic.main.activity_main.editText8
+import kotlinx.android.synthetic.main.activity_main.editText8n
+import kotlinx.android.synthetic.main.activity_main.editText9
+import kotlinx.android.synthetic.main.activity_main.editText9n
+import kotlinx.android.synthetic.main.activity_main.editTextn
 
 
 class MainActivity : AppCompatActivity() {
@@ -979,6 +1007,274 @@ class MainActivity : AppCompatActivity() {
             true
         }
 
+        val menuList1 = mutableSetOf(
+            ""
+        )
+
+        val inMenuList1 = mRealm.where<Book>().findAll()
+
+
+        for( i in inMenuList1 )
+            if (inMenuList1 != null) {
+                menuList1.add(i.name)
+            }
+
+
+        val spinnerItems5 = menuList1.sorted()
+
+        val adapter5 = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, spinnerItems5
+        )
+
+        adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+        spinner1a.adapter = adapter5
+
+        spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?, position: Int, id: Long
+            ) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                mRealm.executeTransaction { mRealm.where<Book>().equalTo("name",item).findAll().deleteAllFromRealm() }
+
+                val menuList1a = mutableSetOf(
+                    ""
+                )
+
+                val inMenuList1a = mRealm.where<Book>().findAll()
+
+
+                for( i in inMenuList1a )
+                    if (inMenuList1a != null) {
+                        menuList1a.add(i.name)
+                    }
+
+
+                val spinnerItems5a = menuList1a.sorted()
+
+                val adapter5a = ArrayAdapter(
+                    applicationContext,
+                    android.R.layout.simple_spinner_item, spinnerItems5a
+                )
+
+                adapter5a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+                spinner1a.adapter = adapter5a
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        val menuList2 = mutableSetOf(
+            ""
+        )
+
+        val inMenuList2 = mRealm.where<Book2>().findAll()
+
+
+        for( i in inMenuList2 )
+            if (inMenuList2 != null) {
+                menuList2.add(i.name)
+            }
+
+
+        val spinnerItems6 = menuList2.sorted()
+
+        val adapter6 = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, spinnerItems6
+        )
+
+        adapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+        spinner2a.adapter = adapter6
+
+        spinner2a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?, position: Int, id: Long
+            ) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                mRealm.executeTransaction { mRealm.where<Book2>().equalTo("name",item).findAll().deleteAllFromRealm() }
+
+                val menuList2a = mutableSetOf(
+                    ""
+                )
+
+                val inMenuList2a = mRealm.where<Book2>().findAll()
+
+
+                for( i in inMenuList2a )
+                    if (inMenuList2a != null) {
+                        menuList2a.add(i.name)
+                    }
+
+
+                val spinnerItems6a = menuList2a.sorted()
+
+                val adapter6a = ArrayAdapter(
+                    applicationContext,
+                    android.R.layout.simple_spinner_item, spinnerItems6a
+                )
+
+                adapter6a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+                spinner2a.adapter = adapter6a
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        val menuList3 = mutableSetOf(
+            ""
+        )
+
+        val inMenuList3 = mRealm.where<Book3>().findAll()
+
+
+        for( i in inMenuList3 )
+            if (inMenuList3 != null) {
+                menuList3.add(i.name)
+            }
+
+
+        val spinnerItems7 = menuList3.sorted()
+
+        val adapter7 = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, spinnerItems7
+        )
+
+        adapter7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+        spinner3a.adapter = adapter7
+
+        spinner3a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?, position: Int, id: Long
+            ) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                mRealm.executeTransaction { mRealm.where<Book3>().equalTo("name",item).findAll().deleteAllFromRealm() }
+
+                val menuList3a = mutableSetOf(
+                    ""
+                )
+
+                val inMenuList3a = mRealm.where<Book3>().findAll()
+
+
+                for( i in inMenuList3a )
+                    if (inMenuList3a != null) {
+                        menuList3a.add(i.name)
+                    }
+
+
+                val spinnerItems7a = menuList3a.sorted()
+
+                val adapter7a = ArrayAdapter(
+                    applicationContext,
+                    android.R.layout.simple_spinner_item, spinnerItems7a
+                )
+
+                adapter7a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+                spinner3a.adapter = adapter7a
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        val menuList4 = mutableSetOf(
+            ""
+        )
+
+        val inMenuList4 = mRealm.where<Book4>().findAll()
+
+
+        for( i in inMenuList4 )
+            if (inMenuList4 != null) {
+                menuList4.add(i.name)
+            }
+
+
+        val spinnerItems8 = menuList4.sorted()
+
+        val adapter8 = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, spinnerItems8
+        )
+
+        adapter8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+        spinner4a.adapter = adapter8
+
+        spinner4a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?, position: Int, id: Long
+            ) {
+                val spinnerParent = parent as Spinner
+                val item = spinnerParent.selectedItem as String
+
+                mRealm.executeTransaction { mRealm.where<Book4>().equalTo("name",item).findAll().deleteAllFromRealm() }
+
+                val menuList4a = mutableSetOf(
+                    ""
+                )
+
+                val inMenuList4a = mRealm.where<Book4>().findAll()
+
+
+                for( i in inMenuList4a )
+                    if (inMenuList4a != null) {
+                        menuList4a.add(i.name)
+                    }
+
+
+                val spinnerItems8a = menuList4a.sorted()
+
+                val adapter8a = ArrayAdapter(
+                    applicationContext,
+                    android.R.layout.simple_spinner_item, spinnerItems8a
+                )
+
+                adapter8a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+                spinner4a.adapter = adapter8a
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
     }
 
     override fun onBackPressed() {
@@ -1184,18 +1480,23 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
 
-            R.id.MenuList5 -> {
-                val builder = android.app.AlertDialog.Builder(this)
-                val inflater = layoutInflater
-                val signinView3 = inflater.inflate(R.layout.dialog_item2, null)
+            R.id.MenuList5a -> {
+                spinner1a.performClick()
+                return true
+            }
 
-                builder.setView(signinView3)
-                    .setTitle("編集")
-                    .setNegativeButton("戻る") { _, _ ->
+            R.id.MenuList5b -> {
+                spinner2a.performClick()
+                return true
+            }
 
-                    }
+            R.id.MenuList5c -> {
+                spinner3a.performClick()
+                return true
+            }
 
-                    .show()
+            R.id.MenuList5d -> {
+                spinner4a.performClick()
                 return true
             }
             

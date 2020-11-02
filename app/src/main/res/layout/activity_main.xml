@@ -251,6 +251,50 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <Spinner
+        android:id="@+id/spinner1a"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner2a"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner3a"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner4a"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/editText8n"
         android:layout_width="wrap_content"
