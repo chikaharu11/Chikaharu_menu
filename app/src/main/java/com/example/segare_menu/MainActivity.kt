@@ -18,34 +18,6 @@ import io.realm.RealmConfiguration
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_main.editText
-import kotlinx.android.synthetic.main.activity_main.editText10
-import kotlinx.android.synthetic.main.activity_main.editText10n
-import kotlinx.android.synthetic.main.activity_main.editText11
-import kotlinx.android.synthetic.main.activity_main.editText11n
-import kotlinx.android.synthetic.main.activity_main.editText12
-import kotlinx.android.synthetic.main.activity_main.editText12n
-import kotlinx.android.synthetic.main.activity_main.editText13
-import kotlinx.android.synthetic.main.activity_main.editText13n
-import kotlinx.android.synthetic.main.activity_main.editText14
-import kotlinx.android.synthetic.main.activity_main.editText14n
-import kotlinx.android.synthetic.main.activity_main.editText15
-import kotlinx.android.synthetic.main.activity_main.editText15n
-import kotlinx.android.synthetic.main.activity_main.editText16
-import kotlinx.android.synthetic.main.activity_main.editText16n
-import kotlinx.android.synthetic.main.activity_main.editText17
-import kotlinx.android.synthetic.main.activity_main.editText17n
-import kotlinx.android.synthetic.main.activity_main.editText18
-import kotlinx.android.synthetic.main.activity_main.editText18n
-import kotlinx.android.synthetic.main.activity_main.editText4
-import kotlinx.android.synthetic.main.activity_main.editText4n
-import kotlinx.android.synthetic.main.activity_main.editText7
-import kotlinx.android.synthetic.main.activity_main.editText7n
-import kotlinx.android.synthetic.main.activity_main.editText8
-import kotlinx.android.synthetic.main.activity_main.editText8n
-import kotlinx.android.synthetic.main.activity_main.editText9
-import kotlinx.android.synthetic.main.activity_main.editText9n
-import kotlinx.android.synthetic.main.activity_main.editTextn
 
 
 class MainActivity : AppCompatActivity() {
@@ -1280,6 +1252,7 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setTitle("終了しますか？")
+            .setMessage("(入力したメニューは保存されません)")
             .setPositiveButton("YES") { _, _ ->
                 finish()
             }
@@ -1360,6 +1333,34 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
         menuInflater.inflate(R.menu.menu_options_menu_list, menu)
+
+        val menu1 = menu.findItem(R.id.MenuList5c)
+        val item1a = mRealm.where(Book6::class.java).equalTo("id",0.toLong()).findFirst()?.name
+
+        if (item1a != null) {
+            menu1.title = item1a + "の編集"
+        }
+
+        val menu2 = menu.findItem(R.id.MenuList5d)
+        val item2a = mRealm.where(Book6::class.java).equalTo("id",1.toLong()).findFirst()?.name
+
+        if (item2a != null) {
+            menu2.title = item2a + "の編集"
+        }
+
+        val menu3 = menu.findItem(R.id.MenuList5a)
+        val item3a = mRealm.where(Book6::class.java).equalTo("id",2.toLong()).findFirst()?.name
+
+        if (item3a != null) {
+            menu3.title = item3a + "の編集"
+        }
+
+        val menu4 = menu.findItem(R.id.MenuList5b)
+        val item4a = mRealm.where(Book6::class.java).equalTo("id",3.toLong()).findFirst()?.name
+
+        if (item4a != null) {
+            menu4.title = item4a + "の編集"
+        }
 
         return super.onCreateOptionsMenu(menu)
     }

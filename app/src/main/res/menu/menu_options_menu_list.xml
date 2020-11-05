@@ -18,11 +18,16 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/help"
         android:title="@string/menulist3" />
+    
+    <item
+        android:id="@+id/MenuList5c"
+        app:showAsAction="never"
+        android:title="@string/menulist5c" />
 
     <item
-        android:id="@+id/MenuList4"
+        android:id="@+id/MenuList5d"
         app:showAsAction="never"
-        android:title="@string/menulist4" />
+        android:title="@string/menulist5d" />
 
     <item
         android:id="@+id/MenuList5a"
@@ -35,14 +40,9 @@
         android:title="@string/menulist5b" />
 
     <item
-        android:id="@+id/MenuList5c"
+        android:id="@+id/MenuList4"
         app:showAsAction="never"
-        android:title="@string/menulist5c" />
-
-    <item
-        android:id="@+id/MenuList5d"
-        app:showAsAction="never"
-        android:title="@string/menulist5d" />
+        android:title="@string/menulist4" />
 
     <item
         android:id="@+id/MenuList6"
