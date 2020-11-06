@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
         val item2 = mRealm.where(Book6::class.java).equalTo("id",1.toLong()).findFirst()?.name
         val item3 = mRealm.where(Book6::class.java).equalTo("id",2.toLong()).findFirst()?.name
         val item4 = mRealm.where(Book6::class.java).equalTo("id",3.toLong()).findFirst()?.name
+        val item5 = mRealm.where(Book6::class.java).equalTo("id",4.toLong()).findFirst()?.name
 
         if(item1 != null) {
             editText8n.hint = item1
@@ -90,6 +91,7 @@ class MainActivity : AppCompatActivity() {
             editText18.hint = item4
             editText17.hint = item4
             editText14.hint = item4
+            supportActionBar?.title = item5
         }
 
 
@@ -142,14 +144,14 @@ class MainActivity : AppCompatActivity() {
             "あんかけ卵"
         )
 
-        val item5 = mRealm.where(Book6::class.java).equalTo("id",4.toLong()).findFirst()?.boolean
+        val item6 = mRealm.where(Book6::class.java).equalTo("id",5.toLong()).findFirst()?.boolean
 
         val switch = findViewById<Switch>(R.id.switch3)
-        if (item5 != null) {
-            switch.isChecked = item5
+        if (item6 != null) {
+            switch.isChecked = item6
         }
 
-        if (item5 == true) {
+        if (item6 == true) {
             cuisine1.clear()
         }
 
@@ -337,7 +339,7 @@ class MainActivity : AppCompatActivity() {
             "コーンスープ"
         )
 
-         if (item5 == true) {
+         if (item6 == true) {
             cuisine2.clear()
         }
 
@@ -586,7 +588,7 @@ class MainActivity : AppCompatActivity() {
             "ビーフン炒め"
         )
 
-        if (item5 == true) {
+        if (item6 == true) {
             cuisine3.clear()
         }
 
@@ -759,7 +761,7 @@ class MainActivity : AppCompatActivity() {
             "レンジ豚もやし"
         )
 
-        if (item5 == true) {
+        if (item6 == true) {
             cuisine4.clear()
         }
 
@@ -1386,7 +1388,6 @@ class MainActivity : AppCompatActivity() {
                 val signinView = inflater.inflate(R.layout.dialog_week, null)
 
                 builder.setView(signinView)
-                    .setTitle("曜日の変更")
                     .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
                             mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
@@ -1411,6 +1412,25 @@ class MainActivity : AppCompatActivity() {
                             val week7 = mRealm.createObject<Book5>(6)
                             val a7 = signinView.findViewById<EditText>(R.id.textView_7).text.toString()
                             week7.name = a7
+                        }
+
+                        mRealm.executeTransaction {
+                            mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
+                            val item1 = mRealm.createObject<Book6>(0)
+                            val a = signinView.findViewById<EditText>(R.id.editText8n).text.toString()
+                            item1.name = a
+                            val item2 = mRealm.createObject<Book6>(1)
+                            val a2 = signinView.findViewById<EditText>(R.id.editText9n).text.toString()
+                            item2.name = a2
+                            val item3 = mRealm.createObject<Book6>(2)
+                            val a3 = signinView.findViewById<EditText>(R.id.editText8).text.toString()
+                            item3.name = a3
+                            val item4 = mRealm.createObject<Book6>(3)
+                            val a4 = signinView.findViewById<EditText>(R.id.editText9).text.toString()
+                            item4.name = a4
+                            val item5 = mRealm.createObject<Book6>(4)
+                            val a5 = signinView.findViewById<EditText>(R.id.textView_8).text.toString()
+                            item5.name = a5
                         }
                         Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG).show()
                     }
@@ -1467,9 +1487,9 @@ class MainActivity : AppCompatActivity() {
             R.id.MenuList4 -> {
                 switch3.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) mRealm.executeTransaction {
-                        val item5 = mRealm.createObject<Book6>(4)
-                        val a5 = true
-                        item5.boolean = a5
+                        val item6 = mRealm.createObject<Book6>(5)
+                        val a6 = true
+                        item6.boolean = a6
                         Toast.makeText(applicationContext, "次回起動時から表示しません。", Toast.LENGTH_LONG).show()
                     }
                     else mRealm.executeTransaction {
