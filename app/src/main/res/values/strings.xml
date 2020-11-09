@@ -12,8 +12,7 @@
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
-    <string name="menulist1">曜日の編集</string>
-    <string name="menulist2">項目の編集</string>
+    <string name="menulist1">画面の編集</string>
     <string name="menulist3">ヘルプ</string>
     <string name="menulist4">初期メニュー表示切替</string>
     <string name="menulist5a">夜メインの編集</string>

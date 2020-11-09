@@ -2,6 +2,9 @@ package com.example.segare_menu
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Canvas
+import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.view.Menu
@@ -153,6 +156,7 @@ class MainActivity : AppCompatActivity() {
 
         if (item6 == true) {
             cuisine1.clear()
+            cuisine1.add("")
         }
 
         val getCuisine1 = mRealm.where<Book>().findAll()
@@ -341,6 +345,7 @@ class MainActivity : AppCompatActivity() {
 
          if (item6 == true) {
             cuisine2.clear()
+             cuisine2.add("")
         }
 
         val getCuisine2 = mRealm.where<Book2>().findAll()
@@ -590,6 +595,7 @@ class MainActivity : AppCompatActivity() {
 
         if (item6 == true) {
             cuisine3.clear()
+            cuisine3.add("")
         }
 
         val getCuisine3 = mRealm.where<Book3>().findAll()
@@ -763,6 +769,7 @@ class MainActivity : AppCompatActivity() {
 
         if (item6 == true) {
             cuisine4.clear()
+            cuisine4.add("")
         }
 
         val getCuisine4 = mRealm.where<Book4>().findAll()
@@ -1251,6 +1258,19 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private fun takeScreenshotOfView(view: View, height: Int, width: Int): Bitmap {
+        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        val bgDrawable = view.background
+        if (bgDrawable != null) {
+            bgDrawable.draw(canvas)
+        } else {
+            canvas.drawColor(Color.WHITE)
+        }
+        view.draw(canvas)
+        return bitmap
+    }
+
     override fun onBackPressed() {
         AlertDialog.Builder(this)
             .setTitle("終了しますか？")
@@ -1442,39 +1462,6 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
 
-            R.id.MenuList2 -> {
-                val builder = android.app.AlertDialog.Builder(this)
-                val inflater = layoutInflater
-                val signinView2 = inflater.inflate(R.layout.dialog_item, null)
-
-                builder.setView(signinView2)
-                    .setTitle("項目の変更")
-                    .setPositiveButton("変更する") { _, _ ->
-                        mRealm.executeTransaction {
-                            mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
-                            val item1 = mRealm.createObject<Book6>(0)
-                            val a = signinView2.findViewById<EditText>(R.id.editText8n).text.toString()
-                            item1.name = a
-                            val item2 = mRealm.createObject<Book6>(1)
-                            val a2 = signinView2.findViewById<EditText>(R.id.editText9n).text.toString()
-                            item2.name = a2
-                            val item3 = mRealm.createObject<Book6>(2)
-                            val a3 = signinView2.findViewById<EditText>(R.id.editText8).text.toString()
-                            item3.name = a3
-                            val item4 = mRealm.createObject<Book6>(3)
-                            val a4 = signinView2.findViewById<EditText>(R.id.editText9).text.toString()
-                            item4.name = a4
-                        }
-                        Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG).show()
-                    }
-                    .setNegativeButton("キャンセル") { _, _ ->
-
-                    }
-
-                    .show()
-                return true
-            }
-
             R.id.MenuList3 -> {
                 switch2.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) replaceFragment(fragment4)
@@ -1502,7 +1489,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList5a -> {
-                spinner1a.performClick()
+                takeScreenshotOfView(container,100,100)
                 return true
             }
 
