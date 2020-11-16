@@ -1341,10 +1341,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    /*private fun read(): RealmResults<Book> {
-        return mRealm.where(Book::class.java).findAll()
-    }
-*/
+
     private fun delete() {
         mRealm.executeTransaction {
             mRealm.deleteAll()
