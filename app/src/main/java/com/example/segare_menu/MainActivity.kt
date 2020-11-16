@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
-import android.graphics.Color
 import android.os.Bundle
+import android.os.Environment
 import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
@@ -21,6 +21,7 @@ import io.realm.RealmConfiguration
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.FileOutputStream
 
 
 class MainActivity : AppCompatActivity() {
@@ -1258,16 +1259,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun takeScreenshotOfView(view: View, height: Int, width: Int): Bitmap {
-        val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+
+    private fun getBitmapFromView(view: View):Bitmap {
+        val path = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.absolutePath + "/image.png"
+        val stream = FileOutputStream(path)
+        val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
-        val bgDrawable = view.background
-        if (bgDrawable != null) {
-            bgDrawable.draw(canvas)
-        } else {
-            canvas.drawColor(Color.WHITE)
-        }
         view.draw(canvas)
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+        stream.close()
         return bitmap
     }
 
@@ -1462,6 +1462,11 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
 
+            R.id.MenuList2 -> {
+                getBitmapFromView(allView)
+                return true
+            }
+
             R.id.MenuList3 -> {
                 switch2.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) replaceFragment(fragment4)
@@ -1489,7 +1494,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList5a -> {
-                takeScreenshotOfView(container,100,100)
+                spinner1a.performClick()
                 return true
             }
 

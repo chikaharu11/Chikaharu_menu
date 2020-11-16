@@ -13,6 +13,7 @@
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
     <string name="menulist1">画面の編集</string>
+    <string name="menulist2">画面保存</string>
     <string name="menulist3">ヘルプ</string>
     <string name="menulist4">初期メニュー表示切替</string>
     <string name="menulist5a">夜メインの編集</string>
@@ -22,9 +23,5 @@
     <string name="menulist6">初期状態に戻す</string>
     <string name="menulist7">保存して終了</string>
     <string name="setsumei">TODO</string>
-    <string name="button">Button</string>
-    <string name="button2">Button2</string>
-    <string name="button3">Button3</string>
-    <string name="button4">Button4</string>
 
 </resources>

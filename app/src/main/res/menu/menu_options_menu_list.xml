@@ -9,6 +9,12 @@
         android:title="@string/menulist1" />
 
     <item
+        android:id="@+id/MenuList2"
+        app:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="@string/menulist2" />
+
+    <item
         android:id="@+id/MenuList3"
         app:showAsAction="ifRoom"
         android:icon="@drawable/help"
