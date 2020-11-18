@@ -22,6 +22,8 @@ import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.FileOutputStream
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -1260,8 +1262,10 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    @SuppressLint("SimpleDateFormat")
     private fun getBitmapFromView(view: View):Bitmap {
-        val path = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.absolutePath + "/image.png"
+        val timeStamp: String = SimpleDateFormat("MM月dd日HH時mm分ss秒").format(Date())
+        val path = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.path + "/" + timeStamp + ".png"
         val stream = FileOutputStream(path)
         val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
