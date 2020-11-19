@@ -4,6 +4,8 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Canvas
+import android.media.AudioAttributes
+import android.media.SoundPool
 import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
@@ -32,11 +34,31 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mRealm: Realm
 
+    private lateinit var soundPool: SoundPool
+
+    private var sound1 = 0
+
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val audioAttributes = AudioAttributes.Builder()
+
+            .setUsage(AudioAttributes.USAGE_GAME)
+
+            .setContentType(AudioAttributes.CONTENT_TYPE_SPEECH)
+            .build()
+
+        soundPool = SoundPool.Builder()
+
+            .setAudioAttributes(audioAttributes)
+
+            .setMaxStreams(10)
+            .build()
+
+        sound1 = soundPool.load(this, R.raw.ta, 1)
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -1272,6 +1294,8 @@ class MainActivity : AppCompatActivity() {
         view.draw(canvas)
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
         stream.close()
+        soundPool.play(sound1, 1.0f, 1.0f, 0, 0, 1.0f)
+        Toast.makeText(applicationContext, "画面を保存しました。", Toast.LENGTH_LONG).show()
         return bitmap
     }
 
@@ -1409,6 +1433,7 @@ class MainActivity : AppCompatActivity() {
                 val signinView = inflater.inflate(R.layout.dialog_week, null)
 
                 builder.setView(signinView)
+                    .setTitle("各項目の名前を変更できます。")
                     .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
                             mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
@@ -1483,11 +1508,11 @@ class MainActivity : AppCompatActivity() {
                         val item6 = mRealm.createObject<Book6>(5)
                         val a6 = true
                         item6.boolean = a6
-                        Toast.makeText(applicationContext, "次回起動時から表示しません。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "次回起動時から初期メニューを\n表示しません。", Toast.LENGTH_LONG).show()
                     }
                     else mRealm.executeTransaction {
                         mRealm.where(Book6::class.java).findAll().deleteLastFromRealm()
-                        Toast.makeText(applicationContext, "次回起動時から表示します。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "次回起動時から初期メニューを\n表示します。", Toast.LENGTH_LONG).show()
                     }
                 }
                 switch3.performClick()
@@ -1518,7 +1543,7 @@ class MainActivity : AppCompatActivity() {
             R.id.MenuList6 -> {
                 AlertDialog.Builder(this)
                     .setTitle("初期状態に戻しますか？")
-                    .setMessage("(曜日、項目、登録したメニューが\n全て消去されます)")
+                    .setMessage("(登録した内容が全て消去されます)")
                     .setPositiveButton("YES") { _, _ ->
                         delete()
                         Toast.makeText(applicationContext, "次回起動時から初期状態に戻ります。", Toast.LENGTH_LONG).show()
@@ -1533,8 +1558,7 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList7 -> {
                 AlertDialog.Builder(this)
-                    .setTitle("終了しますか？")
-                    .setMessage("(入力したメニューは保存されます)")
+                    .setTitle("保存して終了しますか？")
                     .setPositiveButton("YES") { _, _ ->
                         val stringText11 = editText8.text.toString()
                         create(stringText11)
@@ -1596,10 +1620,15 @@ class MainActivity : AppCompatActivity() {
                         val stringText47 = editText14n.text.toString()
                         create4(stringText47)
 
-                        Toast.makeText(applicationContext, "終了しました。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "保存しました。", Toast.LENGTH_LONG).show()
                         finish()
                     }
                     .setNegativeButton("NO") { _, _ ->
+
+                    }
+                    .setNeutralButton("保存しないで終了") { _, _ ->
+                        Toast.makeText(applicationContext, "終了しました。", Toast.LENGTH_LONG).show()
+                        finish()
 
                     }
                     .show()

@@ -20,9 +20,8 @@
         android:inputType="text"
         android:text="@string/mm2"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_8"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -37,9 +36,8 @@
         android:inputType="text"
         android:text="@string/mm1"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -54,9 +52,8 @@
         android:inputType="text"
         android:text="@string/sm1"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -71,9 +68,8 @@
         android:inputType="text"
         android:text="@string/sm2"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText9"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText8n"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_8"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -186,15 +182,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="16dp"
         android:autofillHints=""
         android:background="#00000000"
         android:inputType="text"
         android:text="@string/c0"
-        android:textSize="20sp"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/textView_8"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
