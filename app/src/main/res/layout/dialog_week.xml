@@ -9,7 +9,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/editText8n"
+        android:id="@+id/editText_8n"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -20,12 +20,12 @@
         android:inputType="text"
         android:text="@string/mm2"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_2"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/editText_8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
@@ -36,12 +36,12 @@
         android:inputType="text"
         android:text="@string/mm1"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_3"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/editText_9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="240dp"
@@ -52,12 +52,12 @@
         android:inputType="text"
         android:text="@string/sm1"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText8"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_8"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
-        android:id="@+id/editText9n"
+        android:id="@+id/editText_9n"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="240dp"
@@ -68,7 +68,7 @@
         android:inputType="text"
         android:text="@string/sm2"
         android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/editText8n"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editText_8n"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
 
@@ -191,12 +191,30 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor" />
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        android:visibility="invisible"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView_7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <View
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
         app:layout_constraintBottom_toTopOf="@+id/textView_8"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
         tools:ignore="MissingConstraints" />
 
 

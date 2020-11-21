@@ -221,7 +221,9 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
+                if (editText8.hasFocus()) {
                 editText8.setText(item, TextView.BufferType.NORMAL)
+                }
 
             }
 
@@ -529,6 +531,7 @@ class MainActivity : AppCompatActivity() {
 
 
         editText8.setOnLongClickListener {
+            editText8.requestFocus()
             hideKeyboard()
             handler.postDelayed({ spinner1.performClick() }, 200)
             true
@@ -1433,7 +1436,7 @@ class MainActivity : AppCompatActivity() {
                 val signinView = inflater.inflate(R.layout.dialog_week, null)
 
                 builder.setView(signinView)
-                    .setTitle("各項目の名前を変更できます。")
+                    .setTitle("各項目の名称を変更できます。")
                     .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
                             mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
