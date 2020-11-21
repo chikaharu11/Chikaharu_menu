@@ -204,12 +204,6 @@ class MainActivity : AppCompatActivity() {
 
 
         spinner1.adapter = adapter
-        spinner2.adapter = adapter
-        spinner3.adapter = adapter
-        spinner4.adapter = adapter
-        spinner5.adapter = adapter
-        spinner6.adapter = adapter
-        spinner7.adapter = adapter
 
 
         spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -221,117 +215,15 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                if (editText8.hasFocus()) {
-                editText8.setText(item, TextView.BufferType.NORMAL)
+                when {
+                    editText8.hasFocus() -> editText8.setText(item,TextView.BufferType.NORMAL)
+                    editText4.hasFocus() -> editText4.setText(item,TextView.BufferType.NORMAL)
+                    editText.hasFocus() -> editText.setText(item,TextView.BufferType.NORMAL)
+                    editText10.hasFocus() -> editText10.setText(item,TextView.BufferType.NORMAL)
+                    editText11.hasFocus() -> editText11.setText(item,TextView.BufferType.NORMAL)
+                    editText12.hasFocus() -> editText12.setText(item,TextView.BufferType.NORMAL)
+                    editText13.hasFocus() -> editText13.setText(item,TextView.BufferType.NORMAL)
                 }
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText4.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner7.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText10.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner6.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText11.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText12.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner5.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText13.setText(item, TextView.BufferType.NORMAL)
 
             }
 
@@ -393,13 +285,7 @@ class MainActivity : AppCompatActivity() {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinnerA.adapter = adapter2
         spinnerB.adapter = adapter2
-        spinnerC.adapter = adapter2
-        spinnerD.adapter = adapter2
-        spinnerE.adapter = adapter2
-        spinnerF.adapter = adapter2
-        spinnerG.adapter = adapter2
 
 
         spinnerB.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
@@ -411,109 +297,16 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText9.setText(item, TextView.BufferType.NORMAL)
-            }
+                when {
+                    editText9.hasFocus() -> editText9.setText(item,TextView.BufferType.NORMAL)
+                    editText7.hasFocus() -> editText7.setText(item,TextView.BufferType.NORMAL)
+                    editText14.hasFocus() -> editText14.setText(item,TextView.BufferType.NORMAL)
+                    editText15.hasFocus() -> editText15.setText(item,TextView.BufferType.NORMAL)
+                    editText16.hasFocus() -> editText16.setText(item,TextView.BufferType.NORMAL)
+                    editText17.hasFocus() -> editText17.setText(item,TextView.BufferType.NORMAL)
+                    editText18.hasFocus() -> editText18.setText(item,TextView.BufferType.NORMAL)
+                }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerF.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText7.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerG.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText14.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerD.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText15.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerE.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText16.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerC.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText17.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerA.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText18.setText(item, TextView.BufferType.NORMAL)
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -533,72 +326,85 @@ class MainActivity : AppCompatActivity() {
         editText8.setOnLongClickListener {
             editText8.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 200)
+            handler.postDelayed({ spinner1.performClick() }, 500)
             true
         }
         editText4.setOnLongClickListener {
+            editText4.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner4.performClick() }, 200)
+            handler.postDelayed({ spinner1.performClick() }, 500)
             true
         }
         editText.setOnLongClickListener {
+            editText.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner3.performClick() }, 200)
+            handler.postDelayed({ spinner1.performClick() }, 500)
             true
         }
         editText10.setOnLongClickListener {
+            editText10.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner7.performClick() }, 200)
+            handler.postDelayed({ spinner1.performClick() }, 500)
             true
         }
         editText11.setOnLongClickListener {
+            editText11.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner6.performClick() }, 200)
+            handler.postDelayed({ spinner1.performClick() }, 500)
             true
         }
         editText12.setOnLongClickListener {
+            editText12.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner2.performClick() }, 200)
+            handler.postDelayed({ spinner1.performClick() }, 500)
             true
         }
         editText13.setOnLongClickListener {
+            editText13.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner5.performClick() }, 200)
+            handler.postDelayed({ spinner1.performClick() }, 500)
             true
         }
         editText9.setOnLongClickListener {
+            editText9.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 200)
+            handler.postDelayed({ spinnerB.performClick() }, 500)
             true
         }
         editText7.setOnLongClickListener {
+            editText7.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerF.performClick() }, 200)
+            handler.postDelayed({ spinnerB.performClick() }, 500)
             true
         }
         editText14.setOnLongClickListener {
+            editText14.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerG.performClick() }, 200)
+            handler.postDelayed({ spinnerB.performClick() }, 500)
             true
         }
         editText15.setOnLongClickListener {
+            editText15.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerD.performClick() }, 200)
+            handler.postDelayed({ spinnerB.performClick() }, 500)
             true
         }
         editText16.setOnLongClickListener {
+            editText16.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerE.performClick() }, 200)
+            handler.postDelayed({ spinnerB.performClick() }, 500)
             true
         }
         editText17.setOnLongClickListener {
+            editText17.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerC.performClick() }, 200)
+            handler.postDelayed({ spinnerB.performClick() }, 500)
             true
         }
         editText18.setOnLongClickListener {
+            editText18.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerA.performClick() }, 200)
+            handler.postDelayed({ spinnerB.performClick() }, 500)
             true
         }
 
@@ -645,12 +451,6 @@ class MainActivity : AppCompatActivity() {
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         spinner1n.adapter = adapter3
-        spinner2n.adapter = adapter3
-        spinner3n.adapter = adapter3
-        spinner4n.adapter = adapter3
-        spinner5n.adapter = adapter3
-        spinner6n.adapter = adapter3
-        spinner7n.adapter = adapter3
 
         spinner1n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
@@ -661,115 +461,15 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText8n.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner4n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText4n.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner3n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editTextn.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner7n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText10n.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner6n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText11n.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner2n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText12n.setText(item, TextView.BufferType.NORMAL)
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinner5n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText13n.setText(item, TextView.BufferType.NORMAL)
+                when {
+                    editText8n.hasFocus() -> editText8n.setText(item,TextView.BufferType.NORMAL)
+                    editText4n.hasFocus() -> editText4n.setText(item,TextView.BufferType.NORMAL)
+                    editTextn.hasFocus() -> editTextn.setText(item,TextView.BufferType.NORMAL)
+                    editText10n.hasFocus() -> editText10n.setText(item,TextView.BufferType.NORMAL)
+                    editText11n.hasFocus() -> editText11n.setText(item,TextView.BufferType.NORMAL)
+                    editText12n.hasFocus() -> editText12n.setText(item,TextView.BufferType.NORMAL)
+                    editText13n.hasFocus() -> editText13n.setText(item,TextView.BufferType.NORMAL)
+                }
 
             }
 
@@ -818,13 +518,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        spinnerAn.adapter = adapter4
         spinnerBn.adapter = adapter4
-        spinnerCn.adapter = adapter4
-        spinnerDn.adapter = adapter4
-        spinnerEn.adapter = adapter4
-        spinnerFn.adapter = adapter4
-        spinnerGn.adapter = adapter4
 
         spinnerBn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
@@ -835,109 +529,15 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                editText9n.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerFn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText7n.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerGn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText14n.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerDn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText15n.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerEn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText16n.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerCn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText17n.setText(item, TextView.BufferType.NORMAL)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerAn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                editText18n.setText(item, TextView.BufferType.NORMAL)
+                when {
+                    editText9n.hasFocus() -> editText9n.setText(item,TextView.BufferType.NORMAL)
+                    editText7n.hasFocus() -> editText7n.setText(item,TextView.BufferType.NORMAL)
+                    editText14n.hasFocus() -> editText14n.setText(item,TextView.BufferType.NORMAL)
+                    editText15n.hasFocus() -> editText15n.setText(item,TextView.BufferType.NORMAL)
+                    editText16n.hasFocus() -> editText16n.setText(item,TextView.BufferType.NORMAL)
+                    editText17n.hasFocus() -> editText17n.setText(item,TextView.BufferType.NORMAL)
+                    editText18n.hasFocus() -> editText18n.setText(item,TextView.BufferType.NORMAL)
+                }
             }
 
             override fun onNothingSelected(parent: AdapterView<*>?) {
@@ -946,73 +546,87 @@ class MainActivity : AppCompatActivity() {
         }
 
         editText8n.setOnLongClickListener {
+            editText8n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 200)
+            handler.postDelayed({ spinner1n.performClick() }, 500)
             true
         }
         editText4n.setOnLongClickListener {
+            editText4n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner4n.performClick() }, 200)
+            handler.postDelayed({ spinner1n.performClick() }, 500)
             true
         }
         editTextn.setOnLongClickListener {
+            editTextn.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner3n.performClick() }, 200)
+            handler.postDelayed({ spinner1n.performClick() }, 500)
             true
         }
         editText10n.setOnLongClickListener {
+            editText10n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner7n.performClick() }, 200)
+            handler.postDelayed({ spinner1n.performClick() }, 500)
             true
         }
         editText11n.setOnLongClickListener {
+            editText11n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner6n.performClick() }, 200)
+            handler.postDelayed({ spinner1n.performClick() }, 500)
             true
         }
         editText12n.setOnLongClickListener {
+            editText12n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner2n.performClick() }, 200)
+            handler.postDelayed({ spinner1n.performClick() }, 500)
             true
         }
         editText13n.setOnLongClickListener {
+            editText13n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner5n.performClick() }, 200)
+            handler.postDelayed({ spinner1n.performClick() }, 500)
             true
         }
         editText9n.setOnLongClickListener {
+            editText9n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 200)
+            handler.postDelayed({ spinnerBn.performClick() }, 500)
             true
         }
         editText7n.setOnLongClickListener {
+            editText7n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerFn.performClick() }, 200)
+            handler.postDelayed({ spinnerBn.performClick() }, 500)
             true
         }
         editText14n.setOnLongClickListener {
+            editText14n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerGn.performClick() }, 200)
+            handler.postDelayed({ spinnerBn.performClick() }, 500)
             true
         }
         editText15n.setOnLongClickListener {
+            editText15n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerDn.performClick() }, 200)
+            handler.postDelayed({ spinnerBn.performClick() }, 500)
             true
         }
         editText16n.setOnLongClickListener {
+            editText16n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerEn.performClick() }, 200)
+            handler.postDelayed({ spinnerBn.performClick() }, 500)
             true
         }
         editText17n.setOnLongClickListener {
+            editText17n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerCn.performClick() }, 200)
+            handler.postDelayed({ spinnerBn.performClick() }, 500)
             true
         }
         editText18n.setOnLongClickListener {
+            editText18n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerAn.performClick() }, 200)
+            handler.postDelayed({ spinnerBn.performClick() }, 500)
             true
         }
 
