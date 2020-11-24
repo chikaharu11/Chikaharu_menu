@@ -73,31 +73,43 @@
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
-        android:id="@+id/textView_"
+        android:id="@+id/textView_4"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:autofillHints=""
         android:background="#00000000"
         android:inputType="text"
-        android:text="@string/c1"
+        android:text="@string/c4"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_3"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
+        android:id="@+id/textView_6"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:autofillHints=""
+        android:background="#00000000"
+        android:inputType="text"
+        android:text="@string/c6"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_5"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
         android:id="@+id/textView_5"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:autofillHints=""
         android:background="#00000000"
         android:inputType="text"
         android:text="@string/c5"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_4"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -105,76 +117,58 @@
     <EditText
         android:id="@+id/textView_2"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:autofillHints=""
         android:background="#00000000"
         android:inputType="text"
         android:text="@string/c2"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
+        android:id="@+id/textView_"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="77dp"
+        android:autofillHints=""
+        android:background="#00000000"
+        android:inputType="text"
+        android:text="@string/c1"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view2"
+        tools:ignore="LabelFor,MissingConstraints" />
+
+    <EditText
         android:id="@+id/textView_7"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:autofillHints=""
         android:background="#00000000"
         android:inputType="text"
         android:text="@string/c7"
         android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_6"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
-        android:id="@+id/textView_4"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:background="#00000000"
-        android:inputType="text"
-        android:text="@string/c4"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_3"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
         android:id="@+id/textView_3"
         android:layout_width="wrap_content"
-        android:layout_height="80dp"
+        android:layout_height="40dp"
         android:layout_marginStart="16dp"
         android:autofillHints=""
         android:background="#00000000"
         android:inputType="text"
         android:text="@string/c3"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_2"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_6"
-        android:layout_width="wrap_content"
-        android:layout_height="80dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:background="#00000000"
-        android:inputType="text"
-        android:text="@string/c6"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView_7"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_5"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -202,6 +196,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <View
+        android:id="@+id/view2"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"
@@ -210,6 +205,7 @@
         tools:ignore="MissingConstraints" />
 
     <View
+        android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
         android:background="#000000"

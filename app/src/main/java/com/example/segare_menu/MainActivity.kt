@@ -631,7 +631,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val menuList1 = mutableSetOf(
-            ""
+            "[選択したメニューを削除できます]"
         )
 
         val inMenuList1 = mRealm.where<Book>().findAll()
@@ -675,7 +675,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val menuList2 = mutableSetOf(
-            ""
+            "[選択したメニューを削除できます]"
         )
 
         val inMenuList2 = mRealm.where<Book2>().findAll()
@@ -719,7 +719,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val menuList3 = mutableSetOf(
-            ""
+            "[選択したメニューを削除できます]"
         )
 
         val inMenuList3 = mRealm.where<Book3>().findAll()
@@ -763,7 +763,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val menuList4 = mutableSetOf(
-            ""
+            "[選択したメニューを削除できます]"
         )
 
         val inMenuList4 = mRealm.where<Book4>().findAll()
@@ -1046,7 +1046,7 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList5a -> {
                 val menuList1a = mutableSetOf(
-                    ""
+                    "[選択したメニューを削除できます]"
                 )
 
                 val inMenuList1a = mRealm.where<Book>().findAll()
@@ -1075,7 +1075,7 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList5b -> {
                 val menuList2a = mutableSetOf(
-                    ""
+                    "[選択したメニューを削除できます]"
                 )
 
                 val inMenuList2a = mRealm.where<Book2>().findAll()
@@ -1104,7 +1104,7 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList5c -> {
                 val menuList3a = mutableSetOf(
-                    ""
+                    "[選択したメニューを削除できます]"
                 )
 
                 val inMenuList3a = mRealm.where<Book3>().findAll()
@@ -1133,7 +1133,7 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList5d -> {
                 val menuList4a = mutableSetOf(
-                    ""
+                    "[選択したメニューを削除できます]"
                 )
 
                 val inMenuList4a = mRealm.where<Book4>().findAll()
