@@ -99,28 +99,6 @@
         tools:ignore="LabelFor" />
 
     <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="57dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="352dp"
-        android:layout_marginTop="577dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerB"
-        android:layout_width="57dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="352dp"
-        android:layout_marginTop="577dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
         android:id="@+id/spinner1a"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -484,28 +462,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editText15"
         tools:ignore="LabelFor" />
 
-    <Spinner
-        android:id="@+id/spinner1n"
-        android:layout_width="57dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="352dp"
-        android:layout_marginTop="577dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinnerBn"
-        android:layout_width="57dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="352dp"
-        android:layout_marginTop="577dp"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -653,6 +609,50 @@
         android:layout_height="wrap_content"
         android:visibility="invisible"
         tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
+    <com.example.segare_menu.CSpinner
+        android:id="@+id/customSpinner"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.example.segare_menu.CSpinner2
+        android:id="@+id/customSpinner2"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.example.segare_menu.CSpinner3
+        android:id="@+id/customSpinner3"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.example.segare_menu.CSpinner4
+        android:id="@+id/customSpinner4"
+        android:layout_width="57dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginTop="577dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <FrameLayout
         android:id="@+id/container"

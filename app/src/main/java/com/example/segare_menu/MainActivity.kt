@@ -27,7 +27,6 @@ import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
-
 class MainActivity : AppCompatActivity() {
 
     private val handler = Handler()
@@ -66,13 +65,13 @@ class MainActivity : AppCompatActivity() {
             .build()
         mRealm = Realm.getInstance(realmConfig)
 
-        val week1 = mRealm.where(Book5::class.java).equalTo("id",0.toLong()).findFirst()?.name
-        val week2 = mRealm.where(Book5::class.java).equalTo("id",1.toLong()).findFirst()?.name
-        val week3 = mRealm.where(Book5::class.java).equalTo("id",2.toLong()).findFirst()?.name
-        val week4 = mRealm.where(Book5::class.java).equalTo("id",3.toLong()).findFirst()?.name
-        val week5 = mRealm.where(Book5::class.java).equalTo("id",4.toLong()).findFirst()?.name
-        val week6 = mRealm.where(Book5::class.java).equalTo("id",5.toLong()).findFirst()?.name
-        val week7 = mRealm.where(Book5::class.java).equalTo("id",6.toLong()).findFirst()?.name
+        val week1 = mRealm.where(Book5::class.java).equalTo("id", 0.toLong()).findFirst()?.name
+        val week2 = mRealm.where(Book5::class.java).equalTo("id", 1.toLong()).findFirst()?.name
+        val week3 = mRealm.where(Book5::class.java).equalTo("id", 2.toLong()).findFirst()?.name
+        val week4 = mRealm.where(Book5::class.java).equalTo("id", 3.toLong()).findFirst()?.name
+        val week5 = mRealm.where(Book5::class.java).equalTo("id", 4.toLong()).findFirst()?.name
+        val week6 = mRealm.where(Book5::class.java).equalTo("id", 5.toLong()).findFirst()?.name
+        val week7 = mRealm.where(Book5::class.java).equalTo("id", 6.toLong()).findFirst()?.name
 
         if(week1 != null){
             textView.text = week1
@@ -84,11 +83,11 @@ class MainActivity : AppCompatActivity() {
             textView7.text = week7
         }
 
-        val item1 = mRealm.where(Book6::class.java).equalTo("id",0.toLong()).findFirst()?.name
-        val item2 = mRealm.where(Book6::class.java).equalTo("id",1.toLong()).findFirst()?.name
-        val item3 = mRealm.where(Book6::class.java).equalTo("id",2.toLong()).findFirst()?.name
-        val item4 = mRealm.where(Book6::class.java).equalTo("id",3.toLong()).findFirst()?.name
-        val item5 = mRealm.where(Book6::class.java).equalTo("id",4.toLong()).findFirst()?.name
+        val item1 = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
+        val item2 = mRealm.where(Book6::class.java).equalTo("id", 1.toLong()).findFirst()?.name
+        val item3 = mRealm.where(Book6::class.java).equalTo("id", 2.toLong()).findFirst()?.name
+        val item4 = mRealm.where(Book6::class.java).equalTo("id", 3.toLong()).findFirst()?.name
+        val item5 = mRealm.where(Book6::class.java).equalTo("id", 4.toLong()).findFirst()?.name
 
         if(item1 != null) {
             editText8n.hint = item1
@@ -172,7 +171,7 @@ class MainActivity : AppCompatActivity() {
             "あんかけ卵"
         )
 
-        val item6 = mRealm.where(Book6::class.java).equalTo("id",5.toLong()).findFirst()?.boolean
+        val item6 = mRealm.where(Book6::class.java).equalTo("id", 5.toLong()).findFirst()?.boolean
 
         val switch = findViewById<Switch>(R.id.switch3)
         if (item6 != null) {
@@ -192,7 +191,6 @@ class MainActivity : AppCompatActivity() {
             cuisine1.add(i.name)
         }
 
-
         val spinnerItems = cuisine1.sorted()
 
         val adapter = ArrayAdapter(
@@ -203,10 +201,11 @@ class MainActivity : AppCompatActivity() {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinner1.adapter = adapter
+
+        customSpinner.adapter = adapter
 
 
-        spinner1.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        customSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -216,13 +215,13 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText8.hasFocus() -> editText8.setText(item,TextView.BufferType.NORMAL)
-                    editText4.hasFocus() -> editText4.setText(item,TextView.BufferType.NORMAL)
-                    editText.hasFocus() -> editText.setText(item,TextView.BufferType.NORMAL)
-                    editText10.hasFocus() -> editText10.setText(item,TextView.BufferType.NORMAL)
-                    editText11.hasFocus() -> editText11.setText(item,TextView.BufferType.NORMAL)
-                    editText12.hasFocus() -> editText12.setText(item,TextView.BufferType.NORMAL)
-                    editText13.hasFocus() -> editText13.setText(item,TextView.BufferType.NORMAL)
+                    editText8.hasFocus() -> editText8.setText(item, TextView.BufferType.NORMAL)
+                    editText4.hasFocus() -> editText4.setText(item, TextView.BufferType.NORMAL)
+                    editText.hasFocus() -> editText.setText(item, TextView.BufferType.NORMAL)
+                    editText10.hasFocus() -> editText10.setText(item, TextView.BufferType.NORMAL)
+                    editText11.hasFocus() -> editText11.setText(item, TextView.BufferType.NORMAL)
+                    editText12.hasFocus() -> editText12.setText(item, TextView.BufferType.NORMAL)
+                    editText13.hasFocus() -> editText13.setText(item, TextView.BufferType.NORMAL)
                 }
 
             }
@@ -285,10 +284,10 @@ class MainActivity : AppCompatActivity() {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinnerB.adapter = adapter2
+        customSpinner2.adapter = adapter2
 
 
-        spinnerB.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        customSpinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -298,13 +297,13 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText9.hasFocus() -> editText9.setText(item,TextView.BufferType.NORMAL)
-                    editText7.hasFocus() -> editText7.setText(item,TextView.BufferType.NORMAL)
-                    editText14.hasFocus() -> editText14.setText(item,TextView.BufferType.NORMAL)
-                    editText15.hasFocus() -> editText15.setText(item,TextView.BufferType.NORMAL)
-                    editText16.hasFocus() -> editText16.setText(item,TextView.BufferType.NORMAL)
-                    editText17.hasFocus() -> editText17.setText(item,TextView.BufferType.NORMAL)
-                    editText18.hasFocus() -> editText18.setText(item,TextView.BufferType.NORMAL)
+                    editText9.hasFocus() -> editText9.setText(item, TextView.BufferType.NORMAL)
+                    editText7.hasFocus() -> editText7.setText(item, TextView.BufferType.NORMAL)
+                    editText14.hasFocus() -> editText14.setText(item, TextView.BufferType.NORMAL)
+                    editText15.hasFocus() -> editText15.setText(item, TextView.BufferType.NORMAL)
+                    editText16.hasFocus() -> editText16.setText(item, TextView.BufferType.NORMAL)
+                    editText17.hasFocus() -> editText17.setText(item, TextView.BufferType.NORMAL)
+                    editText18.hasFocus() -> editText18.setText(item, TextView.BufferType.NORMAL)
                 }
 
             }
@@ -326,85 +325,85 @@ class MainActivity : AppCompatActivity() {
         editText8.setOnLongClickListener {
             editText8.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 300)
+            handler.postDelayed({ customSpinner.performClick() }, 300)
             true
         }
         editText4.setOnLongClickListener {
             editText4.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 300)
+            handler.postDelayed({ customSpinner.performClick() }, 300)
             true
         }
         editText.setOnLongClickListener {
             editText.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 300)
+            handler.postDelayed({ customSpinner.performClick() }, 300)
             true
         }
         editText10.setOnLongClickListener {
             editText10.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 300)
+            handler.postDelayed({ customSpinner.performClick() }, 300)
             true
         }
         editText11.setOnLongClickListener {
             editText11.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 300)
+            handler.postDelayed({ customSpinner.performClick() }, 300)
             true
         }
         editText12.setOnLongClickListener {
             editText12.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 300)
+            handler.postDelayed({ customSpinner.performClick() }, 300)
             true
         }
         editText13.setOnLongClickListener {
             editText13.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1.performClick() }, 300)
+            handler.postDelayed({ customSpinner.performClick() }, 300)
             true
         }
         editText9.setOnLongClickListener {
             editText9.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 300)
+            handler.postDelayed({ customSpinner2.performClick() }, 300)
             true
         }
         editText7.setOnLongClickListener {
             editText7.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 300)
+            handler.postDelayed({ customSpinner2.performClick() }, 300)
             true
         }
         editText14.setOnLongClickListener {
             editText14.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 300)
+            handler.postDelayed({ customSpinner2.performClick() }, 300)
             true
         }
         editText15.setOnLongClickListener {
             editText15.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 300)
+            handler.postDelayed({ customSpinner2.performClick() }, 300)
             true
         }
         editText16.setOnLongClickListener {
             editText16.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 300)
+            handler.postDelayed({ customSpinner2.performClick() }, 300)
             true
         }
         editText17.setOnLongClickListener {
             editText17.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 300)
+            handler.postDelayed({ customSpinner2.performClick() }, 300)
             true
         }
         editText18.setOnLongClickListener {
             editText18.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerB.performClick() }, 300)
+            handler.postDelayed({ customSpinner2.performClick() }, 300)
             true
         }
 
@@ -450,9 +449,9 @@ class MainActivity : AppCompatActivity() {
 
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        spinner1n.adapter = adapter3
+        customSpinner3.adapter = adapter3
 
-        spinner1n.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        customSpinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -462,13 +461,13 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText8n.hasFocus() -> editText8n.setText(item,TextView.BufferType.NORMAL)
-                    editText4n.hasFocus() -> editText4n.setText(item,TextView.BufferType.NORMAL)
-                    editTextn.hasFocus() -> editTextn.setText(item,TextView.BufferType.NORMAL)
-                    editText10n.hasFocus() -> editText10n.setText(item,TextView.BufferType.NORMAL)
-                    editText11n.hasFocus() -> editText11n.setText(item,TextView.BufferType.NORMAL)
-                    editText12n.hasFocus() -> editText12n.setText(item,TextView.BufferType.NORMAL)
-                    editText13n.hasFocus() -> editText13n.setText(item,TextView.BufferType.NORMAL)
+                    editText8n.hasFocus() -> editText8n.setText(item, TextView.BufferType.NORMAL)
+                    editText4n.hasFocus() -> editText4n.setText(item, TextView.BufferType.NORMAL)
+                    editTextn.hasFocus() -> editTextn.setText(item, TextView.BufferType.NORMAL)
+                    editText10n.hasFocus() -> editText10n.setText(item, TextView.BufferType.NORMAL)
+                    editText11n.hasFocus() -> editText11n.setText(item, TextView.BufferType.NORMAL)
+                    editText12n.hasFocus() -> editText12n.setText(item, TextView.BufferType.NORMAL)
+                    editText13n.hasFocus() -> editText13n.setText(item, TextView.BufferType.NORMAL)
                 }
 
             }
@@ -518,9 +517,9 @@ class MainActivity : AppCompatActivity() {
 
         adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        spinnerBn.adapter = adapter4
+        customSpinner4.adapter = adapter4
 
-        spinnerBn.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        customSpinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -530,13 +529,13 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText9n.hasFocus() -> editText9n.setText(item,TextView.BufferType.NORMAL)
-                    editText7n.hasFocus() -> editText7n.setText(item,TextView.BufferType.NORMAL)
-                    editText14n.hasFocus() -> editText14n.setText(item,TextView.BufferType.NORMAL)
-                    editText15n.hasFocus() -> editText15n.setText(item,TextView.BufferType.NORMAL)
-                    editText16n.hasFocus() -> editText16n.setText(item,TextView.BufferType.NORMAL)
-                    editText17n.hasFocus() -> editText17n.setText(item,TextView.BufferType.NORMAL)
-                    editText18n.hasFocus() -> editText18n.setText(item,TextView.BufferType.NORMAL)
+                    editText9n.hasFocus() -> editText9n.setText(item, TextView.BufferType.NORMAL)
+                    editText7n.hasFocus() -> editText7n.setText(item, TextView.BufferType.NORMAL)
+                    editText14n.hasFocus() -> editText14n.setText(item, TextView.BufferType.NORMAL)
+                    editText15n.hasFocus() -> editText15n.setText(item, TextView.BufferType.NORMAL)
+                    editText16n.hasFocus() -> editText16n.setText(item, TextView.BufferType.NORMAL)
+                    editText17n.hasFocus() -> editText17n.setText(item, TextView.BufferType.NORMAL)
+                    editText18n.hasFocus() -> editText18n.setText(item, TextView.BufferType.NORMAL)
                 }
             }
 
@@ -548,85 +547,85 @@ class MainActivity : AppCompatActivity() {
         editText8n.setOnLongClickListener {
             editText8n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 300)
+            handler.postDelayed({ customSpinner3.performClick() }, 300)
             true
         }
         editText4n.setOnLongClickListener {
             editText4n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 300)
+            handler.postDelayed({ customSpinner3.performClick() }, 300)
             true
         }
         editTextn.setOnLongClickListener {
             editTextn.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 300)
+            handler.postDelayed({ customSpinner3.performClick() }, 300)
             true
         }
         editText10n.setOnLongClickListener {
             editText10n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 300)
+            handler.postDelayed({ customSpinner3.performClick() }, 300)
             true
         }
         editText11n.setOnLongClickListener {
             editText11n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 300)
+            handler.postDelayed({ customSpinner3.performClick() }, 300)
             true
         }
         editText12n.setOnLongClickListener {
             editText12n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 300)
+            handler.postDelayed({ customSpinner3.performClick() }, 300)
             true
         }
         editText13n.setOnLongClickListener {
             editText13n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinner1n.performClick() }, 300)
+            handler.postDelayed({ customSpinner3.performClick() }, 300)
             true
         }
         editText9n.setOnLongClickListener {
             editText9n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 300)
+            handler.postDelayed({ customSpinner4.performClick() }, 300)
             true
         }
         editText7n.setOnLongClickListener {
             editText7n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 300)
+            handler.postDelayed({ customSpinner4.performClick() }, 300)
             true
         }
         editText14n.setOnLongClickListener {
             editText14n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 300)
+            handler.postDelayed({ customSpinner4.performClick() }, 300)
             true
         }
         editText15n.setOnLongClickListener {
             editText15n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 300)
+            handler.postDelayed({ customSpinner4.performClick() }, 300)
             true
         }
         editText16n.setOnLongClickListener {
             editText16n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 300)
+            handler.postDelayed({ customSpinner4.performClick() }, 300)
             true
         }
         editText17n.setOnLongClickListener {
             editText17n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 300)
+            handler.postDelayed({ customSpinner4.performClick() }, 300)
             true
         }
         editText18n.setOnLongClickListener {
             editText18n.requestFocus()
             hideKeyboard()
-            handler.postDelayed({ spinnerBn.performClick() }, 300)
+            handler.postDelayed({ customSpinner4.performClick() }, 300)
             true
         }
 
@@ -664,7 +663,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                mRealm.executeTransaction { mRealm.where<Book>().equalTo("name",item).findAll().deleteAllFromRealm() }
+                mRealm.executeTransaction { mRealm.where<Book>().equalTo("name", item).findAll().deleteAllFromRealm() }
 
 
             }
@@ -708,7 +707,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                mRealm.executeTransaction { mRealm.where<Book2>().equalTo("name",item).findAll().deleteAllFromRealm() }
+                mRealm.executeTransaction { mRealm.where<Book2>().equalTo("name", item).findAll().deleteAllFromRealm() }
 
 
             }
@@ -752,7 +751,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                mRealm.executeTransaction { mRealm.where<Book3>().equalTo("name",item).findAll().deleteAllFromRealm() }
+                mRealm.executeTransaction { mRealm.where<Book3>().equalTo("name", item).findAll().deleteAllFromRealm() }
 
 
             }
@@ -796,7 +795,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
-                mRealm.executeTransaction { mRealm.where<Book4>().equalTo("name",item).findAll().deleteAllFromRealm() }
+                mRealm.executeTransaction { mRealm.where<Book4>().equalTo("name", item).findAll().deleteAllFromRealm() }
 
 
             }
@@ -907,28 +906,28 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_options_menu_list, menu)
 
         val menu1 = menu.findItem(R.id.MenuList5c)
-        val item1a = mRealm.where(Book6::class.java).equalTo("id",0.toLong()).findFirst()?.name
+        val item1a = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
 
         if (item1a != null) {
             menu1.title = item1a + "の編集"
         }
 
         val menu2 = menu.findItem(R.id.MenuList5d)
-        val item2a = mRealm.where(Book6::class.java).equalTo("id",1.toLong()).findFirst()?.name
+        val item2a = mRealm.where(Book6::class.java).equalTo("id", 1.toLong()).findFirst()?.name
 
         if (item2a != null) {
             menu2.title = item2a + "の編集"
         }
 
         val menu3 = menu.findItem(R.id.MenuList5a)
-        val item3a = mRealm.where(Book6::class.java).equalTo("id",2.toLong()).findFirst()?.name
+        val item3a = mRealm.where(Book6::class.java).equalTo("id", 2.toLong()).findFirst()?.name
 
         if (item3a != null) {
             menu3.title = item3a + "の編集"
         }
 
         val menu4 = menu.findItem(R.id.MenuList5b)
-        val item4a = mRealm.where(Book6::class.java).equalTo("id",3.toLong()).findFirst()?.name
+        val item4a = mRealm.where(Book6::class.java).equalTo("id", 3.toLong()).findFirst()?.name
 
         if (item4a != null) {
             menu4.title = item4a + "の編集"
@@ -963,47 +962,60 @@ class MainActivity : AppCompatActivity() {
                         mRealm.executeTransaction {
                             mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
                             val week1 = mRealm.createObject<Book5>(0)
-                            val a = signinView.findViewById<EditText>(R.id.textView_).text.toString()
+                            val a =
+                                signinView.findViewById<EditText>(R.id.textView_).text.toString()
                             week1.name = a
                             val week2 = mRealm.createObject<Book5>(1)
-                            val a2 = signinView.findViewById<EditText>(R.id.textView_2).text.toString()
+                            val a2 =
+                                signinView.findViewById<EditText>(R.id.textView_2).text.toString()
                             week2.name = a2
                             val week3 = mRealm.createObject<Book5>(2)
-                            val a3 = signinView.findViewById<EditText>(R.id.textView_3).text.toString()
+                            val a3 =
+                                signinView.findViewById<EditText>(R.id.textView_3).text.toString()
                             week3.name = a3
                             val week4 = mRealm.createObject<Book5>(3)
-                            val a4 = signinView.findViewById<EditText>(R.id.textView_4).text.toString()
+                            val a4 =
+                                signinView.findViewById<EditText>(R.id.textView_4).text.toString()
                             week4.name = a4
                             val week5 = mRealm.createObject<Book5>(4)
-                            val a5 = signinView.findViewById<EditText>(R.id.textView_5).text.toString()
+                            val a5 =
+                                signinView.findViewById<EditText>(R.id.textView_5).text.toString()
                             week5.name = a5
                             val week6 = mRealm.createObject<Book5>(5)
-                            val a6 = signinView.findViewById<EditText>(R.id.textView_6).text.toString()
+                            val a6 =
+                                signinView.findViewById<EditText>(R.id.textView_6).text.toString()
                             week6.name = a6
                             val week7 = mRealm.createObject<Book5>(6)
-                            val a7 = signinView.findViewById<EditText>(R.id.textView_7).text.toString()
+                            val a7 =
+                                signinView.findViewById<EditText>(R.id.textView_7).text.toString()
                             week7.name = a7
                         }
 
                         mRealm.executeTransaction {
                             mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
                             val item1 = mRealm.createObject<Book6>(0)
-                            val a = signinView.findViewById<EditText>(R.id.editText8n).text.toString()
+                            val a =
+                                signinView.findViewById<EditText>(R.id.editText_8n).text.toString()
                             item1.name = a
                             val item2 = mRealm.createObject<Book6>(1)
-                            val a2 = signinView.findViewById<EditText>(R.id.editText9n).text.toString()
+                            val a2 =
+                                signinView.findViewById<EditText>(R.id.editText_9n).text.toString()
                             item2.name = a2
                             val item3 = mRealm.createObject<Book6>(2)
-                            val a3 = signinView.findViewById<EditText>(R.id.editText8).text.toString()
+                            val a3 =
+                                signinView.findViewById<EditText>(R.id.editText_8).text.toString()
                             item3.name = a3
                             val item4 = mRealm.createObject<Book6>(3)
-                            val a4 = signinView.findViewById<EditText>(R.id.editText9).text.toString()
+                            val a4 =
+                                signinView.findViewById<EditText>(R.id.editText_9).text.toString()
                             item4.name = a4
                             val item5 = mRealm.createObject<Book6>(4)
-                            val a5 = signinView.findViewById<EditText>(R.id.textView_8).text.toString()
+                            val a5 =
+                                signinView.findViewById<EditText>(R.id.textView_8).text.toString()
                             item5.name = a5
                         }
-                        Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG)
+                            .show()
                     }
                     .setNegativeButton("キャンセル") { _, _ ->
 
@@ -1021,7 +1033,10 @@ class MainActivity : AppCompatActivity() {
             R.id.MenuList3 -> {
                 switch2.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) replaceFragment(fragment4)
-                    else supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+                    else supportFragmentManager.popBackStack(
+                        null,
+                        FragmentManager.POP_BACK_STACK_INCLUSIVE
+                    )
                 }
                 switch2.performClick()
                 return true
@@ -1033,11 +1048,19 @@ class MainActivity : AppCompatActivity() {
                         val item6 = mRealm.createObject<Book6>(5)
                         val a6 = true
                         item6.boolean = a6
-                        Toast.makeText(applicationContext, "次回起動時から初期メニューを\n表示しません。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            applicationContext,
+                            "次回起動時から初期メニューを\n表示しません。",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                     else mRealm.executeTransaction {
                         mRealm.where(Book6::class.java).findAll().deleteLastFromRealm()
-                        Toast.makeText(applicationContext, "次回起動時から初期メニューを\n表示します。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(
+                            applicationContext,
+                            "次回起動時から初期メニューを\n表示します。",
+                            Toast.LENGTH_LONG
+                        ).show()
                     }
                 }
                 switch3.performClick()
@@ -1052,7 +1075,7 @@ class MainActivity : AppCompatActivity() {
                 val inMenuList1a = mRealm.where<Book>().findAll()
 
 
-                for( i in inMenuList1a )
+                for (i in inMenuList1a)
                     if (inMenuList1a != null) {
                         menuList1a.add(i.name)
                     }
@@ -1081,7 +1104,7 @@ class MainActivity : AppCompatActivity() {
                 val inMenuList2a = mRealm.where<Book2>().findAll()
 
 
-                for( i in inMenuList2a )
+                for (i in inMenuList2a)
                     if (inMenuList2a != null) {
                         menuList2a.add(i.name)
                     }
@@ -1110,7 +1133,7 @@ class MainActivity : AppCompatActivity() {
                 val inMenuList3a = mRealm.where<Book3>().findAll()
 
 
-                for( i in inMenuList3a )
+                for (i in inMenuList3a)
                     if (inMenuList3a != null) {
                         menuList3a.add(i.name)
                     }
@@ -1139,7 +1162,7 @@ class MainActivity : AppCompatActivity() {
                 val inMenuList4a = mRealm.where<Book4>().findAll()
 
 
-                for( i in inMenuList4a )
+                for (i in inMenuList4a)
                     if (inMenuList4a != null) {
                         menuList4a.add(i.name)
                     }
@@ -1159,7 +1182,7 @@ class MainActivity : AppCompatActivity() {
                 handler.postDelayed({ spinner4a.performClick() }, 300)
                 return true
             }
-            
+
 
             R.id.MenuList6 -> {
                 AlertDialog.Builder(this)
@@ -1167,7 +1190,8 @@ class MainActivity : AppCompatActivity() {
                     .setMessage("(登録した内容が全て消去されます)")
                     .setPositiveButton("YES") { _, _ ->
                         delete()
-                        Toast.makeText(applicationContext, "次回起動時から初期状態に戻ります。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "次回起動時から初期状態に戻ります。", Toast.LENGTH_LONG)
+                            .show()
                     }
                     .setNegativeButton("NO") { _, _ ->
 
