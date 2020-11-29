@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
             .setAudioAttributes(audioAttributes)
 
-            .setMaxStreams(10)
+            .setMaxStreams(1)
             .build()
 
         sound1 = soundPool.load(this, R.raw.ta, 1)
@@ -155,15 +155,15 @@ class MainActivity : AppCompatActivity() {
             "サイコロステーキ",
             "チキンステーキ",
             "オムライス",
-            "肉じゃが㋬",
+            "肉じゃが",
             "牛丼",
-            "豚バラ白菜㋬",
-            "カレー㋬",
+            "豚バラ白菜",
+            "カレー",
             "八宝菜",
             "ラーメン",
             "チーズ餃子",
             "焼きハム",
-            "けんちん汁㋬",
+            "けんちん汁",
             "ラザニア",
             "サンドイッチ",
             "冷やし中華",
@@ -954,40 +954,40 @@ class MainActivity : AppCompatActivity() {
             R.id.MenuList1 -> {
                 val builder = android.app.AlertDialog.Builder(this)
                 val inflater = layoutInflater
-                val signinView = inflater.inflate(R.layout.dialog_week, null)
+                val dialogView = inflater.inflate(R.layout.dialog_week, null)
 
-                builder.setView(signinView)
-                    .setTitle("各項目の名称を変更できます。")
+                builder.setView(dialogView)
+                    .setTitle("各項目の名前を変更できます。")
                     .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
                             mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
                             val week1 = mRealm.createObject<Book5>(0)
                             val a =
-                                signinView.findViewById<EditText>(R.id.textView_).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_).text.toString()
                             week1.name = a
                             val week2 = mRealm.createObject<Book5>(1)
                             val a2 =
-                                signinView.findViewById<EditText>(R.id.textView_2).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_2).text.toString()
                             week2.name = a2
                             val week3 = mRealm.createObject<Book5>(2)
                             val a3 =
-                                signinView.findViewById<EditText>(R.id.textView_3).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_3).text.toString()
                             week3.name = a3
                             val week4 = mRealm.createObject<Book5>(3)
                             val a4 =
-                                signinView.findViewById<EditText>(R.id.textView_4).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_4).text.toString()
                             week4.name = a4
                             val week5 = mRealm.createObject<Book5>(4)
                             val a5 =
-                                signinView.findViewById<EditText>(R.id.textView_5).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_5).text.toString()
                             week5.name = a5
                             val week6 = mRealm.createObject<Book5>(5)
                             val a6 =
-                                signinView.findViewById<EditText>(R.id.textView_6).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_6).text.toString()
                             week6.name = a6
                             val week7 = mRealm.createObject<Book5>(6)
                             val a7 =
-                                signinView.findViewById<EditText>(R.id.textView_7).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_7).text.toString()
                             week7.name = a7
                         }
 
@@ -995,26 +995,26 @@ class MainActivity : AppCompatActivity() {
                             mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
                             val item1 = mRealm.createObject<Book6>(0)
                             val a =
-                                signinView.findViewById<EditText>(R.id.editText_8n).text.toString()
+                                dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
                             item1.name = a
                             val item2 = mRealm.createObject<Book6>(1)
                             val a2 =
-                                signinView.findViewById<EditText>(R.id.editText_9n).text.toString()
+                                dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
                             item2.name = a2
                             val item3 = mRealm.createObject<Book6>(2)
                             val a3 =
-                                signinView.findViewById<EditText>(R.id.editText_8).text.toString()
+                                dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
                             item3.name = a3
                             val item4 = mRealm.createObject<Book6>(3)
                             val a4 =
-                                signinView.findViewById<EditText>(R.id.editText_9).text.toString()
+                                dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
                             item4.name = a4
                             val item5 = mRealm.createObject<Book6>(4)
                             val a5 =
-                                signinView.findViewById<EditText>(R.id.textView_8).text.toString()
+                                dialogView.findViewById<EditText>(R.id.textView_8).text.toString()
                             item5.name = a5
                         }
-                        Toast.makeText(applicationContext, "変更は次回起動時に反映されます。", Toast.LENGTH_LONG)
+                        Toast.makeText(applicationContext, "次にアプリを開いた時に変更されます。", Toast.LENGTH_LONG)
                             .show()
                     }
                     .setNegativeButton("キャンセル") { _, _ ->
@@ -1050,7 +1050,7 @@ class MainActivity : AppCompatActivity() {
                         item6.boolean = a6
                         Toast.makeText(
                             applicationContext,
-                            "次回起動時から初期メニューを\n表示しません。",
+                            "次にアプリを開いた時から\n初期メニューを表示しません。",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -1058,7 +1058,7 @@ class MainActivity : AppCompatActivity() {
                         mRealm.where(Book6::class.java).findAll().deleteLastFromRealm()
                         Toast.makeText(
                             applicationContext,
-                            "次回起動時から初期メニューを\n表示します。",
+                            "次にアプリを開いた時から\n初期メニューを表示します。",
                             Toast.LENGTH_LONG
                         ).show()
                     }
@@ -1190,7 +1190,7 @@ class MainActivity : AppCompatActivity() {
                     .setMessage("(登録した内容が全て消去されます)")
                     .setPositiveButton("YES") { _, _ ->
                         delete()
-                        Toast.makeText(applicationContext, "次回起動時から初期状態に戻ります。", Toast.LENGTH_LONG)
+                        Toast.makeText(applicationContext, "次にアプリを開いた時から\n初期状態に戻ります。", Toast.LENGTH_LONG)
                             .show()
                     }
                     .setNegativeButton("NO") { _, _ ->
@@ -1202,9 +1202,6 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList7 -> {
-                AlertDialog.Builder(this)
-                    .setTitle("保存して終了しますか？")
-                    .setPositiveButton("YES") { _, _ ->
                         val stringText11 = editText8.text.toString()
                         create(stringText11)
                         val stringText12 = editText4.text.toString()
@@ -1265,15 +1262,18 @@ class MainActivity : AppCompatActivity() {
                         val stringText47 = editText14n.text.toString()
                         create4(stringText47)
 
-                        Toast.makeText(applicationContext, "保存しました。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "保存しました。\n次にアプリを開いた時に追加されます。", Toast.LENGTH_LONG).show()
+
+                return true
+            }
+
+            R.id.MenuList8 -> {
+                AlertDialog.Builder(this)
+                    .setTitle("終了しますか？")
+                    .setPositiveButton("YES") { _, _ ->
                         finish()
                     }
                     .setNegativeButton("NO") { _, _ ->
-
-                    }
-                    .setNeutralButton("保存しないで終了") { _, _ ->
-                        Toast.makeText(applicationContext, "終了しました。", Toast.LENGTH_LONG).show()
-                        finish()
 
                     }
                     .show()

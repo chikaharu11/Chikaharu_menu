@@ -12,17 +12,17 @@
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
     <string name="sm1">夜サブ</string>
-    <string name="menulist1">各項目の編集</string>
-    <string name="menulist2">画面保存</string>
-    <string name="menulist3">ヘルプ</string>
-    <string name="menulist4">初期メニュー表示切替</string>
-    <string name="menulist5a">夜メインの選択削除</string>
-    <string name="menulist5b">夜サブの選択削除</string>
-    <string name="menulist5c">昼メインの選択削除</string>
-    <string name="menulist5d">昼サブの選択削除</string>
-    <string name="menulist6">初期状態に戻す</string>
-    <string name="menulist7">メニューを保存して終了</string>
-    <string name="setsumei">TODO</string>
-    <string name="textview">TextView</string>
+    <string name="MenuList1">各項目の編集</string>
+    <string name="MenuList2">画面保存</string>
+    <string name="MenuList3">ヘルプ</string>
+    <string name="MenuList4">初期メニュー表示切替</string>
+    <string name="MenuList5a">夜メインの選択削除</string>
+    <string name="MenuList5b">夜サブの選択削除</string>
+    <string name="MenuList5c">昼メインの選択削除</string>
+    <string name="MenuList5d">昼サブの選択削除</string>
+    <string name="MenuList6">初期状態に戻す</string>
+    <string name="MenuList7">メニューを保存する</string>
+    <string name="MenuList8">終了する</string>
+    <string name="Description">TODO</string>
 
 </resources>

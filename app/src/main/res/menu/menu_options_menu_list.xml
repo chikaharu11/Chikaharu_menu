@@ -6,53 +6,58 @@
     <item
         android:id="@+id/MenuList1"
         app:showAsAction="never"
-        android:title="@string/menulist1" />
+        android:title="@string/MenuList1" />
 
     <item
         android:id="@+id/MenuList2"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_camera_alt_24"
-        android:title="@string/menulist2" />
+        android:title="@string/MenuList2" />
 
     <item
         android:id="@+id/MenuList3"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_help_24"
-        android:title="@string/menulist3" />
+        android:title="@string/MenuList3" />
     
     <item
         android:id="@+id/MenuList5c"
         app:showAsAction="never"
-        android:title="@string/menulist5c" />
+        android:title="@string/MenuList5c" />
 
     <item
         android:id="@+id/MenuList5d"
         app:showAsAction="never"
-        android:title="@string/menulist5d" />
+        android:title="@string/MenuList5d" />
 
     <item
         android:id="@+id/MenuList5a"
         app:showAsAction="never"
-        android:title="@string/menulist5a" />
+        android:title="@string/MenuList5a" />
 
     <item
         android:id="@+id/MenuList5b"
         app:showAsAction="never"
-        android:title="@string/menulist5b" />
+        android:title="@string/MenuList5b" />
 
     <item
         android:id="@+id/MenuList4"
         app:showAsAction="never"
-        android:title="@string/menulist4" />
+        android:title="@string/MenuList4" />
 
     <item
         android:id="@+id/MenuList6"
         app:showAsAction="never"
-        android:title="@string/menulist6" />
+        android:title="@string/MenuList6" />
 
     <item
         android:id="@+id/MenuList7"
         app:showAsAction="never"
-        android:title="@string/menulist7" />
+        android:title="@string/MenuList7" />
+
+    <item
+        android:id="@+id/MenuList8"
+        app:showAsAction="never"
+        android:title="@string/MenuList8" />
 
 </menu>
