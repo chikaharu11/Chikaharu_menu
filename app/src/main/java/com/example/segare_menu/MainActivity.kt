@@ -18,6 +18,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.kotlin.createObject
@@ -1277,6 +1278,21 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     .show()
+
+                return true
+            }
+
+            R.id.MenuList9 -> {
+                AlertDialog.Builder(this)
+                    .setTitle("再起動しますか？")
+                    .setPositiveButton("YES") { _, _ ->
+                        ProcessPhoenix.triggerRebirth(this)
+                    }
+                    .setNegativeButton("NO") { _, _ ->
+
+                    }
+                    .show()
+
 
                 return true
             }

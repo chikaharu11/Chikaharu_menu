@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">せがれメニュー</string>
     <string name="c0">せがれメニュー</string>
-    <string name="c1">土</string>
-    <string name="c2">日</string>
-    <string name="c3">月</string>
-    <string name="c4">火</string>
-    <string name="c5">水</string>
-    <string name="c6">木</string>
-    <string name="c7">金</string>
+    <string name="c1">月</string>
+    <string name="c2">火</string>
+    <string name="c3">水</string>
+    <string name="c4">木</string>
+    <string name="c5">金</string>
+    <string name="c6">土</string>
+    <string name="c7">日</string>
     <string name="mm1">夜メイン</string>
     <string name="mm2">昼メイン</string>
     <string name="sm2">昼サブ</string>
@@ -23,6 +23,7 @@
     <string name="MenuList6">初期状態に戻す</string>
     <string name="MenuList7">メニューを保存する</string>
     <string name="MenuList8">終了する</string>
+    <string name="MenuList9">変更を適用する(再起動)</string>
     <string name="Description">TODO</string>
 
 </resources>
