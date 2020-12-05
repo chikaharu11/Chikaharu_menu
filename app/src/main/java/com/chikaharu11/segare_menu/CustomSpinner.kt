@@ -1,4 +1,4 @@
-package com.example.segare_menu
+package com.chikaharu11.segare_menu
 
 import android.content.Context
 import android.util.AttributeSet

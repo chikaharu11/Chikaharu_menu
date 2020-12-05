@@ -1,4 +1,4 @@
-package com.example.segare_menu
+package com.chikaharu11.segare_menu
 
 import org.junit.Test
 

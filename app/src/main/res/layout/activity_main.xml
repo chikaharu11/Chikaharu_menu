@@ -611,7 +611,7 @@
         android:visibility="invisible"
         tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-    <com.example.segare_menu.CSpinner
+    <com.chikaharu11.segare_menu.CSpinner
         android:id="@+id/customSpinner"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
@@ -622,7 +622,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <com.example.segare_menu.CSpinner2
+    <com.chikaharu11.segare_menu.CSpinner2
         android:id="@+id/customSpinner2"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
@@ -633,7 +633,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <com.example.segare_menu.CSpinner3
+    <com.chikaharu11.segare_menu.CSpinner3
         android:id="@+id/customSpinner3"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
@@ -644,7 +644,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <com.example.segare_menu.CSpinner4
+    <com.chikaharu11.segare_menu.CSpinner4
         android:id="@+id/customSpinner4"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
