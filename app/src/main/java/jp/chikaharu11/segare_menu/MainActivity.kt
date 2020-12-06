@@ -1,4 +1,4 @@
-package com.chikaharu11.segare_menu
+package jp.chikaharu11.segare_menu
 
 import android.annotation.SuppressLint
 import android.content.Context
