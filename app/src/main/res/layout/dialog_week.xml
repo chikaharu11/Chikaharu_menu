@@ -18,7 +18,7 @@
         android:hint=""
         android:inputType="text"
         android:text="@string/mm2"
-        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_2"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -33,7 +33,7 @@
         android:hint=""
         android:inputType="text"
         android:text="@string/mm1"
-        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_3"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -48,7 +48,7 @@
         android:hint=""
         android:inputType="text"
         android:text="@string/sm1"
-        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_8"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -63,7 +63,7 @@
         android:hint=""
         android:inputType="text"
         android:text="@string/sm2"
-        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_8n"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -76,7 +76,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c4"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_3"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -89,7 +89,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c6"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_5"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -102,7 +102,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c5"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_4"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -115,7 +115,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c2"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -129,7 +129,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c1"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -142,7 +142,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c7"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_6"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -155,7 +155,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c3"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_2"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -168,7 +168,7 @@
         android:autofillHints=""
         android:inputType="text"
         android:text="@string/c0"
-        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView_"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor" />
