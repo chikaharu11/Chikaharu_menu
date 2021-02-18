@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">せがれメニュー</string>
-    <string name="c0">せがれメニュー</string>
+    <string name="app_name">Segare_Menu</string>
+    <string name="c0">Segare_Menu</string>
     <string name="c1">月</string>
     <string name="c2">火</string>
     <string name="c3">水</string>
@@ -8,18 +8,18 @@
     <string name="c5">金</string>
     <string name="c6">土</string>
     <string name="c7">日</string>
-    <string name="mm1">夜メイン</string>
-    <string name="mm2">昼メイン</string>
-    <string name="sm2">昼サブ</string>
-    <string name="sm1">夜サブ</string>
+    <string name="mm1">おかず２</string>
+    <string name="mm2">メイン</string>
+    <string name="sm2">おかず１</string>
+    <string name="sm1">おかず３</string>
     <string name="MenuList1">各項目の編集</string>
     <string name="MenuList2">画面保存</string>
     <string name="MenuList3">ヘルプ</string>
     <string name="MenuList4">初期メニュー表示切替</string>
-    <string name="MenuList5a">夜メインの選択削除</string>
-    <string name="MenuList5b">夜サブの選択削除</string>
-    <string name="MenuList5c">昼メインの選択削除</string>
-    <string name="MenuList5d">昼サブの選択削除</string>
+    <string name="MenuList5a">おかず２の選択削除</string>
+    <string name="MenuList5b">おかず３の選択削除</string>
+    <string name="MenuList5c">メインの選択削除</string>
+    <string name="MenuList5d">おかず１の選択削除</string>
     <string name="MenuList6">初期状態に戻す</string>
     <string name="MenuList7">メニューを保存する</string>
     <string name="MenuList8">終了する</string>

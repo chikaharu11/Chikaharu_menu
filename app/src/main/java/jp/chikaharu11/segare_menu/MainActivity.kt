@@ -122,6 +122,11 @@ class MainActivity : AppCompatActivity() {
             supportActionBar?.title = item5
         }
 
+        view1.setOnClickListener{
+            view1.visibility = View.INVISIBLE
+        }
+
+
 
 
         val cuisine1 = mutableSetOf(
