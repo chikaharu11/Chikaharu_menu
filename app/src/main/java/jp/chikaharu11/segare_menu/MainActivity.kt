@@ -75,13 +75,13 @@ class MainActivity : AppCompatActivity() {
         val week7 = mRealm.where(Book5::class.java).equalTo("id", 6.toLong()).findFirst()?.name
 
         if(week1 != null){
-            textView.text = week1
-            textView2.text = week2
-            textView3.text = week3
-            textView4.text = week4
-            textView5.text = week5
-            textView6.text = week6
-            textView7.text = week7
+            textView.setText(week1, TextView.BufferType.NORMAL)
+            textView2.setText(week2, TextView.BufferType.NORMAL)
+            textView3.setText(week3, TextView.BufferType.NORMAL)
+            textView4.setText(week4, TextView.BufferType.NORMAL)
+            textView5.setText(week5, TextView.BufferType.NORMAL)
+            textView6.setText(week6, TextView.BufferType.NORMAL)
+            textView7.setText(week7, TextView.BufferType.NORMAL)
         }
 
         val item1 = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
@@ -965,36 +965,6 @@ class MainActivity : AppCompatActivity() {
                 builder.setView(dialogView)
                     .setTitle("各項目の名前を変更できます。")
                     .setPositiveButton("変更する") { _, _ ->
-                        mRealm.executeTransaction {
-                            mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
-                            val week1 = mRealm.createObject<Book5>(0)
-                            val a = dialogView.findViewById<EditText>(R.id.textView_).text.toString()
-                            week1.name = a
-
-                            val week2 = mRealm.createObject<Book5>(1)
-                            val a2 = dialogView.findViewById<EditText>(R.id.textView_2).text.toString()
-                            week2.name = a2
-
-                            val week3 = mRealm.createObject<Book5>(2)
-                            val a3 = dialogView.findViewById<EditText>(R.id.textView_3).text.toString()
-                            week3.name = a3
-
-                            val week4 = mRealm.createObject<Book5>(3)
-                            val a4 = dialogView.findViewById<EditText>(R.id.textView_4).text.toString()
-                            week4.name = a4
-
-                            val week5 = mRealm.createObject<Book5>(4)
-                            val a5 = dialogView.findViewById<EditText>(R.id.textView_5).text.toString()
-                            week5.name = a5
-
-                            val week6 = mRealm.createObject<Book5>(5)
-                            val a6 = dialogView.findViewById<EditText>(R.id.textView_6).text.toString()
-                            week6.name = a6
-
-                            val week7 = mRealm.createObject<Book5>(6)
-                            val a7 = dialogView.findViewById<EditText>(R.id.textView_7).text.toString()
-                            week7.name = a7
-                        }
 
                         mRealm.executeTransaction {
                             mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
@@ -1265,6 +1235,30 @@ class MainActivity : AppCompatActivity() {
                         create4(stringText46)
                         val stringText47 = editText14n.text.toString()
                         create4(stringText47)
+
+                mRealm.executeTransaction {
+                    mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
+                    val week1 = mRealm.createObject<Book5>(0)
+                    week1.name = textView.text.toString()
+
+                    val week2 = mRealm.createObject<Book5>(1)
+                    week2.name = textView2.text.toString()
+
+                    val week3 = mRealm.createObject<Book5>(2)
+                    week3.name = textView3.text.toString()
+
+                    val week4 = mRealm.createObject<Book5>(3)
+                    week4.name = textView4.text.toString()
+
+                    val week5 = mRealm.createObject<Book5>(4)
+                    week5.name = textView5.text.toString()
+
+                    val week6 = mRealm.createObject<Book5>(5)
+                    week6.name = textView6.text.toString()
+
+                    val week7 = mRealm.createObject<Book5>(6)
+                    week7.name = textView7.text.toString()
+                }
 
                         Toast.makeText(applicationContext, "保存しました。\n次にアプリを開いた時に追加されます。", Toast.LENGTH_LONG).show()
 

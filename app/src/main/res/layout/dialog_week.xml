@@ -13,13 +13,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_2"
+        app:layout_constraintBottom_toTopOf="@+id/editText_8"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_8"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -27,13 +28,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:gravity="start|top"
-        android:inputType="text"
         android:hint="@string/mm1"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_3"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_8n"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -41,11 +43,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="180dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
-        android:autoSizeTextType="uniform"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_8"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="LabelFor,MissingConstraints" />
@@ -55,105 +57,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="180dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
-        android:autoSizeTextType="uniform"
         app:layout_constraintBaseline_toBaselineOf="@+id/editText_8n"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_4"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c4"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_3"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_6"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c6"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_5"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_5"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c5"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_4"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_2"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c2"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="50dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c1"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_7"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c7"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_6"
-        tools:ignore="LabelFor,MissingConstraints" />
-
-    <EditText
-        android:id="@+id/textView_3"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c3"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_2"
         tools:ignore="LabelFor,MissingConstraints" />
 
     <EditText
@@ -161,13 +71,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:autofillHints=""
-        android:inputType="text"
-        android:hint="@string/c0"
         android:autoSizeTextType="uniform"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView_"
+        android:autofillHints=""
+        android:hint="@string/c0"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editText_8n"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="LabelFor" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor,MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
