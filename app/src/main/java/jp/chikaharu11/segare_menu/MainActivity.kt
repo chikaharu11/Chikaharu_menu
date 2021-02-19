@@ -999,22 +999,47 @@ class MainActivity : AppCompatActivity() {
                         mRealm.executeTransaction {
                             mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
                             val item1 = mRealm.createObject<Book6>(0)
-                            val a = dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
-                            item1.name = a
+                            item1.name = dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
 
                             val item2 = mRealm.createObject<Book6>(1)
-                            val a2 = dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
-                            item2.name = a2
+                            item2.name = dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
 
                             val item3 = mRealm.createObject<Book6>(2)
-                            val a3 = dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
-                            item3.name = a3
+                            item3.name = dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
 
                             val item4 = mRealm.createObject<Book6>(3)
-                            val a4 = dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
-                            item4.name = a4
+                            item4.name = dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
+
+                            editText8n.hint = item1.name
+                            editText4n.hint = item1.name
+                            editText13n.hint = item1.name
+                            editTextn.hint = item1.name
+                            editText11n.hint = item1.name
+                            editText10n.hint = item1.name
+                            editText12n.hint = item1.name
+                            editText9n.hint = item2.name
+                            editText7n.hint = item2.name
+                            editText15n.hint = item2.name
+                            editText16n.hint = item2.name
+                            editText18n.hint = item2.name
+                            editText17n.hint = item2.name
+                            editText14n.hint = item2.name
+                            editText8.hint = item3.name
+                            editText4.hint = item3.name
+                            editText13.hint = item3.name
+                            editText.hint = item3.name
+                            editText11.hint = item3.name
+                            editText10.hint = item3.name
+                            editText12.hint = item3.name
+                            editText9.hint = item4.name
+                            editText7.hint = item4.name
+                            editText15.hint = item4.name
+                            editText16.hint = item4.name
+                            editText18.hint = item4.name
+                            editText17.hint = item4.name
+                            editText14.hint = item4.name
                         }
-                        Toast.makeText(applicationContext, "次にアプリを開いた時に変更されます。", Toast.LENGTH_LONG)
+                        Toast.makeText(applicationContext, "変更しました。", Toast.LENGTH_SHORT)
                             .show()
                     }
                     .setNegativeButton("キャンセル") { _, _ ->
@@ -1026,7 +1051,28 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList10 -> {
+                val builder = android.app.AlertDialog.Builder(this)
+                val inflater = layoutInflater
+                val dialogView2 = inflater.inflate(R.layout.dialog_title, null)
 
+                builder.setView(dialogView2)
+                    .setTitle("タイトルを変更できます。")
+                    .setPositiveButton("変更する") { _, _ ->
+                        mRealm.executeTransaction {
+                            mRealm.where(Book6::class.java).equalTo("id", 4.toLong()).findFirst()?.deleteFromRealm()
+                            val item5 = mRealm.createObject<Book6>(4)
+                            item5.name = dialogView2.findViewById<EditText>(R.id.editText_title).text.toString()
+
+                            supportActionBar?.title = item5.name
+                        }
+                        Toast.makeText(applicationContext, "変更しました。", Toast.LENGTH_SHORT)
+                            .show()
+                    }
+                    .setNegativeButton("キャンセル") { _, _ ->
+
+                    }
+
+                    .show()
                 return true
             }
 
