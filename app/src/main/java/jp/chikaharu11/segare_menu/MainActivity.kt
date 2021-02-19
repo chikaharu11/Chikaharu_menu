@@ -125,6 +125,36 @@ class MainActivity : AppCompatActivity() {
         view1.setOnClickListener{
             view1.visibility = View.INVISIBLE
         }
+        view2.setOnClickListener{
+            view2.visibility = View.INVISIBLE
+        }
+        view3.setOnClickListener{
+            view3.visibility = View.INVISIBLE
+        }
+        view4.setOnClickListener{
+            view4.visibility = View.INVISIBLE
+        }
+        view5.setOnClickListener{
+            view5.visibility = View.INVISIBLE
+        }
+        view.setOnClickListener{
+            view.visibility = View.INVISIBLE
+        }
+        view7.setOnClickListener{
+            view7.visibility = View.INVISIBLE
+        }
+        view8.setOnClickListener{
+            view8.visibility = View.INVISIBLE
+        }
+        view6.setOnClickListener{
+            view6.visibility = View.INVISIBLE
+        }
+        view9.setOnClickListener{
+            view9.visibility = View.INVISIBLE
+        }
+        view10.setOnClickListener{
+            view10.visibility = View.INVISIBLE
+        }
 
 
 
@@ -963,7 +993,7 @@ class MainActivity : AppCompatActivity() {
                 val dialogView = inflater.inflate(R.layout.dialog_week, null)
 
                 builder.setView(dialogView)
-                    .setTitle("各項目の名前を変更できます。")
+                    .setTitle("項目の名前を変更できます。")
                     .setPositiveButton("変更する") { _, _ ->
 
                         mRealm.executeTransaction {
@@ -983,10 +1013,6 @@ class MainActivity : AppCompatActivity() {
                             val item4 = mRealm.createObject<Book6>(3)
                             val a4 = dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
                             item4.name = a4
-
-                            val item5 = mRealm.createObject<Book6>(4)
-                            val a5 = dialogView.findViewById<EditText>(R.id.textView_8).text.toString()
-                            item5.name = a5
                         }
                         Toast.makeText(applicationContext, "次にアプリを開いた時に変更されます。", Toast.LENGTH_LONG)
                             .show()
@@ -996,6 +1022,29 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     .show()
+                return true
+            }
+
+            R.id.MenuList10 -> {
+
+                return true
+            }
+
+            R.id.MenuList12 -> {
+                view1.visibility = View.VISIBLE
+                view2.visibility = View.VISIBLE
+                view3.visibility = View.VISIBLE
+                view4.visibility = View.VISIBLE
+                view5.visibility = View.VISIBLE
+                view.visibility = View.VISIBLE
+                view7.visibility = View.VISIBLE
+                view8.visibility = View.VISIBLE
+                view6.visibility = View.VISIBLE
+                view9.visibility = View.VISIBLE
+                view10.visibility = View.VISIBLE
+                Toast.makeText(applicationContext, "ラインをタッチすると消すことができます。", Toast.LENGTH_LONG)
+                    .show()
+
                 return true
             }
 

@@ -390,15 +390,14 @@
         android:id="@+id/editText14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="190dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
-        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view6"
         app:layout_constraintTop_toBottomOf="@+id/editText14n"
         tools:ignore="LabelFor" />
 
@@ -630,6 +629,32 @@
         android:background="#000000"
         app:layout_constraintBottom_toTopOf="@+id/editText8n"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view9"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view10"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <Switch

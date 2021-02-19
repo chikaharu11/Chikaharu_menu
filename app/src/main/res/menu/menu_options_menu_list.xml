@@ -9,6 +9,16 @@
         android:title="@string/MenuList1" />
 
     <item
+        android:id="@+id/MenuList10"
+        app:showAsAction="never"
+        android:title="@string/MenuList10" />
+
+    <item
+        android:id="@+id/MenuList12"
+        app:showAsAction="never"
+        android:title="@string/MenuList12" />
+
+    <item
         android:id="@+id/MenuList2"
         app:showAsAction="ifRoom"
         android:icon="@drawable/ic_baseline_camera_alt_24"
