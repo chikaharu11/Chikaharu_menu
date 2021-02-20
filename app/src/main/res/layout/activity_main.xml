@@ -255,12 +255,12 @@
         android:id="@+id/editText11n"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/editText11"
         app:layout_constraintStart_toStartOf="@+id/editText11"
         app:layout_constraintTop_toBottomOf="@+id/editText"
@@ -466,13 +466,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c1"
+        android:hint="@string/hint"
         android:background="#00000000"
         android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText8n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText8n"
         android:autofillHints=""
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxWidth="36dp"
         tools:ignore="LabelFor" />
 
     <EditText
@@ -480,13 +483,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c2"
+        android:hint="@string/hint"
         android:background="#00000000"
         android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText4n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText4n"
         android:autofillHints=""
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
     <EditText
@@ -494,13 +500,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c3"
+        android:hint="@string/hint"
         android:background="#00000000"
         android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText13n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText13n"
         android:autofillHints=""
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
     <EditText
@@ -508,13 +517,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c4"
+        android:hint="@string/hint"
         android:background="#00000000"
         android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editTextn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextn"
         android:autofillHints=""
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
     <EditText
@@ -522,13 +534,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c5"
+        android:hint="@string/hint"
         android:background="#00000000"
         android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText11n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText11n"
         android:autofillHints=""
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
     <EditText
@@ -536,13 +551,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c6"
+        android:hint="@string/hint"
         android:background="#00000000"
         android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText10n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText10n"
         android:autofillHints=""
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
     <EditText
@@ -550,13 +568,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c7"
+        android:hint="@string/hint"
         android:background="#00000000"
         android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText12n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText12n"
         android:autofillHints=""
-        android:inputType="text"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
     <View

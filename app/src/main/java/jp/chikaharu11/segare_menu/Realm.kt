@@ -52,3 +52,11 @@ open class Book6: RealmObject() {
     open var name : String = ""
     open var boolean : Boolean = true
 }
+
+open class Book7: RealmObject() {
+
+    @PrimaryKey
+    open var id: Long = 0
+    @Required
+    open var name : String = ""
+}

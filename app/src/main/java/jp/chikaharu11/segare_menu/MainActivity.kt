@@ -88,37 +88,38 @@ class MainActivity : AppCompatActivity() {
         val item2 = mRealm.where(Book6::class.java).equalTo("id", 1.toLong()).findFirst()?.name
         val item3 = mRealm.where(Book6::class.java).equalTo("id", 2.toLong()).findFirst()?.name
         val item4 = mRealm.where(Book6::class.java).equalTo("id", 3.toLong()).findFirst()?.name
-        val item5 = mRealm.where(Book6::class.java).equalTo("id", 4.toLong()).findFirst()?.name
+
+        val item5 = mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()?.name
 
         if(item1 != null) {
-            editText8n.hint = item1
-            editText4n.hint = item1
-            editText13n.hint = item1
-            editTextn.hint = item1
-            editText11n.hint = item1
-            editText10n.hint = item1
-            editText12n.hint = item1
-            editText9n.hint = item2
-            editText7n.hint = item2
-            editText15n.hint = item2
-            editText16n.hint = item2
-            editText18n.hint = item2
-            editText17n.hint = item2
-            editText14n.hint = item2
-            editText8.hint = item3
-            editText4.hint = item3
-            editText13.hint = item3
-            editText.hint = item3
-            editText11.hint = item3
-            editText10.hint = item3
-            editText12.hint = item3
-            editText9.hint = item4
-            editText7.hint = item4
-            editText15.hint = item4
-            editText16.hint = item4
-            editText18.hint = item4
-            editText17.hint = item4
-            editText14.hint = item4
+            editText8n.hint = item1 + "_"
+            editText4n.hint = item1 + "_"
+            editText13n.hint = item1 + "_"
+            editTextn.hint = item1 + "_"
+            editText11n.hint = item1 + "_"
+            editText10n.hint = item1 + "_"
+            editText12n.hint = item1 + "_"
+            editText9n.hint = item2 + "_"
+            editText7n.hint = item2 + "_"
+            editText15n.hint = item2 + "_"
+            editText16n.hint = item2 + "_"
+            editText18n.hint = item2 + "_"
+            editText17n.hint = item2 + "_"
+            editText14n.hint = item2 + "_"
+            editText8.hint = item3 + "_"
+            editText4.hint = item3 + "_"
+            editText13.hint = item3 + "_"
+            editText.hint = item3 + "_"
+            editText11.hint = item3 + "_"
+            editText10.hint = item3 + "_"
+            editText12.hint = item3 + "_"
+            editText9.hint = item4 + "_"
+            editText7.hint = item4 + "_"
+            editText15.hint = item4 + "_"
+            editText16.hint = item4 + "_"
+            editText18.hint = item4 + "_"
+            editText17.hint = item4 + "_"
+            editText14.hint = item4 + "_"
             supportActionBar?.title = item5
         }
 
@@ -1010,36 +1011,36 @@ class MainActivity : AppCompatActivity() {
                             val item4 = mRealm.createObject<Book6>(3)
                             item4.name = dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
 
-                            editText8n.hint = item1.name
-                            editText4n.hint = item1.name
-                            editText13n.hint = item1.name
-                            editTextn.hint = item1.name
-                            editText11n.hint = item1.name
-                            editText10n.hint = item1.name
-                            editText12n.hint = item1.name
-                            editText9n.hint = item2.name
-                            editText7n.hint = item2.name
-                            editText15n.hint = item2.name
-                            editText16n.hint = item2.name
-                            editText18n.hint = item2.name
-                            editText17n.hint = item2.name
-                            editText14n.hint = item2.name
-                            editText8.hint = item3.name
-                            editText4.hint = item3.name
-                            editText13.hint = item3.name
-                            editText.hint = item3.name
-                            editText11.hint = item3.name
-                            editText10.hint = item3.name
-                            editText12.hint = item3.name
-                            editText9.hint = item4.name
-                            editText7.hint = item4.name
-                            editText15.hint = item4.name
-                            editText16.hint = item4.name
-                            editText18.hint = item4.name
-                            editText17.hint = item4.name
-                            editText14.hint = item4.name
+                            editText8n.hint = item1.name + "_"
+                            editText4n.hint = item1.name + "_"
+                            editText13n.hint = item1.name + "_"
+                            editTextn.hint = item1.name + "_"
+                            editText11n.hint = item1.name + "_"
+                            editText10n.hint = item1.name + "_"
+                            editText12n.hint = item1.name + "_"
+                            editText9n.hint = item2.name + "_"
+                            editText7n.hint = item2.name + "_"
+                            editText15n.hint = item2.name + "_"
+                            editText16n.hint = item2.name + "_"
+                            editText18n.hint = item2.name + "_"
+                            editText17n.hint = item2.name + "_"
+                            editText14n.hint = item2.name + "_"
+                            editText8.hint = item3.name + "_"
+                            editText4.hint = item3.name + "_"
+                            editText13.hint = item3.name + "_"
+                            editText.hint = item3.name + "_"
+                            editText11.hint = item3.name + "_"
+                            editText10.hint = item3.name + "_"
+                            editText12.hint = item3.name + "_"
+                            editText9.hint = item4.name + "_"
+                            editText7.hint = item4.name + "_"
+                            editText15.hint = item4.name + "_"
+                            editText16.hint = item4.name + "_"
+                            editText18.hint = item4.name + "_"
+                            editText17.hint = item4.name + "_"
+                            editText14.hint = item4.name + "_"
                         }
-                        Toast.makeText(applicationContext, "変更しました。", Toast.LENGTH_SHORT)
+                        Toast.makeText(applicationContext, "項目の名前を変更しました。", Toast.LENGTH_SHORT)
                             .show()
                     }
                     .setNegativeButton("キャンセル") { _, _ ->
@@ -1059,13 +1060,13 @@ class MainActivity : AppCompatActivity() {
                     .setTitle("タイトルを変更できます。")
                     .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
-                            mRealm.where(Book6::class.java).equalTo("id", 4.toLong()).findFirst()?.deleteFromRealm()
-                            val item5 = mRealm.createObject<Book6>(4)
+                            mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()?.deleteFromRealm()
+                            val item5 = mRealm.createObject<Book7>(0)
                             item5.name = dialogView2.findViewById<EditText>(R.id.editText_title).text.toString()
 
                             supportActionBar?.title = item5.name
                         }
-                        Toast.makeText(applicationContext, "変更しました。", Toast.LENGTH_SHORT)
+                        Toast.makeText(applicationContext, "タイトルを変更しました。", Toast.LENGTH_SHORT)
                             .show()
                     }
                     .setNegativeButton("キャンセル") { _, _ ->
@@ -1088,7 +1089,7 @@ class MainActivity : AppCompatActivity() {
                 view6.visibility = View.VISIBLE
                 view9.visibility = View.VISIBLE
                 view10.visibility = View.VISIBLE
-                Toast.makeText(applicationContext, "ラインをタッチすると消すことができます。", Toast.LENGTH_LONG)
+                Toast.makeText(applicationContext, "ラインはタッチすると消すことができます。", Toast.LENGTH_LONG)
                     .show()
 
                 return true
@@ -1256,11 +1257,11 @@ class MainActivity : AppCompatActivity() {
             R.id.MenuList6 -> {
                 AlertDialog.Builder(this)
                     .setTitle("初期状態に戻しますか？")
-                    .setMessage("(登録した内容が全て消去されます)")
+                    .setMessage("(登録した内容を全て消去して、\n再起動します。)")
                     .setPositiveButton("YES") { _, _ ->
                         delete()
-                        Toast.makeText(applicationContext, "次にアプリを開いた時から\n初期状態に戻ります。", Toast.LENGTH_LONG)
-                            .show()
+                        ProcessPhoenix.triggerRebirth(this)
+
                     }
                     .setNegativeButton("NO") { _, _ ->
 
@@ -1355,7 +1356,7 @@ class MainActivity : AppCompatActivity() {
                     week7.name = textView7.text.toString()
                 }
 
-                        Toast.makeText(applicationContext, "保存しました。\n次にアプリを開いた時に追加されます。", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, "保存しました。\n次にアプリを開いた時から追加されます。", Toast.LENGTH_LONG).show()
 
                 return true
             }
