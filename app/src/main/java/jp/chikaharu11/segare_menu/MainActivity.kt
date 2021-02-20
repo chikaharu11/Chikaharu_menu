@@ -11,11 +11,13 @@ import android.os.Environment
 import android.os.Handler
 import android.view.Menu
 import android.view.MenuItem
+import android.view.MotionEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.jakewharton.processphoenix.ProcessPhoenix
@@ -30,6 +32,10 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var container: ConstraintLayout
+
+    private lateinit var inputMethodManager: InputMethodManager
+
     private val handler = Handler()
 
     private lateinit var mRealm: Realm
@@ -43,6 +49,10 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        container = findViewById(R.id.allView)
+
+        inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
 
         val audioAttributes = AudioAttributes.Builder()
 
@@ -842,6 +852,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onTouchEvent(event: MotionEvent): Boolean {
+
+        inputMethodManager.hideSoftInputFromWindow(container.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+
+        container.requestFocus()
+
+        return false
     }
 
 
