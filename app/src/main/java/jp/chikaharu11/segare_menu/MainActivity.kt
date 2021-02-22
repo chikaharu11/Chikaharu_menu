@@ -992,6 +992,49 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+    override fun onPrepareOptionsMenu(menu: Menu?):Boolean {
+
+        super.onPrepareOptionsMenu(menu)
+
+        val menu1 = menu?.findItem(R.id.MenuList5c)
+        val item1a = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
+
+        if (item1a != null) {
+            if (menu1 != null) {
+                menu1.title = item1a + "の編集"
+            }
+        }
+
+        val menu2 = menu?.findItem(R.id.MenuList5d)
+        val item2a = mRealm.where(Book6::class.java).equalTo("id", 1.toLong()).findFirst()?.name
+
+        if (item2a != null) {
+            if (menu2 != null) {
+                menu2.title = item2a + "の編集"
+            }
+        }
+
+        val menu3 = menu?.findItem(R.id.MenuList5a)
+        val item3a = mRealm.where(Book6::class.java).equalTo("id", 2.toLong()).findFirst()?.name
+
+        if (item3a != null) {
+            if (menu3 != null) {
+                menu3.title = item3a + "の編集"
+            }
+        }
+
+        val menu4 = menu?.findItem(R.id.MenuList5b)
+        val item4a = mRealm.where(Book6::class.java).equalTo("id", 3.toLong()).findFirst()?.name
+
+        if (item4a != null) {
+            if (menu4 != null) {
+                menu4.title = item4a + "の編集"
+            }
+        }
+        return true
+
+    }
+
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         val fragment4 = MenuListFragmentActivity4()
