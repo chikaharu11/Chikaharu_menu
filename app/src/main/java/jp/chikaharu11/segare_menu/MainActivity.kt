@@ -2,13 +2,16 @@ package jp.chikaharu11.segare_menu
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.media.AudioAttributes
 import android.media.SoundPool
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
+import android.provider.DocumentsContract
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
@@ -43,6 +46,20 @@ class MainActivity : AppCompatActivity() {
     private lateinit var soundPool: SoundPool
 
     private var sound1 = 0
+
+    companion object {
+        private const val READ_REQUEST_CODE: Int = 42
+    }
+
+    private fun selectAudio() {
+        val sa = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.segare_menu%2Ffiles%2FDCIM")
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            putExtra(DocumentsContract.EXTRA_INITIAL_URI, sa)
+            type = "image/png"
+        }
+        startActivityForResult(intent, READ_REQUEST_CODE)
+    }
 
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -863,6 +880,18 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
+    override fun onActivityResult(requestCode: Int, resultCode: Int, resultData: Intent?) {
+        super.onActivityResult(requestCode, resultCode, resultData)
+        if (resultCode != RESULT_OK) {
+            return
+        }
+        when (requestCode) {
+            READ_REQUEST_CODE -> {
+
+            }
+        }
+    }
+
 
     @SuppressLint("SimpleDateFormat")
     private fun getBitmapFromView(view: View):Bitmap {
@@ -1159,6 +1188,7 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList2 -> {
                 getBitmapFromView(allView)
+                selectAudio()
                 return true
             }
 
