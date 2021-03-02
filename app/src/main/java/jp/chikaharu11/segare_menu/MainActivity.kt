@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.graphics.Canvas
 import android.media.AudioAttributes
 import android.media.SoundPool
@@ -21,14 +22,14 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
+import androidx.core.content.FileProvider
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.File
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
@@ -51,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         private const val READ_REQUEST_CODE: Int = 42
     }
 
-    private fun selectAudio() {
+    private fun selectMenu() {
         val sa = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.segare_menu%2Ffiles%2FDCIM")
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
@@ -888,7 +889,30 @@ class MainActivity : AppCompatActivity() {
         when (requestCode) {
             READ_REQUEST_CODE -> {
 
+                resultData?.data?.also { uri ->
+
+                    val inputStream = contentResolver?.openInputStream(uri)
+                    val image = BitmapFactory.decodeStream(inputStream)
+
+                    val cachePath = File(this.cacheDir, "images")
+                    cachePath.mkdirs()
+                    val filePath = File(cachePath, "cache.png")
+                    val fos = FileOutputStream(filePath.absolutePath)
+                    image.compress(Bitmap.CompressFormat.PNG, 100, fos)
+                    fos.close()
+
+                    val contentUri = FileProvider.getUriForFile(this, applicationContext.packageName + ".fileprovider", filePath)
+
+                    val shareIntent = Intent()
+                    shareIntent.action = Intent.ACTION_SEND
+                    shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    shareIntent.setDataAndType(contentUri, contentResolver.getType(contentUri))
+                    shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri)
+                    startActivity(Intent.createChooser(shareIntent, "アプリを選ぶ"))
+                }
+
             }
+
         }
     }
 
@@ -1066,16 +1090,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        val fragment4 = MenuListFragmentActivity4()
+        MenuListFragmentActivity4()
 
-
-        fun replaceFragment(fragment: Fragment) {
-            val fragmentManager = supportFragmentManager
-            val fragmentTransaction = fragmentManager.beginTransaction()
-            fragmentTransaction.addToBackStack(null)
-            fragmentTransaction.replace(R.id.container, fragment)
-            fragmentTransaction.commit()
-        }
 
         when (item.itemId) {
 
@@ -1188,19 +1204,11 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList2 -> {
                 getBitmapFromView(allView)
-                selectAudio()
                 return true
             }
 
             R.id.MenuList3 -> {
-                switch2.setOnCheckedChangeListener { _, isChecked ->
-                    if (isChecked) replaceFragment(fragment4)
-                    else supportFragmentManager.popBackStack(
-                        null,
-                        FragmentManager.POP_BACK_STACK_INCLUSIVE
-                    )
-                }
-                switch2.performClick()
+                selectMenu()
                 return true
             }
 
