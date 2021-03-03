@@ -1184,6 +1184,28 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
 
+            R.id.MenuList13 -> {
+                textView.textSize = 30f
+                textView2.textSize = 30f
+                textView3.textSize = 30f
+                textView4.textSize = 30f
+                textView5.textSize = 30f
+                textView6.textSize = 30f
+                textView7.textSize = 30f
+                return true
+            }
+
+            R.id.MenuList14 -> {
+                textView.textSize = 10f
+                textView2.textSize = 10f
+                textView3.textSize = 10f
+                textView4.textSize = 10f
+                textView5.textSize = 10f
+                textView6.textSize = 10f
+                textView7.textSize = 10f
+                return true
+            }
+
             R.id.MenuList12 -> {
                 view1.visibility = View.VISIBLE
                 view2.visibility = View.VISIBLE
