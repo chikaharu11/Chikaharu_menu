@@ -48,6 +48,8 @@ class MainActivity : AppCompatActivity() {
 
     private var sound1 = 0
 
+    private var count = 16.toFloat()
+
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
     }
@@ -874,7 +876,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
 
-        inputMethodManager.hideSoftInputFromWindow(container.windowToken, InputMethodManager.HIDE_NOT_ALWAYS)
+        inputMethodManager.hideSoftInputFromWindow(
+            container.windowToken,
+            InputMethodManager.HIDE_NOT_ALWAYS
+        )
 
         container.requestFocus()
 
@@ -901,7 +906,11 @@ class MainActivity : AppCompatActivity() {
                     image.compress(Bitmap.CompressFormat.PNG, 100, fos)
                     fos.close()
 
-                    val contentUri = FileProvider.getUriForFile(this, applicationContext.packageName + ".fileprovider", filePath)
+                    val contentUri = FileProvider.getUriForFile(
+                        this,
+                        applicationContext.packageName + ".fileprovider",
+                        filePath
+                    )
 
                     val shareIntent = Intent()
                     shareIntent.action = Intent.ACTION_SEND
@@ -1088,6 +1097,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    @SuppressLint("SetTextI18n")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         MenuListFragmentActivity4()
@@ -1107,16 +1117,20 @@ class MainActivity : AppCompatActivity() {
                         mRealm.executeTransaction {
                             mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
                             val item1 = mRealm.createObject<Book6>(0)
-                            item1.name = dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
+                            item1.name =
+                                dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
 
                             val item2 = mRealm.createObject<Book6>(1)
-                            item2.name = dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
+                            item2.name =
+                                dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
 
                             val item3 = mRealm.createObject<Book6>(2)
-                            item3.name = dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
+                            item3.name =
+                                dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
 
                             val item4 = mRealm.createObject<Book6>(3)
-                            item4.name = dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
+                            item4.name =
+                                dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
 
                             editText8n.hint = item1.name + "　　　　"
                             editText4n.hint = item1.name + "　　　　"
@@ -1167,9 +1181,11 @@ class MainActivity : AppCompatActivity() {
                     .setTitle("タイトルを変更できます。")
                     .setPositiveButton("変更する") { _, _ ->
                         mRealm.executeTransaction {
-                            mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()?.deleteFromRealm()
+                            mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()
+                                ?.deleteFromRealm()
                             val item5 = mRealm.createObject<Book7>(0)
-                            item5.name = dialogView2.findViewById<EditText>(R.id.editText_title).text.toString()
+                            item5.name =
+                                dialogView2.findViewById<EditText>(R.id.editText_title).text.toString()
 
                             supportActionBar?.title = item5.name
                         }
@@ -1185,24 +1201,88 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList13 -> {
-                textView.textSize = 30f
-                textView2.textSize = 30f
-                textView3.textSize = 30f
-                textView4.textSize = 30f
-                textView5.textSize = 30f
-                textView6.textSize = 30f
-                textView7.textSize = 30f
+
+                count++
+
+                textView.textSize = count
+                textView2.textSize = count
+                textView3.textSize = count
+                textView4.textSize = count
+                textView5.textSize = count
+                textView6.textSize = count
+                textView7.textSize = count
+                editText8.textSize = count
+                editText4.textSize = count
+                editText13.textSize = count
+                editText13n.textSize = count
+                editText9.textSize = count
+                editText7.textSize = count
+                editText8n.textSize = count
+                editText4n.textSize = count
+                editTextn.textSize = count
+                editText10n.textSize = count
+                editText10.textSize = count
+                editText.textSize = count
+                editText12n.textSize = count
+                editText12.textSize = count
+                editText11n.textSize = count
+                editText11.textSize = count
+                editText9n.textSize = count
+                editText7n.textSize = count
+                editText15n.textSize = count
+                editText15.textSize = count
+                editText17n.textSize = count
+                editText14n.textSize = count
+                editText16.textSize = count
+                editText14.textSize = count
+                editText18.textSize = count
+                editText17.textSize = count
+                editText18n.textSize = count
+                editText16n.textSize = count
+
                 return true
             }
 
             R.id.MenuList14 -> {
-                textView.textSize = 10f
-                textView2.textSize = 10f
-                textView3.textSize = 10f
-                textView4.textSize = 10f
-                textView5.textSize = 10f
-                textView6.textSize = 10f
-                textView7.textSize = 10f
+
+                count--
+
+                textView.textSize = count
+                textView2.textSize = count
+                textView3.textSize = count
+                textView4.textSize = count
+                textView5.textSize = count
+                textView6.textSize = count
+                textView7.textSize = count
+                editText8.textSize = count
+                editText4.textSize = count
+                editText13.textSize = count
+                editText13n.textSize = count
+                editText9.textSize = count
+                editText7.textSize = count
+                editText8n.textSize = count
+                editText4n.textSize = count
+                editTextn.textSize = count
+                editText10n.textSize = count
+                editText10.textSize = count
+                editText.textSize = count
+                editText12n.textSize = count
+                editText12.textSize = count
+                editText11n.textSize = count
+                editText11.textSize = count
+                editText9n.textSize = count
+                editText7n.textSize = count
+                editText15n.textSize = count
+                editText15.textSize = count
+                editText17n.textSize = count
+                editText14n.textSize = count
+                editText16.textSize = count
+                editText14.textSize = count
+                editText18.textSize = count
+                editText17.textSize = count
+                editText18n.textSize = count
+                editText16n.textSize = count
+
                 return true
             }
 
@@ -1394,65 +1474,65 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList7 -> {
-                        val stringText11 = editText8.text.toString()
-                        create(stringText11)
-                        val stringText12 = editText4.text.toString()
-                        create(stringText12)
-                        val stringText13 = editText13.text.toString()
-                        create(stringText13)
-                        val stringText14 = editText.text.toString()
-                        create(stringText14)
-                        val stringText15 = editText11.text.toString()
-                        create(stringText15)
-                        val stringText16 = editText10.text.toString()
-                        create(stringText16)
-                        val stringText17 = editText12.text.toString()
-                        create(stringText17)
+                val stringText11 = editText8.text.toString()
+                create(stringText11)
+                val stringText12 = editText4.text.toString()
+                create(stringText12)
+                val stringText13 = editText13.text.toString()
+                create(stringText13)
+                val stringText14 = editText.text.toString()
+                create(stringText14)
+                val stringText15 = editText11.text.toString()
+                create(stringText15)
+                val stringText16 = editText10.text.toString()
+                create(stringText16)
+                val stringText17 = editText12.text.toString()
+                create(stringText17)
 
-                        val stringText21 = editText9.text.toString()
-                        create2(stringText21)
-                        val stringText22 = editText7.text.toString()
-                        create2(stringText22)
-                        val stringText23 = editText15.text.toString()
-                        create2(stringText23)
-                        val stringText24 = editText16.text.toString()
-                        create2(stringText24)
-                        val stringText25 = editText18.text.toString()
-                        create2(stringText25)
-                        val stringText26 = editText17.text.toString()
-                        create2(stringText26)
-                        val stringText27 = editText14.text.toString()
-                        create2(stringText27)
+                val stringText21 = editText9.text.toString()
+                create2(stringText21)
+                val stringText22 = editText7.text.toString()
+                create2(stringText22)
+                val stringText23 = editText15.text.toString()
+                create2(stringText23)
+                val stringText24 = editText16.text.toString()
+                create2(stringText24)
+                val stringText25 = editText18.text.toString()
+                create2(stringText25)
+                val stringText26 = editText17.text.toString()
+                create2(stringText26)
+                val stringText27 = editText14.text.toString()
+                create2(stringText27)
 
-                        val stringText31 = editText8n.text.toString()
-                        create3(stringText31)
-                        val stringText32 = editText4n.text.toString()
-                        create3(stringText32)
-                        val stringText33 = editText13n.text.toString()
-                        create3(stringText33)
-                        val stringText34 = editTextn.text.toString()
-                        create3(stringText34)
-                        val stringText35 = editText11n.text.toString()
-                        create3(stringText35)
-                        val stringText36 = editText10n.text.toString()
-                        create3(stringText36)
-                        val stringText37 = editText12n.text.toString()
-                        create3(stringText37)
+                val stringText31 = editText8n.text.toString()
+                create3(stringText31)
+                val stringText32 = editText4n.text.toString()
+                create3(stringText32)
+                val stringText33 = editText13n.text.toString()
+                create3(stringText33)
+                val stringText34 = editTextn.text.toString()
+                create3(stringText34)
+                val stringText35 = editText11n.text.toString()
+                create3(stringText35)
+                val stringText36 = editText10n.text.toString()
+                create3(stringText36)
+                val stringText37 = editText12n.text.toString()
+                create3(stringText37)
 
-                        val stringText41 = editText9n.text.toString()
-                        create4(stringText41)
-                        val stringText42 = editText7n.text.toString()
-                        create4(stringText42)
-                        val stringText43 = editText15n.text.toString()
-                        create4(stringText43)
-                        val stringText44 = editText16n.text.toString()
-                        create4(stringText44)
-                        val stringText45 = editText18n.text.toString()
-                        create4(stringText45)
-                        val stringText46 = editText17n.text.toString()
-                        create4(stringText46)
-                        val stringText47 = editText14n.text.toString()
-                        create4(stringText47)
+                val stringText41 = editText9n.text.toString()
+                create4(stringText41)
+                val stringText42 = editText7n.text.toString()
+                create4(stringText42)
+                val stringText43 = editText15n.text.toString()
+                create4(stringText43)
+                val stringText44 = editText16n.text.toString()
+                create4(stringText44)
+                val stringText45 = editText18n.text.toString()
+                create4(stringText45)
+                val stringText46 = editText17n.text.toString()
+                create4(stringText46)
+                val stringText47 = editText14n.text.toString()
+                create4(stringText47)
 
                 mRealm.executeTransaction {
                     mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
@@ -1478,7 +1558,11 @@ class MainActivity : AppCompatActivity() {
                     week7.name = textView7.text.toString()
                 }
 
-                        Toast.makeText(applicationContext, "保存しました。\n次にアプリを開いた時から追加されます。", Toast.LENGTH_LONG).show()
+                Toast.makeText(
+                    applicationContext,
+                    "保存しました。\n次にアプリを開いた時から追加されます。",
+                    Toast.LENGTH_LONG
+                ).show()
 
                 return true
             }
