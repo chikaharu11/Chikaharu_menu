@@ -55,10 +55,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectMenu() {
-        val sa = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.segare_menu%2Ffiles%2FDCIM")
+        val saf = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.segare_menu%2Ffiles%2FDCIM")
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
-            putExtra(DocumentsContract.EXTRA_INITIAL_URI, sa)
+            putExtra(DocumentsContract.EXTRA_INITIAL_URI, saf)
             type = "image/*"
         }
         startActivityForResult(intent, READ_REQUEST_CODE)
