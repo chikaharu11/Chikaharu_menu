@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
             putExtra(DocumentsContract.EXTRA_INITIAL_URI, sa)
-            type = "image/png"
+            type = "image/*"
         }
         startActivityForResult(intent, READ_REQUEST_CODE)
     }
@@ -1185,7 +1185,7 @@ class MainActivity : AppCompatActivity() {
                                 ?.deleteFromRealm()
                             val item5 = mRealm.createObject<Book7>(0)
                             item5.name =
-                                dialogView2.findViewById<EditText>(R.id.editText_title).text.toString()
+                                dialogView2.findViewById<EditText>(R.id.editText_title).text.toString().replace("/", " ")
 
                             supportActionBar?.title = item5.name
                         }
