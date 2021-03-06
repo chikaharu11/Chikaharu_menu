@@ -31,5 +31,7 @@
     <string name="MenuList8">終了する</string>
     <string name="MenuList9">再起動する</string>
     <string name="Description">TODO</string>
+    <string name="MenuList15">曜日を隠す</string>
+    <string name="MenuList3a">設定</string>
 
 </resources>

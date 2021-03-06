@@ -22,6 +22,7 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.FileProvider
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
@@ -62,6 +63,226 @@ class MainActivity : AppCompatActivity() {
             type = "image/*"
         }
         startActivityForResult(intent, READ_REQUEST_CODE)
+    }
+
+    fun menuList1() {
+        val builder = android.app.AlertDialog.Builder(this)
+        val inflater = layoutInflater
+        val dialogView = inflater.inflate(R.layout.dialog_week, null)
+
+        builder.setView(dialogView)
+            .setTitle("項目の名前を変更できます。")
+            .setPositiveButton("変更する") { _, _ ->
+
+                mRealm.executeTransaction {
+                    mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
+                    val item1 = mRealm.createObject<Book6>(0)
+                    item1.name =
+                        dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
+
+                    val item2 = mRealm.createObject<Book6>(1)
+                    item2.name =
+                        dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
+
+                    val item3 = mRealm.createObject<Book6>(2)
+                    item3.name =
+                        dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
+
+                    val item4 = mRealm.createObject<Book6>(3)
+                    item4.name =
+                        dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
+
+                    editText8n.hint = item1.name + "　　　　"
+                    editText4n.hint = item1.name + "　　　　"
+                    editText13n.hint = item1.name + "　　　　"
+                    editTextn.hint = item1.name + "　　　　"
+                    editText11n.hint = item1.name + "　　　　"
+                    editText10n.hint = item1.name + "　　　　"
+                    editText12n.hint = item1.name + "　　　　"
+                    editText9n.hint = item2.name + "　　　　"
+                    editText7n.hint = item2.name + "　　　　"
+                    editText15n.hint = item2.name + "　　　　"
+                    editText16n.hint = item2.name + "　　　　"
+                    editText18n.hint = item2.name + "　　　　"
+                    editText17n.hint = item2.name + "　　　　"
+                    editText14n.hint = item2.name + "　　　　"
+                    editText8.hint = item3.name + "　　　　"
+                    editText4.hint = item3.name + "　　　　"
+                    editText13.hint = item3.name + "　　　　"
+                    editText.hint = item3.name + "　　　　"
+                    editText11.hint = item3.name + "　　　　"
+                    editText10.hint = item3.name + "　　　　"
+                    editText12.hint = item3.name + "　　　　"
+                    editText9.hint = item4.name + "　　　　"
+                    editText7.hint = item4.name + "　　　　"
+                    editText15.hint = item4.name + "　　　　"
+                    editText16.hint = item4.name + "　　　　"
+                    editText18.hint = item4.name + "　　　　"
+                    editText17.hint = item4.name + "　　　　"
+                    editText14.hint = item4.name + "　　　　"
+                }
+                Toast.makeText(applicationContext, "項目の名前を変更しました。", Toast.LENGTH_SHORT)
+                    .show()
+            }
+            .setNegativeButton("キャンセル") { _, _ ->
+
+            }
+
+            .show()
+        return
+    }
+
+    fun menuList10() {
+        val builder = android.app.AlertDialog.Builder(this)
+        val inflater = layoutInflater
+        val dialogView2 = inflater.inflate(R.layout.dialog_title, null)
+
+        builder.setView(dialogView2)
+            .setTitle("タイトルを変更できます。")
+            .setPositiveButton("変更する") { _, _ ->
+                mRealm.executeTransaction {
+                    mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()
+                        ?.deleteFromRealm()
+                    val item5 = mRealm.createObject<Book7>(0)
+                    item5.name =
+                        dialogView2.findViewById<EditText>(R.id.editText_title).text.toString().replace("/", " ")
+
+                    supportActionBar?.title = item5.name
+                }
+                Toast.makeText(applicationContext, "タイトルを変更しました。", Toast.LENGTH_SHORT)
+                    .show()
+            }
+            .setNegativeButton("キャンセル") { _, _ ->
+
+            }
+
+            .show()
+        return
+    }
+
+    fun menuList13() {
+
+        count++
+
+        textView.textSize = count
+        textView2.textSize = count
+        textView3.textSize = count
+        textView4.textSize = count
+        textView5.textSize = count
+        textView6.textSize = count
+        textView7.textSize = count
+        editText8.textSize = count
+        editText4.textSize = count
+        editText13.textSize = count
+        editText13n.textSize = count
+        editText9.textSize = count
+        editText7.textSize = count
+        editText8n.textSize = count
+        editText4n.textSize = count
+        editTextn.textSize = count
+        editText10n.textSize = count
+        editText10.textSize = count
+        editText.textSize = count
+        editText12n.textSize = count
+        editText12.textSize = count
+        editText11n.textSize = count
+        editText11.textSize = count
+        editText9n.textSize = count
+        editText7n.textSize = count
+        editText15n.textSize = count
+        editText15.textSize = count
+        editText17n.textSize = count
+        editText14n.textSize = count
+        editText16.textSize = count
+        editText14.textSize = count
+        editText18.textSize = count
+        editText17.textSize = count
+        editText18n.textSize = count
+        editText16n.textSize = count
+
+        return
+    }
+
+    fun menuList14() {
+
+        count--
+
+        textView.textSize = count
+        textView2.textSize = count
+        textView3.textSize = count
+        textView4.textSize = count
+        textView5.textSize = count
+        textView6.textSize = count
+        textView7.textSize = count
+        editText8.textSize = count
+        editText4.textSize = count
+        editText13.textSize = count
+        editText13n.textSize = count
+        editText9.textSize = count
+        editText7.textSize = count
+        editText8n.textSize = count
+        editText4n.textSize = count
+        editTextn.textSize = count
+        editText10n.textSize = count
+        editText10.textSize = count
+        editText.textSize = count
+        editText12n.textSize = count
+        editText12.textSize = count
+        editText11n.textSize = count
+        editText11.textSize = count
+        editText9n.textSize = count
+        editText7n.textSize = count
+        editText15n.textSize = count
+        editText15.textSize = count
+        editText17n.textSize = count
+        editText14n.textSize = count
+        editText16.textSize = count
+        editText14.textSize = count
+        editText18.textSize = count
+        editText17.textSize = count
+        editText18n.textSize = count
+        editText16n.textSize = count
+
+        return
+    }
+
+    fun menuList15() {
+
+        findViewById<EditText>(R.id.textView).visibility = View.INVISIBLE
+        findViewById<EditText>(R.id.textView2).visibility = View.INVISIBLE
+        findViewById<EditText>(R.id.textView3).visibility = View.INVISIBLE
+        findViewById<EditText>(R.id.textView4).visibility = View.INVISIBLE
+        findViewById<EditText>(R.id.textView5).visibility = View.INVISIBLE
+        findViewById<EditText>(R.id.textView6).visibility = View.INVISIBLE
+        findViewById<EditText>(R.id.textView7).visibility = View.INVISIBLE
+
+        val constraintSet = ConstraintSet()
+        constraintSet.clone(allView)
+
+        constraintSet.connect(editText12.id, ConstraintSet.START, view10.id, ConstraintSet.END, 2)
+
+        constraintSet.applyTo(allView)
+
+        return
+    }
+
+    fun menuList12() {
+
+        view1.visibility = View.VISIBLE
+        view2.visibility = View.VISIBLE
+        view3.visibility = View.VISIBLE
+        view4.visibility = View.VISIBLE
+        view5.visibility = View.VISIBLE
+        view.visibility = View.VISIBLE
+        view7.visibility = View.VISIBLE
+        view8.visibility = View.VISIBLE
+        view6.visibility = View.VISIBLE
+        view9.visibility = View.VISIBLE
+        view10.visibility = View.VISIBLE
+        Toast.makeText(applicationContext, "ラインはタッチすると消すことができます。", Toast.LENGTH_LONG)
+            .show()
+
+        return
     }
 
     @SuppressLint("UseSwitchCompatOrMaterialCode")
@@ -150,6 +371,8 @@ class MainActivity : AppCompatActivity() {
             editText18.hint = "$item4　　　　"
             editText17.hint = "$item4　　　　"
             editText14.hint = "$item4　　　　"
+        }
+        if(item5 != null){
             supportActionBar?.title = item5
         }
 
@@ -872,6 +1095,56 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        val menu1 = listOf(
+            "タイトルの編集",
+            "項目の編集",
+            "文字を大きくする",
+            "文字を小さくする",
+            "ラインを引く",
+            "曜日を隠す"
+        )
+
+        val menuSpinner = findViewById<Spinner>(R.id.customSpinner5)
+
+        val adapterM = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, menu1
+        )
+
+        adapterM.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+
+        menuSpinner.adapter = adapterM
+
+
+        menuSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?, position: Int, id: Long
+            ) {
+                if (!menuSpinner.isFocusable) {
+                    menuSpinner.isFocusable = true
+                    return
+                }
+                when(position){
+                    0 -> menuList10()
+                    1 -> menuList1()
+                    2 -> menuList13()
+                    3 -> menuList14()
+                    4 -> menuList12()
+                    5 -> menuList15()
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        menuSpinner.isFocusable = false
+
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
@@ -1105,205 +1378,6 @@ class MainActivity : AppCompatActivity() {
 
         when (item.itemId) {
 
-            R.id.MenuList1 -> {
-                val builder = android.app.AlertDialog.Builder(this)
-                val inflater = layoutInflater
-                val dialogView = inflater.inflate(R.layout.dialog_week, null)
-
-                builder.setView(dialogView)
-                    .setTitle("項目の名前を変更できます。")
-                    .setPositiveButton("変更する") { _, _ ->
-
-                        mRealm.executeTransaction {
-                            mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
-                            val item1 = mRealm.createObject<Book6>(0)
-                            item1.name =
-                                dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
-
-                            val item2 = mRealm.createObject<Book6>(1)
-                            item2.name =
-                                dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
-
-                            val item3 = mRealm.createObject<Book6>(2)
-                            item3.name =
-                                dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
-
-                            val item4 = mRealm.createObject<Book6>(3)
-                            item4.name =
-                                dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
-
-                            editText8n.hint = item1.name + "　　　　"
-                            editText4n.hint = item1.name + "　　　　"
-                            editText13n.hint = item1.name + "　　　　"
-                            editTextn.hint = item1.name + "　　　　"
-                            editText11n.hint = item1.name + "　　　　"
-                            editText10n.hint = item1.name + "　　　　"
-                            editText12n.hint = item1.name + "　　　　"
-                            editText9n.hint = item2.name + "　　　　"
-                            editText7n.hint = item2.name + "　　　　"
-                            editText15n.hint = item2.name + "　　　　"
-                            editText16n.hint = item2.name + "　　　　"
-                            editText18n.hint = item2.name + "　　　　"
-                            editText17n.hint = item2.name + "　　　　"
-                            editText14n.hint = item2.name + "　　　　"
-                            editText8.hint = item3.name + "　　　　"
-                            editText4.hint = item3.name + "　　　　"
-                            editText13.hint = item3.name + "　　　　"
-                            editText.hint = item3.name + "　　　　"
-                            editText11.hint = item3.name + "　　　　"
-                            editText10.hint = item3.name + "　　　　"
-                            editText12.hint = item3.name + "　　　　"
-                            editText9.hint = item4.name + "　　　　"
-                            editText7.hint = item4.name + "　　　　"
-                            editText15.hint = item4.name + "　　　　"
-                            editText16.hint = item4.name + "　　　　"
-                            editText18.hint = item4.name + "　　　　"
-                            editText17.hint = item4.name + "　　　　"
-                            editText14.hint = item4.name + "　　　　"
-                        }
-                        Toast.makeText(applicationContext, "項目の名前を変更しました。", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-                    .setNegativeButton("キャンセル") { _, _ ->
-
-                    }
-
-                    .show()
-                return true
-            }
-
-            R.id.MenuList10 -> {
-                val builder = android.app.AlertDialog.Builder(this)
-                val inflater = layoutInflater
-                val dialogView2 = inflater.inflate(R.layout.dialog_title, null)
-
-                builder.setView(dialogView2)
-                    .setTitle("タイトルを変更できます。")
-                    .setPositiveButton("変更する") { _, _ ->
-                        mRealm.executeTransaction {
-                            mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()
-                                ?.deleteFromRealm()
-                            val item5 = mRealm.createObject<Book7>(0)
-                            item5.name =
-                                dialogView2.findViewById<EditText>(R.id.editText_title).text.toString().replace("/", " ")
-
-                            supportActionBar?.title = item5.name
-                        }
-                        Toast.makeText(applicationContext, "タイトルを変更しました。", Toast.LENGTH_SHORT)
-                            .show()
-                    }
-                    .setNegativeButton("キャンセル") { _, _ ->
-
-                    }
-
-                    .show()
-                return true
-            }
-
-            R.id.MenuList13 -> {
-
-                count++
-
-                textView.textSize = count
-                textView2.textSize = count
-                textView3.textSize = count
-                textView4.textSize = count
-                textView5.textSize = count
-                textView6.textSize = count
-                textView7.textSize = count
-                editText8.textSize = count
-                editText4.textSize = count
-                editText13.textSize = count
-                editText13n.textSize = count
-                editText9.textSize = count
-                editText7.textSize = count
-                editText8n.textSize = count
-                editText4n.textSize = count
-                editTextn.textSize = count
-                editText10n.textSize = count
-                editText10.textSize = count
-                editText.textSize = count
-                editText12n.textSize = count
-                editText12.textSize = count
-                editText11n.textSize = count
-                editText11.textSize = count
-                editText9n.textSize = count
-                editText7n.textSize = count
-                editText15n.textSize = count
-                editText15.textSize = count
-                editText17n.textSize = count
-                editText14n.textSize = count
-                editText16.textSize = count
-                editText14.textSize = count
-                editText18.textSize = count
-                editText17.textSize = count
-                editText18n.textSize = count
-                editText16n.textSize = count
-
-                return true
-            }
-
-            R.id.MenuList14 -> {
-
-                count--
-
-                textView.textSize = count
-                textView2.textSize = count
-                textView3.textSize = count
-                textView4.textSize = count
-                textView5.textSize = count
-                textView6.textSize = count
-                textView7.textSize = count
-                editText8.textSize = count
-                editText4.textSize = count
-                editText13.textSize = count
-                editText13n.textSize = count
-                editText9.textSize = count
-                editText7.textSize = count
-                editText8n.textSize = count
-                editText4n.textSize = count
-                editTextn.textSize = count
-                editText10n.textSize = count
-                editText10.textSize = count
-                editText.textSize = count
-                editText12n.textSize = count
-                editText12.textSize = count
-                editText11n.textSize = count
-                editText11.textSize = count
-                editText9n.textSize = count
-                editText7n.textSize = count
-                editText15n.textSize = count
-                editText15.textSize = count
-                editText17n.textSize = count
-                editText14n.textSize = count
-                editText16.textSize = count
-                editText14.textSize = count
-                editText18.textSize = count
-                editText17.textSize = count
-                editText18n.textSize = count
-                editText16n.textSize = count
-
-                return true
-            }
-
-            R.id.MenuList12 -> {
-                view1.visibility = View.VISIBLE
-                view2.visibility = View.VISIBLE
-                view3.visibility = View.VISIBLE
-                view4.visibility = View.VISIBLE
-                view5.visibility = View.VISIBLE
-                view.visibility = View.VISIBLE
-                view7.visibility = View.VISIBLE
-                view8.visibility = View.VISIBLE
-                view6.visibility = View.VISIBLE
-                view9.visibility = View.VISIBLE
-                view10.visibility = View.VISIBLE
-                Toast.makeText(applicationContext, "ラインはタッチすると消すことができます。", Toast.LENGTH_LONG)
-                    .show()
-
-                return true
-            }
-
             R.id.MenuList2 -> {
                 getBitmapFromView(allView)
                 return true
@@ -1311,6 +1385,11 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList3 -> {
                 selectMenu()
+                return true
+            }
+
+            R.id.MenuList3a -> {
+                customSpinner5.performClick()
                 return true
             }
 
