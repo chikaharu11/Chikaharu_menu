@@ -22,6 +22,12 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_baseline_settings_24"
         android:title="@string/MenuList3a" />
+
+    <item
+        android:id="@+id/MenuList1"
+        app:showAsAction="always"
+        android:title="@string/MenuList"
+        tools:ignore="AlwaysShowAction" />
     
     <item
         android:id="@+id/MenuList5c"

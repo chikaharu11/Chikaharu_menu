@@ -33,5 +33,7 @@
     <string name="Description">TODO</string>
     <string name="MenuList15">曜日を隠す</string>
     <string name="MenuList3a">設定</string>
+    <string name="MenuList">書く／貼付</string>
+    <string name="switch1">書く／貼付</string>
 
 </resources>

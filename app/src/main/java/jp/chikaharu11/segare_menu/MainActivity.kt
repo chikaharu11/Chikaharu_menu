@@ -6,6 +6,8 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.media.AudioAttributes
 import android.media.SoundPool
 import android.net.Uri
@@ -17,6 +19,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
 import android.view.View
+import android.view.View.OnFocusChangeListener
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
@@ -145,7 +148,10 @@ class MainActivity : AppCompatActivity() {
                         ?.deleteFromRealm()
                     val item5 = mRealm.createObject<Book7>(0)
                     item5.name =
-                        dialogView2.findViewById<EditText>(R.id.editText_title).text.toString().replace("/", " ")
+                        dialogView2.findViewById<EditText>(R.id.editText_title).text.toString().replace(
+                            "/",
+                            " "
+                        )
 
                     supportActionBar?.title = item5.name
                 }
@@ -505,13 +511,20 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText8.hasFocus() -> editText8.setText(item, TextView.BufferType.NORMAL)
-                    editText4.hasFocus() -> editText4.setText(item, TextView.BufferType.NORMAL)
-                    editText.hasFocus() -> editText.setText(item, TextView.BufferType.NORMAL)
-                    editText10.hasFocus() -> editText10.setText(item, TextView.BufferType.NORMAL)
-                    editText11.hasFocus() -> editText11.setText(item, TextView.BufferType.NORMAL)
-                    editText12.hasFocus() -> editText12.setText(item, TextView.BufferType.NORMAL)
-                    editText13.hasFocus() -> editText13.setText(item, TextView.BufferType.NORMAL)
+                    editText8.hasFocus() -> { editText8.setText(item, TextView.BufferType.NORMAL)
+                        editText8.clearFocus() }
+                    editText4.hasFocus() -> { editText4.setText(item, TextView.BufferType.NORMAL)
+                        editText4.clearFocus() }
+                    editText.hasFocus() -> { editText.setText(item, TextView.BufferType.NORMAL)
+                        editText.clearFocus() }
+                    editText10.hasFocus() -> { editText10.setText(item, TextView.BufferType.NORMAL)
+                        editText10.clearFocus() }
+                    editText11.hasFocus() -> { editText11.setText(item, TextView.BufferType.NORMAL)
+                        editText11.clearFocus() }
+                    editText12.hasFocus() -> { editText12.setText(item, TextView.BufferType.NORMAL)
+                        editText12.clearFocus() }
+                    editText13.hasFocus() -> { editText13.setText(item, TextView.BufferType.NORMAL)
+                        editText13.clearFocus() }
                 }
 
             }
@@ -587,13 +600,20 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText9.hasFocus() -> editText9.setText(item, TextView.BufferType.NORMAL)
-                    editText7.hasFocus() -> editText7.setText(item, TextView.BufferType.NORMAL)
-                    editText14.hasFocus() -> editText14.setText(item, TextView.BufferType.NORMAL)
-                    editText15.hasFocus() -> editText15.setText(item, TextView.BufferType.NORMAL)
-                    editText16.hasFocus() -> editText16.setText(item, TextView.BufferType.NORMAL)
-                    editText17.hasFocus() -> editText17.setText(item, TextView.BufferType.NORMAL)
-                    editText18.hasFocus() -> editText18.setText(item, TextView.BufferType.NORMAL)
+                    editText9.hasFocus() -> { editText9.setText(item, TextView.BufferType.NORMAL)
+                        editText9.clearFocus() }
+                    editText7.hasFocus() -> { editText7.setText(item, TextView.BufferType.NORMAL)
+                        editText7.clearFocus() }
+                    editText14.hasFocus() -> { editText14.setText(item, TextView.BufferType.NORMAL)
+                        editText14.clearFocus() }
+                    editText15.hasFocus() -> { editText15.setText(item, TextView.BufferType.NORMAL)
+                        editText15.clearFocus() }
+                    editText16.hasFocus() -> { editText16.setText(item, TextView.BufferType.NORMAL)
+                        editText16.clearFocus() }
+                    editText17.hasFocus() -> { editText17.setText(item, TextView.BufferType.NORMAL)
+                        editText17.clearFocus() }
+                    editText18.hasFocus() -> { editText18.setText(item, TextView.BufferType.NORMAL)
+                        editText18.clearFocus() }
                 }
 
             }
@@ -603,98 +623,174 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        fun hideKeyboard() {
-            val view = currentFocus
-            if (view != null) {
-                val manager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
-                manager.hideSoftInputFromWindow(view.windowToken, 0)
+
+        editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText8.setTextIsSelectable(true)
+                customSpinner.performClick()
             }
         }
-
-
-        editText8.setOnLongClickListener {
-            editText8.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner.performClick() }, 300)
-            true
+        editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText4.setTextIsSelectable(true)
+                customSpinner.performClick()
+            }
         }
-        editText4.setOnLongClickListener {
-            editText4.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner.performClick() }, 300)
-            true
+        editText.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText.setTextIsSelectable(true)
+                customSpinner.performClick()
+            }
         }
-        editText.setOnLongClickListener {
-            editText.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner.performClick() }, 300)
-            true
+        editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText10.setTextIsSelectable(true)
+                customSpinner.performClick()
+            }
         }
-        editText10.setOnLongClickListener {
-            editText10.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner.performClick() }, 300)
-            true
+        editText11.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText11.setTextIsSelectable(true)
+                customSpinner.performClick()
+            }
         }
-        editText11.setOnLongClickListener {
-            editText11.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner.performClick() }, 300)
-            true
+        editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText12.setTextIsSelectable(true)
+                customSpinner.performClick()
+            }
         }
-        editText12.setOnLongClickListener {
-            editText12.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner.performClick() }, 300)
-            true
+        editText13.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText13.setTextIsSelectable(true)
+                customSpinner.performClick()
+            }
         }
-        editText13.setOnLongClickListener {
-            editText13.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner.performClick() }, 300)
-            true
+        editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText9.setTextIsSelectable(true)
+                customSpinner2.performClick()
+            }
         }
-        editText9.setOnLongClickListener {
-            editText9.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner2.performClick() }, 300)
-            true
+        editText7.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText7.setTextIsSelectable(true)
+                customSpinner2.performClick()
+            }
         }
-        editText7.setOnLongClickListener {
-            editText7.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner2.performClick() }, 300)
-            true
+        editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText14.setTextIsSelectable(true)
+                customSpinner2.performClick()
+            }
         }
-        editText14.setOnLongClickListener {
-            editText14.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner2.performClick() }, 300)
-            true
+        editText15.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText15.setTextIsSelectable(true)
+                customSpinner2.performClick()
+            }
         }
-        editText15.setOnLongClickListener {
-            editText15.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner2.performClick() }, 300)
-            true
+        editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText16.setTextIsSelectable(true)
+                customSpinner2.performClick()
+            }
         }
-        editText16.setOnLongClickListener {
-            editText16.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner2.performClick() }, 300)
-            true
+        editText17.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText17.setTextIsSelectable(true)
+                customSpinner2.performClick()
+            }
         }
-        editText17.setOnLongClickListener {
-            editText17.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner2.performClick() }, 300)
-            true
+        editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText18.setTextIsSelectable(true)
+                customSpinner2.performClick()
+            }
         }
-        editText18.setOnLongClickListener {
-            editText18.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner2.performClick() }, 300)
-            true
+        editText8n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText8n.setTextIsSelectable(true)
+                customSpinner3.performClick()
+            }
+        }
+        editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText4n.setTextIsSelectable(true)
+                customSpinner3.performClick()
+            }
+        }
+        editTextn.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editTextn.setTextIsSelectable(true)
+                customSpinner3.performClick()
+            }
+        }
+        editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText10n.setTextIsSelectable(true)
+                customSpinner3.performClick()
+            }
+        }
+        editText11n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText11n.setTextIsSelectable(true)
+                customSpinner3.performClick()
+            }
+        }
+        editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText12n.setTextIsSelectable(true)
+                customSpinner3.performClick()
+            }
+        }
+        editText13n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText13n.setTextIsSelectable(true)
+                customSpinner3.performClick()
+            }
+        }
+        editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText9n.setTextIsSelectable(true)
+                customSpinner4.performClick()
+            }
+        }
+        editText7n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText7n.setTextIsSelectable(true)
+                customSpinner4.performClick()
+            }
+        }
+        editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText14n.setTextIsSelectable(true)
+                customSpinner4.performClick()
+            }
+        }
+        editText15n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText15n.setTextIsSelectable(true)
+                customSpinner4.performClick()
+            }
+        }
+        editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText16n.setTextIsSelectable(true)
+                customSpinner4.performClick()
+            }
+        }
+        editText17n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText17n.setTextIsSelectable(true)
+                customSpinner4.performClick()
+            }
+        }
+        editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (switch1.isChecked && hasFocus) {
+                editText18n.setTextIsSelectable(true)
+                customSpinner4.performClick()
+            }
         }
 
         val cuisine3 = mutableSetOf(
@@ -751,13 +847,32 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText8n.hasFocus() -> editText8n.setText(item, TextView.BufferType.NORMAL)
-                    editText4n.hasFocus() -> editText4n.setText(item, TextView.BufferType.NORMAL)
-                    editTextn.hasFocus() -> editTextn.setText(item, TextView.BufferType.NORMAL)
-                    editText10n.hasFocus() -> editText10n.setText(item, TextView.BufferType.NORMAL)
-                    editText11n.hasFocus() -> editText11n.setText(item, TextView.BufferType.NORMAL)
-                    editText12n.hasFocus() -> editText12n.setText(item, TextView.BufferType.NORMAL)
-                    editText13n.hasFocus() -> editText13n.setText(item, TextView.BufferType.NORMAL)
+                    editText8n.hasFocus() -> { editText8n.setText(item, TextView.BufferType.NORMAL)
+                        editText8n.clearFocus() }
+                    editText4n.hasFocus() -> { editText4n.setText(item, TextView.BufferType.NORMAL)
+                        editText4n.clearFocus() }
+                    editTextn.hasFocus() -> { editTextn.setText(item, TextView.BufferType.NORMAL)
+                        editTextn.clearFocus() }
+                    editText10n.hasFocus() -> { editText10n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText10n.clearFocus() }
+                    editText11n.hasFocus() -> { editText11n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText11n.clearFocus() }
+                    editText12n.hasFocus() -> { editText12n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText12n.clearFocus() }
+                    editText13n.hasFocus() -> { editText13n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText13n.clearFocus() }
                 }
 
             }
@@ -819,13 +934,35 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText9n.hasFocus() -> editText9n.setText(item, TextView.BufferType.NORMAL)
-                    editText7n.hasFocus() -> editText7n.setText(item, TextView.BufferType.NORMAL)
-                    editText14n.hasFocus() -> editText14n.setText(item, TextView.BufferType.NORMAL)
-                    editText15n.hasFocus() -> editText15n.setText(item, TextView.BufferType.NORMAL)
-                    editText16n.hasFocus() -> editText16n.setText(item, TextView.BufferType.NORMAL)
-                    editText17n.hasFocus() -> editText17n.setText(item, TextView.BufferType.NORMAL)
-                    editText18n.hasFocus() -> editText18n.setText(item, TextView.BufferType.NORMAL)
+                    editText9n.hasFocus() -> { editText9n.setText(item, TextView.BufferType.NORMAL)
+                        editText9n.clearFocus() }
+                    editText7n.hasFocus() -> { editText7n.setText(item, TextView.BufferType.NORMAL)
+                        editText7n.clearFocus() }
+                    editText14n.hasFocus() -> { editText14n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText14n.clearFocus() }
+                    editText15n.hasFocus() -> { editText15n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText15n.clearFocus() }
+                    editText16n.hasFocus() -> { editText16n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText16n.clearFocus() }
+                    editText17n.hasFocus() -> { editText17n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText17n.clearFocus() }
+                    editText18n.hasFocus() -> { editText18n.setText(
+                        item,
+                        TextView.BufferType.NORMAL
+                    )
+                        editText18n.clearFocus() }
                 }
             }
 
@@ -834,90 +971,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        editText8n.setOnLongClickListener {
-            editText8n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner3.performClick() }, 300)
-            true
-        }
-        editText4n.setOnLongClickListener {
-            editText4n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner3.performClick() }, 300)
-            true
-        }
-        editTextn.setOnLongClickListener {
-            editTextn.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner3.performClick() }, 300)
-            true
-        }
-        editText10n.setOnLongClickListener {
-            editText10n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner3.performClick() }, 300)
-            true
-        }
-        editText11n.setOnLongClickListener {
-            editText11n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner3.performClick() }, 300)
-            true
-        }
-        editText12n.setOnLongClickListener {
-            editText12n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner3.performClick() }, 300)
-            true
-        }
-        editText13n.setOnLongClickListener {
-            editText13n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner3.performClick() }, 300)
-            true
-        }
-        editText9n.setOnLongClickListener {
-            editText9n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner4.performClick() }, 300)
-            true
-        }
-        editText7n.setOnLongClickListener {
-            editText7n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner4.performClick() }, 300)
-            true
-        }
-        editText14n.setOnLongClickListener {
-            editText14n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner4.performClick() }, 300)
-            true
-        }
-        editText15n.setOnLongClickListener {
-            editText15n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner4.performClick() }, 300)
-            true
-        }
-        editText16n.setOnLongClickListener {
-            editText16n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner4.performClick() }, 300)
-            true
-        }
-        editText17n.setOnLongClickListener {
-            editText17n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner4.performClick() }, 300)
-            true
-        }
-        editText18n.setOnLongClickListener {
-            editText18n.requestFocus()
-            hideKeyboard()
-            handler.postDelayed({ customSpinner4.performClick() }, 300)
-            true
-        }
+
 
         val menuList1 = mutableSetOf(
             "[選択したメニューを削除できます]"
@@ -1296,6 +1350,13 @@ class MainActivity : AppCompatActivity() {
 
         menuInflater.inflate(R.menu.menu_options_menu_list, menu)
 
+        val menuLamp = menu.findItem(R.id.MenuList1)
+        if (menuSwitch) {
+            menuLamp.setIcon(R.drawable.ic_create_white_24dp)
+        } else {
+            menuLamp.setIcon(R.drawable.ic_baseline_content_paste_24)
+        }
+
         val menu1 = menu.findItem(R.id.MenuList5c)
         val item1a = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
 
@@ -1370,6 +1431,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    private var menuSwitch = true
+
     @SuppressLint("SetTextI18n")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
@@ -1377,6 +1440,25 @@ class MainActivity : AppCompatActivity() {
 
 
         when (item.itemId) {
+
+            R.id.MenuList1 -> {
+                if (switch1.isChecked) {
+                    menuSwitch = true
+                    invalidateOptionsMenu()
+                    supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6200EE")))
+                    Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
+                    switch1.isChecked = false
+                } else {
+                    menuSwitch = false
+                    invalidateOptionsMenu()
+                    supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
+                    val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                    inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+                    Toast.makeText(applicationContext, "貼り付けモード", Toast.LENGTH_SHORT).show()
+                    switch1.isChecked = true
+                }
+                return true
+            }
 
             R.id.MenuList2 -> {
                 getBitmapFromView(allView)
