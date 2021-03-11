@@ -7,7 +7,7 @@
     <item
         android:id="@+id/MenuList2"
         app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_camera_alt_24"
+        android:icon="@drawable/ic_screenshot_icon_icons_com_55819"
         android:title="@string/MenuList2"
         tools:ignore="AlwaysShowAction" />
 
