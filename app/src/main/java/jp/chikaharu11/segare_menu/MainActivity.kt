@@ -853,25 +853,13 @@ class MainActivity : AppCompatActivity() {
                         editText4n.clearFocus() }
                     editTextn.hasFocus() -> { editTextn.setText(item, TextView.BufferType.NORMAL)
                         editTextn.clearFocus() }
-                    editText10n.hasFocus() -> { editText10n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    editText10n.hasFocus() -> { editText10n.setText(item, TextView.BufferType.NORMAL)
                         editText10n.clearFocus() }
-                    editText11n.hasFocus() -> { editText11n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    editText11n.hasFocus() -> { editText11n.setText(item, TextView.BufferType.NORMAL)
                         editText11n.clearFocus() }
-                    editText12n.hasFocus() -> { editText12n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    editText12n.hasFocus() -> { editText12n.setText(item, TextView.BufferType.NORMAL)
                         editText12n.clearFocus() }
-                    editText13n.hasFocus() -> { editText13n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    editText13n.hasFocus() -> { editText13n.setText(item, TextView.BufferType.NORMAL)
                         editText13n.clearFocus() }
                 }
 
