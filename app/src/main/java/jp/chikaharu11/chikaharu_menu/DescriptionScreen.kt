@@ -1,4 +1,4 @@
-package jp.chikaharu11.segare_menu
+package jp.chikaharu11.chikaharu_menu
 
 import android.os.Bundle
 import android.view.LayoutInflater

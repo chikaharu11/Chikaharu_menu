@@ -702,7 +702,7 @@
         android:visibility="invisible"
         tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
-    <jp.chikaharu11.segare_menu.CSpinner
+    <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/customSpinner"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
@@ -713,7 +713,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <jp.chikaharu11.segare_menu.CSpinner
+    <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/customSpinner2"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
@@ -724,7 +724,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <jp.chikaharu11.segare_menu.CSpinner
+    <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/customSpinner3"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
@@ -735,7 +735,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <jp.chikaharu11.segare_menu.CSpinner
+    <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/customSpinner4"
         android:layout_width="57dp"
         android:layout_height="wrap_content"
@@ -746,7 +746,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <jp.chikaharu11.segare_menu.CSpinner
+    <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/customSpinner5"
         android:layout_width="57dp"
         android:layout_height="wrap_content"

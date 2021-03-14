@@ -1,4 +1,4 @@
-package jp.chikaharu11.segare_menu
+package jp.chikaharu11.chikaharu_menu
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

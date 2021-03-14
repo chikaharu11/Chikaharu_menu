@@ -1,4 +1,4 @@
-package jp.chikaharu11.segare_menu
+package jp.chikaharu11.chikaharu_menu
 
 import io.realm.RealmObject
 import io.realm.annotations.PrimaryKey
