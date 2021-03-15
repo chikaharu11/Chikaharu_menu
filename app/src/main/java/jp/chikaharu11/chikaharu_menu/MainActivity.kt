@@ -380,6 +380,8 @@ class MainActivity : AppCompatActivity() {
         }
         if(item5 != null){
             supportActionBar?.title = item5
+        } else {
+            supportActionBar?.title = "Menu"
         }
 
         view1.setOnClickListener{
