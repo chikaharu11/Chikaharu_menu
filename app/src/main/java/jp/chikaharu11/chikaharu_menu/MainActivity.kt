@@ -27,6 +27,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.FileProvider
+import com.google.gson.Gson
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -316,6 +317,11 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         sound1 = soundPool.load(this, R.raw.ta, 1)
+
+        val modelList: List<Model> = readFromAsset()
+
+        val customDropDownAdapter = CustomDropDownAdapter(this, modelList)
+        spinner04.adapter = customDropDownAdapter
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -1189,6 +1195,18 @@ class MainActivity : AppCompatActivity() {
 
         menuSpinner.isFocusable = false
 
+    }
+
+    private fun readFromAsset(): List<Model> {
+        val filename = "android_version.json"
+
+        val bufferReader = application.assets.open(filename).bufferedReader()
+
+        val jsonstring = bufferReader.use {
+            it.readText()
+        }
+        val gson = Gson()
+        return gson.fromJson(jsonstring, Array<Model>::class.java).toList()
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
