@@ -286,6 +286,13 @@ class MainActivity : AppCompatActivity() {
         view6.visibility = View.VISIBLE
         view9.visibility = View.VISIBLE
         view10.visibility = View.VISIBLE
+        view11.visibility = View.VISIBLE
+        view12.visibility = View.VISIBLE
+        view13.visibility = View.VISIBLE
+        view14.visibility = View.VISIBLE
+        view15.visibility = View.VISIBLE
+        view16.visibility = View.VISIBLE
+        view17.visibility = View.VISIBLE
         Toast.makeText(applicationContext, "ラインはタッチすると消すことができます。", Toast.LENGTH_LONG)
             .show()
 
@@ -422,6 +429,27 @@ class MainActivity : AppCompatActivity() {
         }
         view10.setOnClickListener{
             view10.visibility = View.INVISIBLE
+        }
+        view11.setOnClickListener{
+            view11.visibility = View.INVISIBLE
+        }
+        view12.setOnClickListener{
+            view12.visibility = View.INVISIBLE
+        }
+        view13.setOnClickListener{
+            view13.visibility = View.INVISIBLE
+        }
+        view14.setOnClickListener{
+            view14.visibility = View.INVISIBLE
+        }
+        view15.setOnClickListener{
+            view15.visibility = View.INVISIBLE
+        }
+        view16.setOnClickListener{
+            view16.visibility = View.INVISIBLE
+        }
+        view17.setOnClickListener{
+            view17.visibility = View.INVISIBLE
         }
 
 

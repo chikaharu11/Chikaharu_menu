@@ -595,7 +595,7 @@
         android:id="@+id/view1"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toTopOf="@+id/editText4n"
         app:layout_constraintTop_toBottomOf="@+id/editText8"
         tools:ignore="MissingConstraints" />
@@ -604,7 +604,7 @@
         android:id="@+id/view2"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toTopOf="@+id/editText13n"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
         tools:ignore="MissingConstraints" />
@@ -613,7 +613,7 @@
         android:id="@+id/view3"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toTopOf="@+id/editTextn"
         app:layout_constraintTop_toBottomOf="@+id/editText13"
         tools:ignore="MissingConstraints" />
@@ -622,7 +622,7 @@
         android:id="@+id/view4"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toTopOf="@+id/editText11n"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         tools:ignore="MissingConstraints" />
@@ -631,7 +631,7 @@
         android:id="@+id/view5"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toTopOf="@+id/editText10n"
         app:layout_constraintTop_toBottomOf="@+id/editText11"
         tools:ignore="MissingConstraints" />
@@ -640,7 +640,7 @@
         android:id="@+id/view"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toTopOf="@+id/editText12n"
         app:layout_constraintTop_toBottomOf="@+id/editText10"
         tools:ignore="MissingConstraints" />
@@ -649,7 +649,7 @@
         android:id="@+id/view7"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText12"
         tools:ignore="MissingConstraints" />
@@ -658,7 +658,7 @@
         android:id="@+id/view8"
         android:layout_width="wrap_content"
         android:layout_height="1dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintBottom_toTopOf="@+id/editText8n"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -667,7 +667,7 @@
         android:id="@+id/view6"
         android:layout_width="1dp"
         android:layout_height="0dp"
-        android:background="#000000"
+        android:background="#333333"
         android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@id/view8"
         app:layout_constraintBottom_toTopOf="@id/view7"
@@ -680,7 +680,7 @@
         android:layout_width="1dp"
         android:layout_height="0dp"
         android:layout_marginEnd="0dp"
-        android:background="#000000"
+        android:background="#333333"
         app:layout_constraintTop_toBottomOf="@id/view8"
         app:layout_constraintBottom_toTopOf="@id/view7"
         app:layout_constraintEnd_toEndOf="parent"
@@ -690,11 +690,81 @@
         android:id="@+id/view10"
         android:layout_width="1dp"
         android:layout_height="0dp"
-        android:layout_marginStart="0dp"
-        android:background="#000000"
-        app:layout_constraintTop_toBottomOf="@id/view8"
+        android:background="#333333"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@id/view7"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view8"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view11"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#333333"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/editText8"
+        app:layout_constraintTop_toBottomOf="@+id/editText8n"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view12"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#333333"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/editText4n"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view13"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#333333"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/editText13"
+        app:layout_constraintTop_toBottomOf="@+id/editText13n"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view14"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#333333"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextn"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view15"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#333333"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/editText11"
+        app:layout_constraintTop_toBottomOf="@+id/editText11n"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view16"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#333333"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/editText10"
+        app:layout_constraintTop_toBottomOf="@+id/editText10n"
+        tools:ignore="MissingConstraints" />
+
+    <View
+        android:id="@+id/view17"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="#333333"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/editText12"
+        app:layout_constraintTop_toBottomOf="@+id/editText12n"
         tools:ignore="MissingConstraints" />
 
     <Switch
