@@ -1195,6 +1195,44 @@ class MainActivity : AppCompatActivity() {
 
         menuSpinner.isFocusable = false
 
+            spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?, position: Int, id: Long
+            ) {
+                if (!spinner04.isFocusable) {
+                    spinner04.isFocusable = true
+                    return
+                }
+                when(position){
+                    0 -> { menuList10()
+                        spinner04.setSelection(6)
+                    }
+                    1 -> { menuList1()
+                        spinner04.setSelection(6)
+                    }
+                    2 -> { menuList13()
+                        spinner04.setSelection(6)
+                    }
+                    3 -> { menuList14()
+                        spinner04.setSelection(6)
+                    }
+                    4 -> { menuList12()
+                        spinner04.setSelection(6)
+                    }
+                    5 -> { menuList15()
+                        spinner04.setSelection(6)
+                    }
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinner04.isFocusable = false
     }
 
     private fun readFromAsset(): List<Model> {
@@ -1479,7 +1517,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList3a -> {
-                customSpinner5.performClick()
+                spinner04.performClick()
                 return true
             }
 
