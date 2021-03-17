@@ -1145,55 +1145,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val menu1 = listOf(
-            "タイトルの編集",
-            "項目の編集",
-            "文字を大きくする",
-            "文字を小さくする",
-            "ラインを引く",
-            "曜日を隠す"
-        )
-
-        val menuSpinner = findViewById<Spinner>(R.id.customSpinner5)
-
-        val adapterM = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, menu1
-        )
-
-        adapterM.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-
-        menuSpinner.adapter = adapterM
-
-
-        menuSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                if (!menuSpinner.isFocusable) {
-                    menuSpinner.isFocusable = true
-                    return
-                }
-                when(position){
-                    0 -> menuList10()
-                    1 -> menuList1()
-                    2 -> menuList13()
-                    3 -> menuList14()
-                    4 -> menuList12()
-                    5 -> menuList15()
-                }
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        menuSpinner.isFocusable = false
 
             spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
@@ -1206,23 +1157,26 @@ class MainActivity : AppCompatActivity() {
                     return
                 }
                 when(position){
-                    0 -> { menuList10()
-                        spinner04.setSelection(6)
+                    0 -> {
+
                     }
-                    1 -> { menuList1()
-                        spinner04.setSelection(6)
+                    1 -> { menuList10()
+                        spinner04.setSelection(0)
                     }
-                    2 -> { menuList13()
-                        spinner04.setSelection(6)
+                    2 -> { menuList1()
+                        spinner04.setSelection(0)
                     }
-                    3 -> { menuList14()
-                        spinner04.setSelection(6)
+                    3 -> { menuList13()
+                        spinner04.setSelection(0)
                     }
-                    4 -> { menuList12()
-                        spinner04.setSelection(6)
+                    4 -> { menuList14()
+                        spinner04.setSelection(0)
                     }
-                    5 -> { menuList15()
-                        spinner04.setSelection(6)
+                    5 -> { menuList12()
+                        spinner04.setSelection(0)
+                    }
+                    6 -> { menuList15()
+                        spinner04.setSelection(0)
                     }
                 }
             }

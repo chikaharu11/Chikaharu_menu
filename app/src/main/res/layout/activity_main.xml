@@ -755,15 +755,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <jp.chikaharu11.chikaharu_menu.CSpinner
-        android:id="@+id/customSpinner5"
-        android:layout_width="57dp"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
