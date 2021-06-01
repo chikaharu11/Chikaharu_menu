@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="false"
-        android:icon="@mipmap/description3"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/description3_round"
+        android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <provider
@@ -20,7 +20,7 @@
         </provider>
         <activity
             android:name="jp.chikaharu11.chikaharu_menu.MainActivity"
-            android:screenOrientation="portrait"
+            android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme.Launcher">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
