@@ -33,7 +33,7 @@ import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
-import kotlinx.android.synthetic.main.activity_main.*
+import jp.chikaharu11.chikaharu_menu.databinding.ActivityMainBinding
 import java.io.File
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var container: ConstraintLayout
 
     private lateinit var inputMethodManager: InputMethodManager
+
+    private lateinit var binding: ActivityMainBinding
 
     private val handler = Handler()
 
@@ -96,34 +98,34 @@ class MainActivity : AppCompatActivity() {
                     item4.name =
                         dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
 
-                    editText8n.hint = item1.name + "　　　　"
-                    editText4n.hint = item1.name + "　　　　"
-                    editText13n.hint = item1.name + "　　　　"
-                    editTextn.hint = item1.name + "　　　　"
-                    editText11n.hint = item1.name + "　　　　"
-                    editText10n.hint = item1.name + "　　　　"
-                    editText12n.hint = item1.name + "　　　　"
-                    editText9n.hint = item2.name + "　　　　"
-                    editText7n.hint = item2.name + "　　　　"
-                    editText15n.hint = item2.name + "　　　　"
-                    editText16n.hint = item2.name + "　　　　"
-                    editText18n.hint = item2.name + "　　　　"
-                    editText17n.hint = item2.name + "　　　　"
-                    editText14n.hint = item2.name + "　　　　"
-                    editText8.hint = item3.name + "　　　　"
-                    editText4.hint = item3.name + "　　　　"
-                    editText13.hint = item3.name + "　　　　"
-                    editText.hint = item3.name + "　　　　"
-                    editText11.hint = item3.name + "　　　　"
-                    editText10.hint = item3.name + "　　　　"
-                    editText12.hint = item3.name + "　　　　"
-                    editText9.hint = item4.name + "　　　　"
-                    editText7.hint = item4.name + "　　　　"
-                    editText15.hint = item4.name + "　　　　"
-                    editText16.hint = item4.name + "　　　　"
-                    editText18.hint = item4.name + "　　　　"
-                    editText17.hint = item4.name + "　　　　"
-                    editText14.hint = item4.name + "　　　　"
+                    binding.editText8n.hint = item1.name + "　　　　"
+                    binding.editText4n.hint = item1.name + "　　　　"
+                    binding.editText13n.hint = item1.name + "　　　　"
+                    binding.editTextn.hint = item1.name + "　　　　"
+                    binding.editText11n.hint = item1.name + "　　　　"
+                    binding.editText10n.hint = item1.name + "　　　　"
+                    binding.editText12n.hint = item1.name + "　　　　"
+                    binding.editText9n.hint = item2.name + "　　　　"
+                    binding.editText7n.hint = item2.name + "　　　　"
+                    binding.editText15n.hint = item2.name + "　　　　"
+                    binding.editText16n.hint = item2.name + "　　　　"
+                    binding.editText18n.hint = item2.name + "　　　　"
+                    binding.editText17n.hint = item2.name + "　　　　"
+                    binding.editText14n.hint = item2.name + "　　　　"
+                    binding.editText8.hint = item3.name + "　　　　"
+                    binding.editText4.hint = item3.name + "　　　　"
+                    binding.editText13.hint = item3.name + "　　　　"
+                    binding.editText.hint = item3.name + "　　　　"
+                    binding.editText11.hint = item3.name + "　　　　"
+                    binding.editText10.hint = item3.name + "　　　　"
+                    binding.editText12.hint = item3.name + "　　　　"
+                    binding.editText9.hint = item4.name + "　　　　"
+                    binding.editText7.hint = item4.name + "　　　　"
+                    binding.editText15.hint = item4.name + "　　　　"
+                    binding.editText16.hint = item4.name + "　　　　"
+                    binding.editText18.hint = item4.name + "　　　　"
+                    binding.editText17.hint = item4.name + "　　　　"
+                    binding.editText14.hint = item4.name + "　　　　"
                 }
                 Toast.makeText(applicationContext, "項目の名前を変更しました。", Toast.LENGTH_SHORT)
                     .show()
@@ -171,41 +173,41 @@ class MainActivity : AppCompatActivity() {
 
         count++
 
-        textView.textSize = count
-        textView2.textSize = count
-        textView3.textSize = count
-        textView4.textSize = count
-        textView5.textSize = count
-        textView6.textSize = count
-        textView7.textSize = count
-        editText8.textSize = count
-        editText4.textSize = count
-        editText13.textSize = count
-        editText13n.textSize = count
-        editText9.textSize = count
-        editText7.textSize = count
-        editText8n.textSize = count
-        editText4n.textSize = count
-        editTextn.textSize = count
-        editText10n.textSize = count
-        editText10.textSize = count
-        editText.textSize = count
-        editText12n.textSize = count
-        editText12.textSize = count
-        editText11n.textSize = count
-        editText11.textSize = count
-        editText9n.textSize = count
-        editText7n.textSize = count
-        editText15n.textSize = count
-        editText15.textSize = count
-        editText17n.textSize = count
-        editText14n.textSize = count
-        editText16.textSize = count
-        editText14.textSize = count
-        editText18.textSize = count
-        editText17.textSize = count
-        editText18n.textSize = count
-        editText16n.textSize = count
+        binding.textView.textSize = count
+        binding.textView2.textSize = count
+        binding.textView3.textSize = count
+        binding.textView4.textSize = count
+        binding.textView5.textSize = count
+        binding.textView6.textSize = count
+        binding.textView7.textSize = count
+        binding.editText8.textSize = count
+        binding.editText4.textSize = count
+        binding.editText13.textSize = count
+        binding.editText13n.textSize = count
+        binding.editText9.textSize = count
+        binding.editText7.textSize = count
+        binding.editText8n.textSize = count
+        binding.editText4n.textSize = count
+        binding.editTextn.textSize = count
+        binding.editText10n.textSize = count
+        binding.editText10.textSize = count
+        binding.editText.textSize = count
+        binding.editText12n.textSize = count
+        binding.editText12.textSize = count
+        binding.editText11n.textSize = count
+        binding.editText11.textSize = count
+        binding.editText9n.textSize = count
+        binding.editText7n.textSize = count
+        binding.editText15n.textSize = count
+        binding.editText15.textSize = count
+        binding.editText17n.textSize = count
+        binding.editText14n.textSize = count
+        binding.editText16.textSize = count
+        binding.editText14.textSize = count
+        binding.editText18.textSize = count
+        binding.editText17.textSize = count
+        binding.editText18n.textSize = count
+        binding.editText16n.textSize = count
 
         return
     }
@@ -214,41 +216,41 @@ class MainActivity : AppCompatActivity() {
 
         count--
 
-        textView.textSize = count
-        textView2.textSize = count
-        textView3.textSize = count
-        textView4.textSize = count
-        textView5.textSize = count
-        textView6.textSize = count
-        textView7.textSize = count
-        editText8.textSize = count
-        editText4.textSize = count
-        editText13.textSize = count
-        editText13n.textSize = count
-        editText9.textSize = count
-        editText7.textSize = count
-        editText8n.textSize = count
-        editText4n.textSize = count
-        editTextn.textSize = count
-        editText10n.textSize = count
-        editText10.textSize = count
-        editText.textSize = count
-        editText12n.textSize = count
-        editText12.textSize = count
-        editText11n.textSize = count
-        editText11.textSize = count
-        editText9n.textSize = count
-        editText7n.textSize = count
-        editText15n.textSize = count
-        editText15.textSize = count
-        editText17n.textSize = count
-        editText14n.textSize = count
-        editText16.textSize = count
-        editText14.textSize = count
-        editText18.textSize = count
-        editText17.textSize = count
-        editText18n.textSize = count
-        editText16n.textSize = count
+        binding.textView.textSize = count
+        binding.textView2.textSize = count
+        binding.textView3.textSize = count
+        binding.textView4.textSize = count
+        binding.textView5.textSize = count
+        binding.textView6.textSize = count
+        binding.textView7.textSize = count
+        binding.editText8.textSize = count
+        binding.editText4.textSize = count
+        binding.editText13.textSize = count
+        binding.editText13n.textSize = count
+        binding.editText9.textSize = count
+        binding.editText7.textSize = count
+        binding.editText8n.textSize = count
+        binding.editText4n.textSize = count
+        binding.editTextn.textSize = count
+        binding.editText10n.textSize = count
+        binding.editText10.textSize = count
+        binding.editText.textSize = count
+        binding.editText12n.textSize = count
+        binding.editText12.textSize = count
+        binding.editText11n.textSize = count
+        binding.editText11.textSize = count
+        binding.editText9n.textSize = count
+        binding.editText7n.textSize = count
+        binding.editText15n.textSize = count
+        binding.editText15.textSize = count
+        binding.editText17n.textSize = count
+        binding.editText14n.textSize = count
+        binding.editText16.textSize = count
+        binding.editText14.textSize = count
+        binding.editText18.textSize = count
+        binding.editText17.textSize = count
+        binding.editText18n.textSize = count
+        binding.editText16n.textSize = count
 
         return
     }
@@ -264,35 +266,35 @@ class MainActivity : AppCompatActivity() {
         findViewById<EditText>(R.id.textView7).visibility = View.INVISIBLE
 
         val constraintSet = ConstraintSet()
-        constraintSet.clone(allView)
+        constraintSet.clone(binding.allView)
 
-        constraintSet.connect(editText12.id, ConstraintSet.START, view10.id, ConstraintSet.END, 2)
+        constraintSet.connect(binding.editText12.id, ConstraintSet.START, binding.view10.id, ConstraintSet.END, 2)
 
-        constraintSet.applyTo(allView)
+        constraintSet.applyTo(binding.allView)
 
         return
     }
 
     fun menuList12() {
 
-        view1.visibility = View.VISIBLE
-        view2.visibility = View.VISIBLE
-        view3.visibility = View.VISIBLE
-        view4.visibility = View.VISIBLE
-        view5.visibility = View.VISIBLE
-        view.visibility = View.VISIBLE
-        view7.visibility = View.VISIBLE
-        view8.visibility = View.VISIBLE
-        view6.visibility = View.VISIBLE
-        view9.visibility = View.VISIBLE
-        view10.visibility = View.VISIBLE
-        view11.visibility = View.VISIBLE
-        view12.visibility = View.VISIBLE
-        view13.visibility = View.VISIBLE
-        view14.visibility = View.VISIBLE
-        view15.visibility = View.VISIBLE
-        view16.visibility = View.VISIBLE
-        view17.visibility = View.VISIBLE
+        binding.view1.visibility = View.VISIBLE
+        binding.view2.visibility = View.VISIBLE
+        binding.view3.visibility = View.VISIBLE
+        binding.view4.visibility = View.VISIBLE
+        binding.view5.visibility = View.VISIBLE
+        binding.view.visibility = View.VISIBLE
+        binding.view7.visibility = View.VISIBLE
+        binding.view8.visibility = View.VISIBLE
+        binding.view6.visibility = View.VISIBLE
+        binding.view9.visibility = View.VISIBLE
+        binding.view10.visibility = View.VISIBLE
+        binding.view11.visibility = View.VISIBLE
+        binding.view12.visibility = View.VISIBLE
+        binding.view13.visibility = View.VISIBLE
+        binding.view14.visibility = View.VISIBLE
+        binding.view15.visibility = View.VISIBLE
+        binding.view16.visibility = View.VISIBLE
+        binding.view17.visibility = View.VISIBLE
         Toast.makeText(applicationContext, "ラインはタッチすると消すことができます。", Toast.LENGTH_LONG)
             .show()
 
@@ -327,7 +329,7 @@ class MainActivity : AppCompatActivity() {
         val modelList: List<Model> = readFromAsset()
 
         val customDropDownAdapter = CustomDropDownAdapter(this, modelList)
-        spinner04.adapter = customDropDownAdapter
+        binding.spinner04.adapter = customDropDownAdapter
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -344,13 +346,13 @@ class MainActivity : AppCompatActivity() {
         val week7 = mRealm.where(Book5::class.java).equalTo("id", 6.toLong()).findFirst()?.name
 
         if(week1 != null){
-            textView.setText(week1, TextView.BufferType.NORMAL)
-            textView2.setText(week2, TextView.BufferType.NORMAL)
-            textView3.setText(week3, TextView.BufferType.NORMAL)
-            textView4.setText(week4, TextView.BufferType.NORMAL)
-            textView5.setText(week5, TextView.BufferType.NORMAL)
-            textView6.setText(week6, TextView.BufferType.NORMAL)
-            textView7.setText(week7, TextView.BufferType.NORMAL)
+            binding.textView.setText(week1, TextView.BufferType.NORMAL)
+            binding.textView2.setText(week2, TextView.BufferType.NORMAL)
+            binding.textView3.setText(week3, TextView.BufferType.NORMAL)
+            binding.textView4.setText(week4, TextView.BufferType.NORMAL)
+            binding.textView5.setText(week5, TextView.BufferType.NORMAL)
+            binding.textView6.setText(week6, TextView.BufferType.NORMAL)
+            binding.textView7.setText(week7, TextView.BufferType.NORMAL)
         }
 
         val item1 = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
@@ -361,34 +363,34 @@ class MainActivity : AppCompatActivity() {
         val item5 = mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()?.name
 
         if(item1 != null) {
-            editText8n.hint = "$item1　　　　"
-            editText4n.hint = "$item1　　　　"
-            editText13n.hint = "$item1　　　　"
-            editTextn.hint = "$item1　　　　"
-            editText11n.hint = "$item1　　　　"
-            editText10n.hint = "$item1　　　　"
-            editText12n.hint = "$item1　　　　"
-            editText9n.hint = "$item2　　　　"
-            editText7n.hint = "$item2　　　　"
-            editText15n.hint = "$item2　　　　"
-            editText16n.hint = "$item2　　　　"
-            editText18n.hint = "$item2　　　　"
-            editText17n.hint = "$item2　　　　"
-            editText14n.hint = "$item2　　　　"
-            editText8.hint = "$item3　　　　"
-            editText4.hint = "$item3　　　　"
-            editText13.hint = "$item3　　　　"
-            editText.hint = "$item3　　　　"
-            editText11.hint = "$item3　　　　"
-            editText10.hint = "$item3　　　　"
-            editText12.hint = "$item3　　　　"
-            editText9.hint = "$item4　　　　"
-            editText7.hint = "$item4　　　　"
-            editText15.hint = "$item4　　　　"
-            editText16.hint = "$item4　　　　"
-            editText18.hint = "$item4　　　　"
-            editText17.hint = "$item4　　　　"
-            editText14.hint = "$item4　　　　"
+            binding.editText8n.hint = "$item1　　　　"
+            binding.editText4n.hint = "$item1　　　　"
+            binding.editText13n.hint = "$item1　　　　"
+            binding.editTextn.hint = "$item1　　　　"
+            binding.editText11n.hint = "$item1　　　　"
+            binding.editText10n.hint = "$item1　　　　"
+            binding.editText12n.hint = "$item1　　　　"
+            binding.editText9n.hint = "$item2　　　　"
+            binding.editText7n.hint = "$item2　　　　"
+            binding.editText15n.hint = "$item2　　　　"
+            binding.editText16n.hint = "$item2　　　　"
+            binding.editText18n.hint = "$item2　　　　"
+            binding.editText17n.hint = "$item2　　　　"
+            binding.editText14n.hint = "$item2　　　　"
+            binding.editText8.hint = "$item3　　　　"
+            binding.editText4.hint = "$item3　　　　"
+            binding.editText13.hint = "$item3　　　　"
+            binding.editText.hint = "$item3　　　　"
+            binding.editText11.hint = "$item3　　　　"
+            binding.editText10.hint = "$item3　　　　"
+            binding.editText12.hint = "$item3　　　　"
+            binding.editText9.hint = "$item4　　　　"
+            binding.editText7.hint = "$item4　　　　"
+            binding.editText15.hint = "$item4　　　　"
+            binding.editText16.hint = "$item4　　　　"
+            binding.editText18.hint = "$item4　　　　"
+            binding.editText17.hint = "$item4　　　　"
+            binding.editText14.hint = "$item4　　　　"
         }
         if(item5 != null){
             supportActionBar?.title = item5
@@ -396,59 +398,59 @@ class MainActivity : AppCompatActivity() {
             supportActionBar?.title = "Menu"
         }
 
-        view1.setOnClickListener{
-            view1.visibility = View.INVISIBLE
+        binding.view1.setOnClickListener{
+            binding.view1.visibility = View.INVISIBLE
         }
-        view2.setOnClickListener{
-            view2.visibility = View.INVISIBLE
+        binding.view2.setOnClickListener{
+            binding.view2.visibility = View.INVISIBLE
         }
-        view3.setOnClickListener{
-            view3.visibility = View.INVISIBLE
+        binding.view3.setOnClickListener{
+            binding.view3.visibility = View.INVISIBLE
         }
-        view4.setOnClickListener{
-            view4.visibility = View.INVISIBLE
+        binding.view4.setOnClickListener{
+            binding.view4.visibility = View.INVISIBLE
         }
-        view5.setOnClickListener{
-            view5.visibility = View.INVISIBLE
+        binding.view5.setOnClickListener{
+            binding.view5.visibility = View.INVISIBLE
         }
-        view.setOnClickListener{
-            view.visibility = View.INVISIBLE
+        binding.view.setOnClickListener{
+            binding.view.visibility = View.INVISIBLE
         }
-        view7.setOnClickListener{
-            view7.visibility = View.INVISIBLE
+        binding.view7.setOnClickListener{
+            binding.view7.visibility = View.INVISIBLE
         }
-        view8.setOnClickListener{
-            view8.visibility = View.INVISIBLE
+        binding.view8.setOnClickListener{
+            binding.view8.visibility = View.INVISIBLE
         }
-        view6.setOnClickListener{
-            view6.visibility = View.INVISIBLE
+        binding.view6.setOnClickListener{
+            binding.view6.visibility = View.INVISIBLE
         }
-        view9.setOnClickListener{
-            view9.visibility = View.INVISIBLE
+        binding.view9.setOnClickListener{
+            binding.view9.visibility = View.INVISIBLE
         }
-        view10.setOnClickListener{
-            view10.visibility = View.INVISIBLE
+        binding.view10.setOnClickListener{
+            binding.view10.visibility = View.INVISIBLE
         }
-        view11.setOnClickListener{
-            view11.visibility = View.INVISIBLE
+        binding.view11.setOnClickListener{
+            binding.view11.visibility = View.INVISIBLE
         }
-        view12.setOnClickListener{
-            view12.visibility = View.INVISIBLE
+        binding.view12.setOnClickListener{
+            binding.view12.visibility = View.INVISIBLE
         }
-        view13.setOnClickListener{
-            view13.visibility = View.INVISIBLE
+        binding.view13.setOnClickListener{
+            binding.view13.visibility = View.INVISIBLE
         }
-        view14.setOnClickListener{
-            view14.visibility = View.INVISIBLE
+        binding.view14.setOnClickListener{
+            binding.view14.visibility = View.INVISIBLE
         }
-        view15.setOnClickListener{
-            view15.visibility = View.INVISIBLE
+        binding.view15.setOnClickListener{
+            binding.view15.visibility = View.INVISIBLE
         }
-        view16.setOnClickListener{
-            view16.visibility = View.INVISIBLE
+        binding.view16.setOnClickListener{
+            binding.view16.visibility = View.INVISIBLE
         }
-        view17.setOnClickListener{
-            view17.visibility = View.INVISIBLE
+        binding.view17.setOnClickListener{
+            binding.view17.visibility = View.INVISIBLE
         }
 
 
@@ -533,10 +535,10 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        customSpinner.adapter = adapter
+        binding.customSpinner.adapter = adapter
 
 
-        customSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.customSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -546,20 +548,20 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText8.hasFocus() -> { editText8.setText(item, TextView.BufferType.NORMAL)
-                        editText8.clearFocus() }
-                    editText4.hasFocus() -> { editText4.setText(item, TextView.BufferType.NORMAL)
-                        editText4.clearFocus() }
-                    editText.hasFocus() -> { editText.setText(item, TextView.BufferType.NORMAL)
-                        editText.clearFocus() }
-                    editText10.hasFocus() -> { editText10.setText(item, TextView.BufferType.NORMAL)
-                        editText10.clearFocus() }
-                    editText11.hasFocus() -> { editText11.setText(item, TextView.BufferType.NORMAL)
-                        editText11.clearFocus() }
-                    editText12.hasFocus() -> { editText12.setText(item, TextView.BufferType.NORMAL)
-                        editText12.clearFocus() }
-                    editText13.hasFocus() -> { editText13.setText(item, TextView.BufferType.NORMAL)
-                        editText13.clearFocus() }
+                    binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8.clearFocus() }
+                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4.clearFocus() }
+                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText.clearFocus() }
+                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10.clearFocus() }
+                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11.clearFocus() }
+                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12.clearFocus() }
+                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13.clearFocus() }
                 }
 
             }
@@ -622,10 +624,10 @@ class MainActivity : AppCompatActivity() {
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        customSpinner2.adapter = adapter2
+        binding.customSpinner2.adapter = adapter2
 
 
-        customSpinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.customSpinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -635,20 +637,20 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText9.hasFocus() -> { editText9.setText(item, TextView.BufferType.NORMAL)
-                        editText9.clearFocus() }
-                    editText7.hasFocus() -> { editText7.setText(item, TextView.BufferType.NORMAL)
-                        editText7.clearFocus() }
-                    editText14.hasFocus() -> { editText14.setText(item, TextView.BufferType.NORMAL)
-                        editText14.clearFocus() }
-                    editText15.hasFocus() -> { editText15.setText(item, TextView.BufferType.NORMAL)
-                        editText15.clearFocus() }
-                    editText16.hasFocus() -> { editText16.setText(item, TextView.BufferType.NORMAL)
-                        editText16.clearFocus() }
-                    editText17.hasFocus() -> { editText17.setText(item, TextView.BufferType.NORMAL)
-                        editText17.clearFocus() }
-                    editText18.hasFocus() -> { editText18.setText(item, TextView.BufferType.NORMAL)
-                        editText18.clearFocus() }
+                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9.clearFocus() }
+                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7.clearFocus() }
+                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14.clearFocus() }
+                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15.clearFocus() }
+                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16.clearFocus() }
+                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17.clearFocus() }
+                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18.clearFocus() }
                 }
 
             }
@@ -659,172 +661,172 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText8.setTextIsSelectable(true)
-                customSpinner.performClick()
+        binding.editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText8.setTextIsSelectable(true)
+                binding.customSpinner.performClick()
             }
         }
-        editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText4.setTextIsSelectable(true)
-                customSpinner.performClick()
+        binding.editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText4.setTextIsSelectable(true)
+                binding.customSpinner.performClick()
             }
         }
-        editText.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText.setTextIsSelectable(true)
-                customSpinner.performClick()
+        binding.editText.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText.setTextIsSelectable(true)
+                binding.customSpinner.performClick()
             }
         }
-        editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText10.setTextIsSelectable(true)
-                customSpinner.performClick()
+        binding.editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText10.setTextIsSelectable(true)
+                binding.customSpinner.performClick()
             }
         }
-        editText11.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText11.setTextIsSelectable(true)
-                customSpinner.performClick()
+        binding.editText11.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText11.setTextIsSelectable(true)
+                binding.customSpinner.performClick()
             }
         }
-        editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText12.setTextIsSelectable(true)
-                customSpinner.performClick()
+        binding.editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText12.setTextIsSelectable(true)
+                binding.customSpinner.performClick()
             }
         }
-        editText13.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText13.setTextIsSelectable(true)
-                customSpinner.performClick()
+        binding.editText13.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText13.setTextIsSelectable(true)
+                binding.customSpinner.performClick()
             }
         }
-        editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText9.setTextIsSelectable(true)
-                customSpinner2.performClick()
+        binding.editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText9.setTextIsSelectable(true)
+                binding.customSpinner2.performClick()
             }
         }
-        editText7.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText7.setTextIsSelectable(true)
-                customSpinner2.performClick()
+        binding.editText7.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText7.setTextIsSelectable(true)
+                binding.customSpinner2.performClick()
             }
         }
-        editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText14.setTextIsSelectable(true)
-                customSpinner2.performClick()
+        binding.editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText14.setTextIsSelectable(true)
+                binding.customSpinner2.performClick()
             }
         }
-        editText15.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText15.setTextIsSelectable(true)
-                customSpinner2.performClick()
+        binding.editText15.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText15.setTextIsSelectable(true)
+                binding.customSpinner2.performClick()
             }
         }
-        editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText16.setTextIsSelectable(true)
-                customSpinner2.performClick()
+        binding.editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText16.setTextIsSelectable(true)
+                binding.customSpinner2.performClick()
             }
         }
-        editText17.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText17.setTextIsSelectable(true)
-                customSpinner2.performClick()
+        binding.editText17.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText17.setTextIsSelectable(true)
+                binding.customSpinner2.performClick()
             }
         }
-        editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText18.setTextIsSelectable(true)
-                customSpinner2.performClick()
+        binding.editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText18.setTextIsSelectable(true)
+                binding.customSpinner2.performClick()
             }
         }
-        editText8n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText8n.setTextIsSelectable(true)
-                customSpinner3.performClick()
+        binding.editText8n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText8n.setTextIsSelectable(true)
+                binding.customSpinner3.performClick()
             }
         }
-        editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText4n.setTextIsSelectable(true)
-                customSpinner3.performClick()
+        binding.editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText4n.setTextIsSelectable(true)
+                binding.customSpinner3.performClick()
             }
         }
-        editTextn.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editTextn.setTextIsSelectable(true)
-                customSpinner3.performClick()
+        binding.editTextn.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editTextn.setTextIsSelectable(true)
+                binding.customSpinner3.performClick()
             }
         }
-        editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText10n.setTextIsSelectable(true)
-                customSpinner3.performClick()
+        binding.editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText10n.setTextIsSelectable(true)
+                binding.customSpinner3.performClick()
             }
         }
-        editText11n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText11n.setTextIsSelectable(true)
-                customSpinner3.performClick()
+        binding.editText11n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText11n.setTextIsSelectable(true)
+                binding.customSpinner3.performClick()
             }
         }
-        editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText12n.setTextIsSelectable(true)
-                customSpinner3.performClick()
+        binding.editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText12n.setTextIsSelectable(true)
+                binding.customSpinner3.performClick()
             }
         }
-        editText13n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText13n.setTextIsSelectable(true)
-                customSpinner3.performClick()
+        binding.editText13n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText13n.setTextIsSelectable(true)
+                binding.customSpinner3.performClick()
             }
         }
-        editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText9n.setTextIsSelectable(true)
-                customSpinner4.performClick()
+        binding.editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText9n.setTextIsSelectable(true)
+                binding.customSpinner4.performClick()
             }
         }
-        editText7n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText7n.setTextIsSelectable(true)
-                customSpinner4.performClick()
+        binding.editText7n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText7n.setTextIsSelectable(true)
+                binding.customSpinner4.performClick()
             }
         }
-        editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText14n.setTextIsSelectable(true)
-                customSpinner4.performClick()
+        binding.editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText14n.setTextIsSelectable(true)
+                binding.customSpinner4.performClick()
             }
         }
-        editText15n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText15n.setTextIsSelectable(true)
-                customSpinner4.performClick()
+        binding.editText15n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText15n.setTextIsSelectable(true)
+                binding.customSpinner4.performClick()
             }
         }
-        editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText16n.setTextIsSelectable(true)
-                customSpinner4.performClick()
+        binding.editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText16n.setTextIsSelectable(true)
+                binding.customSpinner4.performClick()
             }
         }
-        editText17n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText17n.setTextIsSelectable(true)
-                customSpinner4.performClick()
+        binding.editText17n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText17n.setTextIsSelectable(true)
+                binding.customSpinner4.performClick()
             }
         }
-        editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (switch1.isChecked && hasFocus) {
-                editText18n.setTextIsSelectable(true)
-                customSpinner4.performClick()
+        binding.editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+            if (binding.switch1.isChecked && hasFocus) {
+                binding.editText18n.setTextIsSelectable(true)
+                binding.customSpinner4.performClick()
             }
         }
 
@@ -870,9 +872,9 @@ class MainActivity : AppCompatActivity() {
 
         adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        customSpinner3.adapter = adapter3
+        binding.customSpinner3.adapter = adapter3
 
-        customSpinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.customSpinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -882,20 +884,20 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText8n.hasFocus() -> { editText8n.setText(item, TextView.BufferType.NORMAL)
-                        editText8n.clearFocus() }
-                    editText4n.hasFocus() -> { editText4n.setText(item, TextView.BufferType.NORMAL)
-                        editText4n.clearFocus() }
-                    editTextn.hasFocus() -> { editTextn.setText(item, TextView.BufferType.NORMAL)
-                        editTextn.clearFocus() }
-                    editText10n.hasFocus() -> { editText10n.setText(item, TextView.BufferType.NORMAL)
-                        editText10n.clearFocus() }
-                    editText11n.hasFocus() -> { editText11n.setText(item, TextView.BufferType.NORMAL)
-                        editText11n.clearFocus() }
-                    editText12n.hasFocus() -> { editText12n.setText(item, TextView.BufferType.NORMAL)
-                        editText12n.clearFocus() }
-                    editText13n.hasFocus() -> { editText13n.setText(item, TextView.BufferType.NORMAL)
-                        editText13n.clearFocus() }
+                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8n.clearFocus() }
+                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4n.clearFocus() }
+                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                        binding.editTextn.clearFocus() }
+                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10n.clearFocus() }
+                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11n.clearFocus() }
+                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12n.clearFocus() }
+                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13n.clearFocus() }
                 }
 
             }
@@ -945,9 +947,9 @@ class MainActivity : AppCompatActivity() {
 
         adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        customSpinner4.adapter = adapter4
+        binding.customSpinner4.adapter = adapter4
 
-        customSpinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.customSpinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -957,35 +959,35 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 when {
-                    editText9n.hasFocus() -> { editText9n.setText(item, TextView.BufferType.NORMAL)
-                        editText9n.clearFocus() }
-                    editText7n.hasFocus() -> { editText7n.setText(item, TextView.BufferType.NORMAL)
-                        editText7n.clearFocus() }
-                    editText14n.hasFocus() -> { editText14n.setText(
+                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9n.clearFocus() }
+                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7n.clearFocus() }
+                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(
                         item,
                         TextView.BufferType.NORMAL
                     )
-                        editText14n.clearFocus() }
-                    editText15n.hasFocus() -> { editText15n.setText(
+                        binding.editText14n.clearFocus() }
+                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(
                         item,
                         TextView.BufferType.NORMAL
                     )
-                        editText15n.clearFocus() }
-                    editText16n.hasFocus() -> { editText16n.setText(
+                        binding.editText15n.clearFocus() }
+                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(
                         item,
                         TextView.BufferType.NORMAL
                     )
-                        editText16n.clearFocus() }
-                    editText17n.hasFocus() -> { editText17n.setText(
+                        binding.editText16n.clearFocus() }
+                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(
                         item,
                         TextView.BufferType.NORMAL
                     )
-                        editText17n.clearFocus() }
-                    editText18n.hasFocus() -> { editText18n.setText(
+                        binding.editText17n.clearFocus() }
+                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(
                         item,
                         TextView.BufferType.NORMAL
                     )
-                        editText18n.clearFocus() }
+                        binding.editText18n.clearFocus() }
                 }
             }
 
@@ -1019,9 +1021,9 @@ class MainActivity : AppCompatActivity() {
         adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinner1a.adapter = adapter5
+        binding.spinner1a.adapter = adapter5
 
-        spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1063,9 +1065,9 @@ class MainActivity : AppCompatActivity() {
         adapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinner2a.adapter = adapter6
+        binding.spinner2a.adapter = adapter6
 
-        spinner2a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.spinner2a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1107,9 +1109,9 @@ class MainActivity : AppCompatActivity() {
         adapter7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinner3a.adapter = adapter7
+        binding.spinner3a.adapter = adapter7
 
-        spinner3a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.spinner3a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1151,9 +1153,9 @@ class MainActivity : AppCompatActivity() {
         adapter8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        spinner4a.adapter = adapter8
+        binding.spinner4a.adapter = adapter8
 
-        spinner4a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        binding.spinner4a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1173,14 +1175,14 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-            spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            binding.spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?, position: Int, id: Long
             ) {
-                if (!spinner04.isFocusable) {
-                    spinner04.isFocusable = true
+                if (!binding.spinner04.isFocusable) {
+                    binding.spinner04.isFocusable = true
                     return
                 }
                 when(position){
@@ -1188,22 +1190,22 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     1 -> { menuList10()
-                        spinner04.setSelection(0)
+                        binding.spinner04.setSelection(0)
                     }
                     2 -> { menuList1()
-                        spinner04.setSelection(0)
+                        binding.spinner04.setSelection(0)
                     }
                     3 -> { menuList13()
-                        spinner04.setSelection(0)
+                        binding.spinner04.setSelection(0)
                     }
                     4 -> { menuList14()
-                        spinner04.setSelection(0)
+                        binding.spinner04.setSelection(0)
                     }
                     5 -> { menuList12()
-                        spinner04.setSelection(0)
+                        binding.spinner04.setSelection(0)
                     }
                     6 -> { menuList15()
-                        spinner04.setSelection(0)
+                        binding.spinner04.setSelection(0)
                     }
                 }
             }
@@ -1213,7 +1215,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        spinner04.isFocusable = false
+        binding.spinner04.isFocusable = false
     }
 
     private fun readFromAsset(): List<Model> {
@@ -1469,26 +1471,26 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
 
             R.id.MenuList1 -> {
-                if (switch1.isChecked) {
+                if (binding.switch1.isChecked) {
                     menuSwitch = true
                     invalidateOptionsMenu()
                     supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6200EE")))
                     Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
-                    switch1.isChecked = false
+                    binding.switch1.isChecked = false
                 } else {
                     menuSwitch = false
                     invalidateOptionsMenu()
                     supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                     val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                    inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
+                    inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                     Toast.makeText(applicationContext, "貼り付けモード", Toast.LENGTH_SHORT).show()
-                    switch1.isChecked = true
+                    binding.switch1.isChecked = true
                 }
                 return true
             }
 
             R.id.MenuList2 -> {
-                getBitmapFromView(allView)
+                getBitmapFromView(binding.allView)
                 return true
             }
 
@@ -1498,12 +1500,12 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList3a -> {
-                spinner04.performClick()
+                binding.spinner04.performClick()
                 return true
             }
 
             R.id.MenuList4 -> {
-                switch3.setOnCheckedChangeListener { _, isChecked ->
+                binding.switch3.setOnCheckedChangeListener { _, isChecked ->
                     if (isChecked) mRealm.executeTransaction {
                         val item6 = mRealm.createObject<Book6>(5)
                         val a6 = true
@@ -1523,7 +1525,7 @@ class MainActivity : AppCompatActivity() {
                         ).show()
                     }
                 }
-                switch3.performClick()
+                binding.switch3.performClick()
                 return true
             }
 
@@ -1551,8 +1553,8 @@ class MainActivity : AppCompatActivity() {
                 adapter5a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                spinner1a.adapter = adapter5a
-                handler.postDelayed({ spinner1a.performClick() }, 300)
+                binding.spinner1a.adapter = adapter5a
+                handler.postDelayed({ binding.spinner1a.performClick() }, 300)
                 return true
             }
 
@@ -1580,8 +1582,8 @@ class MainActivity : AppCompatActivity() {
                 adapter6a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                spinner2a.adapter = adapter6a
-                handler.postDelayed({ spinner2a.performClick() }, 300)
+                binding.spinner2a.adapter = adapter6a
+                handler.postDelayed({ binding.spinner2a.performClick() }, 300)
                 return true
             }
 
@@ -1609,8 +1611,8 @@ class MainActivity : AppCompatActivity() {
                 adapter7a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                spinner3a.adapter = adapter7a
-                handler.postDelayed({ spinner3a.performClick() }, 300)
+                binding.spinner3a.adapter = adapter7a
+                handler.postDelayed({ binding.spinner3a.performClick() }, 300)
                 return true
             }
 
@@ -1638,8 +1640,8 @@ class MainActivity : AppCompatActivity() {
                 adapter8a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                spinner4a.adapter = adapter8a
-                handler.postDelayed({ spinner4a.performClick() }, 300)
+                binding.spinner4a.adapter = adapter8a
+                handler.postDelayed({ binding.spinner4a.performClick() }, 300)
                 return true
             }
 
@@ -1662,88 +1664,88 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList7 -> {
-                val stringText11 = editText8.text.toString()
+                val stringText11 = binding.editText8.text.toString()
                 create(stringText11)
-                val stringText12 = editText4.text.toString()
+                val stringText12 = binding.editText4.text.toString()
                 create(stringText12)
-                val stringText13 = editText13.text.toString()
+                val stringText13 = binding.editText13.text.toString()
                 create(stringText13)
-                val stringText14 = editText.text.toString()
+                val stringText14 = binding.editText.text.toString()
                 create(stringText14)
-                val stringText15 = editText11.text.toString()
+                val stringText15 = binding.editText11.text.toString()
                 create(stringText15)
-                val stringText16 = editText10.text.toString()
+                val stringText16 = binding.editText10.text.toString()
                 create(stringText16)
-                val stringText17 = editText12.text.toString()
+                val stringText17 = binding.editText12.text.toString()
                 create(stringText17)
 
-                val stringText21 = editText9.text.toString()
+                val stringText21 = binding.editText9.text.toString()
                 create2(stringText21)
-                val stringText22 = editText7.text.toString()
+                val stringText22 = binding.editText7.text.toString()
                 create2(stringText22)
-                val stringText23 = editText15.text.toString()
+                val stringText23 = binding.editText15.text.toString()
                 create2(stringText23)
-                val stringText24 = editText16.text.toString()
+                val stringText24 = binding.editText16.text.toString()
                 create2(stringText24)
-                val stringText25 = editText18.text.toString()
+                val stringText25 = binding.editText18.text.toString()
                 create2(stringText25)
-                val stringText26 = editText17.text.toString()
+                val stringText26 = binding.editText17.text.toString()
                 create2(stringText26)
-                val stringText27 = editText14.text.toString()
+                val stringText27 = binding.editText14.text.toString()
                 create2(stringText27)
 
-                val stringText31 = editText8n.text.toString()
+                val stringText31 = binding.editText8n.text.toString()
                 create3(stringText31)
-                val stringText32 = editText4n.text.toString()
+                val stringText32 = binding.editText4n.text.toString()
                 create3(stringText32)
-                val stringText33 = editText13n.text.toString()
+                val stringText33 = binding.editText13n.text.toString()
                 create3(stringText33)
-                val stringText34 = editTextn.text.toString()
+                val stringText34 = binding.editTextn.text.toString()
                 create3(stringText34)
-                val stringText35 = editText11n.text.toString()
+                val stringText35 = binding.editText11n.text.toString()
                 create3(stringText35)
-                val stringText36 = editText10n.text.toString()
+                val stringText36 = binding.editText10n.text.toString()
                 create3(stringText36)
-                val stringText37 = editText12n.text.toString()
+                val stringText37 = binding.editText12n.text.toString()
                 create3(stringText37)
 
-                val stringText41 = editText9n.text.toString()
+                val stringText41 = binding.editText9n.text.toString()
                 create4(stringText41)
-                val stringText42 = editText7n.text.toString()
+                val stringText42 = binding.editText7n.text.toString()
                 create4(stringText42)
-                val stringText43 = editText15n.text.toString()
+                val stringText43 = binding.editText15n.text.toString()
                 create4(stringText43)
-                val stringText44 = editText16n.text.toString()
+                val stringText44 = binding.editText16n.text.toString()
                 create4(stringText44)
-                val stringText45 = editText18n.text.toString()
+                val stringText45 = binding.editText18n.text.toString()
                 create4(stringText45)
-                val stringText46 = editText17n.text.toString()
+                val stringText46 = binding.editText17n.text.toString()
                 create4(stringText46)
-                val stringText47 = editText14n.text.toString()
+                val stringText47 = binding.editText14n.text.toString()
                 create4(stringText47)
 
                 mRealm.executeTransaction {
                     mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
                     val week1 = mRealm.createObject<Book5>(0)
-                    week1.name = textView.text.toString()
+                    week1.name = binding.textView.text.toString()
 
                     val week2 = mRealm.createObject<Book5>(1)
-                    week2.name = textView2.text.toString()
+                    week2.name = binding.textView2.text.toString()
 
                     val week3 = mRealm.createObject<Book5>(2)
-                    week3.name = textView3.text.toString()
+                    week3.name = binding.textView3.text.toString()
 
                     val week4 = mRealm.createObject<Book5>(3)
-                    week4.name = textView4.text.toString()
+                    week4.name = binding.textView4.text.toString()
 
                     val week5 = mRealm.createObject<Book5>(4)
-                    week5.name = textView5.text.toString()
+                    week5.name = binding.textView5.text.toString()
 
                     val week6 = mRealm.createObject<Book5>(5)
-                    week6.name = textView6.text.toString()
+                    week6.name = binding.textView6.text.toString()
 
                     val week7 = mRealm.createObject<Book5>(6)
-                    week7.name = textView7.text.toString()
+                    week7.name = binding.textView7.text.toString()
                 }
 
                 Toast.makeText(
