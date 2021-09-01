@@ -304,7 +304,14 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+            .apply { setContentView(this.root) }
+
+        val spinner1a = findViewById<Spinner>(R.id.spinner1a)
+        val spinner2a = findViewById<Spinner>(R.id.spinner2a)
+        val spinner3a = findViewById<Spinner>(R.id.spinner3a)
+        val spinner4a = findViewById<Spinner>(R.id.spinner4a)
+        val spinner04 = findViewById<Spinner>(R.id.spinner04)
 
         container = findViewById(R.id.allView)
 
@@ -329,7 +336,7 @@ class MainActivity : AppCompatActivity() {
         val modelList: List<Model> = readFromAsset()
 
         val customDropDownAdapter = CustomDropDownAdapter(this, modelList)
-        binding.spinner04.adapter = customDropDownAdapter
+        spinner04.adapter = customDropDownAdapter
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -1021,9 +1028,9 @@ class MainActivity : AppCompatActivity() {
         adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        binding.spinner1a.adapter = adapter5
+        spinner1a.adapter = adapter5
 
-        binding.spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1065,9 +1072,9 @@ class MainActivity : AppCompatActivity() {
         adapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        binding.spinner2a.adapter = adapter6
+        spinner2a.adapter = adapter6
 
-        binding.spinner2a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spinner2a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1109,9 +1116,9 @@ class MainActivity : AppCompatActivity() {
         adapter7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        binding.spinner3a.adapter = adapter7
+        spinner3a.adapter = adapter7
 
-        binding.spinner3a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spinner3a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1153,9 +1160,9 @@ class MainActivity : AppCompatActivity() {
         adapter8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        binding.spinner4a.adapter = adapter8
+        spinner4a.adapter = adapter8
 
-        binding.spinner4a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+        spinner4a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
@@ -1175,14 +1182,14 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-            binding.spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
             override fun onItemSelected(
                 parent: AdapterView<*>?,
                 view: View?, position: Int, id: Long
             ) {
-                if (!binding.spinner04.isFocusable) {
-                    binding.spinner04.isFocusable = true
+                if (!spinner04.isFocusable) {
+                    spinner04.isFocusable = true
                     return
                 }
                 when(position){
@@ -1190,22 +1197,22 @@ class MainActivity : AppCompatActivity() {
 
                     }
                     1 -> { menuList10()
-                        binding.spinner04.setSelection(0)
+                        spinner04.setSelection(0)
                     }
                     2 -> { menuList1()
-                        binding.spinner04.setSelection(0)
+                        spinner04.setSelection(0)
                     }
                     3 -> { menuList13()
-                        binding.spinner04.setSelection(0)
+                        spinner04.setSelection(0)
                     }
                     4 -> { menuList14()
-                        binding.spinner04.setSelection(0)
+                        spinner04.setSelection(0)
                     }
                     5 -> { menuList12()
-                        binding.spinner04.setSelection(0)
+                        spinner04.setSelection(0)
                     }
                     6 -> { menuList15()
-                        binding.spinner04.setSelection(0)
+                        spinner04.setSelection(0)
                     }
                 }
             }
@@ -1215,7 +1222,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.spinner04.isFocusable = false
+        spinner04.isFocusable = false
     }
 
     private fun readFromAsset(): List<Model> {
@@ -1465,6 +1472,12 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
+        val spinner1a = findViewById<Spinner>(R.id.spinner1a)
+        val spinner2a = findViewById<Spinner>(R.id.spinner2a)
+        val spinner3a = findViewById<Spinner>(R.id.spinner3a)
+        val spinner4a = findViewById<Spinner>(R.id.spinner4a)
+        val spinner04 = findViewById<Spinner>(R.id.spinner04)
+
         MenuListFragmentActivity4()
 
 
@@ -1500,7 +1513,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList3a -> {
-                binding.spinner04.performClick()
+                spinner04.performClick()
                 return true
             }
 
@@ -1553,8 +1566,8 @@ class MainActivity : AppCompatActivity() {
                 adapter5a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                binding.spinner1a.adapter = adapter5a
-                handler.postDelayed({ binding.spinner1a.performClick() }, 300)
+                spinner1a.adapter = adapter5a
+                handler.postDelayed({ spinner1a.performClick() }, 300)
                 return true
             }
 
@@ -1582,8 +1595,8 @@ class MainActivity : AppCompatActivity() {
                 adapter6a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                binding.spinner2a.adapter = adapter6a
-                handler.postDelayed({ binding.spinner2a.performClick() }, 300)
+                spinner2a.adapter = adapter6a
+                handler.postDelayed({ spinner2a.performClick() }, 300)
                 return true
             }
 
@@ -1611,8 +1624,8 @@ class MainActivity : AppCompatActivity() {
                 adapter7a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                binding.spinner3a.adapter = adapter7a
-                handler.postDelayed({ binding.spinner3a.performClick() }, 300)
+                spinner3a.adapter = adapter7a
+                handler.postDelayed({ spinner3a.performClick() }, 300)
                 return true
             }
 
@@ -1640,8 +1653,8 @@ class MainActivity : AppCompatActivity() {
                 adapter8a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-                binding.spinner4a.adapter = adapter8a
-                handler.postDelayed({ binding.spinner4a.performClick() }, 300)
+                spinner4a.adapter = adapter8a
+                handler.postDelayed({ spinner4a.performClick() }, 300)
                 return true
             }
 
