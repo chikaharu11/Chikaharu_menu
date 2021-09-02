@@ -71,104 +71,6 @@ class MainActivity : AppCompatActivity() {
         startActivityForResult(intent, READ_REQUEST_CODE)
     }
 
-    fun menuList1() {
-        val builder = android.app.AlertDialog.Builder(this)
-        val inflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.dialog_week, null)
-
-        builder.setView(dialogView)
-            .setTitle("項目の名前を変更できます。")
-            .setPositiveButton("変更する") { _, _ ->
-
-                mRealm.executeTransaction {
-                    mRealm.where(Book6::class.java).findAll().deleteAllFromRealm()
-                    val item1 = mRealm.createObject<Book6>(0)
-                    item1.name =
-                        dialogView.findViewById<EditText>(R.id.editText_8n).text.toString()
-
-                    val item2 = mRealm.createObject<Book6>(1)
-                    item2.name =
-                        dialogView.findViewById<EditText>(R.id.editText_9n).text.toString()
-
-                    val item3 = mRealm.createObject<Book6>(2)
-                    item3.name =
-                        dialogView.findViewById<EditText>(R.id.editText_8).text.toString()
-
-                    val item4 = mRealm.createObject<Book6>(3)
-                    item4.name =
-                        dialogView.findViewById<EditText>(R.id.editText_9).text.toString()
-
-                    binding.editText8n.hint = item1.name + "　　　　"
-                    binding.editText4n.hint = item1.name + "　　　　"
-                    binding.editText13n.hint = item1.name + "　　　　"
-                    binding.editTextn.hint = item1.name + "　　　　"
-                    binding.editText11n.hint = item1.name + "　　　　"
-                    binding.editText10n.hint = item1.name + "　　　　"
-                    binding.editText12n.hint = item1.name + "　　　　"
-                    binding.editText9n.hint = item2.name + "　　　　"
-                    binding.editText7n.hint = item2.name + "　　　　"
-                    binding.editText15n.hint = item2.name + "　　　　"
-                    binding.editText16n.hint = item2.name + "　　　　"
-                    binding.editText18n.hint = item2.name + "　　　　"
-                    binding.editText17n.hint = item2.name + "　　　　"
-                    binding.editText14n.hint = item2.name + "　　　　"
-                    binding.editText8.hint = item3.name + "　　　　"
-                    binding.editText4.hint = item3.name + "　　　　"
-                    binding.editText13.hint = item3.name + "　　　　"
-                    binding.editText.hint = item3.name + "　　　　"
-                    binding.editText11.hint = item3.name + "　　　　"
-                    binding.editText10.hint = item3.name + "　　　　"
-                    binding.editText12.hint = item3.name + "　　　　"
-                    binding.editText9.hint = item4.name + "　　　　"
-                    binding.editText7.hint = item4.name + "　　　　"
-                    binding.editText15.hint = item4.name + "　　　　"
-                    binding.editText16.hint = item4.name + "　　　　"
-                    binding.editText18.hint = item4.name + "　　　　"
-                    binding.editText17.hint = item4.name + "　　　　"
-                    binding.editText14.hint = item4.name + "　　　　"
-                }
-                Toast.makeText(applicationContext, "項目の名前を変更しました。", Toast.LENGTH_SHORT)
-                    .show()
-            }
-            .setNegativeButton("キャンセル") { _, _ ->
-
-            }
-
-            .show()
-        return
-    }
-
-    fun menuList10() {
-        val builder = android.app.AlertDialog.Builder(this)
-        val inflater = layoutInflater
-        val dialogView2 = inflater.inflate(R.layout.dialog_title, null)
-
-        builder.setView(dialogView2)
-            .setTitle("タイトルを変更できます。")
-            .setPositiveButton("変更する") { _, _ ->
-                mRealm.executeTransaction {
-                    mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()
-                        ?.deleteFromRealm()
-                    val item5 = mRealm.createObject<Book7>(0)
-                    item5.name =
-                        dialogView2.findViewById<EditText>(R.id.editText_title).text.toString().replace(
-                            "/",
-                            " "
-                        )
-
-                    supportActionBar?.title = item5.name
-                }
-                Toast.makeText(applicationContext, "タイトルを変更しました。", Toast.LENGTH_SHORT)
-                    .show()
-            }
-            .setNegativeButton("キャンセル") { _, _ ->
-
-            }
-
-            .show()
-        return
-    }
-
     fun menuList13() {
 
         count++
@@ -297,7 +199,7 @@ class MainActivity : AppCompatActivity() {
         binding.view16.visibility = View.VISIBLE
         binding.view17.visibility = View.VISIBLE
         binding.view18.visibility = View.VISIBLE
-        Toast.makeText(applicationContext, "ラインはタッチすると消すことができます。", Toast.LENGTH_LONG)
+        Toast.makeText(applicationContext, "線はタッチすると消すことができます。", Toast.LENGTH_LONG)
             .show()
 
         return
@@ -462,6 +364,63 @@ class MainActivity : AppCompatActivity() {
             binding.view17.visibility = View.INVISIBLE
         }
         binding.view18.setOnClickListener{
+            binding.view18.visibility = View.INVISIBLE
+        }
+        binding.view1a.setOnClickListener{
+            binding.view1.visibility = View.INVISIBLE
+        }
+        binding.view2a.setOnClickListener{
+            binding.view2.visibility = View.INVISIBLE
+        }
+        binding.view3a.setOnClickListener{
+            binding.view3.visibility = View.INVISIBLE
+        }
+        binding.view4a.setOnClickListener{
+            binding.view4.visibility = View.INVISIBLE
+        }
+        binding.view5a.setOnClickListener{
+            binding.view5.visibility = View.INVISIBLE
+        }
+        binding.viewa.setOnClickListener{
+            binding.view.visibility = View.INVISIBLE
+        }
+        binding.view7a.setOnClickListener{
+            binding.view7.visibility = View.INVISIBLE
+        }
+        binding.view8a.setOnClickListener{
+            binding.view8.visibility = View.INVISIBLE
+        }
+        binding.view6a.setOnClickListener{
+            binding.view6.visibility = View.INVISIBLE
+        }
+        binding.view9a.setOnClickListener{
+            binding.view9.visibility = View.INVISIBLE
+        }
+        binding.view10a.setOnClickListener{
+            binding.view10.visibility = View.INVISIBLE
+        }
+        binding.view11a.setOnClickListener{
+            binding.view11.visibility = View.INVISIBLE
+        }
+        binding.view12a.setOnClickListener{
+            binding.view12.visibility = View.INVISIBLE
+        }
+        binding.view13a.setOnClickListener{
+            binding.view13.visibility = View.INVISIBLE
+        }
+        binding.view14a.setOnClickListener{
+            binding.view14.visibility = View.INVISIBLE
+        }
+        binding.view15a.setOnClickListener{
+            binding.view15.visibility = View.INVISIBLE
+        }
+        binding.view16a.setOnClickListener{
+            binding.view16.visibility = View.INVISIBLE
+        }
+        binding.view17a.setOnClickListener{
+            binding.view17.visibility = View.INVISIBLE
+        }
+        binding.view18a.setOnClickListener{
             binding.view18.visibility = View.INVISIBLE
         }
 
@@ -1201,22 +1160,16 @@ class MainActivity : AppCompatActivity() {
                     0 -> {
 
                     }
-                    1 -> { menuList10()
+                    1 -> { menuList13()
                         spinner04.setSelection(0)
                     }
-                    2 -> { menuList1()
+                    2 -> { menuList14()
                         spinner04.setSelection(0)
                     }
-                    3 -> { menuList13()
+                    3 -> { menuList12()
                         spinner04.setSelection(0)
                     }
-                    4 -> { menuList14()
-                        spinner04.setSelection(0)
-                    }
-                    5 -> { menuList12()
-                        spinner04.setSelection(0)
-                    }
-                    6 -> { menuList15()
+                    4 -> { menuList15()
                         spinner04.setSelection(0)
                     }
                 }
@@ -1482,8 +1435,6 @@ class MainActivity : AppCompatActivity() {
         val spinner3a = findViewById<Spinner>(R.id.spinner3a)
         val spinner4a = findViewById<Spinner>(R.id.spinner4a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
-
-        MenuListFragmentActivity4()
 
 
         when (item.itemId) {

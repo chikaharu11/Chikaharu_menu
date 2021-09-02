@@ -4,14 +4,6 @@
     "url": ""
   },
   {
-    "name": "タイトルの編集",
-    "url": "createblack24dp"
-  },
-  {
-    "name": "項目の編集",
-    "url": "createblack24dp"
-  },
-  {
     "name": "文字を大きくする",
     "url": "zoominblack24dp"
   },
@@ -20,7 +12,7 @@
     "url": "zoomoutblack24dp"
   },
   {
-    "name": "ラインを引く",
+    "name": "線を引く",
     "url": "bordercolorblack24dp"
   },
   {
