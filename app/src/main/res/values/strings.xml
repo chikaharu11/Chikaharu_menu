@@ -8,10 +8,10 @@
     <string name="c5">金</string>
     <string name="c6">土</string>
     <string name="c7">日</string>
-    <string name="mm1">おかず２</string>
-    <string name="mm2">メイン</string>
-    <string name="sm2">おかず１</string>
-    <string name="sm1">おかず３</string>
+    <string name="mm1">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</string>
+    <string name="mm2">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</string>
+    <string name="sm2">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</string>
+    <string name="sm1">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</string>
     <string name="tt">タイトル</string>
     <string name="hint">　</string>
     <string name="MenuList1">項目の編集</string>

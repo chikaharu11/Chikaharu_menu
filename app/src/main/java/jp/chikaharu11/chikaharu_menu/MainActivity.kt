@@ -257,13 +257,14 @@ class MainActivity : AppCompatActivity() {
 
     fun menuList15() {
 
-        findViewById<EditText>(R.id.textView).visibility = View.INVISIBLE
-        findViewById<EditText>(R.id.textView2).visibility = View.INVISIBLE
-        findViewById<EditText>(R.id.textView3).visibility = View.INVISIBLE
-        findViewById<EditText>(R.id.textView4).visibility = View.INVISIBLE
-        findViewById<EditText>(R.id.textView5).visibility = View.INVISIBLE
-        findViewById<EditText>(R.id.textView6).visibility = View.INVISIBLE
-        findViewById<EditText>(R.id.textView7).visibility = View.INVISIBLE
+        binding.textView.visibility = View.INVISIBLE
+        binding.textView2.visibility = View.INVISIBLE
+        binding.textView3.visibility = View.INVISIBLE
+        binding.textView4.visibility = View.INVISIBLE
+        binding.textView5.visibility = View.INVISIBLE
+        binding.textView6.visibility = View.INVISIBLE
+        binding.textView7.visibility = View.INVISIBLE
+        binding.view18.visibility = View.INVISIBLE
 
         val constraintSet = ConstraintSet()
         constraintSet.clone(binding.allView)
@@ -295,6 +296,7 @@ class MainActivity : AppCompatActivity() {
         binding.view15.visibility = View.VISIBLE
         binding.view16.visibility = View.VISIBLE
         binding.view17.visibility = View.VISIBLE
+        binding.view18.visibility = View.VISIBLE
         Toast.makeText(applicationContext, "ラインはタッチすると消すことができます。", Toast.LENGTH_LONG)
             .show()
 
@@ -458,6 +460,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.view17.setOnClickListener{
             binding.view17.visibility = View.INVISIBLE
+        }
+        binding.view18.setOnClickListener{
+            binding.view18.visibility = View.INVISIBLE
         }
 
 
