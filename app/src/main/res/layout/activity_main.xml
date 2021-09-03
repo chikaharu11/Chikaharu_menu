@@ -485,7 +485,7 @@
         app:layout_constraintTop_toTopOf="@+id/editText8n"
         android:autofillHints="hint"
         android:inputType="textMultiLine"
-        android:maxLines="3"
+        android:maxLines="1"
         android:maxWidth="36dp"
         tools:ignore="LabelFor" />
 
@@ -502,7 +502,7 @@
         app:layout_constraintTop_toTopOf="@+id/editText4n"
         android:autofillHints="hint"
         android:inputType="textMultiLine"
-        android:maxLines="3"
+        android:maxLines="1"
         android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
@@ -519,7 +519,7 @@
         app:layout_constraintTop_toTopOf="@+id/editText13n"
         android:autofillHints="hint"
         android:inputType="textMultiLine"
-        android:maxLines="3"
+        android:maxLines="1"
         android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
@@ -536,7 +536,7 @@
         app:layout_constraintTop_toTopOf="@+id/editTextn"
         android:autofillHints="hint"
         android:inputType="textMultiLine"
-        android:maxLines="3"
+        android:maxLines="1"
         android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
@@ -553,7 +553,7 @@
         app:layout_constraintTop_toTopOf="@+id/editText11n"
         android:autofillHints="hint"
         android:inputType="textMultiLine"
-        android:maxLines="3"
+        android:maxLines="1"
         android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
@@ -570,7 +570,7 @@
         app:layout_constraintTop_toTopOf="@+id/editText10n"
         android:autofillHints="hint"
         android:inputType="textMultiLine"
-        android:maxLines="3"
+        android:maxLines="1"
         android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 
@@ -587,7 +587,7 @@
         app:layout_constraintTop_toTopOf="@+id/editText12n"
         android:autofillHints="hint"
         android:inputType="textMultiLine"
-        android:maxLines="3"
+        android:maxLines="1"
         android:maxWidth="36dp"
         tools:ignore="LabelFor"/>
 

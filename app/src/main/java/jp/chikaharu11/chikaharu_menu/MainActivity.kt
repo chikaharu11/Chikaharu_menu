@@ -306,7 +306,7 @@ class MainActivity : AppCompatActivity() {
         if(item5 != null){
             supportActionBar?.title = item5
         } else {
-            supportActionBar?.title = "Menu"
+            supportActionBar?.title = "メニュー表"
         }
 
         binding.view1.setOnClickListener{

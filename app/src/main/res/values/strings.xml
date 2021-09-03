@@ -13,7 +13,7 @@
     <string name="sm2">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</string>
     <string name="sm1">ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ</string>
     <string name="tt">タイトル</string>
-    <string name="hint">　</string>
+    <string name="hint">ㅤ</string>
     <string name="MenuList1">項目の編集</string>
     <string name="MenuList10">タイトルの編集</string>
     <string name="MenuList13">文字を大きくする</string>
