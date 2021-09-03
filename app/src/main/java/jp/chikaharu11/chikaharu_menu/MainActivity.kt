@@ -255,6 +255,13 @@ class MainActivity : AppCompatActivity() {
         val week5 = mRealm.where(Book5::class.java).equalTo("id", 4.toLong()).findFirst()?.name
         val week6 = mRealm.where(Book5::class.java).equalTo("id", 5.toLong()).findFirst()?.name
         val week7 = mRealm.where(Book5::class.java).equalTo("id", 6.toLong()).findFirst()?.name
+        val week8 = mRealm.where(Book5::class.java).equalTo("id", 7.toLong()).findFirst()?.name
+        val week9 = mRealm.where(Book5::class.java).equalTo("id", 8.toLong()).findFirst()?.name
+        val week10 = mRealm.where(Book5::class.java).equalTo("id", 9.toLong()).findFirst()?.name
+        val week11 = mRealm.where(Book5::class.java).equalTo("id", 10.toLong()).findFirst()?.name
+        val week12 = mRealm.where(Book5::class.java).equalTo("id", 11.toLong()).findFirst()?.name
+        val week13 = mRealm.where(Book5::class.java).equalTo("id", 12.toLong()).findFirst()?.name
+        val week14 = mRealm.where(Book5::class.java).equalTo("id", 13.toLong()).findFirst()?.name
 
         if(week1 != null){
             binding.textView.setText(week1, TextView.BufferType.NORMAL)
@@ -264,6 +271,13 @@ class MainActivity : AppCompatActivity() {
             binding.textView5.setText(week5, TextView.BufferType.NORMAL)
             binding.textView6.setText(week6, TextView.BufferType.NORMAL)
             binding.textView7.setText(week7, TextView.BufferType.NORMAL)
+            binding.textView8.setText(week8, TextView.BufferType.NORMAL)
+            binding.textView9.setText(week9, TextView.BufferType.NORMAL)
+            binding.textView10.setText(week10, TextView.BufferType.NORMAL)
+            binding.textView11.setText(week11, TextView.BufferType.NORMAL)
+            binding.textView12.setText(week12, TextView.BufferType.NORMAL)
+            binding.textView13.setText(week13, TextView.BufferType.NORMAL)
+            binding.textView14.setText(week14, TextView.BufferType.NORMAL)
         }
 
         val item1 = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
@@ -1697,24 +1711,32 @@ class MainActivity : AppCompatActivity() {
                     mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
                     val week1 = mRealm.createObject<Book5>(0)
                     week1.name = binding.textView.text.toString()
-
                     val week2 = mRealm.createObject<Book5>(1)
                     week2.name = binding.textView2.text.toString()
-
                     val week3 = mRealm.createObject<Book5>(2)
                     week3.name = binding.textView3.text.toString()
-
                     val week4 = mRealm.createObject<Book5>(3)
                     week4.name = binding.textView4.text.toString()
-
                     val week5 = mRealm.createObject<Book5>(4)
                     week5.name = binding.textView5.text.toString()
-
                     val week6 = mRealm.createObject<Book5>(5)
                     week6.name = binding.textView6.text.toString()
-
                     val week7 = mRealm.createObject<Book5>(6)
                     week7.name = binding.textView7.text.toString()
+                    val week8 = mRealm.createObject<Book5>(7)
+                    week8.name = binding.textView8.text.toString()
+                    val week9 = mRealm.createObject<Book5>(8)
+                    week9.name = binding.textView9.text.toString()
+                    val week10 = mRealm.createObject<Book5>(9)
+                    week10.name = binding.textView10.text.toString()
+                    val week11 = mRealm.createObject<Book5>(10)
+                    week11.name = binding.textView11.text.toString()
+                    val week12 = mRealm.createObject<Book5>(11)
+                    week12.name = binding.textView12.text.toString()
+                    val week13 = mRealm.createObject<Book5>(12)
+                    week13.name = binding.textView13.text.toString()
+                    val week14 = mRealm.createObject<Book5>(13)
+                    week14.name = binding.textView14.text.toString()
                 }
 
                 Toast.makeText(
