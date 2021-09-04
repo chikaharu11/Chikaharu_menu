@@ -27,6 +27,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.FileProvider
+import androidx.core.view.isInvisible
+import androidx.core.view.isVisible
 import com.google.gson.Gson
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
@@ -161,21 +163,57 @@ class MainActivity : AppCompatActivity() {
 
     fun menuList15() {
 
-        binding.textView.visibility = View.INVISIBLE
-        binding.textView2.visibility = View.INVISIBLE
-        binding.textView3.visibility = View.INVISIBLE
-        binding.textView4.visibility = View.INVISIBLE
-        binding.textView5.visibility = View.INVISIBLE
-        binding.textView6.visibility = View.INVISIBLE
-        binding.textView7.visibility = View.INVISIBLE
-        binding.view18.visibility = View.INVISIBLE
+        if (binding.textView.isVisible) {
+            binding.textView.visibility = View.INVISIBLE
+            binding.textView2.visibility = View.INVISIBLE
+            binding.textView3.visibility = View.INVISIBLE
+            binding.textView4.visibility = View.INVISIBLE
+            binding.textView5.visibility = View.INVISIBLE
+            binding.textView6.visibility = View.INVISIBLE
+            binding.textView7.visibility = View.INVISIBLE
+            binding.view18.visibility = View.INVISIBLE
 
-        val constraintSet = ConstraintSet()
-        constraintSet.clone(binding.allView)
+            val constraintSet = ConstraintSet()
+            constraintSet.clone(binding.allView)
 
-        constraintSet.connect(binding.editText12.id, ConstraintSet.START, binding.view10.id, ConstraintSet.END, 2)
+            val metrics = resources.displayMetrics
+            val margin = (2 * metrics.density).toInt()
 
-        constraintSet.applyTo(binding.allView)
+            constraintSet.connect(
+                binding.editText12.id,
+                ConstraintSet.START,
+                binding.view10.id,
+                ConstraintSet.END,
+                margin
+            )
+
+            constraintSet.applyTo(binding.allView)
+        } else if (binding.textView.isInvisible) {
+            binding.textView.visibility = View.VISIBLE
+            binding.textView2.visibility = View.VISIBLE
+            binding.textView3.visibility = View.VISIBLE
+            binding.textView4.visibility = View.VISIBLE
+            binding.textView5.visibility = View.VISIBLE
+            binding.textView6.visibility = View.VISIBLE
+            binding.textView7.visibility = View.VISIBLE
+            binding.view18.visibility = View.VISIBLE
+
+            val constraintSet = ConstraintSet()
+            constraintSet.clone(binding.allView)
+
+            val metrics = resources.displayMetrics
+            val margin = (38 * metrics.density).toInt()
+
+            constraintSet.connect(
+                binding.editText12.id,
+                ConstraintSet.START,
+                binding.view10.id,
+                ConstraintSet.END,
+                margin
+            )
+
+            constraintSet.applyTo(binding.allView)
+        }
 
         return
     }
