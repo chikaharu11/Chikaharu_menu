@@ -57,6 +57,8 @@ class MainActivity : AppCompatActivity() {
 
     private var count = 16.toFloat()
 
+    private var flag = 0
+
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
     }
@@ -179,28 +181,44 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun menuList12() {
+        when (flag) {
+            0 -> {
+                binding.view6.visibility = View.INVISIBLE
+                binding.view18.visibility = View.INVISIBLE
+                flag = 1
+            }
+            1 -> {
+                binding.view11.visibility = View.INVISIBLE
+                binding.view12.visibility = View.INVISIBLE
+                binding.view13.visibility = View.INVISIBLE
+                binding.view14.visibility = View.INVISIBLE
+                binding.view15.visibility = View.INVISIBLE
+                binding.view16.visibility = View.INVISIBLE
+                binding.view17.visibility = View.INVISIBLE
+                binding.view6.visibility = View.VISIBLE
+                binding.view18.visibility = View.VISIBLE
+                flag = 2
+            }
+            2 -> {
 
-        binding.view1.visibility = View.VISIBLE
-        binding.view2.visibility = View.VISIBLE
-        binding.view3.visibility = View.VISIBLE
-        binding.view4.visibility = View.VISIBLE
-        binding.view5.visibility = View.VISIBLE
-        binding.view.visibility = View.VISIBLE
-        binding.view7.visibility = View.VISIBLE
-        binding.view8.visibility = View.VISIBLE
-        binding.view6.visibility = View.VISIBLE
-        binding.view9.visibility = View.VISIBLE
-        binding.view10.visibility = View.VISIBLE
-        binding.view11.visibility = View.VISIBLE
-        binding.view12.visibility = View.VISIBLE
-        binding.view13.visibility = View.VISIBLE
-        binding.view14.visibility = View.VISIBLE
-        binding.view15.visibility = View.VISIBLE
-        binding.view16.visibility = View.VISIBLE
-        binding.view17.visibility = View.VISIBLE
-        binding.view18.visibility = View.VISIBLE
-        Toast.makeText(applicationContext, "線はタッチすると消すことができます。", Toast.LENGTH_LONG)
-            .show()
+                binding.view6.visibility = View.INVISIBLE
+                binding.view18.visibility = View.INVISIBLE
+                flag = 3
+            }
+            3 -> {
+
+                binding.view6.visibility = View.VISIBLE
+                binding.view11.visibility = View.VISIBLE
+                binding.view12.visibility = View.VISIBLE
+                binding.view13.visibility = View.VISIBLE
+                binding.view14.visibility = View.VISIBLE
+                binding.view15.visibility = View.VISIBLE
+                binding.view16.visibility = View.VISIBLE
+                binding.view17.visibility = View.VISIBLE
+                binding.view18.visibility = View.VISIBLE
+                flag = 0
+            }
+        }
 
         return
     }
@@ -322,123 +340,6 @@ class MainActivity : AppCompatActivity() {
         } else {
             supportActionBar?.title = "メニュー表"
         }
-
-        binding.view1.setOnClickListener{
-            binding.view1.visibility = View.INVISIBLE
-        }
-        binding.view2.setOnClickListener{
-            binding.view2.visibility = View.INVISIBLE
-        }
-        binding.view3.setOnClickListener{
-            binding.view3.visibility = View.INVISIBLE
-        }
-        binding.view4.setOnClickListener{
-            binding.view4.visibility = View.INVISIBLE
-        }
-        binding.view5.setOnClickListener{
-            binding.view5.visibility = View.INVISIBLE
-        }
-        binding.view.setOnClickListener{
-            binding.view.visibility = View.INVISIBLE
-        }
-        binding.view7.setOnClickListener{
-            binding.view7.visibility = View.INVISIBLE
-        }
-        binding.view8.setOnClickListener{
-            binding.view8.visibility = View.INVISIBLE
-        }
-        binding.view6.setOnClickListener{
-            binding.view6.visibility = View.INVISIBLE
-        }
-        binding.view9.setOnClickListener{
-            binding.view9.visibility = View.INVISIBLE
-        }
-        binding.view10.setOnClickListener{
-            binding.view10.visibility = View.INVISIBLE
-        }
-        binding.view11.setOnClickListener{
-            binding.view11.visibility = View.INVISIBLE
-        }
-        binding.view12.setOnClickListener{
-            binding.view12.visibility = View.INVISIBLE
-        }
-        binding.view13.setOnClickListener{
-            binding.view13.visibility = View.INVISIBLE
-        }
-        binding.view14.setOnClickListener{
-            binding.view14.visibility = View.INVISIBLE
-        }
-        binding.view15.setOnClickListener{
-            binding.view15.visibility = View.INVISIBLE
-        }
-        binding.view16.setOnClickListener{
-            binding.view16.visibility = View.INVISIBLE
-        }
-        binding.view17.setOnClickListener{
-            binding.view17.visibility = View.INVISIBLE
-        }
-        binding.view18.setOnClickListener{
-            binding.view18.visibility = View.INVISIBLE
-        }
-        binding.view1a.setOnClickListener{
-            binding.view1.visibility = View.INVISIBLE
-        }
-        binding.view2a.setOnClickListener{
-            binding.view2.visibility = View.INVISIBLE
-        }
-        binding.view3a.setOnClickListener{
-            binding.view3.visibility = View.INVISIBLE
-        }
-        binding.view4a.setOnClickListener{
-            binding.view4.visibility = View.INVISIBLE
-        }
-        binding.view5a.setOnClickListener{
-            binding.view5.visibility = View.INVISIBLE
-        }
-        binding.viewa.setOnClickListener{
-            binding.view.visibility = View.INVISIBLE
-        }
-        binding.view7a.setOnClickListener{
-            binding.view7.visibility = View.INVISIBLE
-        }
-        binding.view8a.setOnClickListener{
-            binding.view8.visibility = View.INVISIBLE
-        }
-        binding.view6a.setOnClickListener{
-            binding.view6.visibility = View.INVISIBLE
-        }
-        binding.view9a.setOnClickListener{
-            binding.view9.visibility = View.INVISIBLE
-        }
-        binding.view10a.setOnClickListener{
-            binding.view10.visibility = View.INVISIBLE
-        }
-        binding.view11a.setOnClickListener{
-            binding.view11.visibility = View.INVISIBLE
-        }
-        binding.view12a.setOnClickListener{
-            binding.view12.visibility = View.INVISIBLE
-        }
-        binding.view13a.setOnClickListener{
-            binding.view13.visibility = View.INVISIBLE
-        }
-        binding.view14a.setOnClickListener{
-            binding.view14.visibility = View.INVISIBLE
-        }
-        binding.view15a.setOnClickListener{
-            binding.view15.visibility = View.INVISIBLE
-        }
-        binding.view16a.setOnClickListener{
-            binding.view16.visibility = View.INVISIBLE
-        }
-        binding.view17a.setOnClickListener{
-            binding.view17.visibility = View.INVISIBLE
-        }
-        binding.view18a.setOnClickListener{
-            binding.view18.visibility = View.INVISIBLE
-        }
-
-
 
 
         val cuisine1 = mutableSetOf(
