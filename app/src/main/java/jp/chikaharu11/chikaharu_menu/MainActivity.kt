@@ -272,6 +272,7 @@ class MainActivity : AppCompatActivity() {
         val spinner3a = findViewById<Spinner>(R.id.spinner3a)
         val spinner4a = findViewById<Spinner>(R.id.spinner4a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
+        val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
 
         container = findViewById(R.id.allView)
 
@@ -1134,6 +1135,70 @@ class MainActivity : AppCompatActivity() {
         }
 
         spinner04.isFocusable = false
+
+        val wpList = listOf(
+            "[入力、貼付けの切替え]",
+            "手入力する",
+            "メイン料理",
+            "野菜、サラダ",
+            "味噌汁、スープ",
+            "果物、デザート"
+        )
+
+        val adapterWP = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, wpList
+        )
+
+        adapterWP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        spinnerWP.adapter = adapterWP
+
+        spinnerWP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?, position: Int, id: Long
+            ) {
+                if (!spinnerWP.isFocusable) {
+                    spinnerWP.isFocusable = true
+                    return
+                }
+                when(position){
+                    0 -> {
+
+                    }
+                    1 -> { menuSwitch = true
+                        invalidateOptionsMenu()
+                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6200EE")))
+                        Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
+                        binding.switch1.isChecked = false
+                        spinnerWP.setSelection(0)
+                    }
+                    2 -> { menuSwitch = false
+                        invalidateOptionsMenu()
+                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
+                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                        Toast.makeText(applicationContext, "貼り付けモード", Toast.LENGTH_SHORT).show()
+                        binding.switch1.isChecked = true
+                        spinnerWP.setSelection(0)
+                    }
+                    3 -> { menuList12()
+                        spinnerWP.setSelection(0)
+                    }
+                    4 -> { menuList15()
+                        spinnerWP.setSelection(0)
+                    }
+                }
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {
+
+            }
+        }
+
+        spinnerWP.isFocusable = false
     }
 
     private fun readFromAsset(): List<Model> {
@@ -1388,26 +1453,13 @@ class MainActivity : AppCompatActivity() {
         val spinner3a = findViewById<Spinner>(R.id.spinner3a)
         val spinner4a = findViewById<Spinner>(R.id.spinner4a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
+        val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
 
 
         when (item.itemId) {
 
             R.id.MenuList1 -> {
-                if (binding.switch1.isChecked) {
-                    menuSwitch = true
-                    invalidateOptionsMenu()
-                    supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6200EE")))
-                    Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
-                    binding.switch1.isChecked = false
-                } else {
-                    menuSwitch = false
-                    invalidateOptionsMenu()
-                    supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
-                    val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                    inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                    Toast.makeText(applicationContext, "貼り付けモード", Toast.LENGTH_SHORT).show()
-                    binding.switch1.isChecked = true
-                }
+                spinnerWP.performClick()
                 return true
             }
 
