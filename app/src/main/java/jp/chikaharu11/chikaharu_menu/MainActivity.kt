@@ -1681,16 +1681,44 @@ class MainActivity : AppCompatActivity() {
                     0 -> {
 
                     }
-                    1 -> { menuList13()
+                    1 -> {
+                         selectMenu()
                         spinner04.setSelection(0)
                     }
-                    2 -> { menuList14()
+                    2 -> { menuList13()
                         spinner04.setSelection(0)
                     }
-                    3 -> { menuList12()
+                    3 -> { menuList14()
                         spinner04.setSelection(0)
                     }
-                    4 -> { menuList15()
+                    4 -> { menuList12()
+                        spinner04.setSelection(0)
+                    }
+                    5 -> { menuList15()
+                        spinner04.setSelection(0)
+                    }
+                    6 -> {
+                        AlertDialog.Builder(this@MainActivity)
+                            .setTitle("再起動しますか？")
+                            .setPositiveButton("YES") { _, _ ->
+                                ProcessPhoenix.triggerRebirth(this@MainActivity)
+                            }
+                            .setNegativeButton("NO") { _, _ ->
+
+                            }
+                            .show()
+                        spinner04.setSelection(0)
+                    }
+                    7 -> {
+                        AlertDialog.Builder(this@MainActivity)
+                            .setTitle("終了しますか？")
+                            .setPositiveButton("YES") { _, _ ->
+                                finish()
+                            }
+                            .setNegativeButton("NO") { _, _ ->
+
+                            }
+                            .show()
                         spinner04.setSelection(0)
                     }
                 }
