@@ -14,32 +14,12 @@
     <item
         android:id="@+id/MenuList1"
         app:showAsAction="always"
-        android:title="@string/MenuList"
-        tools:ignore="AlwaysShowAction" />
+        android:title="@string/MenuList" />
 
     <item
         android:id="@+id/MenuList3a"
+        app:showAsAction="always"
         android:icon="@drawable/ic_baseline_more_vert_24"
-        android:title="@string/MenuList3a"
-        app:showAsAction="always" />
-    <item
-        android:id="@+id/MenuList5c"
-        app:showAsAction="never"
-        android:title="@string/MenuList5c" />
-
-    <item
-        android:id="@+id/MenuList4"
-        app:showAsAction="never"
-        android:title="@string/MenuList4" />
-
-    <item
-        android:id="@+id/MenuList6"
-        app:showAsAction="never"
-        android:title="@string/MenuList6" />
-
-    <item
-        android:id="@+id/MenuList7"
-        app:showAsAction="never"
-        android:title="@string/MenuList7" />
+        android:title="@string/MenuList3a" />
 
 </menu>

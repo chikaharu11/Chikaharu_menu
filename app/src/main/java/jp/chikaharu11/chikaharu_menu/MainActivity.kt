@@ -49,8 +49,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val handler = Handler()
-
     private lateinit var mRealm: Realm
 
     private lateinit var soundPool: SoundPool
@@ -1919,6 +1917,7 @@ class MainActivity : AppCompatActivity() {
         mRealm.close()
     }
 
+
     private fun create(name: String) {
         mRealm.executeTransaction {
             val max = mRealm.where<Book>().max("id")
@@ -1927,45 +1926,6 @@ class MainActivity : AppCompatActivity() {
                 newId = max.toLong() + 1
             }
             val book = mRealm.createObject<Book>(primaryKeyValue = newId)
-            book.name = name
-            mRealm.copyToRealm(book)
-        }
-    }
-
-    private fun create2(name: String) {
-        mRealm.executeTransaction {
-            val max = mRealm.where<Book2>().max("id")
-            var newId: Long = 0
-            if (max != null) {
-                newId = max.toLong() + 1
-            }
-            val book = mRealm.createObject<Book2>(primaryKeyValue = newId)
-            book.name = name
-            mRealm.copyToRealm(book)
-        }
-    }
-
-    private fun create3(name: String) {
-        mRealm.executeTransaction {
-            val max = mRealm.where<Book3>().max("id")
-            var newId: Long = 0
-            if (max != null) {
-                newId = max.toLong() + 1
-            }
-            val book = mRealm.createObject<Book3>(primaryKeyValue = newId)
-            book.name = name
-            mRealm.copyToRealm(book)
-        }
-    }
-
-    private fun create4(name: String) {
-        mRealm.executeTransaction {
-            val max = mRealm.where<Book4>().max("id")
-            var newId: Long = 0
-            if (max != null) {
-                newId = max.toLong() + 1
-            }
-            val book = mRealm.createObject<Book4>(primaryKeyValue = newId)
             book.name = name
             mRealm.copyToRealm(book)
         }
@@ -1993,6 +1953,7 @@ class MainActivity : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
+
     override fun onPrepareOptionsMenu(menu: Menu?):Boolean {
 
         super.onPrepareOptionsMenu(menu)
@@ -2006,7 +1967,6 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        val spinner3a = findViewById<Spinner>(R.id.spinner3a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
         val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
 
@@ -2025,180 +1985,6 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList3a -> {
                 spinner04.performClick()
-                return true
-            }
-
-            R.id.MenuList4 -> {
-                binding.switch3.setOnCheckedChangeListener { _, isChecked ->
-                    if (isChecked) mRealm.executeTransaction {
-                        val item6 = mRealm.createObject<Book6>(5)
-                        val a6 = true
-                        item6.boolean = a6
-                        Toast.makeText(
-                            applicationContext,
-                            "次にアプリを開いた時から\n初期メニューを表示しません。",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                    else mRealm.executeTransaction {
-                        mRealm.where(Book6::class.java).findAll().deleteLastFromRealm()
-                        Toast.makeText(
-                            applicationContext,
-                            "次にアプリを開いた時から\n初期メニューを表示します。",
-                            Toast.LENGTH_LONG
-                        ).show()
-                    }
-                }
-                binding.switch3.performClick()
-                return true
-            }
-
-            R.id.MenuList5c -> {
-                val menuList3a = mutableSetOf(
-                    "[選択したメニューを削除できます]"
-                )
-
-                val inMenuList3a = mRealm.where<Book3>().findAll()
-
-
-                for (i in inMenuList3a)
-                    if (inMenuList3a != null) {
-                        menuList3a.add(i.name)
-                    }
-
-
-                val spinnerItems7a = menuList3a.sorted()
-
-                val adapter7a = ArrayAdapter(
-                    applicationContext,
-                    android.R.layout.simple_spinner_item, spinnerItems7a
-                )
-
-                adapter7a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-                spinner3a.adapter = adapter7a
-                handler.postDelayed({ spinner3a.performClick() }, 300)
-                return true
-            }
-
-
-            R.id.MenuList6 -> {
-                AlertDialog.Builder(this)
-                    .setTitle("初期状態に戻しますか？")
-                    .setMessage("(登録した内容を全て消去して、\n再起動します。)")
-                    .setPositiveButton("YES") { _, _ ->
-                        delete()
-                        ProcessPhoenix.triggerRebirth(this)
-
-                    }
-                    .setNegativeButton("NO") { _, _ ->
-
-                    }
-                    .show()
-
-                return true
-            }
-
-            R.id.MenuList7 -> {
-                val stringText11 = binding.editText8.text.toString()
-                create(stringText11)
-                val stringText12 = binding.editText4.text.toString()
-                create(stringText12)
-                val stringText13 = binding.editText13.text.toString()
-                create(stringText13)
-                val stringText14 = binding.editText.text.toString()
-                create(stringText14)
-                val stringText15 = binding.editText11.text.toString()
-                create(stringText15)
-                val stringText16 = binding.editText10.text.toString()
-                create(stringText16)
-                val stringText17 = binding.editText12.text.toString()
-                create(stringText17)
-
-                val stringText21 = binding.editText9.text.toString()
-                create2(stringText21)
-                val stringText22 = binding.editText7.text.toString()
-                create2(stringText22)
-                val stringText23 = binding.editText15.text.toString()
-                create2(stringText23)
-                val stringText24 = binding.editText16.text.toString()
-                create2(stringText24)
-                val stringText25 = binding.editText18.text.toString()
-                create2(stringText25)
-                val stringText26 = binding.editText17.text.toString()
-                create2(stringText26)
-                val stringText27 = binding.editText14.text.toString()
-                create2(stringText27)
-
-                val stringText31 = binding.editText8n.text.toString()
-                create3(stringText31)
-                val stringText32 = binding.editText4n.text.toString()
-                create3(stringText32)
-                val stringText33 = binding.editText13n.text.toString()
-                create3(stringText33)
-                val stringText34 = binding.editTextn.text.toString()
-                create3(stringText34)
-                val stringText35 = binding.editText11n.text.toString()
-                create3(stringText35)
-                val stringText36 = binding.editText10n.text.toString()
-                create3(stringText36)
-                val stringText37 = binding.editText12n.text.toString()
-                create3(stringText37)
-
-                val stringText41 = binding.editText9n.text.toString()
-                create4(stringText41)
-                val stringText42 = binding.editText7n.text.toString()
-                create4(stringText42)
-                val stringText43 = binding.editText15n.text.toString()
-                create4(stringText43)
-                val stringText44 = binding.editText16n.text.toString()
-                create4(stringText44)
-                val stringText45 = binding.editText18n.text.toString()
-                create4(stringText45)
-                val stringText46 = binding.editText17n.text.toString()
-                create4(stringText46)
-                val stringText47 = binding.editText14n.text.toString()
-                create4(stringText47)
-
-                mRealm.executeTransaction {
-                    mRealm.where(Book5::class.java).findAll().deleteAllFromRealm()
-                    val week1 = mRealm.createObject<Book5>(0)
-                    week1.name = binding.textView.text.toString()
-                    val week2 = mRealm.createObject<Book5>(1)
-                    week2.name = binding.textView2.text.toString()
-                    val week3 = mRealm.createObject<Book5>(2)
-                    week3.name = binding.textView3.text.toString()
-                    val week4 = mRealm.createObject<Book5>(3)
-                    week4.name = binding.textView4.text.toString()
-                    val week5 = mRealm.createObject<Book5>(4)
-                    week5.name = binding.textView5.text.toString()
-                    val week6 = mRealm.createObject<Book5>(5)
-                    week6.name = binding.textView6.text.toString()
-                    val week7 = mRealm.createObject<Book5>(6)
-                    week7.name = binding.textView7.text.toString()
-                    val week8 = mRealm.createObject<Book5>(7)
-                    week8.name = binding.textView8.text.toString()
-                    val week9 = mRealm.createObject<Book5>(8)
-                    week9.name = binding.textView9.text.toString()
-                    val week10 = mRealm.createObject<Book5>(9)
-                    week10.name = binding.textView10.text.toString()
-                    val week11 = mRealm.createObject<Book5>(10)
-                    week11.name = binding.textView11.text.toString()
-                    val week12 = mRealm.createObject<Book5>(11)
-                    week12.name = binding.textView12.text.toString()
-                    val week13 = mRealm.createObject<Book5>(12)
-                    week13.name = binding.textView13.text.toString()
-                    val week14 = mRealm.createObject<Book5>(13)
-                    week14.name = binding.textView14.text.toString()
-                }
-
-                Toast.makeText(
-                    applicationContext,
-                    "保存しました。\n次にアプリを開いた時から追加されます。",
-                    Toast.LENGTH_LONG
-                ).show()
-
                 return true
             }
 

@@ -21,18 +21,11 @@
     <string name="MenuList12">線を引く</string>
     <string name="MenuList2">画面保存</string>
     <string name="MenuList3">他のアプリで開く</string>
-    <string name="MenuList4">初期メニュー表示切替</string>
-    <string name="MenuList5a">おかず２の選択削除</string>
-    <string name="MenuList5b">おかず３の選択削除</string>
-    <string name="MenuList5c">メインの選択削除</string>
-    <string name="MenuList5d">おかず１の選択削除</string>
-    <string name="MenuList6">初期状態に戻す</string>
-    <string name="MenuList7">メニューを保存する</string>
     <string name="MenuList8">終了する</string>
     <string name="MenuList9">再起動する</string>
     <string name="Description">TODO</string>
     <string name="MenuList15">曜日を隠す</string>
-    <string name="MenuList3a">設定</string>
+    <string name="MenuList3a">各種機能</string>
     <string name="MenuList">書く／貼付</string>
     <string name="switch1">書く／貼付</string>
 
