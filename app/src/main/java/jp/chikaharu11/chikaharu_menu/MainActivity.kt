@@ -711,165 +711,543 @@ class MainActivity : AppCompatActivity() {
             }
         }
         binding.editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText4.setTextIsSelectable(true)
-                binding.customSpinner.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText4.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText4.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText4.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText4.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText.setTextIsSelectable(true)
-                binding.customSpinner.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText10.setTextIsSelectable(true)
-                binding.customSpinner.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText10.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText10.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText10.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText10.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText11.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText11.setTextIsSelectable(true)
-                binding.customSpinner.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText11.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText11.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText11.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText11.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText12.setTextIsSelectable(true)
-                binding.customSpinner.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText12.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText12.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText12.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText12.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText13.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText13.setTextIsSelectable(true)
-                binding.customSpinner.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText13.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText13.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText13.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText13.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText9.setTextIsSelectable(true)
-                binding.customSpinner2.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText9.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText9.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText9.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText9.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText7.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText7.setTextIsSelectable(true)
-                binding.customSpinner2.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText7.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText7.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText7.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText7.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText14.setTextIsSelectable(true)
-                binding.customSpinner2.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText14.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText14.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText14.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText14.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText15.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText15.setTextIsSelectable(true)
-                binding.customSpinner2.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText15.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText15.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText15.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText15.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText16.setTextIsSelectable(true)
-                binding.customSpinner2.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText16.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText16.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText16.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText16.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText17.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText17.setTextIsSelectable(true)
-                binding.customSpinner2.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText17.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText17.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText17.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText17.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText18.setTextIsSelectable(true)
-                binding.customSpinner2.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText18.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText18.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText18.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText18.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText8n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText8n.setTextIsSelectable(true)
-                binding.customSpinner3.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText8n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText8n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText8n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText8n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText4n.setTextIsSelectable(true)
-                binding.customSpinner3.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText4n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText4n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText4n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText4n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editTextn.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editTextn.setTextIsSelectable(true)
-                binding.customSpinner3.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editTextn.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editTextn.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editTextn.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editTextn.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText10n.setTextIsSelectable(true)
-                binding.customSpinner3.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText10n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText10n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText10n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText10n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText11n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText11n.setTextIsSelectable(true)
-                binding.customSpinner3.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText11n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText11n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText11n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText11n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText12n.setTextIsSelectable(true)
-                binding.customSpinner3.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText12n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText12n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText12n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText12n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText13n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText13n.setTextIsSelectable(true)
-                binding.customSpinner3.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText13n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText13n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText13n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText13n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText9n.setTextIsSelectable(true)
-                binding.customSpinner4.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText9n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText9n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText9n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText9n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText7n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText7n.setTextIsSelectable(true)
-                binding.customSpinner4.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText7n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText7n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText7n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText7n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText14n.setTextIsSelectable(true)
-                binding.customSpinner4.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText14n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText14n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText14n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText14n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText15n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText15n.setTextIsSelectable(true)
-                binding.customSpinner4.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText15n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText15n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText15n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText15n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText16n.setTextIsSelectable(true)
-                binding.customSpinner4.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText16n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText16n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText16n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText16n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText17n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText17n.setTextIsSelectable(true)
-                binding.customSpinner4.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText17n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText17n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText17n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText17n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText18n.setTextIsSelectable(true)
-                binding.customSpinner4.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText18n.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText18n.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText18n.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText18n.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
 
