@@ -59,7 +59,11 @@ class MainActivity : AppCompatActivity() {
 
     private var count = 16.toFloat()
 
-    private var flag = 0
+    private var lineFlag = 0
+
+    private var pasteFlag = 0
+
+    private var menuSwitch = true
 
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
@@ -86,6 +90,13 @@ class MainActivity : AppCompatActivity() {
         binding.textView5.textSize = count
         binding.textView6.textSize = count
         binding.textView7.textSize = count
+        binding.textView8.textSize = count
+        binding.textView9.textSize = count
+        binding.textView10.textSize = count
+        binding.textView11.textSize = count
+        binding.textView12.textSize = count
+        binding.textView13.textSize = count
+        binding.textView14.textSize = count
         binding.editText8.textSize = count
         binding.editText4.textSize = count
         binding.editText13.textSize = count
@@ -129,6 +140,13 @@ class MainActivity : AppCompatActivity() {
         binding.textView5.textSize = count
         binding.textView6.textSize = count
         binding.textView7.textSize = count
+        binding.textView8.textSize = count
+        binding.textView9.textSize = count
+        binding.textView10.textSize = count
+        binding.textView11.textSize = count
+        binding.textView12.textSize = count
+        binding.textView13.textSize = count
+        binding.textView14.textSize = count
         binding.editText8.textSize = count
         binding.editText4.textSize = count
         binding.editText13.textSize = count
@@ -219,11 +237,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun menuList12() {
-        when (flag) {
+        when (lineFlag) {
             0 -> {
                 binding.view6.visibility = View.INVISIBLE
                 binding.view18.visibility = View.INVISIBLE
-                flag = 1
+                lineFlag = 1
             }
             1 -> {
                 binding.view11.visibility = View.INVISIBLE
@@ -235,13 +253,13 @@ class MainActivity : AppCompatActivity() {
                 binding.view17.visibility = View.INVISIBLE
                 binding.view6.visibility = View.VISIBLE
                 binding.view18.visibility = View.VISIBLE
-                flag = 2
+                lineFlag = 2
             }
             2 -> {
 
                 binding.view6.visibility = View.INVISIBLE
                 binding.view18.visibility = View.INVISIBLE
-                flag = 3
+                lineFlag = 3
             }
             3 -> {
 
@@ -254,7 +272,7 @@ class MainActivity : AppCompatActivity() {
                 binding.view16.visibility = View.VISIBLE
                 binding.view17.visibility = View.VISIBLE
                 binding.view18.visibility = View.VISIBLE
-                flag = 0
+                lineFlag = 0
             }
         }
 
@@ -472,6 +490,7 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
+                if (pasteFlag == 1)
                 when {
                     binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
                         binding.editText8.clearFocus() }
@@ -487,6 +506,48 @@ class MainActivity : AppCompatActivity() {
                         binding.editText12.clearFocus() }
                     binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
                         binding.editText13.clearFocus() }
+                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9.clearFocus() }
+                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7.clearFocus() }
+                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14.clearFocus() }
+                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15.clearFocus() }
+                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16.clearFocus() }
+                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17.clearFocus() }
+                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18.clearFocus() }
+                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8n.clearFocus() }
+                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4n.clearFocus() }
+                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                        binding.editTextn.clearFocus() }
+                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10n.clearFocus() }
+                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11n.clearFocus() }
+                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12n.clearFocus() }
+                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13n.clearFocus() }
+                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9n.clearFocus() }
+                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7n.clearFocus() }
+                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14n.clearFocus() }
+                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15n.clearFocus() }
+                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16n.clearFocus() }
+                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17n.clearFocus() }
+                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18n.clearFocus() }
                 }
 
             }
@@ -561,7 +622,22 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
+                if (pasteFlag == 2)
                 when {
+                    binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8.clearFocus() }
+                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4.clearFocus() }
+                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText.clearFocus() }
+                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10.clearFocus() }
+                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11.clearFocus() }
+                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12.clearFocus() }
+                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13.clearFocus() }
                     binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
                         binding.editText9.clearFocus() }
                     binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
@@ -576,6 +652,34 @@ class MainActivity : AppCompatActivity() {
                         binding.editText17.clearFocus() }
                     binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
                         binding.editText18.clearFocus() }
+                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8n.clearFocus() }
+                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4n.clearFocus() }
+                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                        binding.editTextn.clearFocus() }
+                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10n.clearFocus() }
+                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11n.clearFocus() }
+                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12n.clearFocus() }
+                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13n.clearFocus() }
+                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9n.clearFocus() }
+                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7n.clearFocus() }
+                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14n.clearFocus() }
+                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15n.clearFocus() }
+                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16n.clearFocus() }
+                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17n.clearFocus() }
+                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18n.clearFocus() }
                 }
 
             }
@@ -587,9 +691,23 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            if (binding.switch1.isChecked && hasFocus) {
-                binding.editText8.setTextIsSelectable(true)
-                binding.customSpinner.performClick()
+            when {
+                pasteFlag == 1 && hasFocus -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && hasFocus -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && hasFocus -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && hasFocus -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
             }
         }
         binding.editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -808,7 +926,36 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
+                if (pasteFlag == 3)
                 when {
+                    binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8.clearFocus() }
+                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4.clearFocus() }
+                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText.clearFocus() }
+                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10.clearFocus() }
+                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11.clearFocus() }
+                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12.clearFocus() }
+                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13.clearFocus() }
+                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9.clearFocus() }
+                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7.clearFocus() }
+                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14.clearFocus() }
+                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15.clearFocus() }
+                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16.clearFocus() }
+                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17.clearFocus() }
+                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18.clearFocus() }
                     binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText8n.clearFocus() }
                     binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
@@ -823,6 +970,20 @@ class MainActivity : AppCompatActivity() {
                         binding.editText12n.clearFocus() }
                     binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText13n.clearFocus() }
+                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9n.clearFocus() }
+                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7n.clearFocus() }
+                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14n.clearFocus() }
+                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15n.clearFocus() }
+                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16n.clearFocus() }
+                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17n.clearFocus() }
+                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18n.clearFocus() }
                 }
 
             }
@@ -883,35 +1044,63 @@ class MainActivity : AppCompatActivity() {
                 val spinnerParent = parent as Spinner
                 val item = spinnerParent.selectedItem as String
 
+                if (pasteFlag == 4)
                 when {
+                    binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8.clearFocus() }
+                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4.clearFocus() }
+                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText.clearFocus() }
+                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10.clearFocus() }
+                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11.clearFocus() }
+                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12.clearFocus() }
+                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13.clearFocus() }
+                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9.clearFocus() }
+                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7.clearFocus() }
+                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14.clearFocus() }
+                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15.clearFocus() }
+                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16.clearFocus() }
+                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17.clearFocus() }
+                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18.clearFocus() }
+                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8n.clearFocus() }
+                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4n.clearFocus() }
+                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                        binding.editTextn.clearFocus() }
+                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10n.clearFocus() }
+                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11n.clearFocus() }
+                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12n.clearFocus() }
+                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13n.clearFocus() }
                     binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText9n.clearFocus() }
                     binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText7n.clearFocus() }
-                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText14n.clearFocus() }
-                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText15n.clearFocus() }
-                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText16n.clearFocus() }
-                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText17n.clearFocus() }
-                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(
-                        item,
-                        TextView.BufferType.NORMAL
-                    )
+                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
                         binding.editText18n.clearFocus() }
                 }
             }
@@ -1171,23 +1360,49 @@ class MainActivity : AppCompatActivity() {
                     1 -> { menuSwitch = true
                         invalidateOptionsMenu()
                         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6200EE")))
+                        supportActionBar?.title = "メニュー表"
                         Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
-                        binding.switch1.isChecked = false
+                        pasteFlag = 0
                         spinnerWP.setSelection(0)
                     }
                     2 -> { menuSwitch = false
                         invalidateOptionsMenu()
                         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
+                        supportActionBar?.title = "メイン料理"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, "貼り付けモード", Toast.LENGTH_SHORT).show()
-                        binding.switch1.isChecked = true
+                        Toast.makeText(applicationContext, "メイン料理", Toast.LENGTH_SHORT).show()
+                        pasteFlag = 1
                         spinnerWP.setSelection(0)
                     }
-                    3 -> { menuList12()
+                    3 -> { menuSwitch = false
+                        invalidateOptionsMenu()
+                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
+                        supportActionBar?.title = "野菜、サラダ"
+                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                        Toast.makeText(applicationContext, "野菜、サラダ", Toast.LENGTH_SHORT).show()
+                        pasteFlag = 2
                         spinnerWP.setSelection(0)
                     }
-                    4 -> { menuList15()
+                    4 -> { menuSwitch = false
+                        invalidateOptionsMenu()
+                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
+                        supportActionBar?.title = "味噌汁、スープ"
+                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                        Toast.makeText(applicationContext, "味噌汁、スープ", Toast.LENGTH_SHORT).show()
+                        pasteFlag = 3
+                        spinnerWP.setSelection(0)
+                    }
+                    5 -> { menuSwitch = false
+                        invalidateOptionsMenu()
+                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
+                        supportActionBar?.title = "果物、デザート"
+                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                        Toast.makeText(applicationContext, "果物、デザート", Toast.LENGTH_SHORT).show()
+                        pasteFlag = 4
                         spinnerWP.setSelection(0)
                     }
                 }
@@ -1443,7 +1658,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private var menuSwitch = true
+
 
     @SuppressLint("SetTextI18n")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
