@@ -12,42 +12,20 @@
         tools:ignore="AlwaysShowAction" />
 
     <item
-        android:id="@+id/MenuList3"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_share_24"
-        android:title="@string/MenuList3" />
-
-    <item
-        android:id="@+id/MenuList3a"
-        app:showAsAction="always"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="@string/MenuList3a" />
-
-    <item
         android:id="@+id/MenuList1"
         app:showAsAction="always"
         android:title="@string/MenuList"
         tools:ignore="AlwaysShowAction" />
-    
+
+    <item
+        android:id="@+id/MenuList3a"
+        android:icon="@drawable/ic_baseline_more_vert_24"
+        android:title="@string/MenuList3a"
+        app:showAsAction="always" />
     <item
         android:id="@+id/MenuList5c"
         app:showAsAction="never"
         android:title="@string/MenuList5c" />
-
-    <item
-        android:id="@+id/MenuList5d"
-        app:showAsAction="never"
-        android:title="@string/MenuList5d" />
-
-    <item
-        android:id="@+id/MenuList5a"
-        app:showAsAction="never"
-        android:title="@string/MenuList5a" />
-
-    <item
-        android:id="@+id/MenuList5b"
-        app:showAsAction="never"
-        android:title="@string/MenuList5b" />
 
     <item
         android:id="@+id/MenuList4"
@@ -63,15 +41,5 @@
         android:id="@+id/MenuList7"
         app:showAsAction="never"
         android:title="@string/MenuList7" />
-
-    <item
-        android:id="@+id/MenuList9"
-        app:showAsAction="never"
-        android:title="@string/MenuList9" />
-
-    <item
-        android:id="@+id/MenuList8"
-        app:showAsAction="never"
-        android:title="@string/MenuList8" />
 
 </menu>

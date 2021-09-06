@@ -1990,34 +1990,6 @@ class MainActivity : AppCompatActivity() {
             menuLamp.setIcon(R.drawable.ic_baseline_content_paste_24)
         }
 
-        val menu1 = menu.findItem(R.id.MenuList5c)
-        val item1a = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
-
-        if (item1a != null) {
-            menu1.title = item1a + "の編集"
-        }
-
-        val menu2 = menu.findItem(R.id.MenuList5d)
-        val item2a = mRealm.where(Book6::class.java).equalTo("id", 1.toLong()).findFirst()?.name
-
-        if (item2a != null) {
-            menu2.title = item2a + "の編集"
-        }
-
-        val menu3 = menu.findItem(R.id.MenuList5a)
-        val item3a = mRealm.where(Book6::class.java).equalTo("id", 2.toLong()).findFirst()?.name
-
-        if (item3a != null) {
-            menu3.title = item3a + "の編集"
-        }
-
-        val menu4 = menu.findItem(R.id.MenuList5b)
-        val item4a = mRealm.where(Book6::class.java).equalTo("id", 3.toLong()).findFirst()?.name
-
-        if (item4a != null) {
-            menu4.title = item4a + "の編集"
-        }
-
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -2025,41 +1997,6 @@ class MainActivity : AppCompatActivity() {
 
         super.onPrepareOptionsMenu(menu)
 
-        val menu1 = menu?.findItem(R.id.MenuList5c)
-        val item1a = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
-
-        if (item1a != null) {
-            if (menu1 != null) {
-                menu1.title = item1a + "の編集"
-            }
-        }
-
-        val menu2 = menu?.findItem(R.id.MenuList5d)
-        val item2a = mRealm.where(Book6::class.java).equalTo("id", 1.toLong()).findFirst()?.name
-
-        if (item2a != null) {
-            if (menu2 != null) {
-                menu2.title = item2a + "の編集"
-            }
-        }
-
-        val menu3 = menu?.findItem(R.id.MenuList5a)
-        val item3a = mRealm.where(Book6::class.java).equalTo("id", 2.toLong()).findFirst()?.name
-
-        if (item3a != null) {
-            if (menu3 != null) {
-                menu3.title = item3a + "の編集"
-            }
-        }
-
-        val menu4 = menu?.findItem(R.id.MenuList5b)
-        val item4a = mRealm.where(Book6::class.java).equalTo("id", 3.toLong()).findFirst()?.name
-
-        if (item4a != null) {
-            if (menu4 != null) {
-                menu4.title = item4a + "の編集"
-            }
-        }
         return true
 
     }
@@ -2069,10 +2006,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
-        val spinner1a = findViewById<Spinner>(R.id.spinner1a)
-        val spinner2a = findViewById<Spinner>(R.id.spinner2a)
         val spinner3a = findViewById<Spinner>(R.id.spinner3a)
-        val spinner4a = findViewById<Spinner>(R.id.spinner4a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
         val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
 
@@ -2086,11 +2020,6 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList2 -> {
                 getBitmapFromView(binding.allView)
-                return true
-            }
-
-            R.id.MenuList3 -> {
-                selectMenu()
                 return true
             }
 
@@ -2124,64 +2053,6 @@ class MainActivity : AppCompatActivity() {
                 return true
             }
 
-            R.id.MenuList5a -> {
-                val menuList1a = mutableSetOf(
-                    "[選択したメニューを削除できます]"
-                )
-
-                val inMenuList1a = mRealm.where<Book>().findAll()
-
-
-                for (i in inMenuList1a)
-                    if (inMenuList1a != null) {
-                        menuList1a.add(i.name)
-                    }
-
-
-                val spinnerItems5a = menuList1a.sorted()
-
-                val adapter5a = ArrayAdapter(
-                    applicationContext,
-                    android.R.layout.simple_spinner_item, spinnerItems5a
-                )
-
-                adapter5a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-                spinner1a.adapter = adapter5a
-                handler.postDelayed({ spinner1a.performClick() }, 300)
-                return true
-            }
-
-            R.id.MenuList5b -> {
-                val menuList2a = mutableSetOf(
-                    "[選択したメニューを削除できます]"
-                )
-
-                val inMenuList2a = mRealm.where<Book2>().findAll()
-
-
-                for (i in inMenuList2a)
-                    if (inMenuList2a != null) {
-                        menuList2a.add(i.name)
-                    }
-
-
-                val spinnerItems6a = menuList2a.sorted()
-
-                val adapter6a = ArrayAdapter(
-                    applicationContext,
-                    android.R.layout.simple_spinner_item, spinnerItems6a
-                )
-
-                adapter6a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-                spinner2a.adapter = adapter6a
-                handler.postDelayed({ spinner2a.performClick() }, 300)
-                return true
-            }
-
             R.id.MenuList5c -> {
                 val menuList3a = mutableSetOf(
                     "[選択したメニューを削除できます]"
@@ -2208,35 +2079,6 @@ class MainActivity : AppCompatActivity() {
 
                 spinner3a.adapter = adapter7a
                 handler.postDelayed({ spinner3a.performClick() }, 300)
-                return true
-            }
-
-            R.id.MenuList5d -> {
-                val menuList4a = mutableSetOf(
-                    "[選択したメニューを削除できます]"
-                )
-
-                val inMenuList4a = mRealm.where<Book4>().findAll()
-
-
-                for (i in inMenuList4a)
-                    if (inMenuList4a != null) {
-                        menuList4a.add(i.name)
-                    }
-
-
-                val spinnerItems8a = menuList4a.sorted()
-
-                val adapter8a = ArrayAdapter(
-                    applicationContext,
-                    android.R.layout.simple_spinner_item, spinnerItems8a
-                )
-
-                adapter8a.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-                spinner4a.adapter = adapter8a
-                handler.postDelayed({ spinner4a.performClick() }, 300)
                 return true
             }
 
@@ -2356,35 +2198,6 @@ class MainActivity : AppCompatActivity() {
                     "保存しました。\n次にアプリを開いた時から追加されます。",
                     Toast.LENGTH_LONG
                 ).show()
-
-                return true
-            }
-
-            R.id.MenuList8 -> {
-                AlertDialog.Builder(this)
-                    .setTitle("終了しますか？")
-                    .setPositiveButton("YES") { _, _ ->
-                        finish()
-                    }
-                    .setNegativeButton("NO") { _, _ ->
-
-                    }
-                    .show()
-
-                return true
-            }
-
-            R.id.MenuList9 -> {
-                AlertDialog.Builder(this)
-                    .setTitle("再起動しますか？")
-                    .setPositiveButton("YES") { _, _ ->
-                        ProcessPhoenix.triggerRebirth(this)
-                    }
-                    .setNegativeButton("NO") { _, _ ->
-
-                    }
-                    .show()
-
 
                 return true
             }
