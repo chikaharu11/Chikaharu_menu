@@ -61,7 +61,7 @@ class MainActivity : AppCompatActivity() {
 
     private var pasteFlag = 0
 
-    private var menuSwitch = true
+    private var menuSwitch = 0
 
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
@@ -314,6 +314,11 @@ class MainActivity : AppCompatActivity() {
 
         val customDropDownAdapter = CustomDropDownAdapter(this, modelList)
         spinner04.adapter = customDropDownAdapter
+
+        val modelList2: List<Model> = readFromAsset2()
+
+        val customDropDownAdapter2 = CustomDropDownAdapter(this, modelList2)
+        spinnerWP.adapter = customDropDownAdapter2
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -1719,22 +1724,6 @@ class MainActivity : AppCompatActivity() {
 
         spinner04.isFocusable = false
 
-        val wpList = listOf(
-            "手入力する",
-            "メイン料理",
-            "野菜、サラダ",
-            "味噌汁、スープ",
-            "果物、デザート"
-        )
-
-        val adapterWP = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, wpList
-        )
-
-        adapterWP.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        spinnerWP.adapter = adapterWP
 
         spinnerWP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
@@ -1747,43 +1736,38 @@ class MainActivity : AppCompatActivity() {
                     return
                 }
                 when(position){
-                    0 -> { menuSwitch = true
+                    0 -> { menuSwitch = 0
                         invalidateOptionsMenu()
-                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6200EE")))
                         supportActionBar?.title = "メニュー表"
                         Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
                         pasteFlag = 0
                     }
-                    1 -> { menuSwitch = false
+                    1 -> { menuSwitch = 1
                         invalidateOptionsMenu()
-                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "メイン料理"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                         Toast.makeText(applicationContext, "メイン料理", Toast.LENGTH_SHORT).show()
                         pasteFlag = 1
                     }
-                    2 -> { menuSwitch = false
+                    2 -> { menuSwitch = 2
                         invalidateOptionsMenu()
-                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "野菜、サラダ"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                         Toast.makeText(applicationContext, "野菜、サラダ", Toast.LENGTH_SHORT).show()
                         pasteFlag = 2
                     }
-                    3 -> { menuSwitch = false
+                    3 -> { menuSwitch = 3
                         invalidateOptionsMenu()
-                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "味噌汁、スープ"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                         Toast.makeText(applicationContext, "味噌汁、スープ", Toast.LENGTH_SHORT).show()
                         pasteFlag = 3
                     }
-                    4 -> { menuSwitch = false
+                    4 -> { menuSwitch = 4
                         invalidateOptionsMenu()
-                        supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "果物、デザート"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
@@ -1799,10 +1783,31 @@ class MainActivity : AppCompatActivity() {
         }
 
         spinnerWP.isFocusable = false
+
+        binding.textView8.editableText.clear()
+        binding.textView9.editableText.clear()
+        binding.textView10.editableText.clear()
+        binding.textView11.editableText.clear()
+        binding.textView12.editableText.clear()
+        binding.textView13.editableText.clear()
+        binding.textView14.editableText.clear()
+
     }
 
     private fun readFromAsset(): List<Model> {
         val filename = "android_version.json"
+
+        val bufferReader = application.assets.open(filename).bufferedReader()
+
+        val jsonstring = bufferReader.use {
+            it.readText()
+        }
+        val gson = Gson()
+        return gson.fromJson(jsonstring, Array<Model>::class.java).toList()
+    }
+
+    private fun readFromAsset2(): List<Model> {
+        val filename = "android_version2.json"
 
         val bufferReader = application.assets.open(filename).bufferedReader()
 
@@ -1925,10 +1930,22 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.menu_options_menu_list, menu)
 
         val menuLamp = menu.findItem(R.id.MenuList1)
-        if (menuSwitch) {
-            menuLamp.setIcon(R.drawable.ic_create_white_24dp)
-        } else {
-            menuLamp.setIcon(R.drawable.ic_baseline_content_paste_24)
+        when (menuSwitch) {
+            0 -> {
+                menuLamp.setIcon(R.drawable.ic_create_white_24dp)
+            }
+            1 -> {
+                menuLamp.setIcon(R.drawable.ic_baseline_help_24)
+            }
+            2 -> {
+                menuLamp.setIcon(R.drawable.ic_description_black_24dp)
+            }
+            3 -> {
+                menuLamp.setIcon(R.drawable.ic_baseline_settings_24)
+            }
+            4 -> {
+                menuLamp.setIcon(R.drawable.ic_baseline_camera_alt_24)
+            }
         }
 
         return super.onCreateOptionsMenu(menu)
