@@ -1677,25 +1677,17 @@ class MainActivity : AppCompatActivity() {
                 }
                 when(position){
                     0 -> {
-
-                    }
-                    1 -> {
                          selectMenu()
-                        spinner04.setSelection(0)
                     }
-                    2 -> { menuList13()
-                        spinner04.setSelection(0)
+                    1 -> { menuList13()
                     }
-                    3 -> { menuList14()
-                        spinner04.setSelection(0)
+                    2 -> { menuList14()
                     }
-                    4 -> { menuList12()
-                        spinner04.setSelection(0)
+                    3 -> { menuList12()
                     }
-                    5 -> { menuList15()
-                        spinner04.setSelection(0)
+                    4 -> { menuList15()
                     }
-                    6 -> {
+                    5 -> {
                         AlertDialog.Builder(this@MainActivity)
                             .setTitle("再起動しますか？")
                             .setPositiveButton("YES") { _, _ ->
@@ -1705,9 +1697,8 @@ class MainActivity : AppCompatActivity() {
 
                             }
                             .show()
-                        spinner04.setSelection(0)
                     }
-                    7 -> {
+                    6 -> {
                         AlertDialog.Builder(this@MainActivity)
                             .setTitle("終了しますか？")
                             .setPositiveButton("YES") { _, _ ->
@@ -1717,7 +1708,6 @@ class MainActivity : AppCompatActivity() {
 
                             }
                             .show()
-                        spinner04.setSelection(0)
                     }
                 }
             }
@@ -1730,7 +1720,6 @@ class MainActivity : AppCompatActivity() {
         spinner04.isFocusable = false
 
         val wpList = listOf(
-            "[入力、貼付けの切替え]",
             "手入力する",
             "メイン料理",
             "野菜、サラダ",
@@ -1758,18 +1747,14 @@ class MainActivity : AppCompatActivity() {
                     return
                 }
                 when(position){
-                    0 -> {
-
-                    }
-                    1 -> { menuSwitch = true
+                    0 -> { menuSwitch = true
                         invalidateOptionsMenu()
                         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#6200EE")))
                         supportActionBar?.title = "メニュー表"
                         Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
                         pasteFlag = 0
-                        spinnerWP.setSelection(0)
                     }
-                    2 -> { menuSwitch = false
+                    1 -> { menuSwitch = false
                         invalidateOptionsMenu()
                         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "メイン料理"
@@ -1777,9 +1762,8 @@ class MainActivity : AppCompatActivity() {
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                         Toast.makeText(applicationContext, "メイン料理", Toast.LENGTH_SHORT).show()
                         pasteFlag = 1
-                        spinnerWP.setSelection(0)
                     }
-                    3 -> { menuSwitch = false
+                    2 -> { menuSwitch = false
                         invalidateOptionsMenu()
                         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "野菜、サラダ"
@@ -1787,9 +1771,8 @@ class MainActivity : AppCompatActivity() {
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                         Toast.makeText(applicationContext, "野菜、サラダ", Toast.LENGTH_SHORT).show()
                         pasteFlag = 2
-                        spinnerWP.setSelection(0)
                     }
-                    4 -> { menuSwitch = false
+                    3 -> { menuSwitch = false
                         invalidateOptionsMenu()
                         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "味噌汁、スープ"
@@ -1797,9 +1780,8 @@ class MainActivity : AppCompatActivity() {
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                         Toast.makeText(applicationContext, "味噌汁、スープ", Toast.LENGTH_SHORT).show()
                         pasteFlag = 3
-                        spinnerWP.setSelection(0)
                     }
-                    5 -> { menuSwitch = false
+                    4 -> { menuSwitch = false
                         invalidateOptionsMenu()
                         supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#EED100")))
                         supportActionBar?.title = "果物、デザート"
@@ -1807,7 +1789,6 @@ class MainActivity : AppCompatActivity() {
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                         Toast.makeText(applicationContext, "果物、デザート", Toast.LENGTH_SHORT).show()
                         pasteFlag = 4
-                        spinnerWP.setSelection(0)
                     }
                 }
             }

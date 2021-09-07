@@ -9,7 +9,7 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/spinner04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <androidx.appcompat.widget.AppCompatSpinner
+    <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/spinnerWP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
