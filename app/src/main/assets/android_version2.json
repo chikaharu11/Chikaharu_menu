@@ -1,22 +1,22 @@
 [
   {
     "name": "手入力する",
-    "url": "outline_share_black_48dp"
+    "url": "baseline_create_black_48dp"
   },
   {
     "name": "メイン料理",
-    "url": "zoominblack24dp"
+    "url": "dinner_b"
   },
   {
     "name": "野菜、サラダ",
-    "url": "zoomoutblack24dp"
+    "url": "carrot_b"
   },
   {
     "name": "味噌汁、スープ",
-    "url": "bordercolorblack24dp"
+    "url": "soup_b"
   },
   {
     "name": "果物、デザート",
-    "url": "borderclear24dp"
+    "url": "apple_b"
   }
 ]

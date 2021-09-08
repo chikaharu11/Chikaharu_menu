@@ -404,7 +404,6 @@ class MainActivity : AppCompatActivity() {
 
         val cuisine1 = mutableSetOf(
 
-            "",
             "ハンバーグ",
             "ギョーザ",
             "焼きウインナー",
@@ -562,7 +561,6 @@ class MainActivity : AppCompatActivity() {
 
         val cuisine2 = mutableSetOf(
 
-            "",
             "生野菜",
             "豆腐",
             "パウチサラダ",
@@ -1256,7 +1254,6 @@ class MainActivity : AppCompatActivity() {
 
         val cuisine3 = mutableSetOf(
 
-            "",
             "皿うどん",
             "ギョーザ",
             "焼きそば",
@@ -1376,7 +1373,6 @@ class MainActivity : AppCompatActivity() {
 
         val cuisine4 = mutableSetOf(
 
-            "",
             "生野菜",
             "シューマイ",
             "ショーロンポー",
@@ -1743,6 +1739,8 @@ class MainActivity : AppCompatActivity() {
                         pasteFlag = 0
                     }
                     1 -> { menuSwitch = 1
+                        binding.textView14.requestFocus()
+                        binding.textView14.clearFocus()
                         invalidateOptionsMenu()
                         supportActionBar?.title = "メイン料理"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
@@ -1751,6 +1749,8 @@ class MainActivity : AppCompatActivity() {
                         pasteFlag = 1
                     }
                     2 -> { menuSwitch = 2
+                        binding.textView14.requestFocus()
+                        binding.textView14.clearFocus()
                         invalidateOptionsMenu()
                         supportActionBar?.title = "野菜、サラダ"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
@@ -1759,6 +1759,8 @@ class MainActivity : AppCompatActivity() {
                         pasteFlag = 2
                     }
                     3 -> { menuSwitch = 3
+                        binding.textView14.requestFocus()
+                        binding.textView14.clearFocus()
                         invalidateOptionsMenu()
                         supportActionBar?.title = "味噌汁、スープ"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
@@ -1767,6 +1769,8 @@ class MainActivity : AppCompatActivity() {
                         pasteFlag = 3
                     }
                     4 -> { menuSwitch = 4
+                        binding.textView14.requestFocus()
+                        binding.textView14.clearFocus()
                         invalidateOptionsMenu()
                         supportActionBar?.title = "果物、デザート"
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
@@ -1932,19 +1936,19 @@ class MainActivity : AppCompatActivity() {
         val menuLamp = menu.findItem(R.id.MenuList1)
         when (menuSwitch) {
             0 -> {
-                menuLamp.setIcon(R.drawable.ic_create_white_24dp)
+                menuLamp.setIcon(R.drawable.baseline_create_white_48dp)
             }
             1 -> {
-                menuLamp.setIcon(R.drawable.ic_baseline_help_24)
+                menuLamp.setIcon(R.drawable.dinner_w)
             }
             2 -> {
-                menuLamp.setIcon(R.drawable.ic_description_black_24dp)
+                menuLamp.setIcon(R.drawable.carrot_w)
             }
             3 -> {
-                menuLamp.setIcon(R.drawable.ic_baseline_settings_24)
+                menuLamp.setIcon(R.drawable.soup_w)
             }
             4 -> {
-                menuLamp.setIcon(R.drawable.ic_baseline_camera_alt_24)
+                menuLamp.setIcon(R.drawable.apple_w)
             }
         }
 

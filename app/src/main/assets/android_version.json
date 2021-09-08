@@ -1,7 +1,7 @@
 [
   {
     "name": "シェアする",
-    "url": "outline_share_black_48dp"
+    "url": "baseline_share_black_48dp"
   },
   {
     "name": "文字を大きくする",
@@ -21,10 +21,10 @@
   },
   {
     "name": "再起動する",
-    "url": ""
+    "url": "outline_restart_alt_black_48dp"
   },
   {
     "name": "終了する",
-    "url": ""
+    "url": "exit"
   }
 ]
