@@ -5,19 +5,19 @@
   },
   {
     "name": "文字を大きくする",
-    "url": "zoominblack24dp"
+    "url": "baseline_zoom_in_black_48dp"
   },
   {
     "name": "文字を小さくする",
-    "url": "zoomoutblack24dp"
+    "url": "baseline_zoom_out_black_48dp"
   },
   {
     "name": "線のパターンの変更",
-    "url": "bordercolorblack24dp"
+    "url": "baseline_border_color_black_48dp"
   },
   {
     "name": "曜日の表示、非表示",
-    "url": "borderclear24dp"
+    "url": "baseline_border_clear_black_48dp"
   },
   {
     "name": "再起動する",

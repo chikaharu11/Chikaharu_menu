@@ -284,9 +284,6 @@ class MainActivity : AppCompatActivity() {
             .apply { setContentView(this.root) }
 
         val spinner1a = findViewById<Spinner>(R.id.spinner1a)
-        val spinner2a = findViewById<Spinner>(R.id.spinner2a)
-        val spinner3a = findViewById<Spinner>(R.id.spinner3a)
-        val spinner4a = findViewById<Spinner>(R.id.spinner4a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
         val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
 
@@ -1488,7 +1485,6 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
         val menuList1 = mutableSetOf(
             "[選択したメニューを削除できます]"
         )
@@ -1524,138 +1520,6 @@ class MainActivity : AppCompatActivity() {
                 val item = spinnerParent.selectedItem as String
 
                 mRealm.executeTransaction { mRealm.where<Book>().equalTo("name", item).findAll().deleteAllFromRealm() }
-
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        val menuList2 = mutableSetOf(
-            "[選択したメニューを削除できます]"
-        )
-
-        val inMenuList2 = mRealm.where<Book2>().findAll()
-
-
-        for( i in inMenuList2 )
-            if (inMenuList2 != null) {
-                menuList2.add(i.name)
-            }
-
-
-        val spinnerItems6 = menuList2.sorted()
-
-        val adapter6 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems6
-        )
-
-        adapter6.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-        spinner2a.adapter = adapter6
-
-        spinner2a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                mRealm.executeTransaction { mRealm.where<Book2>().equalTo("name", item).findAll().deleteAllFromRealm() }
-
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        val menuList3 = mutableSetOf(
-            "[選択したメニューを削除できます]"
-        )
-
-        val inMenuList3 = mRealm.where<Book3>().findAll()
-
-
-        for( i in inMenuList3 )
-            if (inMenuList3 != null) {
-                menuList3.add(i.name)
-            }
-
-
-        val spinnerItems7 = menuList3.sorted()
-
-        val adapter7 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems7
-        )
-
-        adapter7.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-        spinner3a.adapter = adapter7
-
-        spinner3a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                mRealm.executeTransaction { mRealm.where<Book3>().equalTo("name", item).findAll().deleteAllFromRealm() }
-
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        val menuList4 = mutableSetOf(
-            "[選択したメニューを削除できます]"
-        )
-
-        val inMenuList4 = mRealm.where<Book4>().findAll()
-
-
-        for( i in inMenuList4 )
-            if (inMenuList4 != null) {
-                menuList4.add(i.name)
-            }
-
-
-        val spinnerItems8 = menuList4.sorted()
-
-        val adapter8 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems8
-        )
-
-        adapter8.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-        spinner4a.adapter = adapter8
-
-        spinner4a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                mRealm.executeTransaction { mRealm.where<Book4>().equalTo("name", item).findAll().deleteAllFromRealm() }
 
 
             }
