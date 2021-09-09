@@ -6,14 +6,11 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.media.AudioAttributes
 import android.media.SoundPool
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
-import android.os.Handler
 import android.provider.DocumentsContract
 import android.view.Menu
 import android.view.MenuItem
@@ -187,6 +184,13 @@ class MainActivity : AppCompatActivity() {
             binding.textView5.visibility = View.INVISIBLE
             binding.textView6.visibility = View.INVISIBLE
             binding.textView7.visibility = View.INVISIBLE
+            binding.textView8.visibility = View.INVISIBLE
+            binding.textView9.visibility = View.INVISIBLE
+            binding.textView10.visibility = View.INVISIBLE
+            binding.textView11.visibility = View.INVISIBLE
+            binding.textView12.visibility = View.INVISIBLE
+            binding.textView13.visibility = View.INVISIBLE
+            binding.textView14.visibility = View.INVISIBLE
             binding.view18.visibility = View.INVISIBLE
 
             val constraintSet = ConstraintSet()
@@ -212,6 +216,13 @@ class MainActivity : AppCompatActivity() {
             binding.textView5.visibility = View.VISIBLE
             binding.textView6.visibility = View.VISIBLE
             binding.textView7.visibility = View.VISIBLE
+            binding.textView8.visibility = View.VISIBLE
+            binding.textView9.visibility = View.VISIBLE
+            binding.textView10.visibility = View.VISIBLE
+            binding.textView11.visibility = View.VISIBLE
+            binding.textView12.visibility = View.VISIBLE
+            binding.textView13.visibility = View.VISIBLE
+            binding.textView14.visibility = View.VISIBLE
             binding.view18.visibility = View.VISIBLE
 
             val constraintSet = ConstraintSet()
@@ -402,48 +413,48 @@ class MainActivity : AppCompatActivity() {
         val cuisine1 = mutableSetOf(
 
             "ハンバーグ",
-            "ギョーザ",
-            "焼きウインナー",
+            "餃子",
+            "クリームシチュー",
             "肉野菜炒め",
             "唐揚げ",
-            "豚汁",
-            "マーボー豆腐",
-            "マーボー春雨",
-            "人参しりしり",
-            "煮付け",
-            "焼きそば",
-            "焼きワンタン",
-            "チャーハン",
-            "豚生姜焼き",
+            "ロールキャベツ",
+            "麻婆豆腐",
             "エビフライ",
-            "キノコ炒め",
-            "ビーフン炒め",
-            "チキングラタン",
+            "とんかつ",
+            "すき焼き",
+            "焼きそば",
+            "ラーメン",
+            "鍋焼きうどん",
+            "ミートソースパスタ",
+            "お好み焼き",
+            "チャーハン",
+            "オムライス",
+            "豚生姜焼き",
+            "マカロニグラタン",
             "ミートグラタン",
-            "シチュー",
             "ビーフシチュー",
-            "うどん",
-            "パスタ",
-            "鯖マヨ",
-            "ジャガチーズ焼き",
+            "ビーフステーキ",
             "ハムカツ",
+            "メンチカツ",
             "サイコロステーキ",
             "チキンステーキ",
             "オムライス",
             "肉じゃが",
             "牛丼",
-            "豚バラ白菜",
             "カレー",
             "八宝菜",
-            "ラーメン",
-            "チーズ餃子",
-            "焼きハム",
-            "けんちん汁",
-            "ラザニア",
-            "サンドイッチ",
-            "冷やし中華",
-            "マーボー茄子",
-            "あんかけ卵"
+            "ピーマンの肉詰め",
+            "アスパラの肉巻き",
+            "白菜の旨煮",
+            "回鍋肉",
+            "青椒肉絲",
+            "ブリの照り焼き",
+            "ブリ大根",
+            "カツオのタタキ",
+            "カレイの煮付け",
+            "サバ味噌煮",
+            "サンマの塩焼き",
+            "焼鮭"
         )
 
         val item6 = mRealm.where(Book6::class.java).equalTo("id", 5.toLong()).findFirst()?.boolean
@@ -558,31 +569,25 @@ class MainActivity : AppCompatActivity() {
 
         val cuisine2 = mutableSetOf(
 
-            "生野菜",
-            "豆腐",
-            "パウチサラダ",
-            "レンジ野菜",
-            "シューマイ",
-            "きゅうり酢和え",
+            "シーザーサラダ",
             "ツナレタスサラダ",
-            "ショーロンポー",
-            "こんぶキャベツ",
-            "レンジ豚もやし",
-            "のりきゅうり",
-            "茶碗むし",
-            "レンジコロッケ",
-            "じゃがブロッコリー",
             "スティックサラダ",
-            "味噌田楽",
-            "かぼちゃチーズ",
             "マカロニサラダ",
-            "フライドポテト",
-            "大学いも",
-            "卵豆腐",
-            "レンジ青椒肉絲",
-            "春巻",
-            "レンジ唐揚げ",
-            "コーンスープ"
+            "トマトサラダ",
+            "大根サラダ",
+            "ポテトサラダ",
+            "コールスロー",
+            "豆腐とじゃこのサラダ",
+            "きゅうりとちくわのサラダ",
+            "ごぼうサラダ",
+            "パスタサラダ",
+            "エビとアボカドのサラダ",
+            "きんぴらごぼう",
+            "かぼちゃの煮付け",
+            "ほうれん草のおひたし",
+            "インゲンのごま和え",
+            "筑前煮",
+            "キャベツの塩昆布和え"
         )
 
          if (item6 == true) {
@@ -687,6 +692,27 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+
+        binding.editText8.setOnClickListener {
+            when {
+                pasteFlag == 1 && binding.editText8.hasFocus() -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner.performClick()
+                }
+                pasteFlag == 2 && binding.editText8.hasFocus() -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner2.performClick()
+                }
+                pasteFlag == 3 && binding.editText8.hasFocus() -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner3.performClick()
+                }
+                pasteFlag == 4 && binding.editText8.hasFocus() -> {
+                    binding.editText8.setTextIsSelectable(true)
+                    binding.customSpinner4.performClick()
+                }
+            }
+        }
 
         binding.editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
             when {
@@ -1251,20 +1277,31 @@ class MainActivity : AppCompatActivity() {
 
         val cuisine3 = mutableSetOf(
 
-            "皿うどん",
-            "ギョーザ",
-            "焼きそば",
-            "マーボー春雨",
-            "マーボー豆腐",
-            "沖縄そば",
-            "冷凍パスタ",
-            "すき焼き豆腐",
-            "レトルトカレー",
-            "豚しょうが焼き",
-            "ハンバーグ",
-            "あんかけ卵",
-            "肉野菜炒め",
-            "ビーフン炒め"
+            "オニオングラタンスープ",
+            "ミネストローネ",
+            "豚汁",
+            "けんちん汁",
+            "ポトフ",
+            "豆腐とわかめの味噌汁",
+            "大根と油揚げの味噌汁",
+            "しじみ汁",
+            "あさりの味噌汁",
+            "ニラと玉子の味噌汁",
+            "白菜と小松菜の味噌汁",
+            "椎茸とほうれん草の味噌汁",
+            "ナスとエノキの味噌汁",
+            "じゃがいもと玉ねぎの味噌汁",
+            "なめこと豆腐の味噌汁",
+            "レタスの味噌汁",
+            "ピーマンの味噌汁",
+            "アスパラとベーコンの味噌汁",
+            "コンソメスープ",
+            "クラムチャウダー",
+            "ボルシチ",
+            "キャベツと玉子のスープ",
+            "カルビクッパ",
+            "わかめスープ",
+            "春雨スープ"
         )
 
         if (item6 == true) {
@@ -1370,18 +1407,24 @@ class MainActivity : AppCompatActivity() {
 
         val cuisine4 = mutableSetOf(
 
-            "生野菜",
-            "シューマイ",
-            "ショーロンポー",
-            "コロッケ",
-            "春巻",
-            "レンジ野菜",
-            "パウチサラダ",
-            "お湯スープ",
-            "沖縄そば",
-            "冷凍唐揚げ",
-            "茶碗蒸し",
-            "レンジ豚もやし"
+            "りんご",
+            "バナナ",
+            "ヨーグルト",
+            "フルーチェ",
+            "キウイフルーツ",
+            "ゼリー",
+            "梨",
+            "桃",
+            "いちご",
+            "ブドウ",
+            "みかん",
+            "オレンジ",
+            "メロン",
+            "りんごのグラッセ",
+            "パンナコッタ",
+            "杏仁豆腐",
+            "ババロア",
+            "チョコムース"
         )
 
         if (item6 == true) {
@@ -1741,7 +1784,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("SimpleDateFormat")
     private fun getBitmapFromView(view: View):Bitmap {
         val timeStamp: String = SimpleDateFormat("MM月dd日HH時mm分ss秒").format(Date())
-        val path = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.path + "/" + supportActionBar?.title + " " + timeStamp + ".png"
+        val path = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.path + "/" + timeStamp + ".png"
         val stream = FileOutputStream(path)
         val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
