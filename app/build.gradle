@@ -11,8 +11,8 @@ android {
         applicationId "jp.chikaharu11.chikaharu_menu"
         minSdkVersion 26
         targetSdkVersion 30
-        versionCode 7
-        versionName "7.0"
+        versionCode 8
+        versionName "8.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
