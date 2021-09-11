@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "55295836408",
+    "project_id": "chikaharu11-one-week",
+    "storage_bucket": "chikaharu11-one-week.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55295836408:android:2520ea8be7777e1063bb0d",
+        "android_client_info": {
+          "package_name": "jp.chikaharu11.chikaharu_menu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "55295836408-q1c7jhhgilmisa785pd38grt2lc1sc7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDydEpYeQqOT3ZzVsG3V5fd8WZrGPbOnzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "55295836408-q1c7jhhgilmisa785pd38grt2lc1sc7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
