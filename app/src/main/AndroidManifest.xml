@@ -24,6 +24,7 @@
         <activity
             android:name="jp.chikaharu11.chikaharu_menu.MainActivity"
             android:screenOrientation="fullSensor"
+            android:windowSoftInputMode="adjustPan|stateUnchanged"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

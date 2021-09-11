@@ -11,6 +11,7 @@ import android.media.SoundPool
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.os.Handler
 import android.provider.DocumentsContract
 import android.view.Menu
 import android.view.MenuItem
@@ -52,6 +53,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mRealm: Realm
 
     private lateinit var soundPool: SoundPool
+
+    private val handler = Handler()
 
     private var sound1 = 0
 
@@ -2439,7 +2442,9 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList2 -> {
-                getBitmapFromView(binding.allView)
+                binding.adView.visibility = View.GONE
+                handler.postDelayed( { getBitmapFromView(binding.allView) }, 50)
+                handler.postDelayed( { binding.adView.visibility = View.VISIBLE }, 50)
                 return true
             }
 
