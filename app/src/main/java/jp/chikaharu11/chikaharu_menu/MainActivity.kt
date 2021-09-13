@@ -328,7 +328,7 @@ class MainActivity : AppCompatActivity() {
             .setMaxStreams(1)
             .build()
 
-        sound1 = soundPool.load(this, R.raw.ta, 1)
+        sound1 = soundPool.load(this, R.raw.cowbell_10, 1)
 
         val modelList: List<Model> = readFromAsset()
 
