@@ -68,6 +68,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
+        private const val READ_REQUEST_CODE2: Int = 43
     }
 
     private fun selectMenu() {
@@ -78,6 +79,16 @@ class MainActivity : AppCompatActivity() {
             type = "image/*"
         }
         startActivityForResult(intent, READ_REQUEST_CODE)
+    }
+
+    private fun selectMenu2() {
+        val saf = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.chikaharu_menu%2Ffiles%2FDCIM")
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            putExtra(DocumentsContract.EXTRA_INITIAL_URI, saf)
+            type = "image/*"
+        }
+        startActivityForResult(intent, READ_REQUEST_CODE2)
     }
 
     fun menuList13() {
@@ -2139,17 +2150,20 @@ class MainActivity : AppCompatActivity() {
                 }
                 when(position){
                     0 -> {
+                        selectMenu2()
+                    }
+                    1 -> {
                          selectMenu()
                     }
-                    1 -> { menuList13()
+                    2 -> { menuList13()
                     }
-                    2 -> { menuList14()
+                    3 -> { menuList14()
                     }
-                    3 -> { menuList12()
+                    4 -> { menuList12()
                     }
-                    4 -> { menuList15()
+                    5 -> { menuList15()
                     }
-                    5 -> {
+                    6 -> {
                         AlertDialog.Builder(this@MainActivity)
                             .setTitle("再起動しますか？")
                             .setPositiveButton("YES") { _, _ ->
@@ -2160,7 +2174,7 @@ class MainActivity : AppCompatActivity() {
                             }
                             .show()
                     }
-                    6 -> {
+                    7 -> {
                         AlertDialog.Builder(this@MainActivity)
                             .setTitle("終了しますか？")
                             .setPositiveButton("YES") { _, _ ->
@@ -2330,6 +2344,29 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
+            READ_REQUEST_CODE2 -> {
+                resultData?.data?.also { uri ->
+
+                    val inputStream = contentResolver?.openInputStream(uri)
+                    val image = BitmapFactory.decodeStream(inputStream)
+
+                    val cachePath = File(this.cacheDir, "images")
+                    cachePath.mkdirs()
+                    val filePath = File(cachePath, "cache.png")
+                    val fos = FileOutputStream(filePath.absolutePath)
+                    image.compress(Bitmap.CompressFormat.PNG, 100, fos)
+                    fos.close()
+
+                    val contentUri = FileProvider.getUriForFile(
+                        this,
+                        applicationContext.packageName + ".fileprovider",
+                        filePath
+                    )
+                    binding.imageView.visibility = View.VISIBLE
+                    binding.imageView.setImageURI(contentUri)
+                }
+
+            }
 
         }
     }
@@ -2438,10 +2475,12 @@ class MainActivity : AppCompatActivity() {
 
             R.id.MenuList1 -> {
                 spinnerWP.performClick()
+                binding.imageView.visibility = View.INVISIBLE
                 return true
             }
 
             R.id.MenuList2 -> {
+                binding.imageView.visibility = View.INVISIBLE
                 binding.adView.visibility = View.GONE
                 handler.postDelayed( { getBitmapFromView(binding.allView) }, 50)
                 handler.postDelayed( { binding.adView.visibility = View.VISIBLE }, 50)
@@ -2449,6 +2488,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList3a -> {
+                binding.imageView.visibility = View.INVISIBLE
                 spinner04.performClick()
                 return true
             }
