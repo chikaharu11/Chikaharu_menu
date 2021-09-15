@@ -2362,8 +2362,10 @@ class MainActivity : AppCompatActivity() {
                         applicationContext.packageName + ".fileprovider",
                         filePath
                     )
+                    binding.adView.visibility = View.INVISIBLE
                     binding.imageView.visibility = View.VISIBLE
                     binding.imageView.setImageURI(contentUri)
+                    Toast.makeText(applicationContext, "元の画面に戻るには上のアイコンをどれか押して下さい", Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -2474,8 +2476,9 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
 
             R.id.MenuList1 -> {
-                spinnerWP.performClick()
+                binding.adView.visibility = View.VISIBLE
                 binding.imageView.visibility = View.INVISIBLE
+                spinnerWP.performClick()
                 return true
             }
 
@@ -2488,6 +2491,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList3a -> {
+                binding.adView.visibility = View.VISIBLE
                 binding.imageView.visibility = View.INVISIBLE
                 spinner04.performClick()
                 return true
