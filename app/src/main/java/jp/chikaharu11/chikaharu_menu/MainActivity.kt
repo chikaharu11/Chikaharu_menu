@@ -341,15 +341,48 @@ class MainActivity : AppCompatActivity() {
 
         sound1 = soundPool.load(this, R.raw.cowbell_10, 1)
 
+        val test1 = listOf(
+            "見る",
+            "シェアする",
+            "文字を大きくする",
+            "文字を小さくする",
+            "線のパターンの変更",
+            "曜日の表示、非表示",
+            "再起動する",
+            "終了する"
+        )
+
+        val adaptert1 = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, test1
+        )
+
+        adaptert1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
         val modelList: List<Model> = readFromAsset()
 
         val customDropDownAdapter = CustomDropDownAdapter(this, modelList)
-        spinner04.adapter = customDropDownAdapter
+        spinner04.adapter = adaptert1
+
+        val test2 = listOf(
+            "手入力する",
+            "メイン料理",
+            "野菜、サラダ",
+            "味噌汁、スープ",
+            "果物、デザート"
+        )
+
+        val adaptert2 = ArrayAdapter(
+            applicationContext,
+            android.R.layout.simple_spinner_item, test2
+        )
+
+        adaptert2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         val modelList2: List<Model> = readFromAsset2()
 
         val customDropDownAdapter2 = CustomDropDownAdapter(this, modelList2)
-        spinnerWP.adapter = customDropDownAdapter2
+        spinnerWP.adapter = adaptert2
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
