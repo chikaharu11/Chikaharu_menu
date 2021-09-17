@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectMenu() {
+        binding.imageView.setImageDrawable(null)
         val saf = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.chikaharu_menu%2Ffiles%2FDCIM")
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
@@ -82,6 +83,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun selectMenu2() {
+        binding.imageView.setImageDrawable(null)
         val saf = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.chikaharu_menu%2Ffiles%2FDCIM")
         val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
             addCategory(Intent.CATEGORY_OPENABLE)
@@ -341,6 +343,20 @@ class MainActivity : AppCompatActivity() {
 
         sound1 = soundPool.load(this, R.raw.cowbell_10, 1)
 
+        binding.spinner04.adapter = MoodArrayAdapter(
+            this,
+            listOf(
+                Mood(R.drawable.outline_smartphone_black_48dp, "見る　"),
+                Mood(R.drawable.baseline_share_black_48dp, "シェアする　"),
+                Mood(R.drawable.baseline_zoom_in_black_48dp, "文字を大きくする　"),
+                Mood(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
+                Mood(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
+                Mood(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
+                Mood(R.drawable.outline_restart_alt_black_48dp, "再起動する　"),
+                Mood(R.drawable.exit, "終了する　")
+            )
+        )
+
         val test1 = listOf(
             "見る",
             "シェアする",
@@ -362,7 +378,17 @@ class MainActivity : AppCompatActivity() {
         val modelList: List<Model> = readFromAsset()
 
         val customDropDownAdapter = CustomDropDownAdapter(this, modelList)
-        spinner04.adapter = adaptert1
+
+        binding.spinnerWP.adapter = MoodArrayAdapter(
+            this,
+            listOf(
+                Mood(R.drawable.baseline_create_black_48dp, "手入力する　"),
+                Mood(R.drawable.dinner_b, "メイン料理　"),
+                Mood(R.drawable.carrot_b, "野菜、サラダ　"),
+                Mood(R.drawable.soup_b, "味噌汁、スープ　"),
+                Mood(R.drawable.apple_b, "果物、デザート　")
+            )
+        )
 
         val test2 = listOf(
             "手入力する",
@@ -382,7 +408,6 @@ class MainActivity : AppCompatActivity() {
         val modelList2: List<Model> = readFromAsset2()
 
         val customDropDownAdapter2 = CustomDropDownAdapter(this, modelList2)
-        spinnerWP.adapter = adaptert2
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
