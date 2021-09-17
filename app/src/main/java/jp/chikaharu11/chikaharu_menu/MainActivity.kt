@@ -2483,6 +2483,8 @@ class MainActivity : AppCompatActivity() {
             R.id.MenuList2 -> {
                 binding.imageView.visibility = View.INVISIBLE
                 binding.adView.visibility = View.GONE
+                binding.textView14.requestFocus()
+                binding.textView14.clearFocus()
                 handler.postDelayed( { getBitmapFromView(binding.allView) }, 50)
                 handler.postDelayed( { binding.adView.visibility = View.VISIBLE }, 50)
                 return true
