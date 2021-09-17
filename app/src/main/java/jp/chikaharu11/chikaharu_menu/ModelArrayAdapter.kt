@@ -8,9 +8,9 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class MoodArrayAdapter(ctx: Context,
-                       moods: List<Mood>) :
-    ArrayAdapter<Mood>(ctx, 0, moods) {
+class ModelArrayAdapter(ctx: Context,
+                        models: List<Model>) :
+    ArrayAdapter<Model>(ctx, 0, models) {
 
     override fun getView(position: Int, recycledView: View?, parent: ViewGroup): View {
         return this.createView(position, recycledView, parent)
@@ -22,16 +22,16 @@ class MoodArrayAdapter(ctx: Context,
 
     private fun createView(position: Int, recycledView: View?, parent: ViewGroup): View {
 
-        val mood = getItem(position)
+        val model = getItem(position)
 
         val view = recycledView ?: LayoutInflater.from(context).inflate(
-            R.layout.demo_spinner,
+            R.layout.custom_spinner_item,
             parent,
             false
         )
 
-        mood?.image?.let { view.findViewById<ImageView>(R.id.moodImage).setImageResource(it) }
-        view.findViewById<TextView>(R.id.moodText).text = mood?.description
+        model?.image?.let { view.findViewById<ImageView>(R.id.moodImage).setImageResource(it) }
+        view.findViewById<TextView>(R.id.moodText).text = model?.description
 
         return view
     }

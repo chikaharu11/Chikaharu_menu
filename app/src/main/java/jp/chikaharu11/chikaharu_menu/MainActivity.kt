@@ -30,7 +30,6 @@ import androidx.core.view.isVisible
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
-import com.google.gson.Gson
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -343,71 +342,31 @@ class MainActivity : AppCompatActivity() {
 
         sound1 = soundPool.load(this, R.raw.cowbell_10, 1)
 
-        binding.spinner04.adapter = MoodArrayAdapter(
+        binding.spinner04.adapter = ModelArrayAdapter(
             this,
             listOf(
-                Mood(R.drawable.outline_smartphone_black_48dp, "見る　"),
-                Mood(R.drawable.baseline_share_black_48dp, "シェアする　"),
-                Mood(R.drawable.baseline_zoom_in_black_48dp, "文字を大きくする　"),
-                Mood(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
-                Mood(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
-                Mood(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
-                Mood(R.drawable.outline_restart_alt_black_48dp, "再起動する　"),
-                Mood(R.drawable.exit, "終了する　")
+                Model(R.drawable.outline_smartphone_black_48dp, "見る　"),
+                Model(R.drawable.baseline_share_black_48dp, "シェアする　"),
+                Model(R.drawable.baseline_zoom_in_black_48dp, "文字を大きくする　"),
+                Model(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
+                Model(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
+                Model(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
+                Model(R.drawable.outline_restart_alt_black_48dp, "再起動する　"),
+                Model(R.drawable.exit, "終了する　")
             )
         )
 
-        val test1 = listOf(
-            "見る",
-            "シェアする",
-            "文字を大きくする",
-            "文字を小さくする",
-            "線のパターンの変更",
-            "曜日の表示、非表示",
-            "再起動する",
-            "終了する"
-        )
-
-        val adaptert1 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, test1
-        )
-
-        adaptert1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        val modelList: List<Model> = readFromAsset()
-
-        val customDropDownAdapter = CustomDropDownAdapter(this, modelList)
-
-        binding.spinnerWP.adapter = MoodArrayAdapter(
+        binding.spinnerWP.adapter = ModelArrayAdapter(
             this,
             listOf(
-                Mood(R.drawable.baseline_create_black_48dp, "手入力する　"),
-                Mood(R.drawable.dinner_b, "メイン料理　"),
-                Mood(R.drawable.carrot_b, "野菜、サラダ　"),
-                Mood(R.drawable.soup_b, "味噌汁、スープ　"),
-                Mood(R.drawable.apple_b, "果物、デザート　")
+                Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
+                Model(R.drawable.dinner_b, "メイン料理　"),
+                Model(R.drawable.carrot_b, "野菜、サラダ　"),
+                Model(R.drawable.soup_b, "味噌汁、スープ　"),
+                Model(R.drawable.apple_b, "果物、デザート　")
             )
         )
 
-        val test2 = listOf(
-            "手入力する",
-            "メイン料理",
-            "野菜、サラダ",
-            "味噌汁、スープ",
-            "果物、デザート"
-        )
-
-        val adaptert2 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, test2
-        )
-
-        adaptert2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        val modelList2: List<Model> = readFromAsset2()
-
-        val customDropDownAdapter2 = CustomDropDownAdapter(this, modelList2)
 
         Realm.init(this)
         val realmConfig = RealmConfiguration.Builder()
@@ -2211,15 +2170,19 @@ class MainActivity : AppCompatActivity() {
                         selectMenu2()
                     }
                     1 -> {
-                         selectMenu()
+                        selectMenu()
                     }
-                    2 -> { menuList13()
+                    2 -> {
+                        menuList13()
                     }
-                    3 -> { menuList14()
+                    3 -> {
+                        menuList14()
                     }
-                    4 -> { menuList12()
+                    4 -> {
+                        menuList12()
                     }
-                    5 -> { menuList15()
+                    5 -> {
+                        menuList15()
                     }
                     6 -> {
                         AlertDialog.Builder(this@MainActivity)
@@ -2264,7 +2227,7 @@ class MainActivity : AppCompatActivity() {
                     spinnerWP.isFocusable = true
                     return
                 }
-                when(position){
+                when (position) {
                     0 -> { menuSwitch = 0
                         invalidateOptionsMenu()
                         supportActionBar?.title = "メニュー表"
@@ -2331,29 +2294,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun readFromAsset(): List<Model> {
-        val filename = "android_version.json"
-
-        val bufferReader = application.assets.open(filename).bufferedReader()
-
-        val jsonstring = bufferReader.use {
-            it.readText()
-        }
-        val gson = Gson()
-        return gson.fromJson(jsonstring, Array<Model>::class.java).toList()
-    }
-
-    private fun readFromAsset2(): List<Model> {
-        val filename = "android_version2.json"
-
-        val bufferReader = application.assets.open(filename).bufferedReader()
-
-        val jsonstring = bufferReader.use {
-            it.readText()
-        }
-        val gson = Gson()
-        return gson.fromJson(jsonstring, Array<Model>::class.java).toList()
-    }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
 

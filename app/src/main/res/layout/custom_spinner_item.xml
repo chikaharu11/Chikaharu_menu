@@ -8,13 +8,13 @@
     tools:ignore="UseCompoundDrawables">
 
     <ImageView
-        android:id="@+id/img"
+        android:id="@+id/moodImage"
         android:layout_width="24dp"
         android:layout_height="24dp"
-        android:contentDescription="@string/app_name" />
+        tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/moodText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
