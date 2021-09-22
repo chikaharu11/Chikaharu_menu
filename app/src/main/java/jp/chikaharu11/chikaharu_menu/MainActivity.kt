@@ -65,6 +65,8 @@ class MainActivity : AppCompatActivity() {
 
     private var menuSwitch = 0
 
+    private val locale: Locale = Locale.getDefault()
+
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
         private const val READ_REQUEST_CODE2: Int = 43
@@ -342,30 +344,60 @@ class MainActivity : AppCompatActivity() {
 
         sound1 = soundPool.load(this, R.raw.cowbell_10, 1)
 
-        binding.spinner04.adapter = ModelArrayAdapter(
-            this,
-            listOf(
-                Model(R.drawable.outline_smartphone_black_48dp, "見る　"),
-                Model(R.drawable.baseline_share_black_48dp, "シェアする　"),
-                Model(R.drawable.baseline_zoom_in_black_48dp, "文字を大きくする　"),
-                Model(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
-                Model(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
-                Model(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
-                Model(R.drawable.outline_restart_alt_black_48dp, "再起動する　"),
-                Model(R.drawable.exit, "終了する　")
+        if (locale == Locale.JAPAN) {
+            binding.spinner04.adapter = ModelArrayAdapter(
+                this,
+                listOf(
+                    Model(R.drawable.outline_smartphone_black_48dp, "見る　"),
+                    Model(R.drawable.baseline_share_black_48dp, "シェアする　"),
+                    Model(R.drawable.baseline_zoom_in_black_48dp, "文字を大きくする　"),
+                    Model(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
+                    Model(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
+                    Model(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
+                    Model(R.drawable.outline_restart_alt_black_48dp, "再起動する　"),
+                    Model(R.drawable.exit, "終了する　")
+                )
             )
-        )
+        } else {
+            binding.spinner04.adapter = ModelArrayAdapter(
+                this,
+                listOf(
+                    Model(R.drawable.outline_smartphone_black_48dp, "View  "),
+                    Model(R.drawable.baseline_share_black_48dp, "Share  "),
+                    Model(R.drawable.baseline_zoom_in_black_48dp, "Enlarge text  "),
+                    Model(R.drawable.baseline_zoom_out_black_48dp, "Reduce text  "),
+                    Model(R.drawable.baseline_border_color_black_48dp, "Change line pattern  "),
+                    Model(R.drawable.baseline_border_clear_black_48dp, "Show/hide days of the week  "),
+                    Model(R.drawable.outline_restart_alt_black_48dp, "Reboot  "),
+                    Model(R.drawable.exit, "Exit  ")
 
-        binding.spinnerWP.adapter = ModelArrayAdapter(
-            this,
-            listOf(
-                Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
-                Model(R.drawable.dinner_b, "メイン料理　"),
-                Model(R.drawable.carrot_b, "野菜、サラダ　"),
-                Model(R.drawable.soup_b, "味噌汁、スープ　"),
-                Model(R.drawable.apple_b, "果物、デザート　")
+                )
             )
-        )
+        }
+
+        if (locale == Locale.JAPAN) {
+            binding.spinnerWP.adapter = ModelArrayAdapter(
+                this,
+                listOf(
+                    Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
+                    Model(R.drawable.dinner_b, "メイン料理　"),
+                    Model(R.drawable.carrot_b, "野菜、サラダ　"),
+                    Model(R.drawable.soup_b, "味噌汁、スープ　"),
+                    Model(R.drawable.apple_b, "果物、デザート　")
+                )
+            )
+        } else {
+            binding.spinnerWP.adapter = ModelArrayAdapter(
+                this,
+                listOf(
+                    Model(R.drawable.baseline_create_black_48dp, "Manual input  "),
+                    Model(R.drawable.dinner_b, "Main dish  "),
+                    Model(R.drawable.carrot_b, "Salads  "),
+                    Model(R.drawable.soup_b, "Soup  "),
+                    Model(R.drawable.apple_b, "Fruits, Desserts  ")
+                )
+            )
+        }
 
 
         Realm.init(this)
@@ -446,7 +478,11 @@ class MainActivity : AppCompatActivity() {
         if(item5 != null){
             supportActionBar?.title = item5
         } else {
-            supportActionBar?.title = "メニュー表"
+            if (locale == Locale.JAPAN) {
+                supportActionBar?.title = "メニュー表"
+            } else {
+                supportActionBar?.title = "Menu list"
+            }
         }
 
 
@@ -2186,7 +2222,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     6 -> {
                         AlertDialog.Builder(this@MainActivity)
-                            .setTitle("再起動しますか？")
+                            .setTitle(R.string.reboot)
                             .setPositiveButton("YES") { _, _ ->
                                 ProcessPhoenix.triggerRebirth(this@MainActivity)
                             }
@@ -2197,7 +2233,7 @@ class MainActivity : AppCompatActivity() {
                     }
                     7 -> {
                         AlertDialog.Builder(this@MainActivity)
-                            .setTitle("終了しますか？")
+                            .setTitle(R.string.exit)
                             .setPositiveButton("YES") { _, _ ->
                                 finish()
                             }
@@ -2230,48 +2266,68 @@ class MainActivity : AppCompatActivity() {
                 when (position) {
                     0 -> { menuSwitch = 0
                         invalidateOptionsMenu()
-                        supportActionBar?.title = "メニュー表"
-                        Toast.makeText(applicationContext, "入力モード", Toast.LENGTH_SHORT).show()
+                        if (locale == Locale.JAPAN) {
+                            supportActionBar?.title = "メニュー表"
+                        } else {
+                            supportActionBar?.title = "Menu list"
+                        }
+                        Toast.makeText(applicationContext, (R.string.Manual_input), Toast.LENGTH_SHORT).show()
                         pasteFlag = 0
                     }
                     1 -> { menuSwitch = 1
                         binding.textView14.requestFocus()
                         binding.textView14.clearFocus()
                         invalidateOptionsMenu()
-                        supportActionBar?.title = "メイン料理"
+                        if (locale == Locale.JAPAN) {
+                            supportActionBar?.title = "メイン料理"
+                        } else {
+                            supportActionBar?.title = "Main dish"
+                        }
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, "メイン料理", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, (R.string.Main_dish), Toast.LENGTH_SHORT).show()
                         pasteFlag = 1
                     }
                     2 -> { menuSwitch = 2
                         binding.textView14.requestFocus()
                         binding.textView14.clearFocus()
                         invalidateOptionsMenu()
-                        supportActionBar?.title = "野菜、サラダ"
+                        if (locale == Locale.JAPAN) {
+                            supportActionBar?.title = "野菜、サラダ"
+                        } else {
+                            supportActionBar?.title = "Salads"
+                        }
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, "野菜、サラダ", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, (R.string.Salads), Toast.LENGTH_SHORT).show()
                         pasteFlag = 2
                     }
                     3 -> { menuSwitch = 3
                         binding.textView14.requestFocus()
                         binding.textView14.clearFocus()
                         invalidateOptionsMenu()
-                        supportActionBar?.title = "味噌汁、スープ"
+                        if (locale == Locale.JAPAN) {
+                            supportActionBar?.title = "味噌汁、スープ"
+                        } else {
+                            supportActionBar?.title = "Soup"
+                        }
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, "味噌汁、スープ", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
                         pasteFlag = 3
                     }
                     4 -> { menuSwitch = 4
                         binding.textView14.requestFocus()
                         binding.textView14.clearFocus()
                         invalidateOptionsMenu()
-                        supportActionBar?.title = "果物、デザート"
+                        if (locale == Locale.JAPAN) {
+                            supportActionBar?.title = "果物、デザート"
+                        } else {
+                            supportActionBar?.title = "Fruits, Desserts"
+                        }
                         val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
                         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, "果物、デザート", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                         pasteFlag = 4
                     }
                 }
@@ -2338,7 +2394,11 @@ class MainActivity : AppCompatActivity() {
                     shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     shareIntent.setDataAndType(contentUri, contentResolver.getType(contentUri))
                     shareIntent.putExtra(Intent.EXTRA_STREAM, contentUri)
-                    startActivity(Intent.createChooser(shareIntent, "アプリを選ぶ"))
+                    if (locale == Locale.JAPAN) {
+                        startActivity(Intent.createChooser(shareIntent, "アプリを選ぶ"))
+                    } else {
+                        startActivity(Intent.createChooser(shareIntent, "Choose an apps"))
+                    }
                 }
 
             }
@@ -2363,7 +2423,7 @@ class MainActivity : AppCompatActivity() {
                     binding.adView.visibility = View.INVISIBLE
                     binding.imageView.visibility = View.VISIBLE
                     binding.imageView.setImageURI(contentUri)
-                    Toast.makeText(applicationContext, "元の画面に戻るには上のアイコンをどれか押して下さい", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, (R.string.back), Toast.LENGTH_SHORT).show()
                 }
 
             }
@@ -2374,7 +2434,11 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SimpleDateFormat")
     private fun getBitmapFromView(view: View):Bitmap {
-        val timeStamp: String = SimpleDateFormat("MM月dd日HH時mm分ss秒").format(Date())
+        val timeStamp: String = if (locale == Locale.JAPAN) {
+            SimpleDateFormat("MM月dd日HH時mm分ss秒").format(Date())
+        } else {
+            SimpleDateFormat("MM-dd-yyyy-hh-mm-ss", Locale.US).format(Date())
+        }
         val path = getExternalFilesDir(Environment.DIRECTORY_DCIM)?.path + "/" + timeStamp + ".png"
         val stream = FileOutputStream(path)
         val bitmap = Bitmap.createBitmap(view.width, view.height, Bitmap.Config.ARGB_8888)
@@ -2383,14 +2447,13 @@ class MainActivity : AppCompatActivity() {
         bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
         stream.close()
         soundPool.play(sound1, 1.0f, 1.0f, 0, 0, 1.0f)
-        Toast.makeText(applicationContext, "画面を保存しました。", Toast.LENGTH_LONG).show()
+        Toast.makeText(applicationContext, (R.string.Screen_captured), Toast.LENGTH_LONG).show()
         return bitmap
     }
 
     override fun onBackPressed() {
         AlertDialog.Builder(this)
-            .setTitle("終了しますか？")
-            .setMessage("(入力したメニューは保存されません)")
+            .setTitle(R.string.exit)
             .setPositiveButton("YES") { _, _ ->
                 finish()
             }

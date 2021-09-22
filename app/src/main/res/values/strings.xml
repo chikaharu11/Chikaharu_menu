@@ -18,5 +18,14 @@
     <string name="MenuList3a">Various functions</string>
     <string name="MenuList">Write / Paste</string>
     <string name="switch1">Write / Paste</string>
+    <string name="reboot">Reboot?</string>
+    <string name="exit">Exit?</string>
+    <string name="Manual_input">Manual input</string>
+    <string name="Main_dish">Main dish</string>
+    <string name="Salads">Salads</string>
+    <string name="Soup">Soup</string>
+    <string name="Fruits_Desserts">Fruits, Desserts</string>
+    <string name="back">To return to the previous screen, press any of the icons above.</string>
+    <string name="Screen_captured">Screen captured</string>
 
 </resources>
