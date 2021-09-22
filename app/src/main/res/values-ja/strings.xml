@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">一週間の献立メモ</string>
+    <string name="c0">Chikaharu_Menu</string>
+    <string name="c1">月</string>
+    <string name="c2">火</string>
+    <string name="c3">水</string>
+    <string name="c4">木</string>
+    <string name="c5">金</string>
+    <string name="c6">土</string>
+    <string name="c7">日</string>
+    <string name="mm1">ㅤㅤㅤㅤㅤㅤㅤㅤ</string>
+    <string name="mm2">ㅤㅤㅤㅤㅤㅤㅤㅤ</string>
+    <string name="sm2">ㅤㅤㅤㅤㅤㅤㅤㅤ</string>
+    <string name="sm1">ㅤㅤㅤㅤㅤㅤㅤㅤ</string>
+    <string name="tt">タイトル</string>
+    <string name="hint">ㅤ</string>
+    <string name="MenuList2">画面保存</string>
+    <string name="MenuList3a">各種機能</string>
+    <string name="MenuList">書く／貼付</string>
+    <string name="switch1">書く／貼付</string>
+
+</resources>
