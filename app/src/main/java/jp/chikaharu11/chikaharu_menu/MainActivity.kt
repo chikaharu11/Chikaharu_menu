@@ -98,20 +98,6 @@ class MainActivity : AppCompatActivity() {
 
         count++
 
-        binding.textView.textSize = count
-        binding.textView2.textSize = count
-        binding.textView3.textSize = count
-        binding.textView4.textSize = count
-        binding.textView5.textSize = count
-        binding.textView6.textSize = count
-        binding.textView7.textSize = count
-        binding.textView8.textSize = count
-        binding.textView9.textSize = count
-        binding.textView10.textSize = count
-        binding.textView11.textSize = count
-        binding.textView12.textSize = count
-        binding.textView13.textSize = count
-        binding.textView14.textSize = count
         binding.editText8.textSize = count
         binding.editText4.textSize = count
         binding.editText13.textSize = count
@@ -148,20 +134,6 @@ class MainActivity : AppCompatActivity() {
 
         count--
 
-        binding.textView.textSize = count
-        binding.textView2.textSize = count
-        binding.textView3.textSize = count
-        binding.textView4.textSize = count
-        binding.textView5.textSize = count
-        binding.textView6.textSize = count
-        binding.textView7.textSize = count
-        binding.textView8.textSize = count
-        binding.textView9.textSize = count
-        binding.textView10.textSize = count
-        binding.textView11.textSize = count
-        binding.textView12.textSize = count
-        binding.textView13.textSize = count
-        binding.textView14.textSize = count
         binding.editText8.textSize = count
         binding.editText4.textSize = count
         binding.editText13.textSize = count

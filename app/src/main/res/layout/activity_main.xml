@@ -40,6 +40,38 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
+    <Spinner
+        android:id="@+id/spinner1a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner2a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner3a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner4a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
     <EditText
         android:id="@+id/editText8"
         android:layout_width="wrap_content"
@@ -102,8 +134,8 @@
 
     <EditText
         android:id="@+id/editText9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -111,6 +143,7 @@
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/editText7n"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/editText7n"
         app:layout_constraintTop_toBottomOf="@+id/editText9n"
         tools:ignore="LabelFor" />
@@ -118,7 +151,7 @@
     <EditText
         android:id="@+id/editText7"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -129,38 +162,6 @@
         app:layout_constraintStart_toStartOf="@+id/editText15n"
         app:layout_constraintTop_toBottomOf="@+id/editText7n"
         tools:ignore="LabelFor" />
-
-    <Spinner
-        android:id="@+id/spinner1a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner2a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner3a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner4a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editText8n"
@@ -313,17 +314,17 @@
         app:layout_constraintTop_toBottomOf="@+id/editText11n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText9n"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/view11"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/editText9"
         app:layout_constraintTop_toBottomOf="@id/view8"
         tools:ignore="LabelFor" />
@@ -331,7 +332,7 @@
     <EditText
         android:id="@+id/editText7n"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -346,7 +347,7 @@
     <EditText
         android:id="@+id/editText15n"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -361,7 +362,7 @@
     <EditText
         android:id="@+id/editText15"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -376,7 +377,7 @@
     <EditText
         android:id="@+id/editText17n"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -391,7 +392,7 @@
     <EditText
         android:id="@+id/editText14n"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -406,7 +407,7 @@
     <EditText
         android:id="@+id/editText16"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -421,7 +422,7 @@
     <EditText
         android:id="@+id/editText14"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="2dp"
         android:autofillHints="hint"
         android:background="#00000000"
@@ -437,7 +438,7 @@
     <EditText
         android:id="@+id/editText18"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -452,7 +453,7 @@
     <EditText
         android:id="@+id/editText17"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -467,7 +468,7 @@
     <EditText
         android:id="@+id/editText18n"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -482,7 +483,7 @@
     <EditText
         android:id="@+id/editText16n"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
         android:gravity="start|top"
@@ -983,7 +984,8 @@
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
 
         <ImageView
