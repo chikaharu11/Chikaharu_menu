@@ -281,7 +281,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun hideKeyboard() {
-        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
     }
 

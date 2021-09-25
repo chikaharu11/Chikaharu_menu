@@ -22,56 +22,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
-    <jp.chikaharu11.chikaharu_menu.CSpinner
-        android:id="@+id/spinner04"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <jp.chikaharu11.chikaharu_menu.CSpinner
-        android:id="@+id/spinnerWP"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner1a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner2a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner3a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner4a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText8"
         android:layout_width="0dp"
@@ -507,245 +457,215 @@
         app:layout_constraintTop_toBottomOf="@+id/editText15"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c1"
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText8n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText8n"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c2"
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText4n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText4n"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor"/>
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c3"
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText13n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText13n"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor"/>
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c4"
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editTextn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextn"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor"/>
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c5"
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText11n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText11n"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor"/>
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c6"
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText10n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText10n"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor"/>
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/c7"
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText12n"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText12n"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor"/>
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText8"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText4"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText13"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText11"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText10"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=""
         android:hint="@string/hint"
         android:background="#00000000"
-        android:textSize="16sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toStartOf="@+id/editText12"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editText12"
         android:autofillHints="hint"
-        android:inputType="textMultiLine"
-        android:maxLines="1"
-        android:maxWidth="36dp"
+        android:inputType="text"
         tools:ignore="LabelFor" />
-
-
 
     <View
         android:id="@+id/view1"
@@ -925,19 +845,55 @@
         app:layout_constraintTop_toBottomOf="@+id/editText12n"
         tools:ignore="MissingConstraints" />
 
-    <Switch
-        android:id="@+id/switch2"
+    <jp.chikaharu11.chikaharu_menu.CSpinner
+        android:id="@+id/spinnerWP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        tools:ignore="MissingConstraints,TooManyViews,UseSwitchCompatOrMaterialXml" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
-    <Switch
-        android:id="@+id/switch3"
+    <Spinner
+        android:id="@+id/spinner3a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner1a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <jp.chikaharu11.chikaharu_menu.CSpinner
+        android:id="@+id/spinner04"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="invisible"
-        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner2a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
+
+    <Spinner
+        android:id="@+id/spinner4a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dialog"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints" />
 
     <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/customSpinner"
@@ -993,11 +949,24 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
 
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints,TooManyViews,UseSwitchCompatOrMaterialXml" />
+
+    <Switch
+        android:id="@+id/switch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        tools:ignore="MissingConstraints,UseSwitchCompatOrMaterialXml" />
+
     <FrameLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
+        android:layout_height="match_parent">
 
 
         <ImageView
