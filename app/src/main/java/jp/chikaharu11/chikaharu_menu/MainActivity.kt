@@ -280,6 +280,11 @@ class MainActivity : AppCompatActivity() {
         return
     }
 
+    fun hideKeyboard() {
+        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+    }
+
     @SuppressLint("UseSwitchCompatOrMaterialCode")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -299,6 +304,14 @@ class MainActivity : AppCompatActivity() {
         container = findViewById(R.id.allView)
 
         inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+
+        fun convertPxToSp(px: Float): Float {
+            return px / this.resources.displayMetrics.density
+        }
+
+        count = convertPxToSp(binding.editText8.textSize)
+        
+        val defaultTextSize = convertPxToSp(binding.editText8.textSize)
 
         val audioAttributes = AudioAttributes.Builder()
 
@@ -567,61 +580,117 @@ class MainActivity : AppCompatActivity() {
                 if (pasteFlag == 1)
                 when {
                     binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8.clearFocus() }
+                        binding.editText8.clearFocus()
+                        binding.editText8.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4.clearFocus() }
+                        binding.editText4.clearFocus()
+                        binding.editText4.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText.clearFocus() }
+                        binding.editText.clearFocus()
+                        binding.editText.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10.clearFocus() }
+                        binding.editText10.clearFocus()
+                        binding.editText10.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11.clearFocus() }
+                        binding.editText11.clearFocus()
+                        binding.editText11.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12.clearFocus() }
+                        binding.editText12.clearFocus()
+                        binding.editText12.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13.clearFocus() }
+                        binding.editText13.clearFocus()
+                        binding.editText13.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9.clearFocus() }
+                        binding.editText9.clearFocus()
+                        binding.editText9.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7.clearFocus() }
+                        binding.editText7.clearFocus()
+                        binding.editText7.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14.clearFocus() }
+                        binding.editText14.clearFocus()
+                        binding.editText14.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15.clearFocus() }
+                        binding.editText15.clearFocus()
+                        binding.editText15.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16.clearFocus() }
+                        binding.editText16.clearFocus()
+                        binding.editText16.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17.clearFocus() }
+                        binding.editText17.clearFocus()
+                        binding.editText17.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18.clearFocus() }
+                        binding.editText18.clearFocus()
+                        binding.editText18.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8n.clearFocus() }
+                        binding.editText8n.clearFocus()
+                        binding.editText8n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4n.clearFocus() }
+                        binding.editText4n.clearFocus()
+                        binding.editText4n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                        binding.editTextn.clearFocus() }
+                        binding.editTextn.clearFocus()
+                        binding.editTextn.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10n.clearFocus() }
+                        binding.editText10n.clearFocus()
+                        binding.editText10n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11n.clearFocus() }
+                        binding.editText11n.clearFocus()
+                        binding.editText11n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12n.clearFocus() }
+                        binding.editText12n.clearFocus()
+                        binding.editText12n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13n.clearFocus() }
+                        binding.editText13n.clearFocus()
+                        binding.editText13n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9n.clearFocus() }
+                        binding.editText9n.clearFocus()
+                        binding.editText9n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7n.clearFocus() }
+                        binding.editText7n.clearFocus()
+                        binding.editText7n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14n.clearFocus() }
+                        binding.editText14n.clearFocus()
+                        binding.editText14n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15n.clearFocus() }
+                        binding.editText15n.clearFocus()
+                        binding.editText15n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16n.clearFocus() }
+                        binding.editText16n.clearFocus()
+                        binding.editText16n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17n.clearFocus() }
+                        binding.editText17n.clearFocus()
+                        binding.editText17n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18n.clearFocus() }
+                        binding.editText18n.clearFocus()
+                        binding.editText18n.textSize = defaultTextSize
+                        hideKeyboard() }
                 }
 
             }
@@ -692,61 +761,117 @@ class MainActivity : AppCompatActivity() {
                 if (pasteFlag == 2)
                 when {
                     binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8.clearFocus() }
+                        binding.editText8.clearFocus()
+                        binding.editText8.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4.clearFocus() }
+                        binding.editText4.clearFocus()
+                        binding.editText4.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText.clearFocus() }
+                        binding.editText.clearFocus()
+                        binding.editText.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10.clearFocus() }
+                        binding.editText10.clearFocus()
+                        binding.editText10.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11.clearFocus() }
+                        binding.editText11.clearFocus()
+                        binding.editText11.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12.clearFocus() }
+                        binding.editText12.clearFocus()
+                        binding.editText12.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13.clearFocus() }
+                        binding.editText13.clearFocus()
+                        binding.editText13.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9.clearFocus() }
+                        binding.editText9.clearFocus()
+                        binding.editText9.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7.clearFocus() }
+                        binding.editText7.clearFocus()
+                        binding.editText7.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14.clearFocus() }
+                        binding.editText14.clearFocus()
+                        binding.editText14.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15.clearFocus() }
+                        binding.editText15.clearFocus()
+                        binding.editText15.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16.clearFocus() }
+                        binding.editText16.clearFocus()
+                        binding.editText16.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17.clearFocus() }
+                        binding.editText17.clearFocus()
+                        binding.editText17.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18.clearFocus() }
+                        binding.editText18.clearFocus()
+                        binding.editText18.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8n.clearFocus() }
+                        binding.editText8n.clearFocus()
+                        binding.editText8n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4n.clearFocus() }
+                        binding.editText4n.clearFocus()
+                        binding.editText4n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                        binding.editTextn.clearFocus() }
+                        binding.editTextn.clearFocus()
+                        binding.editTextn.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10n.clearFocus() }
+                        binding.editText10n.clearFocus()
+                        binding.editText10n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11n.clearFocus() }
+                        binding.editText11n.clearFocus()
+                        binding.editText11n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12n.clearFocus() }
+                        binding.editText12n.clearFocus()
+                        binding.editText12n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13n.clearFocus() }
+                        binding.editText13n.clearFocus()
+                        binding.editText13n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9n.clearFocus() }
+                        binding.editText9n.clearFocus()
+                        binding.editText9n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7n.clearFocus() }
+                        binding.editText7n.clearFocus()
+                        binding.editText7n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14n.clearFocus() }
+                        binding.editText14n.clearFocus()
+                        binding.editText14n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15n.clearFocus() }
+                        binding.editText15n.clearFocus()
+                        binding.editText15n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16n.clearFocus() }
+                        binding.editText16n.clearFocus()
+                        binding.editText16n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17n.clearFocus() }
+                        binding.editText17n.clearFocus()
+                        binding.editText17n.textSize = defaultTextSize
+                        hideKeyboard() }
                     binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18n.clearFocus() }
+                        binding.editText18n.clearFocus()
+                        binding.editText18n.textSize = defaultTextSize
+                        hideKeyboard() }
                 }
 
             }
@@ -822,61 +947,117 @@ class MainActivity : AppCompatActivity() {
                 if (pasteFlag == 3)
                     when {
                         binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText8.clearFocus() }
-                        binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText4.clearFocus() }
-                        binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText.clearFocus() }
-                        binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText10.clearFocus() }
-                        binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText11.clearFocus() }
-                        binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText12.clearFocus() }
-                        binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText13.clearFocus() }
-                        binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText9.clearFocus() }
-                        binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText7.clearFocus() }
-                        binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText14.clearFocus() }
-                        binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText15.clearFocus() }
-                        binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText16.clearFocus() }
-                        binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText17.clearFocus() }
-                        binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText18.clearFocus() }
-                        binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText8n.clearFocus() }
-                        binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText4n.clearFocus() }
-                        binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                            binding.editTextn.clearFocus() }
-                        binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText10n.clearFocus() }
-                        binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText11n.clearFocus() }
-                        binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText12n.clearFocus() }
-                        binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText13n.clearFocus() }
-                        binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText9n.clearFocus() }
-                        binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText7n.clearFocus() }
-                        binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText14n.clearFocus() }
-                        binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText15n.clearFocus() }
-                        binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText16n.clearFocus() }
-                        binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText17n.clearFocus() }
-                        binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText18n.clearFocus() }
+                        binding.editText8.clearFocus()
+                        binding.editText8.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4.clearFocus()
+                        binding.editText4.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText.clearFocus()
+                        binding.editText.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10.clearFocus()
+                        binding.editText10.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11.clearFocus()
+                        binding.editText11.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12.clearFocus()
+                        binding.editText12.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13.clearFocus()
+                        binding.editText13.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9.clearFocus()
+                        binding.editText9.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7.clearFocus()
+                        binding.editText7.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14.clearFocus()
+                        binding.editText14.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15.clearFocus()
+                        binding.editText15.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16.clearFocus()
+                        binding.editText16.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17.clearFocus()
+                        binding.editText17.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18.clearFocus()
+                        binding.editText18.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8n.clearFocus()
+                        binding.editText8n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4n.clearFocus()
+                        binding.editText4n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                        binding.editTextn.clearFocus()
+                        binding.editTextn.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10n.clearFocus()
+                        binding.editText10n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11n.clearFocus()
+                        binding.editText11n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12n.clearFocus()
+                        binding.editText12n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13n.clearFocus()
+                        binding.editText13n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9n.clearFocus()
+                        binding.editText9n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7n.clearFocus()
+                        binding.editText7n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14n.clearFocus()
+                        binding.editText14n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15n.clearFocus()
+                        binding.editText15n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16n.clearFocus()
+                        binding.editText16n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17n.clearFocus()
+                        binding.editText17n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18n.clearFocus()
+                        binding.editText18n.textSize = defaultTextSize
+                        hideKeyboard() }
                     }
 
             }
@@ -947,61 +1128,117 @@ class MainActivity : AppCompatActivity() {
                 if (pasteFlag == 4)
                     when {
                         binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText8.clearFocus() }
-                        binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText4.clearFocus() }
-                        binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText.clearFocus() }
-                        binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText10.clearFocus() }
-                        binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText11.clearFocus() }
-                        binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText12.clearFocus() }
-                        binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText13.clearFocus() }
-                        binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText9.clearFocus() }
-                        binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText7.clearFocus() }
-                        binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText14.clearFocus() }
-                        binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText15.clearFocus() }
-                        binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText16.clearFocus() }
-                        binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText17.clearFocus() }
-                        binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText18.clearFocus() }
-                        binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText8n.clearFocus() }
-                        binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText4n.clearFocus() }
-                        binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                            binding.editTextn.clearFocus() }
-                        binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText10n.clearFocus() }
-                        binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText11n.clearFocus() }
-                        binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText12n.clearFocus() }
-                        binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText13n.clearFocus() }
-                        binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText9n.clearFocus() }
-                        binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText7n.clearFocus() }
-                        binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText14n.clearFocus() }
-                        binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText15n.clearFocus() }
-                        binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText16n.clearFocus() }
-                        binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText17n.clearFocus() }
-                        binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                            binding.editText18n.clearFocus() }
+                        binding.editText8.clearFocus()
+                        binding.editText8.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4.clearFocus()
+                        binding.editText4.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText.clearFocus()
+                        binding.editText.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10.clearFocus()
+                        binding.editText10.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11.clearFocus()
+                        binding.editText11.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12.clearFocus()
+                        binding.editText12.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13.clearFocus()
+                        binding.editText13.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9.clearFocus()
+                        binding.editText9.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7.clearFocus()
+                        binding.editText7.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14.clearFocus()
+                        binding.editText14.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15.clearFocus()
+                        binding.editText15.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16.clearFocus()
+                        binding.editText16.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17.clearFocus()
+                        binding.editText17.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18.clearFocus()
+                        binding.editText18.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText8n.clearFocus()
+                        binding.editText8n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText4n.clearFocus()
+                        binding.editText4n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                        binding.editTextn.clearFocus()
+                        binding.editTextn.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText10n.clearFocus()
+                        binding.editText10n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText11n.clearFocus()
+                        binding.editText11n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText12n.clearFocus()
+                        binding.editText12n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText13n.clearFocus()
+                        binding.editText13n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText9n.clearFocus()
+                        binding.editText9n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText7n.clearFocus()
+                        binding.editText7n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText14n.clearFocus()
+                        binding.editText14n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText15n.clearFocus()
+                        binding.editText15n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText16n.clearFocus()
+                        binding.editText16n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText17n.clearFocus()
+                        binding.editText17n.textSize = defaultTextSize
+                        hideKeyboard() }
+                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                        binding.editText18n.clearFocus()
+                        binding.editText18n.textSize = defaultTextSize
+                        hideKeyboard() }
                     }
             }
 

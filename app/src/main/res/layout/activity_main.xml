@@ -81,7 +81,6 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
-        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText4n"
         app:layout_constraintStart_toStartOf="@+id/editText4n"
