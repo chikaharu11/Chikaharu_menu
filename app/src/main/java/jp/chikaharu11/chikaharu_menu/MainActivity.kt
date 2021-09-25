@@ -2369,6 +2369,91 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        binding.textView.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView2.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView2.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView3.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView3.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView4.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView4.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView5.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView5.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView6.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView6.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView7.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView7.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView8.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView8.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView9.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView9.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView10.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView10.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView11.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView11.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView12.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView12.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView13.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView13.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+        binding.textView14.setOnFocusChangeListener { _, hasFocus ->
+            if (!hasFocus) {
+                binding.textView14.textSize = defaultTextSize
+                hideKeyboard()
+            }
+        }
+
 
         val menuList1 = mutableSetOf(
             "[選択したメニューを削除できます]"
@@ -2761,6 +2846,7 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
 
             R.id.MenuList1 -> {
+                hideKeyboard()
                 binding.adView.visibility = View.VISIBLE
                 binding.imageView.visibility = View.INVISIBLE
                 spinnerWP.performClick()
@@ -2778,6 +2864,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             R.id.MenuList3a -> {
+                hideKeyboard()
                 binding.adView.visibility = View.VISIBLE
                 binding.imageView.visibility = View.INVISIBLE
                 spinner04.performClick()
