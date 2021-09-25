@@ -72,133 +72,141 @@
         android:visibility="invisible"
         tools:ignore="MissingConstraints" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText4n"
         app:layout_constraintStart_toStartOf="@+id/editText4n"
         app:layout_constraintTop_toBottomOf="@+id/editText8n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText13n"
         app:layout_constraintStart_toStartOf="@+id/editText13n"
         app:layout_constraintTop_toBottomOf="@+id/editText4n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editTextn"
         app:layout_constraintStart_toStartOf="@+id/editTextn"
         app:layout_constraintTop_toBottomOf="@+id/editText13n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText13n"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText13"
         app:layout_constraintStart_toStartOf="@+id/editText13"
         app:layout_constraintTop_toBottomOf="@+id/editText4"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText8n"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/view11"
+        app:layout_constraintEnd_toStartOf="@id/view6"
+        app:layout_constraintBottom_toTopOf="@+id/editText8"
         app:layout_constraintStart_toStartOf="@+id/editText8"
         app:layout_constraintTop_toBottomOf="@id/view8"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText4n"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText4"
         app:layout_constraintStart_toStartOf="@+id/editText4"
         app:layout_constraintTop_toBottomOf="@+id/editText8"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editTextn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText13"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText10n"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText10"
         app:layout_constraintStart_toStartOf="@+id/editText10"
         app:layout_constraintTop_toBottomOf="@+id/editText11"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText10"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="text"
         android:textSize="16sp"
@@ -208,28 +216,29 @@
         app:layout_constraintTop_toBottomOf="@+id/editText10n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText11n"
         app:layout_constraintStart_toStartOf="@+id/editText11n"
         app:layout_constraintTop_toBottomOf="@+id/editTextn"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText12n"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
         android:textSize="16sp"
@@ -239,31 +248,32 @@
         app:layout_constraintTop_toBottomOf="@+id/editText10"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText12"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:layout_marginStart="40dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="text"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@id/view7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view17"
+        app:layout_constraintTop_toBottomOf="@+id/editText12n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText11n"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm2"
         android:inputType="text"
         app:layout_constraintBottom_toTopOf="@+id/editText11"
@@ -271,16 +281,17 @@
         app:layout_constraintTop_toBottomOf="@+id/editText"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:autoSizeTextType="uniform"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/mm1"
         android:inputType="text"
         android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText10n"
         app:layout_constraintStart_toStartOf="@+id/editText10n"
         app:layout_constraintTop_toBottomOf="@+id/editText11n"
@@ -301,13 +312,12 @@
         app:layout_constraintTop_toBottomOf="@id/view8"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText7n"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -317,13 +327,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText9"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText9"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -333,13 +342,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText9n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText7"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -349,13 +357,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText7n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText15n"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -365,13 +372,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText7"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText15"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -381,13 +387,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText15n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText17n"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -397,13 +402,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText18"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText14n"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -413,13 +417,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText17"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText16"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -429,14 +432,13 @@
         app:layout_constraintTop_toBottomOf="@+id/editText16n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText14"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="2dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -446,13 +448,12 @@
         app:layout_constraintTop_toBottomOf="@+id/view17"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText18"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -462,13 +463,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText18n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText17"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm1"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -478,13 +478,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText17n"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText18n"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
         android:autoSizeTextType="uniform"
@@ -494,13 +493,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editText16"
         tools:ignore="LabelFor" />
 
-    <EditText
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText16n"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:autofillHints="hint"
         android:background="#00000000"
-        android:gravity="start|top"
         android:hint="@string/sm2"
         android:inputType="text"
         android:autoSizeTextType="uniform"
