@@ -1826,6 +1826,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText8.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText8.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -1845,6 +1849,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText4.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText4.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -1866,6 +1874,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -1885,6 +1897,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText10.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText10.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -1906,6 +1922,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText11.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText11.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -1925,6 +1945,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText12.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText12.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -1946,6 +1970,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText13.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText13.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -1965,6 +1993,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText9.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText9.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -1986,6 +2018,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText7.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText7.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2005,6 +2041,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText14.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText14.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2026,6 +2066,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText15.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText15.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2045,6 +2089,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText16.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText16.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2066,6 +2114,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText17.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText17.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2085,6 +2137,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText18.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText18.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2106,6 +2162,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText8n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText8n.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2125,6 +2185,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText4n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText4n.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2146,6 +2210,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editTextn.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editTextn.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2165,6 +2233,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText10n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText10n.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2186,6 +2258,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText11n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText11n.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2205,6 +2281,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText12n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText12n.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2226,6 +2306,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText13n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText13n.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2245,6 +2329,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText9n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText9n.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2266,6 +2354,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText7n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText7n.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2285,6 +2377,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText14n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText14n.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2306,6 +2402,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText15n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText15n.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2325,6 +2425,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText16n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText16n.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
@@ -2346,6 +2450,10 @@ class MainActivity : AppCompatActivity() {
                     binding.editText17n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
                 }
+                !hasFocus -> {
+                    binding.editText17n.textSize = defaultTextSize
+                    hideKeyboard()
+                }
             }
         }
         binding.editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
@@ -2365,6 +2473,10 @@ class MainActivity : AppCompatActivity() {
                 pasteFlag == 4 && hasFocus -> {
                     binding.editText18n.setTextIsSelectable(true)
                     binding.customSpinner4.performClick()
+                }
+                !hasFocus -> {
+                    binding.editText18n.textSize = defaultTextSize
+                    hideKeyboard()
                 }
             }
         }
