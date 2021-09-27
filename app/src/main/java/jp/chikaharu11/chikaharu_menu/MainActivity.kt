@@ -737,6 +737,15 @@ class MainActivity : AppCompatActivity() {
                 "Mason Jar Salad",
                 "Tomato, Cucumber, Avocado Salad",
                 "Roasted Eggplant with Tomato and Feta",
+                "Israeli Salad",
+                "TOMATO, BASIL + MOZZARELLA CAPRESE SALAD",
+                "Herbed Quinoa Garden Veggie Salad",
+                "CHOPPED GREEN GODDESS SALAD",
+                "SMOKED SALMON AND ROASTED BEETS SALAD",
+                "KALE SALAD WITH MEYER LEMON VINAIGRETTE",
+                "Tofu Amaranth Salad",
+                "Potato Caesar Salad",
+                "Avocado Feta Salsa",
                 "Mediterranean Tortellini Salad with Red Wine Vinaigrette"
             )
         }
@@ -899,34 +908,48 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            val cuisine3 = mutableSetOf(
+            val cuisine3 =if (locale == Locale.JAPAN) {
+                mutableSetOf(
 
-                "オニオングラタンスープ",
-                "ミネストローネ",
-                "豚汁",
-                "けんちん汁",
-                "ポトフ",
-                "豆腐とわかめの味噌汁",
-                "大根と油揚げの味噌汁",
-                "しじみ汁",
-                "あさりの味噌汁",
-                "ニラと玉子の味噌汁",
-                "白菜と小松菜の味噌汁",
-                "椎茸とほうれん草の味噌汁",
-                "ナスとエノキの味噌汁",
-                "じゃがいもと玉ねぎの味噌汁",
-                "なめこと豆腐の味噌汁",
-                "レタスの味噌汁",
-                "ピーマンの味噌汁",
-                "アスパラとベーコンの味噌汁",
-                "コンソメスープ",
-                "クラムチャウダー",
-                "ボルシチ",
-                "キャベツと玉子のスープ",
-                "カルビクッパ",
-                "わかめスープ",
-                "春雨スープ"
-            )
+                    "オニオングラタンスープ",
+                    "ミネストローネ",
+                    "豚汁",
+                    "けんちん汁",
+                    "ポトフ",
+                    "豆腐とわかめの味噌汁",
+                    "大根と油揚げの味噌汁",
+                    "しじみ汁",
+                    "あさりの味噌汁",
+                    "ニラと玉子の味噌汁",
+                    "白菜と小松菜の味噌汁",
+                    "椎茸とほうれん草の味噌汁",
+                    "ナスとエノキの味噌汁",
+                    "じゃがいもと玉ねぎの味噌汁",
+                    "なめこと豆腐の味噌汁",
+                    "レタスの味噌汁",
+                    "ピーマンの味噌汁",
+                    "アスパラとベーコンの味噌汁",
+                    "コンソメスープ",
+                    "クラムチャウダー",
+                    "ボルシチ",
+                    "キャベツと玉子のスープ",
+                    "カルビクッパ",
+                    "わかめスープ",
+                    "春雨スープ"
+                )
+            } else {
+                mutableSetOf(
+
+                    "Pesto Hominy Minestrone Soup",
+                    "CREAMY POTATO KALE SOUP",
+                    "Roast Pumpkin & Coconut Soup",
+                    "Creamy Roasted Tomato & Basil Soup",
+                    "Thai-Spiced Pumpkin Soup Recipe",
+                    "Cauliflower Soup",
+                    "Carrot Soup",
+                    "French Onion Soup"
+                )
+            }
 
             if (item6 == true) {
                 cuisine3.clear()
@@ -1085,29 +1108,42 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            val cuisine4 = mutableSetOf(
+            val cuisine4 = if (locale == Locale.JAPAN) {
+                mutableSetOf(
 
-                "りんご",
-                "バナナ",
-                "ヨーグルト",
-                "フルーチェ",
-                "シャーベット",
-                "アイス",
-                "キウイフルーツ",
-                "ゼリー",
-                "梨",
-                "桃",
-                "いちご",
-                "ブドウ",
-                "みかん",
-                "オレンジ",
-                "メロン",
-                "りんごのグラッセ",
-                "パンナコッタ",
-                "杏仁豆腐",
-                "ババロア",
-                "チョコムース"
-            )
+                    "りんご",
+                    "バナナ",
+                    "ヨーグルト",
+                    "フルーチェ",
+                    "シャーベット",
+                    "アイス",
+                    "キウイフルーツ",
+                    "ゼリー",
+                    "梨",
+                    "桃",
+                    "いちご",
+                    "ブドウ",
+                    "みかん",
+                    "オレンジ",
+                    "メロン",
+                    "りんごのグラッセ",
+                    "パンナコッタ",
+                    "杏仁豆腐",
+                    "ババロア",
+                    "チョコムース"
+                )
+            } else {
+                mutableSetOf(
+                    "The Moistest Chocolate Mug Cake",
+                    "Strawberry Parfait",
+                    "Crema Catalana",
+                    "Honey and Olive Oil Zucchini Muffins",
+                    "Peanut Butter Banana Ice Cream",
+                    "Quinoa and Almond Flour Cake",
+                    "Apple Pannekoeken",
+                    "CINNAMON WHOLE GRAIN POWER PANCAKES"
+                )
+            }
 
             if (item6 == true) {
                 cuisine4.clear()
