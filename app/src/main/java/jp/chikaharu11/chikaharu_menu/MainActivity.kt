@@ -529,6 +529,16 @@ class MainActivity : AppCompatActivity() {
                 "lemon rosemary pork chops with arugula salad",
                 "Feijão Tropeiro",
                 "Salmon Moqueca",
+                "Roast Halibut with Roast Baby Tomatoes",
+                "Grilled Mahi Mahi with Mango Chutney",
+                "Grilled Chicken Shawarma",
+                "ASIAN QUINOA PORK BURGERS",
+                "Ham and Sausage Hashbrown Egg Bake",
+                "5 INGREDIENT LEMON CHICKEN WITH ASPARAGUS",
+                "BACON, GRAPE & GOAT CHEESE PIZZA",
+                "Spiced Rubbed Salmon",
+                "Garlic Shrimp",
+                "Eggs Benedict",
                 "Meatloaf"
             )
         }
@@ -699,2077 +709,2087 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val cuisine2 = mutableSetOf(
+        val cuisine2 = if (locale == Locale.JAPAN) {
+            mutableSetOf(
 
-            "シーザーサラダ",
-            "ツナレタスサラダ",
-            "スティックサラダ",
-            "マカロニサラダ",
-            "トマトサラダ",
-            "大根サラダ",
-            "ポテトサラダ",
-            "コールスロー",
-            "豆腐とじゃこのサラダ",
-            "きゅうりとちくわのサラダ",
-            "ごぼうサラダ",
-            "パスタサラダ",
-            "エビとアボカドのサラダ",
-            "きんぴらごぼう",
-            "かぼちゃの煮付け",
-            "ほうれん草のおひたし",
-            "インゲンのごま和え",
-            "筑前煮",
-            "キャベツの塩昆布和え"
-        )
-
-         if (item6 == true) {
-            cuisine2.clear()
-             cuisine2.add("")
+                "シーザーサラダ",
+                "ツナレタスサラダ",
+                "スティックサラダ",
+                "マカロニサラダ",
+                "トマトサラダ",
+                "大根サラダ",
+                "ポテトサラダ",
+                "コールスロー",
+                "豆腐とじゃこのサラダ",
+                "きゅうりとちくわのサラダ",
+                "ごぼうサラダ",
+                "パスタサラダ",
+                "エビとアボカドのサラダ",
+                "きんぴらごぼう",
+                "かぼちゃの煮付け",
+                "ほうれん草のおひたし",
+                "インゲンのごま和え",
+                "筑前煮",
+                "キャベツの塩昆布和え"
+            )
+        } else {
+            mutableSetOf(
+                "Mason Jar Salad",
+                "Tomato, Cucumber, Avocado Salad",
+                "Roasted Eggplant with Tomato and Feta",
+                "Mediterranean Tortellini Salad with Red Wine Vinaigrette"
+            )
         }
 
-        val getCuisine2 = mRealm.where<Book2>().findAll()
-
-
-        for( i in getCuisine2 )
-            if (getCuisine2 != null) {
-                cuisine2.add(i.name)
+            if (item6 == true) {
+                cuisine2.clear()
+                cuisine2.add("")
             }
 
-        val spinnerItems2 = cuisine2.sorted()
-
-        val adapter2 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems2
-        )
-
-        adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            val getCuisine2 = mRealm.where<Book2>().findAll()
 
 
-        binding.customSpinner2.adapter = adapter2
+            for( i in getCuisine2 )
+                if (getCuisine2 != null) {
+                    cuisine2.add(i.name)
+                }
+
+            val spinnerItems2 = cuisine2.sorted()
+
+            val adapter2 = ArrayAdapter(
+                applicationContext,
+                android.R.layout.simple_spinner_item, spinnerItems2
+            )
+
+            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
 
-        binding.customSpinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            binding.customSpinner2.adapter = adapter2
 
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
 
-                if (pasteFlag == 2)
+            binding.customSpinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?, position: Int, id: Long
+                ) {
+                    val spinnerParent = parent as Spinner
+                    val item = spinnerParent.selectedItem as String
+
+                    if (pasteFlag == 2)
+                        when {
+                            binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText8.clearFocus()
+                                binding.editText8.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText4.clearFocus()
+                                binding.editText4.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText.clearFocus()
+                                binding.editText.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText10.clearFocus()
+                                binding.editText10.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText11.clearFocus()
+                                binding.editText11.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText12.clearFocus()
+                                binding.editText12.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText13.clearFocus()
+                                binding.editText13.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText9.clearFocus()
+                                binding.editText9.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText7.clearFocus()
+                                binding.editText7.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText14.clearFocus()
+                                binding.editText14.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText15.clearFocus()
+                                binding.editText15.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText16.clearFocus()
+                                binding.editText16.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText17.clearFocus()
+                                binding.editText17.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText18.clearFocus()
+                                binding.editText18.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText8n.clearFocus()
+                                binding.editText8n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText4n.clearFocus()
+                                binding.editText4n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                                binding.editTextn.clearFocus()
+                                binding.editTextn.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText10n.clearFocus()
+                                binding.editText10n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText11n.clearFocus()
+                                binding.editText11n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText12n.clearFocus()
+                                binding.editText12n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText13n.clearFocus()
+                                binding.editText13n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText9n.clearFocus()
+                                binding.editText9n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText7n.clearFocus()
+                                binding.editText7n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText14n.clearFocus()
+                                binding.editText14n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText15n.clearFocus()
+                                binding.editText15n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText16n.clearFocus()
+                                binding.editText16n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText17n.clearFocus()
+                                binding.editText17n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText18n.clearFocus()
+                                binding.editText18n.textSize = defaultTextSize
+                                hideKeyboard() }
+                        }
+
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
+            }
+
+            val cuisine3 = mutableSetOf(
+
+                "オニオングラタンスープ",
+                "ミネストローネ",
+                "豚汁",
+                "けんちん汁",
+                "ポトフ",
+                "豆腐とわかめの味噌汁",
+                "大根と油揚げの味噌汁",
+                "しじみ汁",
+                "あさりの味噌汁",
+                "ニラと玉子の味噌汁",
+                "白菜と小松菜の味噌汁",
+                "椎茸とほうれん草の味噌汁",
+                "ナスとエノキの味噌汁",
+                "じゃがいもと玉ねぎの味噌汁",
+                "なめこと豆腐の味噌汁",
+                "レタスの味噌汁",
+                "ピーマンの味噌汁",
+                "アスパラとベーコンの味噌汁",
+                "コンソメスープ",
+                "クラムチャウダー",
+                "ボルシチ",
+                "キャベツと玉子のスープ",
+                "カルビクッパ",
+                "わかめスープ",
+                "春雨スープ"
+            )
+
+            if (item6 == true) {
+                cuisine3.clear()
+                cuisine3.add("")
+            }
+
+            val getCuisine3 = mRealm.where<Book3>().findAll()
+
+
+            for( i in getCuisine3 )
+                if (getCuisine3 != null) {
+                    cuisine3.add(i.name)
+                }
+
+
+            val spinnerItems3 = cuisine3.sorted()
+
+            val adapter3 = ArrayAdapter(
+                applicationContext,
+                android.R.layout.simple_spinner_item, spinnerItems3
+            )
+
+            adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+            binding.customSpinner3.adapter = adapter3
+
+            binding.customSpinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?, position: Int, id: Long
+                ) {
+                    val spinnerParent = parent as Spinner
+                    val item = spinnerParent.selectedItem as String
+
+                    if (pasteFlag == 3)
+                        when {
+                            binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText8.clearFocus()
+                                binding.editText8.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText4.clearFocus()
+                                binding.editText4.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText.clearFocus()
+                                binding.editText.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText10.clearFocus()
+                                binding.editText10.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText11.clearFocus()
+                                binding.editText11.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText12.clearFocus()
+                                binding.editText12.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText13.clearFocus()
+                                binding.editText13.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText9.clearFocus()
+                                binding.editText9.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText7.clearFocus()
+                                binding.editText7.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText14.clearFocus()
+                                binding.editText14.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText15.clearFocus()
+                                binding.editText15.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText16.clearFocus()
+                                binding.editText16.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText17.clearFocus()
+                                binding.editText17.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText18.clearFocus()
+                                binding.editText18.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText8n.clearFocus()
+                                binding.editText8n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText4n.clearFocus()
+                                binding.editText4n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                                binding.editTextn.clearFocus()
+                                binding.editTextn.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText10n.clearFocus()
+                                binding.editText10n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText11n.clearFocus()
+                                binding.editText11n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText12n.clearFocus()
+                                binding.editText12n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText13n.clearFocus()
+                                binding.editText13n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText9n.clearFocus()
+                                binding.editText9n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText7n.clearFocus()
+                                binding.editText7n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText14n.clearFocus()
+                                binding.editText14n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText15n.clearFocus()
+                                binding.editText15n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText16n.clearFocus()
+                                binding.editText16n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText17n.clearFocus()
+                                binding.editText17n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText18n.clearFocus()
+                                binding.editText18n.textSize = defaultTextSize
+                                hideKeyboard() }
+                        }
+
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
+            }
+
+            val cuisine4 = mutableSetOf(
+
+                "りんご",
+                "バナナ",
+                "ヨーグルト",
+                "フルーチェ",
+                "シャーベット",
+                "アイス",
+                "キウイフルーツ",
+                "ゼリー",
+                "梨",
+                "桃",
+                "いちご",
+                "ブドウ",
+                "みかん",
+                "オレンジ",
+                "メロン",
+                "りんごのグラッセ",
+                "パンナコッタ",
+                "杏仁豆腐",
+                "ババロア",
+                "チョコムース"
+            )
+
+            if (item6 == true) {
+                cuisine4.clear()
+                cuisine4.add("")
+            }
+
+            val getCuisine4 = mRealm.where<Book4>().findAll()
+
+
+            for( i in getCuisine4 )
+                if (getCuisine4 != null) {
+                    cuisine4.add(i.name)
+                }
+
+
+            val spinnerItems4 = cuisine4.sorted()
+
+            val adapter4 = ArrayAdapter(
+                applicationContext,
+                android.R.layout.simple_spinner_item, spinnerItems4
+            )
+
+            adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+            binding.customSpinner4.adapter = adapter4
+
+            binding.customSpinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?, position: Int, id: Long
+                ) {
+                    val spinnerParent = parent as Spinner
+                    val item = spinnerParent.selectedItem as String
+
+                    if (pasteFlag == 4)
+                        when {
+                            binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText8.clearFocus()
+                                binding.editText8.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText4.clearFocus()
+                                binding.editText4.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText.clearFocus()
+                                binding.editText.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText10.clearFocus()
+                                binding.editText10.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText11.clearFocus()
+                                binding.editText11.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText12.clearFocus()
+                                binding.editText12.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText13.clearFocus()
+                                binding.editText13.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText9.clearFocus()
+                                binding.editText9.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText7.clearFocus()
+                                binding.editText7.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText14.clearFocus()
+                                binding.editText14.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText15.clearFocus()
+                                binding.editText15.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText16.clearFocus()
+                                binding.editText16.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText17.clearFocus()
+                                binding.editText17.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText18.clearFocus()
+                                binding.editText18.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText8n.clearFocus()
+                                binding.editText8n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText4n.clearFocus()
+                                binding.editText4n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
+                                binding.editTextn.clearFocus()
+                                binding.editTextn.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText10n.clearFocus()
+                                binding.editText10n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText11n.clearFocus()
+                                binding.editText11n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText12n.clearFocus()
+                                binding.editText12n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText13n.clearFocus()
+                                binding.editText13n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText9n.clearFocus()
+                                binding.editText9n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText7n.clearFocus()
+                                binding.editText7n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText14n.clearFocus()
+                                binding.editText14n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText15n.clearFocus()
+                                binding.editText15n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText16n.clearFocus()
+                                binding.editText16n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText17n.clearFocus()
+                                binding.editText17n.textSize = defaultTextSize
+                                hideKeyboard() }
+                            binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
+                                binding.editText18n.clearFocus()
+                                binding.editText18n.textSize = defaultTextSize
+                                hideKeyboard() }
+                        }
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
+            }
+
+
+            binding.editText8.setOnClickListener {
                 when {
-                    binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8.clearFocus()
-                        binding.editText8.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4.clearFocus()
-                        binding.editText4.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText.clearFocus()
-                        binding.editText.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10.clearFocus()
-                        binding.editText10.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11.clearFocus()
-                        binding.editText11.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12.clearFocus()
-                        binding.editText12.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13.clearFocus()
-                        binding.editText13.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9.clearFocus()
-                        binding.editText9.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7.clearFocus()
-                        binding.editText7.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14.clearFocus()
-                        binding.editText14.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15.clearFocus()
-                        binding.editText15.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16.clearFocus()
-                        binding.editText16.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17.clearFocus()
-                        binding.editText17.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18.clearFocus()
-                        binding.editText18.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8n.clearFocus()
-                        binding.editText8n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4n.clearFocus()
-                        binding.editText4n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                        binding.editTextn.clearFocus()
-                        binding.editTextn.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10n.clearFocus()
-                        binding.editText10n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11n.clearFocus()
-                        binding.editText11n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12n.clearFocus()
-                        binding.editText12n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13n.clearFocus()
-                        binding.editText13n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9n.clearFocus()
-                        binding.editText9n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7n.clearFocus()
-                        binding.editText7n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14n.clearFocus()
-                        binding.editText14n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15n.clearFocus()
-                        binding.editText15n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16n.clearFocus()
-                        binding.editText16n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17n.clearFocus()
-                        binding.editText17n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18n.clearFocus()
-                        binding.editText18n.textSize = defaultTextSize
-                        hideKeyboard() }
-                }
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        val cuisine3 = mutableSetOf(
-
-            "オニオングラタンスープ",
-            "ミネストローネ",
-            "豚汁",
-            "けんちん汁",
-            "ポトフ",
-            "豆腐とわかめの味噌汁",
-            "大根と油揚げの味噌汁",
-            "しじみ汁",
-            "あさりの味噌汁",
-            "ニラと玉子の味噌汁",
-            "白菜と小松菜の味噌汁",
-            "椎茸とほうれん草の味噌汁",
-            "ナスとエノキの味噌汁",
-            "じゃがいもと玉ねぎの味噌汁",
-            "なめこと豆腐の味噌汁",
-            "レタスの味噌汁",
-            "ピーマンの味噌汁",
-            "アスパラとベーコンの味噌汁",
-            "コンソメスープ",
-            "クラムチャウダー",
-            "ボルシチ",
-            "キャベツと玉子のスープ",
-            "カルビクッパ",
-            "わかめスープ",
-            "春雨スープ"
-        )
-
-        if (item6 == true) {
-            cuisine3.clear()
-            cuisine3.add("")
-        }
-
-        val getCuisine3 = mRealm.where<Book3>().findAll()
-
-
-        for( i in getCuisine3 )
-            if (getCuisine3 != null) {
-                cuisine3.add(i.name)
-            }
-
-
-        val spinnerItems3 = cuisine3.sorted()
-
-        val adapter3 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems3
-        )
-
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        binding.customSpinner3.adapter = adapter3
-
-        binding.customSpinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                if (pasteFlag == 3)
-                    when {
-                        binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8.clearFocus()
-                        binding.editText8.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4.clearFocus()
-                        binding.editText4.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText.clearFocus()
-                        binding.editText.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10.clearFocus()
-                        binding.editText10.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11.clearFocus()
-                        binding.editText11.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12.clearFocus()
-                        binding.editText12.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13.clearFocus()
-                        binding.editText13.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9.clearFocus()
-                        binding.editText9.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7.clearFocus()
-                        binding.editText7.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14.clearFocus()
-                        binding.editText14.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15.clearFocus()
-                        binding.editText15.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16.clearFocus()
-                        binding.editText16.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17.clearFocus()
-                        binding.editText17.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18.clearFocus()
-                        binding.editText18.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8n.clearFocus()
-                        binding.editText8n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4n.clearFocus()
-                        binding.editText4n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                        binding.editTextn.clearFocus()
-                        binding.editTextn.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10n.clearFocus()
-                        binding.editText10n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11n.clearFocus()
-                        binding.editText11n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12n.clearFocus()
-                        binding.editText12n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13n.clearFocus()
-                        binding.editText13n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9n.clearFocus()
-                        binding.editText9n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7n.clearFocus()
-                        binding.editText7n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14n.clearFocus()
-                        binding.editText14n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15n.clearFocus()
-                        binding.editText15n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16n.clearFocus()
-                        binding.editText16n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17n.clearFocus()
-                        binding.editText17n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18n.clearFocus()
-                        binding.editText18n.textSize = defaultTextSize
-                        hideKeyboard() }
+                    pasteFlag == 1 && binding.editText8.hasFocus() -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
                     }
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        val cuisine4 = mutableSetOf(
-
-            "りんご",
-            "バナナ",
-            "ヨーグルト",
-            "フルーチェ",
-            "シャーベット",
-            "アイス",
-            "キウイフルーツ",
-            "ゼリー",
-            "梨",
-            "桃",
-            "いちご",
-            "ブドウ",
-            "みかん",
-            "オレンジ",
-            "メロン",
-            "りんごのグラッセ",
-            "パンナコッタ",
-            "杏仁豆腐",
-            "ババロア",
-            "チョコムース"
-        )
-
-        if (item6 == true) {
-            cuisine4.clear()
-            cuisine4.add("")
-        }
-
-        val getCuisine4 = mRealm.where<Book4>().findAll()
-
-
-        for( i in getCuisine4 )
-            if (getCuisine4 != null) {
-                cuisine4.add(i.name)
-            }
-
-
-        val spinnerItems4 = cuisine4.sorted()
-
-        val adapter4 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems4
-        )
-
-        adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        binding.customSpinner4.adapter = adapter4
-
-        binding.customSpinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                if (pasteFlag == 4)
-                    when {
-                        binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8.clearFocus()
-                        binding.editText8.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4.clearFocus()
-                        binding.editText4.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText.clearFocus()
-                        binding.editText.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10.clearFocus()
-                        binding.editText10.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11.clearFocus()
-                        binding.editText11.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12.clearFocus()
-                        binding.editText12.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13.clearFocus()
-                        binding.editText13.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9.clearFocus()
-                        binding.editText9.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7.clearFocus()
-                        binding.editText7.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14.clearFocus()
-                        binding.editText14.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15.clearFocus()
-                        binding.editText15.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16.clearFocus()
-                        binding.editText16.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17.clearFocus()
-                        binding.editText17.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18.clearFocus()
-                        binding.editText18.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8n.clearFocus()
-                        binding.editText8n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4n.clearFocus()
-                        binding.editText4n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                        binding.editTextn.clearFocus()
-                        binding.editTextn.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10n.clearFocus()
-                        binding.editText10n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11n.clearFocus()
-                        binding.editText11n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12n.clearFocus()
-                        binding.editText12n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13n.clearFocus()
-                        binding.editText13n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9n.clearFocus()
-                        binding.editText9n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7n.clearFocus()
-                        binding.editText7n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14n.clearFocus()
-                        binding.editText14n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15n.clearFocus()
-                        binding.editText15n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16n.clearFocus()
-                        binding.editText16n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17n.clearFocus()
-                        binding.editText17n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18n.clearFocus()
-                        binding.editText18n.textSize = defaultTextSize
-                        hideKeyboard() }
+                    pasteFlag == 2 && binding.editText8.hasFocus() -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
                     }
+                    pasteFlag == 3 && binding.editText8.hasFocus() -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText8.hasFocus() -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText4.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText4.hasFocus() -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText4.hasFocus() -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText4.hasFocus() -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText4.hasFocus() -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText.hasFocus() -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText.hasFocus() -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText.hasFocus() -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText.hasFocus() -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText10.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText10.hasFocus() -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText10.hasFocus() -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText10.hasFocus() -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText10.hasFocus() -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText11.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText11.hasFocus() -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText11.hasFocus() -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText11.hasFocus() -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText11.hasFocus() -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText12.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText12.hasFocus() -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText12.hasFocus() -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText12.hasFocus() -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText12.hasFocus() -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText13.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText13.hasFocus() -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText13.hasFocus() -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText13.hasFocus() -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText13.hasFocus() -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText9.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText9.hasFocus() -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText9.hasFocus() -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText9.hasFocus() -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText9.hasFocus() -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText7.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText7.hasFocus() -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText7.hasFocus() -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText7.hasFocus() -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText7.hasFocus() -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText14.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText14.hasFocus() -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText14.hasFocus() -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText14.hasFocus() -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText14.hasFocus() -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText15.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText15.hasFocus() -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText15.hasFocus() -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText15.hasFocus() -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText15.hasFocus() -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText16.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText16.hasFocus() -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText16.hasFocus() -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText16.hasFocus() -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText16.hasFocus() -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText17.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText17.hasFocus() -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText17.hasFocus() -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText17.hasFocus() -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText17.hasFocus() -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText18.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText18.hasFocus() -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText18.hasFocus() -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText18.hasFocus() -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText18.hasFocus() -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText8n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText8n.hasFocus() -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText8n.hasFocus() -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText8n.hasFocus() -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText8n.hasFocus() -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText4n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText4n.hasFocus() -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText4n.hasFocus() -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText4n.hasFocus() -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText4n.hasFocus() -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editTextn.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editTextn.hasFocus() -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editTextn.hasFocus() -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editTextn.hasFocus() -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editTextn.hasFocus() -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText10n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText10n.hasFocus() -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText10n.hasFocus() -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText10n.hasFocus() -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText10n.hasFocus() -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText11n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText11n.hasFocus() -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText11n.hasFocus() -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText11n.hasFocus() -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText11n.hasFocus() -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText12n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText12n.hasFocus() -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText12n.hasFocus() -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText12n.hasFocus() -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText12n.hasFocus() -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText13n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText13n.hasFocus() -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText13n.hasFocus() -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText13n.hasFocus() -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText13n.hasFocus() -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText9n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText9n.hasFocus() -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText9n.hasFocus() -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText9n.hasFocus() -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText9n.hasFocus() -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText7n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText7n.hasFocus() -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText7n.hasFocus() -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText7n.hasFocus() -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText7n.hasFocus() -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText14n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText14n.hasFocus() -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText14n.hasFocus() -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText14n.hasFocus() -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText14n.hasFocus() -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText15n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText15n.hasFocus() -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText15n.hasFocus() -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText15n.hasFocus() -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText15n.hasFocus() -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText16n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText16n.hasFocus() -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText16n.hasFocus() -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText16n.hasFocus() -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText16n.hasFocus() -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText17n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText17n.hasFocus() -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText17n.hasFocus() -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText17n.hasFocus() -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText17n.hasFocus() -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
+            }
+            binding.editText18n.setOnClickListener {
+                when {
+                    pasteFlag == 1 && binding.editText18n.hasFocus() -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && binding.editText18n.hasFocus() -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && binding.editText18n.hasFocus() -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && binding.editText18n.hasFocus() -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                }
             }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
+            binding.editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText8.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText4.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText10.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText11.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText11.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText12.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText13.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText13.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText9.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText7.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText7.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText14.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText15.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText15.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText16.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText17.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText17.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText18.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText8n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText8n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText4n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editTextn.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editTextn.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText10n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText11n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText11n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText12n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText13n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText13n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText9n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText7n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText7n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText14n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText15n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText15n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText16n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText17n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText17n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
+            binding.editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
+                when {
+                    pasteFlag == 1 && hasFocus -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner.performClick()
+                    }
+                    pasteFlag == 2 && hasFocus -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner2.performClick()
+                    }
+                    pasteFlag == 3 && hasFocus -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner3.performClick()
+                    }
+                    pasteFlag == 4 && hasFocus -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.customSpinner4.performClick()
+                    }
+                    !hasFocus -> {
+                        binding.editText18n.textSize = defaultTextSize
+                        hideKeyboard()
+                    }
+                }
+            }
 
-            }
-        }
-
-
-        binding.editText8.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText8.hasFocus() -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText8.hasFocus() -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText8.hasFocus() -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText8.hasFocus() -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText4.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText4.hasFocus() -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText4.hasFocus() -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText4.hasFocus() -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText4.hasFocus() -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText.hasFocus() -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText.hasFocus() -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText.hasFocus() -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText.hasFocus() -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText10.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText10.hasFocus() -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText10.hasFocus() -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText10.hasFocus() -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText10.hasFocus() -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText11.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText11.hasFocus() -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText11.hasFocus() -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText11.hasFocus() -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText11.hasFocus() -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText12.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText12.hasFocus() -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText12.hasFocus() -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText12.hasFocus() -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText12.hasFocus() -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText13.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText13.hasFocus() -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText13.hasFocus() -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText13.hasFocus() -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText13.hasFocus() -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText9.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText9.hasFocus() -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText9.hasFocus() -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText9.hasFocus() -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText9.hasFocus() -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText7.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText7.hasFocus() -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText7.hasFocus() -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText7.hasFocus() -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText7.hasFocus() -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText14.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText14.hasFocus() -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText14.hasFocus() -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText14.hasFocus() -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText14.hasFocus() -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText15.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText15.hasFocus() -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText15.hasFocus() -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText15.hasFocus() -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText15.hasFocus() -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText16.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText16.hasFocus() -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText16.hasFocus() -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText16.hasFocus() -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText16.hasFocus() -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText17.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText17.hasFocus() -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText17.hasFocus() -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText17.hasFocus() -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText17.hasFocus() -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText18.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText18.hasFocus() -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText18.hasFocus() -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText18.hasFocus() -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText18.hasFocus() -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText8n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText8n.hasFocus() -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText8n.hasFocus() -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText8n.hasFocus() -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText8n.hasFocus() -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText4n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText4n.hasFocus() -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText4n.hasFocus() -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText4n.hasFocus() -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText4n.hasFocus() -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editTextn.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editTextn.hasFocus() -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editTextn.hasFocus() -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editTextn.hasFocus() -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editTextn.hasFocus() -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText10n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText10n.hasFocus() -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText10n.hasFocus() -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText10n.hasFocus() -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText10n.hasFocus() -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText11n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText11n.hasFocus() -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText11n.hasFocus() -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText11n.hasFocus() -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText11n.hasFocus() -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText12n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText12n.hasFocus() -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText12n.hasFocus() -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText12n.hasFocus() -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText12n.hasFocus() -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText13n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText13n.hasFocus() -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText13n.hasFocus() -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText13n.hasFocus() -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText13n.hasFocus() -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText9n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText9n.hasFocus() -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText9n.hasFocus() -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText9n.hasFocus() -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText9n.hasFocus() -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText7n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText7n.hasFocus() -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText7n.hasFocus() -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText7n.hasFocus() -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText7n.hasFocus() -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText14n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText14n.hasFocus() -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText14n.hasFocus() -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText14n.hasFocus() -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText14n.hasFocus() -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText15n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText15n.hasFocus() -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText15n.hasFocus() -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText15n.hasFocus() -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText15n.hasFocus() -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText16n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText16n.hasFocus() -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText16n.hasFocus() -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText16n.hasFocus() -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText16n.hasFocus() -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText17n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText17n.hasFocus() -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText17n.hasFocus() -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText17n.hasFocus() -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText17n.hasFocus() -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-        binding.editText18n.setOnClickListener {
-            when {
-                pasteFlag == 1 && binding.editText18n.hasFocus() -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && binding.editText18n.hasFocus() -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && binding.editText18n.hasFocus() -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && binding.editText18n.hasFocus() -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-            }
-        }
-
-        binding.editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText8.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText8.textSize = defaultTextSize
+            binding.textView.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText4.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText4.textSize = defaultTextSize
+            binding.textView2.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView2.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText.textSize = defaultTextSize
+            binding.textView3.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView3.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText10.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText10.textSize = defaultTextSize
+            binding.textView4.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView4.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText11.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText11.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText11.textSize = defaultTextSize
+            binding.textView5.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView5.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText12.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText12.textSize = defaultTextSize
+            binding.textView6.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView6.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText13.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText13.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText13.textSize = defaultTextSize
+            binding.textView7.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView7.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText9.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText9.textSize = defaultTextSize
+            binding.textView8.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView8.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText7.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText7.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText7.textSize = defaultTextSize
+            binding.textView9.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView9.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText14.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText14.textSize = defaultTextSize
+            binding.textView10.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView10.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText15.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText15.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText15.textSize = defaultTextSize
+            binding.textView11.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView11.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText16.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText16.textSize = defaultTextSize
+            binding.textView12.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView12.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText17.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText17.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText17.textSize = defaultTextSize
+            binding.textView13.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView13.textSize = defaultTextSize
                     hideKeyboard()
                 }
             }
-        }
-        binding.editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText18.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText18.textSize = defaultTextSize
+            binding.textView14.setOnFocusChangeListener { _, hasFocus ->
+                if (!hasFocus) {
+                    binding.textView14.textSize = defaultTextSize
                     hideKeyboard()
                 }
-            }
-        }
-        binding.editText8n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText8n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText8n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText4n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText4n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editTextn.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editTextn.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editTextn.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText10n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText10n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText11n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText11n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText11n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText12n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText12n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText13n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText13n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText13n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText9n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText9n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText7n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText7n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText7n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText14n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText14n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText15n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText15n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText15n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText16n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText16n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText17n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText17n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText17n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-        binding.editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
-            when {
-                pasteFlag == 1 && hasFocus -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner.performClick()
-                }
-                pasteFlag == 2 && hasFocus -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner2.performClick()
-                }
-                pasteFlag == 3 && hasFocus -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner3.performClick()
-                }
-                pasteFlag == 4 && hasFocus -> {
-                    binding.editText18n.setTextIsSelectable(true)
-                    binding.customSpinner4.performClick()
-                }
-                !hasFocus -> {
-                    binding.editText18n.textSize = defaultTextSize
-                    hideKeyboard()
-                }
-            }
-        }
-
-        binding.textView.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView2.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView2.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView3.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView3.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView4.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView4.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView5.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView5.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView6.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView6.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView7.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView7.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView8.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView8.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView9.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView9.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView10.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView10.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView11.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView11.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView12.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView12.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView13.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView13.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-        binding.textView14.setOnFocusChangeListener { _, hasFocus ->
-            if (!hasFocus) {
-                binding.textView14.textSize = defaultTextSize
-                hideKeyboard()
-            }
-        }
-
-
-        val menuList1 = mutableSetOf(
-            "[選択したメニューを削除できます]"
-        )
-
-        val inMenuList1 = mRealm.where<Book>().findAll()
-
-
-        for( i in inMenuList1 )
-            if (inMenuList1 != null) {
-                menuList1.add(i.name)
             }
 
 
-        val spinnerItems5 = menuList1.sorted()
+            val menuList1 = mutableSetOf(
+                "[選択したメニューを削除できます]"
+            )
 
-        val adapter5 = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems5
-        )
-
-        adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            val inMenuList1 = mRealm.where<Book>().findAll()
 
 
-        spinner1a.adapter = adapter5
-
-        spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                mRealm.executeTransaction { mRealm.where<Book>().equalTo("name", item).findAll().deleteAllFromRealm() }
+            for( i in inMenuList1 )
+                if (inMenuList1 != null) {
+                    menuList1.add(i.name)
+                }
 
 
+            val spinnerItems5 = menuList1.sorted()
+
+            val adapter5 = ArrayAdapter(
+                applicationContext,
+                android.R.layout.simple_spinner_item, spinnerItems5
+            )
+
+            adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+
+            spinner1a.adapter = adapter5
+
+            spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?, position: Int, id: Long
+                ) {
+                    val spinnerParent = parent as Spinner
+                    val item = spinnerParent.selectedItem as String
+
+                    mRealm.executeTransaction { mRealm.where<Book>().equalTo("name", item).findAll().deleteAllFromRealm() }
+
+
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
             }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
 
 
             spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                if (!spinner04.isFocusable) {
-                    spinner04.isFocusable = true
-                    return
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?, position: Int, id: Long
+                ) {
+                    if (!spinner04.isFocusable) {
+                        spinner04.isFocusable = true
+                        return
+                    }
+                    when(position){
+                        0 -> {
+                            selectMenu2()
+                        }
+                        1 -> {
+                            selectMenu()
+                        }
+                        2 -> {
+                            menuList13()
+                        }
+                        3 -> {
+                            menuList14()
+                        }
+                        4 -> {
+                            menuList12()
+                        }
+                        5 -> {
+                            menuList15()
+                        }
+                        6 -> {
+                            AlertDialog.Builder(this@MainActivity)
+                                .setTitle(R.string.reboot)
+                                .setPositiveButton("YES") { _, _ ->
+                                    ProcessPhoenix.triggerRebirth(this@MainActivity)
+                                }
+                                .setNegativeButton("NO") { _, _ ->
+
+                                }
+                                .show()
+                        }
+                        7 -> {
+                            AlertDialog.Builder(this@MainActivity)
+                                .setTitle(R.string.exit)
+                                .setPositiveButton("YES") { _, _ ->
+                                    finish()
+                                }
+                                .setNegativeButton("NO") { _, _ ->
+
+                                }
+                                .show()
+                        }
+                    }
                 }
-                when(position){
-                    0 -> {
-                        selectMenu2()
-                    }
-                    1 -> {
-                        selectMenu()
-                    }
-                    2 -> {
-                        menuList13()
-                    }
-                    3 -> {
-                        menuList14()
-                    }
-                    4 -> {
-                        menuList12()
-                    }
-                    5 -> {
-                        menuList15()
-                    }
-                    6 -> {
-                        AlertDialog.Builder(this@MainActivity)
-                            .setTitle(R.string.reboot)
-                            .setPositiveButton("YES") { _, _ ->
-                                ProcessPhoenix.triggerRebirth(this@MainActivity)
-                            }
-                            .setNegativeButton("NO") { _, _ ->
 
-                            }
-                            .show()
-                    }
-                    7 -> {
-                        AlertDialog.Builder(this@MainActivity)
-                            .setTitle(R.string.exit)
-                            .setPositiveButton("YES") { _, _ ->
-                                finish()
-                            }
-                            .setNegativeButton("NO") { _, _ ->
+                override fun onNothingSelected(parent: AdapterView<*>?) {
 
-                            }
-                            .show()
-                    }
                 }
             }
 
-            override fun onNothingSelected(parent: AdapterView<*>?) {
+            spinner04.isFocusable = false
 
+
+            spinnerWP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?, position: Int, id: Long
+                ) {
+                    if (!spinnerWP.isFocusable) {
+                        spinnerWP.isFocusable = true
+                        return
+                    }
+                    when (position) {
+                        0 -> { menuSwitch = 0
+                            invalidateOptionsMenu()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "メニュー表"
+                            } else {
+                                supportActionBar?.title = "Menu list"
+                            }
+                            Toast.makeText(applicationContext, (R.string.Manual_input), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 0
+                        }
+                        1 -> { menuSwitch = 1
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "メイン料理"
+                            } else {
+                                supportActionBar?.title = "Main dish"
+                            }
+                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            Toast.makeText(applicationContext, (R.string.Main_dish), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 1
+                        }
+                        2 -> { menuSwitch = 2
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "野菜、サラダ"
+                            } else {
+                                supportActionBar?.title = "Salads"
+                            }
+                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            Toast.makeText(applicationContext, (R.string.Salads), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 2
+                        }
+                        3 -> { menuSwitch = 3
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "味噌汁、スープ"
+                            } else {
+                                supportActionBar?.title = "Soup"
+                            }
+                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 3
+                        }
+                        4 -> { menuSwitch = 4
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
+                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 4
+                        }
+                    }
+                }
+
+                override fun onNothingSelected(parent: AdapterView<*>?) {
+
+                }
             }
+
+            spinnerWP.isFocusable = false
+
+            binding.textView8.editableText.clear()
+            binding.textView9.editableText.clear()
+            binding.textView10.editableText.clear()
+            binding.textView11.editableText.clear()
+            binding.textView12.editableText.clear()
+            binding.textView13.editableText.clear()
+            binding.textView14.editableText.clear()
         }
 
-        spinner04.isFocusable = false
 
-
-        spinnerWP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                if (!spinnerWP.isFocusable) {
-                    spinnerWP.isFocusable = true
-                    return
-                }
-                when (position) {
-                    0 -> { menuSwitch = 0
-                        invalidateOptionsMenu()
-                        if (locale == Locale.JAPAN) {
-                            supportActionBar?.title = "メニュー表"
-                        } else {
-                            supportActionBar?.title = "Menu list"
-                        }
-                        Toast.makeText(applicationContext, (R.string.Manual_input), Toast.LENGTH_SHORT).show()
-                        pasteFlag = 0
-                    }
-                    1 -> { menuSwitch = 1
-                        binding.textView14.requestFocus()
-                        binding.textView14.clearFocus()
-                        invalidateOptionsMenu()
-                        if (locale == Locale.JAPAN) {
-                            supportActionBar?.title = "メイン料理"
-                        } else {
-                            supportActionBar?.title = "Main dish"
-                        }
-                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, (R.string.Main_dish), Toast.LENGTH_SHORT).show()
-                        pasteFlag = 1
-                    }
-                    2 -> { menuSwitch = 2
-                        binding.textView14.requestFocus()
-                        binding.textView14.clearFocus()
-                        invalidateOptionsMenu()
-                        if (locale == Locale.JAPAN) {
-                            supportActionBar?.title = "野菜、サラダ"
-                        } else {
-                            supportActionBar?.title = "Salads"
-                        }
-                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, (R.string.Salads), Toast.LENGTH_SHORT).show()
-                        pasteFlag = 2
-                    }
-                    3 -> { menuSwitch = 3
-                        binding.textView14.requestFocus()
-                        binding.textView14.clearFocus()
-                        invalidateOptionsMenu()
-                        if (locale == Locale.JAPAN) {
-                            supportActionBar?.title = "味噌汁、スープ"
-                        } else {
-                            supportActionBar?.title = "Soup"
-                        }
-                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
-                        pasteFlag = 3
-                    }
-                    4 -> { menuSwitch = 4
-                        binding.textView14.requestFocus()
-                        binding.textView14.clearFocus()
-                        invalidateOptionsMenu()
-                        if (locale == Locale.JAPAN) {
-                            supportActionBar?.title = "果物、デザート"
-                        } else {
-                            supportActionBar?.title = "Fruits, Desserts"
-                        }
-                        val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                        inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
-                        Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                        pasteFlag = 4
-                    }
-                }
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
-        spinnerWP.isFocusable = false
-
-        binding.textView8.editableText.clear()
-        binding.textView9.editableText.clear()
-        binding.textView10.editableText.clear()
-        binding.textView11.editableText.clear()
-        binding.textView12.editableText.clear()
-        binding.textView13.editableText.clear()
-        binding.textView14.editableText.clear()
-
-    }
 
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
