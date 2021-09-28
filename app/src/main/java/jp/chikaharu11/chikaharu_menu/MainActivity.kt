@@ -390,84 +390,12 @@ class MainActivity : AppCompatActivity() {
             .build()
         mRealm = Realm.getInstance(realmConfig)
 
-        val week1 = mRealm.where(Book5::class.java).equalTo("id", 0.toLong()).findFirst()?.name
-        val week2 = mRealm.where(Book5::class.java).equalTo("id", 1.toLong()).findFirst()?.name
-        val week3 = mRealm.where(Book5::class.java).equalTo("id", 2.toLong()).findFirst()?.name
-        val week4 = mRealm.where(Book5::class.java).equalTo("id", 3.toLong()).findFirst()?.name
-        val week5 = mRealm.where(Book5::class.java).equalTo("id", 4.toLong()).findFirst()?.name
-        val week6 = mRealm.where(Book5::class.java).equalTo("id", 5.toLong()).findFirst()?.name
-        val week7 = mRealm.where(Book5::class.java).equalTo("id", 6.toLong()).findFirst()?.name
-        val week8 = mRealm.where(Book5::class.java).equalTo("id", 7.toLong()).findFirst()?.name
-        val week9 = mRealm.where(Book5::class.java).equalTo("id", 8.toLong()).findFirst()?.name
-        val week10 = mRealm.where(Book5::class.java).equalTo("id", 9.toLong()).findFirst()?.name
-        val week11 = mRealm.where(Book5::class.java).equalTo("id", 10.toLong()).findFirst()?.name
-        val week12 = mRealm.where(Book5::class.java).equalTo("id", 11.toLong()).findFirst()?.name
-        val week13 = mRealm.where(Book5::class.java).equalTo("id", 12.toLong()).findFirst()?.name
-        val week14 = mRealm.where(Book5::class.java).equalTo("id", 13.toLong()).findFirst()?.name
-
-        if(week1 != null){
-            binding.textView.setText(week1, TextView.BufferType.NORMAL)
-            binding.textView2.setText(week2, TextView.BufferType.NORMAL)
-            binding.textView3.setText(week3, TextView.BufferType.NORMAL)
-            binding.textView4.setText(week4, TextView.BufferType.NORMAL)
-            binding.textView5.setText(week5, TextView.BufferType.NORMAL)
-            binding.textView6.setText(week6, TextView.BufferType.NORMAL)
-            binding.textView7.setText(week7, TextView.BufferType.NORMAL)
-            binding.textView8.setText(week8, TextView.BufferType.NORMAL)
-            binding.textView9.setText(week9, TextView.BufferType.NORMAL)
-            binding.textView10.setText(week10, TextView.BufferType.NORMAL)
-            binding.textView11.setText(week11, TextView.BufferType.NORMAL)
-            binding.textView12.setText(week12, TextView.BufferType.NORMAL)
-            binding.textView13.setText(week13, TextView.BufferType.NORMAL)
-            binding.textView14.setText(week14, TextView.BufferType.NORMAL)
-        }
-
-        val item1 = mRealm.where(Book6::class.java).equalTo("id", 0.toLong()).findFirst()?.name
-        val item2 = mRealm.where(Book6::class.java).equalTo("id", 1.toLong()).findFirst()?.name
-        val item3 = mRealm.where(Book6::class.java).equalTo("id", 2.toLong()).findFirst()?.name
-        val item4 = mRealm.where(Book6::class.java).equalTo("id", 3.toLong()).findFirst()?.name
-
-        val item5 = mRealm.where(Book7::class.java).equalTo("id", 0.toLong()).findFirst()?.name
-
-        if(item1 != null) {
-            binding.editText8n.hint = "$item1　　　　"
-            binding.editText4n.hint = "$item1　　　　"
-            binding.editText13n.hint = "$item1　　　　"
-            binding.editTextn.hint = "$item1　　　　"
-            binding.editText11n.hint = "$item1　　　　"
-            binding.editText10n.hint = "$item1　　　　"
-            binding.editText12n.hint = "$item1　　　　"
-            binding.editText9n.hint = "$item2　　　　"
-            binding.editText7n.hint = "$item2　　　　"
-            binding.editText15n.hint = "$item2　　　　"
-            binding.editText16n.hint = "$item2　　　　"
-            binding.editText18n.hint = "$item2　　　　"
-            binding.editText17n.hint = "$item2　　　　"
-            binding.editText14n.hint = "$item2　　　　"
-            binding.editText8.hint = "$item3　　　　"
-            binding.editText4.hint = "$item3　　　　"
-            binding.editText13.hint = "$item3　　　　"
-            binding.editText.hint = "$item3　　　　"
-            binding.editText11.hint = "$item3　　　　"
-            binding.editText10.hint = "$item3　　　　"
-            binding.editText12.hint = "$item3　　　　"
-            binding.editText9.hint = "$item4　　　　"
-            binding.editText7.hint = "$item4　　　　"
-            binding.editText15.hint = "$item4　　　　"
-            binding.editText16.hint = "$item4　　　　"
-            binding.editText18.hint = "$item4　　　　"
-            binding.editText17.hint = "$item4　　　　"
-            binding.editText14.hint = "$item4　　　　"
-        }
-        if(item5 != null){
-            supportActionBar?.title = item5
-        } else {
             if (locale == Locale.JAPAN) {
                 supportActionBar?.title = "メニュー表"
             } else {
                 supportActionBar?.title = "Menu list"
             }
-        }
+
 
 
         val cuisine1 = if (locale == Locale.JAPAN) {
@@ -515,7 +443,18 @@ class MainActivity : AppCompatActivity() {
                 "カレイの煮付け",
                 "サバ味噌煮",
                 "サンマの塩焼き",
-                "焼鮭"
+                "焼鮭",
+                "肉団子のあんかけ",
+                "焼売",
+                "ピーマンのチーズ肉詰め焼き",
+                "チキンナゲット",
+                "豚ひき肉と大根の甘辛煮",
+                "麻婆春雨",
+                "ひき肉とじゃがいものキムチ炒め",
+                "ミートローフ",
+                "大根のそぼろ煮",
+                "鶏ひき肉とキャベツの卵とじ"
+
             )
         } else {
             mutableSetOf(
@@ -730,7 +669,17 @@ class MainActivity : AppCompatActivity() {
                 "ほうれん草のおひたし",
                 "インゲンのごま和え",
                 "筑前煮",
-                "キャベツの塩昆布和え"
+                "キャベツの塩昆布和え",
+                "野菜炒め",
+                "ほうれん草とエリンギのニンニク炒め",
+                "ほうれん草とベーコンのソテー",
+                "ほうれん草とツナのバターしょうゆ炒め",
+                "小松菜と厚揚げの煮びたし",
+                "ナスとピーマンの味噌炒め",
+                "焼きナス",
+                "ピーマンともやしの塩炒め",
+                "ピーマンのナムル",
+                "アスパラガスと人参のサラダ"
             )
         } else {
             mutableSetOf(
@@ -935,7 +884,17 @@ class MainActivity : AppCompatActivity() {
                     "キャベツと玉子のスープ",
                     "カルビクッパ",
                     "わかめスープ",
-                    "春雨スープ"
+                    "春雨スープ",
+                    "ナスとミョウガのごま味噌汁",
+                    "じゃがいもとクレソンの味噌汁",
+                    "ニラ玉の味噌汁",
+                    "キャベツとベーコンの豆乳味噌汁",
+                    "カリフラワーの味噌汁",
+                    "レンコン団子汁",
+                    "とろろ昆布汁",
+                    "沢煮椀",
+                    "チンゲンサイの中華スープ",
+                    "えのきのサンラータン"
                 )
             } else {
                 mutableSetOf(
@@ -944,7 +903,7 @@ class MainActivity : AppCompatActivity() {
                     "CREAMY POTATO KALE SOUP",
                     "Roast Pumpkin & Coconut Soup",
                     "Creamy Roasted Tomato & Basil Soup",
-                    "Thai-Spiced Pumpkin Soup Recipe",
+                    "Thai-Spiced Pumpkin Soup",
                     "Cauliflower Soup",
                     "Carrot Soup",
                     "French Onion Soup"
@@ -1118,7 +1077,7 @@ class MainActivity : AppCompatActivity() {
                     "シャーベット",
                     "アイス",
                     "キウイフルーツ",
-                    "ゼリー",
+                    "みかんゼリー",
                     "梨",
                     "桃",
                     "いちご",
@@ -1130,7 +1089,17 @@ class MainActivity : AppCompatActivity() {
                     "パンナコッタ",
                     "杏仁豆腐",
                     "ババロア",
-                    "チョコムース"
+                    "チョコムース",
+                    "パウンドケーキ",
+                    "マフィン",
+                    "プリン",
+                    "豆乳ドーナツ",
+                    "クレープ",
+                    "ホットケーキ",
+                    "パンケーキ",
+                    "バナナスムージー",
+                    "コーヒーゼリー",
+                    "トウファ"
                 )
             } else {
                 mutableSetOf(
