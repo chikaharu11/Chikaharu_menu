@@ -367,7 +367,8 @@ class MainActivity : AppCompatActivity() {
                     Model(R.drawable.dinner_b, "メイン料理　"),
                     Model(R.drawable.carrot_b, "野菜、サラダ　"),
                     Model(R.drawable.soup_b, "味噌汁、スープ　"),
-                    Model(R.drawable.apple_b, "果物、デザート　")
+                    Model(R.drawable.apple_b, "果物、デザート　"),
+                    Model(R.drawable.apple_b, "shuffle　")
                 )
             )
         } else {
@@ -378,7 +379,8 @@ class MainActivity : AppCompatActivity() {
                     Model(R.drawable.dinner_b, "Main dish  "),
                     Model(R.drawable.carrot_b, "Salads  "),
                     Model(R.drawable.soup_b, "Soup  "),
-                    Model(R.drawable.apple_b, "Fruits, Desserts  ")
+                    Model(R.drawable.apple_b, "Fruits, Desserts  "),
+                    Model(R.drawable.apple_b, "shuffle　")
                 )
             )
         }
@@ -2774,6 +2776,41 @@ class MainActivity : AppCompatActivity() {
                             inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
                             Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                             pasteFlag = 4
+                        }
+                        5 -> { menuSwitch = 0
+                            val shuffled1 = cuisine1.shuffled()
+                            val shuffled2 = cuisine2.shuffled()
+                            val shuffled3 = cuisine3.shuffled()
+                            val shuffled4 = cuisine4.shuffled()
+                            binding.editText8n.setText(shuffled1[0],TextView.BufferType.NORMAL)
+                            binding.editText4n.setText(shuffled1[1],TextView.BufferType.NORMAL)
+                            binding.editText13n.setText(shuffled1[2],TextView.BufferType.NORMAL)
+                            binding.editTextn.setText(shuffled1[3],TextView.BufferType.NORMAL)
+                            binding.editText11n.setText(shuffled1[4],TextView.BufferType.NORMAL)
+                            binding.editText10n.setText(shuffled1[5],TextView.BufferType.NORMAL)
+                            binding.editText12n.setText(shuffled1[6],TextView.BufferType.NORMAL)
+                            binding.editText9n.setText(shuffled2[0],TextView.BufferType.NORMAL)
+                            binding.editText7n.setText(shuffled2[1],TextView.BufferType.NORMAL)
+                            binding.editText15n.setText(shuffled2[2],TextView.BufferType.NORMAL)
+                            binding.editText16n.setText(shuffled2[3],TextView.BufferType.NORMAL)
+                            binding.editText18n.setText(shuffled2[4],TextView.BufferType.NORMAL)
+                            binding.editText17n.setText(shuffled2[5],TextView.BufferType.NORMAL)
+                            binding.editText14n.setText(shuffled2[6],TextView.BufferType.NORMAL)
+                            binding.editText8.setText(shuffled3[0],TextView.BufferType.NORMAL)
+                            binding.editText4.setText(shuffled3[1],TextView.BufferType.NORMAL)
+                            binding.editText13.setText(shuffled3[2],TextView.BufferType.NORMAL)
+                            binding.editText.setText(shuffled3[3],TextView.BufferType.NORMAL)
+                            binding.editText11.setText(shuffled3[4],TextView.BufferType.NORMAL)
+                            binding.editText10.setText(shuffled3[5],TextView.BufferType.NORMAL)
+                            binding.editText12.setText(shuffled3[6],TextView.BufferType.NORMAL)
+                            binding.editText9.setText(shuffled4[0],TextView.BufferType.NORMAL)
+                            binding.editText7.setText(shuffled4[1],TextView.BufferType.NORMAL)
+                            binding.editText15.setText(shuffled4[2],TextView.BufferType.NORMAL)
+                            binding.editText16.setText(shuffled4[3],TextView.BufferType.NORMAL)
+                            binding.editText18.setText(shuffled4[4],TextView.BufferType.NORMAL)
+                            binding.editText17.setText(shuffled4[5],TextView.BufferType.NORMAL)
+                            binding.editText14.setText(shuffled4[6],TextView.BufferType.NORMAL)
+                            pasteFlag = 0
                         }
                     }
                 }

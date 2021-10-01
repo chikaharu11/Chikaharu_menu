@@ -23,6 +23,23 @@
         app:layout_constraintBottom_toBottomOf="parent" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText8n"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/mm2"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText8"
+        app:layout_constraintEnd_toStartOf="@id/view6"
+        app:layout_constraintStart_toStartOf="@+id/editText8"
+        app:layout_constraintTop_toBottomOf="@id/view8"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText8"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -36,6 +53,23 @@
         app:layout_constraintBottom_toTopOf="@+id/editText4n"
         app:layout_constraintStart_toStartOf="@+id/editText4n"
         app:layout_constraintTop_toBottomOf="@+id/editText8n"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText4n"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/mm2"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText4"
+        app:layout_constraintEnd_toStartOf="@id/view6"
+        app:layout_constraintStart_toStartOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/editText8"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -56,6 +90,23 @@
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText13n"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/mm2"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText13"
+        app:layout_constraintEnd_toStartOf="@id/view6"
+        app:layout_constraintStart_toStartOf="@+id/editText13"
+        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText13"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -73,57 +124,6 @@
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText13n"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autoSizeTextType="uniform"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/mm2"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/view6"
-        app:layout_constraintBottom_toTopOf="@+id/editText13"
-        app:layout_constraintStart_toStartOf="@+id/editText13"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText8n"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autoSizeTextType="uniform"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/mm2"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/view6"
-        app:layout_constraintBottom_toTopOf="@+id/editText8"
-        app:layout_constraintStart_toStartOf="@+id/editText8"
-        app:layout_constraintTop_toBottomOf="@id/view8"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText4n"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autoSizeTextType="uniform"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/mm2"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/view6"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
-        app:layout_constraintStart_toStartOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/editText8"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editTextn"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -138,6 +138,57 @@
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText13"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/mm1"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText11n"
+        app:layout_constraintEnd_toStartOf="@id/view6"
+        app:layout_constraintStart_toStartOf="@+id/editText11n"
+        app:layout_constraintTop_toBottomOf="@+id/editTextn"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText11n"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/mm2"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText11"
+        app:layout_constraintEnd_toStartOf="@id/view6"
+        app:layout_constraintStart_toStartOf="@+id/editText11"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText11"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/mm1"
+        android:inputType="text"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText10n"
+        app:layout_constraintEnd_toStartOf="@id/view6"
+        app:layout_constraintStart_toStartOf="@+id/editText10n"
+        app:layout_constraintTop_toBottomOf="@+id/editText11n"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -172,23 +223,6 @@
         app:layout_constraintBottom_toTopOf="@+id/editText12n"
         app:layout_constraintStart_toStartOf="@+id/editText12n"
         app:layout_constraintTop_toBottomOf="@+id/editText10n"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autoSizeTextType="uniform"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/mm1"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/view6"
-        app:layout_constraintBottom_toTopOf="@+id/editText11n"
-        app:layout_constraintStart_toStartOf="@+id/editText11n"
-        app:layout_constraintTop_toBottomOf="@+id/editTextn"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -227,40 +261,6 @@
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText11n"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autoSizeTextType="uniform"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/view6"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/mm2"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/editText11"
-        app:layout_constraintStart_toStartOf="@+id/editText11"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText11"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autoSizeTextType="uniform"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/mm1"
-        android:inputType="text"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@id/view6"
-        app:layout_constraintBottom_toTopOf="@+id/editText10n"
-        app:layout_constraintStart_toStartOf="@+id/editText10n"
-        app:layout_constraintTop_toBottomOf="@+id/editText11n"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText9n"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -277,6 +277,22 @@
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText9"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/sm1"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editText7n"
+        app:layout_constraintEnd_toStartOf="@id/view9"
+        app:layout_constraintStart_toStartOf="@+id/editText7n"
+        app:layout_constraintTop_toBottomOf="@+id/editText9n"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText7n"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -290,22 +306,6 @@
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText7"
         app:layout_constraintTop_toBottomOf="@+id/editText9"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/sm1"
-        android:inputType="text"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/editText7n"
-        app:layout_constraintEnd_toStartOf="@id/view9"
-        app:layout_constraintStart_toStartOf="@+id/editText7n"
-        app:layout_constraintTop_toBottomOf="@+id/editText9n"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -357,6 +357,70 @@
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText16n"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/sm2"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editText16"
+        app:layout_constraintEnd_toStartOf="@id/view9"
+        app:layout_constraintStart_toStartOf="@+id/editText16"
+        app:layout_constraintTop_toBottomOf="@+id/editText15"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText16"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/sm1"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editText18n"
+        app:layout_constraintEnd_toStartOf="@id/view9"
+        app:layout_constraintStart_toStartOf="@+id/editText18n"
+        app:layout_constraintTop_toBottomOf="@+id/editText16n"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText18n"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/sm2"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editText18"
+        app:layout_constraintEnd_toStartOf="@id/view9"
+        app:layout_constraintStart_toStartOf="@+id/editText18"
+        app:layout_constraintTop_toBottomOf="@+id/editText16"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText18"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/sm1"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editText17n"
+        app:layout_constraintEnd_toStartOf="@id/view9"
+        app:layout_constraintStart_toStartOf="@+id/editText17n"
+        app:layout_constraintTop_toBottomOf="@+id/editText18n"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText17n"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -370,6 +434,22 @@
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText17"
         app:layout_constraintTop_toBottomOf="@+id/editText18"
+        tools:ignore="LabelFor" />
+
+    <jp.chikaharu11.chikaharu_menu.ResizeEditText
+        android:id="@+id/editText17"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="2dp"
+        android:autoSizeTextType="uniform"
+        android:autofillHints="hint"
+        android:background="#00000000"
+        android:hint="@string/sm1"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/editText14n"
+        app:layout_constraintEnd_toStartOf="@id/view9"
+        app:layout_constraintStart_toStartOf="@+id/editText14n"
+        app:layout_constraintTop_toBottomOf="@+id/editText17n"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -389,22 +469,6 @@
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/sm1"
-        android:inputType="text"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/editText18n"
-        app:layout_constraintEnd_toStartOf="@id/view9"
-        app:layout_constraintStart_toStartOf="@+id/editText18n"
-        app:layout_constraintTop_toBottomOf="@+id/editText16n"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText14"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -419,70 +483,6 @@
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toEndOf="@+id/view6"
         app:layout_constraintTop_toBottomOf="@+id/view17"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText18"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/sm1"
-        android:inputType="text"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/editText17n"
-        app:layout_constraintEnd_toStartOf="@id/view9"
-        app:layout_constraintStart_toStartOf="@+id/editText17n"
-        app:layout_constraintTop_toBottomOf="@+id/editText18n"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText17"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/sm1"
-        android:inputType="text"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/editText14n"
-        app:layout_constraintEnd_toStartOf="@id/view9"
-        app:layout_constraintStart_toStartOf="@+id/editText14n"
-        app:layout_constraintTop_toBottomOf="@+id/editText17n"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText18n"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/sm2"
-        android:inputType="text"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/editText18"
-        app:layout_constraintEnd_toStartOf="@id/view9"
-        app:layout_constraintStart_toStartOf="@+id/editText18"
-        app:layout_constraintTop_toBottomOf="@+id/editText16"
-        tools:ignore="LabelFor" />
-
-    <jp.chikaharu11.chikaharu_menu.ResizeEditText
-        android:id="@+id/editText16n"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="2dp"
-        android:autofillHints="hint"
-        android:background="#00000000"
-        android:hint="@string/sm2"
-        android:inputType="text"
-        android:autoSizeTextType="uniform"
-        app:layout_constraintBottom_toTopOf="@+id/editText16"
-        app:layout_constraintEnd_toStartOf="@id/view9"
-        app:layout_constraintStart_toStartOf="@+id/editText16"
-        app:layout_constraintTop_toBottomOf="@+id/editText15"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
