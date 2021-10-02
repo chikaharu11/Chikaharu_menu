@@ -310,7 +310,79 @@ class MainActivity : AppCompatActivity() {
 
         count = convertPxToSp(binding.editText8.textSize)
         
-        val defaultTextSize = convertPxToSp(binding.editText8.textSize)
+        var defaultTextSize = convertPxToSp(binding.editText8.textSize)
+
+        fun menuList16() {
+
+            defaultTextSize--
+
+            binding.editText8.textSize = defaultTextSize
+            binding.editText4.textSize = defaultTextSize
+            binding.editText13.textSize = defaultTextSize
+            binding.editText13n.textSize = defaultTextSize
+            binding.editText9.textSize = defaultTextSize
+            binding.editText7.textSize = defaultTextSize
+            binding.editText8n.textSize = defaultTextSize
+            binding.editText4n.textSize = defaultTextSize
+            binding.editTextn.textSize = defaultTextSize
+            binding.editText10n.textSize = defaultTextSize
+            binding.editText10.textSize = defaultTextSize
+            binding.editText.textSize = defaultTextSize
+            binding.editText12n.textSize = defaultTextSize
+            binding.editText12.textSize = defaultTextSize
+            binding.editText11n.textSize = defaultTextSize
+            binding.editText11.textSize = defaultTextSize
+            binding.editText9n.textSize = defaultTextSize
+            binding.editText7n.textSize = defaultTextSize
+            binding.editText15n.textSize = defaultTextSize
+            binding.editText15.textSize = defaultTextSize
+            binding.editText17n.textSize = defaultTextSize
+            binding.editText14n.textSize = defaultTextSize
+            binding.editText16.textSize = defaultTextSize
+            binding.editText14.textSize = defaultTextSize
+            binding.editText18.textSize = defaultTextSize
+            binding.editText17.textSize = defaultTextSize
+            binding.editText18n.textSize = defaultTextSize
+            binding.editText16n.textSize = defaultTextSize
+
+            return
+        }
+
+        fun menuList17() {
+
+            defaultTextSize++
+
+            binding.editText8.textSize = defaultTextSize
+            binding.editText4.textSize = defaultTextSize
+            binding.editText13.textSize = defaultTextSize
+            binding.editText13n.textSize = defaultTextSize
+            binding.editText9.textSize = defaultTextSize
+            binding.editText7.textSize = defaultTextSize
+            binding.editText8n.textSize = defaultTextSize
+            binding.editText4n.textSize = defaultTextSize
+            binding.editTextn.textSize = defaultTextSize
+            binding.editText10n.textSize = defaultTextSize
+            binding.editText10.textSize = defaultTextSize
+            binding.editText.textSize = defaultTextSize
+            binding.editText12n.textSize = defaultTextSize
+            binding.editText12.textSize = defaultTextSize
+            binding.editText11n.textSize = defaultTextSize
+            binding.editText11.textSize = defaultTextSize
+            binding.editText9n.textSize = defaultTextSize
+            binding.editText7n.textSize = defaultTextSize
+            binding.editText15n.textSize = defaultTextSize
+            binding.editText15.textSize = defaultTextSize
+            binding.editText17n.textSize = defaultTextSize
+            binding.editText14n.textSize = defaultTextSize
+            binding.editText16.textSize = defaultTextSize
+            binding.editText14.textSize = defaultTextSize
+            binding.editText18.textSize = defaultTextSize
+            binding.editText17.textSize = defaultTextSize
+            binding.editText18n.textSize = defaultTextSize
+            binding.editText16n.textSize = defaultTextSize
+
+            return
+        }
 
         val audioAttributes = AudioAttributes.Builder()
 
@@ -368,7 +440,7 @@ class MainActivity : AppCompatActivity() {
                     Model(R.drawable.carrot_b, "野菜、サラダ　"),
                     Model(R.drawable.soup_b, "味噌汁、スープ　"),
                     Model(R.drawable.apple_b, "果物、デザート　"),
-                    Model(R.drawable.apple_b, "shuffle　")
+                    Model(R.drawable.shuffle_b, "おまかせ　")
                 )
             )
         } else {
@@ -380,7 +452,7 @@ class MainActivity : AppCompatActivity() {
                     Model(R.drawable.carrot_b, "Salads  "),
                     Model(R.drawable.soup_b, "Soup  "),
                     Model(R.drawable.apple_b, "Fruits, Desserts  "),
-                    Model(R.drawable.apple_b, "shuffle　")
+                    Model(R.drawable.shuffle_b, "Shuffle order　")
                 )
             )
         }
@@ -1291,6 +1363,10 @@ class MainActivity : AppCompatActivity() {
                         binding.editText8.setTextIsSelectable(true)
                         binding.customSpinner4.performClick()
                     }
+                    pasteFlag == 5 && binding.editText8.hasFocus() -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.editText8.setText("", TextView.BufferType.NORMAL)
+                    }
                 }
             }
             binding.editText4.setOnClickListener {
@@ -1851,6 +1927,10 @@ class MainActivity : AppCompatActivity() {
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
                         binding.customSpinner4.performClick()
+                    }
+                    pasteFlag == 5 && hasFocus -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.editText8.setText("", TextView.BufferType.NORMAL)
                     }
                     !hasFocus -> {
                         binding.editText8.textSize = defaultTextSize
@@ -2777,7 +2857,8 @@ class MainActivity : AppCompatActivity() {
                             Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                             pasteFlag = 4
                         }
-                        5 -> { menuSwitch = 0
+                        5 -> { menuSwitch = 5
+                            invalidateOptionsMenu()
                             val shuffled1 = cuisine1.shuffled()
                             val shuffled2 = cuisine2.shuffled()
                             val shuffled3 = cuisine3.shuffled()
@@ -2810,7 +2891,9 @@ class MainActivity : AppCompatActivity() {
                             binding.editText18.setText(shuffled4[4],TextView.BufferType.NORMAL)
                             binding.editText17.setText(shuffled4[5],TextView.BufferType.NORMAL)
                             binding.editText14.setText(shuffled4[6],TextView.BufferType.NORMAL)
-                            pasteFlag = 0
+                            menuList16()
+                            menuList17()
+                            pasteFlag = 5
                         }
                     }
                 }
@@ -2993,6 +3076,9 @@ class MainActivity : AppCompatActivity() {
             }
             4 -> {
                 menuLamp.setIcon(R.drawable.apple_w)
+            }
+            5 -> {
+                menuLamp.setIcon(R.drawable.shuffle_w)
             }
         }
 
