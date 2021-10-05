@@ -41,7 +41,7 @@ import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
     private lateinit var container: ConstraintLayout
 
@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mRealm: Realm
 
     private lateinit var soundPool: SoundPool
+
+    private lateinit var aCustomAdapter: CustomAdapter
+
+    private lateinit var aSoundList: MutableList<SoundList>
 
     private val handler = Handler()
 
