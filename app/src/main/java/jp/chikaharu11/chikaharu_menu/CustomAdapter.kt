@@ -6,22 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 
 interface CustomAdapterListener {
-    fun clicked(soundList: SoundList)
-    fun clicked2(soundList: SoundList)
+    fun clicked(cuisine: Cuisine)
+    fun clicked2(cuisine: Cuisine)
 }
 
-class CustomAdapter(context: Context, private var mSoundListList: List<SoundList>, private val listener: CustomAdapterListener) : ArrayAdapter<SoundList>(context, 0, mSoundListList) {
+class CustomAdapter(context: Context, private var mCuisines: List<Cuisine>, private val listener: CustomAdapterListener) : ArrayAdapter<Cuisine>(context, 0, mCuisines) {
 
     private val layoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     @SuppressLint("SetTextI18n")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 
-        val soundList = mSoundListList[position]
+        val cuisineList = mCuisines[position]
 
         var view = convertView
         if (convertView == null) {
@@ -29,14 +29,14 @@ class CustomAdapter(context: Context, private var mSoundListList: List<SoundList
         }
 
         val name = view?.findViewById<TextView>(R.id.name)
-        name?.text = soundList.name
+        name?.text = cuisineList.name
         name?.setOnClickListener {
-            listener.clicked2(soundList)
+            listener.clicked2(cuisineList)
         }
 
-        val imageButton = view?.findViewById<ImageButton>(R.id.imageButton)
+        val imageButton = view?.findViewById<ImageView>(R.id.imageButton)
         imageButton?.setOnClickListener {
-            listener.clicked(soundList)
+            listener.clicked(cuisineList)
         }
 
         return view!!
