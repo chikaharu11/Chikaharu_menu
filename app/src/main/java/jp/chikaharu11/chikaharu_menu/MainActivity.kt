@@ -293,7 +293,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         return
     }
 
-    fun hideKeyboard() {
+    private fun hideKeyboard() {
         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
     }
 
@@ -692,143 +692,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-
-
-        binding.customSpinner.adapter = adapter
-
-
-        binding.customSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?, position: Int, id: Long
-            ) {
-                val spinnerParent = parent as Spinner
-                val item = spinnerParent.selectedItem as String
-
-                if (pasteFlag == 1)
-                when {
-                    binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8.clearFocus()
-                        binding.editText8.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4.clearFocus()
-                        binding.editText4.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText.clearFocus()
-                        binding.editText.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10.clearFocus()
-                        binding.editText10.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11.clearFocus()
-                        binding.editText11.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12.clearFocus()
-                        binding.editText12.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13.clearFocus()
-                        binding.editText13.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9.clearFocus()
-                        binding.editText9.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7.clearFocus()
-                        binding.editText7.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14.clearFocus()
-                        binding.editText14.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15.clearFocus()
-                        binding.editText15.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16.clearFocus()
-                        binding.editText16.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17.clearFocus()
-                        binding.editText17.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18.clearFocus()
-                        binding.editText18.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText8n.clearFocus()
-                        binding.editText8n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText4n.clearFocus()
-                        binding.editText4n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                        binding.editTextn.clearFocus()
-                        binding.editTextn.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText10n.clearFocus()
-                        binding.editText10n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText11n.clearFocus()
-                        binding.editText11n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText12n.clearFocus()
-                        binding.editText12n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText13n.clearFocus()
-                        binding.editText13n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText9n.clearFocus()
-                        binding.editText9n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText7n.clearFocus()
-                        binding.editText7n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText14n.clearFocus()
-                        binding.editText14n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText15n.clearFocus()
-                        binding.editText15n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText16n.clearFocus()
-                        binding.editText16n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText17n.clearFocus()
-                        binding.editText17n.textSize = defaultTextSize
-                        hideKeyboard() }
-                    binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                        binding.editText18n.clearFocus()
-                        binding.editText18n.textSize = defaultTextSize
-                        hideKeyboard() }
-                }
-
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {
-
-            }
-        }
-
         val cuisine2 = if (locale == Locale.JAPAN) {
             mutableSetOf(
 
@@ -917,142 +780,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-
-            binding.customSpinner2.adapter = adapter2
-
-
-            binding.customSpinner2.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?, position: Int, id: Long
-                ) {
-                    val spinnerParent = parent as Spinner
-                    val item = spinnerParent.selectedItem as String
-
-                    if (pasteFlag == 2)
-                        when {
-                            binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText8.clearFocus()
-                                binding.editText8.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText4.clearFocus()
-                                binding.editText4.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText.clearFocus()
-                                binding.editText.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText10.clearFocus()
-                                binding.editText10.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText11.clearFocus()
-                                binding.editText11.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText12.clearFocus()
-                                binding.editText12.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText13.clearFocus()
-                                binding.editText13.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText9.clearFocus()
-                                binding.editText9.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText7.clearFocus()
-                                binding.editText7.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText14.clearFocus()
-                                binding.editText14.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText15.clearFocus()
-                                binding.editText15.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText16.clearFocus()
-                                binding.editText16.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText17.clearFocus()
-                                binding.editText17.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText18.clearFocus()
-                                binding.editText18.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText8n.clearFocus()
-                                binding.editText8n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText4n.clearFocus()
-                                binding.editText4n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                                binding.editTextn.clearFocus()
-                                binding.editTextn.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText10n.clearFocus()
-                                binding.editText10n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText11n.clearFocus()
-                                binding.editText11n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText12n.clearFocus()
-                                binding.editText12n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText13n.clearFocus()
-                                binding.editText13n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText9n.clearFocus()
-                                binding.editText9n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText7n.clearFocus()
-                                binding.editText7n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText14n.clearFocus()
-                                binding.editText14n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText15n.clearFocus()
-                                binding.editText15n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText16n.clearFocus()
-                                binding.editText16n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText17n.clearFocus()
-                                binding.editText17n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText18n.clearFocus()
-                                binding.editText18n.textSize = defaultTextSize
-                                hideKeyboard() }
-                        }
-
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                }
-            }
-
             val cuisine3 =if (locale == Locale.JAPAN) {
                 mutableSetOf(
 
@@ -1137,140 +864,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-            binding.customSpinner3.adapter = adapter3
-
-            binding.customSpinner3.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?, position: Int, id: Long
-                ) {
-                    val spinnerParent = parent as Spinner
-                    val item = spinnerParent.selectedItem as String
-
-                    if (pasteFlag == 3)
-                        when {
-                            binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText8.clearFocus()
-                                binding.editText8.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText4.clearFocus()
-                                binding.editText4.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText.clearFocus()
-                                binding.editText.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText10.clearFocus()
-                                binding.editText10.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText11.clearFocus()
-                                binding.editText11.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText12.clearFocus()
-                                binding.editText12.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText13.clearFocus()
-                                binding.editText13.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText9.clearFocus()
-                                binding.editText9.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText7.clearFocus()
-                                binding.editText7.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText14.clearFocus()
-                                binding.editText14.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText15.clearFocus()
-                                binding.editText15.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText16.clearFocus()
-                                binding.editText16.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText17.clearFocus()
-                                binding.editText17.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText18.clearFocus()
-                                binding.editText18.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText8n.clearFocus()
-                                binding.editText8n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText4n.clearFocus()
-                                binding.editText4n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                                binding.editTextn.clearFocus()
-                                binding.editTextn.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText10n.clearFocus()
-                                binding.editText10n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText11n.clearFocus()
-                                binding.editText11n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText12n.clearFocus()
-                                binding.editText12n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText13n.clearFocus()
-                                binding.editText13n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText9n.clearFocus()
-                                binding.editText9n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText7n.clearFocus()
-                                binding.editText7n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText14n.clearFocus()
-                                binding.editText14n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText15n.clearFocus()
-                                binding.editText15n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText16n.clearFocus()
-                                binding.editText16n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText17n.clearFocus()
-                                binding.editText17n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText18n.clearFocus()
-                                binding.editText18n.textSize = defaultTextSize
-                                hideKeyboard() }
-                        }
-
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                }
-            }
-
             val cuisine4 = if (locale == Locale.JAPAN) {
                 mutableSetOf(
 
@@ -1347,157 +940,44 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-            binding.customSpinner4.adapter = adapter4
-
-            binding.customSpinner4.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?, position: Int, id: Long
-                ) {
-                    val spinnerParent = parent as Spinner
-                    val item = spinnerParent.selectedItem as String
-
-                    if (pasteFlag == 4)
-                        when {
-                            binding.editText8.hasFocus() -> { binding.editText8.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText8.clearFocus()
-                                binding.editText8.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText4.hasFocus() -> { binding.editText4.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText4.clearFocus()
-                                binding.editText4.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText.hasFocus() -> { binding.editText.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText.clearFocus()
-                                binding.editText.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText10.hasFocus() -> { binding.editText10.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText10.clearFocus()
-                                binding.editText10.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText11.hasFocus() -> { binding.editText11.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText11.clearFocus()
-                                binding.editText11.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText12.hasFocus() -> { binding.editText12.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText12.clearFocus()
-                                binding.editText12.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText13.hasFocus() -> { binding.editText13.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText13.clearFocus()
-                                binding.editText13.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText9.hasFocus() -> { binding.editText9.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText9.clearFocus()
-                                binding.editText9.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText7.hasFocus() -> { binding.editText7.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText7.clearFocus()
-                                binding.editText7.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText14.hasFocus() -> { binding.editText14.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText14.clearFocus()
-                                binding.editText14.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText15.hasFocus() -> { binding.editText15.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText15.clearFocus()
-                                binding.editText15.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText16.hasFocus() -> { binding.editText16.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText16.clearFocus()
-                                binding.editText16.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText17.hasFocus() -> { binding.editText17.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText17.clearFocus()
-                                binding.editText17.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText18.hasFocus() -> { binding.editText18.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText18.clearFocus()
-                                binding.editText18.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText8n.hasFocus() -> { binding.editText8n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText8n.clearFocus()
-                                binding.editText8n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText4n.hasFocus() -> { binding.editText4n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText4n.clearFocus()
-                                binding.editText4n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editTextn.hasFocus() -> { binding.editTextn.setText(item, TextView.BufferType.NORMAL)
-                                binding.editTextn.clearFocus()
-                                binding.editTextn.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText10n.hasFocus() -> { binding.editText10n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText10n.clearFocus()
-                                binding.editText10n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText11n.hasFocus() -> { binding.editText11n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText11n.clearFocus()
-                                binding.editText11n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText12n.hasFocus() -> { binding.editText12n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText12n.clearFocus()
-                                binding.editText12n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText13n.hasFocus() -> { binding.editText13n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText13n.clearFocus()
-                                binding.editText13n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText9n.hasFocus() -> { binding.editText9n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText9n.clearFocus()
-                                binding.editText9n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText7n.hasFocus() -> { binding.editText7n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText7n.clearFocus()
-                                binding.editText7n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText14n.hasFocus() -> { binding.editText14n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText14n.clearFocus()
-                                binding.editText14n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText15n.hasFocus() -> { binding.editText15n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText15n.clearFocus()
-                                binding.editText15n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText16n.hasFocus() -> { binding.editText16n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText16n.clearFocus()
-                                binding.editText16n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText17n.hasFocus() -> { binding.editText17n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText17n.clearFocus()
-                                binding.editText17n.textSize = defaultTextSize
-                                hideKeyboard() }
-                            binding.editText18n.hasFocus() -> { binding.editText18n.setText(item, TextView.BufferType.NORMAL)
-                                binding.editText18n.clearFocus()
-                                binding.editText18n.textSize = defaultTextSize
-                                hideKeyboard() }
-                        }
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                }
-            }
-
 
             binding.editText8.setOnClickListener {
                 when {
                     pasteFlag == 1 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                        }
                     }
                     pasteFlag == 2 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
@@ -1509,19 +989,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
@@ -1533,19 +1029,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
@@ -1557,19 +1069,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
@@ -1581,19 +1109,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
@@ -1605,19 +1149,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
@@ -1629,19 +1189,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
@@ -1653,19 +1229,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
@@ -1677,19 +1269,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
@@ -1701,19 +1309,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
@@ -1725,19 +1349,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
@@ -1749,19 +1389,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
@@ -1773,19 +1429,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
@@ -1797,19 +1469,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
@@ -1821,19 +1509,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
@@ -1845,19 +1549,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
@@ -1869,19 +1589,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
@@ -1893,19 +1629,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
@@ -1917,19 +1669,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
@@ -1941,19 +1709,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
@@ -1965,19 +1749,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
@@ -1989,19 +1789,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
@@ -2013,19 +1829,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
@@ -2037,19 +1869,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
@@ -2061,19 +1909,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
@@ -2085,19 +1949,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
@@ -2109,19 +1989,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
@@ -2133,19 +2029,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
@@ -2158,19 +2070,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
@@ -2186,19 +2114,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
@@ -2214,19 +2158,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
@@ -2242,19 +2202,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
@@ -2270,19 +2246,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
@@ -2298,19 +2290,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
@@ -2326,19 +2334,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
@@ -2354,19 +2378,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
@@ -2382,19 +2422,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
@@ -2410,19 +2466,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
@@ -2438,19 +2510,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
@@ -2466,19 +2554,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
@@ -2494,19 +2598,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
@@ -2522,19 +2642,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
@@ -2550,19 +2686,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
@@ -2578,19 +2730,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
@@ -2606,19 +2774,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
@@ -2634,19 +2818,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
@@ -2662,19 +2862,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
@@ -2690,19 +2906,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
@@ -2718,19 +2950,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
@@ -2746,19 +2994,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
@@ -2774,19 +3038,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
@@ -2802,19 +3082,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
@@ -2830,19 +3126,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
@@ -2858,19 +3170,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
@@ -2886,19 +3214,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
@@ -2914,19 +3258,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 when {
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner2.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 3 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner3.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 4 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.customSpinner4.performClick()
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
                     }
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
@@ -3164,8 +3524,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             } else {
                                 supportActionBar?.title = "Main dish"
                             }
-                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            hideKeyboard()
                             Toast.makeText(applicationContext, (R.string.Main_dish), Toast.LENGTH_SHORT).show()
                             pasteFlag = 1
                         }
@@ -3180,8 +3539,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             } else {
                                 supportActionBar?.title = "Salads"
                             }
-                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            hideKeyboard()
                             Toast.makeText(applicationContext, (R.string.Salads), Toast.LENGTH_SHORT).show()
                             pasteFlag = 2
                         }
@@ -3196,8 +3554,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             } else {
                                 supportActionBar?.title = "Soup"
                             }
-                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            hideKeyboard()
                             Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
                             pasteFlag = 3
                         }
@@ -3212,8 +3569,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
-                            val inputMethodManager = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-                            inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
+                            hideKeyboard()
                             Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                             pasteFlag = 4
                         }
@@ -3584,6 +3940,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         when (item.itemId) {
 
             R.id.MenuList1 -> {
+                if (binding.listView.isVisible) {
+                    binding.listView.visibility = View.INVISIBLE
+                }
                 hideKeyboard()
                 binding.adView.visibility = View.VISIBLE
                 binding.imageView.visibility = View.INVISIBLE
@@ -3592,6 +3951,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
 
             R.id.MenuList2 -> {
+                if (binding.listView.isVisible) {
+                    binding.listView.visibility = View.INVISIBLE
+                }
                 binding.imageView.visibility = View.INVISIBLE
                 binding.adView.visibility = View.GONE
                 binding.textView14.requestFocus()
@@ -3602,6 +3964,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
 
             R.id.MenuList3a -> {
+                if (binding.listView.isVisible) {
+                    binding.listView.visibility = View.INVISIBLE
+                }
                 hideKeyboard()
                 binding.adView.visibility = View.VISIBLE
                 binding.imageView.visibility = View.INVISIBLE

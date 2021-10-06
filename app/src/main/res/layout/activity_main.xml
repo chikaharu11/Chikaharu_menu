@@ -979,50 +979,6 @@
         android:visibility="invisible"
         tools:ignore="MissingConstraints" />
 
-    <jp.chikaharu11.chikaharu_menu.CSpinner
-        android:id="@+id/customSpinner"
-        android:layout_width="57dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/adView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <jp.chikaharu11.chikaharu_menu.CSpinner
-        android:id="@+id/customSpinner2"
-        android:layout_width="57dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/adView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <jp.chikaharu11.chikaharu_menu.CSpinner
-        android:id="@+id/customSpinner3"
-        android:layout_width="57dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/adView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <jp.chikaharu11.chikaharu_menu.CSpinner
-        android:id="@+id/customSpinner4"
-        android:layout_width="57dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="500dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@id/adView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
     <Switch
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
@@ -1061,6 +1017,7 @@
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="64dp"
             android:divider="@null"
+            android:visibility="invisible"
             app:layout_constraintBottom_toTopOf="@id/adView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
