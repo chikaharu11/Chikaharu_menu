@@ -19,6 +19,9 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.view.inputmethod.InputMethodManager
+import android.webkit.WebResourceRequest
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -297,7 +300,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
     }
 
-    @SuppressLint("UseSwitchCompatOrMaterialCode")
+    @SuppressLint("UseSwitchCompatOrMaterialCode", "SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -312,6 +315,21 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         val spinner1a = findViewById<Spinner>(R.id.spinner1a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
         val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
+
+        binding.webView.settings.loadWithOverviewMode = true
+        binding.webView.settings.useWideViewPort = true
+        binding.webView.settings.javaScriptEnabled = true
+        binding.webView.setInitialScale(1)
+        binding.webView.loadUrl("https://www.google.com/")
+
+        binding.webView.webViewClient = object : WebViewClient() {
+            override fun shouldOverrideUrlLoading(
+                view: WebView?,
+                request: WebResourceRequest?,
+            ): Boolean {
+                return false
+            }
+        }
 
         container = findViewById(R.id.allView)
 
@@ -486,74 +504,206 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
 
         aCuisines = arrayListOf(
-            Cuisine("bass_drum_long_01.ogg"),
-            Cuisine("bass_drum_long_02.ogg"),
-            Cuisine("bass_drum_long_03.ogg"),
-            Cuisine("bass_drum_long_04.ogg"),
-            Cuisine("bass_drum_long_05.ogg"),
-            Cuisine("bass_drum_long_06.ogg"),
-            Cuisine("bass_drum_long_07.ogg"),
-            Cuisine("bass_drum_long_08.ogg"),
-            Cuisine("bass_drum_long_09.ogg"),
-            Cuisine("bass_drum_long_10.ogg"),
-            Cuisine("bass_drum_long_11.ogg"),
-            Cuisine("bass_drum_long_12.ogg"),
-            Cuisine("bass_drum_long_13.ogg"),
-            Cuisine("bass_drum_long_14.ogg"),
-            Cuisine("bass_drum_long_15.ogg"),
-            Cuisine("bass_drum_long_16.ogg"),
-            Cuisine("bass_drum_long_17.ogg"),
-            Cuisine("bass_drum_short_01.ogg"),
-            Cuisine("bass_drum_short_02.ogg"),
-            Cuisine("bass_drum_short_03.ogg"),
-            Cuisine("bass_drum_short_04.ogg"),
-            Cuisine("bass_drum_short_05.ogg"),
-            Cuisine("bass_drum_short_06.ogg"),
-            Cuisine("bass_drum_short_07.ogg"),
-            Cuisine("bass_drum_short_08.ogg"),
-            Cuisine("bass_drum_short_09.ogg"),
-            Cuisine("bass_drum_short_10.ogg"),
-            Cuisine("bass_drum_short_11.ogg"),
-            Cuisine("bass_drum_short_12.ogg")
+            Cuisine("ハンバーグ"),
+            Cuisine("餃子"),
+            Cuisine("クリームシチュー"),
+            Cuisine("肉野菜炒め"),
+            Cuisine("唐揚げ"),
+            Cuisine("ロールキャベツ"),
+            Cuisine("麻婆豆腐"),
+            Cuisine("エビフライ"),
+            Cuisine("とんかつ"),
+            Cuisine("すき焼き"),
+            Cuisine("焼きそば"),
+            Cuisine("ラーメン"),
+            Cuisine("鍋焼きうどん"),
+            Cuisine("ミートソースパスタ"),
+            Cuisine("お好み焼き"),
+            Cuisine("チャーハン"),
+            Cuisine("オムライス"),
+            Cuisine("豚生姜焼き"),
+            Cuisine("マカロニグラタン"),
+            Cuisine("ミートグラタン"),
+            Cuisine("ビーフシチュー"),
+            Cuisine("ビーフステーキ"),
+            Cuisine("ハムカツ"),
+            Cuisine("メンチカツ"),
+            Cuisine("サイコロステーキ"),
+            Cuisine("チキンステーキ"),
+            Cuisine("オムライス"),
+            Cuisine("肉じゃが"),
+            Cuisine("牛丼"),
+            Cuisine("カレー"),
+            Cuisine("八宝菜"),
+            Cuisine("ピーマンの肉詰め"),
+            Cuisine("アスパラの肉巻き"),
+            Cuisine("白菜の旨煮"),
+            Cuisine("回鍋肉"),
+            Cuisine("青椒肉絲"),
+            Cuisine("ブリの照り焼き"),
+            Cuisine("ブリ大根"),
+            Cuisine("カツオのタタキ"),
+            Cuisine("カレイの煮付け"),
+            Cuisine("サバ味噌煮"),
+            Cuisine("サンマの塩焼き"),
+            Cuisine("焼鮭"),
+            Cuisine("肉団子のあんかけ"),
+            Cuisine("焼売"),
+            Cuisine("ピーマンのチーズ肉詰め焼き"),
+            Cuisine("チキンナゲット"),
+            Cuisine("豚ひき肉と大根の甘辛煮"),
+            Cuisine("麻婆春雨"),
+            Cuisine("ひき肉とじゃがいものキムチ炒め"),
+            Cuisine("ミートローフ"),
+            Cuisine("大根のそぼろ煮"),
+            Cuisine("鶏ひき肉とキャベツの卵とじ"),
+            Cuisine("鶏ひき肉の炒り豆腐"),
+            Cuisine("豚肉のネギ塩焼き"),
+            Cuisine("豚肉とほうれん草、卵の炒め物"),
+            Cuisine("豚キムチ"),
+            Cuisine("豚肉と豆腐の磯部焼き"),
+            Cuisine("豚肉とキャベツのピリ辛みそ炒め"),
+            Cuisine("酢豚"),
+            Cuisine("豚角煮"),
+            Cuisine("鶏肉の照り焼き"),
+            Cuisine("鶏肉のトマト煮"),
+            Cuisine("鶏肉の香味レンジ蒸し"),
+            Cuisine("鶏肉と野菜のクリーム煮"),
+            Cuisine("棒棒鶏"),
+            Cuisine("チキンカツ"),
+            Cuisine("鶏肉のニンニクソテー")
         )
 
         bCuisines = arrayListOf(
-            Cuisine("bass_drum_long_01.ogg"),
-            Cuisine("bass_drum_long_02.ogg"),
-            Cuisine("bass_drum_long_03.ogg"),
-            Cuisine("bass_drum_long_04.ogg"),
-            Cuisine("bass_drum_long_05.ogg"),
-            Cuisine("bass_drum_long_06.ogg"),
-            Cuisine("bass_drum_long_07.ogg"),
-            Cuisine("bass_drum_long_08.ogg"),
-            Cuisine("bass_drum_long_09.ogg"),
-            Cuisine("bass_drum_long_10.ogg"),
-            Cuisine("bass_drum_long_11.ogg"),
-            Cuisine("bass_drum_long_12.ogg"),
-            Cuisine("bass_drum_long_13.ogg"),
-            Cuisine("bass_drum_long_14.ogg"),
-            Cuisine("bass_drum_long_15.ogg"),
-            Cuisine("bass_drum_long_16.ogg"),
-            Cuisine("bass_drum_long_17.ogg")
+            Cuisine("シーザーサラダ"),
+            Cuisine("ツナレタスサラダ"),
+            Cuisine("スティックサラダ"),
+            Cuisine("マカロニサラダ"),
+            Cuisine("トマトサラダ"),
+            Cuisine("大根サラダ"),
+            Cuisine("ポテトサラダ"),
+            Cuisine("コールスロー"),
+            Cuisine("豆腐とじゃこのサラダ"),
+            Cuisine("きゅうりとちくわのサラダ"),
+            Cuisine("ごぼうサラダ"),
+            Cuisine("パスタサラダ"),
+            Cuisine("エビとアボカドのサラダ"),
+            Cuisine("きんぴらごぼう"),
+            Cuisine("かぼちゃの煮付け"),
+            Cuisine("ほうれん草のおひたし"),
+            Cuisine("インゲンのごま和え"),
+            Cuisine("筑前煮"),
+            Cuisine("キャベツの塩昆布和え"),
+            Cuisine("野菜炒め"),
+            Cuisine("ほうれん草とエリンギのニンニク炒め"),
+            Cuisine("ほうれん草とベーコンのソテー"),
+            Cuisine("ほうれん草とツナのバターしょうゆ炒め"),
+            Cuisine("小松菜と厚揚げの煮びたし"),
+            Cuisine("ナスとピーマンの味噌炒め"),
+            Cuisine("焼きナス"),
+            Cuisine("ピーマンともやしの塩炒め"),
+            Cuisine("ピーマンのナムル"),
+            Cuisine("アスパラガスと人参のサラダ"),
+            Cuisine("オクラの卵炒め"),
+            Cuisine("ブロッコリーとツナのチーズ蒸し"),
+            Cuisine("ブロッコリーのガーリックパン粉がけ"),
+            Cuisine("サヤインゲンのツナサラダ"),
+            Cuisine("レタスと卵の炒め物"),
+            Cuisine("きゅうりとセロリのピクルス"),
+            Cuisine("水菜と油揚げの煮浸し"),
+            Cuisine("豚バラもやし炒め"),
+            Cuisine("もやしときゅうりのごま和え"),
+            Cuisine("大根の中華風そぼろ煮"),
+            Cuisine("オニオンリング"),
+            Cuisine("カブと厚揚げのめんつゆ炒め"),
+            Cuisine("ごぼうのつくね揚げ"),
+            Cuisine("ポテトサラダ"),
+            Cuisine("きのこのマヨ焼き")
         )
 
         cCuisines = arrayListOf(
-            Cuisine("bass_drum_long_01.ogg"),
-            Cuisine("bass_drum_long_02.ogg"),
-            Cuisine("bass_drum_long_03.ogg"),
-            Cuisine("bass_drum_long_04.ogg"),
-            Cuisine("bass_drum_long_05.ogg"),
-            Cuisine("bass_drum_long_06.ogg"),
-            Cuisine("bass_drum_long_07.ogg"),
-            Cuisine("bass_drum_long_08.ogg"),
-            Cuisine("bass_drum_long_09.ogg"),
-            Cuisine("bass_drum_long_10.ogg")
+            Cuisine("オニオングラタンスープ"),
+            Cuisine("ミネストローネ"),
+            Cuisine("豚汁"),
+            Cuisine("けんちん汁"),
+            Cuisine("ポトフ"),
+            Cuisine("豆腐とわかめの味噌汁"),
+            Cuisine("大根と油揚げの味噌汁"),
+            Cuisine("しじみ汁"),
+            Cuisine("あさりの味噌汁"),
+            Cuisine("ニラと玉子の味噌汁"),
+            Cuisine("白菜と小松菜の味噌汁"),
+            Cuisine("椎茸とほうれん草の味噌汁"),
+            Cuisine("ナスとエノキの味噌汁"),
+            Cuisine("じゃがいもと玉ねぎの味噌汁"),
+            Cuisine("なめこと豆腐の味噌汁"),
+            Cuisine("レタスの味噌汁"),
+            Cuisine("ピーマンの味噌汁"),
+            Cuisine("アスパラとベーコンの味噌汁"),
+            Cuisine("コンソメスープ"),
+            Cuisine("クラムチャウダー"),
+            Cuisine("ボルシチ"),
+            Cuisine("キャベツと玉子のスープ"),
+            Cuisine("カルビクッパ"),
+            Cuisine("わかめスープ"),
+            Cuisine("春雨スープ"),
+            Cuisine("ナスとミョウガのごま味噌汁"),
+            Cuisine("じゃがいもとクレソンの味噌汁"),
+            Cuisine("ニラ玉の味噌汁"),
+            Cuisine("キャベツとベーコンの豆乳味噌汁"),
+            Cuisine("カリフラワーの味噌汁"),
+            Cuisine("レンコン団子汁"),
+            Cuisine("とろろ昆布汁"),
+            Cuisine("沢煮椀"),
+            Cuisine("チンゲンサイの中華スープ"),
+            Cuisine("えのきのサンラータン"),
+            Cuisine("もやしの中華スープ"),
+            Cuisine("カブと豆腐のとろみ汁"),
+            Cuisine("玉ねぎとニンニクのスープ"),
+            Cuisine("大豆とトマトのスープ"),
+            Cuisine("コーンスープ"),
+            Cuisine("豚しゃぶと梅干しのスープ"),
+            Cuisine("ブロッコリーとじゃがいものスープ"),
+            Cuisine("キムチの味噌汁")
         )
 
         dCuisines = arrayListOf(
-            Cuisine("bass_drum_long_01.ogg"),
-            Cuisine("bass_drum_long_02.ogg"),
-            Cuisine("bass_drum_long_03.ogg")
+            Cuisine("りんご"),
+            Cuisine("バナナ"),
+            Cuisine("ヨーグルト"),
+            Cuisine("フルーチェ"),
+            Cuisine("みかんのシャーベット"),
+            Cuisine("アイス"),
+            Cuisine("キウイフルーツ"),
+            Cuisine("みかんゼリー"),
+            Cuisine("梨"),
+            Cuisine("桃"),
+            Cuisine("いちご"),
+            Cuisine("ブドウ"),
+            Cuisine("みかん"),
+            Cuisine("オレンジ"),
+            Cuisine("メロン"),
+            Cuisine("りんごのグラッセ"),
+            Cuisine("パンナコッタ"),
+            Cuisine("杏仁豆腐"),
+            Cuisine("ババロア"),
+            Cuisine("チョコムース"),
+            Cuisine("パウンドケーキ"),
+            Cuisine("マフィン"),
+            Cuisine("プリン"),
+            Cuisine("豆乳ドーナツ"),
+            Cuisine("ヨーグルトクレープ"),
+            Cuisine("ホットケーキ"),
+            Cuisine("パンケーキ"),
+            Cuisine("バナナスムージー"),
+            Cuisine("コーヒーゼリー"),
+            Cuisine("トウファ"),
+            Cuisine("いちごの錦玉"),
+            Cuisine("カフェオレゼリー"),
+            Cuisine("桃のコンポート"),
+            Cuisine("チョコバナナパフェ"),
+            Cuisine("抹茶ティラミス"),
+            Cuisine("餃子の皮クレープ")
         )
 
         aCustomAdapter = CustomAdapter(this, aCuisines, this)
@@ -3673,7 +3823,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
 
     override fun clicked(cuisine: Cuisine) {
-        finish()
+        binding.webView.loadUrl("https://www.google.com/search?q=${cuisine.name}")
+        hideKeyboard()
+        binding.webView.visibility = View.VISIBLE
+        binding.listView.visibility = View.INVISIBLE
     }
 
     override fun clicked2(cuisine: Cuisine) {
@@ -3894,15 +4047,26 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     }
 
     override fun onBackPressed() {
-        AlertDialog.Builder(this)
-            .setTitle(R.string.exit)
-            .setPositiveButton("YES") { _, _ ->
-                finish()
+        when {
+            binding.listView.isVisible -> {
+                binding.listView.visibility = View.INVISIBLE
             }
-            .setNegativeButton("NO") { _, _ ->
+            binding.webView.isVisible -> {
+                binding.webView.loadUrl("https://www.google.com/")
+                binding.webView.visibility = View.INVISIBLE
+            }
+            else -> {
+                AlertDialog.Builder(this)
+                    .setTitle(R.string.exit)
+                    .setPositiveButton("YES") { _, _ ->
+                        finish()
+                    }
+                    .setNegativeButton("NO") { _, _ ->
 
+                    }
+                    .show()
             }
-            .show()
+        }
     }
 
     override fun onDestroy() {
@@ -3985,6 +4149,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 if (binding.listView.isVisible) {
                     binding.listView.visibility = View.INVISIBLE
                 }
+                if (binding.webView.isVisible) {
+                    binding.webView.loadUrl("https://www.google.com/")
+                    binding.webView.visibility = View.INVISIBLE
+                }
                 hideKeyboard()
                 binding.adView.visibility = View.VISIBLE
                 binding.imageView.visibility = View.INVISIBLE
@@ -4008,6 +4176,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             R.id.MenuList3a -> {
                 if (binding.listView.isVisible) {
                     binding.listView.visibility = View.INVISIBLE
+                }
+                if (binding.webView.isVisible) {
+                    binding.webView.loadUrl("https://www.google.com/")
+                    binding.webView.visibility = View.INVISIBLE
                 }
                 hideKeyboard()
                 binding.adView.visibility = View.VISIBLE
