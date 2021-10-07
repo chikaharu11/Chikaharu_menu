@@ -25,7 +25,8 @@
     <string name="Salads">野菜、サラダ</string>
     <string name="Soup">味噌汁、スープ</string>
     <string name="Fruits_Desserts">果物、デザート</string>
-    <string name="back">元の画面に戻るには上のアイコンをどれか押して下さい</string>
+    <string name="search">料理名をタッチするとグーグルで検索が出来ます</string>
+    <string name="back">元の画面に戻るには、戻るボタンか上のアイコンをどれか押して下さい</string>
     <string name="Screen_captured">画面を保存しました</string>
 
 </resources>

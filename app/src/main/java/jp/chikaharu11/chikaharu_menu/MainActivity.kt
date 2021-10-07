@@ -473,7 +473,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.carrot_b, "野菜、サラダ　"),
                     Model(R.drawable.soup_b, "味噌汁、スープ　"),
                     Model(R.drawable.apple_b, "果物、デザート　"),
-                    Model(R.drawable.shuffle_b, "おまかせ　")
+                    Model(R.drawable.shuffle_b, "おまかせ　"),
+                    Model(R.drawable.search_b, "グーグル検索　")
                 )
             )
         } else {
@@ -485,7 +486,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.carrot_b, "Salads  "),
                     Model(R.drawable.soup_b, "Soup  "),
                     Model(R.drawable.apple_b, "Fruits, Desserts  "),
-                    Model(R.drawable.shuffle_b, "Shuffle order　")
+                    Model(R.drawable.shuffle_b, "Shuffle order　"),
+                    Model(R.drawable.search_b, "Google search　")
                 )
             )
         }
@@ -3801,7 +3803,25 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.editText14.setText(shuffled4[6],TextView.BufferType.NORMAL)
                             menuList16()
                             menuList17()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "おまかせ"
+                            } else {
+                                supportActionBar?.title = "Shuffle order"
+                            }
                             pasteFlag = 5
+                        }
+                        6 -> { menuSwitch = 6
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "グーグル検索"
+                            } else {
+                                supportActionBar?.title = "Google search"
+                            }
+                            hideKeyboard()
+                            Toast.makeText(applicationContext, (R.string.search), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 6
                         }
                     }
                 }
@@ -3827,6 +3847,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         hideKeyboard()
         binding.webView.visibility = View.VISIBLE
         binding.listView.visibility = View.INVISIBLE
+        if (locale == Locale.JAPAN) {
+            supportActionBar?.title = "グーグル検索"
+        } else {
+            supportActionBar?.title = "Google search"
+        }
     }
 
     override fun clicked2(cuisine: Cuisine) {
@@ -4018,7 +4043,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     binding.adView.visibility = View.INVISIBLE
                     binding.imageView.visibility = View.VISIBLE
                     binding.imageView.setImageURI(contentUri)
-                    Toast.makeText(applicationContext, (R.string.back), Toast.LENGTH_SHORT).show()
+                    Toast.makeText(applicationContext, (R.string.back), Toast.LENGTH_LONG).show()
                 }
 
             }
@@ -4048,6 +4073,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
     override fun onBackPressed() {
         when {
+            binding.imageView.isVisible -> {
+                binding.imageView.visibility = View.INVISIBLE
+            }
             binding.listView.isVisible -> {
                 binding.listView.visibility = View.INVISIBLE
             }
@@ -4119,6 +4147,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             5 -> {
                 menuLamp.setIcon(R.drawable.shuffle_w)
+            }
+            6 -> {
+                menuLamp.setIcon(R.drawable.search_w)
             }
         }
 
