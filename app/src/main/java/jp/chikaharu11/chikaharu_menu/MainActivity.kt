@@ -377,6 +377,20 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             binding.editText17.textSize = defaultTextSize
             binding.editText18n.textSize = defaultTextSize
             binding.editText16n.textSize = defaultTextSize
+            binding.textView.textSize = defaultTextSize
+            binding.textView2.textSize = defaultTextSize
+            binding.textView3.textSize = defaultTextSize
+            binding.textView4.textSize = defaultTextSize
+            binding.textView5.textSize = defaultTextSize
+            binding.textView6.textSize = defaultTextSize
+            binding.textView7.textSize = defaultTextSize
+            binding.textView8.textSize = defaultTextSize
+            binding.textView9.textSize = defaultTextSize
+            binding.textView10.textSize = defaultTextSize
+            binding.textView11.textSize = defaultTextSize
+            binding.textView12.textSize = defaultTextSize
+            binding.textView13.textSize = defaultTextSize
+            binding.textView14.textSize = defaultTextSize
 
             return
         }
@@ -413,6 +427,20 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             binding.editText17.textSize = defaultTextSize
             binding.editText18n.textSize = defaultTextSize
             binding.editText16n.textSize = defaultTextSize
+            binding.textView.textSize = defaultTextSize
+            binding.textView2.textSize = defaultTextSize
+            binding.textView3.textSize = defaultTextSize
+            binding.textView4.textSize = defaultTextSize
+            binding.textView5.textSize = defaultTextSize
+            binding.textView6.textSize = defaultTextSize
+            binding.textView7.textSize = defaultTextSize
+            binding.textView8.textSize = defaultTextSize
+            binding.textView9.textSize = defaultTextSize
+            binding.textView10.textSize = defaultTextSize
+            binding.textView11.textSize = defaultTextSize
+            binding.textView12.textSize = defaultTextSize
+            binding.textView13.textSize = defaultTextSize
+            binding.textView14.textSize = defaultTextSize
 
             return
         }
@@ -474,7 +502,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.soup_b, "味噌汁、スープ　"),
                     Model(R.drawable.apple_b, "果物、デザート　"),
                     Model(R.drawable.shuffle_b, "おまかせ　"),
-                    Model(R.drawable.search_b, "詳細を検索　")
+                    Model(R.drawable.search_b, "詳細検索　")
                 )
             )
         } else {
@@ -562,7 +590,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             Cuisine("豚生姜焼き"),
             Cuisine("豚肉とキャベツのピリ辛みそ炒め"),
             Cuisine("豚肉とほうれん草、卵の炒め物"),
-            Cuisine("豚肉と豆腐の磯部焼き"),
+            Cuisine("豚肉と豆腐の磯辺焼き"),
             Cuisine("豚肉のネギ塩焼き"),
             Cuisine("鍋焼きうどん"),
             Cuisine("肉じゃが"),
@@ -607,7 +635,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             Cuisine("ほうれん草とツナのバターしょうゆ炒め"),
             Cuisine("ほうれん草とベーコンのソテー"),
             Cuisine("ほうれん草のおひたし"),
-            Cuisine("ポテトサラダ"),
             Cuisine("ポテトサラダ"),
             Cuisine("マカロニサラダ"),
             Cuisine("もやしときゅうりのごま和え"),
@@ -889,7 +916,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 "オニオンリング",
                 "カブと厚揚げのめんつゆ炒め",
                 "ごぼうのつくね揚げ",
-                "ポテトサラダ",
                 "きのこのマヨ焼き"
             )
         } else {
@@ -3988,6 +4014,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         }
                         5 -> {
                             menuList15()
+                            menuList16()
+                            menuList17()
                         }
                         6 -> {
                             AlertDialog.Builder(this@MainActivity)
@@ -4514,17 +4542,21 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         when (item.itemId) {
 
             R.id.MenuList1 -> {
-                if (binding.listView.isVisible) {
-                    binding.listView.visibility = View.INVISIBLE
+                when {
+                    binding.listView.isVisible -> {
+                        binding.listView.visibility = View.INVISIBLE
+                    }
+                    binding.webView.isVisible -> {
+                        binding.webView.loadUrl("https://www.google.com/")
+                        binding.webView.visibility = View.INVISIBLE
+                    }
+                    else -> {
+                        hideKeyboard()
+                        binding.adView.visibility = View.VISIBLE
+                        binding.imageView.visibility = View.INVISIBLE
+                        spinnerWP.performClick()
+                    }
                 }
-                if (binding.webView.isVisible) {
-                    binding.webView.loadUrl("https://www.google.com/")
-                    binding.webView.visibility = View.INVISIBLE
-                }
-                hideKeyboard()
-                binding.adView.visibility = View.VISIBLE
-                binding.imageView.visibility = View.INVISIBLE
-                spinnerWP.performClick()
                 return true
             }
 
@@ -4542,17 +4574,21 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
 
             R.id.MenuList3a -> {
-                if (binding.listView.isVisible) {
-                    binding.listView.visibility = View.INVISIBLE
+                when {
+                    binding.listView.isVisible -> {
+                        binding.listView.visibility = View.INVISIBLE
+                    }
+                    binding.webView.isVisible -> {
+                        binding.webView.loadUrl("https://www.google.com/")
+                        binding.webView.visibility = View.INVISIBLE
+                    }
+                    else -> {
+                        hideKeyboard()
+                        binding.adView.visibility = View.VISIBLE
+                        binding.imageView.visibility = View.INVISIBLE
+                        spinner04.performClick()
+                    }
                 }
-                if (binding.webView.isVisible) {
-                    binding.webView.loadUrl("https://www.google.com/")
-                    binding.webView.visibility = View.INVISIBLE
-                }
-                hideKeyboard()
-                binding.adView.visibility = View.VISIBLE
-                binding.imageView.visibility = View.INVISIBLE
-                spinner04.performClick()
                 return true
             }
 
