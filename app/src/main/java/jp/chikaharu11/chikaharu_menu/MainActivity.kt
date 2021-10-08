@@ -469,12 +469,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 this,
                 listOf(
                     Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
-                    Model(R.drawable.dinner_b, "メイン料理　"),
-                    Model(R.drawable.carrot_b, "野菜、サラダ　"),
+                    Model(R.drawable.dinner_b, "主菜　"),
+                    Model(R.drawable.carrot_b, "副菜、サラダ　"),
                     Model(R.drawable.soup_b, "味噌汁、スープ　"),
                     Model(R.drawable.apple_b, "果物、デザート　"),
                     Model(R.drawable.shuffle_b, "おまかせ　"),
-                    Model(R.drawable.search_b, "グーグル検索　")
+                    Model(R.drawable.search_b, "詳細を検索　")
                 )
             )
         } else {
@@ -487,7 +487,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.soup_b, "Soup  "),
                     Model(R.drawable.apple_b, "Fruits, Desserts  "),
                     Model(R.drawable.shuffle_b, "Shuffle order　"),
-                    Model(R.drawable.search_b, "Google search　")
+                    Model(R.drawable.search_b, "Find details　")
                 )
             )
         }
@@ -1135,6 +1135,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText8.setTextIsSelectable(true)
                         binding.editText8.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText8.hasFocus() -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.editText8.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText4.setOnClickListener {
@@ -1174,6 +1180,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
                         binding.editText4.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText4.hasFocus() -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.editText4.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1215,6 +1227,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText.setTextIsSelectable(true)
                         binding.editText.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText.hasFocus() -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.editText.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText10.setOnClickListener {
@@ -1254,6 +1272,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
                         binding.editText10.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText10.hasFocus() -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.editText10.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1295,6 +1319,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText11.setTextIsSelectable(true)
                         binding.editText11.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText11.hasFocus() -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.editText11.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText12.setOnClickListener {
@@ -1334,6 +1364,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
                         binding.editText12.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText12.hasFocus() -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.editText12.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1375,6 +1411,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText13.setTextIsSelectable(true)
                         binding.editText13.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText13.hasFocus() -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.editText13.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText9.setOnClickListener {
@@ -1414,6 +1456,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
                         binding.editText9.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText9.hasFocus() -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.editText9.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1455,6 +1503,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText7.setTextIsSelectable(true)
                         binding.editText7.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText7.hasFocus() -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.editText7.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText14.setOnClickListener {
@@ -1494,6 +1548,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
                         binding.editText14.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText14.hasFocus() -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.editText14.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1535,6 +1595,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText15.setTextIsSelectable(true)
                         binding.editText15.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText15.hasFocus() -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.editText15.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText16.setOnClickListener {
@@ -1574,6 +1640,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
                         binding.editText16.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText16.hasFocus() -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.editText16.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1615,6 +1687,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText17.setTextIsSelectable(true)
                         binding.editText17.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText17.hasFocus() -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.editText17.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText18.setOnClickListener {
@@ -1654,6 +1732,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
                         binding.editText18.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText18.hasFocus() -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.editText18.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1695,6 +1779,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText8n.setTextIsSelectable(true)
                         binding.editText8n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText8n.hasFocus() -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.editText8n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText4n.setOnClickListener {
@@ -1734,6 +1824,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
                         binding.editText4n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText4n.hasFocus() -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.editText4n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1775,6 +1871,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editTextn.setTextIsSelectable(true)
                         binding.editTextn.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editTextn.hasFocus() -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.editTextn.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editTextn.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText10n.setOnClickListener {
@@ -1814,6 +1916,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
                         binding.editText10n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText10n.hasFocus() -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.editText10n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1855,6 +1963,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText11n.setTextIsSelectable(true)
                         binding.editText11n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText11n.hasFocus() -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.editText11n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText12n.setOnClickListener {
@@ -1894,6 +2008,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
                         binding.editText12n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText12n.hasFocus() -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.editText12n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -1935,6 +2055,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText13n.setTextIsSelectable(true)
                         binding.editText13n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText13n.hasFocus() -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.editText13n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText9n.setOnClickListener {
@@ -1974,6 +2100,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
                         binding.editText9n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText9n.hasFocus() -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.editText9n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -2015,6 +2147,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText7n.setTextIsSelectable(true)
                         binding.editText7n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText7n.hasFocus() -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.editText7n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText14n.setOnClickListener {
@@ -2054,6 +2192,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
                         binding.editText14n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText14n.hasFocus() -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.editText14n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -2095,6 +2239,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText15n.setTextIsSelectable(true)
                         binding.editText15n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText15n.hasFocus() -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.editText15n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText16n.setOnClickListener {
@@ -2134,6 +2284,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
                         binding.editText16n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText16n.hasFocus() -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.editText16n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -2175,6 +2331,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText17n.setTextIsSelectable(true)
                         binding.editText17n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && binding.editText17n.hasFocus() -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.editText17n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                 }
             }
             binding.editText18n.setOnClickListener {
@@ -2214,6 +2376,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
                         binding.editText18n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && binding.editText18n.hasFocus() -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.editText18n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                 }
             }
@@ -2255,6 +2423,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
                         binding.editText8.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText8.setTextIsSelectable(true)
+                        binding.editText8.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText8.textSize = defaultTextSize
@@ -2300,6 +2474,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText4.setTextIsSelectable(true)
                         binding.editText4.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        binding.editText4.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText4.textSize = defaultTextSize
                         hideKeyboard()
@@ -2343,6 +2523,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
                         binding.editText.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText.setTextIsSelectable(true)
+                        binding.editText.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText.textSize = defaultTextSize
@@ -2388,6 +2574,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText10.setTextIsSelectable(true)
                         binding.editText10.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        binding.editText10.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText10.textSize = defaultTextSize
                         hideKeyboard()
@@ -2431,6 +2623,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
                         binding.editText11.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        binding.editText11.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText11.textSize = defaultTextSize
@@ -2476,6 +2674,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText12.setTextIsSelectable(true)
                         binding.editText12.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        binding.editText12.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText12.textSize = defaultTextSize
                         hideKeyboard()
@@ -2519,6 +2723,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
                         binding.editText13.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        binding.editText13.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText13.textSize = defaultTextSize
@@ -2564,6 +2774,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText9.setTextIsSelectable(true)
                         binding.editText9.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        binding.editText9.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText9.textSize = defaultTextSize
                         hideKeyboard()
@@ -2607,6 +2823,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
                         binding.editText7.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        binding.editText7.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText7.textSize = defaultTextSize
@@ -2652,6 +2874,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText14.setTextIsSelectable(true)
                         binding.editText14.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        binding.editText14.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText14.textSize = defaultTextSize
                         hideKeyboard()
@@ -2695,6 +2923,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
                         binding.editText15.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        binding.editText15.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText15.textSize = defaultTextSize
@@ -2740,6 +2974,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText16.setTextIsSelectable(true)
                         binding.editText16.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        binding.editText16.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText16.textSize = defaultTextSize
                         hideKeyboard()
@@ -2783,6 +3023,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
                         binding.editText17.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        binding.editText17.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText17.textSize = defaultTextSize
@@ -2828,6 +3074,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText18.setTextIsSelectable(true)
                         binding.editText18.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        binding.editText18.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText18.textSize = defaultTextSize
                         hideKeyboard()
@@ -2871,6 +3123,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
                         binding.editText8n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        binding.editText8n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText8n.textSize = defaultTextSize
@@ -2916,6 +3174,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText4n.setTextIsSelectable(true)
                         binding.editText4n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        binding.editText4n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText4n.textSize = defaultTextSize
                         hideKeyboard()
@@ -2959,6 +3223,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
                         binding.editTextn.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        binding.editTextn.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editTextn.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editTextn.textSize = defaultTextSize
@@ -3004,6 +3274,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText10n.setTextIsSelectable(true)
                         binding.editText10n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        binding.editText10n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText10n.textSize = defaultTextSize
                         hideKeyboard()
@@ -3047,6 +3323,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
                         binding.editText11n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        binding.editText11n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText11n.textSize = defaultTextSize
@@ -3092,6 +3374,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText12n.setTextIsSelectable(true)
                         binding.editText12n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        binding.editText12n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText12n.textSize = defaultTextSize
                         hideKeyboard()
@@ -3135,6 +3423,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
                         binding.editText13n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        binding.editText13n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText13n.textSize = defaultTextSize
@@ -3180,6 +3474,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText9n.setTextIsSelectable(true)
                         binding.editText9n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        binding.editText9n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText9n.textSize = defaultTextSize
                         hideKeyboard()
@@ -3223,6 +3523,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
                         binding.editText7n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        binding.editText7n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText7n.textSize = defaultTextSize
@@ -3268,6 +3574,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText14n.setTextIsSelectable(true)
                         binding.editText14n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        binding.editText14n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText14n.textSize = defaultTextSize
                         hideKeyboard()
@@ -3311,6 +3623,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
                         binding.editText15n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        binding.editText15n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText15n.textSize = defaultTextSize
@@ -3356,6 +3674,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText16n.setTextIsSelectable(true)
                         binding.editText16n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        binding.editText16n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText16n.textSize = defaultTextSize
                         hideKeyboard()
@@ -3400,6 +3724,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         binding.editText17n.setTextIsSelectable(true)
                         binding.editText17n.setText("", TextView.BufferType.NORMAL)
                     }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        binding.editText17n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17n.text}")
+                        binding.webView.visibility = View.VISIBLE
+                    }
                     !hasFocus -> {
                         binding.editText17n.textSize = defaultTextSize
                         hideKeyboard()
@@ -3443,6 +3773,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     pasteFlag == 5 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
                         binding.editText18n.setText("", TextView.BufferType.NORMAL)
+                    }
+                    pasteFlag == 6 && hasFocus -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        binding.editText18n.clearFocus()
+                        binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18n.text}")
+                        binding.webView.visibility = View.VISIBLE
                     }
                     !hasFocus -> {
                         binding.editText18n.textSize = defaultTextSize
@@ -3815,12 +4151,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "グーグル検索"
+                                supportActionBar?.title = "詳細検索"
                             } else {
-                                supportActionBar?.title = "Google search"
+                                supportActionBar?.title = "Find details"
                             }
                             hideKeyboard()
-                            Toast.makeText(applicationContext, (R.string.search), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.search), Toast.LENGTH_LONG).show()
                             pasteFlag = 6
                         }
                     }
@@ -3848,9 +4184,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         binding.webView.visibility = View.VISIBLE
         binding.listView.visibility = View.INVISIBLE
         if (locale == Locale.JAPAN) {
-            supportActionBar?.title = "グーグル検索"
+            supportActionBar?.title = "詳細検索"
         } else {
-            supportActionBar?.title = "Google search"
+            supportActionBar?.title = "Find details"
         }
     }
 
@@ -4075,6 +4411,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         when {
             binding.imageView.isVisible -> {
                 binding.imageView.visibility = View.INVISIBLE
+                binding.adView.visibility = View.VISIBLE
             }
             binding.listView.isVisible -> {
                 binding.listView.visibility = View.INVISIBLE
