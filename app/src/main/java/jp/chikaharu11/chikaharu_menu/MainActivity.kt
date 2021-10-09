@@ -13,6 +13,7 @@ import android.os.Bundle
 import android.os.Environment
 import android.os.Handler
 import android.provider.DocumentsContract
+import android.text.InputType
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
@@ -299,6 +300,72 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private fun hideKeyboard() {
         inputMethodManager.hideSoftInputFromWindow(binding.view.windowToken, 0)
     }
+    
+    fun nullKeyboard() {
+        
+        binding.editText8.setRawInputType(InputType.TYPE_NULL)
+        binding.editText4.setRawInputType(InputType.TYPE_NULL)
+        binding.editText13.setRawInputType(InputType.TYPE_NULL)
+        binding.editText13n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText9.setRawInputType(InputType.TYPE_NULL)
+        binding.editText7.setRawInputType(InputType.TYPE_NULL)
+        binding.editText8n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText4n.setRawInputType(InputType.TYPE_NULL)
+        binding.editTextn.setRawInputType(InputType.TYPE_NULL)
+        binding.editText10n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText10.setRawInputType(InputType.TYPE_NULL)
+        binding.editText.setRawInputType(InputType.TYPE_NULL)
+        binding.editText12n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText12.setRawInputType(InputType.TYPE_NULL)
+        binding.editText11n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText11.setRawInputType(InputType.TYPE_NULL)
+        binding.editText9n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText7n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText15n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText15.setRawInputType(InputType.TYPE_NULL)
+        binding.editText17n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText14n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText16.setRawInputType(InputType.TYPE_NULL)
+        binding.editText14.setRawInputType(InputType.TYPE_NULL)
+        binding.editText18.setRawInputType(InputType.TYPE_NULL)
+        binding.editText17.setRawInputType(InputType.TYPE_NULL)
+        binding.editText18n.setRawInputType(InputType.TYPE_NULL)
+        binding.editText16n.setRawInputType(InputType.TYPE_NULL)
+        
+    }
+
+    fun openKeyboard() {
+
+        binding.editText8.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText4.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText13.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText13n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText9.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText7.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText8n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText4n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editTextn.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText10n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText10.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText12n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText12.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText11n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText11.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText9n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText7n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText15n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText15.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText17n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText14n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText16.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText14.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText18.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText17.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText18n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+        binding.editText16n.setRawInputType(InputType.TYPE_CLASS_TEXT)
+
+    }
 
     @SuppressLint("UseSwitchCompatOrMaterialCode", "SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -312,7 +379,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
-        val spinner1a = findViewById<Spinner>(R.id.spinner1a)
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
         val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
 
@@ -3941,51 +4007,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
 
 
-            val menuList1 = mutableSetOf(
-                "[選択したメニューを削除できます]"
-            )
-
-            val inMenuList1 = mRealm.where<Book>().findAll()
-
-
-            for( i in inMenuList1 )
-                if (inMenuList1 != null) {
-                    menuList1.add(i.name)
-                }
-
-
-            val spinnerItems5 = menuList1.sorted()
-
-            val adapter5 = ArrayAdapter(
-                applicationContext,
-                android.R.layout.simple_spinner_item, spinnerItems5
-            )
-
-            adapter5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-
-            spinner1a.adapter = adapter5
-
-            spinner1a.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?, position: Int, id: Long
-                ) {
-                    val spinnerParent = parent as Spinner
-                    val item = spinnerParent.selectedItem as String
-
-                    mRealm.executeTransaction { mRealm.where<Book>().equalTo("name", item).findAll().deleteAllFromRealm() }
-
-
-                }
-
-                override fun onNothingSelected(parent: AdapterView<*>?) {
-
-                }
-            }
-
-
             spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
                 override fun onItemSelected(
@@ -4068,6 +4089,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             } else {
                                 supportActionBar?.title = "Menu list"
                             }
+                            openKeyboard()
                             Toast.makeText(applicationContext, (R.string.Manual_input), Toast.LENGTH_SHORT).show()
                             pasteFlag = 0
                         }
@@ -4083,6 +4105,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                 supportActionBar?.title = "Main dish"
                             }
                             hideKeyboard()
+                            nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.Main_dish), Toast.LENGTH_SHORT).show()
                             pasteFlag = 1
                         }
@@ -4098,6 +4121,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                 supportActionBar?.title = "side dish Salads"
                             }
                             hideKeyboard()
+                            nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.Salads), Toast.LENGTH_SHORT).show()
                             pasteFlag = 2
                         }
@@ -4113,6 +4137,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                 supportActionBar?.title = "Soup"
                             }
                             hideKeyboard()
+                            nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
                             pasteFlag = 3
                         }
@@ -4128,6 +4153,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
                             hideKeyboard()
+                            nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                             pasteFlag = 4
                         }
@@ -4172,6 +4198,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             } else {
                                 supportActionBar?.title = "Shuffle order"
                             }
+                            openKeyboard()
                             pasteFlag = 5
                         }
                         6 -> { menuSwitch = 6
@@ -4184,6 +4211,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                 supportActionBar?.title = "Find details"
                             }
                             hideKeyboard()
+                            openKeyboard()
                             Toast.makeText(applicationContext, (R.string.search), Toast.LENGTH_LONG).show()
                             pasteFlag = 6
                         }
