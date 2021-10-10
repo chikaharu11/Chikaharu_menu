@@ -603,7 +603,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             Cuisine("アスパラの肉巻き"),
             Cuisine("エビフライ"),
             Cuisine("オムライス"),
-            Cuisine("オムライス"),
             Cuisine("お好み焼き"),
             Cuisine("カツオのタタキ"),
             Cuisine("カレイの煮付け"),
@@ -829,7 +828,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 "ミートソースパスタ",
                 "お好み焼き",
                 "チャーハン",
-                "オムライス",
                 "豚生姜焼き",
                 "マカロニグラタン",
                 "ミートグラタン",
@@ -4250,115 +4248,143 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         when {
             binding.editText8.hasFocus() -> { binding.editText8.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText8.clearFocus()
-                binding.editText8.textSize = count2
+                binding.editText8.textSize = count2--
+                binding.editText8.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText4.hasFocus() -> { binding.editText4.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText4.clearFocus()
-                binding.editText4.textSize = count2
+                binding.editText4.textSize = count2--
+                binding.editText4.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText.hasFocus() -> { binding.editText.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText.clearFocus()
-                binding.editText.textSize = count2
+                binding.editText.textSize = count2--
+                binding.editText.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText10.hasFocus() -> { binding.editText10.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText10.clearFocus()
-                binding.editText10.textSize = count2
+                binding.editText10.textSize = count2--
+                binding.editText10.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText11.hasFocus() -> { binding.editText11.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText11.clearFocus()
-                binding.editText11.textSize = count2
+                binding.editText11.textSize = count2--
+                binding.editText11.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText12.hasFocus() -> { binding.editText12.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText12.clearFocus()
-                binding.editText12.textSize = count2
+                binding.editText12.textSize = count2--
+                binding.editText12.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText13.hasFocus() -> { binding.editText13.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText13.clearFocus()
-                binding.editText13.textSize = count2
+                binding.editText13.textSize = count2--
+                binding.editText13.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText9.hasFocus() -> { binding.editText9.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText9.clearFocus()
-                binding.editText9.textSize = count2
+                binding.editText9.textSize = count2--
+                binding.editText9.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText7.hasFocus() -> { binding.editText7.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText7.clearFocus()
-                binding.editText7.textSize = count2
+                binding.editText7.textSize = count2--
+                binding.editText7.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText14.hasFocus() -> { binding.editText14.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText14.clearFocus()
-                binding.editText14.textSize = count2
+                binding.editText14.textSize = count2--
+                binding.editText14.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText15.hasFocus() -> { binding.editText15.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText15.clearFocus()
-                binding.editText15.textSize = count2
+                binding.editText15.textSize = count2--
+                binding.editText15.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText16.hasFocus() -> { binding.editText16.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText16.clearFocus()
-                binding.editText16.textSize = count2
+                binding.editText16.textSize = count2--
+                binding.editText16.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText17.hasFocus() -> { binding.editText17.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText17.clearFocus()
-                binding.editText17.textSize = count2
+                binding.editText17.textSize = count2--
+                binding.editText17.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText18.hasFocus() -> { binding.editText18.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText18.clearFocus()
-                binding.editText18.textSize = count2
+                binding.editText18.textSize = count2--
+                binding.editText18.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText8n.hasFocus() -> { binding.editText8n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText8n.clearFocus()
-                binding.editText8n.textSize = count2
+                binding.editText8n.textSize = count2--
+                binding.editText8n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText4n.hasFocus() -> { binding.editText4n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText4n.clearFocus()
-                binding.editText4n.textSize = count2
+                binding.editText4n.textSize = count2--
+                binding.editText4n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editTextn.hasFocus() -> { binding.editTextn.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editTextn.clearFocus()
-                binding.editTextn.textSize = count2
+                binding.editTextn.textSize = count2--
+                binding.editTextn.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText10n.hasFocus() -> { binding.editText10n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText10n.clearFocus()
-                binding.editText10n.textSize = count2
+                binding.editText10n.textSize = count2--
+                binding.editText10n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText11n.hasFocus() -> { binding.editText11n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText11n.clearFocus()
-                binding.editText11n.textSize = count2
+                binding.editText11n.textSize = count2--
+                binding.editText11n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText12n.hasFocus() -> { binding.editText12n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText12n.clearFocus()
-                binding.editText12n.textSize = count2
+                binding.editText12n.textSize = count2--
+                binding.editText12n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText13n.hasFocus() -> { binding.editText13n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText13n.clearFocus()
-                binding.editText13n.textSize = count2
+                binding.editText13n.textSize = count2--
+                binding.editText13n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText9n.hasFocus() -> { binding.editText9n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText9n.clearFocus()
-                binding.editText9n.textSize = count2
+                binding.editText9n.textSize = count2--
+                binding.editText9n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText7n.hasFocus() -> { binding.editText7n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText7n.clearFocus()
-                binding.editText7n.textSize = count2
+                binding.editText7n.textSize = count2--
+                binding.editText7n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText14n.hasFocus() -> { binding.editText14n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText14n.clearFocus()
-                binding.editText14n.textSize = count2
+                binding.editText14n.textSize = count2--
+                binding.editText14n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText15n.hasFocus() -> { binding.editText15n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText15n.clearFocus()
-                binding.editText15n.textSize = count2
+                binding.editText15n.textSize = count2--
+                binding.editText15n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText16n.hasFocus() -> { binding.editText16n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText16n.clearFocus()
-                binding.editText16n.textSize = count2
+                binding.editText16n.textSize = count2--
+                binding.editText16n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText17n.hasFocus() -> { binding.editText17n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText17n.clearFocus()
-                binding.editText17n.textSize = count2
+                binding.editText17n.textSize = count2--
+                binding.editText17n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
             binding.editText18n.hasFocus() -> { binding.editText18n.setText(cuisine.name, TextView.BufferType.NORMAL)
                 binding.editText18n.clearFocus()
-                binding.editText18n.textSize = count2
+                binding.editText18n.textSize = count2--
+                binding.editText18n.textSize = count2++
                 binding.listView.visibility = View.INVISIBLE }
         }
     }
