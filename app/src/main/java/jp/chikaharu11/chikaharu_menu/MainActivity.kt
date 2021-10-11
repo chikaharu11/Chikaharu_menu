@@ -938,8 +938,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         dCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("アイス"),
+                Cuisine("あんみつ"),
                 Cuisine("いちご"),
                 Cuisine("いちごの錦玉"),
+                Cuisine("おしるこ"),
                 Cuisine("オレンジ"),
                 Cuisine("カフェオレゼリー"),
                 Cuisine("キウイフルーツ"),
@@ -967,6 +969,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("りんご"),
                 Cuisine("りんごのグラッセ"),
                 Cuisine("杏仁豆腐"),
+                Cuisine("大福"),
+                Cuisine("団子"),
                 Cuisine("桃"),
                 Cuisine("桃のコンポート"),
                 Cuisine("豆乳ドーナツ"),
@@ -976,6 +980,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         } else {
             arrayListOf(
+                Cuisine("Anmitsu"),
                 Cuisine("apple glace"),
                 Cuisine("apple"),
                 Cuisine("Apricot Cake"),
@@ -983,10 +988,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Banana"),
                 Cuisine("Bavarois"),
                 Cuisine("Cafe au Lait Jelly"),
-                Cuisine("chocolate banana parfait"),
+                Cuisine("Choco Banana Parfait"),
                 Cuisine("Chocolate Mousse"),
                 Cuisine("Coffee Jelly"),
+                Cuisine("Daifuku"),
                 Cuisine("Dumpling skin crepe"),
+                Cuisine("Dumpling"),
                 Cuisine("Frutche"),
                 Cuisine("Grape"),
                 Cuisine("Green tea tiramisu"),
@@ -995,6 +1002,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Melon"),
                 Cuisine("Muffins"),
                 Cuisine("Orange"),
+                Cuisine("Oshiruko"),
                 Cuisine("Pancakes"),
                 Cuisine("Pancakes"),
                 Cuisine("Panna Cotta"),
@@ -1004,7 +1012,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Pound Cake"),
                 Cuisine("Pudding"),
                 Cuisine("Soy milk doughnut"),
-                Cuisine("strawberry brocade"),
+                Cuisine("Strawberry brocade"),
                 Cuisine("Strawberry"),
                 Cuisine("Tangerine Jelly"),
                 Cuisine("Tangerine Sorbet"),
@@ -1471,7 +1479,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "桃のコンポート",
                     "チョコバナナパフェ",
                     "抹茶ティラミス",
-                    "餃子の皮クレープ"
+                    "餃子の皮クレープ",
+                    "大福",
+                    "おしるこ",
+                    "あんみつ",
+                    "団子"
                 )
             } else {
                 mutableSetOf(
@@ -1510,7 +1522,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "tangerine",
                     "Tofa",
                     "Yogurt crepes",
-                    "yogurt"
+                    "yogurt",
+                    "Daifuku",
+                    "Oshiruko",
+                    "Anmitsu",
+                    "dango"
                 )
             }
 
