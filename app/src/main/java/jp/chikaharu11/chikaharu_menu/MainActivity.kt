@@ -6,6 +6,8 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.media.AudioAttributes
 import android.media.SoundPool
 import android.net.Uri
@@ -410,6 +412,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         count2 = convertPxToSp(binding.editText8.textSize)
 
         var defaultTextSize = convertPxToSp(binding.editText8.textSize)
+
+        if (locale != Locale.JAPAN) {
+            supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#fd2003")))
+        }
 
         fun menuList16() {
 
