@@ -550,6 +550,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 this,
                 listOf(
                     Model(R.drawable.outline_smartphone_black_48dp, "見る　"),
+                    Model(R.drawable.outline_description_black_48dp, "献立表を読み込む　"),
                     Model(R.drawable.baseline_share_black_48dp, "シェアする　"),
                     Model(R.drawable.baseline_zoom_in_black_48dp, "文字を大きくする　"),
                     Model(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
@@ -564,6 +565,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 this,
                 listOf(
                     Model(R.drawable.outline_smartphone_black_48dp, "View  "),
+                    Model(R.drawable.outline_description_black_48dp, "Load the menu list　"),
                     Model(R.drawable.baseline_share_black_48dp, "Share  "),
                     Model(R.drawable.baseline_zoom_in_black_48dp, "Enlarge text  "),
                     Model(R.drawable.baseline_zoom_out_black_48dp, "Reduce text  "),
@@ -4758,7 +4760,17 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             READ_REQUEST_CODE3 -> {
                 resultData?.data?.also { uri ->
-                    println(uri.toString())
+                    val id = uri.toString()
+                        .replaceBeforeLast("%2F","")
+                        .replace("%2F","")
+                        .replace("%E6%9C%88","-")
+                        .replace("%E6%97%A5","-")
+                        .replace("%E6%99%82","-")
+                        .replace("%E5%88%86","-")
+                        .replace("%E7%A7%92","-")
+                        .replace("-","")
+                        .replace(".png","")
+                    binding.editText8n.setText(mRealm.where(Book::class.java).equalTo("id", id.toLong()).findFirst()?.name, TextView.BufferType.NORMAL)
                 }
             }
         }
@@ -4817,13 +4829,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     }
 
 
+    @SuppressLint("SimpleDateFormat")
     private fun create(name: String) {
         mRealm.executeTransaction {
-            val max = mRealm.where<Book>().max("id")
-            var newId: Long = 0
-            if (max != null) {
-                newId = max.toLong() + 1
+            val newId: Long = if (locale == Locale.JAPAN) {
+                SimpleDateFormat("MMddHHmmss").format(Date()).toLong()
+            } else {
+                SimpleDateFormat("MMddyyyyhhmmss", Locale.US).format(Date()).toLong()
             }
+            println(newId)
             val book = mRealm.createObject<Book>(primaryKeyValue = newId)
             book.name = name
             mRealm.copyToRealm(book)
@@ -4913,12 +4927,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 if (binding.listView.isVisible) {
                     binding.listView.visibility = View.INVISIBLE
                 }
+
                 binding.imageView.visibility = View.INVISIBLE
                 binding.adView.visibility = View.GONE
                 binding.textView14.requestFocus()
                 binding.textView14.clearFocus()
-                handler.postDelayed( { getBitmapFromView(binding.allView) }, 50)
-                handler.postDelayed( { binding.adView.visibility = View.VISIBLE }, 50)
+                handler.postDelayed( {
+                    create(binding.editText8n.text.toString())
+                    getBitmapFromView(binding.allView)
+                                     }, 50)
+                handler.postDelayed( { binding.adView.visibility = View.VISIBLE }, 100)
                 return true
             }
 
