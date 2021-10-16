@@ -39,6 +39,8 @@ import com.google.android.gms.ads.MobileAds
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
+import io.realm.RealmObject
+import io.realm.annotations.RealmClass
 import io.realm.kotlin.createObject
 import io.realm.kotlin.where
 import jp.chikaharu11.chikaharu_menu.databinding.ActivityMainBinding
@@ -4769,8 +4771,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         .replace("%E5%88%86","-")
                         .replace("%E7%A7%92","-")
                         .replace("-","")
-                        .replace(".png","")
-                    binding.editText8n.setText(mRealm.where(Book::class.java).equalTo("id", id.toLong()).findFirst()?.name, TextView.BufferType.NORMAL)
+                        .replace(".png","").toLong()
+                    binding.editText8n.setText(mRealm.where(Book::class.java).equalTo("id", id + 1000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
+                    binding.editText8.setText(mRealm.where(Book::class.java).equalTo("id", id + 2000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
+                    binding.editText4n.setText(mRealm.where(Book::class.java).equalTo("id", id + 3000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
+                    binding.editText4.setText(mRealm.where(Book::class.java).equalTo("id", id + 4000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                 }
             }
         }
@@ -4830,17 +4835,25 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
 
     @SuppressLint("SimpleDateFormat")
-    private fun create(name: String) {
+    private fun create() {
         mRealm.executeTransaction {
             val newId: Long = if (locale == Locale.JAPAN) {
                 SimpleDateFormat("MMddHHmmss").format(Date()).toLong()
             } else {
                 SimpleDateFormat("MMddyyyyhhmmss", Locale.US).format(Date()).toLong()
             }
-            println(newId)
-            val book = mRealm.createObject<Book>(primaryKeyValue = newId)
-            book.name = name
+            val book = mRealm.createObject<Book>(primaryKeyValue = newId + 1000000000000000)
+            book.name = binding.editText8n.text.toString()
             mRealm.copyToRealm(book)
+            val book2 = mRealm.createObject<Book>(primaryKeyValue = newId + 2000000000000000)
+            book2.name = binding.editText8.text.toString()
+            mRealm.copyToRealm(book2)
+            val book3 = mRealm.createObject<Book>(primaryKeyValue = newId + 3000000000000000)
+            book3.name = binding.editText4n.text.toString()
+            mRealm.copyToRealm(book3)
+            val book4 = mRealm.createObject<Book>(primaryKeyValue = newId + 4000000000000000)
+            book4.name = binding.editText4.text.toString()
+            mRealm.copyToRealm(book4)
         }
     }
 
@@ -4933,7 +4946,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 binding.textView14.requestFocus()
                 binding.textView14.clearFocus()
                 handler.postDelayed( {
-                    create(binding.editText8n.text.toString())
+                    create()
                     getBitmapFromView(binding.allView)
                                      }, 50)
                 handler.postDelayed( { binding.adView.visibility = View.VISIBLE }, 100)
