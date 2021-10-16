@@ -89,6 +89,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
         private const val READ_REQUEST_CODE2: Int = 43
+        private const val READ_REQUEST_CODE3: Int = 44
     }
 
     private fun selectMenu() {
@@ -111,6 +112,17 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             type = "image/*"
         }
         startActivityForResult(intent, READ_REQUEST_CODE2)
+    }
+
+    private fun selectMenu3() {
+        binding.imageView.setImageDrawable(null)
+        val saf = Uri.parse("content://com.android.externalstorage.documents/document/primary%3AAndroid%2Fdata%2Fjp.chikaharu11.chikaharu_menu%2Ffiles%2FDCIM")
+        val intent = Intent(Intent.ACTION_OPEN_DOCUMENT).apply {
+            addCategory(Intent.CATEGORY_OPENABLE)
+            putExtra(DocumentsContract.EXTRA_INITIAL_URI, saf)
+            type = "image/*"
+        }
+        startActivityForResult(intent, READ_REQUEST_CODE3)
     }
 
     fun menuList13() {
@@ -1184,35 +1196,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         }
 
-        val item6 = mRealm.where(Book6::class.java).equalTo("id", 5.toLong()).findFirst()?.boolean
-
-        val switch = findViewById<Switch>(R.id.switch3)
-        if (item6 != null) {
-            switch.isChecked = item6
-        }
-
-        if (item6 == true) {
-            cuisine1.clear()
-            cuisine1.add("")
-        }
-
-        val getCuisine1 = mRealm.where<Book>().findAll()
-
-
-        for( i in getCuisine1 )
-        if (getCuisine1 != null) {
-            cuisine1.add(i.name)
-        }
-
-        val spinnerItems = cuisine1.sorted()
-
-        val adapter = ArrayAdapter(
-            applicationContext,
-            android.R.layout.simple_spinner_item, spinnerItems
-        )
-
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
         val cuisine2 = if (locale == Locale.JAPAN) {
             mutableSetOf(
                 "シーザーサラダ",
@@ -1309,28 +1292,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         }
 
-            if (item6 == true) {
-                cuisine2.clear()
-                cuisine2.add("")
-            }
-
-            val getCuisine2 = mRealm.where<Book2>().findAll()
-
-
-            for( i in getCuisine2 )
-                if (getCuisine2 != null) {
-                    cuisine2.add(i.name)
-                }
-
-            val spinnerItems2 = cuisine2.sorted()
-
-            val adapter2 = ArrayAdapter(
-                applicationContext,
-                android.R.layout.simple_spinner_item, spinnerItems2
-            )
-
-            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
             val cuisine3 =if (locale == Locale.JAPAN) {
                 mutableSetOf(
                     "オニオングラタンスープ",
@@ -1425,29 +1386,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 )
             }
 
-            if (item6 == true) {
-                cuisine3.clear()
-                cuisine3.add("")
-            }
-
-            val getCuisine3 = mRealm.where<Book3>().findAll()
-
-
-            for( i in getCuisine3 )
-                if (getCuisine3 != null) {
-                    cuisine3.add(i.name)
-                }
-
-
-            val spinnerItems3 = cuisine3.sorted()
-
-            val adapter3 = ArrayAdapter(
-                applicationContext,
-                android.R.layout.simple_spinner_item, spinnerItems3
-            )
-
-            adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
             val cuisine4 = if (locale == Locale.JAPAN) {
                 mutableSetOf(
                     "りんご",
@@ -1535,30 +1473,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "dango"
                 )
             }
-
-            if (item6 == true) {
-                cuisine4.clear()
-                cuisine4.add("")
-            }
-
-            val getCuisine4 = mRealm.where<Book4>().findAll()
-
-
-            for( i in getCuisine4 )
-                if (getCuisine4 != null) {
-                    cuisine4.add(i.name)
-                }
-
-
-            val spinnerItems4 = cuisine4.sorted()
-
-            val adapter4 = ArrayAdapter(
-                applicationContext,
-                android.R.layout.simple_spinner_item, spinnerItems4
-            )
-
-            adapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
 
             binding.editText8.setOnClickListener {
                 when {
@@ -4397,23 +4311,26 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             selectMenu2()
                         }
                         1 -> {
-                            selectMenu()
+                            selectMenu3()
                         }
                         2 -> {
-                            menuList13()
+                            selectMenu()
                         }
                         3 -> {
-                            menuList14()
+                            menuList13()
                         }
                         4 -> {
-                            menuList12()
+                            menuList14()
                         }
                         5 -> {
+                            menuList12()
+                        }
+                        6 -> {
                             menuList15()
                             menuList16()
                             menuList17()
                         }
-                        6 -> {
+                        7 -> {
                             AlertDialog.Builder(this@MainActivity)
                                 .setTitle(R.string.reboot)
                                 .setPositiveButton("YES") { _, _ ->
@@ -4424,7 +4341,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                 }
                                 .show()
                         }
-                        7 -> {
+                        8 -> {
                             AlertDialog.Builder(this@MainActivity)
                                 .setTitle(R.string.exit)
                                 .setPositiveButton("YES") { _, _ ->
@@ -4785,7 +4702,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         when (requestCode) {
             READ_REQUEST_CODE -> {
-
                 resultData?.data?.also { uri ->
 
                     val inputStream = contentResolver?.openInputStream(uri)
@@ -4815,7 +4731,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         startActivity(Intent.createChooser(shareIntent, "Choose an apps"))
                     }
                 }
-
             }
             READ_REQUEST_CODE2 -> {
                 resultData?.data?.also { uri ->
@@ -4840,9 +4755,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     binding.imageView.setImageURI(contentUri)
                     Toast.makeText(applicationContext, (R.string.back), Toast.LENGTH_LONG).show()
                 }
-
             }
-
+            READ_REQUEST_CODE3 -> {
+                resultData?.data?.also { uri ->
+                    println(uri.toString())
+                }
+            }
         }
     }
 
