@@ -4789,7 +4789,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     binding.editText7.setText(mRealm.where(Book::class.java).equalTo("id", id + 18000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                     binding.editText15n.setText(mRealm.where(Book::class.java).equalTo("id", id + 19000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                     binding.editText15.setText(mRealm.where(Book::class.java).equalTo("id", id + 20000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
-                    binding.editText16n.setText(mRealm.where(Book::class.java).equalTo("id", id + 22000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
+                    binding.editText16n.setText(mRealm.where(Book::class.java).equalTo("id", id + 21000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                     binding.editText16.setText(mRealm.where(Book::class.java).equalTo("id", id + 22000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                     binding.editText18n.setText(mRealm.where(Book::class.java).equalTo("id", id + 23000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                     binding.editText18.setText(mRealm.where(Book::class.java).equalTo("id", id + 24000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
@@ -4811,8 +4811,51 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     binding.textView12.setText(mRealm.where(Book::class.java).equalTo("id", id + 40000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                     binding.textView13.setText(mRealm.where(Book::class.java).equalTo("id", id + 41000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
                     binding.textView14.setText(mRealm.where(Book::class.java).equalTo("id", id + 42000000000000000).findFirst()?.name, TextView.BufferType.NORMAL)
-                    menuList13()
-                    menuList14()
+                    
+                    val textSize = count2
+
+                    binding.editText8.textSize = textSize
+                    binding.editText4.textSize = textSize
+                    binding.editText13.textSize = textSize
+                    binding.editText13n.textSize = textSize
+                    binding.editText9.textSize = textSize
+                    binding.editText7.textSize = textSize
+                    binding.editText8n.textSize = textSize
+                    binding.editText4n.textSize = textSize
+                    binding.editTextn.textSize = textSize
+                    binding.editText10n.textSize = textSize
+                    binding.editText10.textSize = textSize
+                    binding.editText.textSize = textSize
+                    binding.editText12n.textSize = textSize
+                    binding.editText12.textSize = textSize
+                    binding.editText11n.textSize = textSize
+                    binding.editText11.textSize = textSize
+                    binding.editText9n.textSize = textSize
+                    binding.editText7n.textSize = textSize
+                    binding.editText15n.textSize = textSize
+                    binding.editText15.textSize = textSize
+                    binding.editText17n.textSize = textSize
+                    binding.editText14n.textSize = textSize
+                    binding.editText16.textSize = textSize
+                    binding.editText14.textSize = textSize
+                    binding.editText18.textSize = textSize
+                    binding.editText17.textSize = textSize
+                    binding.editText18n.textSize = textSize
+                    binding.editText16n.textSize = textSize
+                    binding.textView.textSize = textSize
+                    binding.textView2.textSize = textSize
+                    binding.textView3.textSize = textSize
+                    binding.textView4.textSize = textSize
+                    binding.textView5.textSize = textSize
+                    binding.textView6.textSize = textSize
+                    binding.textView7.textSize = textSize
+                    binding.textView8.textSize = textSize
+                    binding.textView9.textSize = textSize
+                    binding.textView10.textSize = textSize
+                    binding.textView11.textSize = textSize
+                    binding.textView12.textSize = textSize
+                    binding.textView13.textSize = textSize
+                    binding.textView14.textSize = textSize
                 }
             }
         }
