@@ -16,6 +16,7 @@ import android.os.Environment
 import android.os.Handler
 import android.provider.DocumentsContract
 import android.text.InputType
+import android.util.DisplayMetrics
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
@@ -33,9 +34,7 @@ import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.FileProvider
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
-import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.*
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -47,6 +46,9 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity(), CustomAdapterListener {
+
+    private lateinit var adViewContainer: FrameLayout
+    private lateinit var admobmAdView: AdView
 
     private lateinit var container: ConstraintLayout
 
@@ -386,11 +388,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
             .apply { setContentView(this.root) }
 
-        MobileAds.initialize(this) {}
-
-        val adView = findViewById<AdView>(R.id.adView)
-        val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+        initAdMob()
+        loadAdMob()
 
         val spinner04 = findViewById<Spinner>(R.id.spinner04)
         val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
@@ -4526,6 +4525,43 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             binding.textView13.editableText.clear()
             binding.textView14.editableText.clear()
         }
+
+    private val adSize: AdSize
+        get() {
+            val display = windowManager.defaultDisplay
+            val outMetrics = DisplayMetrics()
+            display.getMetrics(outMetrics)
+
+            val density = outMetrics.density
+            var adWidthPixels = adViewContainer.width.toFloat()
+            if (adWidthPixels == 0.0f) {
+                adWidthPixels = outMetrics.widthPixels.toFloat()
+            }
+            val adWidth = (adWidthPixels / density).toInt()
+
+
+            return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this@MainActivity, adWidth)
+        }
+
+    private fun initAdMob() {
+        adViewContainer = findViewById(R.id.adView)
+
+        MobileAds.initialize(this) {}
+        admobmAdView = AdView(this)
+        admobmAdView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
+
+        admobmAdView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                adViewContainer.addView(admobmAdView)
+            }
+        }
+    }
+
+    private fun loadAdMob() {
+        val request = AdRequest.Builder().build()
+        admobmAdView.adSize = adSize
+        admobmAdView.loadAd(request)
+    }
 
     override fun clicked(cuisine: Cuisine) {
         binding.webView.loadUrl("https://www.google.com/search?q=${cuisine.name}")
