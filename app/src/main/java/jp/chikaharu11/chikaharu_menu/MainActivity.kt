@@ -1440,7 +1440,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "コーンスープ",
                     "豚しゃぶと梅干しのスープ",
                     "ブロッコリーとじゃがいものスープ",
-                    "キムチの味噌汁"
+                    "キムチの味噌汁",
+                    "ズッキーニのクリーミースープ",
+                    "ポテトとケールのクリーミースープ",
+                    "かぼちゃとココナッツのスープ",
+                    "ローストトマトとバジルのクリーミースープ",
+                    "スパイスパンプキンスープ",
+                    "カリフラワーのスープ",
+                    "フレンチオニオンスープ"
                 )
             } else {
                 mutableSetOf(
@@ -1486,7 +1493,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "Shijimi-jiru",
                     "Soybean and Tomato Soup",
                     "Turnip and Tofu Soup",
-                    "Vermicelli soup"
+                    "Vermicelli soup",
+                    "Creamy Zucchini Soup",
+                    "Creamy Potato and Kale Soup",
+                    "Pumpkin and Coconut Soup", "Pumpkin and Coconut Soup",
+                    "Creamy Roasted Tomato and Basil Soup",
+                    "Spiced Pumpkin Soup",
+                    "Cauliflower Soup",
+                    "French Onion Soup"
                 )
             }
 
@@ -4899,6 +4913,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             READ_REQUEST_CODE3 -> {
                 resultData?.data?.also { uri ->
+                    try {
                     val id = uri.toString()
                         .replaceBeforeLast("%2F","")
                         .replace("%2F","")
@@ -5039,6 +5054,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     binding.textView12.textSize = textSize
                     binding.textView13.textSize = textSize
                     binding.textView14.textSize = textSize
+                } catch (e: Exception) {
+                        Toast.makeText(applicationContext, R.string.error, Toast.LENGTH_LONG).show()
+                    }
                 }
             }
         }

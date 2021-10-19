@@ -28,5 +28,6 @@
     <string name="search">Touch the name of the dish to search for details.</string>
     <string name="back">To return to the previous screen, press the back button or any of the icons above</string>
     <string name="Screen_captured">Screen captured</string>
+    <string name="error">This image cannot be loaded</string>
 
 </resources>

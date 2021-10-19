@@ -28,5 +28,6 @@
     <string name="search">料理名をタッチすると詳細を検索できます</string>
     <string name="back">元の画面に戻るには、戻るボタンか上のアイコンをどれか押して下さい</string>
     <string name="Screen_captured">画面を保存しました</string>
+    <string name="error">その画像は読み込めません</string>
 
 </resources>
