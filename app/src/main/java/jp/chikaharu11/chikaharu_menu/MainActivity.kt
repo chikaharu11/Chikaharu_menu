@@ -1545,7 +1545,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "大福",
                     "おしるこ",
                     "あんみつ",
-                    "団子"
+                    "団子",
+                    "パンネンクーケン",
+                    "ブリガデイロ",
+                    "ブロンディ",
+                    "焼マシュマロのミルクシェイク",
+                    "コカーダ",
+                    "アサイーとベリーのグラニテ",
+                    "スモア"
                 )
             } else {
                 mutableSetOf(
@@ -1588,7 +1595,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "Daifuku",
                     "Oshiruko",
                     "Anmitsu",
-                    "dango"
+                    "dango",
+                    "Pannen Kuken",
+                    "Brigadeiro",
+                    "Blondie",
+                    "Milkshake with roasted marshmallows",
+                    "Coquada",
+                    "Acai and berry granite",
+                    "S'mores"
                 )
             }
 
