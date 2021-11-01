@@ -391,8 +391,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         initAdMob()
         loadAdMob()
 
-        val spinner04 = findViewById<Spinner>(R.id.spinner04)
-        val spinnerWP = findViewById<Spinner>(R.id.spinnerWP)
+        val optionSpinner = findViewById<Spinner>(R.id.spinner04)
+        val menuSpinner = findViewById<Spinner>(R.id.spinnerWP)
 
         binding.webView.settings.loadWithOverviewMode = true
         binding.webView.settings.useWideViewPort = true
@@ -4560,14 +4560,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
 
 
-            spinner04.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            optionSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
                 override fun onItemSelected(
                     parent: AdapterView<*>?,
                     view: View?, position: Int, id: Long
                 ) {
-                    if (!spinner04.isFocusable) {
-                        spinner04.isFocusable = true
+                    if (!optionSpinner.isFocusable) {
+                        optionSpinner.isFocusable = true
                         return
                     }
                     when(position){
@@ -4624,17 +4624,17 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
             }
 
-            spinner04.isFocusable = false
+            optionSpinner.isFocusable = false
 
 
-            spinnerWP.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            menuSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 
                 override fun onItemSelected(
                     parent: AdapterView<*>?,
                     view: View?, position: Int, id: Long
                 ) {
-                    if (!spinnerWP.isFocusable) {
-                        spinnerWP.isFocusable = true
+                    if (!menuSpinner.isFocusable) {
+                        menuSpinner.isFocusable = true
                         return
                     }
                     when (position) {
@@ -4779,7 +4779,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 }
             }
 
-            spinnerWP.isFocusable = false
+            menuSpinner.isFocusable = false
 
             binding.textView8.editableText.clear()
             binding.textView9.editableText.clear()
@@ -5395,13 +5395,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             val book42 = mRealm.createObject<Book>(primaryKeyValue = id + 42000000000000000)
             book42.name = binding.textView14.text.toString()
             mRealm.copyToRealm(book42)
-        }
-    }
-
-
-    private fun delete() {
-        mRealm.executeTransaction {
-            mRealm.deleteAll()
         }
     }
 
