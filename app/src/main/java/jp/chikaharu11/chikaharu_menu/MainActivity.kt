@@ -583,8 +583,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
                     Model(R.drawable.beef, "牛肉　"),
                     Model(R.drawable.pork, "豚肉　"),
-                    Model(R.drawable.chiken, "味噌汁、スープ　"),
-                    Model(R.drawable.kyuuri, "果物、デザート　"),
+                    Model(R.drawable.chiken, "鶏肉　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
                     Model(R.drawable.shuffle_b, "おまかせ　"),
                     Model(R.drawable.search_b, "詳細検索　")
                 )
