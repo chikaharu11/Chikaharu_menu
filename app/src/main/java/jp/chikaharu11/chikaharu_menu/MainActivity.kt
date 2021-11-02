@@ -581,10 +581,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 this,
                 listOf(
                     Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
-                    Model(R.drawable.dinner_b, "主菜、ご飯類、麺類　"),
-                    Model(R.drawable.carrot_b, "副菜、サラダ　"),
-                    Model(R.drawable.soup_b, "味噌汁、スープ　"),
-                    Model(R.drawable.apple_b, "果物、デザート　"),
+                    Model(R.drawable.beef, "牛肉　"),
+                    Model(R.drawable.pork, "豚肉　"),
+                    Model(R.drawable.chiken, "味噌汁、スープ　"),
+                    Model(R.drawable.kyuuri, "果物、デザート　"),
                     Model(R.drawable.shuffle_b, "おまかせ　"),
                     Model(R.drawable.search_b, "詳細検索　")
                 )
@@ -1745,11 +1745,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         if (binding.listView.isVisible) {
                             binding.listView.visibility = View.INVISIBLE
                         } else {
-                            if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
                             binding.listView.visibility = View.VISIBLE
-                        }
                         }
                     }
                     pasteFlag == 2 && binding.editText8.hasFocus() -> {
@@ -5409,16 +5405,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.baseline_create_white_48dp)
             }
             1 -> {
-                menuLamp.setIcon(R.drawable.dinner_w)
+                menuLamp.setIcon(R.drawable.beef_w)
             }
             2 -> {
-                menuLamp.setIcon(R.drawable.carrot_w)
+                menuLamp.setIcon(R.drawable.pork_w)
             }
             3 -> {
-                menuLamp.setIcon(R.drawable.soup_w)
+                menuLamp.setIcon(R.drawable.chiken_w)
             }
             4 -> {
-                menuLamp.setIcon(R.drawable.apple_w)
+                menuLamp.setIcon(R.drawable.kyuuri_w)
             }
             5 -> {
                 menuLamp.setIcon(R.drawable.shuffle_w)
