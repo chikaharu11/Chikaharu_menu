@@ -21,10 +21,10 @@
     <string name="reboot">再起動しますか？</string>
     <string name="exit">終了しますか？</string>
     <string name="Manual_input">入力モード</string>
-    <string name="Main_dish">主菜、ご飯類、麺類</string>
-    <string name="Salads">副菜、サラダ</string>
-    <string name="Soup">味噌汁、スープ</string>
-    <string name="Fruits_Desserts">果物、デザート</string>
+    <string name="food1">牛肉</string>
+    <string name="food2">豚肉</string>
+    <string name="Soup">鶏肉</string>
+    <string name="Fruits_Desserts">キュウリ</string>
     <string name="search">料理名をタッチすると詳細を検索できます</string>
     <string name="back">元の画面に戻るには、戻るボタンか上のアイコンをどれか押して下さい</string>
     <string name="Screen_captured">画面を保存しました</string>

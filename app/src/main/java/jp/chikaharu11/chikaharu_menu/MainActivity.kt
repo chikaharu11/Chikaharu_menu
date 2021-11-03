@@ -585,6 +585,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.pork, "豚肉　"),
                     Model(R.drawable.chiken, "鶏肉　"),
                     Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.daikon, "キュウリ　"),
+                    Model(R.drawable.retasu, "キュウリ　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
                     Model(R.drawable.shuffle_b, "おまかせ　"),
                     Model(R.drawable.search_b, "詳細検索　")
                 )
@@ -4658,7 +4665,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Main_dish), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.food1), Toast.LENGTH_SHORT).show()
                             pasteFlag = 1
                         }
                         2 -> { menuSwitch = 2
@@ -4674,7 +4681,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Salads), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.food2), Toast.LENGTH_SHORT).show()
                             pasteFlag = 2
                         }
                         3 -> { menuSwitch = 3
@@ -5417,9 +5424,30 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.kyuuri_w)
             }
             5 -> {
-                menuLamp.setIcon(R.drawable.shuffle_w)
+                menuLamp.setIcon(R.drawable.daikon_w)
             }
             6 -> {
+                menuLamp.setIcon(R.drawable.retasu_w)
+            }
+            7 -> {
+                menuLamp.setIcon(R.drawable.kyabetu_w)
+            }
+            8 -> {
+                menuLamp.setIcon(R.drawable.moyashi_w)
+            }
+            9 -> {
+                menuLamp.setIcon(R.drawable.hakusai_w)
+            }
+            10 -> {
+                menuLamp.setIcon(R.drawable.tamanegi_w)
+            }
+            11 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            12 -> {
+                menuLamp.setIcon(R.drawable.shuffle_w)
+            }
+            13 -> {
                 menuLamp.setIcon(R.drawable.search_w)
             }
         }
