@@ -23,7 +23,7 @@
     <string name="Manual_input">入力モード</string>
     <string name="food1">牛肉</string>
     <string name="food2">豚肉</string>
-    <string name="Soup">鶏肉</string>
+    <string name="food3">鶏肉</string>
     <string name="Fruits_Desserts">キュウリ</string>
     <string name="search">料理名をタッチすると詳細を検索できます</string>
     <string name="back">元の画面に戻るには、戻るボタンか上のアイコンをどれか押して下さい</string>

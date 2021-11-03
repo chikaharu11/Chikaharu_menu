@@ -23,7 +23,7 @@
     <string name="Manual_input">Manual input</string>
     <string name="food1">Beef</string>
     <string name="food2">Pork</string>
-    <string name="Soup">Chicken</string>
+    <string name="food3">Chicken</string>
     <string name="Fruits_Desserts">Cucumber</string>
     <string name="search">Touch the name of the dish to search for details.</string>
     <string name="back">To return to the previous screen, press the back button or any of the icons above</string>

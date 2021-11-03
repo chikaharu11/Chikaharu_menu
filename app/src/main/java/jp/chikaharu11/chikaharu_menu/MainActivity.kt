@@ -585,13 +585,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.pork, "豚肉　"),
                     Model(R.drawable.chiken, "鶏肉　"),
                     Model(R.drawable.kyuuri, "キュウリ　"),
-                    Model(R.drawable.daikon, "キュウリ　"),
-                    Model(R.drawable.retasu, "キュウリ　"),
-                    Model(R.drawable.kyuuri, "キュウリ　"),
-                    Model(R.drawable.kyuuri, "キュウリ　"),
-                    Model(R.drawable.kyuuri, "キュウリ　"),
-                    Model(R.drawable.kyuuri, "キュウリ　"),
-                    Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.daikon, "大根　"),
+                    Model(R.drawable.retasu, "レタス　"),
+                    Model(R.drawable.kyabetu, "キャベツ　"),
+                    Model(R.drawable.moyashi, "もやし　"),
+                    Model(R.drawable.hakusai, "白菜　"),
+                    Model(R.drawable.tamanegi, "玉ネギ　"),
+                    Model(R.drawable.negi, "ネギ　"),
                     Model(R.drawable.shuffle_b, "おまかせ　"),
                     Model(R.drawable.search_b, "詳細検索　")
                 )
@@ -4659,7 +4659,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = aCustomAdapter
                             aCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "主菜、ご飯類、麺類"
+                                supportActionBar?.title = "牛肉"
                             } else {
                                 supportActionBar?.title = "Main dish"
                             }
@@ -4697,7 +4697,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.food3), Toast.LENGTH_SHORT).show()
                             pasteFlag = 3
                         }
                         4 -> { menuSwitch = 4
