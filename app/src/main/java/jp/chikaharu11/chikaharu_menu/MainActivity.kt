@@ -1801,31 +1801,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             binding.editText8.setOnClickListener {
                 when {
-                    pasteFlag == 1 && binding.editText8.hasFocus() -> {
-                        binding.editText8.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText8.hasFocus() -> {
-                        binding.editText8.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText8.hasFocus() -> {
-                        binding.editText8.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText8.hasFocus() -> {
+                    pasteFlag == 1 && binding.editText8.hasFocus() ||
+                            pasteFlag == 2 && binding.editText8.hasFocus() ||
+                            pasteFlag == 3 && binding.editText8.hasFocus() ||
+                            pasteFlag == 4 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
                         if (binding.listView.isVisible) {
                             binding.listView.visibility = View.INVISIBLE
@@ -3090,31 +3069,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             binding.editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
-                    pasteFlag == 1 && hasFocus -> {
-                        binding.editText8.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText8.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText8.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
+                    pasteFlag == 1 && hasFocus ||
+                            pasteFlag == 2 && hasFocus ||
+                            pasteFlag == 3 && hasFocus ||
+                            pasteFlag == 4 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
                         if (binding.listView.isVisible) {
                             binding.listView.visibility = View.INVISIBLE
