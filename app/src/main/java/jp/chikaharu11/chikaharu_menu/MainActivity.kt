@@ -95,6 +95,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
     private var pasteFlag = 0
 
+    private var pasteFlagRange = 3..100
+
     private var menuSwitch = 0
 
     private val locale: Locale = Locale.getDefault()
@@ -593,6 +595,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 this,
                 listOf(
                     Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
+                    Model(R.drawable.shuffle_b, "おまかせ　"),
+                    Model(R.drawable.search_b, "詳細検索　"),
                     Model(R.drawable.beef, "牛肉　"),
                     Model(R.drawable.pork, "豚肉　"),
                     Model(R.drawable.chiken, "鶏肉　"),
@@ -603,9 +607,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.moyashi, "もやし　"),
                     Model(R.drawable.hakusai, "白菜　"),
                     Model(R.drawable.tamanegi, "玉ネギ　"),
-                    Model(R.drawable.negi, "ネギ　"),
-                    Model(R.drawable.shuffle_b, "おまかせ　"),
-                    Model(R.drawable.search_b, "詳細検索　")
+                    Model(R.drawable.negi, "ネギ　")
                 )
             )
         } else {
@@ -613,6 +615,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 this,
                 listOf(
                     Model(R.drawable.baseline_create_black_48dp, "Manual input  "),
+                    Model(R.drawable.shuffle_b, "Shuffle order　"),
+                    Model(R.drawable.search_b, "Find details　"),
                     Model(R.drawable.dinner_b, "Main dish  "),
                     Model(R.drawable.carrot_b, "Salads  "),
                     Model(R.drawable.soup_b, "Soup  "),
@@ -1801,10 +1805,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             binding.editText8.setOnClickListener {
                 when {
-                    pasteFlag == 1 && binding.editText8.hasFocus() ||
-                            pasteFlag == 2 && binding.editText8.hasFocus() ||
-                            pasteFlag == 3 && binding.editText8.hasFocus() ||
-                            pasteFlag == 4 && binding.editText8.hasFocus() -> {
+                    pasteFlag in pasteFlagRange && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
                         if (binding.listView.isVisible) {
                             binding.listView.visibility = View.INVISIBLE
@@ -1812,11 +1813,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.visibility = View.VISIBLE
                         }
                     }
-                    pasteFlag == 5 && binding.editText8.hasFocus() -> {
+                    pasteFlag == 1 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
                         binding.editText8.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText8.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
                         binding.editText8.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8.text}")
@@ -1826,43 +1827,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText4.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText4.hasFocus() -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText4.hasFocus() -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText4.hasFocus() -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText4.hasFocus() -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText4.hasFocus() -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
                         binding.editText4.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText4.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
                         binding.editText4.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4.text}")
@@ -1872,43 +1849,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText.hasFocus() -> {
+                        binding.editText.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText.hasFocus() -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText.hasFocus() -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText.hasFocus() -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText.hasFocus() -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
                         binding.editText.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
                         binding.editText.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText.text}")
@@ -1918,43 +1871,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText10.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText10.hasFocus() -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText10.hasFocus() -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText10.hasFocus() -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText10.hasFocus() -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText10.hasFocus() -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
                         binding.editText10.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText10.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
                         binding.editText10.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10.text}")
@@ -1964,43 +1893,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText11.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText11.hasFocus() -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText11.hasFocus() -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText11.hasFocus() -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText11.hasFocus() -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText11.hasFocus() -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
                         binding.editText11.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText11.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
                         binding.editText11.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11.text}")
@@ -2010,43 +1915,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText12.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText12.hasFocus() -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText12.hasFocus() -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText12.hasFocus() -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText12.hasFocus() -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText12.hasFocus() -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
                         binding.editText12.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText12.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
                         binding.editText12.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12.text}")
@@ -2056,43 +1937,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText13.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText13.hasFocus() -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText13.hasFocus() -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText13.hasFocus() -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText13.hasFocus() -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText13.hasFocus() -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
                         binding.editText13.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText13.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
                         binding.editText13.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13.text}")
@@ -2102,43 +1959,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText9.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText9.hasFocus() -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText9.hasFocus() -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText9.hasFocus() -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText9.hasFocus() -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText9.hasFocus() -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
                         binding.editText9.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText9.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
                         binding.editText9.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9.text}")
@@ -2148,43 +1981,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText7.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText7.hasFocus() -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText7.hasFocus() -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText7.hasFocus() -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText7.hasFocus() -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText7.hasFocus() -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
                         binding.editText7.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText7.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
                         binding.editText7.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7.text}")
@@ -2194,43 +2003,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText14.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText14.hasFocus() -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText14.hasFocus() -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText14.hasFocus() -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText14.hasFocus() -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText14.hasFocus() -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
                         binding.editText14.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText14.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
                         binding.editText14.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14.text}")
@@ -2240,43 +2025,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText15.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText15.hasFocus() -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText15.hasFocus() -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText15.hasFocus() -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText15.hasFocus() -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText15.hasFocus() -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
                         binding.editText15.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText15.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
                         binding.editText15.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15.text}")
@@ -2286,43 +2047,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText16.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText16.hasFocus() -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText16.hasFocus() -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText16.hasFocus() -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText16.hasFocus() -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText16.hasFocus() -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
                         binding.editText16.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText16.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
                         binding.editText16.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16.text}")
@@ -2332,43 +2069,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText17.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText17.hasFocus() -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText17.hasFocus() -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText17.hasFocus() -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText17.hasFocus() -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText17.hasFocus() -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
                         binding.editText17.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText17.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
                         binding.editText17.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17.text}")
@@ -2378,43 +2091,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText18.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText18.hasFocus() -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText18.hasFocus() -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText18.hasFocus() -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText18.hasFocus() -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText18.hasFocus() -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
                         binding.editText18.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText18.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
                         binding.editText18.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18.text}")
@@ -2424,43 +2113,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText8n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText8n.hasFocus() -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText8n.hasFocus() -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText8n.hasFocus() -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText8n.hasFocus() -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText8n.hasFocus() -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
                         binding.editText8n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText8n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
                         binding.editText8n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8n.text}")
@@ -2470,43 +2135,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText4n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText4n.hasFocus() -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText4n.hasFocus() -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText4n.hasFocus() -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText4n.hasFocus() -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText4n.hasFocus() -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
                         binding.editText4n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText4n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
                         binding.editText4n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4n.text}")
@@ -2516,43 +2157,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editTextn.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editTextn.hasFocus() -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editTextn.hasFocus() -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editTextn.hasFocus() -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editTextn.hasFocus() -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editTextn.hasFocus() -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
                         binding.editTextn.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editTextn.hasFocus() -> {
+                    pasteFlag == 2 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
                         binding.editTextn.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editTextn.text}")
@@ -2562,43 +2179,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText10n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText10n.hasFocus() -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText10n.hasFocus() -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText10n.hasFocus() -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText10n.hasFocus() -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText10n.hasFocus() -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
                         binding.editText10n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText10n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
                         binding.editText10n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10n.text}")
@@ -2608,43 +2201,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText11n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText11n.hasFocus() -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText11n.hasFocus() -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText11n.hasFocus() -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText11n.hasFocus() -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText11n.hasFocus() -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
                         binding.editText11n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText11n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
                         binding.editText11n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11n.text}")
@@ -2654,43 +2223,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText12n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText12n.hasFocus() -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText12n.hasFocus() -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText12n.hasFocus() -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText12n.hasFocus() -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText12n.hasFocus() -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
                         binding.editText12n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText12n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
                         binding.editText12n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12n.text}")
@@ -2700,43 +2245,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText13n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText13n.hasFocus() -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText13n.hasFocus() -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText13n.hasFocus() -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText13n.hasFocus() -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText13n.hasFocus() -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
                         binding.editText13n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText13n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
                         binding.editText13n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13n.text}")
@@ -2746,43 +2267,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText9n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText9n.hasFocus() -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText9n.hasFocus() -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText9n.hasFocus() -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText9n.hasFocus() -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText9n.hasFocus() -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
                         binding.editText9n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText9n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
                         binding.editText9n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9n.text}")
@@ -2792,43 +2289,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText7n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText7n.hasFocus() -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText7n.hasFocus() -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText7n.hasFocus() -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText7n.hasFocus() -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText7n.hasFocus() -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
                         binding.editText7n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText7n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
                         binding.editText7n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7n.text}")
@@ -2838,43 +2311,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText14n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText14n.hasFocus() -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText14n.hasFocus() -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText14n.hasFocus() -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText14n.hasFocus() -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText14n.hasFocus() -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
                         binding.editText14n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText14n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
                         binding.editText14n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14n.text}")
@@ -2884,43 +2333,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText15n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText15n.hasFocus() -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText15n.hasFocus() -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText15n.hasFocus() -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText15n.hasFocus() -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText15n.hasFocus() -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
                         binding.editText15n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText15n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
                         binding.editText15n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15n.text}")
@@ -2930,43 +2355,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText16n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText16n.hasFocus() -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText16n.hasFocus() -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText16n.hasFocus() -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText16n.hasFocus() -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText16n.hasFocus() -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
                         binding.editText16n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText16n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
                         binding.editText16n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16n.text}")
@@ -2976,43 +2377,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText17n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText17n.hasFocus() -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText17n.hasFocus() -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText17n.hasFocus() -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText17n.hasFocus() -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText17n.hasFocus() -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
                         binding.editText17n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText17n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
                         binding.editText17n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17n.text}")
@@ -3022,43 +2399,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText18n.setOnClickListener {
                 when {
+                    pasteFlag in pasteFlagRange && binding.editText18n.hasFocus() -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && binding.editText18n.hasFocus() -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && binding.editText18n.hasFocus() -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && binding.editText18n.hasFocus() -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && binding.editText18n.hasFocus() -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
                         binding.editText18n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && binding.editText18n.hasFocus() -> {
+                    pasteFlag == 2 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
                         binding.editText18n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18n.text}")
@@ -3069,10 +2422,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             binding.editText8.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
-                    pasteFlag == 1 && hasFocus ||
-                            pasteFlag == 2 && hasFocus ||
-                            pasteFlag == 3 && hasFocus ||
-                            pasteFlag == 4 && hasFocus -> {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
                         if (binding.listView.isVisible) {
                             binding.listView.visibility = View.INVISIBLE
@@ -3080,11 +2430,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.visibility = View.VISIBLE
                         }
                     }
-                    pasteFlag == 5 && hasFocus -> {
+                    pasteFlag == 1 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
                         binding.editText8.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
                         binding.editText8.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8.text}")
@@ -3098,43 +2448,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText4.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText4.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText4.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
                         binding.editText4.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
                         binding.editText4.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4.text}")
@@ -3148,43 +2474,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
                         binding.editText.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
                         binding.editText.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText.text}")
@@ -3198,43 +2500,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText10.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText10.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText10.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
                         binding.editText10.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
                         binding.editText10.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10.text}")
@@ -3248,43 +2526,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText11.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText11.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText11.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
                         binding.editText11.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
                         binding.editText11.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11.text}")
@@ -3298,43 +2552,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText12.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText12.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText12.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
                         binding.editText12.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
                         binding.editText12.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12.text}")
@@ -3348,43 +2578,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText13.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText13.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText13.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
                         binding.editText13.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
                         binding.editText13.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13.text}")
@@ -3398,43 +2604,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText9.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText9.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText9.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
                         binding.editText9.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
                         binding.editText9.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9.text}")
@@ -3448,43 +2630,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText7.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText7.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText7.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
                         binding.editText7.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
                         binding.editText7.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7.text}")
@@ -3498,43 +2656,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText14.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText14.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText14.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
                         binding.editText14.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
                         binding.editText14.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14.text}")
@@ -3548,43 +2682,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText15.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText15.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText15.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
                         binding.editText15.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
                         binding.editText15.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15.text}")
@@ -3598,43 +2708,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText16.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText16.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText16.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
                         binding.editText16.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
                         binding.editText16.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16.text}")
@@ -3648,43 +2734,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText17.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText17.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText17.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
                         binding.editText17.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
                         binding.editText17.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17.text}")
@@ -3698,43 +2760,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText18.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText18.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText18.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
                         binding.editText18.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
                         binding.editText18.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18.text}")
@@ -3748,43 +2786,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText8n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText8n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText8n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
                         binding.editText8n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
                         binding.editText8n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText8n.text}")
@@ -3798,43 +2812,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText4n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText4n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText4n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
                         binding.editText4n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
                         binding.editText4n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText4n.text}")
@@ -3848,43 +2838,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editTextn.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editTextn.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editTextn.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
                         binding.editTextn.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
                         binding.editTextn.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editTextn.text}")
@@ -3898,43 +2864,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText10n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText10n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText10n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
                         binding.editText10n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
                         binding.editText10n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText10n.text}")
@@ -3948,43 +2890,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText11n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText11n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText11n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
                         binding.editText11n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
                         binding.editText11n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText11n.text}")
@@ -3998,43 +2916,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText12n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText12n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText12n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
                         binding.editText12n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
                         binding.editText12n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText12n.text}")
@@ -4048,43 +2942,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText13n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText13n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText13n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
                         binding.editText13n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
                         binding.editText13n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText13n.text}")
@@ -4098,43 +2968,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText9n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText9n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText9n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
                         binding.editText9n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
                         binding.editText9n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText9n.text}")
@@ -4148,43 +2994,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText7n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText7n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText7n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
                         binding.editText7n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
                         binding.editText7n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText7n.text}")
@@ -4198,43 +3020,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText14n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText14n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText14n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
                         binding.editText14n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
                         binding.editText14n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText14n.text}")
@@ -4248,43 +3046,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText15n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText15n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText15n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
                         binding.editText15n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
                         binding.editText15n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText15n.text}")
@@ -4298,43 +3072,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText16n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText16n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText16n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
                         binding.editText16n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
                         binding.editText16n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText16n.text}")
@@ -4348,43 +3098,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText17n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText17n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText17n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
                         binding.editText17n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
                         binding.editText17n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText17n.text}")
@@ -4398,43 +3124,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
             binding.editText18n.onFocusChangeListener = OnFocusChangeListener { _, hasFocus ->
                 when {
+                    pasteFlag in pasteFlagRange && hasFocus -> {
+                        binding.editText18n.setTextIsSelectable(true)
+                        if (binding.listView.isVisible) {
+                            binding.listView.visibility = View.INVISIBLE
+                        } else {
+                            binding.listView.visibility = View.VISIBLE
+                        }
+                    }
                     pasteFlag == 1 && hasFocus -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 2 && hasFocus -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 3 && hasFocus -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 4 && hasFocus -> {
-                        binding.editText18n.setTextIsSelectable(true)
-                        if (binding.listView.isVisible) {
-                            binding.listView.visibility = View.INVISIBLE
-                        } else {
-                            binding.listView.visibility = View.VISIBLE
-                        }
-                    }
-                    pasteFlag == 5 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
                         binding.editText18n.setText("", TextView.BufferType.NORMAL)
                     }
-                    pasteFlag == 6 && hasFocus -> {
+                    pasteFlag == 2 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
                         binding.editText18n.clearFocus()
                         binding.webView.loadUrl("https://www.google.com/search?q=${binding.editText18n.text}")
@@ -4664,167 +3366,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             Toast.makeText(applicationContext, (R.string.Manual_input), Toast.LENGTH_SHORT).show()
                             pasteFlag = 0
                         }
+
                         1 -> { menuSwitch = 1
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = aCustomAdapter
-                            aCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "牛肉"
-                            } else {
-                                supportActionBar?.title = "Main dish"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food1), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 1
-                        }
-                        2 -> { menuSwitch = 2
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = bCustomAdapter
-                            bCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "副菜、サラダ"
-                            } else {
-                                supportActionBar?.title = "side dish Salads"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food2), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 2
-                        }
-                        3 -> { menuSwitch = 3
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = cCustomAdapter
-                            cCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "味噌汁、スープ"
-                            } else {
-                                supportActionBar?.title = "Soup"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food3), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 3
-                        }
-                        4 -> { menuSwitch = 4
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            dCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 4
-                        }
-                        5 -> { menuSwitch = 5
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            eCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 5
-                        }
-                        6 -> { menuSwitch = 6
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            fCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 6
-                        }
-                        7 -> { menuSwitch = 7
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            gCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 7
-                        }
-                        8 -> { menuSwitch = 8
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            hCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 8
-                        }
-                        9 -> { menuSwitch = 9
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            iCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 9
-                        }
-                        10 -> { menuSwitch = 10
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            jCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 10
-                        }
-                        11 -> { menuSwitch = 5
                             invalidateOptionsMenu()
                             val shuffled1 = cuisine1.shuffled()
                             val shuffled2 = cuisine2.shuffled()
@@ -4866,9 +3409,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                 supportActionBar?.title = "Shuffle order"
                             }
                             openKeyboard()
-                            pasteFlag = 5
+                            pasteFlag = 1
                         }
-                        12 -> { menuSwitch = 6
+                        2 -> { menuSwitch = 2
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4880,7 +3423,167 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             openKeyboard()
                             Toast.makeText(applicationContext, (R.string.search), Toast.LENGTH_LONG).show()
+                            pasteFlag = 2
+                        }
+                        3 -> { menuSwitch = 3
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = aCustomAdapter
+                            aCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "牛肉"
+                            } else {
+                                supportActionBar?.title = "Main dish"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.food1), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 3
+                        }
+                        4 -> { menuSwitch = 4
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = bCustomAdapter
+                            bCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "副菜、サラダ"
+                            } else {
+                                supportActionBar?.title = "side dish Salads"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.food2), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 4
+                        }
+                        5 -> { menuSwitch = 5
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = cCustomAdapter
+                            cCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "味噌汁、スープ"
+                            } else {
+                                supportActionBar?.title = "Soup"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.food3), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 5
+                        }
+                        6 -> { menuSwitch = 6
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = dCustomAdapter
+                            dCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                             pasteFlag = 6
+                        }
+                        7 -> { menuSwitch = 7
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = dCustomAdapter
+                            eCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 7
+                        }
+                        8 -> { menuSwitch = 8
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = dCustomAdapter
+                            fCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 8
+                        }
+                        9 -> { menuSwitch = 9
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = dCustomAdapter
+                            gCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 9
+                        }
+                        10 -> { menuSwitch = 10
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = dCustomAdapter
+                            hCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 10
+                        }
+                        11 -> { menuSwitch = 11
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = dCustomAdapter
+                            iCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 11
+                        }
+                        12 -> { menuSwitch = 12
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = dCustomAdapter
+                            jCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 12
                         }
                     }
                 }
@@ -5520,43 +4223,43 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.baseline_create_white_48dp)
             }
             1 -> {
-                menuLamp.setIcon(R.drawable.beef_w)
-            }
-            2 -> {
-                menuLamp.setIcon(R.drawable.pork_w)
-            }
-            3 -> {
-                menuLamp.setIcon(R.drawable.chiken_w)
-            }
-            4 -> {
-                menuLamp.setIcon(R.drawable.kyuuri_w)
-            }
-            5 -> {
-                menuLamp.setIcon(R.drawable.daikon_w)
-            }
-            6 -> {
-                menuLamp.setIcon(R.drawable.retasu_w)
-            }
-            7 -> {
-                menuLamp.setIcon(R.drawable.kyabetu_w)
-            }
-            8 -> {
-                menuLamp.setIcon(R.drawable.moyashi_w)
-            }
-            9 -> {
-                menuLamp.setIcon(R.drawable.hakusai_w)
-            }
-            10 -> {
-                menuLamp.setIcon(R.drawable.tamanegi_w)
-            }
-            11 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
-            }
-            12 -> {
                 menuLamp.setIcon(R.drawable.shuffle_w)
             }
-            13 -> {
+            2 -> {
                 menuLamp.setIcon(R.drawable.search_w)
+            }
+            3 -> {
+                menuLamp.setIcon(R.drawable.beef_w)
+            }
+            4 -> {
+                menuLamp.setIcon(R.drawable.pork_w)
+            }
+            5 -> {
+                menuLamp.setIcon(R.drawable.chiken_w)
+            }
+            6 -> {
+                menuLamp.setIcon(R.drawable.kyuuri_w)
+            }
+            7 -> {
+                menuLamp.setIcon(R.drawable.daikon_w)
+            }
+            8 -> {
+                menuLamp.setIcon(R.drawable.retasu_w)
+            }
+            9 -> {
+                menuLamp.setIcon(R.drawable.kyabetu_w)
+            }
+            10 -> {
+                menuLamp.setIcon(R.drawable.moyashi_w)
+            }
+            11 -> {
+                menuLamp.setIcon(R.drawable.hakusai_w)
+            }
+            12 -> {
+                menuLamp.setIcon(R.drawable.tamanegi_w)
+            }
+            13 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
             }
         }
 
