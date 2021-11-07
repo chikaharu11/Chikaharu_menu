@@ -70,6 +70,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var hCustomAdapter: CustomAdapter
     private lateinit var iCustomAdapter: CustomAdapter
     private lateinit var jCustomAdapter: CustomAdapter
+    private lateinit var kCustomAdapter: CustomAdapter
 
     private lateinit var aCuisines: MutableList<Cuisine>
     private lateinit var bCuisines: MutableList<Cuisine>
@@ -81,6 +82,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var hCuisines: MutableList<Cuisine>
     private lateinit var iCuisines: MutableList<Cuisine>
     private lateinit var jCuisines: MutableList<Cuisine>
+    private lateinit var kCuisines: MutableList<Cuisine>
 
 
     private val handler = Handler()
@@ -607,7 +609,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.moyashi, "もやし　"),
                     Model(R.drawable.hakusai, "白菜　"),
                     Model(R.drawable.tamanegi, "玉ネギ　"),
-                    Model(R.drawable.negi, "ネギ　")
+                    Model(R.drawable.negi, "ネギ　"),
+                    Model(R.drawable.negi, "じゃがいも　"),
+                    Model(R.drawable.negi, "かぼちゃ　"),
+                    Model(R.drawable.negi, "トマト　"),
+                    Model(R.drawable.negi, "ナス　"),
+                    Model(R.drawable.negi, "ピーマン　"),
+                    Model(R.drawable.negi, "ブロッコリー　"),
+                    Model(R.drawable.negi, "かぶ　"),
+                    Model(R.drawable.negi, "ほうれん草　"),
+                    Model(R.drawable.negi, "ニラ　")
                 )
             )
         } else {
@@ -642,64 +653,45 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
         aCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("アスパラの肉巻き"),
-                Cuisine("エビフライ"),
-                Cuisine("オムライス"),
-                Cuisine("お好み焼き"),
-                Cuisine("お刺身"),
-                Cuisine("ガーリックシュリンプ"),
-                Cuisine("カツオのタタキ"),
-                Cuisine("カレイの煮付け"),
-                Cuisine("カレー"),
-                Cuisine("クリームシチュー"),
-                Cuisine("グリルチキンのシャワルマ"),
-                Cuisine("サーモンのスパイスグリル"),
-                Cuisine("サーモンのムケッカ"),
-                Cuisine("サーモンのメープルグリル"),
-                Cuisine("サイコロステーキ"),
-                Cuisine("さつまいもとズッキーニのポークラザニア"),
-                Cuisine("サバ味噌煮"),
-                Cuisine("サンマの塩焼き"),
-                Cuisine("シャクシュカ"),
-                Cuisine("シュラスコ"),
+                Cuisine("肉じゃが"),
+                Cuisine("牛丼"),
                 Cuisine("すき焼き"),
-                Cuisine("チキンカツ"),
-                Cuisine("チキンステーキ"),
-                Cuisine("チキンとアスパラのフラットブレッドピザ"),
-                Cuisine("チキンナゲット"),
-                Cuisine("チキンのマスタードクリームソースがけ"),
-                Cuisine("チャーハン"),
-                Cuisine("トルティーヤエスパニョーラ"),
-                Cuisine("とんかつ"),
-                Cuisine("ハニーマスタードチキン"),
-                Cuisine("ハマグリのビール蒸し"),
-                Cuisine("ハムカツ"),
-                Cuisine("ハムとソーセージのハッシュブラウン"),
-                Cuisine("ハリバットのグリル　ローストトマト添え"),
-                Cuisine("ハンバーグ"),
+                Cuisine("サイコロステーキ"),
                 Cuisine("ビーフシチュー"),
                 Cuisine("ビーフステーキ"),
-                Cuisine("ピーマンのチーズ肉詰め焼き"),
-                Cuisine("ピーマンの肉詰め"),
-                Cuisine("ひき肉とじゃがいものキムチ炒め"),
-                Cuisine("フェイジャン"),
-                Cuisine("ブリの照り焼き"),
-                Cuisine("ブリ大根"),
-                Cuisine("ブルスケッタチキン"),
-                Cuisine("マカロニグラタン"),
-                Cuisine("マッシュルームとモッツァレラのフレンチオムレツ"),
-                Cuisine("マヒマヒのグリル"),
-                Cuisine("ミートグラタン"),
-                Cuisine("ミートソースパスタ"),
-                Cuisine("ミートローフ"),
-                Cuisine("メンチカツ"),
-                Cuisine("ラーメン"),
-                Cuisine("レモンチキンソテー"),
-                Cuisine("レモンとローズマリーのポークチョップ"),
-                Cuisine("ロールキャベツ"),
-                Cuisine("回鍋肉"),
-                Cuisine("海老のバターソテー"),
-                Cuisine("牛丼"),
+            )
+        } else {
+            arrayListOf(
+
+            )
+        }
+
+        bCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+                Cuisine("豚キムチ"),
+                Cuisine("豚しゃぶと梅干しのスープ"),
+                Cuisine("豚バラもやし炒め"),
+                Cuisine("豚ひき肉と大根の甘辛煮"),
+                Cuisine("豚角煮"),
+                Cuisine("豚汁"),
+                Cuisine("豚生姜焼き"),
+                Cuisine("豚肉とキャベツのピリ辛みそ炒め"),
+                Cuisine("豚肉とほうれん草、卵の炒め物"),
+                Cuisine("豚肉と豆腐の磯部焼き"),
+                Cuisine("豚肉のネギ塩焼き"),
+                Cuisine("ハムカツ"),
+                Cuisine("ハムとソーセージのハッシュブラウン"),
+                Cuisine("とんかつ"),
+                Cuisine("酢豚"),
+            )
+        } else {
+            arrayListOf(
+
+            )
+        }
+
+        cCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
                 Cuisine("鶏ひき肉とキャベツの卵とじ"),
                 Cuisine("鶏ひき肉の炒り豆腐"),
                 Cuisine("鶏肉とマッシュルームのクリームソテー"),
@@ -708,526 +700,97 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("鶏肉のニンニクソテー"),
                 Cuisine("鶏肉の香味レンジ蒸し"),
                 Cuisine("鶏肉の照り焼き"),
-                Cuisine("焼きそば"),
-                Cuisine("焼鮭"),
-                Cuisine("焼売"),
-                Cuisine("酢豚"),
-                Cuisine("青椒肉絲"),
-                Cuisine("大根のそぼろ煮"),
-                Cuisine("唐揚げ"),
-                Cuisine("豚キムチ"),
-                Cuisine("豚ひき肉と大根の甘辛煮"),
-                Cuisine("豚角煮"),
-                Cuisine("豚生姜焼き"),
-                Cuisine("豚肉とキャベツのピリ辛みそ炒め"),
-                Cuisine("豚肉とほうれん草、卵の炒め物"),
-                Cuisine("豚肉と豆腐の磯部焼き"),
-                Cuisine("豚肉のネギ塩焼き"),
-                Cuisine("鍋焼きうどん"),
-                Cuisine("肉じゃが"),
-                Cuisine("肉団子のあんかけ"),
-                Cuisine("肉野菜炒め"),
-                Cuisine("白菜の旨煮"),
-                Cuisine("八宝菜"),
+                Cuisine("チキンカツ"),
+                Cuisine("チキンステーキ"),
+                Cuisine("チキンとアスパラのフラットブレッドピザ"),
+                Cuisine("チキンナゲット"),
+                Cuisine("チキンのマスタードクリームソースがけ"),
+                Cuisine("レモンチキンソテー"),
                 Cuisine("棒棒鶏"),
-                Cuisine("麻婆春雨"),
-                Cuisine("麻婆豆腐"),
-                Cuisine("野菜とゴーダチーズのフリッタータ"),
-                Cuisine("餃子")
+                Cuisine("唐揚げ"),
             )
         } else {
             arrayListOf(
-                Cuisine("Asparagus wrapped in meat"),
-                Cuisine("Barbecued chicken"),
-                Cuisine("Beef bowl"),
-                Cuisine("Beef stew"),
-                Cuisine("Beefsteak"),
-                Cuisine("Beer steamed clams"),
-                Cuisine("Bruschetta chicken"),
-                Cuisine("cabbage rolls"),
-                Cuisine("Chicken and Asparagus Flatbread Pizza"),
-                Cuisine("Chicken and vegetables in cream"),
-                Cuisine("Chicken Cutlet"),
-                Cuisine("Chicken in tomato sauce"),
-                Cuisine("Chicken nuggets"),
-                Cuisine("chicken steak"),
-                Cuisine("Chicken with mustard cream sauce"),
-                Cuisine("Churrasco"),
-                Cuisine("Claypot meat"),
-                Cuisine("cream stew"),
-                Cuisine("curry"),
-                Cuisine("dice steak"),
-                Cuisine("Eight treasures"),
-                Cuisine("Fei Jiang"),
-                Cuisine("French Omelet with Mushrooms and Mozzarella"),
-                Cuisine("fried chicken"),
-                Cuisine("fried rice"),
-                Cuisine("Fried rice"),
-                Cuisine("fried shrimp"),
-                Cuisine("Fried tofu with minced chicken"),
-                Cuisine("Frittata with Vegetables and Gouda Cheese"),
-                Cuisine("Garlic Shrimp"),
-                Cuisine("Green pepper paste"),
-                Cuisine("Grilled chicken shawarma"),
-                Cuisine("Grilled Halibut with Roasted Tomatoes"),
-                Cuisine("Grilled Mahi Mahi"),
-                Cuisine("grilled peppers stuffed with cheese"),
-                Cuisine("Grilled Pork and Tofu with Seafood"),
-                Cuisine("Grilled Pork with Negi Salt"),
-                Cuisine("Grilled Salmon with Maple"),
-                Cuisine("Grilled salmon"),
-                Cuisine("Grilled saury with salt"),
-                Cuisine("Gyoza"),
-                Cuisine("Ham and sausage hash browns"),
-                Cuisine("Ham cutlet"),
-                Cuisine("Hamburg steak"),
-                Cuisine("Honey Mustard Chicken"),
-                Cuisine("Katsuo no tataki"),
-                Cuisine("Lemon and Rosemary Pork Chops"),
-                Cuisine("Macaroni au gratin"),
-                Cuisine("Mapo Tofu"),
-                Cuisine("Marvo vermicelli"),
-                Cuisine("meat and potatoes"),
-                Cuisine("meat au gratin"),
-                Cuisine("meatballs with starchy sauce"),
-                Cuisine("Meatloaf"),
-                Cuisine("Menchikatsu"),
-                Cuisine("Minced chicken and cabbage with egg"),
-                Cuisine("Minced chicken and cabbage"),
-                Cuisine("Minced pork and daikon with sweet and spicy sauce"),
-                Cuisine("Nabeyaki udon"),
-                Cuisine("Okonomiyaki"),
-                Cuisine("omelet and rice"),
-                Cuisine("pasta with meat sauce"),
-                Cuisine("pork cutlet"),
-                Cuisine("Pork ginger yaki"),
-                Cuisine("Pork Kakuni"),
-                Cuisine("Pork Kimchi"),
-                Cuisine("Pork Lasagna with Sweet Potatoes and Zucchini"),
-                Cuisine("Ramen"),
-                Cuisine("Salmon Muqueca"),
-                Cuisine("Sashimi"),
-                Cuisine("Sautéed chicken and mushrooms in cream"),
-                Cuisine("Sautéed chicken with garlic"),
-                Cuisine("Sauteed lemon chicken"),
-                Cuisine("Sauteed Pork and Cabbage with Spicy Bean Paste"),
-                Cuisine("Sauteed pork, spinach and egg"),
-                Cuisine("Sauteed shrimp in butter"),
-                Cuisine("Shakshuka"),
-                Cuisine("Simmered mackerel in miso"),
-                Cuisine("Spiced grilled salmon"),
-                Cuisine("Steamed chicken in a savory microwave"),
-                Cuisine("Stewed Chinese cabbage"),
-                Cuisine("Stewed flatfish"),
-                Cuisine("stir-fried meat and vegetables"),
-                Cuisine("Stir-fried minced meat and potatoes with kimchi"),
-                Cuisine("stuffed peppers"),
-                Cuisine("Sukiyaki"),
-                Cuisine("Sweet and sour pork"),
-                Cuisine("Teriyaki Chicken"),
-                Cuisine("Teriyaki yellowtail"),
-                Cuisine("Tortilla Española"),
-                Cuisine("yakisoba"),
-                Cuisine("Yellowtail radish")
-            )
-        }
 
-        bCuisines = if (locale == Locale.JAPAN) {
-            arrayListOf(
-                Cuisine("アスパラガスと人参のサラダ"),
-                Cuisine("アボカドとフェタチーズのサルサ"),
-                Cuisine("アボカドと枝豆のサラダ"),
-                Cuisine("イスラエルのサラダ"),
-                Cuisine("インゲンのごま和え"),
-                Cuisine("エビとアボカドのサラダ"),
-                Cuisine("オクラの卵炒め"),
-                Cuisine("オニオンリング"),
-                Cuisine("カブと厚揚げのめんつゆ炒め"),
-                Cuisine("かぼちゃの煮付け"),
-                Cuisine("キヌアのハニーレモンビネグレットサラダ"),
-                Cuisine("きのこのマヨ焼き"),
-                Cuisine("キャベツの塩昆布和え"),
-                Cuisine("きゅうりとセロリのピクルス"),
-                Cuisine("きゅうりとちくわのサラダ"),
-                Cuisine("きんぴらごぼう"),
-                Cuisine("グアカモーレ"),
-                Cuisine("クスクスのイスラエルサラダ"),
-                Cuisine("グリーンデトックスサラダ"),
-                Cuisine("ケールのレモンビネグレットサラダ"),
-                Cuisine("コールスロー"),
-                Cuisine("ココナッツ、キヌア、ほうれん草のサラダ"),
-                Cuisine("ごぼうサラダ"),
-                Cuisine("ごぼうのつくね揚げ"),
-                Cuisine("さつまいもとチキンとキヌアのサラダ"),
-                Cuisine("サヤインゲンのツナサラダ"),
-                Cuisine("シーザーサラダ"),
-                Cuisine("ズッキーニとコーンのパルメザンソテー"),
-                Cuisine("ズッキーニのグリルサラダ"),
-                Cuisine("スティックサラダ"),
-                Cuisine("スモークサーモンとローストビートのサラダ"),
-                Cuisine("ツナサラダのアボカド詰め"),
-                Cuisine("ツナレタスサラダ"),
-                Cuisine("トマト、バジル、モッツァレラのカプレーゼサラダ"),
-                Cuisine("トマトサラダ"),
-                Cuisine("トマトとキュウリとアボカドのサラダ"),
-                Cuisine("トマトのクリームチーズ詰め"),
-                Cuisine("トルテリーニの地中海サラダ"),
-                Cuisine("ナスとピーマンの味噌炒め"),
-                Cuisine("ハーブとキヌアのガーデンサラダ"),
-                Cuisine("ハーブとひよこ豆とほうれん草のサラダ"),
-                Cuisine("バジルとモッツァレラチーズのマリネ"),
-                Cuisine("パスタサラダ"),
-                Cuisine("ピーマンともやしの塩炒め"),
-                Cuisine("ピーマンのナムル"),
-                Cuisine("ブロッコリーとツナのチーズ蒸し"),
-                Cuisine("ブロッコリーのガーリックパン粉がけ"),
-                Cuisine("ほうれん草とエリンギのニンニク炒め"),
-                Cuisine("ほうれん草とツナのバターしょうゆ炒め"),
-                Cuisine("ほうれん草とベーコンのソテー"),
-                Cuisine("ほうれん草のおひたし"),
-                Cuisine("ポテトサラダ"),
-                Cuisine("ポテトのシーザーサラダ"),
-                Cuisine("マカロニサラダ"),
-                Cuisine("みそドレッシングのレインボーサラダ"),
-                Cuisine("メイソンジャーサラダ"),
-                Cuisine("もやしときゅうりのごま和え"),
-                Cuisine("レタスと卵の炒め物"),
-                Cuisine("茄子とチェリートマトのスパイシーロースト"),
-                Cuisine("茄子とトマトとフェタチーズのロースト"),
-                Cuisine("小松菜と厚揚げの煮びたし"),
-                Cuisine("焼きナス"),
-                Cuisine("水菜と油揚げの煮浸し"),
-                Cuisine("大根サラダ"),
-                Cuisine("大根とニンジンのピクルス"),
-                Cuisine("大根の中華風そぼろ煮"),
-                Cuisine("大豆とえだまめのソテー"),
-                Cuisine("筑前煮"),
-                Cuisine("豆腐とアマランスのサラダ"),
-                Cuisine("豆腐とじゃこのサラダ"),
-                Cuisine("豚バラもやし炒め"),
-                Cuisine("野菜のワッフル"),
-                Cuisine("野菜炒め")
-            )
-        } else {
-            arrayListOf(
-                Cuisine("Asparagus and Carrot Salad"),
-                Cuisine("Avocado and Edamame Salad"),
-                Cuisine("Avocado and Feta Cheese Salsa"),
-                Cuisine("Bean Sprouts and Cucumber with Sesame Sauce"),
-                Cuisine("Boiled pumpkin"),
-                Cuisine("Boiled spinach"),
-                Cuisine("Breaded broccoli with garlic"),
-                Cuisine("Burdock root salad"),
-                Cuisine("Cabbage with salted kelp"),
-                Cuisine("Caesar salad with potatoes"),
-                Cuisine("Caesar salad"),
-                Cuisine("Caprese Salad with Tomatoes, Basil and Mozzarella"),
-                Cuisine("Chikuzen-ni"),
-                Cuisine("Chinese-style simmered radish with minced chicken"),
-                Cuisine("Coconut, Quinoa and Spinach Salad"),
-                Cuisine("Coleslaw"),
-                Cuisine("Deep-fried burdock root with tsukune"),
-                Cuisine("Garden Salad with Herbs and Quinoa"),
-                Cuisine("Green beans with sesame paste"),
-                Cuisine("Green Detox Salad"),
-                Cuisine("Green Pepper Namuru"),
-                Cuisine("Grilled Eggplant"),
-                Cuisine("Grilled Zucchini Salad"),
-                Cuisine("Guacamole"),
-                Cuisine("Herb, chickpea and spinach salad"),
-                Cuisine("Honey Lemon Vinaigrette Salad with Quinoa"),
-                Cuisine("Israeli Salad with Couscous"),
-                Cuisine("Israeli salad"),
-                Cuisine("Kale with Lemon Vinaigrette Salad"),
-                Cuisine("Kinpira Gobo"),
-                Cuisine("Kyuri and chikuwa salad"),
-                Cuisine("Macaroni salad"),
-                Cuisine("Marinated Basil and Mozzarella Cheese"),
-                Cuisine("Mason Jar Salad"),
-                Cuisine("Mediterranean Salad with Tortellini"),
-                Cuisine("Mushrooms with mayo"),
-                Cuisine("Onion Rings"),
-                Cuisine("Pasta Salad"),
-                Cuisine("Pickled Cucumber and Celery"),
-                Cuisine("Pickled Radish and Carrot"),
-                Cuisine("Potato salad"),
-                Cuisine("Radish salad"),
-                Cuisine("Rainbow Salad with Miso Dressing"),
-                Cuisine("Roasted eggplant, tomato and feta cheese"),
-                Cuisine("Sauteed eggplant and green pepper with miso"),
-                Cuisine("Sauteed Green Pepper and Bean Sprouts with Salt"),
-                Cuisine("Sauteed komatsuna and deep-fried tofu"),
-                Cuisine("Sauteed okra with egg"),
-                Cuisine("Sauteed soybeans and edamame"),
-                Cuisine("Sauteed spinach and bacon"),
-                Cuisine("Sauteed spinach and tuna with butter and soy sauce"),
-                Cuisine("Sauteed turnip and deep-fried tofu with mentsuyu sauce"),
-                Cuisine("Sauteed Zucchini and Corn with Parmesan"),
-                Cuisine("Shrimp and Avocado Salad"),
-                Cuisine("Smoked Salmon and Roasted Beet Salad"),
-                Cuisine("Soaked Potherb mustard and fried tofu"),
-                Cuisine("Spicy Roasted Eggplant and Cherry Tomatoes"),
-                Cuisine("Steamed Broccoli and Tuna with Cheese"),
-                Cuisine("Stick salad"),
-                Cuisine("Stir-fried lettuce and egg"),
-                Cuisine("Stir-fried Pork Belly with Bean Sprouts"),
-                Cuisine("Stir-fried spinach and eringi with garlic"),
-                Cuisine("Stir-fried vegetables"),
-                Cuisine("Sweet Potato, Chicken and Quinoa Salad"),
-                Cuisine("Tofu and Amaranth Salad"),
-                Cuisine("Tofu and baby sardines salad"),
-                Cuisine("tomato salad"),
-                Cuisine("Tomato, Cucumber and Avocado Salad"),
-                Cuisine("Tomatoes stuffed with cream cheese"),
-                Cuisine("Tuna lettuce salad"),
-                Cuisine("Tuna Salad Stuffed with Avocado"),
-                Cuisine("Tuna salad with pea pods"),
-                Cuisine("Vegetable waffles")
-            )
-        }
-
-        cCuisines = if (locale == Locale.JAPAN) {
-            arrayListOf(
-                Cuisine("あさりの味噌汁"),
-                Cuisine("アスパラとベーコンの味噌汁"),
-                Cuisine("えのきのサンラータン"),
-                Cuisine("オニオングラタンスープ"),
-                Cuisine("カブと豆腐のとろみ汁"),
-                Cuisine("かぼちゃとココナッツのスープ"),
-                Cuisine("カリフラワーのスープ"),
-                Cuisine("カリフラワーの味噌汁"),
-                Cuisine("カルビクッパ"),
-                Cuisine("キムチの味噌汁"),
-                Cuisine("キャベツとベーコンの豆乳味噌汁"),
-                Cuisine("キャベツと玉子のスープ"),
-                Cuisine("クラムチャウダー"),
-                Cuisine("けんちん汁"),
-                Cuisine("コーンスープ"),
-                Cuisine("コンソメスープ"),
-                Cuisine("しじみ汁"),
-                Cuisine("じゃがいもとクレソンの味噌汁"),
-                Cuisine("じゃがいもと玉ねぎの味噌汁"),
-                Cuisine("ズッキーニのクリーミースープ"),
-                Cuisine("スパイスパンプキンスープ"),
-                Cuisine("チンゲンサイの中華スープ"),
-                Cuisine("とろろ昆布汁"),
-                Cuisine("ナスとエノキの味噌汁"),
-                Cuisine("ナスとミョウガのごま味噌汁"),
-                Cuisine("なめこと豆腐の味噌汁"),
-                Cuisine("ニラと玉子の味噌汁"),
-                Cuisine("ニラ玉の味噌汁"),
-                Cuisine("ピーマンの味噌汁"),
-                Cuisine("フレンチオニオンスープ"),
-                Cuisine("ブロッコリーとじゃがいものスープ"),
-                Cuisine("ポテトとケールのクリーミースープ"),
-                Cuisine("ポトフ"),
-                Cuisine("ボルシチ"),
-                Cuisine("ミネストローネ"),
-                Cuisine("もやしの中華スープ"),
-                Cuisine("レタスの味噌汁"),
-                Cuisine("レンコン団子汁"),
-                Cuisine("ローストトマトとバジルのクリーミースープ"),
-                Cuisine("わかめスープ"),
-                Cuisine("玉ねぎとニンニクのスープ"),
-                Cuisine("春雨スープ"),
-                Cuisine("大根と油揚げの味噌汁"),
-                Cuisine("大豆とトマトのスープ"),
-                Cuisine("沢煮椀"),
-                Cuisine("椎茸とほうれん草の味噌汁"),
-                Cuisine("豆腐とわかめの味噌汁"),
-                Cuisine("豚しゃぶと梅干しのスープ"),
-                Cuisine("豚汁"),
-                Cuisine("白菜と小松菜の味噌汁")
-            )
-        } else {
-            arrayListOf(
-                Cuisine("Borscht"),
-                Cuisine("Broccoli and Potato Soup"),
-                Cuisine("Cabbage and Egg Soup"),
-                Cuisine("Cauliflower Miso Soup"),
-                Cuisine("Cauliflower Soup"),
-                Cuisine("Chinese Bean Sprouts Soup"),
-                Cuisine("Chinese green chinese soup"),
-                Cuisine("Clam chowder"),
-                Cuisine("Consomme Soup"),
-                Cuisine("Corn Soup"),
-                Cuisine("Creamy Potato and Kale Soup"),
-                Cuisine("Creamy Roasted Tomato and Basil Soup"),
-                Cuisine("Creamy Zucchini Soup"),
-                Cuisine("Eggplant and myoga miso soup with sesame seeds"),
-                Cuisine("Enoki Mushroom Sanratang"),
-                Cuisine("French Onion Soup"),
-                Cuisine("Kalbi Kuppa"),
-                Cuisine("kelp soup"),
-                Cuisine("Kenchin-jiru"),
-                Cuisine("Lentil Dumpling Soup"),
-                Cuisine("Lettuce in miso soup"),
-                Cuisine("Minestrone"),
-                Cuisine("Miso soup of shiitake mushroom and spinach"),
-                Cuisine("Miso soup with asparagus and bacon"),
-                Cuisine("Miso soup with cabbage and bacon in soy milk"),
-                Cuisine("Miso soup with Chinese cabbage and komatsuna"),
-                Cuisine("Miso soup with eggplant and enoki mushroom"),
-                Cuisine("Miso soup with green pepper"),
-                Cuisine("Miso Soup with Kimchi"),
-                Cuisine("Miso soup with leek and egg"),
-                Cuisine("Miso soup with leek balls"),
-                Cuisine("Miso soup with nameko mushroom and tofu"),
-                Cuisine("Miso soup with potatoes and onions"),
-                Cuisine("Miso Soup with Potatoes and Watercress"),
-                Cuisine("Miso soup with radish and deep-fried tofu"),
-                Cuisine("Miso soup with scallion"),
-                Cuisine("Miso soup with tofu and wakame seaweed"),
-                Cuisine("Onion and Garlic Soup"),
-                Cuisine("Onion gratin soup"),
-                Cuisine("Pork Shabu and Dried Plum Soup"),
-                Cuisine("Pork soup"),
-                Cuisine("Pot-au-feu"),
-                Cuisine("Pumpkin and Coconut Soup"),
-                Cuisine("Sawani soup"),
-                Cuisine("Seaweed soup"),
-                Cuisine("Shijimi-jiru"),
-                Cuisine("Soybean and Tomato Soup"),
-                Cuisine("Spiced Pumpkin Soup"),
-                Cuisine("Turnip and Tofu Soup"),
-                Cuisine("Vermicelli soup")
             )
         }
 
         dCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("アイス"),
-                Cuisine("アサイーとベリーのグラニテ"),
-                Cuisine("あんみつ"),
-                Cuisine("いちご"),
-                Cuisine("いちごの錦玉"),
-                Cuisine("おしるこ"),
-                Cuisine("オレンジ"),
-                Cuisine("カフェオレゼリー"),
-                Cuisine("キウイフルーツ"),
-                Cuisine("コーヒーゼリー"),
-                Cuisine("コカーダ"),
-                Cuisine("スモア"),
-                Cuisine("チョコバナナパフェ"),
-                Cuisine("チョコムース"),
-                Cuisine("トウファ"),
-                Cuisine("パウンドケーキ"),
-                Cuisine("バナナ"),
-                Cuisine("バナナスムージー"),
-                Cuisine("ババロア"),
-                Cuisine("パンケーキ"),
-                Cuisine("パンナコッタ"),
-                Cuisine("パンネンクーケン"),
-                Cuisine("ブドウ"),
-                Cuisine("ブリガデイロ"),
-                Cuisine("プリン"),
-                Cuisine("フルーチェ"),
-                Cuisine("ブロンディ"),
-                Cuisine("ホットケーキ"),
-                Cuisine("マフィン"),
-                Cuisine("みかん"),
-                Cuisine("みかんゼリー"),
-                Cuisine("みかんのシャーベット"),
-                Cuisine("メロン"),
-                Cuisine("ヨーグルト"),
-                Cuisine("ヨーグルトクレープ"),
-                Cuisine("りんご"),
-                Cuisine("りんごのグラッセ"),
-                Cuisine("杏仁豆腐"),
-                Cuisine("焼マシュマロのミルクシェイク"),
-                Cuisine("大福"),
-                Cuisine("団子"),
-                Cuisine("桃"),
-                Cuisine("桃のコンポート"),
-                Cuisine("豆乳ドーナツ"),
-                Cuisine("抹茶ティラミス"),
-                Cuisine("梨"),
-                Cuisine("餃子の皮クレープ")
+                Cuisine("きゅうりとセロリのピクルス"),
+                Cuisine("きゅうりとちくわのサラダ"),
             )
         } else {
             arrayListOf(
-                Cuisine("Acai and berry granite"),
-                Cuisine("Anmitsu"),
-                Cuisine("apple glace"),
-                Cuisine("Apples"),
-                Cuisine("Apricot bean curd"),
-                Cuisine("banana smoothie"),
-                Cuisine("banana"),
-                Cuisine("Bavarois"),
-                Cuisine("Blondie"),
-                Cuisine("Brigadeiro"),
-                Cuisine("Cafe au lait jelly"),
-                Cuisine("chocolate banana parfait"),
-                Cuisine("chocolate mousse"),
-                Cuisine("coffee jelly"),
-                Cuisine("Coquada"),
-                Cuisine("Daifuku"),
-                Cuisine("dango"),
-                Cuisine("Frutche"),
-                Cuisine("grapes"),
-                Cuisine("green tea tiramisu"),
-                Cuisine("Gyoza skin crepe"),
-                Cuisine("Ice cream"),
-                Cuisine("Kiwifruit"),
-                Cuisine("melon"),
-                Cuisine("Milkshake with roasted marshmallows"),
-                Cuisine("Muffins"),
-                Cuisine("oranges"),
-                Cuisine("Oshiruko"),
-                Cuisine("pancakes"),
-                Cuisine("Pancakes"),
-                Cuisine("Panna cotta"),
-                Cuisine("Pannen Kuken"),
-                Cuisine("peach compote"),
-                Cuisine("Peaches"),
-                Cuisine("pear"),
-                Cuisine("Pound cake"),
-                Cuisine("pudding"),
-                Cuisine("S'mores"),
-                Cuisine("soy milk donuts"),
-                Cuisine("strawberries"),
-                Cuisine("Strawberry brocade"),
-                Cuisine("Tangerine jelly"),
-                Cuisine("Tangerine sorbet"),
-                Cuisine("tangerine"),
-                Cuisine("Tofa"),
-                Cuisine("Yogurt crepes"),
-                Cuisine("yogurt")
+
             )
         }
 
         eCuisines = if (locale == Locale.JAPAN) {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("大根サラダ"),
+                Cuisine("大根とニンジンのピクルス"),
+                Cuisine("大根と油揚げの味噌汁"),
+                Cuisine("大根のそぼろ煮"),
+                Cuisine("大根の中華風そぼろ煮"),
+            )
         } else {
             arrayListOf()
         }
 
         fCuisines = if (locale == Locale.JAPAN) {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("レタスと卵の炒め物"),
+                Cuisine("レタスの味噌汁"),
+                Cuisine("シーザーサラダ"),
+            )
         } else {
             arrayListOf()
         }
 
         gCuisines = if (locale == Locale.JAPAN) {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("キャベツとベーコンの豆乳味噌汁"),
+                Cuisine("キャベツと玉子のスープ"),
+                Cuisine("キャベツの塩昆布和え"),
+                Cuisine("ロールキャベツ"),
+            )
         } else {
             arrayListOf()
         }
 
         hCuisines = if (locale == Locale.JAPAN) {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("もやしときゅうりのごま和え"),
+                Cuisine("もやしの中華スープ"),
+            )
         } else {
             arrayListOf()
         }
 
         iCuisines = if (locale == Locale.JAPAN) {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("白菜と小松菜の味噌汁"),
+                Cuisine("白菜の旨煮"),
+
+            )
         } else {
             arrayListOf()
         }
 
         jCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+                Cuisine("オニオングラタンスープ"),
+                Cuisine("オニオンリング"),
+            )
+        } else {
             arrayListOf()
+        }
+
+        kCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
         } else {
             arrayListOf()
         }
@@ -1242,6 +805,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         hCustomAdapter = CustomAdapter(this, hCuisines, this)
         iCustomAdapter = CustomAdapter(this, iCuisines, this)
         jCustomAdapter = CustomAdapter(this, jCuisines, this)
+        kCustomAdapter = CustomAdapter(this, kCuisines, this)
 
 
         binding.listView.adapter = aCustomAdapter
