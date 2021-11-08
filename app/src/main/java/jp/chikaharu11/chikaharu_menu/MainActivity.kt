@@ -611,6 +611,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.tamanegi, "玉ネギ　"),
                     Model(R.drawable.negi, "ネギ　"),
                     Model(R.drawable.negi, "じゃがいも　"),
+                    Model(R.drawable.negi, "さつまいも　"),
+                    Model(R.drawable.negi, "人参　"),
                     Model(R.drawable.negi, "かぼちゃ　"),
                     Model(R.drawable.negi, "トマト　"),
                     Model(R.drawable.negi, "ナス　"),
@@ -618,7 +620,18 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.negi, "ブロッコリー　"),
                     Model(R.drawable.negi, "かぶ　"),
                     Model(R.drawable.negi, "ほうれん草　"),
-                    Model(R.drawable.negi, "ニラ　")
+                    Model(R.drawable.negi, "小松菜　"),
+                    Model(R.drawable.negi, "ちんげん菜　"),
+                    Model(R.drawable.negi, "オクラ　"),
+                    Model(R.drawable.negi, "ニラ　"),
+                    Model(R.drawable.negi, "ごぼう　"),
+                    Model(R.drawable.negi, "レンコン　"),
+                    Model(R.drawable.negi, "しいたけ　"),
+                    Model(R.drawable.negi, "えのき　"),
+                    Model(R.drawable.negi, "しめじ　"),
+                    Model(R.drawable.negi, "エリンギ　"),
+                    Model(R.drawable.negi, "卵　"),
+                    Model(R.drawable.negi, "豆腐　")
                 )
             )
         } else {
