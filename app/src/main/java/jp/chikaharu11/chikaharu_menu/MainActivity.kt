@@ -71,6 +71,28 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var iCustomAdapter: CustomAdapter
     private lateinit var jCustomAdapter: CustomAdapter
     private lateinit var kCustomAdapter: CustomAdapter
+    private lateinit var lCustomAdapter: CustomAdapter
+    private lateinit var mCustomAdapter: CustomAdapter
+    private lateinit var nCustomAdapter: CustomAdapter
+    private lateinit var oCustomAdapter: CustomAdapter
+    private lateinit var pCustomAdapter: CustomAdapter
+    private lateinit var qCustomAdapter: CustomAdapter
+    private lateinit var rCustomAdapter: CustomAdapter
+    private lateinit var sCustomAdapter: CustomAdapter
+    private lateinit var tCustomAdapter: CustomAdapter
+    private lateinit var uCustomAdapter: CustomAdapter
+    private lateinit var vCustomAdapter: CustomAdapter
+    private lateinit var wCustomAdapter: CustomAdapter
+    private lateinit var xCustomAdapter: CustomAdapter
+    private lateinit var yCustomAdapter: CustomAdapter
+    private lateinit var zCustomAdapter: CustomAdapter
+    private lateinit var aaCustomAdapter: CustomAdapter
+    private lateinit var abCustomAdapter: CustomAdapter
+    private lateinit var acCustomAdapter: CustomAdapter
+    private lateinit var adCustomAdapter: CustomAdapter
+    private lateinit var aeCustomAdapter: CustomAdapter
+    private lateinit var afCustomAdapter: CustomAdapter
+    private lateinit var agCustomAdapter: CustomAdapter
 
     private lateinit var aCuisines: MutableList<Cuisine>
     private lateinit var bCuisines: MutableList<Cuisine>
@@ -83,6 +105,28 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var iCuisines: MutableList<Cuisine>
     private lateinit var jCuisines: MutableList<Cuisine>
     private lateinit var kCuisines: MutableList<Cuisine>
+    private lateinit var lCuisines: MutableList<Cuisine>
+    private lateinit var mCuisines: MutableList<Cuisine>
+    private lateinit var nCuisines: MutableList<Cuisine>
+    private lateinit var oCuisines: MutableList<Cuisine>
+    private lateinit var pCuisines: MutableList<Cuisine>
+    private lateinit var qCuisines: MutableList<Cuisine>
+    private lateinit var rCuisines: MutableList<Cuisine>
+    private lateinit var sCuisines: MutableList<Cuisine>
+    private lateinit var tCuisines: MutableList<Cuisine>
+    private lateinit var uCuisines: MutableList<Cuisine>
+    private lateinit var vCuisines: MutableList<Cuisine>
+    private lateinit var wCuisines: MutableList<Cuisine>
+    private lateinit var xCuisines: MutableList<Cuisine>
+    private lateinit var yCuisines: MutableList<Cuisine>
+    private lateinit var zCuisines: MutableList<Cuisine>
+    private lateinit var aaCuisines: MutableList<Cuisine>
+    private lateinit var abCuisines: MutableList<Cuisine>
+    private lateinit var acCuisines: MutableList<Cuisine>
+    private lateinit var adCuisines: MutableList<Cuisine>
+    private lateinit var aeCuisines: MutableList<Cuisine>
+    private lateinit var afCuisines: MutableList<Cuisine>
+    private lateinit var agCuisines: MutableList<Cuisine>
 
 
     private val handler = Handler()
@@ -678,7 +722,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             )
         }
-
         bCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("豚キムチ"),
@@ -702,7 +745,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             )
         }
-
         cCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("鶏ひき肉とキャベツの卵とじ"),
@@ -727,7 +769,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             )
         }
-
         dCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("きゅうりとセロリのピクルス"),
@@ -738,7 +779,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             )
         }
-
         eCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("大根サラダ"),
@@ -750,7 +790,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
-
         fCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("レタスと卵の炒め物"),
@@ -760,7 +799,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
-
         gCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("キャベツとベーコンの豆乳味噌汁"),
@@ -771,7 +809,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
-
         hCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("もやしときゅうりのごま和え"),
@@ -780,7 +817,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
-
         iCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("白菜と小松菜の味噌汁"),
@@ -790,7 +826,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
-
         jCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("オニオングラタンスープ"),
@@ -799,8 +834,161 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
-
         kCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        lCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        mCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        nCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        oCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        pCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        qCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        rCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        sCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        tCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        uCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        vCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        wCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        xCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        yCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        zCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        aaCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        abCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        acCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        adCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        aeCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        afCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
+        agCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
 
             )
@@ -819,6 +1007,28 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         iCustomAdapter = CustomAdapter(this, iCuisines, this)
         jCustomAdapter = CustomAdapter(this, jCuisines, this)
         kCustomAdapter = CustomAdapter(this, kCuisines, this)
+        lCustomAdapter = CustomAdapter(this, lCuisines, this)
+        mCustomAdapter = CustomAdapter(this, mCuisines, this)
+        nCustomAdapter = CustomAdapter(this, nCuisines, this)
+        oCustomAdapter = CustomAdapter(this, oCuisines, this)
+        pCustomAdapter = CustomAdapter(this, pCuisines, this)
+        qCustomAdapter = CustomAdapter(this, qCuisines, this)
+        rCustomAdapter = CustomAdapter(this, rCuisines, this)
+        sCustomAdapter = CustomAdapter(this, sCuisines, this)
+        tCustomAdapter = CustomAdapter(this, tCuisines, this)
+        uCustomAdapter = CustomAdapter(this, uCuisines, this)
+        vCustomAdapter = CustomAdapter(this, vCuisines, this)
+        wCustomAdapter = CustomAdapter(this, wCuisines, this)
+        xCustomAdapter = CustomAdapter(this, xCuisines, this)
+        yCustomAdapter = CustomAdapter(this, yCuisines, this)
+        zCustomAdapter = CustomAdapter(this, zCuisines, this)
+        aaCustomAdapter = CustomAdapter(this, aaCuisines, this)
+        abCustomAdapter = CustomAdapter(this, abCuisines, this)
+        acCustomAdapter = CustomAdapter(this, acCuisines, this)
+        adCustomAdapter = CustomAdapter(this, adCuisines, this)
+        aeCustomAdapter = CustomAdapter(this, aeCuisines, this)
+        afCustomAdapter = CustomAdapter(this, afCuisines, this)
+        agCustomAdapter = CustomAdapter(this, agCuisines, this)
 
 
         binding.listView.adapter = aCustomAdapter
@@ -3070,7 +3280,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
+                            binding.listView.adapter = eCustomAdapter
                             eCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "果物、デザート"
@@ -3086,7 +3296,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
+                            binding.listView.adapter = fCustomAdapter
                             fCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "果物、デザート"
