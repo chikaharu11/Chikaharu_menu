@@ -686,29 +686,29 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.hakusai, "白菜　"),
                     Model(R.drawable.tamanegi, "玉ネギ　"),
                     Model(R.drawable.negi, "ネギ　"),
-                    Model(R.drawable.negi, "じゃがいも　"),
-                    Model(R.drawable.negi, "さつまいも　"),
-                    Model(R.drawable.negi, "人参　"),
-                    Model(R.drawable.negi, "かぼちゃ　"),
-                    Model(R.drawable.negi, "トマト　"),
-                    Model(R.drawable.negi, "ナス　"),
-                    Model(R.drawable.negi, "ピーマン　"),
-                    Model(R.drawable.negi, "ブロッコリー　"),
-                    Model(R.drawable.negi, "かぶ　"),
-                    Model(R.drawable.negi, "ほうれん草　"),
-                    Model(R.drawable.negi, "小松菜　"),
-                    Model(R.drawable.negi, "ちんげん菜　"),
-                    Model(R.drawable.negi, "オクラ　"),
-                    Model(R.drawable.negi, "ニラ　"),
-                    Model(R.drawable.negi, "ごぼう　"),
-                    Model(R.drawable.negi, "レンコン　"),
-                    Model(R.drawable.negi, "いんげん　"),
-                    Model(R.drawable.negi, "しいたけ　"),
-                    Model(R.drawable.negi, "えのき　"),
-                    Model(R.drawable.negi, "しめじ　"),
-                    Model(R.drawable.negi, "エリンギ　"),
-                    Model(R.drawable.negi, "卵　"),
-                    Model(R.drawable.negi, "豆腐　"),
+                    Model(R.drawable.jyagaimo, "じゃがいも　"),
+                    Model(R.drawable.satsumaimo, "さつまいも　"),
+                    Model(R.drawable.carrot_b, "人参　"),
+                    Model(R.drawable.kabocya, "かぼちゃ　"),
+                    Model(R.drawable.tomato, "トマト　"),
+                    Model(R.drawable.nasu, "ナス　"),
+                    Model(R.drawable.piman, "ピーマン　"),
+                    Model(R.drawable.burokkori, "ブロッコリー　"),
+                    Model(R.drawable.kabu, "かぶ　"),
+                    Model(R.drawable.hourensou, "ほうれん草　"),
+                    Model(R.drawable.komatsuna, "小松菜　"),
+                    Model(R.drawable.chingensai, "ちんげん菜　"),
+                    Model(R.drawable.okura, "オクラ　"),
+                    Model(R.drawable.nira, "ニラ　"),
+                    Model(R.drawable.gobou, "ごぼう　"),
+                    Model(R.drawable.renkon, "レンコン　"),
+                    Model(R.drawable.ingen, "いんげん　"),
+                    Model(R.drawable.siitake, "しいたけ　"),
+                    Model(R.drawable.enoki, "えのき　"),
+                    Model(R.drawable.shimeji, "しめじ　"),
+                    Model(R.drawable.eringi, "エリンギ　"),
+                    Model(R.drawable.tamago, "卵　"),
+                    Model(R.drawable.toufu, "豆腐　"),
                     Model(R.drawable.negi, "さけ　"),
                     Model(R.drawable.negi, "さば　"),
                     Model(R.drawable.negi, "あじ　"),
@@ -5351,73 +5351,73 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.negi_w)
             }
             18 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.jyagaimo_w)
             }
             19 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.satsumaimo_w)
             }
             20 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.carrot_w)
             }
             21 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.kabocya_w)
             }
             22 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.tomato_w)
             }
             23 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.nasu_w)
             }
             24 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.piman_w)
             }
             25 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.burokkori_w)
             }
             26 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.kabu_w)
             }
             27 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.hourensou_w)
             }
             28 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.komatsuna_w)
             }
             29 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.chingensai_w)
             }
             30 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.okura_w)
             }
             31 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.nira_w)
             }
             32 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.gobou_w)
             }
             33 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.renkon_w)
             }
             34 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.ingen_w)
             }
             35 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.siitake_w)
             }
             36 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.enoki_w)
             }
             37 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.shimeji_w)
             }
             38 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.eringi_w)
             }
             39 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.tamago_w)
             }
             40 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.toufu_w)
             }
             41 -> {
                 menuLamp.setIcon(R.drawable.negi_w)
