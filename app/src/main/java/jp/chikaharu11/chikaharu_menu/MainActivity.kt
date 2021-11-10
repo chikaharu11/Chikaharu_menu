@@ -672,9 +672,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.shuffle_b, "おまかせ　"),
                     Model(R.drawable.search_b, "詳細検索　"),
                     Model(R.drawable.dinner_b, "主菜、ご飯類、麺類　"),
-                    Model(R.drawable.carrot_b, "副菜、サラダ　"),
+                    Model(R.drawable.salad, "副菜、サラダ　"),
                     Model(R.drawable.soup_b, "味噌汁、スープ　"),
-                    Model(R.drawable.apple_b, "果物、デザート　"),
+                    Model(R.drawable.dessert, "果物、デザート　"),
                     Model(R.drawable.beef, "牛肉　"),
                     Model(R.drawable.pork, "豚肉　"),
                     Model(R.drawable.chiken, "鶏肉　"),
@@ -5387,6 +5387,66 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.negi_w)
             }
             30 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            31 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            32 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            33 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            34 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            35 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            36 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            37 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            38 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            39 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            40 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            41 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            42 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            43 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            44 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            45 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            46 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            47 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            48 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            49 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            50 -> {
                 menuLamp.setIcon(R.drawable.negi_w)
             }
         }
