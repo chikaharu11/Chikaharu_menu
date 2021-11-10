@@ -4134,6 +4134,534 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                             pasteFlag = 17
                         }
+                        18 -> { menuSwitch = 18
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = lCustomAdapter
+                            lCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 18
+                        }
+                        19 -> { menuSwitch = 19
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = mCustomAdapter
+                            mCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 19
+                        }
+                        20 -> { menuSwitch = 20
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = nCustomAdapter
+                            nCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 20
+                        }
+                        21 -> { menuSwitch = 21
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = oCustomAdapter
+                            oCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 21
+                        }
+                        22 -> { menuSwitch = 22
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = pCustomAdapter
+                            pCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 22
+                        }
+                        23 -> { menuSwitch = 23
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = qCustomAdapter
+                            qCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 23
+                        }
+                        24 -> { menuSwitch = 24
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = rCustomAdapter
+                            rCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 24
+                        }
+                        25 -> { menuSwitch = 25
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = sCustomAdapter
+                            sCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 25
+                        }
+                        26 -> { menuSwitch = 26
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = tCustomAdapter
+                            tCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 26
+                        }
+                        27 -> { menuSwitch = 27
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = uCustomAdapter
+                            uCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 27
+                        }
+                        28 -> { menuSwitch = 28
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = vCustomAdapter
+                            vCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 28
+                        }
+                        29 -> { menuSwitch = 29
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = wCustomAdapter
+                            wCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 29
+                        }
+                        30 -> { menuSwitch = 30
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = xCustomAdapter
+                            xCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 30
+                        }
+                        31 -> { menuSwitch = 31
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = yCustomAdapter
+                            yCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 31
+                        }
+                        32 -> { menuSwitch = 32
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = zCustomAdapter
+                            zCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 32
+                        }
+                        33 -> { menuSwitch = 33
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = aaCustomAdapter
+                            aaCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 33
+                        }
+                        34 -> { menuSwitch = 34
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = abCustomAdapter
+                            abCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 34
+                        }
+                        35 -> { menuSwitch = 35
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = acCustomAdapter
+                            acCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 35
+                        }
+                        36 -> { menuSwitch = 36
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = adCustomAdapter
+                            adCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 36
+                        }
+                        37 -> { menuSwitch = 37
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = aeCustomAdapter
+                            aeCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 37
+                        }
+                        38 -> { menuSwitch = 38
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = afCustomAdapter
+                            afCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 38
+                        }
+                        39 -> { menuSwitch = 39
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = agCustomAdapter
+                            agCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 39
+                        }
+                        40 -> { menuSwitch = 40
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = agCustomAdapter
+                            agCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 40
+                        }
+                        41 -> { menuSwitch = 41
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = ahCustomAdapter
+                            ahCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 41
+                        }
+                        42 -> { menuSwitch = 42
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = aiCustomAdapter
+                            aiCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 42
+                        }
+                        43 -> { menuSwitch = 43
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = ajCustomAdapter
+                            ajCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 43
+                        }
+                        44 -> { menuSwitch = 44
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = akCustomAdapter
+                            akCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 44
+                        }
+                        45 -> { menuSwitch = 45
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = alCustomAdapter
+                            alCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 45
+                        }
+                        46 -> { menuSwitch = 46
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = amCustomAdapter
+                            amCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 46
+                        }
+                        47 -> { menuSwitch = 47
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = anCustomAdapter
+                            anCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 47
+                        }
+                        48 -> { menuSwitch = 48
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = aoCustomAdapter
+                            aoCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 48
+                        }
+                        49 -> { menuSwitch = 49
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = apCustomAdapter
+                            apCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 49
+                        }
+                        50 -> { menuSwitch = 50
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = aqCustomAdapter
+                            aqCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 50
+                        }
                     }
                 }
 
@@ -4820,6 +5348,45 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.tamanegi_w)
             }
             17 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            18 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            19 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            20 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            21 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            22 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            23 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            24 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            25 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            26 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            27 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            28 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            29 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            30 -> {
                 menuLamp.setIcon(R.drawable.negi_w)
             }
         }
