@@ -60,6 +60,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
     private lateinit var soundPool: SoundPool
 
+    private lateinit var aaaCustomAdapter: CustomAdapter
+    private lateinit var aabCustomAdapter: CustomAdapter
+    private lateinit var aacCustomAdapter: CustomAdapter
+    private lateinit var aadCustomAdapter: CustomAdapter
     private lateinit var aCustomAdapter: CustomAdapter
     private lateinit var bCustomAdapter: CustomAdapter
     private lateinit var cCustomAdapter: CustomAdapter
@@ -104,6 +108,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var apCustomAdapter: CustomAdapter
     private lateinit var aqCustomAdapter: CustomAdapter
 
+    private lateinit var aaaCuisines: MutableList<Cuisine>
+    private lateinit var aabCuisines: MutableList<Cuisine>
+    private lateinit var aacCuisines: MutableList<Cuisine>
+    private lateinit var aadCuisines: MutableList<Cuisine>
     private lateinit var aCuisines: MutableList<Cuisine>
     private lateinit var bCuisines: MutableList<Cuisine>
     private lateinit var cCuisines: MutableList<Cuisine>
@@ -663,6 +671,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_create_black_48dp, "手入力する　"),
                     Model(R.drawable.shuffle_b, "おまかせ　"),
                     Model(R.drawable.search_b, "詳細検索　"),
+                    Model(R.drawable.dinner_b, "主菜、ご飯類、麺類　"),
+                    Model(R.drawable.carrot_b, "副菜、サラダ　"),
+                    Model(R.drawable.soup_b, "味噌汁、スープ　"),
+                    Model(R.drawable.apple_b, "果物、デザート　"),
                     Model(R.drawable.beef, "牛肉　"),
                     Model(R.drawable.pork, "豚肉　"),
                     Model(R.drawable.chiken, "鶏肉　"),
@@ -737,6 +749,562 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             } else {
                 supportActionBar?.title = "Menu list"
             }
+
+        aaaCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+                Cuisine("アスパラの肉巻き"),
+                Cuisine("エビフライ"),
+                Cuisine("オムライス"),
+                Cuisine("お好み焼き"),
+                Cuisine("お刺身"),
+                Cuisine("ガーリックシュリンプ"),
+                Cuisine("カツオのタタキ"),
+                Cuisine("カレイの煮付け"),
+                Cuisine("カレー"),
+                Cuisine("クリームシチュー"),
+                Cuisine("グリルチキンのシャワルマ"),
+                Cuisine("サーモンのスパイスグリル"),
+                Cuisine("サーモンのムケッカ"),
+                Cuisine("サーモンのメープルグリル"),
+                Cuisine("サイコロステーキ"),
+                Cuisine("さつまいもとズッキーニのポークラザニア"),
+                Cuisine("サバ味噌煮"),
+                Cuisine("サンマの塩焼き"),
+                Cuisine("シャクシュカ"),
+                Cuisine("シュラスコ"),
+                Cuisine("すき焼き"),
+                Cuisine("チキンカツ"),
+                Cuisine("チキンステーキ"),
+                Cuisine("チキンとアスパラのフラットブレッドピザ"),
+                Cuisine("チキンナゲット"),
+                Cuisine("チキンのマスタードクリームソースがけ"),
+                Cuisine("チャーハン"),
+                Cuisine("トルティーヤエスパニョーラ"),
+                Cuisine("とんかつ"),
+                Cuisine("ハニーマスタードチキン"),
+                Cuisine("ハマグリのビール蒸し"),
+                Cuisine("ハムカツ"),
+                Cuisine("ハムとソーセージのハッシュブラウン"),
+                Cuisine("ハリバットのグリル　ローストトマト添え"),
+                Cuisine("ハンバーグ"),
+                Cuisine("ビーフシチュー"),
+                Cuisine("ビーフステーキ"),
+                Cuisine("ピーマンのチーズ肉詰め焼き"),
+                Cuisine("ピーマンの肉詰め"),
+                Cuisine("ひき肉とじゃがいものキムチ炒め"),
+                Cuisine("フェイジャン"),
+                Cuisine("ブリの照り焼き"),
+                Cuisine("ブリ大根"),
+                Cuisine("ブルスケッタチキン"),
+                Cuisine("マカロニグラタン"),
+                Cuisine("マッシュルームとモッツァレラのフレンチオムレツ"),
+                Cuisine("マヒマヒのグリル"),
+                Cuisine("ミートグラタン"),
+                Cuisine("ミートソースパスタ"),
+                Cuisine("ミートローフ"),
+                Cuisine("メンチカツ"),
+                Cuisine("ラーメン"),
+                Cuisine("レモンチキンソテー"),
+                Cuisine("レモンとローズマリーのポークチョップ"),
+                Cuisine("ロールキャベツ"),
+                Cuisine("回鍋肉"),
+                Cuisine("海老のバターソテー"),
+                Cuisine("牛丼"),
+                Cuisine("鶏ひき肉とキャベツの卵とじ"),
+                Cuisine("鶏ひき肉の炒り豆腐"),
+                Cuisine("鶏肉とマッシュルームのクリームソテー"),
+                Cuisine("鶏肉と野菜のクリーム煮"),
+                Cuisine("鶏肉のトマト煮"),
+                Cuisine("鶏肉のニンニクソテー"),
+                Cuisine("鶏肉の香味レンジ蒸し"),
+                Cuisine("鶏肉の照り焼き"),
+                Cuisine("焼きそば"),
+                Cuisine("焼鮭"),
+                Cuisine("焼売"),
+                Cuisine("酢豚"),
+                Cuisine("青椒肉絲"),
+                Cuisine("大根のそぼろ煮"),
+                Cuisine("唐揚げ"),
+                Cuisine("豚キムチ"),
+                Cuisine("豚ひき肉と大根の甘辛煮"),
+                Cuisine("豚角煮"),
+                Cuisine("豚生姜焼き"),
+                Cuisine("豚肉とキャベツのピリ辛みそ炒め"),
+                Cuisine("豚肉とほうれん草、卵の炒め物"),
+                Cuisine("豚肉と豆腐の磯部焼き"),
+                Cuisine("豚肉のネギ塩焼き"),
+                Cuisine("鍋焼きうどん"),
+                Cuisine("肉じゃが"),
+                Cuisine("肉団子のあんかけ"),
+                Cuisine("肉野菜炒め"),
+                Cuisine("白菜の旨煮"),
+                Cuisine("八宝菜"),
+                Cuisine("棒棒鶏"),
+                Cuisine("麻婆春雨"),
+                Cuisine("麻婆豆腐"),
+                Cuisine("野菜とゴーダチーズのフリッタータ"),
+                Cuisine("餃子")
+            )
+        } else {
+            arrayListOf(
+                Cuisine("Asparagus wrapped in meat"),
+                Cuisine("Barbecued chicken"),
+                Cuisine("Beef bowl"),
+                Cuisine("Beef stew"),
+                Cuisine("Beefsteak"),
+                Cuisine("Beer steamed clams"),
+                Cuisine("Bruschetta chicken"),
+                Cuisine("cabbage rolls"),
+                Cuisine("Chicken and Asparagus Flatbread Pizza"),
+                Cuisine("Chicken and vegetables in cream"),
+                Cuisine("Chicken Cutlet"),
+                Cuisine("Chicken in tomato sauce"),
+                Cuisine("Chicken nuggets"),
+                Cuisine("chicken steak"),
+                Cuisine("Chicken with mustard cream sauce"),
+                Cuisine("Churrasco"),
+                Cuisine("Claypot meat"),
+                Cuisine("cream stew"),
+                Cuisine("curry"),
+                Cuisine("dice steak"),
+                Cuisine("Eight treasures"),
+                Cuisine("Fei Jiang"),
+                Cuisine("French Omelet with Mushrooms and Mozzarella"),
+                Cuisine("fried chicken"),
+                Cuisine("fried rice"),
+                Cuisine("Fried rice"),
+                Cuisine("fried shrimp"),
+                Cuisine("Fried tofu with minced chicken"),
+                Cuisine("Frittata with Vegetables and Gouda Cheese"),
+                Cuisine("Garlic Shrimp"),
+                Cuisine("Green pepper paste"),
+                Cuisine("Grilled chicken shawarma"),
+                Cuisine("Grilled Halibut with Roasted Tomatoes"),
+                Cuisine("Grilled Mahi Mahi"),
+                Cuisine("grilled peppers stuffed with cheese"),
+                Cuisine("Grilled Pork and Tofu with Seafood"),
+                Cuisine("Grilled Pork with Negi Salt"),
+                Cuisine("Grilled Salmon with Maple"),
+                Cuisine("Grilled salmon"),
+                Cuisine("Grilled saury with salt"),
+                Cuisine("Gyoza"),
+                Cuisine("Ham and sausage hash browns"),
+                Cuisine("Ham cutlet"),
+                Cuisine("Hamburg steak"),
+                Cuisine("Honey Mustard Chicken"),
+                Cuisine("Katsuo no tataki"),
+                Cuisine("Lemon and Rosemary Pork Chops"),
+                Cuisine("Macaroni au gratin"),
+                Cuisine("Mapo Tofu"),
+                Cuisine("Marvo vermicelli"),
+                Cuisine("meat and potatoes"),
+                Cuisine("meat au gratin"),
+                Cuisine("meatballs with starchy sauce"),
+                Cuisine("Meatloaf"),
+                Cuisine("Menchikatsu"),
+                Cuisine("Minced chicken and cabbage with egg"),
+                Cuisine("Minced chicken and cabbage"),
+                Cuisine("Minced pork and daikon with sweet and spicy sauce"),
+                Cuisine("Nabeyaki udon"),
+                Cuisine("Okonomiyaki"),
+                Cuisine("omelet and rice"),
+                Cuisine("pasta with meat sauce"),
+                Cuisine("pork cutlet"),
+                Cuisine("Pork ginger yaki"),
+                Cuisine("Pork Kakuni"),
+                Cuisine("Pork Kimchi"),
+                Cuisine("Pork Lasagna with Sweet Potatoes and Zucchini"),
+                Cuisine("Ramen"),
+                Cuisine("Salmon Muqueca"),
+                Cuisine("Sashimi"),
+                Cuisine("Sautéed chicken and mushrooms in cream"),
+                Cuisine("Sautéed chicken with garlic"),
+                Cuisine("Sauteed lemon chicken"),
+                Cuisine("Sauteed Pork and Cabbage with Spicy Bean Paste"),
+                Cuisine("Sauteed pork, spinach and egg"),
+                Cuisine("Sauteed shrimp in butter"),
+                Cuisine("Shakshuka"),
+                Cuisine("Simmered mackerel in miso"),
+                Cuisine("Spiced grilled salmon"),
+                Cuisine("Steamed chicken in a savory microwave"),
+                Cuisine("Stewed Chinese cabbage"),
+                Cuisine("Stewed flatfish"),
+                Cuisine("stir-fried meat and vegetables"),
+                Cuisine("Stir-fried minced meat and potatoes with kimchi"),
+                Cuisine("stuffed peppers"),
+                Cuisine("Sukiyaki"),
+                Cuisine("Sweet and sour pork"),
+                Cuisine("Teriyaki Chicken"),
+                Cuisine("Teriyaki yellowtail"),
+                Cuisine("Tortilla Española"),
+                Cuisine("yakisoba"),
+                Cuisine("Yellowtail radish")
+            )
+        }
+
+        aabCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+                Cuisine("アスパラガスと人参のサラダ"),
+                Cuisine("アボカドとフェタチーズのサルサ"),
+                Cuisine("アボカドと枝豆のサラダ"),
+                Cuisine("イスラエルのサラダ"),
+                Cuisine("インゲンのごま和え"),
+                Cuisine("エビとアボカドのサラダ"),
+                Cuisine("オクラの卵炒め"),
+                Cuisine("オニオンリング"),
+                Cuisine("カブと厚揚げのめんつゆ炒め"),
+                Cuisine("かぼちゃの煮付け"),
+                Cuisine("キヌアのハニーレモンビネグレットサラダ"),
+                Cuisine("きのこのマヨ焼き"),
+                Cuisine("キャベツの塩昆布和え"),
+                Cuisine("きゅうりとセロリのピクルス"),
+                Cuisine("きゅうりとちくわのサラダ"),
+                Cuisine("きんぴらごぼう"),
+                Cuisine("グアカモーレ"),
+                Cuisine("クスクスのイスラエルサラダ"),
+                Cuisine("グリーンデトックスサラダ"),
+                Cuisine("ケールのレモンビネグレットサラダ"),
+                Cuisine("コールスロー"),
+                Cuisine("ココナッツ、キヌア、ほうれん草のサラダ"),
+                Cuisine("ごぼうサラダ"),
+                Cuisine("ごぼうのつくね揚げ"),
+                Cuisine("さつまいもとチキンとキヌアのサラダ"),
+                Cuisine("サヤインゲンのツナサラダ"),
+                Cuisine("シーザーサラダ"),
+                Cuisine("ズッキーニとコーンのパルメザンソテー"),
+                Cuisine("ズッキーニのグリルサラダ"),
+                Cuisine("スティックサラダ"),
+                Cuisine("スモークサーモンとローストビートのサラダ"),
+                Cuisine("ツナサラダのアボカド詰め"),
+                Cuisine("ツナレタスサラダ"),
+                Cuisine("トマト、バジル、モッツァレラのカプレーゼサラダ"),
+                Cuisine("トマトサラダ"),
+                Cuisine("トマトとキュウリとアボカドのサラダ"),
+                Cuisine("トマトのクリームチーズ詰め"),
+                Cuisine("トルテリーニの地中海サラダ"),
+                Cuisine("ナスとピーマンの味噌炒め"),
+                Cuisine("ハーブとキヌアのガーデンサラダ"),
+                Cuisine("ハーブとひよこ豆とほうれん草のサラダ"),
+                Cuisine("バジルとモッツァレラチーズのマリネ"),
+                Cuisine("パスタサラダ"),
+                Cuisine("ピーマンともやしの塩炒め"),
+                Cuisine("ピーマンのナムル"),
+                Cuisine("ブロッコリーとツナのチーズ蒸し"),
+                Cuisine("ブロッコリーのガーリックパン粉がけ"),
+                Cuisine("ほうれん草とエリンギのニンニク炒め"),
+                Cuisine("ほうれん草とツナのバターしょうゆ炒め"),
+                Cuisine("ほうれん草とベーコンのソテー"),
+                Cuisine("ほうれん草のおひたし"),
+                Cuisine("ポテトサラダ"),
+                Cuisine("ポテトのシーザーサラダ"),
+                Cuisine("マカロニサラダ"),
+                Cuisine("みそドレッシングのレインボーサラダ"),
+                Cuisine("メイソンジャーサラダ"),
+                Cuisine("もやしときゅうりのごま和え"),
+                Cuisine("レタスと卵の炒め物"),
+                Cuisine("茄子とチェリートマトのスパイシーロースト"),
+                Cuisine("茄子とトマトとフェタチーズのロースト"),
+                Cuisine("小松菜と厚揚げの煮びたし"),
+                Cuisine("焼きナス"),
+                Cuisine("水菜と油揚げの煮浸し"),
+                Cuisine("大根サラダ"),
+                Cuisine("大根とニンジンのピクルス"),
+                Cuisine("大根の中華風そぼろ煮"),
+                Cuisine("大豆とえだまめのソテー"),
+                Cuisine("筑前煮"),
+                Cuisine("豆腐とアマランスのサラダ"),
+                Cuisine("豆腐とじゃこのサラダ"),
+                Cuisine("豚バラもやし炒め"),
+                Cuisine("野菜のワッフル"),
+                Cuisine("野菜炒め")
+            )
+        } else {
+            arrayListOf(
+                Cuisine("Asparagus and Carrot Salad"),
+                Cuisine("Avocado and Edamame Salad"),
+                Cuisine("Avocado and Feta Cheese Salsa"),
+                Cuisine("Bean Sprouts and Cucumber with Sesame Sauce"),
+                Cuisine("Boiled pumpkin"),
+                Cuisine("Boiled spinach"),
+                Cuisine("Breaded broccoli with garlic"),
+                Cuisine("Burdock root salad"),
+                Cuisine("Cabbage with salted kelp"),
+                Cuisine("Caesar salad with potatoes"),
+                Cuisine("Caesar salad"),
+                Cuisine("Caprese Salad with Tomatoes, Basil and Mozzarella"),
+                Cuisine("Chikuzen-ni"),
+                Cuisine("Chinese-style simmered radish with minced chicken"),
+                Cuisine("Coconut, Quinoa and Spinach Salad"),
+                Cuisine("Coleslaw"),
+                Cuisine("Deep-fried burdock root with tsukune"),
+                Cuisine("Garden Salad with Herbs and Quinoa"),
+                Cuisine("Green beans with sesame paste"),
+                Cuisine("Green Detox Salad"),
+                Cuisine("Green Pepper Namuru"),
+                Cuisine("Grilled Eggplant"),
+                Cuisine("Grilled Zucchini Salad"),
+                Cuisine("Guacamole"),
+                Cuisine("Herb, chickpea and spinach salad"),
+                Cuisine("Honey Lemon Vinaigrette Salad with Quinoa"),
+                Cuisine("Israeli Salad with Couscous"),
+                Cuisine("Israeli salad"),
+                Cuisine("Kale with Lemon Vinaigrette Salad"),
+                Cuisine("Kinpira Gobo"),
+                Cuisine("Kyuri and chikuwa salad"),
+                Cuisine("Macaroni salad"),
+                Cuisine("Marinated Basil and Mozzarella Cheese"),
+                Cuisine("Mason Jar Salad"),
+                Cuisine("Mediterranean Salad with Tortellini"),
+                Cuisine("Mushrooms with mayo"),
+                Cuisine("Onion Rings"),
+                Cuisine("Pasta Salad"),
+                Cuisine("Pickled Cucumber and Celery"),
+                Cuisine("Pickled Radish and Carrot"),
+                Cuisine("Potato salad"),
+                Cuisine("Radish salad"),
+                Cuisine("Rainbow Salad with Miso Dressing"),
+                Cuisine("Roasted eggplant, tomato and feta cheese"),
+                Cuisine("Sauteed eggplant and green pepper with miso"),
+                Cuisine("Sauteed Green Pepper and Bean Sprouts with Salt"),
+                Cuisine("Sauteed komatsuna and deep-fried tofu"),
+                Cuisine("Sauteed okra with egg"),
+                Cuisine("Sauteed soybeans and edamame"),
+                Cuisine("Sauteed spinach and bacon"),
+                Cuisine("Sauteed spinach and tuna with butter and soy sauce"),
+                Cuisine("Sauteed turnip and deep-fried tofu with mentsuyu sauce"),
+                Cuisine("Sauteed Zucchini and Corn with Parmesan"),
+                Cuisine("Shrimp and Avocado Salad"),
+                Cuisine("Smoked Salmon and Roasted Beet Salad"),
+                Cuisine("Soaked Potherb mustard and fried tofu"),
+                Cuisine("Spicy Roasted Eggplant and Cherry Tomatoes"),
+                Cuisine("Steamed Broccoli and Tuna with Cheese"),
+                Cuisine("Stick salad"),
+                Cuisine("Stir-fried lettuce and egg"),
+                Cuisine("Stir-fried Pork Belly with Bean Sprouts"),
+                Cuisine("Stir-fried spinach and eringi with garlic"),
+                Cuisine("Stir-fried vegetables"),
+                Cuisine("Sweet Potato, Chicken and Quinoa Salad"),
+                Cuisine("Tofu and Amaranth Salad"),
+                Cuisine("Tofu and baby sardines salad"),
+                Cuisine("tomato salad"),
+                Cuisine("Tomato, Cucumber and Avocado Salad"),
+                Cuisine("Tomatoes stuffed with cream cheese"),
+                Cuisine("Tuna lettuce salad"),
+                Cuisine("Tuna Salad Stuffed with Avocado"),
+                Cuisine("Tuna salad with pea pods"),
+                Cuisine("Vegetable waffles")
+            )
+        }
+
+        aacCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+                Cuisine("あさりの味噌汁"),
+                Cuisine("アスパラとベーコンの味噌汁"),
+                Cuisine("えのきのサンラータン"),
+                Cuisine("オニオングラタンスープ"),
+                Cuisine("カブと豆腐のとろみ汁"),
+                Cuisine("かぼちゃとココナッツのスープ"),
+                Cuisine("カリフラワーのスープ"),
+                Cuisine("カリフラワーの味噌汁"),
+                Cuisine("カルビクッパ"),
+                Cuisine("キムチの味噌汁"),
+                Cuisine("キャベツとベーコンの豆乳味噌汁"),
+                Cuisine("キャベツと玉子のスープ"),
+                Cuisine("クラムチャウダー"),
+                Cuisine("けんちん汁"),
+                Cuisine("コーンスープ"),
+                Cuisine("コンソメスープ"),
+                Cuisine("しじみ汁"),
+                Cuisine("じゃがいもとクレソンの味噌汁"),
+                Cuisine("じゃがいもと玉ねぎの味噌汁"),
+                Cuisine("ズッキーニのクリーミースープ"),
+                Cuisine("スパイスパンプキンスープ"),
+                Cuisine("チンゲンサイの中華スープ"),
+                Cuisine("とろろ昆布汁"),
+                Cuisine("ナスとエノキの味噌汁"),
+                Cuisine("ナスとミョウガのごま味噌汁"),
+                Cuisine("なめこと豆腐の味噌汁"),
+                Cuisine("ニラと玉子の味噌汁"),
+                Cuisine("ニラ玉の味噌汁"),
+                Cuisine("ピーマンの味噌汁"),
+                Cuisine("フレンチオニオンスープ"),
+                Cuisine("ブロッコリーとじゃがいものスープ"),
+                Cuisine("ポテトとケールのクリーミースープ"),
+                Cuisine("ポトフ"),
+                Cuisine("ボルシチ"),
+                Cuisine("ミネストローネ"),
+                Cuisine("もやしの中華スープ"),
+                Cuisine("レタスの味噌汁"),
+                Cuisine("レンコン団子汁"),
+                Cuisine("ローストトマトとバジルのクリーミースープ"),
+                Cuisine("わかめスープ"),
+                Cuisine("玉ねぎとニンニクのスープ"),
+                Cuisine("春雨スープ"),
+                Cuisine("大根と油揚げの味噌汁"),
+                Cuisine("大豆とトマトのスープ"),
+                Cuisine("沢煮椀"),
+                Cuisine("椎茸とほうれん草の味噌汁"),
+                Cuisine("豆腐とわかめの味噌汁"),
+                Cuisine("豚しゃぶと梅干しのスープ"),
+                Cuisine("豚汁"),
+                Cuisine("白菜と小松菜の味噌汁")
+            )
+        } else {
+            arrayListOf(
+                Cuisine("Borscht"),
+                Cuisine("Broccoli and Potato Soup"),
+                Cuisine("Cabbage and Egg Soup"),
+                Cuisine("Cauliflower Miso Soup"),
+                Cuisine("Cauliflower Soup"),
+                Cuisine("Chinese Bean Sprouts Soup"),
+                Cuisine("Chinese green chinese soup"),
+                Cuisine("Clam chowder"),
+                Cuisine("Consomme Soup"),
+                Cuisine("Corn Soup"),
+                Cuisine("Creamy Potato and Kale Soup"),
+                Cuisine("Creamy Roasted Tomato and Basil Soup"),
+                Cuisine("Creamy Zucchini Soup"),
+                Cuisine("Eggplant and myoga miso soup with sesame seeds"),
+                Cuisine("Enoki Mushroom Sanratang"),
+                Cuisine("French Onion Soup"),
+                Cuisine("Kalbi Kuppa"),
+                Cuisine("kelp soup"),
+                Cuisine("Kenchin-jiru"),
+                Cuisine("Lentil Dumpling Soup"),
+                Cuisine("Lettuce in miso soup"),
+                Cuisine("Minestrone"),
+                Cuisine("Miso soup of shiitake mushroom and spinach"),
+                Cuisine("Miso soup with asparagus and bacon"),
+                Cuisine("Miso soup with cabbage and bacon in soy milk"),
+                Cuisine("Miso soup with Chinese cabbage and komatsuna"),
+                Cuisine("Miso soup with eggplant and enoki mushroom"),
+                Cuisine("Miso soup with green pepper"),
+                Cuisine("Miso Soup with Kimchi"),
+                Cuisine("Miso soup with leek and egg"),
+                Cuisine("Miso soup with leek balls"),
+                Cuisine("Miso soup with nameko mushroom and tofu"),
+                Cuisine("Miso soup with potatoes and onions"),
+                Cuisine("Miso Soup with Potatoes and Watercress"),
+                Cuisine("Miso soup with radish and deep-fried tofu"),
+                Cuisine("Miso soup with scallion"),
+                Cuisine("Miso soup with tofu and wakame seaweed"),
+                Cuisine("Onion and Garlic Soup"),
+                Cuisine("Onion gratin soup"),
+                Cuisine("Pork Shabu and Dried Plum Soup"),
+                Cuisine("Pork soup"),
+                Cuisine("Pot-au-feu"),
+                Cuisine("Pumpkin and Coconut Soup"),
+                Cuisine("Sawani soup"),
+                Cuisine("Seaweed soup"),
+                Cuisine("Shijimi-jiru"),
+                Cuisine("Soybean and Tomato Soup"),
+                Cuisine("Spiced Pumpkin Soup"),
+                Cuisine("Turnip and Tofu Soup"),
+                Cuisine("Vermicelli soup")
+            )
+        }
+
+        aadCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+                Cuisine("アイス"),
+                Cuisine("アサイーとベリーのグラニテ"),
+                Cuisine("あんみつ"),
+                Cuisine("いちご"),
+                Cuisine("いちごの錦玉"),
+                Cuisine("おしるこ"),
+                Cuisine("オレンジ"),
+                Cuisine("カフェオレゼリー"),
+                Cuisine("キウイフルーツ"),
+                Cuisine("コーヒーゼリー"),
+                Cuisine("コカーダ"),
+                Cuisine("スモア"),
+                Cuisine("チョコバナナパフェ"),
+                Cuisine("チョコムース"),
+                Cuisine("トウファ"),
+                Cuisine("パウンドケーキ"),
+                Cuisine("バナナ"),
+                Cuisine("バナナスムージー"),
+                Cuisine("ババロア"),
+                Cuisine("パンケーキ"),
+                Cuisine("パンナコッタ"),
+                Cuisine("パンネンクーケン"),
+                Cuisine("ブドウ"),
+                Cuisine("ブリガデイロ"),
+                Cuisine("プリン"),
+                Cuisine("フルーチェ"),
+                Cuisine("ブロンディ"),
+                Cuisine("ホットケーキ"),
+                Cuisine("マフィン"),
+                Cuisine("みかん"),
+                Cuisine("みかんゼリー"),
+                Cuisine("みかんのシャーベット"),
+                Cuisine("メロン"),
+                Cuisine("ヨーグルト"),
+                Cuisine("ヨーグルトクレープ"),
+                Cuisine("りんご"),
+                Cuisine("りんごのグラッセ"),
+                Cuisine("杏仁豆腐"),
+                Cuisine("焼マシュマロのミルクシェイク"),
+                Cuisine("大福"),
+                Cuisine("団子"),
+                Cuisine("桃"),
+                Cuisine("桃のコンポート"),
+                Cuisine("豆乳ドーナツ"),
+                Cuisine("抹茶ティラミス"),
+                Cuisine("梨"),
+                Cuisine("餃子の皮クレープ")
+            )
+        } else {
+            arrayListOf(
+                Cuisine("Acai and berry granite"),
+                Cuisine("Anmitsu"),
+                Cuisine("apple glace"),
+                Cuisine("Apples"),
+                Cuisine("Apricot bean curd"),
+                Cuisine("banana smoothie"),
+                Cuisine("banana"),
+                Cuisine("Bavarois"),
+                Cuisine("Blondie"),
+                Cuisine("Brigadeiro"),
+                Cuisine("Cafe au lait jelly"),
+                Cuisine("chocolate banana parfait"),
+                Cuisine("chocolate mousse"),
+                Cuisine("coffee jelly"),
+                Cuisine("Coquada"),
+                Cuisine("Daifuku"),
+                Cuisine("dango"),
+                Cuisine("Frutche"),
+                Cuisine("grapes"),
+                Cuisine("green tea tiramisu"),
+                Cuisine("Gyoza skin crepe"),
+                Cuisine("Ice cream"),
+                Cuisine("Kiwifruit"),
+                Cuisine("melon"),
+                Cuisine("Milkshake with roasted marshmallows"),
+                Cuisine("Muffins"),
+                Cuisine("oranges"),
+                Cuisine("Oshiruko"),
+                Cuisine("pancakes"),
+                Cuisine("Pancakes"),
+                Cuisine("Panna cotta"),
+                Cuisine("Pannen Kuken"),
+                Cuisine("peach compote"),
+                Cuisine("Peaches"),
+                Cuisine("pear"),
+                Cuisine("Pound cake"),
+                Cuisine("pudding"),
+                Cuisine("S'mores"),
+                Cuisine("soy milk donuts"),
+                Cuisine("strawberries"),
+                Cuisine("Strawberry brocade"),
+                Cuisine("Tangerine jelly"),
+                Cuisine("Tangerine sorbet"),
+                Cuisine("tangerine"),
+                Cuisine("Tofa"),
+                Cuisine("Yogurt crepes"),
+                Cuisine("yogurt")
+            )
+        }
 
         aCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1096,6 +1664,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             arrayListOf()
         }
 
+        aaaCustomAdapter = CustomAdapter(this, aaaCuisines, this)
+        aabCustomAdapter = CustomAdapter(this, aabCuisines, this)
+        aacCustomAdapter = CustomAdapter(this, aacCuisines, this)
+        aadCustomAdapter = CustomAdapter(this, aadCuisines, this)
         aCustomAdapter = CustomAdapter(this, aCuisines, this)
         bCustomAdapter = CustomAdapter(this, bCuisines, this)
         cCustomAdapter = CustomAdapter(this, cCuisines, this)
@@ -3326,10 +3898,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = aCustomAdapter
-                            aCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aaaCustomAdapter
+                            aaaCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "牛肉"
+                                supportActionBar?.title = "主菜、ご飯類、麺類"
                             } else {
                                 supportActionBar?.title = "Main dish"
                             }
@@ -3342,8 +3914,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = bCustomAdapter
-                            bCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aabCustomAdapter
+                            aabCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "副菜、サラダ"
                             } else {
@@ -3358,8 +3930,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = cCustomAdapter
-                            cCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aacCustomAdapter
+                            aacCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "味噌汁、スープ"
                             } else {
@@ -3374,8 +3946,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            dCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aadCustomAdapter
+                            aadCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "果物、デザート"
                             } else {
@@ -3390,48 +3962,48 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = eCustomAdapter
-                            eCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aCustomAdapter
+                            aCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "牛肉"
                             } else {
-                                supportActionBar?.title = "Fruits, Desserts"
+                                supportActionBar?.title = "Main dish"
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.food1), Toast.LENGTH_SHORT).show()
                             pasteFlag = 7
                         }
                         8 -> { menuSwitch = 8
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = fCustomAdapter
-                            fCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = bCustomAdapter
+                            bCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "副菜、サラダ"
                             } else {
-                                supportActionBar?.title = "Fruits, Desserts"
+                                supportActionBar?.title = "side dish Salads"
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.food2), Toast.LENGTH_SHORT).show()
                             pasteFlag = 8
                         }
                         9 -> { menuSwitch = 9
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            gCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = cCustomAdapter
+                            cCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "味噌汁、スープ"
                             } else {
-                                supportActionBar?.title = "Fruits, Desserts"
+                                supportActionBar?.title = "Soup"
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.food3), Toast.LENGTH_SHORT).show()
                             pasteFlag = 9
                         }
                         10 -> { menuSwitch = 10
@@ -3439,7 +4011,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
                             binding.listView.adapter = dCustomAdapter
-                            hCustomAdapter.notifyDataSetChanged()
+                            dCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "果物、デザート"
                             } else {
@@ -3454,8 +4026,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            iCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = eCustomAdapter
+                            eCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "果物、デザート"
                             } else {
@@ -3470,8 +4042,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = dCustomAdapter
-                            jCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = fCustomAdapter
+                            fCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
                                 supportActionBar?.title = "果物、デザート"
                             } else {
@@ -3481,6 +4053,86 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
                             pasteFlag = 12
+                        }
+                        13 -> { menuSwitch = 13
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = gCustomAdapter
+                            gCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 13
+                        }
+                        14 -> { menuSwitch = 14
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = hCustomAdapter
+                            hCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 14
+                        }
+                        15 -> { menuSwitch = 15
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = iCustomAdapter
+                            iCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 15
+                        }
+                        16 -> { menuSwitch = 16
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = jCustomAdapter
+                            jCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 16
+                        }
+                        17 -> { menuSwitch = 17
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = kCustomAdapter
+                            kCustomAdapter.notifyDataSetChanged()
+                            if (locale == Locale.JAPAN) {
+                                supportActionBar?.title = "果物、デザート"
+                            } else {
+                                supportActionBar?.title = "Fruits, Desserts"
+                            }
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 17
                         }
                     }
                 }
@@ -4126,36 +4778,48 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.search_w)
             }
             3 -> {
-                menuLamp.setIcon(R.drawable.beef_w)
+                menuLamp.setIcon(R.drawable.dinner_w)
             }
             4 -> {
-                menuLamp.setIcon(R.drawable.pork_w)
+                menuLamp.setIcon(R.drawable.carrot_w)
             }
             5 -> {
-                menuLamp.setIcon(R.drawable.chiken_w)
+                menuLamp.setIcon(R.drawable.soup_w)
             }
             6 -> {
-                menuLamp.setIcon(R.drawable.kyuuri_w)
+                menuLamp.setIcon(R.drawable.apple_w)
             }
             7 -> {
-                menuLamp.setIcon(R.drawable.daikon_w)
+                menuLamp.setIcon(R.drawable.beef_w)
             }
             8 -> {
-                menuLamp.setIcon(R.drawable.retasu_w)
+                menuLamp.setIcon(R.drawable.pork_w)
             }
             9 -> {
-                menuLamp.setIcon(R.drawable.kyabetu_w)
+                menuLamp.setIcon(R.drawable.chiken_w)
             }
             10 -> {
-                menuLamp.setIcon(R.drawable.moyashi_w)
+                menuLamp.setIcon(R.drawable.kyuuri_w)
             }
             11 -> {
-                menuLamp.setIcon(R.drawable.hakusai_w)
+                menuLamp.setIcon(R.drawable.daikon_w)
             }
             12 -> {
-                menuLamp.setIcon(R.drawable.tamanegi_w)
+                menuLamp.setIcon(R.drawable.retasu_w)
             }
             13 -> {
+                menuLamp.setIcon(R.drawable.kyabetu_w)
+            }
+            14 -> {
+                menuLamp.setIcon(R.drawable.moyashi_w)
+            }
+            15 -> {
+                menuLamp.setIcon(R.drawable.hakusai_w)
+            }
+            16 -> {
+                menuLamp.setIcon(R.drawable.tamanegi_w)
+            }
+            17 -> {
                 menuLamp.setIcon(R.drawable.negi_w)
             }
         }
