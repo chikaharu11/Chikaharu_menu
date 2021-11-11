@@ -3872,11 +3872,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.editText14.setText(shuffled4[6],TextView.BufferType.NORMAL)
                             menuList16()
                             menuList17()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "おまかせ"
-                            } else {
-                                supportActionBar?.title = "Shuffle order"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Shuffle_order)
                             openKeyboard()
                             pasteFlag = 1
                         }
@@ -3884,11 +3880,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "詳細検索"
-                            } else {
-                                supportActionBar?.title = "Find details"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Find_details)
                             hideKeyboard()
                             openKeyboard()
                             Toast.makeText(applicationContext, (R.string.search), Toast.LENGTH_LONG).show()
@@ -3900,14 +3892,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aaaCustomAdapter
                             aaaCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "主菜、ご飯類、麺類"
-                            } else {
-                                supportActionBar?.title = "Main dish"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food1), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.Main_dish), Toast.LENGTH_SHORT).show()
                             pasteFlag = 3
                         }
                         4 -> { menuSwitch = 4
@@ -3917,13 +3905,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = aabCustomAdapter
                             aabCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ほげ"
+                                supportActionBar?.title = resources.getString(R.string.beef)
                             } else {
                                 supportActionBar?.title = "side dish Salads"
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food2), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.side_dish_Salads), Toast.LENGTH_SHORT).show()
                             pasteFlag = 4
                         }
                         5 -> { menuSwitch = 5
@@ -3939,7 +3927,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food3), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
                             pasteFlag = 5
                         }
                         6 -> { menuSwitch = 6
@@ -3971,7 +3959,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food1), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.beef), Toast.LENGTH_SHORT).show()
                             pasteFlag = 7
                         }
                         8 -> { menuSwitch = 8
@@ -3987,7 +3975,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food2), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.pork), Toast.LENGTH_SHORT).show()
                             pasteFlag = 8
                         }
                         9 -> { menuSwitch = 9
@@ -4003,7 +3991,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.food3), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.chicken), Toast.LENGTH_SHORT).show()
                             pasteFlag = 9
                         }
                         10 -> { menuSwitch = 10
@@ -4019,7 +4007,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 10
                         }
                         11 -> { menuSwitch = 11
@@ -4035,7 +4023,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 11
                         }
                         12 -> { menuSwitch = 12
@@ -4051,7 +4039,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 12
                         }
                         13 -> { menuSwitch = 13
@@ -4067,7 +4055,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 13
                         }
                         14 -> { menuSwitch = 14
@@ -4083,7 +4071,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 14
                         }
                         15 -> { menuSwitch = 15
@@ -4099,7 +4087,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 15
                         }
                         16 -> { menuSwitch = 16
@@ -4115,7 +4103,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 16
                         }
                         17 -> { menuSwitch = 17
@@ -4131,7 +4119,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 17
                         }
                         18 -> { menuSwitch = 18
@@ -4147,7 +4135,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 18
                         }
                         19 -> { menuSwitch = 19
@@ -4163,7 +4151,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 19
                         }
                         20 -> { menuSwitch = 20
@@ -4179,7 +4167,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 20
                         }
                         21 -> { menuSwitch = 21
@@ -4195,7 +4183,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 21
                         }
                         22 -> { menuSwitch = 22
@@ -4211,7 +4199,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 22
                         }
                         23 -> { menuSwitch = 23
@@ -4227,7 +4215,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 23
                         }
                         24 -> { menuSwitch = 24
@@ -4243,7 +4231,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 24
                         }
                         25 -> { menuSwitch = 25
@@ -4259,7 +4247,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 25
                         }
                         26 -> { menuSwitch = 26
@@ -4275,7 +4263,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 26
                         }
                         27 -> { menuSwitch = 27
@@ -4291,7 +4279,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 27
                         }
                         28 -> { menuSwitch = 28
@@ -4307,7 +4295,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 28
                         }
                         29 -> { menuSwitch = 29
@@ -4323,7 +4311,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 29
                         }
                         30 -> { menuSwitch = 30
@@ -4339,7 +4327,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 30
                         }
                         31 -> { menuSwitch = 31
@@ -4355,7 +4343,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 31
                         }
                         32 -> { menuSwitch = 32
@@ -4371,7 +4359,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 32
                         }
                         33 -> { menuSwitch = 33
@@ -4387,7 +4375,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 33
                         }
                         34 -> { menuSwitch = 34
@@ -4403,7 +4391,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 34
                         }
                         35 -> { menuSwitch = 35
@@ -4419,7 +4407,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 35
                         }
                         36 -> { menuSwitch = 36
@@ -4435,7 +4423,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 36
                         }
                         37 -> { menuSwitch = 37
@@ -4451,7 +4439,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 37
                         }
                         38 -> { menuSwitch = 38
@@ -4467,7 +4455,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 38
                         }
                         39 -> { menuSwitch = 39
@@ -4483,7 +4471,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 39
                         }
                         40 -> { menuSwitch = 40
@@ -4499,7 +4487,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 40
                         }
                         41 -> { menuSwitch = 41
@@ -4515,7 +4503,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 41
                         }
                         42 -> { menuSwitch = 42
@@ -4531,7 +4519,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 42
                         }
                         43 -> { menuSwitch = 43
@@ -4547,7 +4535,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 43
                         }
                         44 -> { menuSwitch = 44
@@ -4563,7 +4551,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 44
                         }
                         45 -> { menuSwitch = 45
@@ -4579,7 +4567,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 45
                         }
                         46 -> { menuSwitch = 46
@@ -4595,7 +4583,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 46
                         }
                         47 -> { menuSwitch = 47
@@ -4611,7 +4599,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 47
                         }
                         48 -> { menuSwitch = 48
@@ -4627,7 +4615,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 48
                         }
                         49 -> { menuSwitch = 49
@@ -4643,7 +4631,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 49
                         }
                         50 -> { menuSwitch = 50
@@ -4659,7 +4647,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             }
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 50
                         }
                     }
