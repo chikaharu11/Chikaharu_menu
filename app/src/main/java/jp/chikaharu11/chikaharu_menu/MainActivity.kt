@@ -3917,7 +3917,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = aabCustomAdapter
                             aabCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "副菜、サラダ"
+                                supportActionBar?.title = "ほげ"
                             } else {
                                 supportActionBar?.title = "side dish Salads"
                             }
@@ -3981,7 +3981,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = bCustomAdapter
                             bCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "副菜、サラダ"
+                                supportActionBar?.title = "豚肉"
                             } else {
                                 supportActionBar?.title = "side dish Salads"
                             }
@@ -3997,7 +3997,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = cCustomAdapter
                             cCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "味噌汁、スープ"
+                                supportActionBar?.title = "鶏肉"
                             } else {
                                 supportActionBar?.title = "Soup"
                             }
@@ -4013,7 +4013,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = dCustomAdapter
                             dCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "キュウリ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4029,7 +4029,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = eCustomAdapter
                             eCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "大根"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4045,7 +4045,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = fCustomAdapter
                             fCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "レタス"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4061,7 +4061,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = gCustomAdapter
                             gCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "キャベツ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4077,7 +4077,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = hCustomAdapter
                             hCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "もやし"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4093,7 +4093,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = iCustomAdapter
                             iCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "白菜"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4109,7 +4109,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = jCustomAdapter
                             jCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "玉ネギ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4125,7 +4125,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = kCustomAdapter
                             kCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ネギ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4141,7 +4141,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = lCustomAdapter
                             lCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "じゃがいも"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4157,7 +4157,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = mCustomAdapter
                             mCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "さつまいも"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4173,7 +4173,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = nCustomAdapter
                             nCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "人参"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4189,7 +4189,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = oCustomAdapter
                             oCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "かぼちゃ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4205,7 +4205,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = pCustomAdapter
                             pCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "トマト"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4221,7 +4221,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = qCustomAdapter
                             qCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ナス"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4237,7 +4237,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = rCustomAdapter
                             rCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ピーマン"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4253,7 +4253,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = sCustomAdapter
                             sCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ブロッコリー"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4269,7 +4269,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = tCustomAdapter
                             tCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "かぶ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4285,7 +4285,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = uCustomAdapter
                             uCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ほうれん草"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4301,7 +4301,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = vCustomAdapter
                             vCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "小松菜"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4317,7 +4317,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = wCustomAdapter
                             wCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ちんげん菜"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4333,7 +4333,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = xCustomAdapter
                             xCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "オクラ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4349,7 +4349,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = yCustomAdapter
                             yCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ニラ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4365,7 +4365,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = zCustomAdapter
                             zCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "ごぼう"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4381,7 +4381,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = aaCustomAdapter
                             aaCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "レンコン"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4397,7 +4397,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = abCustomAdapter
                             abCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "いんげん"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4413,7 +4413,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = acCustomAdapter
                             acCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "しいたけ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4429,7 +4429,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = adCustomAdapter
                             adCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "えのき"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4445,7 +4445,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = aeCustomAdapter
                             aeCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "しめじ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4461,7 +4461,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = afCustomAdapter
                             afCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "エリンギ"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4477,7 +4477,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = agCustomAdapter
                             agCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "卵"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
@@ -4493,7 +4493,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.listView.adapter = agCustomAdapter
                             agCustomAdapter.notifyDataSetChanged()
                             if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
+                                supportActionBar?.title = "豆腐"
                             } else {
                                 supportActionBar?.title = "Fruits, Desserts"
                             }
