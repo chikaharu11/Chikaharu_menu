@@ -3904,11 +3904,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aabCustomAdapter
                             aabCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = resources.getString(R.string.beef)
-                            } else {
-                                supportActionBar?.title = "side dish Salads"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.side_dish_Salads)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.side_dish_Salads), Toast.LENGTH_SHORT).show()
@@ -3920,11 +3916,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aacCustomAdapter
                             aacCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "味噌汁、スープ"
-                            } else {
-                                supportActionBar?.title = "Soup"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Soup)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.Soup), Toast.LENGTH_SHORT).show()
@@ -3936,11 +3928,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aadCustomAdapter
                             aadCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Fruits_Desserts)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.Fruits_Desserts), Toast.LENGTH_SHORT).show()
@@ -3952,11 +3940,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aCustomAdapter
                             aCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "牛肉"
-                            } else {
-                                supportActionBar?.title = "Main dish"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.beef)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.beef), Toast.LENGTH_SHORT).show()
@@ -3968,11 +3952,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = bCustomAdapter
                             bCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "豚肉"
-                            } else {
-                                supportActionBar?.title = "side dish Salads"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.pork)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.pork), Toast.LENGTH_SHORT).show()
@@ -3984,11 +3964,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = cCustomAdapter
                             cCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "鶏肉"
-                            } else {
-                                supportActionBar?.title = "Soup"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.chicken)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.chicken), Toast.LENGTH_SHORT).show()
@@ -4000,11 +3976,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = dCustomAdapter
                             dCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "キュウリ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.kyuuri)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4016,11 +3988,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = eCustomAdapter
                             eCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "大根"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4032,11 +4000,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = fCustomAdapter
                             fCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "レタス"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4048,11 +4012,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = gCustomAdapter
                             gCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "キャベツ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4064,11 +4024,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = hCustomAdapter
                             hCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "もやし"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4080,11 +4036,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = iCustomAdapter
                             iCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "白菜"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4096,11 +4048,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = jCustomAdapter
                             jCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "玉ネギ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4112,11 +4060,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = kCustomAdapter
                             kCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ネギ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4128,11 +4072,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = lCustomAdapter
                             lCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "じゃがいも"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4144,11 +4084,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = mCustomAdapter
                             mCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "さつまいも"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4160,11 +4096,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = nCustomAdapter
                             nCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "人参"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4176,11 +4108,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = oCustomAdapter
                             oCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "かぼちゃ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4192,11 +4120,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = pCustomAdapter
                             pCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "トマト"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4208,11 +4132,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = qCustomAdapter
                             qCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ナス"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4224,11 +4144,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = rCustomAdapter
                             rCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ピーマン"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4240,11 +4156,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = sCustomAdapter
                             sCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ブロッコリー"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4256,11 +4168,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = tCustomAdapter
                             tCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "かぶ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4272,11 +4180,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = uCustomAdapter
                             uCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ほうれん草"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4288,11 +4192,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = vCustomAdapter
                             vCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "小松菜"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4304,11 +4204,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = wCustomAdapter
                             wCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ちんげん菜"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4320,11 +4216,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = xCustomAdapter
                             xCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "オクラ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4336,11 +4228,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = yCustomAdapter
                             yCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ニラ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4352,11 +4240,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = zCustomAdapter
                             zCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "ごぼう"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4368,11 +4252,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aaCustomAdapter
                             aaCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "レンコン"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4384,11 +4264,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = abCustomAdapter
                             abCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "いんげん"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4400,11 +4276,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = acCustomAdapter
                             acCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "しいたけ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4416,11 +4288,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = adCustomAdapter
                             adCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "えのき"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4432,11 +4300,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aeCustomAdapter
                             aeCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "しめじ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4448,11 +4312,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = afCustomAdapter
                             afCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "エリンギ"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4464,11 +4324,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = agCustomAdapter
                             agCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "卵"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4480,11 +4336,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = agCustomAdapter
                             agCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "豆腐"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4496,11 +4348,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = ahCustomAdapter
                             ahCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4512,11 +4360,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aiCustomAdapter
                             aiCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4528,11 +4372,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = ajCustomAdapter
                             ajCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4544,11 +4384,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = akCustomAdapter
                             akCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4560,11 +4396,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = alCustomAdapter
                             alCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4576,11 +4408,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = amCustomAdapter
                             amCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4592,11 +4420,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = anCustomAdapter
                             anCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4608,11 +4432,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aoCustomAdapter
                             aoCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4624,11 +4444,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = apCustomAdapter
                             apCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
@@ -4640,11 +4456,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aqCustomAdapter
                             aqCustomAdapter.notifyDataSetChanged()
-                            if (locale == Locale.JAPAN) {
-                                supportActionBar?.title = "果物、デザート"
-                            } else {
-                                supportActionBar?.title = "Fruits, Desserts"
-                            }
+                            supportActionBar?.title = resources.getString(R.string.Main_dish)
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
