@@ -1369,8 +1369,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         dCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("きゅうりとセロリのピクルス"),
-                Cuisine("きゅうりとちくわのサラダ"),
+
             )
         } else {
             arrayListOf(
@@ -1417,8 +1416,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         iCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("白菜と小松菜の味噌汁"),
-                Cuisine("白菜の旨煮"),
+                Cuisine("キュウリとセロリのピクルス"),
+                Cuisine("キュウリとちくわのサラダ"),
 
             )
         } else {
@@ -1511,7 +1510,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         vCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("白菜と小松菜の味噌汁"),
+                Cuisine("白菜の旨煮"),
             )
         } else {
             arrayListOf()
