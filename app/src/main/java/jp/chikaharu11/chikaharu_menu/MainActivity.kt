@@ -678,46 +678,46 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.beef, "牛肉　"),
                     Model(R.drawable.pork, "豚肉　"),
                     Model(R.drawable.chiken, "鶏肉　"),
-                    Model(R.drawable.kyuuri, "キュウリ　"),
-                    Model(R.drawable.daikon, "大根　"),
-                    Model(R.drawable.retasu, "レタス　"),
-                    Model(R.drawable.kyabetu, "キャベツ　"),
-                    Model(R.drawable.moyashi, "もやし　"),
-                    Model(R.drawable.hakusai, "白菜　"),
-                    Model(R.drawable.tamanegi, "玉ネギ　"),
-                    Model(R.drawable.negi, "ネギ　"),
-                    Model(R.drawable.jyagaimo, "じゃがいも　"),
-                    Model(R.drawable.satsumaimo, "さつまいも　"),
-                    Model(R.drawable.carrot_b, "人参　"),
+                    Model(R.drawable.ingen, "いんげん　"),
+                    Model(R.drawable.okura, "オクラ　"),
+                    Model(R.drawable.kabu, "かぶ　"),
                     Model(R.drawable.kabocya, "かぼちゃ　"),
+                    Model(R.drawable.kyabetu, "キャベツ　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.gobou, "ごぼう　"),
+                    Model(R.drawable.komatsuna, "小松菜　"),
+                    Model(R.drawable.satsumaimo, "さつまいも　"),
+                    Model(R.drawable.jyagaimo, "じゃがいも　"),
+                    Model(R.drawable.daikon, "大根　"),
+                    Model(R.drawable.tamanegi, "玉ネギ　"),
+                    Model(R.drawable.chingensai, "ちんげん菜　"),
                     Model(R.drawable.tomato, "トマト　"),
                     Model(R.drawable.nasu, "ナス　"),
+                    Model(R.drawable.nira, "ニラ　"),
+                    Model(R.drawable.carrot_b, "人参　"),
+                    Model(R.drawable.negi, "ネギ　"),
+                    Model(R.drawable.hakusai, "白菜　"),
                     Model(R.drawable.piman, "ピーマン　"),
                     Model(R.drawable.burokkori, "ブロッコリー　"),
-                    Model(R.drawable.kabu, "かぶ　"),
                     Model(R.drawable.hourensou, "ほうれん草　"),
-                    Model(R.drawable.komatsuna, "小松菜　"),
-                    Model(R.drawable.chingensai, "ちんげん菜　"),
-                    Model(R.drawable.okura, "オクラ　"),
-                    Model(R.drawable.nira, "ニラ　"),
-                    Model(R.drawable.gobou, "ごぼう　"),
+                    Model(R.drawable.moyashi, "もやし　"),
+                    Model(R.drawable.retasu, "レタス　"),
                     Model(R.drawable.renkon, "レンコン　"),
-                    Model(R.drawable.ingen, "いんげん　"),
-                    Model(R.drawable.siitake, "しいたけ　"),
                     Model(R.drawable.enoki, "えのき　"),
-                    Model(R.drawable.shimeji, "しめじ　"),
                     Model(R.drawable.eringi, "エリンギ　"),
+                    Model(R.drawable.siitake, "しいたけ　"),
+                    Model(R.drawable.shimeji, "しめじ　"),
                     Model(R.drawable.tamago, "卵　"),
                     Model(R.drawable.toufu, "豆腐　"),
-                    Model(R.drawable.negi, "さけ　"),
-                    Model(R.drawable.negi, "さば　"),
                     Model(R.drawable.negi, "あじ　"),
                     Model(R.drawable.negi, "いわし　"),
+                    Model(R.drawable.negi, "えび　"),
+                    Model(R.drawable.negi, "かつお　"),
+                    Model(R.drawable.negi, "さけ　"),
+                    Model(R.drawable.negi, "さば　"),
                     Model(R.drawable.negi, "さんま　"),
                     Model(R.drawable.negi, "たら　"),
-                    Model(R.drawable.negi, "かつお　"),
-                    Model(R.drawable.negi, "ぶり　"),
-                    Model(R.drawable.negi, "えび　")
+                    Model(R.drawable.negi, "ぶり　")
                 )
             )
         } else {
@@ -730,9 +730,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.dinner_b, "Main dish  "),
                     Model(R.drawable.carrot_b, "Salads  "),
                     Model(R.drawable.soup_b, "Soup  "),
-                    Model(R.drawable.apple_b, "Fruits, Desserts  "),
-                    Model(R.drawable.shuffle_b, "Shuffle order　"),
-                    Model(R.drawable.search_b, "Find details　")
+                    Model(R.drawable.apple_b, "Fruits, Desserts  ")
                 )
             )
         }
@@ -1378,38 +1376,32 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         eCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("大根サラダ"),
-                Cuisine("大根とニンジンのピクルス"),
-                Cuisine("大根と油揚げの味噌汁"),
-                Cuisine("大根のそぼろ煮"),
-                Cuisine("大根の中華風そぼろ煮"),
+
             )
         } else {
             arrayListOf()
         }
         fCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("レタスと卵の炒め物"),
-                Cuisine("レタスの味噌汁"),
-                Cuisine("シーザーサラダ"),
+
             )
         } else {
             arrayListOf()
         }
         gCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("キャベツとベーコンの豆乳味噌汁"),
-                Cuisine("キャベツと玉子のスープ"),
-                Cuisine("キャベツの塩昆布和え"),
-                Cuisine("ロールキャベツ"),
+
             )
         } else {
             arrayListOf()
         }
         hCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("もやしときゅうりのごま和え"),
-                Cuisine("もやしの中華スープ"),
+                Cuisine("キャベツとベーコンの豆乳味噌汁"),
+                Cuisine("キャベツと玉子のスープ"),
+                Cuisine("キャベツの塩昆布和え"),
+                Cuisine("ロールキャベツ"),
+
             )
         } else {
             arrayListOf()
@@ -1425,8 +1417,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         jCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("オニオングラタンスープ"),
-                Cuisine("オニオンリング"),
+
             )
         } else {
             arrayListOf()
@@ -1454,14 +1445,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         nCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("大根サラダ"),
+                Cuisine("大根とニンジンのピクルス"),
+                Cuisine("大根と油揚げの味噌汁"),
+                Cuisine("大根のそぼろ煮"),
+                Cuisine("大根の中華風そぼろ煮"),
             )
         } else {
             arrayListOf()
         }
         oCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("オニオングラタンスープ"),
+                Cuisine("オニオンリング"),
             )
         } else {
             arrayListOf()
@@ -1539,14 +1535,17 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         zCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("もやしときゅうりのごま和え"),
+                Cuisine("もやしの中華スープ"),
             )
         } else {
             arrayListOf()
         }
         aaCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("レタスと卵の炒め物"),
+                Cuisine("レタスの味噌汁"),
+                Cuisine("シーザーサラダ"),
             )
         } else {
             arrayListOf()
@@ -3976,10 +3975,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = dCustomAdapter
                             dCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.kyuuri)
+                            supportActionBar?.title = resources.getString(R.string.ingen)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.ingen), Toast.LENGTH_SHORT).show()
                             pasteFlag = 10
                         }
                         11 -> { menuSwitch = 11
@@ -3988,10 +3987,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = eCustomAdapter
                             eCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.daikon)
+                            supportActionBar?.title = resources.getString(R.string.okura)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.daikon), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.okura), Toast.LENGTH_SHORT).show()
                             pasteFlag = 11
                         }
                         12 -> { menuSwitch = 12
@@ -4000,10 +3999,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = fCustomAdapter
                             fCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.retasu)
+                            supportActionBar?.title = resources.getString(R.string.kabu)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.retasu), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kabu), Toast.LENGTH_SHORT).show()
                             pasteFlag = 12
                         }
                         13 -> { menuSwitch = 13
@@ -4012,10 +4011,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = gCustomAdapter
                             gCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.kyabetsu)
+                            supportActionBar?.title = resources.getString(R.string.kabocya)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyabetsu), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kabocya), Toast.LENGTH_SHORT).show()
                             pasteFlag = 13
                         }
                         14 -> { menuSwitch = 14
@@ -4024,10 +4023,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = hCustomAdapter
                             hCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.moyashi)
+                            supportActionBar?.title = resources.getString(R.string.kyabetsu)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.moyashi), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyabetsu), Toast.LENGTH_SHORT).show()
                             pasteFlag = 14
                         }
                         15 -> { menuSwitch = 15
@@ -4036,10 +4035,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = iCustomAdapter
                             iCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.hakusai)
+                            supportActionBar?.title = resources.getString(R.string.kyuuri)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.hakusai), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 15
                         }
                         16 -> { menuSwitch = 16
@@ -4048,10 +4047,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = jCustomAdapter
                             jCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.tamanegi)
+                            supportActionBar?.title = resources.getString(R.string.gobou)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.tamanegi), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.gobou), Toast.LENGTH_SHORT).show()
                             pasteFlag = 16
                         }
                         17 -> { menuSwitch = 17
@@ -4060,10 +4059,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = kCustomAdapter
                             kCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.negi)
+                            supportActionBar?.title = resources.getString(R.string.komatsuna)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.negi), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.komatsuna), Toast.LENGTH_SHORT).show()
                             pasteFlag = 17
                         }
                         18 -> { menuSwitch = 18
@@ -4072,10 +4071,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = lCustomAdapter
                             lCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.jyagaimo)
+                            supportActionBar?.title = resources.getString(R.string.satsumaimo)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.jyagaimo), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.satsumaimo), Toast.LENGTH_SHORT).show()
                             pasteFlag = 18
                         }
                         19 -> { menuSwitch = 19
@@ -4084,10 +4083,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = mCustomAdapter
                             mCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.satsumaimo)
+                            supportActionBar?.title = resources.getString(R.string.jyagaimo)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.satsumaimo), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.jyagaimo), Toast.LENGTH_SHORT).show()
                             pasteFlag = 19
                         }
                         20 -> { menuSwitch = 20
@@ -4096,10 +4095,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = nCustomAdapter
                             nCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.ninjin)
+                            supportActionBar?.title = resources.getString(R.string.tamanegi)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.ninjin), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.tamanegi), Toast.LENGTH_SHORT).show()
                             pasteFlag = 20
                         }
                         21 -> { menuSwitch = 21
@@ -4108,10 +4107,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = oCustomAdapter
                             oCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.kabocya)
+                            supportActionBar?.title = resources.getString(R.string.chingensai)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kabocya), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.chingensai), Toast.LENGTH_SHORT).show()
                             pasteFlag = 21
                         }
                         22 -> { menuSwitch = 22
@@ -4132,10 +4131,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = qCustomAdapter
                             qCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.nasu)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.nasu), Toast.LENGTH_SHORT).show()
                             pasteFlag = 23
                         }
                         24 -> { menuSwitch = 24
@@ -4144,10 +4143,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = rCustomAdapter
                             rCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.nira)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.nira), Toast.LENGTH_SHORT).show()
                             pasteFlag = 24
                         }
                         25 -> { menuSwitch = 25
@@ -4156,10 +4155,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = sCustomAdapter
                             sCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.ninjin)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.ninjin), Toast.LENGTH_SHORT).show()
                             pasteFlag = 25
                         }
                         26 -> { menuSwitch = 26
@@ -4168,10 +4167,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = tCustomAdapter
                             tCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.negi)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.negi), Toast.LENGTH_SHORT).show()
                             pasteFlag = 26
                         }
                         27 -> { menuSwitch = 27
@@ -4180,10 +4179,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = uCustomAdapter
                             uCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.hakusai)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.hakusai), Toast.LENGTH_SHORT).show()
                             pasteFlag = 27
                         }
                         28 -> { menuSwitch = 28
@@ -4192,10 +4191,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = vCustomAdapter
                             vCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.piman)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.piman), Toast.LENGTH_SHORT).show()
                             pasteFlag = 28
                         }
                         29 -> { menuSwitch = 29
@@ -4204,10 +4203,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = wCustomAdapter
                             wCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.burokkori)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.burokkori), Toast.LENGTH_SHORT).show()
                             pasteFlag = 29
                         }
                         30 -> { menuSwitch = 30
@@ -4216,10 +4215,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = xCustomAdapter
                             xCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.hourensou)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.hourensou), Toast.LENGTH_SHORT).show()
                             pasteFlag = 30
                         }
                         31 -> { menuSwitch = 31
@@ -4228,10 +4227,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = yCustomAdapter
                             yCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.moyashi)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.moyashi), Toast.LENGTH_SHORT).show()
                             pasteFlag = 31
                         }
                         32 -> { menuSwitch = 32
@@ -4240,10 +4239,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = zCustomAdapter
                             zCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.retasu)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.retasu), Toast.LENGTH_SHORT).show()
                             pasteFlag = 32
                         }
                         33 -> { menuSwitch = 33
@@ -4252,10 +4251,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aaCustomAdapter
                             aaCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.renkon)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.renkon), Toast.LENGTH_SHORT).show()
                             pasteFlag = 33
                         }
                         34 -> { menuSwitch = 34
