@@ -70,7 +70,8 @@
     <string name="katsuo">かつお</string>
     <string name="buri">ぶり</string>
     <string name="ebi">えび</string>
-
+    <string name="hokke">ほっけ</string>
+    <string name="mekajiki">めかじき</string>
     <string name="search">料理名をタッチすると詳細を検索できます</string>
     <string name="back">元の画面に戻るには、戻るボタンか上のアイコンをどれか押して下さい</string>
     <string name="Screen_captured">画面を保存しました</string>

@@ -107,6 +107,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var aoCustomAdapter: CustomAdapter
     private lateinit var apCustomAdapter: CustomAdapter
     private lateinit var aqCustomAdapter: CustomAdapter
+    private lateinit var arCustomAdapter: CustomAdapter
 
     private lateinit var aaaCuisines: MutableList<Cuisine>
     private lateinit var aabCuisines: MutableList<Cuisine>
@@ -155,6 +156,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var aoCuisines: MutableList<Cuisine>
     private lateinit var apCuisines: MutableList<Cuisine>
     private lateinit var aqCuisines: MutableList<Cuisine>
+    private lateinit var arCuisines: MutableList<Cuisine>
 
 
     private val handler = Handler()
@@ -709,15 +711,17 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.shimeji, "しめじ　"),
                     Model(R.drawable.tamago, "卵　"),
                     Model(R.drawable.toufu, "豆腐　"),
-                    Model(R.drawable.negi, "あじ　"),
-                    Model(R.drawable.negi, "いわし　"),
-                    Model(R.drawable.negi, "えび　"),
-                    Model(R.drawable.negi, "かつお　"),
-                    Model(R.drawable.negi, "さけ　"),
-                    Model(R.drawable.negi, "さば　"),
-                    Model(R.drawable.negi, "さんま　"),
-                    Model(R.drawable.negi, "たら　"),
-                    Model(R.drawable.negi, "ぶり　")
+                    Model(R.drawable.aji, "あじ　"),
+                    Model(R.drawable.iwashi, "いわし　"),
+                    Model(R.drawable.ebi, "えび　"),
+                    Model(R.drawable.katsuo, "かつお　"),
+                    Model(R.drawable.sake, "さけ　"),
+                    Model(R.drawable.saba, "さば　"),
+                    Model(R.drawable.sanma, "さんま　"),
+                    Model(R.drawable.tara, "たら　"),
+                    Model(R.drawable.buri, "ぶり　"),
+                    Model(R.drawable.buri, "ほっけ　"),
+                    Model(R.drawable.buri, "めかじき　")
                 )
             )
         } else {
@@ -1662,6 +1666,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
+        arCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
 
         aaaCustomAdapter = CustomAdapter(this, aaaCuisines, this)
         aabCustomAdapter = CustomAdapter(this, aabCuisines, this)
@@ -1710,6 +1721,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         aoCustomAdapter = CustomAdapter(this, aoCuisines, this)
         apCustomAdapter = CustomAdapter(this, apCuisines, this)
         aqCustomAdapter = CustomAdapter(this, aqCuisines, this)
+        arCustomAdapter = CustomAdapter(this, arCuisines, this)
 
 
         binding.listView.adapter = aCustomAdapter
@@ -4089,7 +4101,24 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             Toast.makeText(applicationContext, (R.string.jyagaimo), Toast.LENGTH_SHORT).show()
                             pasteFlag = 19
                         }
-                        20 -> { menuSwitch = 20
+                        20 -> {
+                            menuSwitch = 20
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = nCustomAdapter
+                            nCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.daikon)
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(
+                                applicationContext,
+                                (R.string.daikon),
+                                Toast.LENGTH_SHORT
+                            ).show()
+                            pasteFlag = 20
+                        }
+                        21 -> { menuSwitch = 21
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4099,9 +4128,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.tamanegi), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 20
+                            pasteFlag = 21
                         }
-                        21 -> { menuSwitch = 21
+                        22 -> { menuSwitch = 22
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4111,9 +4140,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.chingensai), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 21
+                            pasteFlag = 22
                         }
-                        22 -> { menuSwitch = 22
+                        23 -> { menuSwitch = 23
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4123,9 +4152,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.tomato), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 22
+                            pasteFlag = 23
                         }
-                        23 -> { menuSwitch = 23
+                        24 -> { menuSwitch = 24
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4135,9 +4164,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.nasu), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 23
+                            pasteFlag = 24
                         }
-                        24 -> { menuSwitch = 24
+                        25 -> { menuSwitch = 25
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4147,9 +4176,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.nira), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 24
+                            pasteFlag = 25
                         }
-                        25 -> { menuSwitch = 25
+                        26 -> { menuSwitch = 26
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4159,9 +4188,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.ninjin), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 25
+                            pasteFlag = 26
                         }
-                        26 -> { menuSwitch = 26
+                        27 -> { menuSwitch = 27
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4171,9 +4200,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.negi), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 26
+                            pasteFlag = 27
                         }
-                        27 -> { menuSwitch = 27
+                        28 -> { menuSwitch = 28
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4183,9 +4212,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.hakusai), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 27
+                            pasteFlag = 28
                         }
-                        28 -> { menuSwitch = 28
+                        29 -> { menuSwitch = 29
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4195,9 +4224,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.piman), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 28
+                            pasteFlag = 29
                         }
-                        29 -> { menuSwitch = 29
+                        30 -> { menuSwitch = 30
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4207,9 +4236,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.burokkori), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 29
+                            pasteFlag = 30
                         }
-                        30 -> { menuSwitch = 30
+                        31 -> { menuSwitch = 31
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4219,9 +4248,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.hourensou), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 30
+                            pasteFlag = 31
                         }
-                        31 -> { menuSwitch = 31
+                        32 -> { menuSwitch = 32
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4231,9 +4260,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.moyashi), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 31
+                            pasteFlag = 32
                         }
-                        32 -> { menuSwitch = 32
+                        33 -> { menuSwitch = 33
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4243,9 +4272,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.retasu), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 32
+                            pasteFlag = 33
                         }
-                        33 -> { menuSwitch = 33
+                        34 -> { menuSwitch = 34
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
@@ -4255,78 +4284,66 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             hideKeyboard()
                             nullKeyboard()
                             Toast.makeText(applicationContext, (R.string.renkon), Toast.LENGTH_SHORT).show()
-                            pasteFlag = 33
-                        }
-                        34 -> { menuSwitch = 34
-                            binding.textView14.requestFocus()
-                            binding.textView14.clearFocus()
-                            invalidateOptionsMenu()
-                            binding.listView.adapter = abCustomAdapter
-                            abCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
-                            hideKeyboard()
-                            nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 34
                         }
                         35 -> { menuSwitch = 35
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = acCustomAdapter
-                            acCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            binding.listView.adapter = abCustomAdapter
+                            abCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.enoki)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.enoki), Toast.LENGTH_SHORT).show()
                             pasteFlag = 35
                         }
                         36 -> { menuSwitch = 36
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = adCustomAdapter
-                            adCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            binding.listView.adapter = acCustomAdapter
+                            acCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.eringi)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.eringi), Toast.LENGTH_SHORT).show()
                             pasteFlag = 36
                         }
                         37 -> { menuSwitch = 37
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = aeCustomAdapter
-                            aeCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            binding.listView.adapter = adCustomAdapter
+                            adCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.shiitake)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.shiitake), Toast.LENGTH_SHORT).show()
                             pasteFlag = 37
                         }
                         38 -> { menuSwitch = 38
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = afCustomAdapter
-                            afCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            binding.listView.adapter = aeCustomAdapter
+                            aeCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.shimeji)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.shimeji), Toast.LENGTH_SHORT).show()
                             pasteFlag = 38
                         }
                         39 -> { menuSwitch = 39
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = agCustomAdapter
-                            agCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            binding.listView.adapter = afCustomAdapter
+                            afCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.tamago)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.tamago), Toast.LENGTH_SHORT).show()
                             pasteFlag = 39
                         }
                         40 -> { menuSwitch = 40
@@ -4335,22 +4352,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = agCustomAdapter
                             agCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.toufu)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.toufu), Toast.LENGTH_SHORT).show()
                             pasteFlag = 40
                         }
                         41 -> { menuSwitch = 41
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = ahCustomAdapter
-                            ahCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            binding.listView.adapter = agCustomAdapter
+                            agCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.aji)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.aji), Toast.LENGTH_SHORT).show()
                             pasteFlag = 41
                         }
                         42 -> { menuSwitch = 42
@@ -4359,10 +4376,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aiCustomAdapter
                             aiCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.iwashi)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.iwashi), Toast.LENGTH_SHORT).show()
                             pasteFlag = 42
                         }
                         43 -> { menuSwitch = 43
@@ -4371,10 +4388,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = ajCustomAdapter
                             ajCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.ebi)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.ebi), Toast.LENGTH_SHORT).show()
                             pasteFlag = 43
                         }
                         44 -> { menuSwitch = 44
@@ -4383,10 +4400,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = akCustomAdapter
                             akCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.katsuo)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.katsuo), Toast.LENGTH_SHORT).show()
                             pasteFlag = 44
                         }
                         45 -> { menuSwitch = 45
@@ -4395,10 +4412,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = alCustomAdapter
                             alCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.sake)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.sake), Toast.LENGTH_SHORT).show()
                             pasteFlag = 45
                         }
                         46 -> { menuSwitch = 46
@@ -4407,10 +4424,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = amCustomAdapter
                             amCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.saba)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.saba), Toast.LENGTH_SHORT).show()
                             pasteFlag = 46
                         }
                         47 -> { menuSwitch = 47
@@ -4419,10 +4436,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = anCustomAdapter
                             anCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.sanma)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.sanma), Toast.LENGTH_SHORT).show()
                             pasteFlag = 47
                         }
                         48 -> { menuSwitch = 48
@@ -4431,10 +4448,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = aoCustomAdapter
                             aoCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.tara)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.tara), Toast.LENGTH_SHORT).show()
                             pasteFlag = 48
                         }
                         49 -> { menuSwitch = 49
@@ -4443,23 +4460,35 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = apCustomAdapter
                             apCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            supportActionBar?.title = resources.getString(R.string.buri)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.buri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 49
                         }
                         50 -> { menuSwitch = 50
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = aqCustomAdapter
-                            aqCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.Main_dish)
+                            binding.listView.adapter = apCustomAdapter
+                            apCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.buri)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.kyuuri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.buri), Toast.LENGTH_SHORT).show()
                             pasteFlag = 50
+                        }
+                        51 -> { menuSwitch = 51
+                            binding.textView14.requestFocus()
+                            binding.textView14.clearFocus()
+                            invalidateOptionsMenu()
+                            binding.listView.adapter = apCustomAdapter
+                            apCustomAdapter.notifyDataSetChanged()
+                            supportActionBar?.title = resources.getString(R.string.buri)
+                            hideKeyboard()
+                            nullKeyboard()
+                            Toast.makeText(applicationContext, (R.string.buri), Toast.LENGTH_SHORT).show()
+                            pasteFlag = 51
                         }
                     }
                 }
@@ -5108,13 +5137,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.dinner_w)
             }
             4 -> {
-                menuLamp.setIcon(R.drawable.carrot_w)
+                menuLamp.setIcon(R.drawable.salad_w)
             }
             5 -> {
                 menuLamp.setIcon(R.drawable.soup_w)
             }
             6 -> {
-                menuLamp.setIcon(R.drawable.apple_w)
+                menuLamp.setIcon(R.drawable.dessert_w)
             }
             7 -> {
                 menuLamp.setIcon(R.drawable.beef_w)
@@ -5126,91 +5155,91 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.chiken_w)
             }
             10 -> {
-                menuLamp.setIcon(R.drawable.kyuuri_w)
-            }
-            11 -> {
-                menuLamp.setIcon(R.drawable.daikon_w)
-            }
-            12 -> {
-                menuLamp.setIcon(R.drawable.retasu_w)
-            }
-            13 -> {
-                menuLamp.setIcon(R.drawable.kyabetu_w)
-            }
-            14 -> {
-                menuLamp.setIcon(R.drawable.moyashi_w)
-            }
-            15 -> {
-                menuLamp.setIcon(R.drawable.hakusai_w)
-            }
-            16 -> {
-                menuLamp.setIcon(R.drawable.tamanegi_w)
-            }
-            17 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
-            }
-            18 -> {
-                menuLamp.setIcon(R.drawable.jyagaimo_w)
-            }
-            19 -> {
-                menuLamp.setIcon(R.drawable.satsumaimo_w)
-            }
-            20 -> {
-                menuLamp.setIcon(R.drawable.carrot_w)
-            }
-            21 -> {
-                menuLamp.setIcon(R.drawable.kabocya_w)
-            }
-            22 -> {
-                menuLamp.setIcon(R.drawable.tomato_w)
-            }
-            23 -> {
-                menuLamp.setIcon(R.drawable.nasu_w)
-            }
-            24 -> {
-                menuLamp.setIcon(R.drawable.piman_w)
-            }
-            25 -> {
-                menuLamp.setIcon(R.drawable.burokkori_w)
-            }
-            26 -> {
-                menuLamp.setIcon(R.drawable.kabu_w)
-            }
-            27 -> {
-                menuLamp.setIcon(R.drawable.hourensou_w)
-            }
-            28 -> {
-                menuLamp.setIcon(R.drawable.komatsuna_w)
-            }
-            29 -> {
-                menuLamp.setIcon(R.drawable.chingensai_w)
-            }
-            30 -> {
-                menuLamp.setIcon(R.drawable.okura_w)
-            }
-            31 -> {
-                menuLamp.setIcon(R.drawable.nira_w)
-            }
-            32 -> {
-                menuLamp.setIcon(R.drawable.gobou_w)
-            }
-            33 -> {
-                menuLamp.setIcon(R.drawable.renkon_w)
-            }
-            34 -> {
                 menuLamp.setIcon(R.drawable.ingen_w)
             }
-            35 -> {
-                menuLamp.setIcon(R.drawable.siitake_w)
+            11 -> {
+                menuLamp.setIcon(R.drawable.okura_w)
             }
-            36 -> {
+            12 -> {
+                menuLamp.setIcon(R.drawable.kabu_w)
+            }
+            13 -> {
+                menuLamp.setIcon(R.drawable.kabocya_w)
+            }
+            14 -> {
+                menuLamp.setIcon(R.drawable.kyabetu_w)
+            }
+            15 -> {
+                menuLamp.setIcon(R.drawable.kyuuri_w)
+            }
+            16 -> {
+                menuLamp.setIcon(R.drawable.gobou_w)
+            }
+            17 -> {
+                menuLamp.setIcon(R.drawable.komatsuna_w)
+            }
+            18 -> {
+                menuLamp.setIcon(R.drawable.satsumaimo_w)
+            }
+            19 -> {
+                menuLamp.setIcon(R.drawable.jyagaimo_w)
+            }
+            20 -> {
+                menuLamp.setIcon(R.drawable.daikon_w)
+            }
+            21 -> {
+                menuLamp.setIcon(R.drawable.tamanegi_w)
+            }
+            22 -> {
+                menuLamp.setIcon(R.drawable.chingensai_w)
+            }
+            23 -> {
+                menuLamp.setIcon(R.drawable.tomato_w)
+            }
+            24 -> {
+                menuLamp.setIcon(R.drawable.nasu_w)
+            }
+            25 -> {
+                menuLamp.setIcon(R.drawable.nira_w)
+            }
+            26 -> {
+                menuLamp.setIcon(R.drawable.carrot_w)
+            }
+            27 -> {
+                menuLamp.setIcon(R.drawable.negi_w)
+            }
+            28 -> {
+                menuLamp.setIcon(R.drawable.hakusai_w)
+            }
+            29 -> {
+                menuLamp.setIcon(R.drawable.piman_w)
+            }
+            30 -> {
+                menuLamp.setIcon(R.drawable.burokkori_w)
+            }
+            31 -> {
+                menuLamp.setIcon(R.drawable.hourensou_w)
+            }
+            32 -> {
+                menuLamp.setIcon(R.drawable.moyashi_w)
+            }
+            33 -> {
+                menuLamp.setIcon(R.drawable.retasu_w)
+            }
+            34 -> {
+                menuLamp.setIcon(R.drawable.renkon_w)
+            }
+            35 -> {
                 menuLamp.setIcon(R.drawable.enoki_w)
             }
+            36 -> {
+                menuLamp.setIcon(R.drawable.eringi_w)
+            }
             37 -> {
-                menuLamp.setIcon(R.drawable.shimeji_w)
+                menuLamp.setIcon(R.drawable.siitake_w)
             }
             38 -> {
-                menuLamp.setIcon(R.drawable.eringi_w)
+                menuLamp.setIcon(R.drawable.shimeji_w)
             }
             39 -> {
                 menuLamp.setIcon(R.drawable.tamago_w)
@@ -5219,34 +5248,37 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.toufu_w)
             }
             41 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.aji_w)
             }
             42 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.iwashi_w)
             }
             43 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.ebi_w)
             }
             44 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.katsuo_w)
             }
             45 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.sake_w)
             }
             46 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.saba_w)
             }
             47 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.sanma_w)
             }
             48 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.tara_w)
             }
             49 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.buri_w)
             }
             50 -> {
-                menuLamp.setIcon(R.drawable.negi_w)
+                menuLamp.setIcon(R.drawable.buri_w)
+            }
+            51-> {
+                menuLamp.setIcon(R.drawable.buri_w)
             }
         }
 
