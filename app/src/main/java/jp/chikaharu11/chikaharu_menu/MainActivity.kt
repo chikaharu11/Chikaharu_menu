@@ -696,7 +696,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.tomato, "トマト　"),
                     Model(R.drawable.nasu, "ナス　"),
                     Model(R.drawable.nira, "ニラ　"),
-                    Model(R.drawable.carrot_b, "人参　"),
+                    Model(R.drawable.carrot, "人参　"),
                     Model(R.drawable.negi, "ネギ　"),
                     Model(R.drawable.hakusai, "白菜　"),
                     Model(R.drawable.piman, "ピーマン　"),
