@@ -732,9 +732,54 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.shuffle_b, "Shuffle order　"),
                     Model(R.drawable.search_b, "Find details　"),
                     Model(R.drawable.dinner_b, "Main dish  "),
-                    Model(R.drawable.carrot_b, "Salads  "),
-                    Model(R.drawable.soup_b, "Soup  "),
-                    Model(R.drawable.apple_b, "Fruits, Desserts  ")
+                    Model(R.drawable.salad, "Side dish,Salads　"),
+                    Model(R.drawable.soup_b, "Soup,Miso Soup　"),
+                    Model(R.drawable.dessert, "Fruits,Desserts　"),
+                    Model(R.drawable.beef, "牛肉　"),
+                    Model(R.drawable.pork, "豚肉　"),
+                    Model(R.drawable.chiken, "鶏肉　"),
+                    Model(R.drawable.ingen, "いんげん　"),
+                    Model(R.drawable.okura, "オクラ　"),
+                    Model(R.drawable.kabu, "かぶ　"),
+                    Model(R.drawable.kabocya, "かぼちゃ　"),
+                    Model(R.drawable.kyabetu, "キャベツ　"),
+                    Model(R.drawable.kyuuri, "キュウリ　"),
+                    Model(R.drawable.gobou, "ごぼう　"),
+                    Model(R.drawable.komatsuna, "小松菜　"),
+                    Model(R.drawable.satsumaimo, "さつまいも　"),
+                    Model(R.drawable.jyagaimo, "じゃがいも　"),
+                    Model(R.drawable.daikon, "大根　"),
+                    Model(R.drawable.tamanegi, "玉ネギ　"),
+                    Model(R.drawable.chingensai, "ちんげん菜　"),
+                    Model(R.drawable.tomato, "トマト　"),
+                    Model(R.drawable.nasu, "ナス　"),
+                    Model(R.drawable.nira, "ニラ　"),
+                    Model(R.drawable.carrot, "人参　"),
+                    Model(R.drawable.negi, "ネギ　"),
+                    Model(R.drawable.hakusai, "白菜　"),
+                    Model(R.drawable.piman, "ピーマン　"),
+                    Model(R.drawable.burokkori, "ブロッコリー　"),
+                    Model(R.drawable.hourensou, "ほうれん草　"),
+                    Model(R.drawable.moyashi, "もやし　"),
+                    Model(R.drawable.retasu, "レタス　"),
+                    Model(R.drawable.renkon, "レンコン　"),
+                    Model(R.drawable.enoki, "えのき　"),
+                    Model(R.drawable.eringi, "エリンギ　"),
+                    Model(R.drawable.siitake, "しいたけ　"),
+                    Model(R.drawable.shimeji, "しめじ　"),
+                    Model(R.drawable.tamago, "卵　"),
+                    Model(R.drawable.toufu, "豆腐　"),
+                    Model(R.drawable.aji, "あじ　"),
+                    Model(R.drawable.iwashi, "いわし　"),
+                    Model(R.drawable.ebi, "えび　"),
+                    Model(R.drawable.katsuo, "かつお　"),
+                    Model(R.drawable.sake, "さけ　"),
+                    Model(R.drawable.saba, "さば　"),
+                    Model(R.drawable.sanma, "さんま　"),
+                    Model(R.drawable.tara, "たら　"),
+                    Model(R.drawable.buri, "ぶり　"),
+                    Model(R.drawable.buri, "ほっけ　"),
+                    Model(R.drawable.buri, "めかじき　")
                 )
             )
         }
@@ -4472,10 +4517,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = apCustomAdapter
                             apCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.buri)
+                            supportActionBar?.title = resources.getString(R.string.hokke)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.buri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.hokke), Toast.LENGTH_SHORT).show()
                             pasteFlag = 50
                         }
                         51 -> { menuSwitch = 51
@@ -4484,10 +4529,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             binding.listView.adapter = apCustomAdapter
                             apCustomAdapter.notifyDataSetChanged()
-                            supportActionBar?.title = resources.getString(R.string.buri)
+                            supportActionBar?.title = resources.getString(R.string.mekajiki)
                             hideKeyboard()
                             nullKeyboard()
-                            Toast.makeText(applicationContext, (R.string.buri), Toast.LENGTH_SHORT).show()
+                            Toast.makeText(applicationContext, (R.string.mekajiki), Toast.LENGTH_SHORT).show()
                             pasteFlag = 51
                         }
                     }
