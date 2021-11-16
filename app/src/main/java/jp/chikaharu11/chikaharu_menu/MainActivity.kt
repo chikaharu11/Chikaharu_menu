@@ -1363,6 +1363,26 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("サイコロステーキ"),
                 Cuisine("ビーフシチュー"),
                 Cuisine("ビーフステーキ"),
+
+                Cuisine("プルコギ"),
+                Cuisine("牛肉とほうれん草のクリーム煮"),
+                Cuisine("牛肉とトマトのキムチ卵炒め"),
+                Cuisine("牛肉とナスのオイスターソース炒め"),
+                Cuisine("牛肉とごぼうのしぐれ煮"),
+                Cuisine("牛肉と大根の煮込み"),
+                Cuisine("牛肉とレンコンの辛みそ炒め"),
+                Cuisine("牛たたきの焼き漬け"),
+                Cuisine("牛肉のトマト煮"),
+                Cuisine("牛肉のエスニック風サラダ"),
+                Cuisine("肉豆腐"),
+                Cuisine("白菜のすき焼き風煮"),
+                Cuisine("焼肉のフレッシュトマトソース"),
+                Cuisine("かぼちゃと牛肉のチリソース炒め"),
+                Cuisine("キュウリと牛しゃぶのごまあえ"),
+                Cuisine("玉ねぎと牛肉のウスターソース炒め"),
+                Cuisine("ごぼうと牛肉の柳川風"),
+                Cuisine("きのこ入りプルコギ"),
+                Cuisine("ハヤシライス"),
             )
         } else {
             arrayListOf(
