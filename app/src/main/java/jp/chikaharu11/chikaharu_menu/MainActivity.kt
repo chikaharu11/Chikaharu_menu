@@ -720,8 +720,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.sanma, "さんま　"),
                     Model(R.drawable.tara, "たら　"),
                     Model(R.drawable.buri, "ぶり　"),
-                    Model(R.drawable.buri, "ほっけ　"),
-                    Model(R.drawable.buri, "めかじき　")
+                    Model(R.drawable.hokke, "ほっけ　"),
+                    Model(R.drawable.mekajiki, "めかじき　")
                 )
             )
         } else {
@@ -778,8 +778,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.sanma, "さんま  "),
                     Model(R.drawable.tara, "たら  "),
                     Model(R.drawable.buri, "ぶり  "),
-                    Model(R.drawable.buri, "ほっけ  "),
-                    Model(R.drawable.buri, "めかじき  ")
+                    Model(R.drawable.hokke, "ほっけ  "),
+                    Model(R.drawable.mekajiki, "めかじき  ")
                 )
             )
         }
@@ -5320,10 +5320,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 menuLamp.setIcon(R.drawable.buri_w)
             }
             50 -> {
-                menuLamp.setIcon(R.drawable.buri_w)
+                menuLamp.setIcon(R.drawable.hokke_w)
             }
             51-> {
-                menuLamp.setIcon(R.drawable.buri_w)
+                menuLamp.setIcon(R.drawable.mekajiki_w)
             }
         }
 
