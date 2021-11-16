@@ -108,6 +108,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var apCustomAdapter: CustomAdapter
     private lateinit var aqCustomAdapter: CustomAdapter
     private lateinit var arCustomAdapter: CustomAdapter
+    private lateinit var asCustomAdapter: CustomAdapter
 
     private lateinit var aaaCuisines: MutableList<Cuisine>
     private lateinit var aabCuisines: MutableList<Cuisine>
@@ -157,6 +158,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private lateinit var apCuisines: MutableList<Cuisine>
     private lateinit var aqCuisines: MutableList<Cuisine>
     private lateinit var arCuisines: MutableList<Cuisine>
+    private lateinit var asCuisines: MutableList<Cuisine>
 
 
     private val handler = Handler()
@@ -1718,6 +1720,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         } else {
             arrayListOf()
         }
+        asCuisines = if (locale == Locale.JAPAN) {
+            arrayListOf(
+
+            )
+        } else {
+            arrayListOf()
+        }
 
         aaaCustomAdapter = CustomAdapter(this, aaaCuisines, this)
         aabCustomAdapter = CustomAdapter(this, aabCuisines, this)
@@ -1767,6 +1776,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         apCustomAdapter = CustomAdapter(this, apCuisines, this)
         aqCustomAdapter = CustomAdapter(this, aqCuisines, this)
         arCustomAdapter = CustomAdapter(this, arCuisines, this)
+        asCustomAdapter = CustomAdapter(this, asCuisines, this)
 
 
         binding.listView.adapter = aCustomAdapter
@@ -4167,8 +4177,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = nCustomAdapter
-                            nCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = oCustomAdapter
+                            oCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.tamanegi)
                             hideKeyboard()
                             nullKeyboard()
@@ -4179,8 +4189,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = oCustomAdapter
-                            oCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = pCustomAdapter
+                            pCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.chingensai)
                             hideKeyboard()
                             nullKeyboard()
@@ -4191,8 +4201,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = pCustomAdapter
-                            pCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = qCustomAdapter
+                            qCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.tomato)
                             hideKeyboard()
                             nullKeyboard()
@@ -4203,8 +4213,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = qCustomAdapter
-                            qCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = rCustomAdapter
+                            rCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.nasu)
                             hideKeyboard()
                             nullKeyboard()
@@ -4215,8 +4225,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = rCustomAdapter
-                            rCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = sCustomAdapter
+                            sCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.nira)
                             hideKeyboard()
                             nullKeyboard()
@@ -4227,8 +4237,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = sCustomAdapter
-                            sCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = tCustomAdapter
+                            tCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.ninjin)
                             hideKeyboard()
                             nullKeyboard()
@@ -4239,8 +4249,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = tCustomAdapter
-                            tCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = uCustomAdapter
+                            uCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.negi)
                             hideKeyboard()
                             nullKeyboard()
@@ -4251,8 +4261,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = uCustomAdapter
-                            uCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = vCustomAdapter
+                            vCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.hakusai)
                             hideKeyboard()
                             nullKeyboard()
@@ -4263,8 +4273,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = vCustomAdapter
-                            vCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = wCustomAdapter
+                            wCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.piman)
                             hideKeyboard()
                             nullKeyboard()
@@ -4275,8 +4285,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = wCustomAdapter
-                            wCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = xCustomAdapter
+                            xCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.burokkori)
                             hideKeyboard()
                             nullKeyboard()
@@ -4287,8 +4297,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = xCustomAdapter
-                            xCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = yCustomAdapter
+                            yCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.hourensou)
                             hideKeyboard()
                             nullKeyboard()
@@ -4299,8 +4309,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = yCustomAdapter
-                            yCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = zCustomAdapter
+                            zCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.moyashi)
                             hideKeyboard()
                             nullKeyboard()
@@ -4311,8 +4321,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = zCustomAdapter
-                            zCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aaCustomAdapter
+                            aaCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.retasu)
                             hideKeyboard()
                             nullKeyboard()
@@ -4323,8 +4333,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = aaCustomAdapter
-                            aaCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = abCustomAdapter
+                            abCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.renkon)
                             hideKeyboard()
                             nullKeyboard()
@@ -4335,8 +4345,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = abCustomAdapter
-                            abCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = acCustomAdapter
+                            acCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.enoki)
                             hideKeyboard()
                             nullKeyboard()
@@ -4347,8 +4357,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = acCustomAdapter
-                            acCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = adCustomAdapter
+                            adCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.eringi)
                             hideKeyboard()
                             nullKeyboard()
@@ -4359,8 +4369,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = adCustomAdapter
-                            adCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aeCustomAdapter
+                            aeCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.shiitake)
                             hideKeyboard()
                             nullKeyboard()
@@ -4371,8 +4381,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = aeCustomAdapter
-                            aeCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = afCustomAdapter
+                            afCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.shimeji)
                             hideKeyboard()
                             nullKeyboard()
@@ -4383,8 +4393,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = afCustomAdapter
-                            afCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = agCustomAdapter
+                            agCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.tamago)
                             hideKeyboard()
                             nullKeyboard()
@@ -4395,8 +4405,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = agCustomAdapter
-                            agCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = ahCustomAdapter
+                            ahCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.toufu)
                             hideKeyboard()
                             nullKeyboard()
@@ -4407,8 +4417,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = agCustomAdapter
-                            agCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aiCustomAdapter
+                            aiCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.aji)
                             hideKeyboard()
                             nullKeyboard()
@@ -4419,8 +4429,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = aiCustomAdapter
-                            aiCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = ajCustomAdapter
+                            ajCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.iwashi)
                             hideKeyboard()
                             nullKeyboard()
@@ -4431,8 +4441,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = ajCustomAdapter
-                            ajCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = akCustomAdapter
+                            akCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.ebi)
                             hideKeyboard()
                             nullKeyboard()
@@ -4443,8 +4453,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = akCustomAdapter
-                            akCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = alCustomAdapter
+                            alCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.katsuo)
                             hideKeyboard()
                             nullKeyboard()
@@ -4455,8 +4465,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = alCustomAdapter
-                            alCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = amCustomAdapter
+                            amCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.sake)
                             hideKeyboard()
                             nullKeyboard()
@@ -4467,8 +4477,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = amCustomAdapter
-                            amCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = anCustomAdapter
+                            anCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.saba)
                             hideKeyboard()
                             nullKeyboard()
@@ -4479,8 +4489,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = anCustomAdapter
-                            anCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aoCustomAdapter
+                            aoCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.sanma)
                             hideKeyboard()
                             nullKeyboard()
@@ -4491,8 +4501,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = aoCustomAdapter
-                            aoCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = apCustomAdapter
+                            apCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.tara)
                             hideKeyboard()
                             nullKeyboard()
@@ -4503,8 +4513,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = apCustomAdapter
-                            apCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = aqCustomAdapter
+                            aqCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.buri)
                             hideKeyboard()
                             nullKeyboard()
@@ -4515,8 +4525,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = apCustomAdapter
-                            apCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = arCustomAdapter
+                            arCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.hokke)
                             hideKeyboard()
                             nullKeyboard()
@@ -4527,8 +4537,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             binding.textView14.requestFocus()
                             binding.textView14.clearFocus()
                             invalidateOptionsMenu()
-                            binding.listView.adapter = apCustomAdapter
-                            apCustomAdapter.notifyDataSetChanged()
+                            binding.listView.adapter = asCustomAdapter
+                            asCustomAdapter.notifyDataSetChanged()
                             supportActionBar?.title = resources.getString(R.string.mekajiki)
                             hideKeyboard()
                             nullKeyboard()
