@@ -1386,6 +1386,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ハムとソーセージのハッシュブラウン"),
                 Cuisine("とんかつ"),
                 Cuisine("酢豚"),
+                Cuisine("レモンとローズマリーのポークチョップ"),
             )
         } else {
             arrayListOf(
@@ -1410,6 +1411,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("レモンチキンソテー"),
                 Cuisine("棒棒鶏"),
                 Cuisine("唐揚げ"),
+                Cuisine("ハニーマスタードチキン"),
+                Cuisine("ブルスケッタチキン"),
+                Cuisine("グリルチキンのシャワルマ"),
             )
         } else {
             arrayListOf(
@@ -1418,7 +1422,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         dCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("インゲンのごま和え"),
+                Cuisine("サヤインゲンのツナサラダ"),
+                Cuisine("フェイジャン"),
             )
         } else {
             arrayListOf(
@@ -1427,21 +1433,24 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         eCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("オクラの卵炒め"),
             )
         } else {
             arrayListOf()
         }
         fCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("カブと厚揚げのめんつゆ炒め"),
+                Cuisine("カブと豆腐のとろみ汁"),
             )
         } else {
             arrayListOf()
         }
         gCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("かぼちゃとココナッツのスープ"),
+                Cuisine("かぼちゃの煮付け"),
+                Cuisine("スパイスパンプキンスープ"),
             )
         } else {
             arrayListOf()
@@ -1468,28 +1477,36 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         jCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("きんぴらごぼう"),
+                Cuisine("ごぼうサラダ"),
+                Cuisine("ごぼうのつくね揚げ"),
             )
         } else {
             arrayListOf()
         }
         kCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("小松菜と厚揚げの煮びたし"),
             )
         } else {
             arrayListOf()
         }
         lCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("さつまいもとズッキーニのポークラザニア"),
+                Cuisine("さつまいもとチキンとキヌアのサラダ"),
             )
         } else {
             arrayListOf()
         }
         mCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("じゃがいもとクレソンの味噌汁"),
+                Cuisine("じゃがいもと玉ねぎの味噌汁"),
+                Cuisine("ひき肉とじゃがいものキムチ炒め"),
+                Cuisine("ポテトサラダ"),
+                Cuisine("ポテトとケールのクリーミースープ"),
+                Cuisine("ポテトのシーザーサラダ"),
             )
         } else {
             arrayListOf()
@@ -1509,34 +1526,46 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             arrayListOf(
                 Cuisine("オニオングラタンスープ"),
                 Cuisine("オニオンリング"),
+                Cuisine("フレンチオニオンスープ"),
+                Cuisine("玉ねぎとニンニクのスープ"),
             )
         } else {
             arrayListOf()
         }
         pCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("チンゲンサイの中華スープ"),
             )
         } else {
             arrayListOf()
         }
         qCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("トマト、バジル、モッツァレラのカプレーゼサラダ"),
+                Cuisine("トマトサラダ"),
+                Cuisine("トマトとキュウリとアボカドのサラダ"),
+                Cuisine("トマトのクリームチーズ詰め"),
+                Cuisine("ローストトマトとバジルのクリーミースープ"),
+                Cuisine("大豆とトマトのスープ"),
             )
         } else {
             arrayListOf()
         }
         rCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("ナスとエノキの味噌汁"),
+                Cuisine("ナスとピーマンの味噌炒め"),
+                Cuisine("ナスとミョウガのごま味噌汁"),
+                Cuisine("ナスとチェリートマトのスパイシーロースト"),
+                Cuisine("ナスとトマトとフェタチーズのロースト"),
+                Cuisine("焼きナス"),
             )
         } else {
             arrayListOf()
         }
         sCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("ニラと玉子の味噌汁"),
             )
         } else {
             arrayListOf()
@@ -1565,21 +1594,32 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         wCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("ピーマンともやしの塩炒め"),
+                Cuisine("ピーマンのチーズ肉詰め焼き"),
+                Cuisine("ピーマンのナムル"),
+                Cuisine("ピーマンの肉詰め"),
+                Cuisine("ピーマンの味噌汁"),
             )
         } else {
             arrayListOf()
         }
         xCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("ブロッコリーとじゃがいものスープ"),
+                Cuisine("ブロッコリーとツナのチーズ蒸し"),
+                Cuisine("ブロッコリーのガーリックパン粉がけ"),
             )
         } else {
             arrayListOf()
         }
         yCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("ほうれん草とエリンギのニンニク炒め"),
+                Cuisine("ほうれん草とツナのバターしょうゆ炒め"),
+                Cuisine("ほうれん草とベーコンのソテー"),
+                Cuisine("ほうれん草のおひたし"),
+                Cuisine("ココナッツ、キヌア、ほうれん草のサラダ"),
+                Cuisine("ハーブとひよこ豆とほうれん草のサラダ"),
             )
         } else {
             arrayListOf()
@@ -1597,20 +1637,21 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("レタスと卵の炒め物"),
                 Cuisine("レタスの味噌汁"),
                 Cuisine("シーザーサラダ"),
+                Cuisine("ツナレタスサラダ"),
             )
         } else {
             arrayListOf()
         }
         abCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("レンコン団子汁"),
             )
         } else {
             arrayListOf()
         }
         acCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("えのきのサンラータン"),
             )
         } else {
             arrayListOf()
@@ -1624,7 +1665,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         aeCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("椎茸とほうれん草の味噌汁"),
             )
         } else {
             arrayListOf()
@@ -1638,14 +1679,20 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         agCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("オムライス"),
+                Cuisine("シャクシュカ"),
+                Cuisine("マッシュルームとモッツァレラのフレンチオムレツ"),
             )
         } else {
             arrayListOf()
         }
         ahCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("豆腐とアマランスのサラダ"),
+                Cuisine("豆腐とじゃこのサラダ"),
+                Cuisine("豆腐とわかめの味噌汁"),
+                Cuisine("なめこと豆腐の味噌汁"),
+                Cuisine("麻婆豆腐"),
             )
         } else {
             arrayListOf()
@@ -1666,35 +1713,42 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         akCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("エビとアボカドのサラダ"),
+                Cuisine("エビフライ"),
+                Cuisine("ガーリックシュリンプ"),
+                Cuisine("海老のバターソテー"),
             )
         } else {
             arrayListOf()
         }
         alCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("カツオのタタキ"),
             )
         } else {
             arrayListOf()
         }
         amCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("サーモンのスパイスグリル"),
+                Cuisine("サーモンのムケッカ"),
+                Cuisine("サーモンのメープルグリル"),
+                Cuisine("スモークサーモンとローストビートのサラダ"),
+                Cuisine("焼鮭"),
             )
         } else {
             arrayListOf()
         }
         anCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("サバ味噌煮"),
             )
         } else {
             arrayListOf()
         }
         aoCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("サンマの塩焼き"),
             )
         } else {
             arrayListOf()
@@ -1708,7 +1762,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         aqCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("ブリの照り焼き"),
+                Cuisine("ブリ大根"),
             )
         } else {
             arrayListOf()
@@ -2157,7 +2212,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "春雨スープ",
                     "ナスとミョウガのごま味噌汁",
                     "じゃがいもとクレソンの味噌汁",
-                    "ニラ玉の味噌汁",
                     "キャベツとベーコンの豆乳味噌汁",
                     "カリフラワーの味噌汁",
                     "レンコン団子汁",
@@ -2208,7 +2262,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "Miso soup with green pepper",
                     "Miso Soup with Kimchi",
                     "Miso soup with leek and egg",
-                    "Miso soup with leek balls",
                     "Miso soup with nameko mushroom and tofu",
                     "Miso soup with potatoes and onions",
                     "Miso Soup with Potatoes and Watercress",
