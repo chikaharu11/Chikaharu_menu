@@ -1383,6 +1383,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ごぼうと牛肉の柳川風"),
                 Cuisine("きのこ入りプルコギ"),
                 Cuisine("ハヤシライス"),
+                Cuisine("ピザ風餃子"),
+                Cuisine("春雨とひき肉の炒めもの"),
             )
         } else {
             arrayListOf(
