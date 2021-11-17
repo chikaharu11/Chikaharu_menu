@@ -1600,6 +1600,20 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ポテトサラダ"),
                 Cuisine("ポテトとケールのクリーミースープ"),
                 Cuisine("ポテトのシーザーサラダ"),
+
+                Cuisine("じゃがいもと肉団子のトマト煮"),
+                Cuisine("肉じゃが"),
+                Cuisine("さけとじゃがいものクリーム煮"),
+                Cuisine("ツナポテトグラタン"),
+                Cuisine("油揚げのポテト巻き"),
+                Cuisine("じゃがいもと鶏肉のチーズ焼き"),
+                Cuisine("ジャーマンポテト"),
+                Cuisine("農夫の朝食"),
+                Cuisine("じゃがいもと豚ももの塩炒め"),
+                Cuisine("じゃがいもとじゃこのガレット"),
+                Cuisine("じゃがいもと鶏のタッカルビ"),
+                Cuisine("みつばとじゃがいもの三杯酢"),
+                Cuisine("じゃがいもの冷たいミルクスープ"),
             )
         } else {
             arrayListOf()
@@ -1611,6 +1625,23 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("大根と油揚げの味噌汁"),
                 Cuisine("大根のそぼろ煮"),
                 Cuisine("大根の中華風そぼろ煮"),
+
+                Cuisine("おろししょうが焼き"),
+                Cuisine("豚ひき肉と大根の甘辛煮"),
+                Cuisine("鶏手羽と大根の煮もの"),
+                Cuisine("牛肉と大根の煮込み"),
+                Cuisine("ブリ大根"),
+                Cuisine("さんまのおろし煮"),
+                Cuisine("ゆで卵と大根のめんつゆ煮"),
+                Cuisine("豆腐のみぞれ鍋"),
+                Cuisine("厚揚げと大根の煮もの"),
+                Cuisine("ふろふき大根"),
+                Cuisine("大根とさけのみそ煮"),
+                Cuisine("豚肉のおろしあえ"),
+                Cuisine("大根とカリカリじゃこのサラダ"),
+                Cuisine("紅白なます"),
+                Cuisine("大根とハムのガーリックサラダ"),
+                Cuisine("大根としめじのしょうゆ炒め"),
             )
         } else {
             arrayListOf()
@@ -1621,6 +1652,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("オニオンリング"),
                 Cuisine("フレンチオニオンスープ"),
                 Cuisine("玉ねぎとニンニクのスープ"),
+
+                Cuisine("玉ねぎとマッシュルームのスクランブルエッグ"),
+                Cuisine("玉ねぎと牛肉のウスターソース炒め"),
+                Cuisine("まいたけと玉ねぎの卵とじ炒め"),
+                Cuisine("玉ねぎとウインナーの甘酢マリネ"),
+                Cuisine("玉ねぎベーコンチーズ焼き"),
+                Cuisine("玉ねぎとツナの煮びたし"),
             )
         } else {
             arrayListOf()
