@@ -1665,7 +1665,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         pCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("チンゲンサイの中華スープ"),
+                Cuisine("チンゲン菜の中華スープ"),
+
+                Cuisine("豚肉とチンゲン菜の重ね蒸し"),
+                Cuisine("鶏レバーとチンゲン菜の香味炒め"),
+                Cuisine("ブリとチンゲン菜の中華塩炒め"),
+                Cuisine("チンゲン菜といかの中華炒め"),
+                Cuisine("チンゲン菜とツナのスープ煮"),
+                Cuisine("もやしとチンゲン菜のひき肉あんかけ"),
+                Cuisine("チンゲン菜の梅おかかしょうゆあえ"),
+                Cuisine("チンゲン菜とえのきの煮びたし"),
+                Cuisine("チンゲン菜とベーコンの味噌汁"),
+                Cuisine("チンゲン菜のマヨごま炒め"),
+
             )
         } else {
             arrayListOf()
@@ -1673,11 +1685,23 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         qCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("トマト、バジル、モッツァレラのカプレーゼサラダ"),
-                Cuisine("トマトサラダ"),
                 Cuisine("トマトとキュウリとアボカドのサラダ"),
                 Cuisine("トマトのクリームチーズ詰め"),
                 Cuisine("ローストトマトとバジルのクリーミースープ"),
                 Cuisine("大豆とトマトのスープ"),
+
+                Cuisine("あさりとトマトの卵炒め"),
+                Cuisine("いり卵とトマトのサラダ"),
+                Cuisine("ミニトマトと鶏肉の甘酢炒め"),
+                Cuisine("トマトと卵の中華炒め"),
+                Cuisine("トマトと鶏だんごのスープ"),
+                Cuisine("トマトのナムル"),
+                Cuisine("ミニトマトのチーズ焼き"),
+                Cuisine("ソーセージのトマト煮"),
+                Cuisine("トマトとネギの味噌汁"),
+                Cuisine("ナスとトマトの味噌汁"),
+                Cuisine("トマトだしそうめん"),
+                Cuisine("アスパラとミニトマト炒め"),
             )
         } else {
             arrayListOf()
