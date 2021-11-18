@@ -1709,11 +1709,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         rCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("ナスとエノキの味噌汁"),
+                Cuisine("ナスとトマトの味噌汁"),
                 Cuisine("ナスとピーマンの味噌炒め"),
                 Cuisine("ナスとミョウガのごま味噌汁"),
                 Cuisine("ナスとチェリートマトのスパイシーロースト"),
                 Cuisine("ナスとトマトとフェタチーズのロースト"),
                 Cuisine("焼きナス"),
+
+                Cuisine("ひき肉とナスのトマト煮"),
+                Cuisine("豚肉とピーマン、ナスの甘酢炒め"),
+                Cuisine("牛肉とナスのオイスターソース炒め"),
+                Cuisine("エビとナスとセロリの塩炒め"),
+                Cuisine("麻婆茄子"),
+                Cuisine("ナスの豚肉巻き焼き"),
+                Cuisine("ナスと豚しゃぶの香味じょうゆがけ"),
+                Cuisine("ナスの揚げびたし"),
+                Cuisine("ナスの浅漬け"),
             )
         } else {
             arrayListOf()
@@ -1721,20 +1732,42 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         sCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("ニラと玉子の味噌汁"),
+
+                Cuisine("ニラともやしのひき肉蒸し"),
+                Cuisine("鶏団子とニラのスープ煮"),
+                Cuisine("ニラとエビのあんかけ豆腐"),
+                Cuisine("ニラ玉"),
+                Cuisine("ニラレバ炒め"),
             )
         } else {
             arrayListOf()
         }
         tCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("にんじんしりしり"),
+                Cuisine("ラーパーツァイ"),
+                Cuisine("にんじんとひき肉の春雨炒め"),
+                Cuisine("鶏肉のにんじんチーズロール"),
+                Cuisine("にんじんと桜海老のかき揚げ"),
+                Cuisine("にんじんいり豆腐"),
+                Cuisine("にんじんの黒ごまあえ"),
+                Cuisine("にんじんとツナのおかかじょうゆあえ"),
+                Cuisine("もやしとにんじんのナムル"),
+                Cuisine("にんじんの煮びたし"),
+                Cuisine("にんじんの甘酢炒め"),
             )
         } else {
             arrayListOf()
         }
         uCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("鶏から揚げのねぎ塩炒め"),
+                Cuisine("豚肉のねぎ塩焼き"),
+                Cuisine("ハムとねぎのチーズ焼き"),
+                Cuisine("鶏とねぎの卵とじ"),
+                Cuisine("豆腐のステーキねぎあんかけ"),
+                Cuisine("ねぎチャーシュー"),
+                Cuisine("トマトとねぎの味噌汁"),
             )
         } else {
             arrayListOf()
@@ -1743,6 +1776,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             arrayListOf(
                 Cuisine("白菜と小松菜の味噌汁"),
                 Cuisine("白菜の旨煮"),
+
+                Cuisine("鶏団子と白菜のクリーム煮"),
+                Cuisine("ほたてと白菜のクリーム煮"),
+                Cuisine("白菜とエビの塩炒め"),
+                Cuisine("白菜と豚肉の甘酢炒め"),
+                Cuisine("白菜と豚肉の重ね蒸し"),
+                Cuisine("白菜と肉団子のとろとろ煮"),
+                Cuisine("ラーパーツァイ"),
+                Cuisine("えのきと白菜のとろとろスープ"),
+                Cuisine("白菜とキュウリの浅漬け"),
             )
         } else {
             arrayListOf()
@@ -1754,6 +1797,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ピーマンのナムル"),
                 Cuisine("ピーマンの肉詰め"),
                 Cuisine("ピーマンの味噌汁"),
+
+                Cuisine("回鍋肉"),
+                Cuisine("ナスとピーマンのみそ炒め"),
+                Cuisine("ピーマンと豚肉のみそ炒め"),
+                Cuisine("マヨ卵詰めピーマン焼き"),
+                Cuisine("ツナ詰めピーマンのトマト煮"),
+                Cuisine("無限ピーマン"),
+                Cuisine("焼きピーマンのおかかじょうゆあえ"),
             )
         } else {
             arrayListOf()
@@ -1763,6 +1814,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ブロッコリーとじゃがいものスープ"),
                 Cuisine("ブロッコリーとツナのチーズ蒸し"),
                 Cuisine("ブロッコリーのガーリックパン粉がけ"),
+
+                Cuisine("ブロッコリーの肉巻き"),
+                Cuisine("ブロッコリーとほたての塩炒め"),
+                Cuisine("ブロッコリーと半熟卵のわさびマヨサラダ"),
+                Cuisine("ブロッコリーのごまあえ"),
+                Cuisine("ブロッコリーのフリッター"),
+                Cuisine("ブロッコリーのお浸し"),
+                Cuisine("ブロッコリーとじゃがいものスープ"),
             )
         } else {
             arrayListOf()
@@ -1775,6 +1834,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ほうれん草のおひたし"),
                 Cuisine("ココナッツ、キヌア、ほうれん草のサラダ"),
                 Cuisine("ハーブとひよこ豆とほうれん草のサラダ"),
+
+                Cuisine("ほうれん草とさけのクリームシチュー"),
+                Cuisine("豚肉とほうれん草、卵の炒めもの"),
+                Cuisine("鶏肉とほうれん草の卵とじ"),
+                Cuisine("牛肉とほうれん草のクリーム煮"),
+                Cuisine("たことほうれん草のガーリック炒め"),
+                Cuisine("ほうれん草の卵落としグラタン"),
+                Cuisine("ほうれん草とベーコンの卵炒め"),
+                Cuisine("ほうれん草とベーコンのサラダ"),
+                Cuisine("ほうれん草のごまあえ"),
             )
         } else {
             arrayListOf()
