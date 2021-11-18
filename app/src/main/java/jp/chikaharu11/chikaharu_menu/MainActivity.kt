@@ -1852,6 +1852,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             arrayListOf(
                 Cuisine("もやしときゅうりのごま和え"),
                 Cuisine("もやしの中華スープ"),
+
+                Cuisine("もやしの肉みそがけ"),
+                Cuisine("ニラともやしのひき肉蒸し"),
+                Cuisine("エビともやしのエスニック炒め"),
+                Cuisine("もやしの卵とじ"),
+                Cuisine("もやしと豚バラ炒めニラポン酢がけ"),
+                Cuisine("もやしと卵の甘酢炒め"),
+                Cuisine("もやしとチンゲン菜のひき肉あんかけ"),
+                Cuisine("豚肉のもやし巻き"),
+                Cuisine("もやしと牛肉のオイスターソース炒め"),
+                Cuisine("もやしと鶏肉のみそ炒め"),
+                Cuisine("もやしとにんじんのナムル"),
+                Cuisine("ツナともやしの炒め味噌汁"),
             )
         } else {
             arrayListOf()
@@ -1862,6 +1875,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("レタスの味噌汁"),
                 Cuisine("シーザーサラダ"),
                 Cuisine("ツナレタスサラダ"),
+
+                Cuisine("ささ身とレタスの卵炒め"),
+                Cuisine("豚ひき肉炒めのレタス包み"),
+                Cuisine("レタスの昆布漬け"),
+                Cuisine("レタスとエビのスープ"),
+                Cuisine("レタスチャーハン"),
             )
         } else {
             arrayListOf()
@@ -1869,6 +1888,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         abCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("レンコン団子汁"),
+
+                Cuisine("鶏肉とレンコンのチリソース炒め"),
+                Cuisine("牛肉とレンコンの辛みそ炒め"),
+                Cuisine("レンコンのはさみ揚げ"),
+                Cuisine("レンコンの揚げ団子"),
+                Cuisine("レンコンのおかか煮"),
+                Cuisine("レンコンのきんぴら"),
             )
         } else {
             arrayListOf()
@@ -1876,13 +1902,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         acCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("えのきのサンラータン"),
+
+                Cuisine("えのきと豆腐の梅おかかソテー"),
+                Cuisine("チンゲン菜とえのきの煮びたし"),
+                Cuisine("えのきといんげんの味噌汁"),
+                Cuisine("えのきバターしょうゆソテー"),
             )
         } else {
             arrayListOf()
         }
         adCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("エリンギのベーコン巻き焼き"),
+                Cuisine("エリンギとハムの卵炒め"),
+                Cuisine("ほうれん草とエリンギのにんにく炒め"),
+                Cuisine("エリンギのきんぴら"),
+                Cuisine("エリンギとネギの味噌汁"),
             )
         } else {
             arrayListOf()
