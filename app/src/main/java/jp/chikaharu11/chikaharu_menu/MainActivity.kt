@@ -1192,7 +1192,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("大根と油揚げの味噌汁"),
                 Cuisine("大豆とトマトのスープ"),
                 Cuisine("沢煮椀"),
-                Cuisine("椎茸とほうれん草の味噌汁"),
+                Cuisine("しいたけとほうれん草の味噌汁"),
                 Cuisine("豆腐とわかめの味噌汁"),
                 Cuisine("豚しゃぶと梅干しのスープ"),
                 Cuisine("豚汁"),
@@ -1924,7 +1924,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         }
         aeCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-                Cuisine("椎茸とほうれん草の味噌汁"),
+                Cuisine("しいたけとほうれん草の味噌汁"),
             )
         } else {
             arrayListOf()
@@ -2514,7 +2514,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     "あさりの味噌汁",
                     "ニラと玉子の味噌汁",
                     "白菜と小松菜の味噌汁",
-                    "椎茸とほうれん草の味噌汁",
+                    "しいたけとほうれん草の味噌汁",
                     "ナスとエノキの味噌汁",
                     "じゃがいもと玉ねぎの味噌汁",
                     "なめこと豆腐の味噌汁",
