@@ -1925,13 +1925,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         aeCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
                 Cuisine("しいたけとほうれん草の味噌汁"),
+
+                Cuisine("しいたけのみそ味肉詰め焼き"),
+                Cuisine("キャベツとしいたけのじゃこ炒め"),
+                Cuisine("しいたけのチーズ焼き"),
+                Cuisine("しいたけのバターホイル焼き"),
             )
         } else {
             arrayListOf()
         }
         afCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
-
+                Cuisine("しめじとささ身のクリーム煮"),
+                Cuisine("しめじと鶏肉のトマト煮"),
+                Cuisine("大根としめじのしょうゆ炒め"),
+                Cuisine("しめじと豆腐のお吸いもの"),
+                Cuisine("しめじのバターポン酢炒め"),
             )
         } else {
             arrayListOf()
@@ -1941,6 +1950,27 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("オムライス"),
                 Cuisine("シャクシュカ"),
                 Cuisine("マッシュルームとモッツァレラのフレンチオムレツ"),
+
+                Cuisine("鶏ひき肉とキャベツの卵とじ"),
+                Cuisine("豚肉とほうれん草、卵の炒めもの"),
+                Cuisine("鶏肉とほうれん草の卵とじ"),
+                Cuisine("ささ身とレタスの卵炒め"),
+                Cuisine("あさりとトマトの卵炒め"),
+                Cuisine("かに玉"),
+                Cuisine("鶏肉とネギの卵とじ"),
+                Cuisine("茶碗蒸し"),
+                Cuisine("卵とツナのにんじん炒め"),
+                Cuisine("卵とレタスの炒めもの"),
+                Cuisine("玉ねぎとマッシュルームのスクランブルエッグ"),
+                Cuisine("いり卵とトマトのサラダ"),
+                Cuisine("エリンギとハムの卵炒め"),
+                Cuisine("もやしの卵とじ"),
+                Cuisine("ゆで卵と大根のめんつゆ煮"),
+                Cuisine("ベーコンオムレツ"),
+                Cuisine("のりチーズ卵焼き"),
+                Cuisine("ソーセージの卵焼き"),
+                Cuisine("ほうれん草とベーコンの卵炒め"),
+                Cuisine("青菜と鶏肉、卵の炒めもの"),
             )
         } else {
             arrayListOf()
@@ -1952,6 +1982,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("豆腐とわかめの味噌汁"),
                 Cuisine("なめこと豆腐の味噌汁"),
                 Cuisine("麻婆豆腐"),
+
+                Cuisine("鶏ひき肉の炒り豆腐"),
+                Cuisine("豚肉と豆腐の磯部巻き"),
+                Cuisine("豆腐のベーコン巻きステーキ"),
+                Cuisine("肉豆腐"),
+                Cuisine("豆腐、キャベツ、豚肉のチャンプルー"),
+                Cuisine("豆腐と鶏団子の煮もの"),
             )
         } else {
             arrayListOf()
