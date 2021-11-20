@@ -2775,6 +2775,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 )
             }
 
+        fun menuShuffle(text : EditText) {
+            val shuffled = cuisine1.shuffled() + cuisine2.shuffled() + cuisine3.shuffled() + cuisine4.shuffled()
+            text.setText(shuffled[0],TextView.BufferType.NORMAL)
+            text.textSize = defaultTextSize--
+            text.textSize = defaultTextSize++
+            text.clearFocus()
+        }
+
             binding.editText8.setOnClickListener {
                 when {
                     pasteFlag in pasteFlagRange && binding.editText8.hasFocus() -> {
@@ -2787,7 +2795,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.editText8.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText8)
                     }
                     pasteFlag == 2 && binding.editText8.hasFocus() -> {
                         binding.editText8.setTextIsSelectable(true)
@@ -2809,7 +2817,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.editText4.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText4)
                     }
                     pasteFlag == 2 && binding.editText4.hasFocus() -> {
                         binding.editText4.setTextIsSelectable(true)
@@ -2831,7 +2839,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.editText.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText)
                     }
                     pasteFlag == 2 && binding.editText.hasFocus() -> {
                         binding.editText.setTextIsSelectable(true)
@@ -2853,7 +2861,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.editText10.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText10)
                     }
                     pasteFlag == 2 && binding.editText10.hasFocus() -> {
                         binding.editText10.setTextIsSelectable(true)
@@ -2875,7 +2883,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.editText11.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText11)
                     }
                     pasteFlag == 2 && binding.editText11.hasFocus() -> {
                         binding.editText11.setTextIsSelectable(true)
@@ -2897,7 +2905,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.editText12.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText12)
                     }
                     pasteFlag == 2 && binding.editText12.hasFocus() -> {
                         binding.editText12.setTextIsSelectable(true)
@@ -2919,7 +2927,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.editText13.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText13)
                     }
                     pasteFlag == 2 && binding.editText13.hasFocus() -> {
                         binding.editText13.setTextIsSelectable(true)
@@ -2941,7 +2949,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.editText9.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText9)
                     }
                     pasteFlag == 2 && binding.editText9.hasFocus() -> {
                         binding.editText9.setTextIsSelectable(true)
@@ -2963,7 +2971,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.editText7.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText7)
                     }
                     pasteFlag == 2 && binding.editText7.hasFocus() -> {
                         binding.editText7.setTextIsSelectable(true)
@@ -2985,7 +2993,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.editText14.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText14)
                     }
                     pasteFlag == 2 && binding.editText14.hasFocus() -> {
                         binding.editText14.setTextIsSelectable(true)
@@ -3007,7 +3015,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.editText15.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText15)
                     }
                     pasteFlag == 2 && binding.editText15.hasFocus() -> {
                         binding.editText15.setTextIsSelectable(true)
@@ -3029,7 +3037,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.editText16.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText16)
                     }
                     pasteFlag == 2 && binding.editText16.hasFocus() -> {
                         binding.editText16.setTextIsSelectable(true)
@@ -3051,7 +3059,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.editText17.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText17)
                     }
                     pasteFlag == 2 && binding.editText17.hasFocus() -> {
                         binding.editText17.setTextIsSelectable(true)
@@ -3073,7 +3081,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.editText18.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText18)
                     }
                     pasteFlag == 2 && binding.editText18.hasFocus() -> {
                         binding.editText18.setTextIsSelectable(true)
@@ -3095,7 +3103,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.editText8n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText8n)
                     }
                     pasteFlag == 2 && binding.editText8n.hasFocus() -> {
                         binding.editText8n.setTextIsSelectable(true)
@@ -3117,7 +3125,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.editText4n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText4n)
                     }
                     pasteFlag == 2 && binding.editText4n.hasFocus() -> {
                         binding.editText4n.setTextIsSelectable(true)
@@ -3139,7 +3147,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.editTextn.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editTextn)
                     }
                     pasteFlag == 2 && binding.editTextn.hasFocus() -> {
                         binding.editTextn.setTextIsSelectable(true)
@@ -3161,7 +3169,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.editText10n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText10n)
                     }
                     pasteFlag == 2 && binding.editText10n.hasFocus() -> {
                         binding.editText10n.setTextIsSelectable(true)
@@ -3183,7 +3191,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.editText11n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText11n)
                     }
                     pasteFlag == 2 && binding.editText11n.hasFocus() -> {
                         binding.editText11n.setTextIsSelectable(true)
@@ -3205,7 +3213,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.editText12n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText12n)
                     }
                     pasteFlag == 2 && binding.editText12n.hasFocus() -> {
                         binding.editText12n.setTextIsSelectable(true)
@@ -3227,7 +3235,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.editText13n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText13n)
                     }
                     pasteFlag == 2 && binding.editText13n.hasFocus() -> {
                         binding.editText13n.setTextIsSelectable(true)
@@ -3249,7 +3257,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.editText9n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText9n)
                     }
                     pasteFlag == 2 && binding.editText9n.hasFocus() -> {
                         binding.editText9n.setTextIsSelectable(true)
@@ -3271,7 +3279,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.editText7n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText7n)
                     }
                     pasteFlag == 2 && binding.editText7n.hasFocus() -> {
                         binding.editText7n.setTextIsSelectable(true)
@@ -3293,7 +3301,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.editText14n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText14n)
                     }
                     pasteFlag == 2 && binding.editText14n.hasFocus() -> {
                         binding.editText14n.setTextIsSelectable(true)
@@ -3315,7 +3323,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.editText15n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText15n)
                     }
                     pasteFlag == 2 && binding.editText15n.hasFocus() -> {
                         binding.editText15n.setTextIsSelectable(true)
@@ -3337,7 +3345,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.editText16n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText16n)
                     }
                     pasteFlag == 2 && binding.editText16n.hasFocus() -> {
                         binding.editText16n.setTextIsSelectable(true)
@@ -3359,7 +3367,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.editText17n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText17n)
                     }
                     pasteFlag == 2 && binding.editText17n.hasFocus() -> {
                         binding.editText17n.setTextIsSelectable(true)
@@ -3381,7 +3389,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.editText18n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText18n)
                     }
                     pasteFlag == 2 && binding.editText18n.hasFocus() -> {
                         binding.editText18n.setTextIsSelectable(true)
@@ -3404,7 +3412,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
-                        binding.editText8.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText8)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText8.setTextIsSelectable(true)
@@ -3430,7 +3438,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
-                        binding.editText4.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText4)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText4.setTextIsSelectable(true)
@@ -3456,7 +3464,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
-                        binding.editText.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText.setTextIsSelectable(true)
@@ -3482,7 +3490,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
-                        binding.editText10.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText10)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText10.setTextIsSelectable(true)
@@ -3508,7 +3516,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
-                        binding.editText11.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText11)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText11.setTextIsSelectable(true)
@@ -3534,7 +3542,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
-                        binding.editText12.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText12)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText12.setTextIsSelectable(true)
@@ -3560,7 +3568,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
-                        binding.editText13.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText13)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText13.setTextIsSelectable(true)
@@ -3586,7 +3594,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
-                        binding.editText9.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText9)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText9.setTextIsSelectable(true)
@@ -3612,7 +3620,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
-                        binding.editText7.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText7)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText7.setTextIsSelectable(true)
@@ -3638,7 +3646,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
-                        binding.editText14.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText14)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText14.setTextIsSelectable(true)
@@ -3664,7 +3672,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
-                        binding.editText15.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText15)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText15.setTextIsSelectable(true)
@@ -3690,7 +3698,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
-                        binding.editText16.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText16)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText16.setTextIsSelectable(true)
@@ -3716,7 +3724,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
-                        binding.editText17.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText17)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText17.setTextIsSelectable(true)
@@ -3742,7 +3750,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
-                        binding.editText18.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText18)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText18.setTextIsSelectable(true)
@@ -3768,7 +3776,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
-                        binding.editText8n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText8n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText8n.setTextIsSelectable(true)
@@ -3794,7 +3802,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
-                        binding.editText4n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText4n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText4n.setTextIsSelectable(true)
@@ -3820,7 +3828,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
-                        binding.editTextn.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editTextn)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editTextn.setTextIsSelectable(true)
@@ -3846,7 +3854,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
-                        binding.editText10n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText10n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText10n.setTextIsSelectable(true)
@@ -3872,7 +3880,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
-                        binding.editText11n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText11n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText11n.setTextIsSelectable(true)
@@ -3898,7 +3906,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
-                        binding.editText12n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText12n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText12n.setTextIsSelectable(true)
@@ -3924,7 +3932,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
-                        binding.editText13n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText13n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText13n.setTextIsSelectable(true)
@@ -3950,7 +3958,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
-                        binding.editText9n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText9n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText9n.setTextIsSelectable(true)
@@ -3976,7 +3984,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
-                        binding.editText7n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText7n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText7n.setTextIsSelectable(true)
@@ -4002,7 +4010,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
-                        binding.editText14n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText14n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText14n.setTextIsSelectable(true)
@@ -4028,7 +4036,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
-                        binding.editText15n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText15n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText15n.setTextIsSelectable(true)
@@ -4054,7 +4062,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
-                        binding.editText16n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText16n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText16n.setTextIsSelectable(true)
@@ -4080,7 +4088,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
-                        binding.editText17n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText17n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText17n.setTextIsSelectable(true)
@@ -4106,7 +4114,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     pasteFlag == 1 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
-                        binding.editText18n.setText("", TextView.BufferType.NORMAL)
+                        menuShuffle(binding.editText18n)
                     }
                     pasteFlag == 2 && hasFocus -> {
                         binding.editText18n.setTextIsSelectable(true)
@@ -4341,40 +4349,6 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
                         1 -> { menuSwitch = 1
                             invalidateOptionsMenu()
-                            val shuffled1 = cuisine1.shuffled()
-                            val shuffled2 = cuisine2.shuffled()
-                            val shuffled3 = cuisine3.shuffled()
-                            val shuffled4 = cuisine4.shuffled()
-                            binding.editText8n.setText(shuffled1[0],TextView.BufferType.NORMAL)
-                            binding.editText4n.setText(shuffled1[1],TextView.BufferType.NORMAL)
-                            binding.editText13n.setText(shuffled1[2],TextView.BufferType.NORMAL)
-                            binding.editTextn.setText(shuffled1[3],TextView.BufferType.NORMAL)
-                            binding.editText11n.setText(shuffled1[4],TextView.BufferType.NORMAL)
-                            binding.editText10n.setText(shuffled1[5],TextView.BufferType.NORMAL)
-                            binding.editText12n.setText(shuffled1[6],TextView.BufferType.NORMAL)
-                            binding.editText9n.setText(shuffled2[0],TextView.BufferType.NORMAL)
-                            binding.editText7n.setText(shuffled2[1],TextView.BufferType.NORMAL)
-                            binding.editText15n.setText(shuffled2[2],TextView.BufferType.NORMAL)
-                            binding.editText16n.setText(shuffled2[3],TextView.BufferType.NORMAL)
-                            binding.editText18n.setText(shuffled2[4],TextView.BufferType.NORMAL)
-                            binding.editText17n.setText(shuffled2[5],TextView.BufferType.NORMAL)
-                            binding.editText14n.setText(shuffled2[6],TextView.BufferType.NORMAL)
-                            binding.editText8.setText(shuffled3[0],TextView.BufferType.NORMAL)
-                            binding.editText4.setText(shuffled3[1],TextView.BufferType.NORMAL)
-                            binding.editText13.setText(shuffled3[2],TextView.BufferType.NORMAL)
-                            binding.editText.setText(shuffled3[3],TextView.BufferType.NORMAL)
-                            binding.editText11.setText(shuffled3[4],TextView.BufferType.NORMAL)
-                            binding.editText10.setText(shuffled3[5],TextView.BufferType.NORMAL)
-                            binding.editText12.setText(shuffled3[6],TextView.BufferType.NORMAL)
-                            binding.editText9.setText(shuffled4[0],TextView.BufferType.NORMAL)
-                            binding.editText7.setText(shuffled4[1],TextView.BufferType.NORMAL)
-                            binding.editText15.setText(shuffled4[2],TextView.BufferType.NORMAL)
-                            binding.editText16.setText(shuffled4[3],TextView.BufferType.NORMAL)
-                            binding.editText18.setText(shuffled4[4],TextView.BufferType.NORMAL)
-                            binding.editText17.setText(shuffled4[5],TextView.BufferType.NORMAL)
-                            binding.editText14.setText(shuffled4[6],TextView.BufferType.NORMAL)
-                            menuList16()
-                            menuList17()
                             supportActionBar?.title = resources.getString(R.string.Shuffle_order)
                             openKeyboard()
                             pasteFlag = 1
