@@ -1388,7 +1388,34 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         } else {
             arrayListOf(
+                Cuisine("meat and potatoes"),
+                Cuisine("Beef bowl"),
+                Cuisine("Sukiyaki"),
+                Cuisine("Dice steak"),
+                Cuisine("Beef stew"),
+                Cuisine("Beefsteak"),
 
+                Cuisine("Bulgogi"),
+                Cuisine("Beef and Spinach in Cream"),
+                Cuisine("Beef and tomato with kimchi egg"),
+                Cuisine("Stir-fried Beef and Eggplant with Oyster Sauce"),
+                Cuisine("Beef and Burdock Root in Shigure"),
+                Cuisine("Stewed Beef and Daikon"),
+                Cuisine("Sauteed beef and lotus root with spicy miso"),
+                Cuisine("Grilled and Pickled Beef Tataki"),
+                Cuisine("Beef in tomato sauce"),
+                Cuisine("Ethnic beef salad"),
+                Cuisine("Meat Tofu"),
+                Cuisine("Stewed Chinese cabbage in sukiyaki style"),
+                Cuisine("Grilled meat in fresh tomato sauce"),
+                Cuisine("Stir-fried pumpkin and beef in chili sauce"),
+                Cuisine("Cucumber and Beef Shabu with Sesame Sauce"),
+                Cuisine("Stir-fried Beef with Onion in Worcestershire Sauce"),
+                Cuisine("Beef and Burdock in Yanagawa Style"),
+                Cuisine("Bulgogi with mushrooms"),
+                Cuisine("Hayashi rice"),
+                Cuisine("Pizza style dumplings"),
+                Cuisine("Stir-fried rice vermicelli with minced meat"),
             )
         }
         bCuisines = if (locale == Locale.JAPAN) {
@@ -1423,7 +1450,32 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         } else {
             arrayListOf(
+                Cuisine("Pork Kimchi"),
+                Cuisine("Pork Shabu and Dried Plum Soup"),
+                Cuisine("Stir-fried Pork Belly with Bean Sprouts"),
+                Cuisine("Sweet and Spicy Minced Pork and Daikon"),
+                Cuisine("Pork Kakuni"),
+                Cuisine("Pork Soup"),
+                Cuisine("Pork Ginger Yaki"),
+                Cuisine("Sauteed pork and cabbage with spicy miso"),
+                Cuisine("Stir-fried Pork with Spinach and Egg"),
+                Cuisine("Sauteed Pork and Tofu"),
+                Cuisine("Grilled Pork with Negi Salt"),
+                Cuisine("Ham Cutlet"),
+                Cuisine("Ham and Sausage Hash Browns"),
+                Cuisine("Tonkatsu"),
+                Cuisine("Sweet and Sour Pork"),
+                Cuisine("Pork chops with lemon and rosemary"),
 
+                Cuisine("Tonpeyaki"),
+                Cuisine("Pork and Chinese cabbage cheese hot pot"),
+                Cuisine("Rolled pork with shiso leaves"),
+                Cuisine("Pork belly and radish"),
+                Cuisine("Braised Chinese cabbage and pork"),
+                Cuisine("Freschetti"),
+                Cuisine("Canna Mukroppu"),
+                Cuisine("Bulgogi"),
+                Cuisine("Samgyeopsal"),
             )
         }
         cCuisines = if (locale == Locale.JAPAN) {
@@ -1454,7 +1506,29 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         } else {
             arrayListOf(
+                Cuisine("Minced Chicken and Cabbage with Egg"),
+                Cuisine("Fried Tofu with Minced Chicken"),
+                Cuisine("Sauteed Chicken and Mushroom in Cream"),
+                Cuisine("Chicken and Vegetables in Cream"),
+                Cuisine("Chicken in tomato sauce"),
+                Cuisine("Chicken sauteed with garlic"),
+                Cuisine("Steamed chicken in a savory microwave"),
+                Cuisine("Chicken Teriyaki"),
+                Cuisine("Chicken Cutlet"),
+                Cuisine("Chicken Steak"),
+                Cuisine("Chicken and Asparagus Flatbread Pizza"),
+                Cuisine("Chicken Nuggets"),
+                Cuisine("Chicken with mustard cream sauce"),
+                Cuisine("Lemon Chicken Sauté"),
+                Cuisine("Barbecued chicken"),
+                Cuisine("Deep Fried"),
+                Cuisine("Honey Mustard Chicken"),
+                Cuisine("Bruschetta Chicken"),
+                Cuisine("Grilled Chicken Shawarma"),
 
+                Cuisine("Creamed Chinese cabbage and chicken"),
+                Cuisine("Chicken and Carrot Soborodon"),
+                Cuisine("Crispy grilled chicken"),
             )
         }
         dCuisines = if (locale == Locale.JAPAN) {
@@ -1471,7 +1545,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         } else {
             arrayListOf(
+                Cuisine("Green Beans with Sesame Sauce"),
+                Cuisine("Tuna salad with pea pods"),
 
+                Cuisine("Deep-fried Pork Roll with String Beans"),
+                Cuisine("Fried Pea and Squid"),
+                Cuisine("Bacon wrapped fried string beans"),
+                Cuisine("Sesame flavored green beans"),
+                Cuisine("Miso soup with enoki mushrooms and green beans"),
             )
         }
         eCuisines = if (locale == Locale.JAPAN) {
@@ -1487,7 +1568,17 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("大根のすり流し汁"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Fried Okra with Egg"),
+                Cuisine("Chilled Okra"),
+                Cuisine("Pork shabu with grated okra"),
+                Cuisine("Sasami with okra"),
+                Cuisine("Okra with plum paste"),
+                Cuisine("Okra with cream cheese and bonito"),
+                Cuisine("Vinegared okra with yam and octopus"),
+                Cuisine("Miso soup with tofu and okra"),
+                Cuisine("Miso soup with grated radish"),
+            )
         }
         fCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
