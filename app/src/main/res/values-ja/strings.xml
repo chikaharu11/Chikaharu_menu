@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">一週間の献立メモ</string>
+    <string name="app_name">一週間の献立スタンプメモ</string>
     <string name="c0">Chikaharu_Menu</string>
     <string name="c1">月</string>
     <string name="c2">火</string>
@@ -72,6 +72,7 @@
     <string name="ebi">えび</string>
     <string name="hokke">ほっけ</string>
     <string name="mekajiki">めかじき</string>
+    <string name="shuffle">入力欄をタッチするとおまかせで料理が入ります</string>
     <string name="search">料理名をタッチすると詳細を検索できます</string>
     <string name="back">元の画面に戻るには、戻るボタンか上のアイコンをどれか押して下さい</string>
     <string name="Screen_captured">画面を保存しました</string>

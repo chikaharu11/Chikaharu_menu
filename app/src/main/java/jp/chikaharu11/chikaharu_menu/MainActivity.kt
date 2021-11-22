@@ -23,7 +23,6 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.view.inputmethod.InputMethodManager
-import android.view.translation.Translator
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -4911,6 +4910,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             invalidateOptionsMenu()
                             supportActionBar?.title = resources.getString(R.string.Shuffle_order)
                             openKeyboard()
+                            Toast.makeText(applicationContext, (R.string.shuffle), Toast.LENGTH_LONG).show()
                             pasteFlag = 1
                         }
                         2 -> { menuSwitch = 2
