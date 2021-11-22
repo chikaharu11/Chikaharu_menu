@@ -23,6 +23,7 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.view.inputmethod.InputMethodManager
+import android.view.translation.Translator
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -516,7 +517,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         var defaultTextSize = convertPxToSp(binding.editText8.textSize)
 
         if (locale != Locale.JAPAN) {
-            supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#fd2003")))
+            supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#F02D3A")))
         }
 
         fun menuList16() {
@@ -1593,7 +1594,17 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("カブと鶏つくねの煮もの"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Sauteed Turnip and Fried Bean Curd with Mentsuyu Sauce"),
+                Cuisine("Turnip and Tofu in Thickened Soup"),
+                Cuisine("Stir-fried pork and turnip with curry soy sauce"),
+                Cuisine("Yellowtail with teriyaki sauce"),
+                Cuisine("Turnip with minced shrimp"),
+                Cuisine("Oyster and turnip with grated radish"),
+                Cuisine("Scallop and Turnip Salad"),
+                Cuisine("Quickly simmered fried tofu and turnip"),
+                Cuisine("Stewed turnip and chicken tsukune"),
+            )
         }
         gCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1613,7 +1624,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("かぼちゃのごま煮"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Pumpkin and Coconut Soup"),
+                Cuisine("Boiled Pumpkin"),
+                Cuisine("Spiced Pumpkin Soup"),
+
+                Cuisine("Pumpkin Croquettes"),
+                Cuisine("Pumpkin with minced meat sauce"),
+                Cuisine("Pork and Pumpkin Skewers"),
+                Cuisine("Pumpkin and Coconut Soup"),
+                Cuisine("Pumpkin with minced meat"),
+                Cuisine("Stir-fried Pumpkin and Beef with Chili Sauce"),
+                Cuisine("Baked Pumpkin with Mayo Cheese"),
+                Cuisine("Pumpkin with butter and soy sauce"),
+                Cuisine("Chicken and Kabocha in Hoto style"),
+                Cuisine("Pumpkin in sesame sauce"),
+            )
         }
         hCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1634,7 +1660,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Soy Milk Miso Soup with Cabbage and Bacon"),
+                Cuisine("Cabbage and Egg Soup"),
+                Cuisine("Cabbage with salted kelp"),
+                Cuisine("Cabbage Roll"),
+
+                Cuisine("Minced chicken and cabbage with egg"),
+                Cuisine("Claypot meat"),
+                Cuisine("Stir-fried pork and cabbage with spicy miso"),
+                Cuisine("Braised cabbage with sausage"),
+                Cuisine("Okonomiyaki"),
+                Cuisine("Tofu, Cabbage and Pork Chanpuru"),
+                Cuisine("Coleslaw"),
+                Cuisine("Boiled cabbage and deep-fried tofu"),
+                Cuisine("Fried cabbage and shiitake mushroom with baby sardines"),
+            )
         }
         iCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1650,11 +1691,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("キュウリのポン酢炒め"),
                 Cuisine("キュウリとわかめのマヨあえ"),
                 Cuisine("白菜とキュウリの浅漬け"),
-
-
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Cucumber and Celery Pickle"),
+                Cuisine("Cucumber and Chikuwa Salad"),
+
+                Cuisine("Barbecued chicken"),
+                Cuisine("Octopus and Cucumber with Vinegar"),
+                Cuisine("Cucumber and Beef Shabu with Sesame Sauce"),
+                Cuisine("Sauteed Cucumber, Pork and Chikuwa with Plum and Ginger"),
+                Cuisine("Sliced Cucumber with Ethnic Salad"),
+                Cuisine("Cucumber and Pork Shabu with Green Onion and Miso Sauce"),
+                Cuisine("Sauteed Cucumber with Ponzu Sauce"),
+                Cuisine("Cucumber and wakame with mayo"),
+                Cuisine("Lightly-pickled Chinese cabbage and cucumber"),
+            )
         }
         jCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1668,7 +1720,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ごぼうのごまマヨサラダ"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Kinpira Gobo"),
+                Cuisine("Gobo and Tuna Salad"),
+                Cuisine("Deep-fried burdock root with tsukune"),
+
+                Cuisine("Stewed Beef and Burdock Root"),
+                Cuisine("Stewed saury and burdock root"),
+                Cuisine("Chopped Burdock Root with Gomaa"),
+                Cuisine("Gobo no sesame mayo salad"),
+            )
         }
         kCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1682,7 +1743,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("小松菜のオリーブじょうゆソテー"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Stewed komatsuna and deep-fried tofu"),
+
+                Cuisine("Stewed chicken and komatsuna in soup"),
+                Cuisine("Shrimp and komatsuna in milk"),
+                Cuisine("Tofu and komatsuna in oyster sauce"),
+                Cuisine("Stir-fried komatsuna with chicken and egg"),
+                Cuisine("Miso soup with komatsuna and onions"),
+                Cuisine("Sauteed komatsuna with olive sauce"),
+            )
         }
         lCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1696,7 +1766,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("大学芋"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Pork Lasagna with Sweet Potatoes and Zucchini"),
+                Cuisine("Sweet Potato, Chicken and Quinoa Salad"),
+
+                Cuisine("Deep Fried Sweet Potato with Pork"),
+                Cuisine("Sweet Potatoes with Lemon"),
+                Cuisine("Sauteed Sweet Potato with Sesame Seeds"),
+                Cuisine("Sauteed sweet potato with butter"),
+                Cuisine("Daigaku imo"),
+            )
         }
         mCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1722,7 +1801,28 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("じゃがいもの冷たいミルクスープ"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Miso Soup with Potatoes and Watercress"),
+                Cuisine("Miso Soup with Potatoes and Onions"),
+                Cuisine("Minced Meat and Potatoes with Kimchi"),
+                Cuisine("Potato Salad"),
+                Cuisine("Creamy Potato and Kale Soup"),
+                Cuisine("Potato Caesar Salad"),
+
+                Cuisine("Potatoes and meatballs in tomato sauce"),
+                Cuisine("Meat and potatoes"),
+                Cuisine("Salmon and Potatoes in Cream"),
+                Cuisine("Tuna Potato Gratin"),
+                Cuisine("Deep fried potato rolls"),
+                Cuisine("Potato and chicken with cheese"),
+                Cuisine("German potatoes"),
+                Cuisine("Farmer's Breakfast"),
+                Cuisine("Potatoes and Pork Thighs with Salt"),
+                Cuisine("Potato and Potato Galette"),
+                Cuisine("Potato and chicken taccalbi"),
+                Cuisine("Sanpai Vinegar with Honeysuckle and Potatoes"),
+                Cuisine("Cold Milk Soup with Potatoes"),
+            )
         }
         nCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1750,7 +1850,30 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("大根としめじのしょうゆ炒め"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Radish Salad"),
+                Cuisine("Pickled radish and carrot"),
+                Cuisine("Miso soup with radish and deep-fried tofu"),
+                Cuisine("Braised radish with minced meat"),
+                Cuisine("Chinese-style simmered radish with minced meat"),
+
+                Cuisine("Grilled grated ginger"),
+                Cuisine("Minced Pork and Radish with Sweet and Spicy Sauce"),
+                Cuisine("Stewed chicken wings and radish"),
+                Cuisine("Stewed beef and radish"),
+                Cuisine("Yellowtail Radish"),
+                Cuisine("Simmered grated saury"),
+                Cuisine("Boiled Egg and Radish with Mentsuyu"),
+                Cuisine("Tofu Mizore Nabe"),
+                Cuisine("Stewed deep-fried tofu and radish"),
+                Cuisine("Furofuki daikon"),
+                Cuisine("Simmered radish and salmon in miso"),
+                Cuisine("Pork with grated radish"),
+                Cuisine("Radish and crunchy baby sardine salad"),
+                Cuisine("Red and white namasu"),
+                Cuisine("Garlic Salad with Daikon and Ham"),
+                Cuisine("Sauteed radish and shimeji mushroom with soy sauce"),
+            )
         }
         oCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1767,7 +1890,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("玉ねぎとツナの煮びたし"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Onion Gratin Soup"),
+                Cuisine("Onion Rings"),
+                Cuisine("French Onion Soup"),
+                Cuisine("Onion and Garlic Soup"),
+
+                Cuisine("Scrambled Eggs with Onions and Mushrooms"),
+                Cuisine("Sauteed Onion and Beef with Worcestershire Sauce"),
+                Cuisine("Fried mushrooms and onions with egg"),
+                Cuisine("Marinated Onion and Sausage with Sweet and Sour Sauce"),
+                Cuisine("Grilled Onion with Bacon and Cheese"),
+                Cuisine("Stewed Onion and Tuna"),
+            )
         }
         pCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1786,7 +1921,20 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Chinese soup with bok choy"),
+
+                Cuisine("Steamed pork and bok choy"),
+                Cuisine("Stir-fried Chicken Liver with Chinese Green Vegetables"),
+                Cuisine("Wok-fried yellowtail and bok choy with salt"),
+                Cuisine("Wok-fried Chinese cabbage and squid"),
+                Cuisine("Sauteed Chinese cabbage and tuna in soup"),
+                Cuisine("Bean sprouts and qinggengcai with minced meat sauce"),
+                Cuisine("Sauteed qinggengcai with ume paste and soy sauce"),
+                Cuisine("Simmered Chinese cabbage and enoki mushrooms"),
+                Cuisine("Miso soup with bacon and qinggengcai"),
+                Cuisine("Sauteed qinggengcai with mayo and sesame"),
+            )
         }
         qCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1810,7 +1958,26 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("アスパラとミニトマト炒め"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Caprese Salad with Tomato, Basil and Mozzarella"),
+                Cuisine("Tomato, Cucumber and Avocado Salad"),
+                Cuisine("Cream Cheese Stuffed Tomatoes"),
+                Cuisine("Roasted tomato and basil creamy soup"),
+                Cuisine("Soybean and Tomato Soup"),
+
+                Cuisine("Stir-fried Egg with Scallion and Tomato"),
+                Cuisine("Roasted Egg and Tomato Salad"),
+                Cuisine("Sauteed small tomatoes and chicken with sweet vinegar"),
+                Cuisine("Wok-fried tomato and egg"),
+                Cuisine("Tomato and Chicken Dumpling Soup"),
+                Cuisine("Tomato Namul"),
+                Cuisine("Baked small tomatoes with cheese"),
+                Cuisine("Sausage with tomato"),
+                Cuisine("Miso soup with tomato and leek"),
+                Cuisine("Eggplant and tomato miso soup"),
+                Cuisine("Tomato Dashi Somen"),
+                Cuisine("Stir-fried asparagus and small tomatoes"),
+            )
         }
         rCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1833,7 +2000,25 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ナスの浅漬け"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Miso Soup with Eggplant and Enoki Mushrooms"),
+                Cuisine("Eggplant and Tomato Miso Soup"),
+                Cuisine("Sauteed eggplant and green pepper with miso"),
+                Cuisine("Eggplant and Myoga in Sesame Miso Soup"),
+                Cuisine("Spicy Roasted Eggplant with Cherry Tomatoes"),
+                Cuisine("Roasted Eggplant with Tomato and Feta Cheese"),
+                Cuisine("Grilled Eggplant"),
+
+                Cuisine("Minced Meat and Eggplant with Tomatoes"),
+                Cuisine("Sauteed Pork, Peppers and Eggplant with Sweet and Sour Sauce"),
+                Cuisine("Stir-fried Beef and Eggplant with Oyster Sauce"),
+                Cuisine("Sauteed Shrimp, Eggplant and Celery with Salt"),
+                Cuisine("Eggplant with Bean Paste"),
+                Cuisine("Roasted Eggplant with Pork"),
+                Cuisine("Eggplant and pork shabu with spicy soy sauce"),
+                Cuisine("Deep-fried eggplant"),
+                Cuisine("Lightly-pickled eggplant"),
+            )
         }
         sCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1846,7 +2031,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ニラレバ炒め"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Miso Soup with Chives and Eggs"),
+
+                Cuisine("Steamed Chives and Bean Sprouts with Minced Meat"),
+                Cuisine("Chicken Dumpling and Chives in Soup"),
+                Cuisine("Bean Curd with Chives and Shrimps"),
+                Cuisine("Niradama"),
+                Cuisine("Stir-fried leek and liver"),
+            )
         }
         tCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1863,7 +2056,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("にんじんの甘酢炒め"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Carrot Shiri Shiri"),
+                Cuisine("Rapa Tsai"),
+                Cuisine("Stir-fried Carrot and Minced Meat with Vermicelli"),
+                Cuisine("Chicken with Carrot Cheese Roll"),
+                Cuisine("Deep-fried Carrot and Sakura Shrimp"),
+                Cuisine("Tofu with Carrot"),
+                Cuisine("Carrot with black sesame sauce"),
+                Cuisine("Carrot and tuna with bonito soy sauce"),
+                Cuisine("Bean sprouts and carrot namuru"),
+                Cuisine("Stewed carrots"),
+                Cuisine("Sauteed Carrots with Sweet and Sour Sauce"),
+            )
         }
         uCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1876,7 +2081,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("トマトとねぎの味噌汁"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Fried Chicken with Spring Onion Salt"),
+                Cuisine("Grilled Pork with Spring Onion Salt"),
+                Cuisine("Grilled ham and green onion with cheese"),
+                Cuisine("Fried Chicken with Spring Onion and Egg"),
+                Cuisine("Tofu steak with scallion sauce"),
+                Cuisine("Green Onion Char Siu"),
+                Cuisine("Tomato and Negi Miso Soup"),
+            )
         }
         vCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1894,7 +2107,20 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("白菜とキュウリの浅漬け"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Miso soup of Chinese cabbage and komatsuna"),
+                Cuisine("Boiled Chinese cabbage"),
+
+                Cuisine("Chicken balls and Chinese cabbage in cream"),
+                Cuisine("Scallop and Chinese cabbage in cream"),
+                Cuisine("Fried Chinese cabbage and shrimp with salt"),
+                Cuisine("Sauteed Chinese cabbage and pork with sweet vinegar"),
+                Cuisine("Steamed Chinese cabbage and pork in layers"),
+                Cuisine("Braised Chinese cabbage and meatballs"),
+                Cuisine("Rapa Tsai"),
+                Cuisine("Enoki Mushroom and Chinese Cabbage Soup"),
+                Cuisine("Lightly-pickled Chinese cabbage and cucumber"),
+            )
         }
         wCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1913,7 +2139,21 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("焼きピーマンのおかかじょうゆあえ"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Sauteed Green Peppers and Bean Sprouts with Salt"),
+                Cuisine("Baked Green Peppers Stuffed with Cheese"),
+                Cuisine("Green Pepper in Namul"),
+                Cuisine("Stuffed green bell pepper"),
+                Cuisine("Miso soup with green pepper"),
+
+                Cuisine("Claypot Meat"),
+                Cuisine("Sauteed eggplant and green pepper with soybean paste"),
+                Cuisine("Sauteed green pepper and pork with soybean paste"),
+                Cuisine("Roasted green bell pepper stuffed with mayo and egg"),
+                Cuisine("Tuna stuffed peppers with tomato"),
+                Cuisine("Infinite Green Peppers"),
+                Cuisine("Grilled green bell pepper with bonito soy sauce"),
+            )
         }
         xCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1930,7 +2170,19 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ブロッコリーとじゃがいものスープ"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Broccoli and Potato Soup"),
+                Cuisine("Steamed Broccoli and Tuna with Cheese"),
+                Cuisine("Broccoli with garlic bread crumbs"),
+
+                Cuisine("Broccoli Rolled with Meat"),
+                Cuisine("Stir-fried Broccoli and Scallops with Salt"),
+                Cuisine("Broccoli and half-boiled egg with wasabi mayo salad"),
+                Cuisine("Broccoli Gomae"),
+                Cuisine("Broccoli Fritters"),
+                Cuisine("Soaked Broccoli"),
+                Cuisine("Broccoli and Potato Soup"),
+            )
         }
         yCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1952,7 +2204,24 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ほうれん草のごまあえ"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Sauteed Spinach and Eringi Mushrooms with Garlic"),
+                Cuisine("Sauteed Spinach and Tuna with Butter and Soy Sauce"),
+                Cuisine("Sauteed spinach and bacon"),
+                Cuisine("Boiled Spinach"),
+                Cuisine("Coconut, Quinoa and Spinach Salad"),
+                Cuisine("Spinach Salad with Herbs and Chickpeas"),
+
+                Cuisine("Spinach and Salmon Cream Stew"),
+                Cuisine("Fried Pork, Spinach and Egg"),
+                Cuisine("Chicken and Spinach with Egg"),
+                Cuisine("Beef and Spinach Cream Stew"),
+                Cuisine("Fried Octopus and Spinach with Garlic"),
+                Cuisine("Spinach with egg drop au gratin"),
+                Cuisine("Spinach and Bacon with Egg"),
+                Cuisine("Spinach and Bacon Salad"),
+                Cuisine("Spinach Gomae"),
+            )
         }
         zCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1973,7 +2242,23 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ツナともやしの炒め味噌汁"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Bean Sprouts with Cucumber and Sesame Sauce"),
+                Cuisine("Bean Sprouts in Chinese Soup"),
+
+                Cuisine("Bean sprouts with miso sauce"),
+                Cuisine("Steamed chives and bean sprouts with minced meat"),
+                Cuisine("Ethnic Stir-Fried Shrimp and Bean Sprouts"),
+                Cuisine("Bean Sprouts with Egg"),
+                Cuisine("Stir-fried Bean Sprouts and Pork Belly with Chives and Ponzu Sauce"),
+                Cuisine("Sauteed Bean Sprouts and Egg with Sweet and Sour Sauce"),
+                Cuisine("Bean sprouts and bok choy with minced meat sauce"),
+                Cuisine("Pork with Bean Sprouts"),
+                Cuisine("Stir-fried Bean Sprouts and Beef with Oyster Sauce"),
+                Cuisine("Stir-fried Bean Sprouts with Chicken and Miso Sauce"),
+                Cuisine("Bean Sprouts and Carrot Namul"),
+                Cuisine("Stir-fried Tuna and Bean Sprouts in Miso Soup"),
+            )
         }
         aaCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -1989,7 +2274,18 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("レタスチャーハン"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Lettuce and Egg Stir-Fry"),
+                Cuisine("Lettuce Miso Soup"),
+                Cuisine("Caesar Salad"),
+                Cuisine("Tuna Lettuce Salad"),
+
+                Cuisine("Stir-Fried Chicken Fillet and Lettuce with Egg"),
+                Cuisine("Minced pork wrapped in lettuce"),
+                Cuisine("Lettuce in kelp"),
+                Cuisine("Lettuce and Shrimp Soup"),
+                Cuisine("Lettuce Fried Rice"),
+            )
         }
         abCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2003,7 +2299,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("レンコンのきんぴら"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Lentil Dumpling Soup"),
+
+                Cuisine("Stir-fried chicken and lotus root with chili sauce"),
+                Cuisine("Stir-fried beef and lotus root with spicy miso"),
+                Cuisine("Deep-fried lotus root"),
+                Cuisine("Deep-fried lotus root dumplings"),
+                Cuisine("Braised lotus root"),
+                Cuisine("Sauteed lotus root"),
+            )
         }
         acCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2015,7 +2320,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("えのきバターしょうゆソテー"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Enoki Mushroom Sanlatan"),
+
+                Cuisine("Sauteed Enoki Mushrooms and Tofu with Ume Plum Sauce"),
+                Cuisine("Simmered Chinese cabbage and enoki mushrooms"),
+                Cuisine("Miso soup with enoki mushrooms and green beans"),
+                Cuisine("Sauteed enoki mushrooms with butter and soy sauce"),
+            )
         }
         adCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2026,7 +2338,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("エリンギとネギの味噌汁"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Bacon wrapped fried eringi"),
+                Cuisine("Sauteed eringi and ham with egg"),
+                Cuisine("Sauteed spinach and eringi with garlic"),
+                Cuisine("Sauteed eringi mushroom"),
+                Cuisine("Miso soup with eringi and leek"),
+            )
         }
         aeCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2038,7 +2356,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("しいたけのバターホイル焼き"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Miso Soup with Shiitake Mushrooms and Spinach"),
+
+                Cuisine("Baked shiitake mushrooms stuffed with miso"),
+                Cuisine("Fried cabbage and shiitake mushroom with baby sardines"),
+                Cuisine("Baked Shiitake Mushrooms with Cheese"),
+                Cuisine("Baked Shiitake Mushrooms in Butter Foil"),
+            )
         }
         afCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2049,7 +2374,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("しめじのバターポン酢炒め"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Shimeji mushrooms and white meat in cream"),
+                Cuisine("Shimeji mushrooms and chicken in tomato sauce"),
+                Cuisine("Sauteed radish and shimeji mushroom with soy sauce"),
+                Cuisine("Shimeji Mushroom and Tofu Soup"),
+                Cuisine("Sauteed Shimeji Mushrooms with Butter and Vinegar"),
+            )
         }
         agCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2079,7 +2410,32 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("青菜と鶏肉、卵の炒めもの"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Omelette"),
+                Cuisine("Shakshuka"),
+                Cuisine("French Omelette with Mushrooms and Mozzarella"),
+
+                Cuisine("Minced Chicken and Cabbage with Egg"),
+                Cuisine("Fried Pork, Spinach and Egg"),
+                Cuisine("Chicken and Spinach with Egg"),
+                Cuisine("Stir-fried Chicken Fillet with Lettuce and Egg"),
+                Cuisine("Stir-fried scallion and tomato with egg"),
+                Cuisine("Crab egg"),
+                Cuisine("Chicken and leek with egg"),
+                Cuisine("Chawanmushi"),
+                Cuisine("Sauteed Egg and Tuna with Carrot"),
+                Cuisine("Fried egg and lettuce"),
+                Cuisine("Scrambled Eggs with Onions and Mushrooms"),
+                Cuisine("Roasted Egg and Tomato Salad"),
+                Cuisine("Stir-fried Egg with Mushrooms and Ham"),
+                Cuisine("Bean sprouts with egg"),
+                Cuisine("Boiled egg and radish in men-tsuyu"),
+                Cuisine("Bacon omelette"),
+                Cuisine("Nori cheese omelet"),
+                Cuisine("Sausage omelet"),
+                Cuisine("Fried spinach and bacon with egg"),
+                Cuisine("Fried Greens with Chicken and Egg"),
+            )
         }
         ahCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2106,7 +2462,28 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Tofu and Amaranth Salad"),
+                Cuisine("Tofu and Potato Salad"),
+                Cuisine("Miso Soup with Tofu and Seaweed"),
+                Cuisine("Miso soup with nameko mushrooms and tofu"),
+                Cuisine("Bean-curd soup with red pepper"),
+
+                Cuisine("Fried Tofu with Minced Chicken"),
+                Cuisine("Tofu and Pork Roll"),
+                Cuisine("Bacon wrapped tofu steak"),
+                Cuisine("Meat Tofu"),
+                Cuisine("Tofu, Cabbage and Pork Chanpuru"),
+                Cuisine("Tofu and Chicken Dumplings"),
+                Cuisine("Tofu and Pork in Sweet and Spicy Sauce"),
+                Cuisine("Tofu Steak with Green Onion Sauce"),
+                Cuisine("Tofu and Bacon with Curry"),
+                Cuisine("Carrot"),
+                Cuisine("Cold tofu with green onion and salt"),
+                Cuisine("Fried Tofu with Carrots"),
+                Cuisine("Tofu and Okra Miso Soup"),
+                Cuisine("Yudofu"),
+            )
         }
         aiCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2119,7 +2496,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("あじの干ものずし"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Fried horse mackerel with plum and shiso sauce"),
+                Cuisine("Grilled horse mackerel with salt"),
+                Cuisine("grilled horse mackerel"),
+                Cuisine("Grilled horse mackerel with savory sauce"),
+                Cuisine("Grilled horse mackerel with cheese"),
+                Cuisine("Marinated horse mackerel"),
+                Cuisine("Dried horse mackerel sushi"),
+            )
         }
         ajCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2132,7 +2517,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("いわしのつみれ汁"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Hamburg steak with sardine balls"),
+                Cuisine("Stewed sardines with ginger"),
+                Cuisine("Grilled sardines with kebabs"),
+                Cuisine("Fried Iwashi with Mustard Ketchup"),
+                Cuisine("Pan-fried sardines with herbs"),
+                Cuisine("Marinated sardine salad"),
+                Cuisine("Iwashi no Tsumire Jiru"),
+            )
         }
         akCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2148,10 +2541,22 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("エビと小松菜のミルク煮"),
                 Cuisine("エビとニラのチヂミ"),
                 Cuisine("白菜とエビの塩炒め"),
-
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Shrimp and Avocado Salad"),
+                Cuisine("Fried Shrimp"),
+                Cuisine("Garlic Shrimp"),
+                Cuisine("Butter Sauteed Prawns"),
+                Cuisine("Shrimp Chili"),
+
+                Cuisine("Shrimp Mayo"),
+                Cuisine("Sauteed Shrimp, Eggplant and Celery with Salt"),
+                Cuisine("Stir-fried Shrimp and Bean Sprouts with Ethnic Sauce"),
+                Cuisine("Shrimp and komatsuna in milk"),
+                Cuisine("Shrimp and leek pancake"),
+                Cuisine("Stir-fried Chinese cabbage and shrimp with salt"),
+            )
         }
         alCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2163,7 +2568,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("カツオのキムチあえ丼"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Katsuo no Tataki"),
+
+                Cuisine("Bonito and Onion Salad"),
+                Cuisine("Deep-fried Spiced Bonito"),
+                Cuisine("Cooked bonito in shigure"),
+                Cuisine("Bonito with Kimchi"),
+            )
         }
         amCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2182,7 +2594,21 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("大根とさけの味噌煮"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Spiced Grilled Salmon"),
+                Cuisine("Salmon Mukekka"),
+                Cuisine("Grilled Salmon with Maple"),
+                Cuisine("Smoked Salmon and Roasted Beet Salad"),
+                Cuisine("Grilled Salmon"),
+
+                Cuisine("Spinach and Salmon Cream Stew"),
+                Cuisine("Salmon Meuniere"),
+                Cuisine("Grilled salmon"),
+                Cuisine("Pan fried salmon with garlic"),
+                Cuisine("Salmon steamed in a microwave oven with fresh tomato sauce"),
+                Cuisine("Deep-fried salmon with sweet vinegar sauce"),
+                Cuisine("Stewed radish and salmon in miso"),
+            )
         }
         anCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2195,7 +2621,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("サバそぼろ"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Sauteed Mackerel with Miso Sauce"),
+
+                Cuisine("Mackerel sauteed with garlic"),
+                Cuisine("Grilled Mackerel with Cheese"),
+                Cuisine("Deep-fried mackerel with curry"),
+                Cuisine("Stewed Mackerel with Kimchi"),
+                Cuisine("Soboro Mackerel"),
+            )
         }
         aoCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2208,7 +2642,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("サンマのおろし煮"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Grilled saury with salt"),
+
+                Cuisine("Sauteed saury and burdock root"),
+                Cuisine("Sauteed saury with kimchi"),
+                Cuisine("Deep-fried saury with sesame paste"),
+                Cuisine("Grilled saury with green onion and miso"),
+                Cuisine("Sauteed saury with grated radish"),
+            )
         }
         apCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2220,7 +2662,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("たらのとろみ鍋"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Tara, Shimeji Mushroom and Cherry Tomato Aquapazza"),
+                Cuisine("Tara and Tofu Stewed in Korean Style"),
+                Cuisine("Steamed Tara in Foil"),
+                Cuisine("Braised Cabbage and Codfish"),
+                Cuisine("Sweet Potato and Cod Gratin"),
+                Cuisine("Thickened codfish in a pot"),
+            )
         }
         aqCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2232,7 +2681,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ブリとレンコンのから揚げ"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Yellowtail Teriyaki"),
+                Cuisine("Yellowtail and radish"),
+
+                Cuisine("Stir-fried yellowtail and chinese cabbage with Chinese salt"),
+                Cuisine("Yellowtail with tomato teriyaki"),
+                Cuisine("Deep-fried yellowtail and lotus root"),
+            )
         }
         arCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2242,7 +2698,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ほっけのオイル漬け"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Boiled Salmon"),
+                Cuisine("Tatsuta-age of Hokke"),
+                Cuisine("Baked Sea Bass with Herbs"),
+                Cuisine("Seafood in oil"),
+            )
         }
         asCuisines = if (locale == Locale.JAPAN) {
             arrayListOf(
@@ -2255,7 +2716,15 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("めかじきのトマト煮"),
             )
         } else {
-            arrayListOf()
+            arrayListOf(
+                Cuisine("Sauteed Bean Sprouts and Swordfish with Kimchi"),
+
+                Cuisine("Sauteed Swordfish with Butter and Soy Sauce"),
+                Cuisine("Baked Swordfish with Ginger"),
+                Cuisine("Baked swordfish with cheese"),
+                Cuisine("Deep-fried Swordfish with Tatsuta"),
+                Cuisine("Marlin in tomato sauce"),
+            )
         }
 
         aaaCustomAdapter = CustomAdapter(this, aaaCuisines, this)
