@@ -28,7 +28,7 @@
         android:background="#00000000"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText8"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintStart_toStartOf="@+id/editText8"
@@ -45,6 +45,7 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText4n"
         app:layout_constraintStart_toStartOf="@+id/editText4n"
@@ -61,7 +62,7 @@
         android:background="#00000000"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText4"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintStart_toStartOf="@+id/editText4"
@@ -78,7 +79,7 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText13n"
         app:layout_constraintStart_toStartOf="@+id/editText13n"
@@ -95,7 +96,7 @@
         android:background="#00000000"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText13"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintStart_toStartOf="@+id/editText13"
@@ -112,7 +113,7 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editTextn"
         app:layout_constraintStart_toStartOf="@+id/editTextn"
@@ -129,7 +130,7 @@
         android:background="#00000000"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintStart_toStartOf="@+id/editText"
@@ -146,7 +147,7 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText11n"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintStart_toStartOf="@+id/editText11n"
@@ -163,7 +164,7 @@
         android:background="#00000000"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText11"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintStart_toStartOf="@+id/editText11"
@@ -180,7 +181,7 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText10n"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintStart_toStartOf="@+id/editText10n"
@@ -197,7 +198,7 @@
         android:background="#00000000"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText10"
         app:layout_constraintStart_toStartOf="@+id/editText10"
@@ -214,7 +215,7 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText12n"
         app:layout_constraintStart_toStartOf="@+id/editText12n"
@@ -231,7 +232,7 @@
         android:background="#00000000"
         android:hint="@string/mm2"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@+id/editText12"
         app:layout_constraintStart_toStartOf="@+id/editText12"
@@ -249,7 +250,7 @@
         android:background="#00000000"
         android:hint="@string/mm1"
         android:inputType="text"
-        android:textSize="16sp"
+        android:textColor="#4b4b4b"
         app:layout_constraintEnd_toStartOf="@id/view6"
         app:layout_constraintBottom_toTopOf="@id/view7"
         app:layout_constraintStart_toStartOf="parent"
@@ -266,6 +267,7 @@
         android:background="#00000000"
         android:hint="@string/sm2"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/view11"
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText9"
@@ -282,6 +284,7 @@
         android:background="#00000000"
         android:hint="@string/sm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText7n"
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText7n"
@@ -297,6 +300,7 @@
         android:background="#00000000"
         android:hint="@string/sm2"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/editText7"
         app:layout_constraintEnd_toStartOf="@id/view9"
@@ -313,6 +317,7 @@
         android:background="#00000000"
         android:hint="@string/sm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/editText15n"
         app:layout_constraintEnd_toStartOf="@id/view9"
@@ -329,6 +334,7 @@
         android:background="#00000000"
         android:hint="@string/sm2"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/editText15"
         app:layout_constraintEnd_toStartOf="@id/view9"
@@ -345,6 +351,7 @@
         android:background="#00000000"
         android:hint="@string/sm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/editText16n"
         app:layout_constraintEnd_toStartOf="@id/view9"
@@ -362,6 +369,7 @@
         android:background="#00000000"
         android:hint="@string/sm2"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText16"
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText16"
@@ -378,6 +386,7 @@
         android:background="#00000000"
         android:hint="@string/sm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText18n"
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText18n"
@@ -394,6 +403,7 @@
         android:background="#00000000"
         android:hint="@string/sm2"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText18"
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText18"
@@ -410,6 +420,7 @@
         android:background="#00000000"
         android:hint="@string/sm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText17n"
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText17n"
@@ -425,6 +436,7 @@
         android:background="#00000000"
         android:hint="@string/sm2"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/editText17"
         app:layout_constraintEnd_toStartOf="@id/view9"
@@ -442,6 +454,7 @@
         android:background="#00000000"
         android:hint="@string/sm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         app:layout_constraintBottom_toTopOf="@+id/editText14n"
         app:layout_constraintEnd_toStartOf="@id/view9"
         app:layout_constraintStart_toStartOf="@+id/editText14n"
@@ -457,6 +470,7 @@
         android:background="#00000000"
         android:hint="@string/sm2"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/editText14"
         app:layout_constraintEnd_toStartOf="@id/view9"
@@ -474,6 +488,7 @@
         android:background="#00000000"
         android:hint="@string/sm1"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@id/view7"
         app:layout_constraintEnd_toStartOf="@id/view9"
@@ -493,6 +508,7 @@
         android:gravity="center"
         android:hint="@string/hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         android:text="@string/c1"
         app:layout_constraintBottom_toBottomOf="@id/editText8n"
         app:layout_constraintEnd_toStartOf="@+id/editText8n"
@@ -517,6 +533,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText4n"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor"/>
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -536,6 +553,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText13n"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor"/>
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -555,6 +573,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editTextn"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor"/>
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -574,6 +593,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText11n"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor"/>
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -593,6 +613,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText10n"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor"/>
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -612,6 +633,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText12n"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor"/>
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -631,6 +653,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText8"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -650,6 +673,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText4"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -669,6 +693,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText13"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -688,6 +713,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -707,6 +733,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText11"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -726,6 +753,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText10"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor" />
 
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
@@ -745,6 +773,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/editText12"
         android:autofillHints="hint"
         android:inputType="text"
+        android:textColor="#4b4b4b"
         tools:ignore="LabelFor" />
 
     <View
@@ -934,22 +963,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <Spinner
-        android:id="@+id/spinner3a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner1a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
     <jp.chikaharu11.chikaharu_menu.CSpinner
         android:id="@+id/spinner04"
         android:layout_width="wrap_content"
@@ -957,22 +970,6 @@
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner2a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
-        tools:ignore="MissingConstraints" />
-
-    <Spinner
-        android:id="@+id/spinner4a"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:spinnerMode="dialog"
-        android:visibility="invisible"
         tools:ignore="MissingConstraints" />
 
     <Switch
