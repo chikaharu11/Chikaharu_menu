@@ -40,7 +40,6 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.jakewharton:process-phoenix:2.1.2'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
     implementation 'com.google.firebase:firebase-ads:20.5.0'

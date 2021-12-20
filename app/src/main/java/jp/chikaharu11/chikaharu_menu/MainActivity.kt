@@ -38,7 +38,6 @@ import androidx.core.view.isVisible
 import com.google.android.gms.ads.*
 import com.google.android.gms.ads.rewarded.RewardedAd
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
-import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
 import io.realm.kotlin.createObject
@@ -654,7 +653,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
                     Model(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
                     Model(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
-                    Model(R.drawable.outline_restart_alt_black_48dp, "再起動する　"),
+                    Model(R.drawable.outline_restart_alt_black_48dp, "動画広告を視聴する　"),
                     Model(R.drawable.exit, "終了する　")
                 )
             )
@@ -669,7 +668,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_zoom_out_black_48dp, "Reduce text  "),
                     Model(R.drawable.baseline_border_color_black_48dp, "Change line pattern  "),
                     Model(R.drawable.baseline_border_clear_black_48dp, "Show/hide days of the week  "),
-                    Model(R.drawable.outline_restart_alt_black_48dp, "Reboot  "),
+                    Model(R.drawable.outline_restart_alt_black_48dp, "Watch video ads &amp; hide banner ads."),
                     Model(R.drawable.exit, "Exit  ")
 
                 )
@@ -4861,8 +4860,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         7 -> {
                             if (adCheck == 0) {
                                 AlertDialog.Builder(this@MainActivity)
-                                    .setTitle("R.string.menu5a")
-                                    .setMessage("R.string.menu5b")
+                                    .setTitle(R.string.menu5a)
+                                    .setMessage(R.string.menu5b)
                                     .setPositiveButton("YES") { _, _ ->
                                         showRewardAd()
                                     }
@@ -4872,7 +4871,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                                     .show()
                             } else if (adCheck == 1){
                                 AlertDialog.Builder(this@MainActivity)
-                                    .setTitle("com.google.android.gms.ads.R.string.menu5c")
+                                    .setTitle(R.string.menu5c)
                                     .setPositiveButton("OK") { _, _ ->
 
                                     }

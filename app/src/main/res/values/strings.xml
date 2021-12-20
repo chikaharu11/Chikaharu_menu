@@ -20,6 +20,9 @@
     <string name="switch1">Write / Paste</string>
     <string name="reboot">Reboot?</string>
     <string name="exit">Exit?</string>
+    <string name="menu5a">Do you watch video ads?</string>
+    <string name="menu5b">(You can hide the banner ads\nuntil the next time you start the program.)</string>
+    <string name="menu5c">Video ads have been viewed.</string>
     <string name="Manual_input">Manual input</string>
     <string name="Shuffle_order">Shuffle order</string>
     <string name="Find_details">Find details</string>
