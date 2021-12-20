@@ -17,6 +17,7 @@ import android.os.Handler
 import android.provider.DocumentsContract
 import android.text.InputType
 import android.util.DisplayMetrics
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.MotionEvent
@@ -35,6 +36,8 @@ import androidx.core.content.FileProvider
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.google.android.gms.ads.*
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import com.jakewharton.processphoenix.ProcessPhoenix
 import io.realm.Realm
 import io.realm.RealmConfiguration
@@ -46,6 +49,8 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity(), CustomAdapterListener {
+
+    private var mRewardedAd: RewardedAd? = null
 
     private lateinit var adViewContainer: FrameLayout
     private lateinit var admobmAdView: AdView
@@ -178,6 +183,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
     private var menuSwitch = 0
 
     private val locale: Locale = Locale.getDefault()
+
+    private var adCheck = 0
 
     companion object {
         private const val READ_REQUEST_CODE: Int = 42
@@ -482,6 +489,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
         initAdMob()
         loadAdMob()
+        loadRewardedAd()
 
         val optionSpinner = findViewById<Spinner>(R.id.spinner04)
         val menuSpinner = findViewById<Spinner>(R.id.spinnerWP)
@@ -4851,15 +4859,25 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                             menuList17()
                         }
                         7 -> {
-                            AlertDialog.Builder(this@MainActivity)
-                                .setTitle(R.string.reboot)
-                                .setPositiveButton("YES") { _, _ ->
-                                    ProcessPhoenix.triggerRebirth(this@MainActivity)
-                                }
-                                .setNegativeButton("NO") { _, _ ->
+                            if (adCheck == 0) {
+                                AlertDialog.Builder(this@MainActivity)
+                                    .setTitle("R.string.menu5a")
+                                    .setMessage("R.string.menu5b")
+                                    .setPositiveButton("YES") { _, _ ->
+                                        showRewardAd()
+                                    }
+                                    .setNegativeButton("NO") { _, _ ->
 
-                                }
-                                .show()
+                                    }
+                                    .show()
+                            } else if (adCheck == 1){
+                                AlertDialog.Builder(this@MainActivity)
+                                    .setTitle("com.google.android.gms.ads.R.string.menu5c")
+                                    .setPositiveButton("OK") { _, _ ->
+
+                                    }
+                                    .show()
+                            }
                         }
                         8 -> {
                             AlertDialog.Builder(this@MainActivity)
@@ -5530,6 +5548,54 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             binding.textView13.editableText.clear()
             binding.textView14.editableText.clear()
         }
+
+    private fun loadRewardedAd() {
+        val adRequest = AdRequest.Builder().build()
+
+        RewardedAd.load(this, "ca-app-pub-3940256099942544/5224354917", adRequest, object : RewardedAdLoadCallback() {
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                Log.d("rewarded ads", adError.message)
+                mRewardedAd = null
+            }
+
+            override fun onAdLoaded(rewardedAd: RewardedAd) {
+                Log.d("rewarded ads", "Ad was loaded.")
+                mRewardedAd = rewardedAd
+            }
+        })
+
+        mRewardedAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
+            override fun onAdDismissedFullScreenContent() {
+                Log.d("rewarded ads", "Ad was dismissed.")
+            }
+
+            override fun onAdFailedToShowFullScreenContent(adError: AdError?) {
+                Log.d("rewarded ads", "Ad failed to show.")
+            }
+
+            override fun onAdShowedFullScreenContent() {
+                Log.d("rewarded ads", "Ad showed fullscreen content.")
+                // Called when ad is dismissed.
+                // Don't set the ad reference to null to avoid showing the ad a second time.
+                mRewardedAd = null
+            }
+        }
+    }
+
+    private fun showRewardAd() {
+        if (mRewardedAd != null) {
+            mRewardedAd?.show(this) { rewardItem ->
+                binding.adView.visibility = View.GONE
+                adCheck = 1
+                var rewardAmount = rewardItem.amount
+                var rewardType = rewardItem.type
+                Log.d("TAG", rewardItem.toString())
+                Log.d("TAG", "User earned the reward.")
+            }
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.")
+        }
+    }
 
     private val adSize: AdSize
         get() {
@@ -6359,7 +6425,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     create()
                     getBitmapFromView(binding.allView)
                                      }, 50)
-                handler.postDelayed( { binding.adView.visibility = View.VISIBLE }, 100)
+                if (adCheck == 0) {
+                    handler.postDelayed({ binding.adView.visibility = View.VISIBLE }, 100)
+                }
                 return true
             }
 
@@ -6383,6 +6451,18 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             }
 
             else -> return super.onOptionsItemSelected(item)
+        }
+    }
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("DATA", adCheck)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        adCheck = savedInstanceState.getInt("DATA")
+        if ( adCheck == 1) {
+            binding.adView.visibility = View.GONE
         }
     }
 }
