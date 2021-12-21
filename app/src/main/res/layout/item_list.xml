@@ -11,8 +11,9 @@
     <ImageView
         android:id="@+id/imageButton"
         android:layout_width="12dp"
-        android:layout_height="32dp"
+        android:layout_height="24dp"
         android:layout_weight="0.1"
+        android:layout_marginTop="4dp"
         app:srcCompat="@drawable/search"
         tools:ignore="ContentDescription" />
 
@@ -29,6 +30,7 @@
             android:layout_height="32dp"
             android:layout_marginBottom="0dp"
             android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="16sp"
             android:gravity="start|center"
             android:textColor="#4b4b4b" />
 

@@ -653,7 +653,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
                     Model(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
                     Model(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
-                    Model(R.drawable.outline_restart_alt_black_48dp, "動画広告を視聴する　"),
+                    Model(R.drawable.ads, "動画広告を視聴する　"),
                     Model(R.drawable.exit, "終了する　")
                 )
             )
@@ -667,8 +667,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_zoom_in_black_48dp, "Enlarge text  "),
                     Model(R.drawable.baseline_zoom_out_black_48dp, "Reduce text  "),
                     Model(R.drawable.baseline_border_color_black_48dp, "Change line pattern  "),
-                    Model(R.drawable.baseline_border_clear_black_48dp, "Show/hide days of the week  "),
-                    Model(R.drawable.outline_restart_alt_black_48dp, "Watch video ads &amp; hide banner ads."),
+                    Model(R.drawable.baseline_border_clear_black_48dp, "Show / hide days of the week  "),
+                    Model(R.drawable.ads, "Watch video ads & hide banner ads"),
                     Model(R.drawable.exit, "Exit  ")
 
                 )
@@ -6038,7 +6038,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         when {
             binding.imageView.isVisible -> {
                 binding.imageView.visibility = View.INVISIBLE
-                binding.adView.visibility = View.VISIBLE
+                if (adCheck == 0) {
+                    binding.adView.visibility = View.VISIBLE
+                }
             }
             binding.listView.isVisible -> {
                 binding.listView.visibility = View.INVISIBLE
@@ -6403,7 +6405,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     else -> {
                         hideKeyboard()
-                        binding.adView.visibility = View.VISIBLE
+                        if (adCheck == 0) {
+                            binding.adView.visibility = View.VISIBLE
+                        }
                         binding.imageView.visibility = View.INVISIBLE
                         spinnerWP.performClick()
                     }
@@ -6441,7 +6445,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     }
                     else -> {
                         hideKeyboard()
-                        binding.adView.visibility = View.VISIBLE
+                        if (adCheck == 0) {
+                            binding.adView.visibility = View.VISIBLE
+                        }
                         binding.imageView.visibility = View.INVISIBLE
                         spinner04.performClick()
                     }
