@@ -2521,6 +2521,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("いわしの香草パン粉焼き"),
                 Cuisine("いわしのマリネサラダ"),
                 Cuisine("いわしのつみれ汁"),
+
+                Cuisine("いわしの甘露煮"),
             )
         } else {
             arrayListOf(
@@ -2572,6 +2574,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("カツオのスパイス揚げ"),
                 Cuisine("カツオのしぐれ煮"),
                 Cuisine("カツオのキムチあえ丼"),
+
+                Cuisine("カツオのガーリックバターステーキ"),
+                Cuisine("カツオバーグ"),
+                Cuisine("カツオの生姜焼き"),
+                Cuisine("カツオのカルパッチョ"),
+                Cuisine("カツオのチーズフライ"),
+                Cuisine("カツオの手こね寿司"),
             )
         } else {
             arrayListOf(
@@ -2625,6 +2634,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("サバのカレー揚げ"),
                 Cuisine("サバのキムチ煮"),
                 Cuisine("サバそぼろ"),
+
+                Cuisine("サバのかば焼き"),
+                Cuisine("サバの南蛮漬け"),
+                Cuisine("サバの竜田揚げ"),
+                Cuisine("サバの照り焼き"),
+                Cuisine("サバのケチャップ炒め"),
+                Cuisine("サバ大根"),
             )
         } else {
             arrayListOf(
@@ -2646,6 +2662,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("サンマのごまから揚げ"),
                 Cuisine("サンマのねぎみそ焼き"),
                 Cuisine("サンマのおろし煮"),
+
+                Cuisine("サンマのかば焼き"),
+                Cuisine("サンマのチーズパン粉焼き"),
+                Cuisine("サンマの味噌煮"),
+                Cuisine("サンマの竜田揚げ"),
+                Cuisine("サンマのポーポー焼き"),
             )
         } else {
             arrayListOf(
@@ -2666,6 +2688,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("キャベツとたらの蒸し煮"),
                 Cuisine("さつまいもとたらのグラタン"),
                 Cuisine("たらのとろみ鍋"),
+
+                Cuisine("たらのマヨホイル焼き"),
+                Cuisine("たらのムニエル"),
+                Cuisine("たらのピカタ"),
+                Cuisine("たらのブランダード"),
+                Cuisine("たらのピルピル"),
             )
         } else {
             arrayListOf(
@@ -2685,6 +2713,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ブリとちんげん菜の中華塩炒め"),
                 Cuisine("ブリのトマト照り焼き"),
                 Cuisine("ブリとレンコンのから揚げ"),
+
+                Cuisine("ブリの生姜焼き"),
+                Cuisine("ブリのポン酢焼き"),
+                Cuisine("ブリのユッケ"),
+                Cuisine("ブリねぎ"),
+                Cuisine("ブリの南蛮漬け"),
             )
         } else {
             arrayListOf(
@@ -2702,6 +2736,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ほっけの竜田揚げ"),
                 Cuisine("ほっけのハーブ焼き"),
                 Cuisine("ほっけのオイル漬け"),
+
+                Cuisine("ほっけのコンソメパン粉焼き"),
+                Cuisine("スティックホッケフライ"),
+                Cuisine("ほっけ大根"),
+                Cuisine("ほっけのそぼろ"),
+                Cuisine("ほっけのねぎ味噌焼き"),
             )
         } else {
             arrayListOf(
@@ -2720,6 +2760,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("めかじきのチーズ焼き"),
                 Cuisine("めかじきの竜田揚げ"),
                 Cuisine("めかじきのトマト煮"),
+
+                Cuisine("めかじきのさんしょう焼き"),
+                Cuisine("めかじきのサオール"),
+                Cuisine("めかじきのスティックフライ"),
+                Cuisine("めかじきの黒酢照り焼き"),
+                Cuisine("めかじきのラビゴットソースがけ"),
+                Cuisine("めかじきのムニエル"),
+                Cuisine("めかじきのインボルティーニ"),
             )
         } else {
             arrayListOf(
