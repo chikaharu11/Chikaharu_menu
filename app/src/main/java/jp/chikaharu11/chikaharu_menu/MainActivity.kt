@@ -653,7 +653,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_zoom_out_black_48dp, "文字を小さくする　"),
                     Model(R.drawable.baseline_border_color_black_48dp, "線のパターンの変更　"),
                     Model(R.drawable.baseline_border_clear_black_48dp, "曜日の表示、非表示　"),
-                    Model(R.drawable.ads, "動画広告を視聴する　"),
+                    Model(R.drawable.ads, "バナー広告を非表示にする　"),
                     Model(R.drawable.exit, "終了する　")
                 )
             )
@@ -668,7 +668,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     Model(R.drawable.baseline_zoom_out_black_48dp, "Reduce text  "),
                     Model(R.drawable.baseline_border_color_black_48dp, "Change line pattern  "),
                     Model(R.drawable.baseline_border_clear_black_48dp, "Show / hide days of the week  "),
-                    Model(R.drawable.ads, "Watch video ads & hide banner ads"),
+                    Model(R.drawable.ads, "Hide banner Ads"),
                     Model(R.drawable.exit, "Exit  ")
 
                 )
