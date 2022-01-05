@@ -2500,6 +2500,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("あじのチーズ焼き"),
                 Cuisine("あじの南蛮漬け"),
                 Cuisine("あじの干ものずし"),
+
+                Cuisine("あじのバターしょうゆソテー"),
+                Cuisine("あじのガーリックムニエル"),
+                Cuisine("あじの大葉巻き"),
+                Cuisine("あじのフェ"),
+                Cuisine("あじの骨せんべい"),
+                Cuisine("あじフライ"),
             )
         } else {
             arrayListOf(
@@ -2510,6 +2517,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Grilled horse mackerel with cheese"),
                 Cuisine("Marinated horse mackerel"),
                 Cuisine("Dried horse mackerel sushi"),
+
+                Cuisine("Sauteed horse mackerel with butter and soy sauce"),
+                Cuisine("Sauteed horse mackerel with garlic meuniere"),
+                Cuisine("Rolled horse mackerel with shiso leaves"),
+                Cuisine("Horse mackerel hoe"),
+                Cuisine("Horse mackerel Bone Crackers"),
+                Cuisine("Fried horse mackerel"),
             )
         }
         ajCuisines = if (locale == Locale.JAPAN) {
@@ -2523,6 +2537,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("いわしのつみれ汁"),
 
                 Cuisine("いわしの甘露煮"),
+                Cuisine("いわしのつみれ揚げ"),
+                Cuisine("いわしのオリーブ煮"),
+                Cuisine("いわしのエスカベッシュ"),
             )
         } else {
             arrayListOf(
@@ -2533,6 +2550,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Pan-fried sardines with herbs"),
                 Cuisine("Marinated sardine salad"),
                 Cuisine("Iwashi no Tsumire Jiru"),
+
+                Cuisine("Stewed sardines in sweet soy sauce"),
+                Cuisine("Deep-fried sardines with fish balls"),
+                Cuisine("Stewed sardine with olive"),
+                Cuisine("Sardine Escabeche Escabeche"),
             )
         }
         akCuisines = if (locale == Locale.JAPAN) {
@@ -2590,6 +2612,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Deep-fried Spiced Bonito"),
                 Cuisine("Cooked bonito in shigure"),
                 Cuisine("Bonito with Kimchi"),
+
+                Cuisine("Bonito Garlic Butter Steak"),
+                Cuisine("Bonito Burger"),
+                Cuisine("Gingered bonito"),
+                Cuisine("Carpaccio of bonito"),
+                Cuisine("Fried bonito with cheese"),
+                Cuisine("Bonito Hand-Kneaded Sushi"),
             )
         }
         amCuisines = if (locale == Locale.JAPAN) {
@@ -2651,6 +2680,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Deep-fried mackerel with curry"),
                 Cuisine("Stewed Mackerel with Kimchi"),
                 Cuisine("Soboro Mackerel"),
+
+                Cuisine("Grilled Mackerel"),
+                Cuisine("Marinated Mackerel"),
+                Cuisine("Deep-fried Mackerel with Tatsuta"),
+                Cuisine("Teriyaki Mackerel"),
+                Cuisine("Fried Mackerel with Ketchup"),
+                Cuisine("Mackerel radish"),
             )
         }
         aoCuisines = if (locale == Locale.JAPAN) {
@@ -2678,6 +2714,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Deep-fried saury with sesame paste"),
                 Cuisine("Grilled saury with green onion and miso"),
                 Cuisine("Sauteed saury with grated radish"),
+
+                Cuisine("Baked Pacific saury"),
+                Cuisine("Baked saury with cheese crumbs"),
+                Cuisine("Simmered saury in miso"),
+                Cuisine("Deep-fried saury with tatsuta"),
+                Cuisine("Grilled saury with pawpaw"),
             )
         }
         apCuisines = if (locale == Locale.JAPAN) {
@@ -2703,6 +2745,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Braised Cabbage and Codfish"),
                 Cuisine("Sweet Potato and Cod Gratin"),
                 Cuisine("Thickened codfish in a pot"),
+
+                Cuisine("Grilled cod with mayo and foil"),
+                Cuisine("Cod Meuniere"),
+                Cuisine("Cod Piccata"),
+                Cuisine("Cod Brandade"),
+                Cuisine("Cod Pilpil"),
             )
         }
         aqCuisines = if (locale == Locale.JAPAN) {
@@ -2728,6 +2776,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Stir-fried yellowtail and chinese cabbage with Chinese salt"),
                 Cuisine("Yellowtail with tomato teriyaki"),
                 Cuisine("Deep-fried yellowtail and lotus root"),
+
+                Cuisine("Yellowtail with Ginger"),
+                Cuisine("Yellowtail with ponzu sauce"),
+                Cuisine("Yellowtail yukke"),
+                Cuisine("Yellowtail leeks"),
+                Cuisine("Yellowtail in Nanbanzuke"),
             )
         }
         arCuisines = if (locale == Locale.JAPAN) {
@@ -2745,10 +2799,16 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         } else {
             arrayListOf(
-                Cuisine("Boiled Salmon"),
-                Cuisine("Tatsuta-age of Hokke"),
-                Cuisine("Baked Sea Bass with Herbs"),
-                Cuisine("Seafood in oil"),
+                Cuisine("Boiled Atka mackerel"),
+                Cuisine("Tatsuta-age of Atka mackerel"),
+                Cuisine("Baked Atka mackerel with Herbs"),
+                Cuisine("Atka mackerel in oil"),
+
+                Cuisine("Baked Atka mackerel with Consommé Breadcrumbs"),
+                Cuisine("Fried Atka mackerel"),
+                Cuisine("Atka mackerel Daikon"),
+                Cuisine("Atka mackerel no soboro"),
+                Cuisine("Grilled atka mackerel with Green Onion Miso"),
             )
         }
         asCuisines = if (locale == Locale.JAPAN) {
