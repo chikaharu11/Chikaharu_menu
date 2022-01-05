@@ -33,6 +33,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.ConstraintSet
 import androidx.core.content.FileProvider
+import androidx.core.graphics.ColorUtils
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import com.google.android.gms.ads.*
@@ -46,6 +47,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.text.SimpleDateFormat
 import java.util.*
+import kotlin.math.max
 
 class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
@@ -480,6 +482,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
     }
 
+    private fun Int.actionBarColorToStatusBarColor(): Int {
+        val hsl = FloatArray(3)
+        ColorUtils.colorToHSL(this, hsl)
+        hsl[0] = max(0F, hsl[0] - 6)
+        hsl[2] = max(0F, hsl[2] - 0.09F)
+        return ColorUtils.HSLToColor(hsl)
+    }
+
     @SuppressLint("UseSwitchCompatOrMaterialCode", "SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -489,6 +499,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         initAdMob()
         loadAdMob()
         loadRewardedAd()
+
+        val actionBarColor = if (locale == Locale.JAPAN) {
+            Color.parseColor("#6200EE")
+        } else {
+            Color.parseColor("#F02D3A")
+        }
+
+        this.window.statusBarColor = actionBarColor.actionBarColorToStatusBarColor()
 
         val optionSpinner = findViewById<Spinner>(R.id.spinner04)
         val menuSpinner = findViewById<Spinner>(R.id.spinnerWP)
@@ -525,6 +543,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         if (locale != Locale.JAPAN) {
             supportActionBar?.setBackgroundDrawable(ColorDrawable(Color.parseColor("#F02D3A")))
         }
+
 
         fun menuList16() {
 
