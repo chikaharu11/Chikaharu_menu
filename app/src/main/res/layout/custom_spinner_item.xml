@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/modelImage"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:paddingStart="10dp"
-        android:textSize="14sp"
+        android:textSize="16sp"
         tools:ignore="RtlSymmetry" />
 
 </LinearLayout>

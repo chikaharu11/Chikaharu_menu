@@ -2831,13 +2831,21 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
             )
         } else {
             arrayListOf(
-                Cuisine("Sauteed Bean Sprouts and Swordfish with Kimchi"),
+                Cuisine("Sauteed Bean Sprouts and Broadbill with Kimchi"),
 
-                Cuisine("Sauteed Swordfish with Butter and Soy Sauce"),
-                Cuisine("Baked Swordfish with Ginger"),
-                Cuisine("Baked swordfish with cheese"),
-                Cuisine("Deep-fried Swordfish with Tatsuta"),
-                Cuisine("Marlin in tomato sauce"),
+                Cuisine("Sauteed broadbill with Butter and Soy Sauce"),
+                Cuisine("Baked broadbill with Ginger"),
+                Cuisine("Baked broadbill with cheese"),
+                Cuisine("Deep-fried broadbill with Tatsuta"),
+                Cuisine("Broadbill in tomato sauce"),
+
+                Cuisine("grilled Broadbill with sansho"),
+                Cuisine("Broadbill Saor"),
+                Cuisine("Fried broadbill sticks"),
+                Cuisine("Broadbill teriyaki with black vinegar"),
+                Cuisine("Broadbill with ravigote sauce"),
+                Cuisine("Broadbill Meuniere"),
+                Cuisine("Broadbill Involtini"),
             )
         }
 
@@ -7100,6 +7108,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 if (adCheck == 0) {
                     binding.adView.visibility = View.VISIBLE
                 }
+                if (adCheck == 1) {
+                    binding.adView.visibility = View.GONE
+                }
             }
             binding.listView.isVisible -> {
                 binding.listView.visibility = View.INVISIBLE
@@ -7467,6 +7478,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         if (adCheck == 0) {
                             binding.adView.visibility = View.VISIBLE
                         }
+                        if (adCheck == 1) {
+                            binding.adView.visibility = View.GONE
+                        }
                         binding.imageView.visibility = View.INVISIBLE
                         spinnerWP.performClick()
                     }
@@ -7506,6 +7520,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                         hideKeyboard()
                         if (adCheck == 0) {
                             binding.adView.visibility = View.VISIBLE
+                        }
+                        if (adCheck == 1) {
+                            binding.adView.visibility = View.GONE
                         }
                         binding.imageView.visibility = View.INVISIBLE
                         spinner04.performClick()
