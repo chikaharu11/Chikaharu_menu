@@ -32,7 +32,8 @@
             android:autoSizeTextType="uniform"
             android:autoSizeMaxTextSize="16sp"
             android:gravity="start|center"
-            android:textColor="#4b4b4b" />
+            android:textColor="#4b4b4b"
+            android:background="?attr/selectableItemBackground" />
 
     </LinearLayout>
 
