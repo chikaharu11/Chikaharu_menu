@@ -1568,6 +1568,11 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("いんげんのごま煮"),
                 Cuisine("えのきといんげんの味噌汁"),
 
+                Cuisine("いんげんとエリンギのマヨネーズ炒め"),
+                Cuisine("いんげんのチーズ和え"),
+                Cuisine("いんげんのじゃこ炒め"),
+                Cuisine("トウモロコシといんげんのかき揚げ"),
+                Cuisine("牛肉といんげんのトマト煮"),
             )
         } else {
             arrayListOf(
@@ -1579,6 +1584,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Bacon wrapped fried string beans"),
                 Cuisine("Sesame flavored green beans"),
                 Cuisine("Miso soup with enoki mushrooms and green beans"),
+
+                Cuisine("Sauteed green beans and eringi with mayonnaise"),
+                Cuisine("Green beans with cheese"),
+                Cuisine("Sauteed green beans with baby sardines"),
+                Cuisine("Deep-fried corn and string beans"),
+                Cuisine("Beef and green beans with tomato"),
             )
         }
         eCuisines = if (locale == Locale.JAPAN) {
@@ -1873,6 +1884,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("紅白なます"),
                 Cuisine("大根とハムのガーリックサラダ"),
                 Cuisine("大根としめじのしょうゆ炒め"),
+
+                Cuisine("蘿蔔絲餅"),
             )
         } else {
             arrayListOf(
@@ -1898,6 +1911,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Red and white namasu"),
                 Cuisine("Garlic Salad with Daikon and Ham"),
                 Cuisine("Sauteed radish and shimeji mushroom with soy sauce"),
+
+                Cuisine("Radish cake"),
             )
         }
         oCuisines = if (locale == Locale.JAPAN) {
