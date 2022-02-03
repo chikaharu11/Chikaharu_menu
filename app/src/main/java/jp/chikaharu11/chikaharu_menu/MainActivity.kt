@@ -1754,6 +1754,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("サンマとごぼうの煮もの"),
                 Cuisine("たたきごぼうのごまあえ"),
                 Cuisine("ごぼうのごまマヨサラダ"),
+
+                Cuisine("ごぼうの唐揚げ"),
+                Cuisine("きんぴら汁"),
+                Cuisine("ごぼうの揚げ団子"),
+                Cuisine("五目豆"),
+                Cuisine("ごぼうのかりんとう"),
+                Cuisine("ごぼうのガレット"),
             )
         } else {
             arrayListOf(
@@ -1765,6 +1772,13 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Stewed saury and burdock root"),
                 Cuisine("Chopped Burdock Root with Gomaa"),
                 Cuisine("Gobo no sesame mayo salad"),
+
+                Cuisine("Deep-fried burdock root"),
+                Cuisine("Kinpira Jiru"),
+                Cuisine("Deep-fried burdock dumplings"),
+                Cuisine("Gomoku Beans"),
+                Cuisine("Burdock Karinto"),
+                Cuisine("Burdock Galette"),
             )
         }
         kCuisines = if (locale == Locale.JAPAN) {
@@ -1777,6 +1791,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("小松菜と鶏肉、卵の炒めもの"),
                 Cuisine("小松菜と玉ねぎの味噌汁"),
                 Cuisine("小松菜のオリーブじょうゆソテー"),
+
+                Cuisine("小松菜のにんにく炒め"),
+                Cuisine("小松菜のツナサラダ"),
+                Cuisine("小松菜のナムル"),
+                Cuisine("小松菜としめじのポン酢和え"),
+                Cuisine("小松菜と卵のチャーハン"),
             )
         } else {
             arrayListOf(
@@ -1800,6 +1820,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("さつまいものごま炒め"),
                 Cuisine("さつまいものバターソテー"),
                 Cuisine("大学芋"),
+
+                Cuisine("キャラメル大学芋"),
+                Cuisine("さつまいものハッセルバック"),
+                Cuisine("さつまいものツナマヨ炒め"),
+                Cuisine("いきなりだんご"),
+                Cuisine("シュクメルリ"),
             )
         } else {
             arrayListOf(
