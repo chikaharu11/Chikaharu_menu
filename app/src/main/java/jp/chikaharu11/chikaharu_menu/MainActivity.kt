@@ -1837,6 +1837,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Sauteed Sweet Potato with Sesame Seeds"),
                 Cuisine("Sauteed sweet potato with butter"),
                 Cuisine("Daigaku imo"),
+
+                Cuisine("Caramel College Potatoes"),
+                Cuisine("Sweet Potato Hasselback"),
+                Cuisine("Sweet Potato with Tuna Mayo"),
+                Cuisine("Ikinari Dango"),
+                Cuisine("Shkumerli"),
             )
         }
         mCuisines = if (locale == Locale.JAPAN) {
@@ -1861,6 +1867,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("じゃがいもと鶏のタッカルビ"),
                 Cuisine("みつばとじゃがいもの三杯酢"),
                 Cuisine("じゃがいもの冷たいミルクスープ"),
+
+                Cuisine("フリコ"),
             )
         } else {
             arrayListOf(
@@ -1884,6 +1892,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Potato and chicken taccalbi"),
                 Cuisine("Sanpai Vinegar with Honeysuckle and Potatoes"),
                 Cuisine("Cold Milk Soup with Potatoes"),
+
+                Cuisine("Frico"),
             )
         }
         nCuisines = if (locale == Locale.JAPAN) {
@@ -2095,6 +2105,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("ニラとエビのあんかけ豆腐"),
                 Cuisine("ニラ玉"),
                 Cuisine("ニラレバ炒め"),
+
+                Cuisine("ニラのツナマヨ和え"),
+                Cuisine("ニラ入りじゃがいももち"),
+                Cuisine("ニラとベーコンのチャーハン"),
+                Cuisine("ニラとベーコンのパスタ"),
+                Cuisine("ニラせんべい"),
+                Cuisine("ニラと大根の中華煮"),
+                Cuisine("壺ニラ"),
             )
         } else {
             arrayListOf(
@@ -2105,6 +2123,14 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Bean Curd with Chives and Shrimps"),
                 Cuisine("Niradama"),
                 Cuisine("Stir-fried leek and liver"),
+
+                Cuisine("Chives with tuna and mayo"),
+                Cuisine("Potato rice cake with chives"),
+                Cuisine("Fried rice with chives and bacon"),
+                Cuisine("Pasta with leek and bacon"),
+                Cuisine("Chives rice crackers"),
+                Cuisine("Chives and radish in Chinese sauce"),
+                Cuisine("Chives in a jar"),
             )
         }
         tCuisines = if (locale == Locale.JAPAN) {
@@ -2145,6 +2171,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("豆腐のステーキねぎあんかけ"),
                 Cuisine("ねぎチャーシュー"),
                 Cuisine("トマトとねぎの味噌汁"),
+
+                Cuisine("葱油餅"),
+                Cuisine("ネギのベーコン巻き"),
+                Cuisine("焼きネギ"),
+                Cuisine("焼きネギのアヒージョ"),
+                Cuisine("ねぎ湯"),
             )
         } else {
             arrayListOf(
@@ -2155,6 +2187,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Tofu steak with scallion sauce"),
                 Cuisine("Green Onion Char Siu"),
                 Cuisine("Tomato and Negi Miso Soup"),
+
+                Cuisine("Green Onion Cake"),
+                Cuisine("Green Onion Wrapped in Bacon"),
+                Cuisine("Grilled leeks"),
+                Cuisine("Grilled leek ahijo"),
+                Cuisine("Green Onion Soup"),
             )
         }
         vCuisines = if (locale == Locale.JAPAN) {
@@ -2438,6 +2476,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("大根としめじのしょうゆ炒め"),
                 Cuisine("しめじと豆腐のお吸いもの"),
                 Cuisine("しめじのバターポン酢炒め"),
+
+                Cuisine("えのきとしめじのバター蒸し"),
+                Cuisine("しめじとベーコンのマヨソテー"),
+                Cuisine("しめじのおかか炒め"),
             )
         } else {
             arrayListOf(
@@ -2446,6 +2488,10 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                 Cuisine("Sauteed radish and shimeji mushroom with soy sauce"),
                 Cuisine("Shimeji Mushroom and Tofu Soup"),
                 Cuisine("Sauteed Shimeji Mushrooms with Butter and Vinegar"),
+
+                Cuisine("Steamed Enoki Mushrooms and Shimeji Mushrooms with Butter"),
+                Cuisine("Sauteed Shimeji Mushrooms and Bacon with Mayo"),
+                Cuisine("Sauteed shimeji mushrooms with bonito flakes"),
             )
         }
         agCuisines = if (locale == Locale.JAPAN) {
