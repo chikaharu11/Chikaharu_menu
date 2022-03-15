@@ -6758,6 +6758,8 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         if (mRewardedAd != null) {
             mRewardedAd?.show(this) { rewardItem ->
                 binding.adView.visibility = View.GONE
+                binding.topSpace.visibility = View.GONE
+                binding.bottomSpace.visibility = View.GONE
                 adCheck = 1
                 var rewardAmount = rewardItem.amount
                 var rewardType = rewardItem.type
@@ -6794,8 +6796,12 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         admobmAdView.adUnitId = "ca-app-pub-3940256099942544/6300978111"
 
         admobmAdView.adListener = object : AdListener() {
+            override fun onAdFailedToLoad(adError: LoadAdError) {
+                binding.topSpace.visibility = View.GONE
+            }
             override fun onAdLoaded() {
                 adViewContainer.addView(admobmAdView)
+                binding.topSpace.visibility = View.GONE
             }
         }
     }
@@ -7601,6 +7607,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
 
                 binding.imageView.visibility = View.INVISIBLE
                 binding.adView.visibility = View.GONE
+                binding.bottomSpace.visibility = View.GONE
                 binding.textView14.requestFocus()
                 binding.textView14.clearFocus()
                 handler.postDelayed( {
@@ -7608,7 +7615,9 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
                     getBitmapFromView(binding.allView)
                                      }, 50)
                 if (adCheck == 0) {
-                    handler.postDelayed({ binding.adView.visibility = View.VISIBLE }, 100)
+                    handler.postDelayed({
+                        binding.adView.visibility = View.VISIBLE
+                        binding.bottomSpace.visibility = View.VISIBLE}, 100)
                 }
                 return true
             }
@@ -7650,6 +7659,7 @@ class MainActivity : AppCompatActivity(), CustomAdapterListener {
         adCheck = savedInstanceState.getInt("DATA")
         if ( adCheck == 1) {
             binding.adView.visibility = View.GONE
+            binding.bottomSpace.visibility = View.GONE
         }
     }
 }

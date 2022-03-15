@@ -18,6 +18,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+    <ImageView
+        android:id="@+id/topSpace"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/bottomSpace"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="#ffffff"
+        app:layout_constraintBottom_toTopOf="@id/topSpace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ContentDescription,MissingConstraints" />
+
     <jp.chikaharu11.chikaharu_menu.ResizeEditText
         android:id="@+id/editText8n"
         android:layout_width="0dp"
@@ -835,8 +855,9 @@
         android:layout_width="wrap_content"
         android:layout_height="2dp"
         android:background="#333333"
-        app:layout_constraintBottom_toTopOf="@id/adView"
-        app:layout_constraintTop_toTopOf="@+id/adView"
+        app:layout_constraintBottom_toTopOf="@id/bottomSpace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
     <View
